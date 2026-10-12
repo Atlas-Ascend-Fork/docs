@@ -32,7 +32,7 @@ docs/
 - [Ascend C算子开发](https://gitcode.com/cann/asc-devkit/blob/9.2.0/docs/zh/guide/index.md)
 - [PyPTO算子开发](https://gitcode.com/cann/pypto/blob/9.2.0/docs/zh/guide/index_hiascend.md)
 - [通信算子开发](https://gitcode.com/cann/hcomm/blob/9.2.0/docs/zh/comm_op_dev_guide/README.md)
-- [应用开发](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/app-dev/README.md)
+- [应用开发](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/app-dev/c/00_acl_cpp_dev.md)
 - [图开发](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/graph_dev/README.md)
 
 ### API参考
