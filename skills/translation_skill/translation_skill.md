@@ -358,14 +358,14 @@
 
 | 中文名 | 英文名 |
 | --- | --- |
-| Ascend 950PR / Ascend 950DT | Ascend 950PR / Ascend 950DT |
-| Atlas A3 训练系列产品 / Atlas A3 推理系列产品 | Atlas A3 training products / Atlas A3 inference products |
-| Atlas A3 训练系列产品 | Atlas A3 training products |
-| Atlas A2 训练系列产品 / Atlas A2 推理系列产品 | Atlas A2 training products / Atlas A2 inference products |
-| Atlas A2 训练系列产品 | Atlas A2 training products |
-| Atlas 200I/500 A2 推理产品 | Atlas 200I/500 A2 inference products |
-| Atlas 训练系列产品 | Atlas training products |
-| Atlas 推理系列产品 | Atlas inference products |
+| Ascend 950PR&950DT系列产品 | Ascend 950PR&950DT products |
+| Atlas A3系列产品 | Atlas A3 products |
+| Atlas A3训练系列产品 | Atlas A3 training products |
+| Atlas A2系列产品 | Atlas A2 products |
+| Atlas A2训练系列产品 | Atlas A2 training products |
+| Atlas 200I/500 A2推理产品 | Atlas 200I/500 A2 inference products |
+| Atlas训练系列产品 | Atlas training products |
+| Atlas推理系列产品 | Atlas inference products |
 
 ##### 连字符处理
 
