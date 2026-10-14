@@ -55,7 +55,7 @@ docs/
 
 ### 编译器
 
-- [PTO虚拟指令集](https://gitcode.com/cann/pto-isa/blob/master/docs/menu_ops_development.md)
+- [PTO虚拟指令集](https://gitcode.com/cann/pto-isa/blob/master/docs/menu_ops_development_zh.md)
 
 ### 参考
 
@@ -63,7 +63,7 @@ docs/
 - [日志参考](https://gitcode.com/cann/runtime/blob/master/docs/zh/log_ref/README.md)
 - [环境变量参考](https://gitcode.com/cann/docs/blob/master/docs/zh/env-vars/README.md)
 - [图融合和UB融合规则参考](https://gitcode.com/cann/docs/blob/master/docs/zh/fusion-patterns/README.md)
-- [基础数据结构和接口](https://gitcode.com/cann/metadef/blob/master/docs/api/README.md)
+- [基础数据结构和接口](https://gitcode.com/cann/metadef/blob/master/docs/zh/api/README.md)
 
 ### 其他
 

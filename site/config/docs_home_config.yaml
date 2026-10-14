@@ -1,0 +1,171 @@
+# config/document-config.yaml
+# 开源文档中心首页配置文件
+# 用于管理文档分类、名称、URL及关联字段映射
+
+# ============================================================
+# 文档大类定义
+# ============================================================
+categories:
+  - id: "cat_proglang"
+    name: "编程语言"
+
+  - id: "cat_api"
+    name: "API参考"
+
+  - id: "cat_commib"
+    name: "通信库"
+
+  - id: "cat_devtools"
+    name: "调试与分析工具"
+
+  - id: "cat_compiler"
+    name: "编译器"
+
+  - id: "cat_ref"
+    name: "参考"
+
+  - id: "cat_others"
+    name: "更多"
+
+# ============================================================
+# 文档列表
+# ============================================================
+documents:
+  # ---------- 编程语言 ----------
+  - id: "doc_ascendcopdev"
+    category_id: "cat_proglang"
+    name: "Ascend C算子开发"
+    url: "https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/guide/index.md"
+    # 相关文档
+    relations:
+      - field: "related_docs"
+        value: ["doc_ascendcapi"]
+
+  - id: "doc_pyptoopdev"
+    category_id: "cat_proglang"
+    name: "PyPTO算子开发"
+    url: "https://gitcode.com/cann/pypto/blob/master/docs/zh/guide/index_hiascend.md"
+    relations:
+      - field: "related_docs"
+        value: ["doc_pyptoapi"]
+
+  - id: "doc_graphdev"
+    category_id: "cat_proglang"
+    name: "图开发"
+    url: "https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/graph_dev/README.md"
+    relations:
+      - field: "related_docs"
+        value: ["doc_geapi"]
+
+  # ---------- API参考 ----------
+  - id: "doc_ascendcapi"
+    category_id: "cat_api"
+    name: "Ascend C API"
+    url: "https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/api/README.md"
+
+  - id: "doc_pyptoapi"
+    category_id: "cat_api"
+    name: "PyPTO API"
+    url: "https://gitcode.com/cann/pypto/blob/master/docs/zh/api/index_hiascend.md"
+
+  - id: "doc_aolapi"
+    category_id: "cat_api"
+    name: "算子库"
+    url: "https://gitcode.com/cann/docs/blob/master/docs/zh/ops-lib/0_README.md"
+
+  - id: "doc_runtimeapi"
+    category_id: "cat_api"
+    name: "Runtime运行时API"
+    url: "https://gitcode.com/cann/runtime/blob/master/python/docs/zh/runtime_api_ref.md"
+
+  - id: "doc_geapi"
+    category_id: "cat_api"
+    name: "GE图引擎API"
+    url: "https://gitcode.com/cann/ge/blob/master/docs/zh/api/graph_engine_api/README.md"
+
+  # ---------- 通信库 ----------
+  - id: "doc_hcclug"
+    category_id: "cat_commib"
+    name: "HCCL集合通信库"
+    url: "https://gitcode.com/cann/hccl/blob/master/docs/zh/user_guide/README.md"
+
+  - id: "doc_hixlug"
+    category_id: "cat_commib"
+    name: "HIXL单边通信库"
+    url: "https://gitcode.com/cann/hixl/blob/master/docs/zh/guide/README.md"
+
+  - id: "doc_commopdev"
+    category_id: "cat_commib"
+    name: "通信算子开发"
+    url: "https://gitcode.com/cann/hcomm/blob/master/docs/zh/comm_op_dev_guide/README.md"
+
+  # ---------- 调试与分析工具 ----------
+  - id: "doc_opcompiletool"
+    category_id: "cat_devtools"
+    name: "算子编译工具"
+    url: "https://gitcode.com/cann/asc-tools/blob/master/docs/zh/operator_compilation_tool/README.md"
+
+  - id: "doc_profiling"
+    category_id: "cat_devtools"
+    name: "性能调优工具"
+    url: "https://gitcode.com/cann/oam-tools/blob/master/docs/zh/profiling/README.md"
+
+  - id: "doc_atctool"
+    category_id: "cat_devtools"
+    name: "ATC离线模型编译工具"
+    url: "https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/atc_tools/README.md"
+
+  - id: "doc_hccltest"
+    category_id: "cat_devtools"
+    name: "HCCL性能测试工具"
+    url: "https://gitcode.com/cann/oam-tools/blob/master/docs/zh/hccl_test/README.md"
+
+
+  # ---------- 编译器 ----------
+  - id: "doc_ptoisa"
+    category_id: "cat_compiler"
+    name: "PTO虚拟指令集"
+    url: "https://gitcode.com/cann/pto-isa/blob/master/docs/menu_ops_development_zh.md"
+
+
+  # ---------- 参考 ----------
+  - id: "doc_troubleshotting"
+    category_id: "cat_ref"
+    name: "故障处理"
+    url: "https://gitcode.com/cann/docs/blob/master/docs/zh/troubleshooting/00_troubleshooting.md"
+
+  - id: "doc_logref"
+    category_id: "cat_ref"
+    name: "日志参考"
+    url: "https://gitcode.com/cann/runtime/blob/master/docs/zh/log_ref/README.md"
+
+  - id: "doc_envvar"
+    category_id: "cat_ref"
+    name: "环境变量参考"
+    url: "https://gitcode.com/cann/docs/blob/master/docs/zh/env-vars/README.md"
+
+  - id: "doc_graphubfusion"
+    category_id: "cat_ref"
+    name: "图融合和UB融合规则参考"
+    url: "https://gitcode.com/cann/docs/blob/master/docs/zh/fusion-patterns/README.md"
+
+  - id: "doc_basicdataapi"
+    category_id: "cat_ref"
+    name: "基础数据结构和接口"
+    url: "https://gitcode.com/cann/metadef/blob/master/docs/zh/api/README.md"
+
+ # ---------- 更多 ----------
+  - id: "doc_acldevg"
+    category_id: "cat_others"
+    name: "应用开发"
+    url: "https://gitcode.com/cann/docs/blob/master/docs/zh/app-dev/README.md"
+
+  - id: "doc_llmdatadistdevg"
+    category_id: "cat_others"
+    name: "LLM DataDist开发"
+    url: "https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/llm_datadist/index.md"
+
+  - id: "doc_dataflowdevg"
+    category_id: "cat_others"
+    name: "DataFlow开发"
+    url: "https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/dflow/index.md"

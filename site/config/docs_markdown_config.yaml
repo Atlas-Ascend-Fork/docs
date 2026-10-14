@@ -12,7 +12,7 @@ scan_all_repos:
   - docs
 
 special_tar_repos:
-# 全仓扫描“*.md”、“*.jpg”、“.png”、“*.svg”
+# 全仓扫描“*.md”、“*.jpg”、“*.png”、“*.svg”
   - ops-nn
   - ops-cv
   - ops-math
@@ -20,12 +20,14 @@ special_tar_repos:
 
 repo_dirs:
 # 打包指定目录
-  runtime: [docs]
+  runtime: [docs, python/docs]
   asc-devkit: [docs]
+  asc-tools: [docs]
   hccl: [docs]
   hcomm: [docs]
   hixl: [docs]
   pypto: [docs]
+  pto-isa: [docs]
   oam-tools: [docs]
   amct: [docs]
   ge: [docs]
