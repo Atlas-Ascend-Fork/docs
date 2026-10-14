@@ -15,7 +15,7 @@
 | [https://gitcode.com/cann/pypto](https://gitcode.com/cann/pypto) | 是，已完成拦截 | **产品文档：**<br>docs/zh/api<br>docs/zh/guide<br>docs/en/api<br>docs/en/guide<br>**skill等相关目录：**<br>.opencode<br>.agents<br>AGENTS.md |
 | [https://gitcode.com/cann/driver](https://gitcode.com/cann/driver) | 是，已完成拦截 | **产品文档：**<br>docs/zh/Ascend_910B_DCMI_API<br>docs/zh/Ascend_910_93_DCMI_API<br>docs/zh/Ascend_950_DCMI_API<br>docs/zh/Ascend_950_HCCN_Tool<br>docs/zh/Ascend_950_npu-smi<br>docs/zh/Ascend_950_upgrade-tool<br>docs/zh/msnpureport<br>docs/zh/nda<br>docs/en/Ascend_910B_DCMI_API<br>docs/en/Ascend_910_93_DCMI_API<br>docs/en/Ascend_950_DCMI_API<br>docs/en/Ascend_950_HCCN_Tool<br>docs/en/Ascend_950_npu-smi<br>docs/en/Ascend_950_upgrade-tool<br>docs/en/nda<br>docs/en/msnpureport |
 | [https://gitcode.com/cann/asc-tools](https://gitcode.com/cann/asc-tools) | 新增拦截 | **产品文档：**<br>docs/zh/operator_compilation_tool<br>docs/en/operator_compilation_tool<br>**skill等相关目录：**<br>skills |
-| [https://gitcode.com/cann/oam-tools](https://gitcode.com/cann/oam-tools) | 是，已完成拦截 | **产品文档：**<br>docs |
+| [https://gitcode.com/cann/oam-tools](https://gitcode.com/cann/oam-tools) | 是，已完成拦截 | **产品文档：**<br>docs <br>**skill等相关目录：**<br>skills<br>.agent<br>.claude<br>.opencode |
 | [https://gitcode.com/cann/amct](https://gitcode.com/cann/amct) | 是，已完成拦截 | **产品文档：**<br>docs<br>**skill等相关目录：**<br>.claude<br>.opencode<br>AGENTS.md<br>.agent |
 | [https://gitcode.com/cann/tensorflow](https://gitcode.com/cann/tensorflow) | 是，已完成拦截 | **无放通目录，全部拦截** |
 | [https://gitcode.com/cann/pto-isa](https://gitcode.com/cann/pto-isa) | / | / |
