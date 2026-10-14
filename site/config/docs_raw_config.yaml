@@ -1,0 +1,40 @@
+# ============================================================================
+# 文档打包配置文件，包含markdown文档与examples
+#
+# scan_all_repos:    打包整个工作区顶层的仓库
+# special_tar_repos: 走特殊清单打包的仓库（md/png/jpg + examples全量）
+# repo_dirs:         仓库 → 打包/扫描目录列表
+#                    "**/xxx" 前缀表示按目录名xxx全仓递归匹配
+# ============================================================================
+
+scan_all_repos:
+# 全仓打包
+  - docs
+  - cann-samples
+
+special_tar_repos:
+# 全仓扫描“*.md”、“*.jpg”、“.png”、“*.svg”
+  - ops-nn
+  - ops-cv
+  - ops-math
+  - ops-transformer
+
+repo_dirs:
+# 打包指定目录
+  runtime: [docs, example]
+  asc-devkit: [docs, examples, .devcontainer]
+  hccl: [docs, examples]
+  hcomm: [docs, examples]
+  hixl: [docs, examples]
+  pyasc: [docs, python/tutorials, examples]
+  oam-tools: [docs, examples]
+  amct: [docs, examples]
+  ge: [docs, examples]
+  metadef: [docs, example]
+  opbase: [docs, examples]
+  pypto: [docs, examples]
+  tensorflow: [docs]
+  ops-nn: [examples, "**/examples"]
+  ops-math: [examples, "**/examples"]
+  ops-cv: [examples, "**/examples"]
+  ops-transformer: [examples, "**/examples"]
