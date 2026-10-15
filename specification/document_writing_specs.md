@@ -453,6 +453,8 @@ markdown文件需要使用UTF-8编码格式，此编码格式支持所有语言�
 - Atlas推理系列产品
 - Atlas训练系列产品
 
+文档中出现的术语需要与[昇腾官网术语](https://www.hiascend.com/document/detail/zh/Glossary/gls/gls_0001.html)保持一致。
+
 ## 贡献合规要求
 
 【规则】提交内容必须是与CANN特性相关内容。
