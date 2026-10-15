@@ -63,4 +63,4 @@
 
 ## TorchNPU文档链接
 
-请参见[TorchNPU文档链接](https://gitcode.com/Ascend/docs/blob/master/FrameworkPTAdapter/CommonTerms/26.1.0%20TorchNpu%E6%89%8B%E5%86%8C%E5%90%8D%E7%A7%B0%E6%B1%87%E6%80%BB.md)。
+请参见[TorchNPU文档链接](https://gitcode.com/Ascend/docs/blob/master/FrameworkPTAdapter/CommonTerms/26.2.0%20TorchNPU%E6%89%8B%E5%86%8C%E5%90%8D%E7%A7%B0%E6%B1%87%E6%80%BB.md)。
