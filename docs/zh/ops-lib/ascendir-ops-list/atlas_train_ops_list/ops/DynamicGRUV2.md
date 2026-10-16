@@ -55,15 +55,13 @@ six outputs:
 
 ## Attributes
 
-- direction:An string identifying the direction in the op. Default to "UNIDIRECTIONAL". Support "UNIDIRECTIONAL"
-and "REDIRECTIONAL".
+- direction:An string identifying the direction in the op. Default to "UNIDIRECTIONAL". Support "UNIDIRECTIONAL" and "REDIRECTIONAL".
 - cell_depth:An integer identifying the cell depth in the op. Default to 1.
 - keep_prob:An float identifying the keep prob in the op. Default to 1.
 - cell_clip:An float identifying the cell clip in the op. Default to -1.
 - num_proj:An integer identifying the num projection in the op. Default to 0.
 - time_major:An bool identifying the time major in the op. Default to true.
-- activation:An string identifying the type of activation function in the op. Default to "tanh". Only tanh is
-currently supported.
+- activation:An string identifying the type of activation function in the op. Default to "tanh". Only tanh is currently supported.
 - gate_order:An string identifying the gate order in weight and bias. Default to "zrh". "rzh" is another option.
 - reset_after:An bool identifying whether to apply reset gate after matrix multiplication. Default to true.
 - is_training:An bool identifying is training in the op. Default to true.
@@ -71,4 +69,4 @@ currently supported.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

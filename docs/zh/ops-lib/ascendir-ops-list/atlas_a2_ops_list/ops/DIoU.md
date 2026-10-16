@@ -14,7 +14,7 @@ REG_OP(DIoU)
 ## Brief
 
 First calculate the minimum closure area of the two boxes, IoU,
-The DIoU is obtained by combining the center distance and IoU. 
+The DIoU is obtained by combining the center distance and IoU.
 
 ## Inputs
 
@@ -24,19 +24,19 @@ shape (4, N). "N" indicates the number of bounding boxes, and the value
 "4" refers to [x1, y1, x2, y2] or [x, y, w, h].
 - gtboxes: Ground-truth boxes, a 2D Tensor of type float16 or float32
 with shape (4, M). "M" indicates the number of ground truth boxes, and
-the value "4" refers to [x1, y1, x2, y2] or [x, y, w, h] . 
+the value "4" refers to [x1, y1, x2, y2] or [x, y, w, h] .
 
 ## Outputs
 
 overlap: A 2D Tensor of type float16 or float32 with shape [N, M] or [1, N],
-specifying the IoU or IoF ratio . 
+specifying the IoU or IoF ratio .
 
 ## Attributes
 
 - trans: An optional bool, true for 'xywh', false for 'xyxy', default value is false.
 - is_cross: An optional bool, control whether the output shape is [N, M] or [1, N], default value is false.
 - mode: An optional string, computation mode, a character string with the value range of [iou, iof],
-default value is 'iou'. 
+default value is 'iou'.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

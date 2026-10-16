@@ -215,4 +215,4 @@ in non-continuous scenarios, the batch size in the tensor list of 'key' and 'val
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

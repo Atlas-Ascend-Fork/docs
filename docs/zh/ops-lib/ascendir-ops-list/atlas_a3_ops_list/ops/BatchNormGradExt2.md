@@ -31,7 +31,7 @@ Five inputs, including:
 - reserve_space_1: A 4D Tensor of type float32, with format NHWC or NCHW, the shape is same as input y_backprop,
 it is an output of BatchNormExt2.
 - reserve_space_2: A 4D Tensor of type float32, with format NHWC or NCHW, the shape is same as input y_backprop,
-it is an output of BatchNormExt2 . 
+it is an output of BatchNormExt2 .
 
 ## Outputs
 
@@ -64,7 +64,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The preceding layer of this operator must be BatchNormExt2 . 
+The preceding layer of this operator must be BatchNormExt2 .
 @see BatchNormExt2
 
 ## Third-party framework compatibility
@@ -74,4 +74,4 @@ Compatible with the TensorFlow operator FusedBatchNormGradV2.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

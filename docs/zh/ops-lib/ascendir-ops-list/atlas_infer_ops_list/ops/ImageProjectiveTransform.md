@@ -27,7 +27,7 @@ Must be one of the following types: int32.
 ## Outputs
 
 transformed_images: Has the same type as images,
-4-D tensor with shape[batch, new_height, new_width, channels]. 
+4-D tensor with shape[batch, new_height, new_width, channels].
 
 ## Attributes
 
@@ -51,4 +51,4 @@ Compatible with tensorflow ImageProjectiveTransform operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

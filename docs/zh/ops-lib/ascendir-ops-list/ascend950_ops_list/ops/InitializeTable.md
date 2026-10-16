@@ -12,7 +12,7 @@ REG_OP(InitializeTable)
 ## Brief
 
 Table initializer that takes two tensors for keys and values
-respectively. 
+respectively.
 
 ## Inputs
 
@@ -37,4 +37,4 @@ Compatible with tensorflow InitializeTable operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

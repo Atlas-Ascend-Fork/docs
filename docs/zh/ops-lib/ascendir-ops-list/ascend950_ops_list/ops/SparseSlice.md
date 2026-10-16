@@ -17,7 +17,7 @@ REG_OP(SparseSlice)
 
 ## Brief
 
-Slices a SparseTensor based on the "start" and "size". 
+Slices a SparseTensor based on the "start" and "size".
 
 ## Inputs
 
@@ -69,4 +69,4 @@ Compatible with the TensorFlow operator SparseSlice.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

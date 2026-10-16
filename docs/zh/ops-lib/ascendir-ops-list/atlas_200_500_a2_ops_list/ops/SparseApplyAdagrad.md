@@ -16,7 +16,7 @@ REG_OP(SparseApplyAdagrad)
 
 ## Brief
 
-Updates relevant entries in "var" and "accum" according to the adagrad scheme . 
+Updates relevant entries in "var" and "accum" according to the adagrad scheme .
 
 ## Inputs
 
@@ -26,11 +26,11 @@ Five inputs, including:
 - lr: An NCHW, NHWC, or ND Tensor of type float32.
 - grad: An NCHW, NHWC, or ND Tensor of type float32.
 - indices: An NCHW, NHWC, or ND Tensor of type float32 .
-The value of indices must be unique. Otherwise, the result is unpredictable . 
+The value of indices must be unique. Otherwise, the result is unpredictable .
 
 ## Outputs
 
-var: A Tensor. Has the same type and format as input "var" . 
+var: A Tensor. Has the same type and format as input "var" .
 
 ## Attributes
 
@@ -56,4 +56,4 @@ Compatible with the TensorFlow operator SparseApplyAdagrad.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

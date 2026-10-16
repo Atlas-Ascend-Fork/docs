@@ -30,7 +30,7 @@ Performs average pooling on the input.
 ## Outputs
 
 output: The average pooled output tensor with the same type as
-input grads and same shape as orig_input_shape. 
+input grads and same shape as orig_input_shape.
 
 ## Attributes
 
@@ -60,14 +60,14 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-"ksize" is in the range [1, 255]. "strides" is in the range [1, 63]. 
+"ksize" is in the range [1, 255]. "strides" is in the range [1, 63].
 The operator will not be enhanced in the future.
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator AvgPool3DGradD. 
+Compatible with the TensorFlow operator AvgPool3DGradD.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -15,12 +15,12 @@ REG_OP(TakeManySparseFromTensorsMap)
 
 ## Brief
 
-Reads SparseTensors from a "SparseTensorsMap" and concatenate them. 
+Reads SparseTensors from a "SparseTensorsMap" and concatenate them.
 
 ## Inputs
 
 handles: A 1D tensor of type int64.
-The "N" serialized SparseTensor objects. 
+The "N" serialized SparseTensor objects.
 
 ## Outputs
 
@@ -34,7 +34,7 @@ The "N" serialized SparseTensor objects.
 - container: An optional string. Defaults to "".
 The container name for the "SparseTensorsMap" read by this op.
 - shared_name: An optional string. Defaults to "".
-The shared name for the "SparseTensorsMap" read by this op. 
+The shared name for the "SparseTensorsMap" read by this op.
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator TakeManySparseFromTensorsMap.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -14,11 +14,11 @@ REG_OP(MutableHashTableOfTensors)
 
 ## Brief
 
-Creates an empty hash table. 
+Creates an empty hash table.
 
 ## Outputs
 
-handle: A Tensor of type resource. Handle to the table. 
+handle: A Tensor of type resource. Handle to the table.
 
 ## Attributes
 
@@ -45,4 +45,4 @@ Compatible with tensorflow MutableHashTableOfTensors operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -12,7 +12,7 @@ REG_OP(ResizeV2)
 
 ## Brief
 
-change an image size. 
+change an image size.
 
 ## Inputs
 
@@ -28,7 +28,7 @@ y: output tensor of at least 3 dimensions, type must be float32 or uint8.
 - interpolation: An optional string. Interpolation type, only support "bilinear"/"nearest"/"cubic"/"area",
 default "nearest".
 - data_format: An optional string. Could be "HWC" or "CHW". Defaults to "HWC".
-Value used for inferring real format of images. 
+Value used for inferring real format of images.
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

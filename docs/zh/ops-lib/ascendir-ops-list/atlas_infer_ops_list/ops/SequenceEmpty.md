@@ -9,7 +9,7 @@ REG_OP(SequenceEmpty)
 
 ## Brief
 
-construct an empty tensor sequence, with given data type. 
+construct an empty tensor sequence, with given data type.
 
 ## Outputs
 
@@ -18,7 +18,7 @@ construct an empty tensor sequence, with given data type.
 ## Attributes
 
 - dtype: the data type of the tensors in the output sequence,
-the default value is float. 
+the default value is float.
 
 ## Data Types
 
@@ -29,4 +29,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -13,11 +13,11 @@ Computes hyperbolic sine of "x" element-wise.
 
 ## Inputs
 
-x: An NCHW, NHWC,or ND Tensor that supports the data type UnaryDataType. 
+x: An NCHW, NHWC,or ND Tensor that supports the data type UnaryDataType.
 
 ## Outputs
 
-y: A ND Tensor with the same dtype and shape of input "x". 
+y: A ND Tensor with the same dtype and shape of input "x".
 
 ## Data Types
 
@@ -31,9 +31,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator Sinh. 
+Compatible with the TensorFlow operator Sinh.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

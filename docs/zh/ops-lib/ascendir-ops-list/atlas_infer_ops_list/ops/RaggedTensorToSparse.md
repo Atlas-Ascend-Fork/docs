@@ -14,7 +14,7 @@ REG_OP(RaggedTensorToSparse)
 
 ## Brief
 
-Converts a RaggedTensor into a SparseTensor with the same values. 
+Converts a RaggedTensor into a SparseTensor with the same values.
 
 ## Inputs
 
@@ -23,7 +23,7 @@ Two inputs, including:
 in: int32, int64. The row_splits for the RaggedTensor. It's a dynamic input.
 - rt_dense_values: A Tensor. The flat_values for the RaggedTensor
 Must be one of the following types: bool, int8, uint8, int16, uint16, int32,
-int64, double, float32, float16. 
+int64, double, float32, float16.
 
 ## Outputs
 
@@ -52,4 +52,4 @@ Compatible with TensorFlow operator RaggedTensorToSparse.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -14,10 +14,10 @@ REG_OP(AddRmsNorm)
 
 ## Brief
 
-AddRmsNorm operator interface implementation. 
- calculating: x1, x2, gamma 
- x = x1 + x2 
- rstd = np.rsqrt(np.mean(np.power(x,2), reduce_axis, keepdims=True) + epsilon)) 
+AddRmsNorm operator interface implementation.
+ calculating: x1, x2, gamma
+ x = x1 + x2
+ rstd = np.rsqrt(np.mean(np.power(x,2), reduce_axis, keepdims=True) + epsilon))
  y = gamma * (x * rstd)
 
 ## Inputs
@@ -53,4 +53,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

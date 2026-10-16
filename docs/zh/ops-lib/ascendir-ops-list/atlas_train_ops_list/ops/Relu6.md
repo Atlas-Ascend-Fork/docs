@@ -15,11 +15,11 @@ activations = min(max(x, 0), 6) .
 ## Inputs
 
 x: A ND Tensor of type RealNumberType(includes: double, float32, float16,
-int16, int32, int64, int8, uint16, uint32, uint64, uint8, bfloat16) . 
+int16, int32, int64, int8, uint16, uint32, uint64, uint8, bfloat16) .
 
 ## Outputs
 
-y: A ND Tensor with the same type as x . 
+y: A ND Tensor with the same type as x .
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Compatible with the TensorFlow operator Relu6.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

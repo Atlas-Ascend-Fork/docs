@@ -16,11 +16,11 @@ REG_OP(LayerNormV3)
 
 ## Brief
 
-LayernormV3 operator interface implementation 
- calculating: x, gamma, beta 
- mean  = np.mean(x, reduce_axis, keepdims=True) 
- rstd = np.rsqrt(np.mean(np.power((x - mean),2), reduce_axis, keepdims=True) + epsilon)) 
- y = gamma*((x - mean) * rstd) + beta 
+LayernormV3 operator interface implementation
+ calculating: x, gamma, beta
+ mean  = np.mean(x, reduce_axis, keepdims=True)
+ rstd = np.rsqrt(np.mean(np.power((x - mean),2), reduce_axis, keepdims=True) + epsilon))
+ y = gamma*((x - mean) * rstd) + beta
  Notes: the shape of gamma/beta is the slice shape of x(x_shape[begin_norm_axis])
 
 ## Inputs
@@ -31,7 +31,7 @@ The shape is [A1,...,Ai,R1,...,Rj].
 - gamma: A ND Tensor. Must be one of the following dtypes: float16, float32, bfloat16.
 Has the same dtype and shape as beta. The shape is [R1,...,Rj].
 - beta: A ND Tensor. Must be one of the following dtypes: float16, float32, bfloat16.
-Has the same dtype and shape as gamma. The shape is [R1,...,Rj]. 
+Has the same dtype and shape as gamma. The shape is [R1,...,Rj].
 
 ## Outputs
 
@@ -65,4 +65,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

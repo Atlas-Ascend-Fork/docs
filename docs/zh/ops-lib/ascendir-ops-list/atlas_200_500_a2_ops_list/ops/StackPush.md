@@ -15,7 +15,7 @@ REG_OP(StackPush)
 
 ## Brief
 
-Push an element onto the stack. 
+Push an element onto the stack.
 
 ## Inputs
 
@@ -25,12 +25,12 @@ The input handle must be type resource. Inputs include:
 
 ## Outputs
 
-y:A Tensor. Has the same type as elem. 
+y:A Tensor. Has the same type as elem.
 
 ## Attributes
 
 swap_memory: An optional bool. Defaults to False. Swap elem to CPU. Default
-to false. 
+to false.
 
 ## Third-party framework compatibility
 
@@ -39,4 +39,4 @@ Compatible with tensorflow StackPush operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

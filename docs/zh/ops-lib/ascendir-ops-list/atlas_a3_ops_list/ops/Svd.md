@@ -13,12 +13,12 @@ REG_OP(Svd)
 
 ## Brief
 
-Computes the singular value decompositions of one or more matrices . 
+Computes the singular value decompositions of one or more matrices .
 
 ## Inputs
 
 The input shape of x must be [..., N, N]. Inputs include:
-x:Tensor of shape [..., M, N]. Let P be the minimum of M and N . 
+x:Tensor of shape [..., M, N]. Let P be the minimum of M and N .
 
 ## Outputs
 
@@ -30,7 +30,7 @@ is [..., M, P]; if full_matrices is True then shape is [..., M, M]. Not
 returned if compute_uv is False.
 - v:Right singular vectors. If full_matrices is False (default) then shape
 is [..., N, P]. If full_matrices is True then shape is [..., N, N]. Not
-returned if compute_uv is False . 
+returned if compute_uv is False .
 
 ## Attributes
 
@@ -51,7 +51,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The input x is a tensor of shape [..., N, N] whose inner-most 2 dimensions
-form square matrices.  
+form square matrices.
 
 ## Third-party framework compatibility
 
@@ -60,4 +60,4 @@ Compatible with tensorflow Svd operator
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

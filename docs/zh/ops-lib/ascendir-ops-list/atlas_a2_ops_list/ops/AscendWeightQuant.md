@@ -41,4 +41,4 @@ It is a custom operator. It has no corresponding operator in Caffe, Onnx, Tensor
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

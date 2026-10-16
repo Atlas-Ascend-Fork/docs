@@ -15,15 +15,15 @@ Computes the for the Swish of "x" .
 ## Inputs
 
 One input, including:
-x: A tensor, which supports 1D-8D defaultly and must be one of the following types: float16, bfloat16, float32. 
+x: A tensor, which supports 1D-8D defaultly and must be one of the following types: float16, bfloat16, float32.
 
 ## Outputs
 
-y: A tensor of the same type, shape and format as "x", and y = x / (1 + e ^ (-scale * x)). 
+y: A tensor of the same type, shape and format as "x", and y = x / (1 + e ^ (-scale * x)).
 
 ## Attributes
 
-scale: scalar parameter, the multiplier of x. Must be one of the following types: float. Default value = 1.0. 
+scale: scalar parameter, the multiplier of x. Must be one of the following types: float. Default value = 1.0.
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Compatible with the Torch operator Swish
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

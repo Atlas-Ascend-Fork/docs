@@ -32,7 +32,7 @@ REG_OP(FakeRemoteLookupUniqued)
 
 ## Brief
 
-fake remote lookup host unique. 
+fake remote lookup host unique.
 
 ## Inputs
 
@@ -77,4 +77,4 @@ Defaults to "".
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

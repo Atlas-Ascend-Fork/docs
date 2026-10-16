@@ -41,4 +41,4 @@ the op.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

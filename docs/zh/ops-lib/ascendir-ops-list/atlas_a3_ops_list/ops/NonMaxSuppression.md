@@ -13,7 +13,7 @@ REG_OP(NonMaxSuppression)
 ## Brief
 
 Greedily selects a subset of bounding boxes in descending order of
-score . 
+score .
 
 ## Inputs
 
@@ -22,12 +22,12 @@ Input boxes and  scores must be float type. Inputs include:
 - scores: A 1-D float tensor of shape [num_boxes] representing a single
 score corresponding to each box (each row of boxes).
 - max_output_size: A scalar integer tensor representing the maximum number
-of boxes to be selected by non max suppression . 
+of boxes to be selected by non max suppression .
 
 ## Outputs
 
 selected_indices: A 1-D integer tensor of shape [M] representing the selected
-indices from the boxes tensor, where M <= max_output_size . 
+indices from the boxes tensor, where M <= max_output_size .
 
 ## Attributes
 
@@ -45,7 +45,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input boxes and  scores must be float type . 
+Input boxes and  scores must be float type .
 
 ## Third-party framework compatibility
 
@@ -54,4 +54,4 @@ Compatible with tensorflow NonMaxSuppression operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

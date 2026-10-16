@@ -80,4 +80,4 @@ The combination of transpose_x1/transpose_x2 is only supported true/false for no
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

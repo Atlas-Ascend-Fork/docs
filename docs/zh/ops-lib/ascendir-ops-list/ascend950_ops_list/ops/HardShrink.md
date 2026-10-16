@@ -16,26 +16,28 @@ Calculate the hard shrinkage function.
 
 One inputs, including:
 input_x: A Tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 
 ## Outputs
 
-output_y: A Tensor with the same dtype and shape as the input_x. 
+output_y: A Tensor with the same dtype and shape as the input_x.
 
 ## Attributes
 
-lambd: An optional float. Defaults to 0.5. 
+lambd: An optional float. Defaults to 0.5.
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
+- input0 input_x: bfloat16,float16,float32
+- output0 output_y: bfloat16,float16,float32
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Hardshrink. 
+Compatible with the Pytorch operator Hardshrink.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

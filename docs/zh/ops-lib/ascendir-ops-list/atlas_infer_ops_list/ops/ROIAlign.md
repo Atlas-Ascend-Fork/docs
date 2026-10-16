@@ -17,7 +17,7 @@ REG_OP(ROIAlign)
 
 ## Brief
 
-Obtains the ROI feature matrix from the feature map. It is a customized FasterRcnn operator . 
+Obtains the ROI feature matrix from the feature map. It is a customized FasterRcnn operator .
 
 ## Inputs
 
@@ -43,10 +43,10 @@ with the values of "pooled_height",
 - sample_num: An optional attribute of type int32, specifying the horizontal and vertical sampling frequency of each output. If this attribute is set to "0",
 the sampling frequency is equal to the rounded up value of "rois", which is a floating point number. Defaults to "2".
 - roi_end_mode: An optional attribute of type int32, specifying the align mode. Defaults to "1", supports 0/1/2/3.
-"0" is compatible with align = False for all frameworks. 
-"1" is compatible with align = True for TensorFlow. 
-"2" is compatible with align = True for pyTorch. 
-"3" is compatible with align = True for MmDetecion v0.6. 
+"0" is compatible with align = False for all frameworks.
+"1" is compatible with align = True for TensorFlow.
+"2" is compatible with align = True for pyTorch.
+"3" is compatible with align = True for MmDetecion v0.6.
 - pool_mode: An optional attribute of type string, specifying the pooling mode. Defaults to "avg", supports "avg" and "max".
 
 ## Data Types
@@ -61,4 +61,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -40,4 +40,4 @@ batch dilate polygons according to expand_scale.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

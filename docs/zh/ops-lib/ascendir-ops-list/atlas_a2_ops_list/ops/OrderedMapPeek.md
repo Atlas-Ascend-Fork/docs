@@ -19,7 +19,7 @@ REG_OP(OrderedMapPeek)
 
 ## Brief
 
-Peeks at the values at the specified key. 
+Peeks at the values at the specified key.
 
 ## Inputs
 
@@ -32,7 +32,7 @@ Including:
 values: A list of Tensor objects. Must be one of the following types:
 DT_FLOAT, DT_FLOAT16, DT_INT8, DT_INT16, DT_UINT16, DT_UINT8, DT_INT32,
 DT_INT64, DT_BOOL, DT_DOUBLE, DT_UINT32, DT_UINT64, DT_RESOURCE, DT_STRING,
-DT_COMPLEX64, DT_COMPLEX128, DT_QINT8, DT_QUINT8, DT_QINT16, DT_QUINT16, DT_QINT32. 
+DT_COMPLEX64, DT_COMPLEX128, DT_QINT8, DT_QUINT8, DT_QINT16, DT_QUINT16, DT_QINT32.
 
 ## Attributes
 
@@ -60,4 +60,4 @@ Compatible with the TensorFlow operator OrderedMapPeek.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

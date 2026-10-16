@@ -3,7 +3,7 @@
 ```c
 REG_OP(SwigluGroupQuant)
     .INPUT(x, TensorType({DT_FLOAT16, DT_BF16, DT_FLOAT}))
-    .OPTIONAL_INPUT(weight, TensorType({DT_FLOAT}))
+    .OPTIONAL_INPUT(weight, TensorType({DT_FLOAT16, DT_BF16, DT_FLOAT}))
     .OPTIONAL_INPUT(group_index, TensorType({DT_INT64}))
     .OPTIONAL_INPUT(scale, TensorType({DT_FLOAT}))
     .OUTPUT(y, TensorType({DT_FLOAT8_E4M3FN, DT_FLOAT8_E5M2, DT_FLOAT4_E2M1, DT_FLOAT4_E1M2, DT_HIFLOAT8}))
@@ -16,6 +16,8 @@ REG_OP(SwigluGroupQuant)
     .ATTR(clamp_limit, Float, -1.0f)
     .ATTR(dst_type_max, Float, 15.0f)
     .ATTR(output_origin, Bool, false)
+    .ATTR(alpha, Float, 1.0f)
+    .ATTR(bias, Float, 0.0f)
     .OP_END_FACTORY_REG(SwigluGroupQuant)
 ```
 
@@ -25,40 +27,59 @@ Performs SwiGLU activation followed by Block FP8, MX FP8, MX FP4, or HiFloat8 qu
 
 ## Inputs
 
-- x: Required tensor of type float16 or bfloat16. quant_mode=3 also supports float32. The last dimension
-is split into two equal parts for SwiGLU and must be divisible by 256.
-- weight: Optional float32 tensor. Per-token weight multiplied into the SwiGLU result before quantization.
-- group_index: Optional int64 tensor. Count-mode group token numbers.
-- scale: Optional float32 tensor. Reserved for static quantization modes.
+- x: Required tensor. float16 or bfloat16 for quant_mode 0/1/5; float16, bfloat16 or float32 for
+quant_mode 2/3. The rank must be in [2, 8] ([2, 7] for quant_mode 1); quant_mode 5 only supports a
+two-dimensional [T, 2H] tensor. Empty tensors are supported for quant_mode 0/1 and not supported for
+quant_mode 2/3/5. The last dimension is split into two equal parts for SwiGLU. For non-empty tensors,
+quant_mode 5 requires the last dimension to be at least 64 and divisible by 64; legacy modes require it
+to be at least 256 and divisible by 256.
+- weight: Optional float32 tensor for quant_mode 0/1/2/3 and optional float16, bfloat16 or float32 tensor
+for quant_mode 5. Per-token weight multiplied into the SwiGLU result before quantization. The rank must be
+in [1, 8], empty tensors are supported for quant_mode 0/1 and not supported for quant_mode 2/3/5, and the
+element count must equal the product of all x dims except the last one.
+- group_index: Optional int64 tensor. Count-mode group token numbers. It must be 1D, its element
+values must be greater than or equal to 0, group_index cannot be an empty tensor on its own for
+quant_mode 0/1, and empty tensors are not supported for quant_mode 2/3.
+- scale: Optional float32 tensor. Static quantization input (invScale) used by quant_mode 2. Its
+shape must be [G] when group_index is present and [1] otherwise, and empty tensors are not supported.
 
 ## Outputs
 
-- y: Quantized output tensor. FP8 and FP4 output shapes are input shape with the last dimension halved.
-FP4 physical storage packs two values in one byte via its dtype.
-- y_scale: Scale tensor. float32 for Block FP8 and HiFloat8 dynamic quantization, float8_e8m0 for MX.
-- y_origin: SwiGLU result before quantization, with the same dtype as x and last dimension halved.
+- y: Quantized output tensor. The shape is the input x shape with the last dimension halved for all
+quant modes. FP4 physical storage packs two values in one byte via its dtype, so it occupies D/4 bytes.
+Empty tensors are supported for quant_mode 0/1 and not supported for quant_mode 2/3.
+- y_scale: Scale tensor. float32 for Block FP8, HiFloat8 static and HiFloat8 dynamic quantization,
+float8_e8m0 for MX. Empty tensors are supported for quant_mode 0/1 and not supported for quant_mode 2/3.
+- y_origin: SwiGLU result before the weight multiplication, with the same dtype and rank as x, the
+same dims as x except that the last dimension is halved. Empty tensors are supported for quant_mode
+0/1 and not supported for quant_mode 2/3.
 
 ## Attributes
 
-- dst_type: Optional int. Target quantized dtype. Supports FLOAT8_E4M3FN, FLOAT8_E5M2,
-FLOAT4_E2M1, FLOAT4_E1M2 and HIFLOAT8. Defaults to FLOAT8_E4M3FN.
-- quant_mode: Optional int. 0 means Block FP8 quantization, 1 means MX quantization,
-3 means HiFloat8 dynamic quantization. Defaults to 0.
+- dst_type: Optional int. Target quantized dtype. It is only effective for quant_mode 0/1/5, and
+supports 35 (FLOAT8_E5M2), 36 (FLOAT8_E4M3FN), 40 (FLOAT4_E2M1) and 41 (FLOAT4_E1M2). quant_mode 1
+is required when dst_type is 40 or 41. quant_mode 2/3 always quantize to HIFLOAT8 and ignore this
+attribute. Defaults to FLOAT8_E4M3FN.
+- quant_mode: Optional int. 0 means Block FP8 quantization, 1 means legacy MX quantization, 2 means
+HiFloat8 static quantization, 3 means HiFloat8 dynamic quantization, and 5 means MX V2 quantization. Defaults to 0.
 - block_size: Optional int. 0 selects the mode default. Supports 128 for Block FP8 and 32 for MX.
 Defaults to 0.
-- round_scale: Optional bool. MX quantization requires true. Defaults to false.
-- clamp_limit: Optional float. Defaults to -1.0 for quant_mode 0/1 and 0.0 for quant_mode 3,
-both of which disable clamp. If set to a positive value, clamps SwiGLU inputs before activation.
+- round_scale: Optional bool. quant_mode 1/5 require true. Defaults to false.
+- clamp_limit: Optional float. Defaults to -1.0, which disables clamp. If set to a positive value,
+clamps SwiGLU inputs before activation. quant_mode 5 requires a finite value.
 - dst_type_max: Optional float. Maximum finite value used by quant_mode=3 scale calculation.
-- output_origin: Optional bool. Writes the pre-quantized SwiGLU result to y_origin when supported.
+Defaults to 15.0.
+- output_origin: Optional bool. Writes the SwiGLU result before the weight multiplication to y_origin.
 Defaults to false.
+- alpha: Optional float. Sigmoid input coefficient used by quant_mode 5. Defaults to 1.0.
+- bias: Optional float. Second SwiGLU branch bias used by quant_mode 5. Defaults to 0.0.
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
 - input0 x: bfloat16,float16,float32
-- input1 weight: float32
+- input1 weight: bfloat16,float16,float32
 - input2 group_index: int64
 - input3 scale: float32
 - output0 y: float4_e1m2,float4_e2m1,float8_e4m3fn,float8_e5m2,hifloat8
@@ -72,4 +93,4 @@ It is a custom operator. It has no corresponding operator in Caffe, ONNX, Tensor
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

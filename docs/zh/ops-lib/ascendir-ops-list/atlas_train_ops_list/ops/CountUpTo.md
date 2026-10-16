@@ -10,21 +10,21 @@ REG_OP(CountUpTo)
 
 ## Brief
 
-Increments 'ref' until it reaches 'limit' . 
+Increments 'ref' until it reaches 'limit' .
 
 ## Inputs
 
 Inputs include:
-ref: A mutable Tensor. Must be one of the following types: int32, int64 . 
+ref: A mutable Tensor. Must be one of the following types: int32, int64 .
 
 ## Outputs
 
-y: A Tensor. Has the same type as ref . 
+y: A Tensor. Has the same type as ref .
 
 ## Attributes
 
 limit: An int. If incrementing ref would bring it above limit, instead
-generates an 'OutOfRange' error . 
+generates an 'OutOfRange' error .
 
 ## Data Types
 
@@ -44,4 +44,4 @@ compatible with tensorflow CountUpTo operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

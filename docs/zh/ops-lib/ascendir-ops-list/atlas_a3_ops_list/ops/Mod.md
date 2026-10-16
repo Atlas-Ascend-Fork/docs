@@ -24,7 +24,7 @@ int32, int64, int8, uint8, double.
 
 ## Outputs
 
-y: A ND tensor. Has the same dtype as "x1". 
+y: A ND tensor. Has the same dtype as "x1".
 
 ## Data Types
 
@@ -46,7 +46,7 @@ requirement of double thousandths in the mini form.
 - Due to different architectures, the calculation results of this operator
 on NPU and CPU may be inconsistent.
 - If shape is expressed as (D1,D2... ,Dn),
-then D1*D2... *DN<=1000000,n<=8. 
+then D1*D2... *DN<=1000000,n<=8.
 
 ## Third-party framework compatibility
 
@@ -55,4 +55,4 @@ Compatible with the TensorFlow operator Mod.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

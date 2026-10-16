@@ -21,17 +21,17 @@ This operation convert output dataType and shape.
 
 The input handle must have the resource type. Inputs include:
 x:A list of Tensor objects. One or more tensors from which
-the enqueued tensors should be taken . 
+the enqueued tensors should be taken .
 
 ## Outputs
 
 y:A list of Tensor objects. One or more tensors from which
-the enqueued tensors should be taken . 
+the enqueued tensors should be taken .
 
 ## Attributes
 
-type: An optional ge::DataType. It refers to the target data type of outputs . 
-keepdim: If True, output dims equal intput dims. otherwise output dims can append. default value is false.  
+type: An optional ge::DataType. It refers to the target data type of outputs .
+keepdim: If True, output dims equal intput dims. otherwise output dims can append. default value is false.
 
 ## Third-party framework compatibility
 
@@ -40,4 +40,4 @@ Compatible with tensorflow QueueIsClosed operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

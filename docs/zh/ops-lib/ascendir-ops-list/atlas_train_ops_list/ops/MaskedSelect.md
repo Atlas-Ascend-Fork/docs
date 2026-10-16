@@ -20,7 +20,7 @@ two inputs, including:
 
 ## Outputs
 
-y: A tensor with the same type as x. 
+y: A tensor with the same type as x.
 
 ## Attention Constraints
 
@@ -34,4 +34,4 @@ Compatible with the Numpy operator select.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

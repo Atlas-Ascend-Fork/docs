@@ -20,12 +20,12 @@ y = log_base(shift + scale * x), with "base" > 0.
 ## Inputs
 
 x: A ND Tensor of type uint8, int8, int16, int32, int64, float64,
-   float16, bfloat16, float32, bool, complex128 or complex64. 
+   float16, bfloat16, float32, bool, complex128 or complex64.
 
 ## Outputs
 
 y: A tensor, when the input is of integer type, the y type is float32.
-   Other case, y has same type as "x". 
+   Other case, y has same type as "x".
 
 ## Attributes
 
@@ -49,7 +49,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - "base" is supposed to be greater than 0. Retaining the default
 value "-1" sets "base" to "e".
 - If the input value of operator Log is within the range (0, 0.01] or
-[0.95, 1.05], the output accuracy is subject to change. 
+[0.95, 1.05], the output accuracy is subject to change.
 
 ## Third-party framework compatibility
 
@@ -59,4 +59,4 @@ value "-1" sets "base" to "e".
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

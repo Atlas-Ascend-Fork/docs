@@ -31,9 +31,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Ouputs
 
-y: A mutable Tensor of type float16, with the shape of [num_step, batch_size, hidden_size]. 
+y: A mutable Tensor of type float16, with the shape of [num_step, batch_size, hidden_size].
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

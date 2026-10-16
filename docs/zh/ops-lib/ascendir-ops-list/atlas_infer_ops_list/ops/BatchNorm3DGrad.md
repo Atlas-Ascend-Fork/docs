@@ -62,7 +62,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The preceding layer of this operator must be operator BatchNorm . 
+The preceding layer of this operator must be operator BatchNorm .
 @see BatchNorm
 
 ## Third-party framework compatibility
@@ -72,4 +72,4 @@ Compatible with the TensorFlow operators FusedBatchNormGradV2 and FusedBatchNorm
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

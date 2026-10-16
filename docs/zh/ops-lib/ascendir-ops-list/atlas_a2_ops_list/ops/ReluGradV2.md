@@ -25,7 +25,7 @@ In Ascend 950 AI Processor, support ND format. Others support 5D, format must be
 backprops: A tensor of ouput. Indicates the backpropagation result.
 When gradient is greater than 0, backprops is the value of gradient.
 When the value of gradient is less than or equal to 0, the value of backprops is 0.
-Must have the same type, format and shape as "gradients". 
+Must have the same type, format and shape as "gradients".
 
 ## Data Types
 
@@ -37,9 +37,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The corresponding Relu operator needs to be called before using this operator on the network. 
+The corresponding Relu operator needs to be called before using this operator on the network.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

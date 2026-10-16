@@ -10,7 +10,7 @@ REG_OP(GreaterEqual)
 
 ## Brief
 
-Returns the truth value of (x1 >= x2) element-wise. Support broadcasting operations. 
+Returns the truth value of (x1 >= x2) element-wise. Support broadcasting operations.
 When input is int32 and (x2 - x1) > 2^31 or < -2^31,
 aicore accuracy is not guaranteed.
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator GreaterEqual.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

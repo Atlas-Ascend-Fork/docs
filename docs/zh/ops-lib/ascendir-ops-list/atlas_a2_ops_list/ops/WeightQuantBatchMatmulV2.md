@@ -29,9 +29,9 @@ The type support float16, bfloat16. The m value must be in [1, 65535] when
 transpose_x is true or [1, 2147483647] when transpose_x is false. The k value
 must be in [1, 65535].
 - weight: A matrix tensor of quantized weight. Shape supports (n,k)/(k,n),
-Format supports ND/NZ. The type support int8, int4, int32, float8_e5m2, float8_e4m3fn, hifloat8, float4_e2m1, float4_e1m2. 
+Format supports ND/NZ. The type support int8, int4, int32, float8_e5m2, float8_e4m3fn, hifloat8, float4_e2m1, float4_e1m2.
 Format must be ND when the type is float8_e5m2, float8_e4m3fn or hifloat8.
-For Ascend 950 AI Processor, transpose_weight must be false when format is NZ. 
+For Ascend 950 AI Processor, transpose_weight must be false when format is NZ.
 The k, n value must be in [1, 65535].
 The k value must be even when type is int4/float4_e2m1/float4_e1m2 and transpose_weight
 is true, and the n value must be even when type is int4/float4_e2m1/float4_e1m2 and transpose_weight
@@ -42,14 +42,14 @@ For different anti quantization modes, the per_tensor mode's shape supports
 (1)/(1,1), the per_channel mode's shape supports (n,)/(1,n)/(n,1), the per_group
 modes' shape supports (ceil(k/antiquant_group_size),n)/
 (n,ceil(k/antiquant_group_size)). Format supports ND. The type support
-float16, bfloat16, uint64 and int64. 
+float16, bfloat16, uint64 and int64.
 When the type is float16 or bfloat16, it should be the same with x. When the type is uint64 or
-int64, there are the following constraints: 
-1. antiquant_scale only support the per_channel mode. 
-2. x's type should be float16. 
-3. transpose_x should be false and transpose_weight should be true. 
-4. the m value must be in [1, 96] and the k, n value must be 64 aligned. 
-5. weight's type should be int8 and format should be ND. 
+int64, there are the following constraints:
+1. antiquant_scale only support the per_channel mode.
+2. x's type should be float16.
+3. transpose_x should be false and transpose_weight should be true.
+4. the m value must be in [1, 96] and the k, n value must be 64 aligned.
+5. weight's type should be int8 and format should be ND.
 Additionally, the type supports float8_e8m0 when the weight dtype is float4_e2m1 or float4_e1m2.
 - antiquant_offset: An Optional tensor for antiquant offset. Shape, format
 and type should be the same with antiquant_scale if antiquant_scale's type is
@@ -66,7 +66,7 @@ The type support float32.
 This parameter must not exist when type of antiquant_scale is uint64/int64.
 - bias: An Optional tensor. Shape supports (n)/(1,n), Format supports ND.
 When type of x is float16, the type of bias should be float16. When type of x
-is bfloat16, the type of bias should be float32 or bfloat16. 
+is bfloat16, the type of bias should be float32 or bfloat16.
 Specifically, these optional inputs support the shape (0,). At this point,
 it means that the optional input doesn't exist.
 
@@ -86,9 +86,9 @@ antiquant_scale's shape should be (1)/(1,1)/(n,)/(n,1)/(n,ceil(k/antiquant_group
 When transpose_weight is false, weight's shape is (k, n),
 antiquant_scale's shape should be (1)/(1,1)/(n,)/(1,n)/(ceil(k/antiquant_group_size),n).
 - antiquant_group_size: int, antiquant_group_size must in [0, k-1]
-and antiquant_group_size % 32 == 0. 
-When antiquant_scale dtype is float8_e8m0, antiquant_group_size must be 32. 
-When the antiquant_group_size is 0, it means that the per-group mode is not used. Default: 0. 
+and antiquant_group_size % 32 == 0.
+When antiquant_scale dtype is float8_e8m0, antiquant_group_size must be 32.
+When the antiquant_group_size is 0, it means that the per-group mode is not used. Default: 0.
 - dtype: An int. Declare the output dtype, supports 1(float16), 2(int8), 27(bfloat16).
 Default: -1, if the input has quant_scale, the output dtype is int8,
 otherwise the output dtype is the same as the input x dtype.
@@ -109,9 +109,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-- It is not recommended to use weight NZ format on Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component,
+- It is not recommended to use weight NZ format on Atlas A2 products,
 because its performance may not be better than ND format.
-- All of these conditions must be met on Atlas Inference Series Product: weight type is int8,
+- All of these conditions must be met on Atlas inference products: weight type is int8,
 weight format is NZ, transpose_weight is true, x type is float16, antiquant_scale only support the per_channel mode,
 quant_scale not exists, quant_offset not exists, antiquant_group_size is 0.
 - Per_channel mode: To improve performance, it is recommended to use the
@@ -121,4 +121,4 @@ recommended to use the antiquant_scale with data type UINT64/INT64.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

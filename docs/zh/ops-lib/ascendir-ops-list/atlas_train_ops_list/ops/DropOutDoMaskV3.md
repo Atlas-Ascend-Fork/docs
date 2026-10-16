@@ -11,9 +11,9 @@ REG_OP(DropOutDoMaskV3)
 
 ## Brief
 
-Return "output" according to the algorithm of dropout_do_mask_v3:  
- scale_x = x *(1 / keep_prob)  
- output = select(mask == 1, scale_x, 0)  
+Return "output" according to the algorithm of dropout_do_mask_v3:
+ scale_x = x *(1 / keep_prob)
+ output = select(mask == 1, scale_x, 0)
 
 ## Inputs
 
@@ -27,7 +27,7 @@ Three inputs, including:
     value = value = ((size(x) + 127) / 128) * 128 / 8.
 - keep_prob: A mutable Tensor.Must met all of the following rules:
     shape of "keep_prob" should be (1,).
-    Has the same type as "x" . 
+    Has the same type as "x" .
 
 ## Outputs
 
@@ -45,4 +45,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

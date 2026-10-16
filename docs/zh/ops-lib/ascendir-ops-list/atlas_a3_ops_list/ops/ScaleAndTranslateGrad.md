@@ -14,7 +14,7 @@ REG_OP(ScaleAndTranslateGrad)
 
 ## Brief
 
-Computes the gradient by scale and translate . 
+Computes the gradient by scale and translate .
 
 ## Inputs
 
@@ -25,7 +25,7 @@ Computes the gradient by scale and translate .
 
 ## Outputs
 
-y: A `Tensor`. Has the same type as `grads` . 
+y: A `Tensor`. Has the same type as `grads` .
 
 ## Attributes
 
@@ -49,4 +49,4 @@ Compatible with TensorFlow ScaleAndTranslateGrad operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

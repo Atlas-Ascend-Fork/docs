@@ -39,4 +39,4 @@ Compatible with the TensorFlow operator BesselI1e.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

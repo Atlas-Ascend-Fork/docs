@@ -12,7 +12,7 @@ REG_OP(CosineSimilarity)
 
 ## Brief
 
-Returns cosine similarity between x1 and x2,computed along dim. 
+Returns cosine similarity between x1 and x2,computed along dim.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Two inputs, including:
 
 ## Outputs
 
-output_y: A ND Tensor with the same dtype of input_x's. 
+output_y: A ND Tensor with the same dtype of input_x's.
 
 ## Attributes
 
@@ -39,9 +39,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the PyTorch operator CosineSimilarity. 
+Compatible with the PyTorch operator CosineSimilarity.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

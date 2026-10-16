@@ -56,11 +56,11 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - The dtype of input tensor query, key, sin, cos must be the same.
 - When the rotary_mode is "half" or "interleave", the D dimension must be divisible by 2.
 when the rotary_mode is "quarter", the D dimension must be divisible by 4
-- Atlas Inference Series Product and Atlas Trainning Series Product:
+- Atlas inference products and Atlas training products:
 - support types: float16, float32.
 - support layout: not support.
 - support rotary_mode: not support.
-- Atlas A2 Training Series Product/ Atlas 800I A2 Inference Product and Atlas A3 Training Series Product:
+- Atlas A2 products and Atlas A3 products:
 - support types: float16, float32.
 - support layout: 1.
 - support rotary_mode: not support.
@@ -72,4 +72,4 @@ when the rotary_mode is "quarter", the D dimension must be divisible by 4
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

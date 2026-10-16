@@ -13,7 +13,7 @@ REG_OP(RightShift)
 
 ## Brief
 
-Element-wise computes the bitwise right-shift of x and y . 
+Element-wise computes the bitwise right-shift of x and y .
 
 ## Inputs
 
@@ -25,7 +25,7 @@ int64, uint8, uint16, uint32, uint64.
 
 ## Outputs
 
-z: A Tensor. Has the same type as "x".  
+z: A Tensor. Has the same type as "x".
 
 ## Data Types
 
@@ -41,7 +41,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Unique runs on the Ascend AI CPU, which delivers poor performance.  
+Unique runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -50,4 +50,4 @@ Compatible with the TensorFlow operator RightShift.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

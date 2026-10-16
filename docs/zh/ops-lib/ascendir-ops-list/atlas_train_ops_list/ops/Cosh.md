@@ -14,11 +14,11 @@ Computes cosine of "x" element-wise.
 ## Inputs
 
 x: A ND Tensor of type bfloat16, float16, float32, double, complex64, complex128.
-the format can be [NCHW,NHWC,ND]. 
+the format can be [NCHW,NHWC,ND].
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype as "x". 
+y: A ND Tensor. Has the same dtype as "x".
 
 ## Data Types
 
@@ -32,9 +32,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator Cosh. 
+Compatible with the TensorFlow operator Cosh.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

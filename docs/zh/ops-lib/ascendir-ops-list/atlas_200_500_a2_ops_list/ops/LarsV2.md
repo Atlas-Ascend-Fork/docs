@@ -15,7 +15,7 @@ REG_OP(LarsV2)
 
 ## Brief
 
-Update "g" according to the LARS algorithm . 
+Update "g" according to the LARS algorithm .
 
 ## Inputs
 
@@ -35,9 +35,9 @@ Three Attributes, including:
 - hyperpara: An optional float. Default value is 0.001.
 - epsilon: An optional float. Default value is 1e-5.Avoid denominator is 0.
 - use_clip: An optional bool. Defaults to "False".
-    If "True", updating learning rate . 
+    If "True", updating learning rate .
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

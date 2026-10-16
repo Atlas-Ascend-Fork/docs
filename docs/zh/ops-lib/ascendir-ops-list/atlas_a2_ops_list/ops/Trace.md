@@ -10,16 +10,16 @@ REG_OP(Trace)
 
 ## Brief
 
-Returns the sum of the elements of the diagonal of the input 2-D matrix. 
+Returns the sum of the elements of the diagonal of the input 2-D matrix.
 
 ## Inputs
 
 x: A Tensor. Must be one of the following types:complex128, complex64, float64, float32, float16, bool,
-                                                int8, uint8, int16, uint16, int32, uint32, int64, uint64, bfloat16,. 
+                                                int8, uint8, int16, uint16, int32, uint32, int64, uint64, bfloat16,.
 
 ## Outputs
 
-y: A Tensor. Must be one of the following types:complex128, complex64, float64, float32, float16, int64, uint64, bfloat16. 
+y: A Tensor. Must be one of the following types:complex128, complex64, float64, float32, float16, int64, uint64, bfloat16.
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Compatible with the Pytorch operator Trace.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

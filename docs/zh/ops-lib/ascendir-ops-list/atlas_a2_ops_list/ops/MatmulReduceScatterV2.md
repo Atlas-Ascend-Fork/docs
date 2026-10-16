@@ -35,15 +35,15 @@ six inputs, including:
 - x2: A matrix tensor. The type supports float16, bfloat16, hifloat8, float8_e5m2, float8_e4m3fn.The x2 only supports two dimensions in current version, for example (K, N). The x2 supports transposed and non-transposed.
 The K value in x2 should be same as the K value in x1 when x2 is non-transposed, and the K value should be in range [256, 65535).
 - bias: A matrix tensor. The format supports ND. If x1 type is float8_e4m3fn, float8_e5m2, hifloat8, then the bias type supports float32.
-If x1 type is float16, bfloat16, then the bias type supports float16, bfloat16 and the current version doesn't supports the scenario where bias is not 0. 
-The bias only supports one dimension in current version, for expample (N,). 
-The bias only supports nullptr in the per_block scenario. 
+If x1 type is float16, bfloat16, then the bias type supports float16, bfloat16 and the current version doesn't supports the scenario where bias is not 0.
+The bias only supports one dimension in current version, for expample (N,).
+The bias only supports nullptr in the per_block scenario.
 - x1_scale: A matrix tensor. The type supports float32, float_e8m0. The format supports ND.  The x1_scale only supports nullptr when x1's type is float16 or bfloat16.
-The x1_scale only supports one dimension and only one element in the per_tensor scenario, for expample (1,). 
-The x1_scale only supports two dimensions in the per_block scenario, for expample (ceildiv(M, 128), ceildiv(K, 128)). 
+The x1_scale only supports one dimension and only one element in the per_tensor scenario, for expample (1,).
+The x1_scale only supports two dimensions in the per_block scenario, for expample (ceildiv(M, 128), ceildiv(K, 128)).
 - x2_scale: A matrix tensor. The type supports float32, float_e8m0. The format supports ND.  The x2_scale only supports nullptr when x1's type is float16 or bfloat16.
-The x2_scale only supports one dimension and only one element in the per_tensor scenario, for expample (1,). 
-The x2_scale only supports two dimensions in the per_block scenario, for expample (ceildiv(K, 128), ceildiv(N, 128)). 
+The x2_scale only supports one dimension and only one element in the per_tensor scenario, for expample (1,).
+The x2_scale only supports two dimensions in the per_block scenario, for expample (ceildiv(K, 128), ceildiv(N, 128)).
 - quant_scale: A matrix tensor. The type supports float32. The format supports ND. The quant_scale only supports one dimension and only one element, for example (1,). The quant_scale only supports nullptr in current version.
 
 ## Outputs
@@ -65,7 +65,7 @@ If False, don't change the shape of "x2" before multiplication. Default: "false"
 - rank_size: An int. Number of rank num. Default: "0".The rank_size only supports 2/4/8/16/32/64 in current version.
 - block_size: An int. Number of values in the M, N directions in y correspond to one dequantization coefficient. Default: "0". The block_size only supports 0 in current version.
 - group_size: An int. Number of values in the M, N, K directions in x1/x2 correspond to one dequantization coefficient.
-Default: "0". Reserved attribute. The block_size only supports 549764202624 in the per_block scenario. The block_size only supports 0 in the other scenario. 
+Default: "0". Reserved attribute. The block_size only supports 549764202624 in the per_block scenario. The block_size only supports 0 in the other scenario.
 - is_amax_out: A bool. whether the output of amax_out is supported . Default: "false". If True, supports output amax_out.
 - y_dtype: An int. Default: "0". The y_dtype only supports 0(float32)/1(float16)/27(bfloat16) in current version.
 - comm_mode: A string. communication Mode. Default: "". The comm_mode only supports "aicpu" or "aiv" in current version.
@@ -86,4 +86,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

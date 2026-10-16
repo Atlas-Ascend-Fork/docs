@@ -16,7 +16,7 @@ REG_OP(NonMaxSuppressionV4)
 ## Brief
 
 Greedily selects a subset of bounding boxes in descending order of
-score . 
+score .
 
 ## Inputs
 
@@ -29,19 +29,19 @@ of boxes to be selected by non max suppression.
 - iou_threshold: A 0-D float tensor representing the threshold for deciding
 whether boxes overlap too much with respect to IOU.
 - score_threshold: A 0-D float tensor representing the threshold for
-deciding when to remove boxes based on score . 
+deciding when to remove boxes based on score .
 
 ## Outputs
 
 - selected_indices: A 1-D integer tensor of shape [M] representing the
 selected indices from the boxes tensor, where M <= max_output_size.
 - valid_outputs: A 0-D integer tensor representing the number of valid
-elements in selected_indices, with the valid elements appearing first . 
+elements in selected_indices, with the valid elements appearing first .
 
 ## Attributes
 
 pad_to_max_output_size: If true, the output selected_indices is padded
-to be of length max_output_size. Defaults to false . 
+to be of length max_output_size. Defaults to false .
 
 ## Data Types
 
@@ -57,7 +57,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input boxes and  scores must be float type . 
+Input boxes and  scores must be float type .
 
 ## Third-party framework compatibility
 
@@ -66,4 +66,4 @@ Compatible with tensorflow NonMaxSuppressionV4 operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

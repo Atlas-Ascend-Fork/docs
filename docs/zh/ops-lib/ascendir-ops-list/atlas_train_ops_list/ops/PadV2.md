@@ -31,13 +31,13 @@ paddings[i][1] specifies the number of padding elements to add after x in dimens
 Supported format list: ["ND"].
 - constant_values: An optional Tensor, dtype same as "x".
 Used only in "constant" mode to specify the value to fill in the padded regions.
-If not provided, default value is 0. 
+If not provided, default value is 0.
 
 ## Outputs
 
 y: A Tensor of the same type as "x".
 y.shape[i] = x.shape[i] + paddings[i][0] + paddings[i][1], where y.shape[i] >= 0.
-Supported format list: ["ND"]. 
+Supported format list: ["ND"].
 
 ## Data Types
 
@@ -58,7 +58,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 If the type of x is float4_e2m1 or float4_e1m2, paddings values should be even number.
 If the type of x is hifloat8, float8_e5m2, float8_e4m3fn or float8_e8m0,
 paddings values should be non-negative integers.
-The constant_values should be a scalar tensor with the same dtype as x. 
+The constant_values should be a scalar tensor with the same dtype as x.
 
 ## Third-party framework compatibility
 
@@ -67,4 +67,4 @@ Compatible with TensorFlow operator PadV2.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

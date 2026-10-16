@@ -18,7 +18,7 @@ The format must be ND.
 
 ## Outputs
 
-y: A Tensor with the same type, shape, format as "x". 
+y: A Tensor with the same type, shape, format as "x".
 
 ## Data Types
 
@@ -28,4 +28,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -12,11 +12,11 @@ REG_OP(QueueData)
 
 ## Brief
 
-Queue data for other operators. 
+Queue data for other operators.
 
 ## Outputs
 
-y: A DT_UINT8 tensor. 
+y: A DT_UINT8 tensor.
 
 ## Attributes
 
@@ -30,4 +30,4 @@ be set 1, and the left should be set 2.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

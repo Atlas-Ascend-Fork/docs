@@ -27,17 +27,17 @@ Specifies the minimum scalar value possibly produced for the input. Shape suport
 The format support ND or NC1HWC0. Has the same format as "x".
 - max_range: A Tensor of type float32.
 Specifies the maximum scalar value possibly produced for the input. The format support ND or NC1HWC0.
-Shape suport 1D ~ 8D. "max_range" has the same shape as "min_range". Has the same format as "x". 
+Shape suport 1D ~ 8D. "max_range" has the same shape as "min_range". Has the same format as "x".
 
 ## Outputs
 
 y: A dictionary of type float32. The format support ND or NC1HWC0.
-"y" has the same shape and format as "x". 
+"y" has the same shape and format as "x".
 
 ## Attributes
 
 mode: An optional string from: "MIN_COMBINED", "MIN_FIRST", and "SCALED".
-Defaults to "MIN_COMBINED" . 
+Defaults to "MIN_COMBINED" .
 
 ## Data Types
 
@@ -65,4 +65,4 @@ Compatible with the TensorFlow operator Dequantize.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -75,4 +75,4 @@ Multiplying the H/W of offsets by the H/W of ksize equals the H/W of grad.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

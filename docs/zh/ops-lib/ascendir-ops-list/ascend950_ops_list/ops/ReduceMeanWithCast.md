@@ -16,7 +16,7 @@ REG_OP(ReduceMeanWithCast)
 
 ## Brief
 
-Insert a Cast node for the ReduceMean operator . 
+Insert a Cast node for the ReduceMean operator .
 
 ## Inputs
 
@@ -24,11 +24,11 @@ Two inputs, including:
  @li x: A ND Tensor. Must be one of the following types: float16, float32, int8, uint8.
  @li axes: The dimensions to reduce. Must be one of the following types: int, list, tuple, NoneType.
    - If None (the default), reduces all dimensions.
-   - Must be in the range [-rank(x), rank(x)) . 
+   - Must be in the range [-rank(x), rank(x)) .
 
 ## Outputs
 
-y: A ND Tensor. Has the same type as "x" . 
+y: A ND Tensor. Has the same type as "x" .
 
 ## Attributes
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator ReduceMeanWithCast.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

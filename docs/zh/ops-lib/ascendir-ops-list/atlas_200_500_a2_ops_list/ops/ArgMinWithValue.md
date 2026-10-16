@@ -18,9 +18,9 @@ dimension.
 
 ## Inputs
 
-One input: 
+One input:
 x: A multi-dimensional Tensor of type bfloat16 float16 or float32 or int64 or int32.
-Supported format list ["ND"]. 
+Supported format list ["ND"].
 
 ## Outputs
 
@@ -31,7 +31,7 @@ Supported format list ["ND"].
 dimension than "x".)
 - values: A ND Tensor, specifying the minimum value. Has the same dimensions
 as "indice" and the same dtype as "x".
-Supported format list ["ND"]. 
+Supported format list ["ND"].
 
 ## Attributes
 
@@ -56,7 +56,7 @@ value is used.
 - The value range of "dimension" is [-dims, dims - 1]. "dims" is the
 dimension length of "x".
 - Performing the ArgMinWithValue operation on the last axis of float32 data
-is not supported on a mini platform. 
+is not supported on a mini platform.
 
 ## Third-party framework compatibility
 
@@ -66,4 +66,4 @@ sequence is opposite to that of PyTorch).
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

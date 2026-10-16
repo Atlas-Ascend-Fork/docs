@@ -20,15 +20,15 @@ the output will be [[0, 3] [3, 2] [1, 3]].
 
 Two inputs, including:
 - x: A tensor. Must be one of the following types:
-    float16, float32, bfloat16, int8, int16, int32, int64, uint8. 
+    float16, float32, bfloat16, int8, int16, int32, int64, uint8.
 - boundaries: A sorted 1-dim tensor with same type as x. It gives the boundary of the buckets. Must be one of the
 following types:
-    float16, float32, bfloat16, int8, int16, int32, int64, uint8. 
+    float16, float32, bfloat16, int8, int16, int32, int64, uint8.
 
 ## Outputs
 
 y: A tensor with the same shape as 'x', each value of input replaced with bucket index.
-Must be one of the following types: int32, int64. 
+Must be one of the following types: int32, int64.
 
 ## Attributes
 
@@ -50,9 +50,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator bucketize. 
+Compatible with the Pytorch operator bucketize.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

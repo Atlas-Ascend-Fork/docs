@@ -10,17 +10,17 @@ REG_OP(NonDeterministicInts)
 
 ## Brief
 
-Non-deterministically generates some integers . 
+Non-deterministically generates some integers .
 
 ## Inputs
 
 This op may use some OS-provided source of non-determinism (e.g. an RNG),
 so each execution will give different results. Inputs included:
-shape: The shape of the output tensor . 
+shape: The shape of the output tensor .
 
 ## Outputs
 
-y:A Returns Non-deterministic integer values with specified shape . 
+y:A Returns Non-deterministic integer values with specified shape .
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Compatible with tensorflow NonDeterministicInts operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -16,11 +16,11 @@ Choose the value of X with value according to mask.
 
 two inputs, including:
  @li x: A Tensor of dtype is float16 or float32.
- @li mask: A Tensor of dtype is bool. 
+ @li mask: A Tensor of dtype is bool.
 
 ## Outputs
 
-y: A tensor with the same type as x. 
+y: A tensor with the same type as x.
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Replaces the pytorch operator masked_select in some scenarios.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

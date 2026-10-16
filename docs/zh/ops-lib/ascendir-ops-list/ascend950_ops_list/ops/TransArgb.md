@@ -13,7 +13,7 @@ REG_OP(TransArgb)
 
 HDRNet and ISP direct data conversion
 returned tensor's dimension will correspond to input dimension [0, 3, 4, 2, 1],
-convert tensor dtype float16 to int16 . 
+convert tensor dtype float16 to int16 .
 
 ## Inputs
 
@@ -22,7 +22,7 @@ one inputs, including:
 
 ## Outputs
 
-y: A Tensor. Must be one of the following types: int16. 
+y: A Tensor. Must be one of the following types: int16.
 
 ## Third-party framework compatibility
 
@@ -31,4 +31,4 @@ only for use by corresponding operators in HDRnet networks
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -14,7 +14,7 @@ Tests whether the input exceeds a threshold.
 
 ## Inputs
 
-x: A ND Tensor with any format. Must be one of the following types: float16, float32, bfloat16. 
+x: A ND Tensor with any format. Must be one of the following types: float16, float32, bfloat16.
 
 ## Outputs
 
@@ -22,7 +22,7 @@ y: A ND Tensor with any format. Has the same dtype as the input. Must be one of 
 
 ## Attributes
 
-threshold: A required float32. Defaults to "0.0". "x" is compared with "threshold", outputs "1" for inputs above threshold; "0" otherwise. 
+threshold: A required float32. Defaults to "0.0". "x" is compared with "threshold", outputs "1" for inputs above threshold; "0" otherwise.
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Compatible with the Caffe operator Threshold.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

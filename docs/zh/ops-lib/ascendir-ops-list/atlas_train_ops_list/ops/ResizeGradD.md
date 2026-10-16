@@ -19,18 +19,18 @@ REG_OP(ResizeGradD)
 
 ## Brief
 
-Calculate the resize_grad_d function. 
+Calculate the resize_grad_d function.
 
 ## Inputs
 
 One input, including:
 grads: A 4D tensor, indicating the original size. Must be one of the following types:
-float16, float32. The format must be NCHW. 
+float16, float32. The format must be NCHW.
 
 ## Outputs
 
 y: A 4D tensor, indicating the target size. Must have the same type and format as grads.
-Shape depends on grads and original_size. 
+Shape depends on grads and original_size.
 
 ## Attributes
 
@@ -92,4 +92,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

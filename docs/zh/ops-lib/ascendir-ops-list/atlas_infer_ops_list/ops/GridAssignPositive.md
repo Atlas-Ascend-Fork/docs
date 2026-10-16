@@ -19,7 +19,7 @@ REG_OP(GridAssignPositive)
 
 ## Brief
 
-Performs Position Sensitive PS ROI Pooling Grad. 
+Performs Position Sensitive PS ROI Pooling Grad.
 
 ## Inputs
 
@@ -38,12 +38,12 @@ Performs Position Sensitive PS ROI Pooling Grad.
 - gt_argmax_overlaps: A tensor. Support int32, overlaps.argmax(axis=1), shape (k, ).
  Index of the predicted box with maximum IOU for each ground truth.
 - num_gts: A tensor. Support int32, shape (1, ).
- Real number of ground truths 
+ Real number of ground truths
 
 ## Outputs
 
 assigned_gt_inds_pos: A tensor. Support float16/float32, shape (n, ).
-  The final assigned ground truth indices for positive bboxes, used for gradient computation. 
+  The final assigned ground truth indices for positive bboxes, used for gradient computation.
 
 ## Attributes
 
@@ -68,4 +68,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

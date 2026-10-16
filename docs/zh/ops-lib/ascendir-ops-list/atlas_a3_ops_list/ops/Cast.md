@@ -48,15 +48,15 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - In the scenario where the data type is converted from float16 to int16:
-    If the input data contains inf, inf is converted into the maximum value of int16. 
-    If the input data contains -inf, -inf is converted into the minimum value of int16. 
+    If the input data contains inf, inf is converted into the maximum value of int16.
+    If the input data contains -inf, -inf is converted into the minimum value of int16.
 - In the scenarios where the data type is converted from INT32 to INT8:
     It can only guarantee that the input data has no precision errors within the range of (-2048, 1920).
-- Atlas Inference Series Product in the scenarios where the data type is converted from FLOAT32 to INT8:
+- Atlas inference products in the scenarios where the data type is converted from FLOAT32 to INT8:
     It can only guarantee that the input data has no precision errors within the range of (-2048, 1920).
-- Atlas Inference Series Product in the scenarios where the data type is converted from FLOAT32 to INT64 and from FLOAT32 to UINT8:
+- Atlas inference products in the scenarios where the data type is converted from FLOAT32 to INT64 and from FLOAT32 to UINT8:
     It can only guarantee that the input data has no precision errors within the range of (-2147483648, 2147483583).
-- Atlas Inference Series Product in the scenarios where the data type is converted from INT64 to FLOAT32:
+- Atlas inference products in the scenarios where the data type is converted from INT64 to FLOAT32:
     It can only guarantee that the input data has no precision errors within the range of (-2147483648, 2147483647).
 - Ascend 950 AI Processor in the scenario where the data type is converted from INT32 to INT4:
     The last dim of x must be an even number.
@@ -64,4 +64,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

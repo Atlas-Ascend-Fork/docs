@@ -13,7 +13,7 @@ REG_OP(GenADC)
 
 ## Brief
 
-Generate ADC(asymmetric distance computation) table. 
+Generate ADC(asymmetric distance computation) table.
 
 ## Inputs
 
@@ -30,12 +30,12 @@ The format of the tensor is ND.
 - centroids: A 2D Tensor of type float16 or float32 with shape [nc, D]. The format of the tensor is ND.
 The value of nc is in range(start=1, end=1e7, step=1). The value of D is the same as query.
 - bucket_list: A 1D Tensor of type int32 or int64, with shape [ns,]. The format of the tensor is ND.
-The value of ns is in range(start=1, end=nc, step=1). 
+The value of ns is in range(start=1, end=nc, step=1).
 
 ## Outputs
 
 adc_tables: A 3D Tensor of type float16 or float32, with shape [ns, M, ksub].
-Values of dimensions are the same as those of the input tensor. The format of the tensor is ND. 
+Values of dimensions are the same as those of the input tensor. The format of the tensor is ND.
 
 ## Attributes
 
@@ -56,4 +56,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

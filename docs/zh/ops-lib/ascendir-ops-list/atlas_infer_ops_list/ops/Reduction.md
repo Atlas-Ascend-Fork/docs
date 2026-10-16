@@ -38,7 +38,7 @@ specifying the reduction algorithm. Defaults to "1".
 Defaults to "0".
 The value range is [-N, N-1], where N is the input tensor rank.
 - coeff: An optional float32, specifying the scale coefficient.
-Defaults to "1.0" . 
+Defaults to "1.0" .
 
 ## Third-party framework compatibility
 
@@ -51,4 +51,4 @@ only on the device chip.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -21,7 +21,7 @@ Two inputs, including:
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype and format as "x1". 
+y: A ND Tensor. Has the same dtype and format as "x1".
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with the TensorFlow operator BitwiseOr.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -12,7 +12,7 @@ REG_OP(AntiMxQuant)
 
 ## Brief
 
-Dequantize the quantized FLOAT4/FLOAT8 input into FLOAT16/BFLOAT16/FLOAT32 format. 
+Dequantize the quantized FLOAT4/FLOAT8 input into FLOAT16/BFLOAT16/FLOAT32 format.
 
 ## Inputs
 
@@ -53,4 +53,4 @@ It is a custom operator. It has no corresponding operator in Caffe, Onnx, Tensor
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

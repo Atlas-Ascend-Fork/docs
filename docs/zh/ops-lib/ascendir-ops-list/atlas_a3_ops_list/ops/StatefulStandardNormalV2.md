@@ -12,7 +12,7 @@ REG_OP(StatefulStandardNormalV2)
 ## Brief
 
 Outputs random values from a normal distribution.
-The generated values will have mean 0 and standard deviation 1 . 
+The generated values will have mean 0 and standard deviation 1 .
 
 ## Inputs
 
@@ -22,7 +22,7 @@ The generated values will have mean 0 and standard deviation 1 .
 
 ## Outputs
 
-y:A Returns A tensor of the specified shape filled with random normal values . 
+y:A Returns A tensor of the specified shape filled with random normal values .
 
 ## Data Types
 
@@ -40,4 +40,4 @@ Compatible with tensorflow StatefulStandardNormalV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

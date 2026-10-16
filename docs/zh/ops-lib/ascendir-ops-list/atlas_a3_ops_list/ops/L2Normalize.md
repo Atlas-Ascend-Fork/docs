@@ -15,11 +15,11 @@ Normalizes elements of a specific dimension of eigenvalues (L2) .
 
 ## Inputs
 
-x: A ND Tensor(1D-8D) of type float16 or float32, specifying the eigenvalue . 
+x: A ND Tensor(1D-8D) of type float16 or float32, specifying the eigenvalue .
 
 ## Outputs
 
-y: A ND Tensor(1D-8D) of type float16 or float32, specifying the eigenvalue for normalization. 
+y: A ND Tensor(1D-8D) of type float16 or float32, specifying the eigenvalue for normalization.
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Compatible with the L2 scenario of PyTorch operator Normalize.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

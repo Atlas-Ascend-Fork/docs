@@ -13,15 +13,15 @@ REG_OP(Empty)
 
 ## Brief
 
-Creates a tensor with the given "shape" and "dtype". 
+Creates a tensor with the given "shape" and "dtype".
 
 ## Inputs
 
-shape: The shape of the output tensor. 
+shape: The shape of the output tensor.
 
 ## Outputs
 
-y: A tensor. 
+y: A tensor.
 
 ## Attributes
 
@@ -35,4 +35,4 @@ Compatible with the TensorFlow operator Empty.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

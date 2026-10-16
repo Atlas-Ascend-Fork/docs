@@ -17,15 +17,15 @@ Returns (x1 - x2)(x1 - x2) element-wise. Support broadcasting operations.
 
 ## Inputs
 
-Two inputs, including: 
+Two inputs, including:
 - x1: A ND Tensor. Must be one of the following types: bfloat16, float16, float32,
 float64, int32, int64, complex64, complex128.
 - x2: A ND Tensor. Has the same dtype as "x1".
-The shape of x1 and x2 must meet the requirements of the broadcast relationship. 
+The shape of x1 and x2 must meet the requirements of the broadcast relationship.
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype as "x1". 
+y: A ND Tensor. Has the same dtype as "x1".
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with TensorFlow operator SquaredDifference.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

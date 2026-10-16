@@ -29,7 +29,7 @@ DT_FLOAT8_E4M3FN
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x" . 
+y: A Tensor. Has the same type as "x" .
 @see TileD()
 
 ## Data Types
@@ -51,4 +51,4 @@ Compatible with the TensorFlow operator Tile.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

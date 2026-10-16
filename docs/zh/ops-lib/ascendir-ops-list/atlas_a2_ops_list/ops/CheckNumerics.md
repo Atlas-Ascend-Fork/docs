@@ -10,19 +10,19 @@ REG_OP(CheckNumerics)
 
 ## Brief
 
-Checks a tensor for NaN and Inf values. 
+Checks a tensor for NaN and Inf values.
 
 ## Inputs
 
-x: A k-dimensional tensor. 
+x: A k-dimensional tensor.
 
 ## Outputs
 
-y: The output tensor. 
+y: The output tensor.
 
 ## Attributes
 
-message: Prefix of the error message. 
+message: Prefix of the error message.
 
 ## Data Types
 
@@ -33,7 +33,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-CheckNumerics runs on the Ascend AI CPU, which delivers poor performance. 
+CheckNumerics runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -42,4 +42,4 @@ Compatible with the TensorFlow operator CheckNumerics.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

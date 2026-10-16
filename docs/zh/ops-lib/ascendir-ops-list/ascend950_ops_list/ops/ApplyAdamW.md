@@ -42,7 +42,8 @@ REG_OP(ApplyAdamW)
 
 ## Brief
 
-Updates "var" according to the AdamW algorithm. For clarity, the output variable is suffixed with "_out" in the fomulas below (e.g. m_out).
+Updates "var" according to the AdamW algorithm. For clarity, the output variable is suffixed with "_out" in
+the fomulas below (e.g. m_out).
 
 ## Inputs
 
@@ -58,7 +59,8 @@ Updates "var" according to the AdamW algorithm. For clarity, the output variable
 - beta1_power: A scalar of the same type as "var", value is beta1^(step-1), between 0 and 1.
 - beta2_power: A scalar of the same type as "var", value is beta2^(step-1), between 0 and 1.
 - lr: Specifying learning_rate. A scalar of the same type as "var", value is between 0 and 1 generally (e.g. 1e-3).
-- weight_decay: Specifying weight decay. A scalar of the same type as "var", value is between 0 and 1 generally (e.g. 1e-2).
+- weight_decay: Specifying weight decay. A scalar of the same type as "var", value is between 0 and 1 generally
+(e.g. 1e-2).
 - beta1: Specifying beta1. A scalar of the same type as "var", value is between 0 and 1 (e.g. 0.9).
 - beta2: Specifying beta2. A scalar of the same type as "var", value is between 0 and 1 (e.g. 0.999).
 - epsilon: A scalar of the same type as "var", used to improve numerical stability.
@@ -77,8 +79,10 @@ Updates "var" according to the AdamW algorithm. For clarity, the output variable
 
 ## Attributes
 
-- amsgrad: An optional bool. Specifying using max_grad_norm in the calculation. Defaults to "False", only support "False".
-- maximize: An optional bool. Specifying maximize the objective with respect to the params, instead of minimizing. Defaults to "False".
+- amsgrad: An optional bool. Specifying using max_grad_norm in the calculation. Defaults to "False", only support
+"False".
+- maximize: An optional bool. Specifying maximize the objective with respect to the params, instead of minimizing.
+Defaults to "False".
 
 ## Data Types
 
@@ -108,4 +112,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

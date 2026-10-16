@@ -22,7 +22,7 @@ REG_OP(SparseApplyFtrlV2)
 ## Brief
 
 Updates relevant entries in '*var' according to the Ftrl-proximal scheme.
-That is for rows we have grad for, "var", "accum" and "linear" are updated . 
+That is for rows we have grad for, "var", "accum" and "linear" are updated .
 
 ## Inputs
 
@@ -39,7 +39,7 @@ Ten inputs, including:
 - grad: A Tensor of the same type as "var", for the gradient.
     Support dtype: float32, support format: [NCHW,NHWC,ND].
 - indices: A vector of indices into the first dimension of "var" and "accum".
-    The value of indices must be unique. Otherwise, the result is unpredictable . 
+    The value of indices must be unique. Otherwise, the result is unpredictable .
     Support dtype: int32, int64, support format: [ND].
 - lr: A Tensor of the same type as "var", for the scaling factor. Must be a scalar.
     Support dtype: float32, support format: [ND].
@@ -50,7 +50,7 @@ Ten inputs, including:
 - l2_shrinkage: A Tensor of the same type as "var", L2 shrinkage regulariation. Must be a scalar.
     Support dtype: float32, support format: [ND].
 - lr_power: A Tensor of the same type as "var", for the scaling factor. Must be a scalar .
-    Support dtype: float32, support format: [ND]. 
+    Support dtype: float32, support format: [ND].
 
 ## Outputs
 
@@ -63,7 +63,7 @@ Ten inputs, including:
 use_locking: An optional bool. Defaults to "False".
 If "True", updating of the "var" and "accum" tensors will be
 protected by a lock; otherwise the behavior is undefined,
-but may exhibit less contention . 
+but may exhibit less contention .
 
 ## Data Types
 
@@ -90,4 +90,4 @@ Compatible with the TensorFlow operator SparseApplyFtrlV2.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -40,7 +40,7 @@ must be FRACTAL_ZN_LSTM.
 - b:A 1D Tensor. Must be one of the following types: float16, float32. The
 format must be ND.
 - mask:A optional 1D Tensor. Must be one of the following types: uint8. The
-format must be ND. 
+format must be ND.
 
 ## Outputs
 
@@ -58,7 +58,7 @@ format must be FRACTAL_NZ.
 - ot:A 4D Tensor. Must be one of the following types: float16, float32. The
 format must be FRACTAL_NZ.
 - tanhct:A 4D Tensor. Must be one of the following types: float16, float32.
-The format must be FRACTAL_NZ. 
+The format must be FRACTAL_NZ.
 
 ## Attributes
 
@@ -88,4 +88,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

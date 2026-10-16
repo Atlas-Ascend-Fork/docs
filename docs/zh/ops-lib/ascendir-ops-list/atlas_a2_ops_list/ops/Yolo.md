@@ -18,14 +18,14 @@ REG_OP(Yolo)
 
 ## Brief
 
-Normalizes data. It is called Region on YOLO v2 and Yolo on YOLO v3 . 
+Normalizes data. It is called Region on YOLO v2 and Yolo on YOLO v3 .
 
 ## Inputs
 
 x: An NCHW tensor of type float16 or float32. The data is with shape
 (N, boxes*(coords+obj+classes), H, W),where, "obj" indicates the confidence of
 an object, and only one confidence is supported. Boxes are arranged as
-xx...xyy...yww...whh...hbb...bc0c0..c0c1c1...c1......cncn...cn . 
+xx...xyy...yww...whh...hbb...bc0c0..c0c1c1...c1......cncn...cn .
 
 ## Outputs
 
@@ -40,7 +40,7 @@ confidence.
 - classes_prob: A float16 or float32 with
 shape [N, classes, ceilx(boxes*height*width *2+32, 32)/2], where "ceil"
 indicates that a detected box is aligned upwards with the second parameter.
-Specifies the prediction classes . 
+Specifies the prediction classes .
 
 ## Attributes
 
@@ -59,7 +59,7 @@ Defaults to "V3".
 used in conjunction with "softmax" and valid only when "yolo_version = V2".
 Defaults to "false".
 - softmaxtree: An optional bool, Fixed to False, defined in Lite, but not used.
-Defaults to "false" . 
+Defaults to "false" .
 
 ## Data Types
 
@@ -83,4 +83,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

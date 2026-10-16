@@ -14,7 +14,7 @@ REG_OP(TensorArrayRead)
 
 ## Brief
 
-Read an element from the TensorArray into output value. 
+Read an element from the TensorArray into output value.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ The input handle must be type resource. Inputs include:
 
 ## Outputs
 
-y: A Tensor of type dtype. 
+y: A Tensor of type dtype.
 
 ## Attributes
 
-dtype: A DType. 
+dtype: A DType.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow TensorArrayRead operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

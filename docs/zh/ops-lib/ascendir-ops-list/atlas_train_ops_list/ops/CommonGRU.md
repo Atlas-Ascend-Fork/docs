@@ -11,12 +11,12 @@ REG_OP(CommonGRU)
     .OUTPUT(y, TensorType({DT_FLOAT16, DT_FLOAT}))
     .OUTPUT(y_h, TensorType({DT_FLOAT16, DT_FLOAT}))
     .ATTR(activation_alpha, ListFloat, {})
-    .ATTR(activation_beta, ListFloat, {})
-    .ATTR(activations, ListString, {})
+    .ATTR(activation_beta , ListFloat, {})
+    .ATTR(activations , ListString, {})
     .ATTR(clip, Float, -1.0)
     .ATTR(direction, String, "forward")
     .REQUIRED_ATTR(hidden_size, Int)
-    .ATTR(linear_before_reset, Int, 0)
+    .ATTR(linear_before_reset , Int, 0)
     .OP_END_FACTORY_REG(CommonGRU)
 ```
 
@@ -47,10 +47,9 @@ Eight inputs, including:
 - clip: Cell clip threshold.
 - direction: Specify if the RNN is forward, reverse, or bidirectional.
 - hidden_size: Number of neurons in the hidden layer.
-- linear_before_reset: When computing the output of the hidden gate, apply the linear transformation before
-multiplying by the output of the reset gate. 
+- linear_before_reset: When computing the output of the hidden gate, apply the linear transformation before multiplying by the output of the reset gate.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

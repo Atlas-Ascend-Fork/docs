@@ -16,11 +16,11 @@ REG_OP(RandomShuffleQueue)
 
 ## Brief
 
-A queue implementation that dequeues elements in a random order. 
+A queue implementation that dequeues elements in a random order.
 
 ## Outputs
 
-handle: A Tensor of type resource. The handle to a stack. 
+handle: A Tensor of type resource. The handle to a stack.
 
 ## Attributes
 
@@ -49,4 +49,4 @@ Compatible with tensorflow RandomShuffleQueue operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

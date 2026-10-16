@@ -9,17 +9,17 @@ REG_OP(RGBToHSV)
 
 ## Brief
 
-Converts one or more images from RGB to HSV . 
+Converts one or more images from RGB to HSV .
 
 ## Inputs
 
 Last dimension of input images must be size 3. Inputs include:
 images: A Tensor. Must be one of the following types: float, double. 1-D or
-higher rank. RGB data to convert. Last dimension must be size 3 . 
+higher rank. RGB data to convert. Last dimension must be size 3 .
 
 ## Outputs
 
-y: A Tensor. Has the same type as images . 
+y: A Tensor. Has the same type as images .
 
 ## Data Types
 
@@ -32,7 +32,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 Outputs a tensor of the same shape as the images tensor, containing the HSV
 value of the pixels. The output is only well defined if the value in images
-are in [0,1] . 
+are in [0,1] .
 
 ## Third-party framework compatibility
 
@@ -41,4 +41,4 @@ Compatible with tensorflow RGBToHSV operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

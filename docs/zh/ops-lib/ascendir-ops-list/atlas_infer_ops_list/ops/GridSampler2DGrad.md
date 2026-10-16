@@ -62,4 +62,4 @@ Compatible with pytorch GridSampler2DGrad operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

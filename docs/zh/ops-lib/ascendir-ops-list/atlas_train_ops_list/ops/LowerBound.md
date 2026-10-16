@@ -13,7 +13,7 @@ REG_OP(LowerBound)
 
 ## Brief
 
-Applies lower_bound(sorted_search_values, values) along each row. 
+Applies lower_bound(sorted_search_values, values) along each row.
 
 ## Inputs
 
@@ -24,12 +24,12 @@ Must be one of the following types: float32, float16, int8, int16, uint16, uint8
 
 ## Outputs
 
-y: A `Tensor` of type `out_type`. 
+y: A `Tensor` of type `out_type`.
 
 ## Attributes
 
 out_type:An optional `DType` from: `int32, int64`.
-Defaults to `int32`. 
+Defaults to `int32`.
 
 ## Data Types
 
@@ -41,7 +41,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The implementation for LowerBound on Ascend uses AI CPU, with bad performance. 
+The implementation for LowerBound on Ascend uses AI CPU, with bad performance.
 
 ## Third-party framework compatibility
 
@@ -58,4 +58,4 @@ Supported
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

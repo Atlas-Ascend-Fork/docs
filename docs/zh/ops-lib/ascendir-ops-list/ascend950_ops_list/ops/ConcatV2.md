@@ -24,12 +24,12 @@ Must be one of the following types: bfloat16, float16, float32, double, int32,
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as "x" . 
+y: A Tensor. Has the same type and format as "x" .
 
 ## Attributes
 
 N: An optional int includes all types of int.
-Specifies the number of elements in "x". Defaults to "1". 
+Specifies the number of elements in "x". Defaults to "1".
 
 ## Data Types
 
@@ -44,7 +44,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-"x" is a list of at least 2 "tensor" objects of the same type . 
+"x" is a list of at least 2 "tensor" objects of the same type .
 
 ## Third-party framework compatibility
 
@@ -53,4 +53,4 @@ Compatible with the TensorFlow operator ConcatV2.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

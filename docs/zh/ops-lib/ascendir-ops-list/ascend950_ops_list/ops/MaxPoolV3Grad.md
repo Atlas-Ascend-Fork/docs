@@ -28,7 +28,7 @@ Computes gradients of the maxpooling function .
 
 ## Outputs
 
-out_grad: A mutable tensor. Has the same shape, type and format as "x1" . 
+out_grad: A mutable tensor. Has the same shape, type and format as "x1" .
 
 ## Attributes
 
@@ -46,16 +46,16 @@ a data to caculate when padding_mode is "CALCULATED".
 If global_pooling = true, kernel size and paddings will be ignored.
 Default False. When the input parameters are set to float16, global_pooling does not support being set to true.
 - ceil_mode: An optional bool. Whether to use the ceil function to calculate output
-height and width. If it is set to False, the floor function will be used. Default False 
+height and width. If it is set to False, the floor function will be used. Default False
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 orig_input: float16,float32
-- input1 orig_output: float16,float32
-- input2 grad: float16,float32
-- output0 out_grad: float16,float32
+- input0 orig_input: bfloat16,float16,float32,int8,int16,int32,int64,uint8,uint16
+- input1 orig_output: bfloat16,float16,float32,int8,int16,int32,int64,uint8,uint16
+- input2 grad: bfloat16,float16,float32,int8,int16,int32,int64,uint8,uint16
+- output0 out_grad: bfloat16,float16,float32,int8,int16,int32,int64,uint8,uint16
 
 ## Attention Constraints
 
@@ -71,4 +71,4 @@ Compatible with the TensorFlow operator MaxPoolGrad.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

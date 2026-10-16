@@ -20,12 +20,12 @@ To absolute the bounding box .
 
 ## Outputs
 
-y: A Tensor. Has the same type and shape as "normalized_boxes" . 
+y: A Tensor. Has the same type and shape as "normalized_boxes" .
 
 ## Attributes
 
 reversed_box: An optional bool, specifying the last two dims is "4,num" or
-"num,4", "true" for "4,num", "false" for "num,4". Defaults to "false" . 
+"num,4", "true" for "4,num", "false" for "num,4". Defaults to "false" .
 
 ## Data Types
 
@@ -43,4 +43,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

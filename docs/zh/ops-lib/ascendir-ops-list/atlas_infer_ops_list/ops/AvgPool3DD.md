@@ -29,7 +29,7 @@ Support type float16, float32 and double.
 
 ## Outputs
 
-y: The average pooled output tensor with the same type and format as input "x". 
+y: The average pooled output tensor with the same type and format as input "x".
 
 ## Attributes
 
@@ -57,14 +57,14 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-"ksize" is in the range [1, 255]. "strides" is in the range [1, 63] 
-The operator will not be enhanced in the future. 
+"ksize" is in the range [1, 255]. "strides" is in the range [1, 63]
+The operator will not be enhanced in the future.
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator AvgPool3D. 
+Compatible with the TensorFlow operator AvgPool3D.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

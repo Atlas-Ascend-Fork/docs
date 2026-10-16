@@ -14,7 +14,7 @@ REG_OP(TensorArrayWrite)
 
 ## Brief
 
-Push an element onto the tensor_array. 
+Push an element onto the tensor_array.
 
 ## Inputs
 
@@ -26,7 +26,7 @@ The input handle must be type resource. Inputs include:
 
 ## Outputs
 
-flow_out: A float scalar that enforces proper chaining of operations. 
+flow_out: A float scalar that enforces proper chaining of operations.
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with tensorflow TensorArrayWrite operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

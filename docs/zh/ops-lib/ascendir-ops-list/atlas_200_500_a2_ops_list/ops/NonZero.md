@@ -23,13 +23,13 @@ x: A Tensor. Must be one of the following types: float16, bfloat16, float32,
 
 ## Outputs
 
-y: A Tensor. Must be one of the following types: int32, int64. 
+y: A Tensor. Must be one of the following types: int32, int64.
 
 ## Attributes
 
 - transpose: An optional attribute. Type is bool. Defaults to False.
 - dtype: An optional attribute. Specifying the output data type.
-    Either "int32" or "int64". Default to "int64". 
+    Either "int32" or "int64". Default to "int64".
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with the PyTorch operator NonZero.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -13,7 +13,7 @@ Computes square root of x element-wise.
 
 ## Inputs
 
- x: A ND Tensor. Must be one of the following types:bfloat16 float16, float32, complex128, complex64, float64. 
+ x: A ND Tensor. Must be one of the following types:bfloat16 float16, float32, complex128, complex64, float64.
 
 ## Outputs
 
@@ -36,4 +36,4 @@ Compatible with the TensorFlow operator Sqrt.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

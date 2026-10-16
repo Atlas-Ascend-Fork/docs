@@ -18,16 +18,16 @@ Permutes data in the channel dimension of the input
 
 Inputs including:
 x: A required Tensor. Must be one of the following types:
-float16, float32, int8, uint8, int16, uint16, int32, uint32, int64, uint64 . 
+float16, float32, int8, uint8, int16, uint16, int32, uint32, int64, uint64 .
 
 ## Outputs
 
 y: A required Tensor. Has same type and shape as "x". Must be one of the following types:
-float16, float32, int8, uint8, int16, uint16, int32, uint32, int64, uint64 . 
+float16, float32, int8, uint8, int16, uint16, int32, uint32, int64, uint64 .
 
 ## Attributes
 
-group: A required int32, specifying the number of groups to split the channel dimension into. Defaults to "1" . 
+group: A required int32, specifying the number of groups to split the channel dimension into. Defaults to "1" .
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with the Caffe operator ShuffleChannel.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

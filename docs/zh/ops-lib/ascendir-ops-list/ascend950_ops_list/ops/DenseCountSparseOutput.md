@@ -47,9 +47,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator DenseCountSparseOutput. 
+Compatible with the TensorFlow operator DenseCountSparseOutput.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -19,11 +19,11 @@ x: A ND tensor. Must be one of the following types:BasicType, bool.
 
 ## Outputs
 
-y: A ND tensor. Has the same dtype and shape as "x". 
+y: A ND tensor. Has the same dtype and shape as "x".
 
 ## Attributes
 
-value: A scale. Must be float. 
+value: A scale. Must be float.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with the PyTorch operator fills.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

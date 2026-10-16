@@ -18,9 +18,9 @@ Converts 1D coordinate to 2D coordinate based on shape information.
 
 Two inputs:
 - x: 1D coordinate index value.
-  Must be one of the following types: int32, int64, uint64. 
+  Must be one of the following types: int32, int64, uint64.
 - shape: Shape information with 4 elements (N, D, H, W).
-  Must be one of the following types: int32, int64, uint64. 
+  Must be one of the following types: int32, int64, uint64.
 
 ## Outputs
 
@@ -47,9 +47,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with internal Huawei operator. 
+Compatible with internal Huawei operator.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

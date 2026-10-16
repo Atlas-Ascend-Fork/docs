@@ -31,19 +31,19 @@ Any value of input_size must be in [1, 2147483647].
 is NDHWC or NCDHW.
 - filter: A tensor of type float16, bfloat16, float32.
 The format is NDHWC, NCDHW or DHWCN.
-In Ascend 950PR/Ascend 950DT, the filter_height and filter_width dimensions must be in [1, 2147483647],
+In Ascend 950PR&950DT products, the filter_height and filter_width dimensions must be in [1, 2147483647],
 for other products filter_height and filter_width dimensions must be in [1, 511].
 The other dimensions must be in [1, 2147483647].
 - bias: Optional. An optional 1D tensor of type float16 and float32. When x
 is float16, bias is float16. When x is bfloat16, bias is float32.
 "in_channels" must equals to the "out_channels" of output y.
-Currently bias is not supported on Atlas 200/500 A2 Inference Product and
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component. Reserved.
+Currently bias is not supported on Atlas 200I/500 A2 inference products and
+Atlas A2 products. Reserved.
 - offset_w: Optional. An optional 1D tensor for quantized deconvolution.
 Defaults to 0.
-Currently offset_w is not supported on Atlas 200/500 A2 Inference Product,
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component
-and Ascend 950PR/Ascend 950DT. Reserved.
+Currently offset_w is not supported on Atlas 200I/500 A2 inference products,
+Atlas A2 products
+and Ascend 950PR&950DT products. Reserved.
 
 ## Outputs
 
@@ -71,10 +71,10 @@ The dilations has the same axes sequence as filter:
 [batch, dilation_depth, dilation_height, dilation_width, channels].
 The batch(N) and channel(C) must be 1.
 The width (W), height (H) and depth(D) dimensions must be greater than 0.
-In Ascend 950PR/Ascend 950DT, depth (D), height (H) and width (W) dimensions must be in [1, 2147483647],
+In Ascend 950PR&950DT products, depth (D), height (H) and width (W) dimensions must be in [1, 2147483647],
 for other products depth (D), height (H) and width (W) dimensions must be in [1, 255].
-In graph mode, Atlas 200/500 A2 Inference Product,
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component
+In graph mode, Atlas 200I/500 A2 inference products,
+Atlas A2 products
 only configuration to [1, 1, 1, 1, 1] is supported.
 - groups: Optional. Number of blocked connections from input channels to
  output channels. Defaults to 1.
@@ -85,17 +85,17 @@ Defaults to "NDHWC". Specify the data format of the x and y.
 - output_padding: Optional. The size will be added in the output shape.
 Defaults to [0, 0, 0, 0, 0].
 The N and C dimensions must be 0.
-In Ascend 950PR/Ascend 950DT, D, H and W have the following restrictions:
+In Ascend 950PR&950DT products, D, H and W have the following restrictions:
 D must be less than dilation_d or stride_d,
 H must be less than dilation_h or stride_h,
 C must be less than dilation_w or stride_w,
 and D, H, W must be in [0, 2147483647].
-Currently output_padding is not supported on Atlas 200/500 A2 Inference Product and
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component.
+Currently output_padding is not supported on Atlas 200I/500 A2 inference products and
+Atlas A2 products.
 In graph mode, only configuration to [0, 0, 0, 0, 0] is supported.
 - offset_x: Optional. Input offset_x value. Defaults to 0.
-Currently offset_x is not supported on Atlas 200/500 A2 Inference Product and
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component. Reserved.
+Currently offset_x is not supported on Atlas 200I/500 A2 inference products and
+Atlas A2 products. Reserved.
 Ensure offset_x within the effective range of int8 [-128, 127]. Defaults to "0".
 
 ## Data Types
@@ -111,7 +111,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints:
 
-In Ascend 950PR/Ascend 950DT: The behavior of gradient computation in the padding region depends on the input shape.
+In Ascend 950PR&950DT products: The behavior of gradient computation in the padding region depends on the input shape.
 Depending on the operator optimization strategy, the padding gradients may be directly set to 0.
 Due to hardware resource restrictions,
 the operator fails to be executed in scenarios of some parameter value combinations.
@@ -121,4 +121,4 @@ If the fault persists, visit https://www.hiascend.com/support for technical supp
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

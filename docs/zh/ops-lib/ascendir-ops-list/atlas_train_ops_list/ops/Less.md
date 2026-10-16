@@ -10,7 +10,7 @@ REG_OP(Less)
 
 ## Brief
 
-Returns the truth value of (x1 < x2) element-wise. Support broadcasting operations. 
+Returns the truth value of (x1 < x2) element-wise. Support broadcasting operations.
 When input is int32 and (x2 - x1) > 2^31 or < -2^31,
 aicore accuracy is not guaranteed.
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator Less.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

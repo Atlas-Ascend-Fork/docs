@@ -10,13 +10,14 @@ REG_OP(TopKV2)
     .ATTR(dim, Int, -1)
     .ATTR(largest, Bool, true)
     .ATTR(indices_dtype, Int, DT_INT32)
+    .ATTR(sort_policy, Int, 0)
     .OP_END_FACTORY_REG(TopKV2)
 ```
 
 ## Brief
 
 Finds values and indices of the "k" largest elements for the last
-dimension . 
+dimension .
 
 ## Inputs
 
@@ -27,7 +28,7 @@ Supported format: ND.
 - k: A 0D Tensor. Supported type: int32, int64.
 Supported format: ND.
 Number of top elements to look for along the last dimension (along each row
-for matrices) . 
+for matrices) .
 
 ## Outputs
 
@@ -44,8 +45,12 @@ If "False", the returned "k" elements are not sorted.
 - dim: An optional int. Defaults to -1. For reserved use.
 - largest: An optional bool, controls whether to return largest or smallest elements. Defaults to true.
 If "True", the "k" largest elements are returned in descending order.
-If "False", the "k" smallest elements are returned in ascending order. 
-- indices_dtype: An optional attribute indicates the sort result of indices' dtype, either "DT_INT32(3)" or "DT_INT64(9)". Defaults to "DT_INT32(3)".
+If "False", the "k" smallest elements are returned in ascending order.
+- indices_dtype: An optional attribute indicates the sort result of indices' dtype, either "DT_INT32(3)" or
+"DT_INT64(9)". Defaults to "DT_INT32(3)".
+- sort_policy: An optional int. Defaults to 0. Controls the sorting strategy of TopK candidates.
+If 0, uses the original sorting behavior.
+If 1, enables the Bitonic Small TopK path when sorted is "True" and k is in [2, 32].
 
 ## Data Types
 
@@ -63,4 +68,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

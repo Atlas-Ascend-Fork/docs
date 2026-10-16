@@ -17,11 +17,11 @@ Calculate the shrink function.
 
 One inputs, including:
 - input_x: A tensor. Must be one of the following types:
-    float16, float32. 
+    float16, float32.
 
 ## Outputs
 
-y: A Tensor with the same dtype and shape of input_x's. 
+y: A Tensor with the same dtype and shape of input_x's.
 
 ## Attributes
 
@@ -37,9 +37,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the ONNX operator Shrink. 
+Compatible with the ONNX operator Shrink.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

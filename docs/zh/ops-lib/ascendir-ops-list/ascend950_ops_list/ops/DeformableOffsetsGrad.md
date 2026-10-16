@@ -75,4 +75,4 @@ Multiplying the H/W of offsets by the H/W of ksize equals the H/W of grad.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

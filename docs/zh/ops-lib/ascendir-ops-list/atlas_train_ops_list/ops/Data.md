@@ -10,21 +10,21 @@ REG_OP(Data)
 
 ## Brief
 
-Input data for other operators. 
+Input data for other operators.
 
 ## Inputs
 
-x: A tensor. 
+x: A tensor.
 
 ## Outputs
 
-y: A tensor. 
+y: A tensor.
 
 ## Attributes
 
 index: Index of the input tensor.The data type must be int32 or int64.
 Assume that net has three data nodes, one should be set 0, another should
-be set 1, and the left should be set 2. 
+be set 1, and the left should be set 2.
 
 ## Third-party framework compatibility
 
@@ -33,4 +33,4 @@ Compatible with the Caffe operator Data.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

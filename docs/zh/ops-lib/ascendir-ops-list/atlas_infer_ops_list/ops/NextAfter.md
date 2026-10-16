@@ -10,7 +10,7 @@ REG_OP(NextAfter)
 
 ## Brief
 
-Returns the next representable value of x1 in the direction of x2, element-wise. 
+Returns the next representable value of x1 in the direction of x2, element-wise.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ The input X1 and x2 must have the same type. Inputs include:
 
 ## Outputs
 
-output:A Tensor. Has the same type as x1. 
+output:A Tensor. Has the same type as x1.
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with tensorflow NextAfter operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

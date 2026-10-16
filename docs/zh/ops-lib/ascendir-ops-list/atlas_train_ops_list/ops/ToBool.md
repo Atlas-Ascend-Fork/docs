@@ -10,11 +10,11 @@ REG_OP(ToBool)
 
 ## Inputs
 
-input: The input tensors. Must be one of the following types: int32, int64, int16, int8, uint8,float32, float64, bool, string. 
+input: The input tensors. Must be one of the following types: int32, int64, int16, int8, uint8,float32, float64, bool, string.
 
 ## Outputs
 
-output: The output tensors. Must be one of the following types: bool. 
+output: The output tensors. Must be one of the following types: bool.
 
 ## Data Types
 
@@ -26,4 +26,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

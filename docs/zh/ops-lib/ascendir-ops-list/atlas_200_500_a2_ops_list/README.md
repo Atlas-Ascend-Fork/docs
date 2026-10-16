@@ -1,4 +1,4 @@
-# Operator Specifications (Atlas 200&500 A2 Inference Product)
+# Operator Specifications (Atlas 200I/500 A2 inference products)
 
 文档中所列出的算子仅适用用当前芯片版本，如果原型中有算子不在该手册中，则说明当前芯片版本不支持该算子。
 
@@ -9,7 +9,9 @@
 ## 整体约束
 
 - HIFLOAT8、FLOAT8\_E5M2、FLOAT8\_E4M3FN、FLOAT8\_E8M0、FLOAT6\_E3M2、FLOAT6\_E2M3、FLOAT4\_E2M1、FLOAT4\_E1M2在当前产品型号不支持。
+
 - DynamicRNN、DynamicGRUV2、BNInference三个算子的实现公式请点击[Link](https://gitee.com/ascend/modelzoo/wikis/%E5%8E%86%E5%8F%B2%E6%95%99%E7%A8%8B%E5%BD%92%E6%A1%A3/%E6%98%87%E8%85%BE%E4%BC%97%E6%99%BA/CANN%E5%86%85%E7%BD%AE%E7%AE%97%E5%AD%90%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%8F%82%E8%80%83/BNInference)查看。
+
 - 如下算子groups属性支持最大取值范围为65535：
 
   TransData、Deconvolution、Conv2D、Conv2DTranspose、Conv2DBackpropInput、Conv2dBackpropFilter、Conv3D、Conv3DTranspose、Conv3DBackpropInput、Conv3DBackpropFilter、DeformableConv2D、Correlation。
@@ -17,78 +19,6 @@
 - Tan算子约束：
 
   由于硬件限制，FLOAT32、BFLOAT16、FLOAT16、INT32、INT64类型的输入数据，范围为\[-65504,65504\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
-
-- Conv2D和DepthwiseConv2D算子，在Atlas 200/300/500 推理产品中，支持的Data Type如下：
-
-  <table><tbody><tr id="row92379145259"><td class="cellrowborder" valign="top" width="7.51%"><p id="p923717148258"><a name="p923717148258"></a><a name="p923717148258"></a>Tensor</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="23.01%"><p id="p223731472515"><a name="p223731472515"></a><a name="p223731472515"></a>x</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="23.39%"><p id="p12237191462516"><a name="p12237191462516"></a><a name="p12237191462516"></a>filter</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="22.55%"><p id="p623717144254"><a name="p623717144254"></a><a name="p623717144254"></a>bias</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="23.54%"><p id="p6237121402517"><a name="p6237121402517"></a><a name="p6237121402517"></a>y</p>
-  </td>
-  </tr>
-  <tr id="row15237914102516"><td class="cellrowborder" rowspan="6" valign="top" width="7.51%"><p id="p1023761492513"><a name="p1023761492513"></a><a name="p1023761492513"></a>Data Type</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="23.01%"><p id="p823716147251"><a name="p823716147251"></a><a name="p823716147251"></a>float16</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="23.39%"><p id="p10237191492519"><a name="p10237191492519"></a><a name="p10237191492519"></a>float16</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="22.55%"><p id="p1623791418255"><a name="p1623791418255"></a><a name="p1623791418255"></a>float16</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="23.54%"><p id="p52371914132519"><a name="p52371914132519"></a><a name="p52371914132519"></a>float16</p>
-  </td>
-  </tr>
-  <tr id="row723741410258"><td class="cellrowborder" valign="top"><p id="p123721462516"><a name="p123721462516"></a><a name="p123721462516"></a>float16</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p223751462510"><a name="p223751462510"></a><a name="p223751462510"></a>float16</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p62371314162515"><a name="p62371314162515"></a><a name="p62371314162515"></a>float32</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p323731414256"><a name="p323731414256"></a><a name="p323731414256"></a>float32</p>
-  </td>
-  </tr>
-  <tr id="row1223716146252"><td class="cellrowborder" valign="top"><p id="p12372149259"><a name="p12372149259"></a><a name="p12372149259"></a>bfloat16</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p52371114192514"><a name="p52371114192514"></a><a name="p52371114192514"></a>bfloat16</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p323771432520"><a name="p323771432520"></a><a name="p323771432520"></a>float32</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p152371614192515"><a name="p152371614192515"></a><a name="p152371614192515"></a>bfloat16</p>
-  </td>
-  </tr>
-  <tr id="row1423717147254"><td class="cellrowborder" valign="top"><p id="p1523815147256"><a name="p1523815147256"></a><a name="p1523815147256"></a>bfloat16</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p523819140253"><a name="p523819140253"></a><a name="p523819140253"></a>bfloat16</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p523820143256"><a name="p523820143256"></a><a name="p523820143256"></a>float32</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p323881412518"><a name="p323881412518"></a><a name="p323881412518"></a>float32</p>
-  </td>
-  </tr>
-  <tr id="row13238191472516"><td class="cellrowborder" valign="top"><p id="p1023871432510"><a name="p1023871432510"></a><a name="p1023871432510"></a>float32</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p182381814152515"><a name="p182381814152515"></a><a name="p182381814152515"></a>float32</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p15238131402511"><a name="p15238131402511"></a><a name="p15238131402511"></a>float32</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p42381614202520"><a name="p42381614202520"></a><a name="p42381614202520"></a>float32</p>
-  </td>
-  </tr>
-  <tr id="row1723810146255"><td class="cellrowborder" valign="top"><p id="p192381814192513"><a name="p192381814192513"></a><a name="p192381814192513"></a>int8</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p18238114162519"><a name="p18238114162519"></a><a name="p18238114162519"></a>int8</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p02381614112514"><a name="p02381614112514"></a><a name="p02381614112514"></a>int32</p>
-  </td>
-  <td class="cellrowborder" valign="top"><p id="p5238151472514"><a name="p5238151472514"></a><a name="p5238151472514"></a>int32</p>
-  </td>
-  </tr>
-  </tbody>
-  </table>
 
 ## 算子列表
 
@@ -101,23 +31,16 @@
 | [AcosGrad](ops/AcosGrad.md) | ops_proto_math.h |
 | [Acosh](ops/Acosh.md) | ops_proto_math.h |
 | [AcoshGrad](ops/AcoshGrad.md) | ops_proto_math.h |
-| [ActULQClampMaxGrad](ops/ActULQClampMaxGrad.md) | ops_proto_legacy.h |
-| [ActiveRotatedFilter](ops/ActiveRotatedFilter.md) | experiment_ops.h |
-| [ActiveRotatedFilterGrad](ops/ActiveRotatedFilterGrad.md) | experiment_ops.h |
-| [ActsULQ](ops/ActsULQ.md) | ops_proto_nn.h |
-| [ActsULQInputGrad](ops/ActsULQInputGrad.md) | ops_proto_nn.h |
-| [AdamApplyOneAssign](ops/AdamApplyOneAssign.md) | ops_proto_nn.h |
+| [AdaCast](ops/AdaCast.md) | ops_proto_legacy.h |
 | [AdaptiveAvgPool](ops/AdaptiveAvgPool.md) | ops_proto_legacy.h |
-| [AdaptiveAvgPool2dAssistMatrix](ops/AdaptiveAvgPool2dAssistMatrix.md) | experiment_ops.h |
-| [AdaptiveAvgPoolAssistMatrix](ops/AdaptiveAvgPoolAssistMatrix.md) | experiment_ops.h |
 | [AdaptiveMaxPool2d](ops/AdaptiveMaxPool2d.md) | ops_proto_nn.h |
 | [Add](ops/Add.md) | ops_proto_math.h |
 | [AddManySparseToTensorsMap](ops/AddManySparseToTensorsMap.md) | ops_proto_legacy.h |
 | [AddMatMatElements](ops/AddMatMatElements.md) | ops_proto_math.h |
 | [AddN](ops/AddN.md) | ops_proto_math.h |
-| [AddRowRanges](ops/AddRowRanges.md) | ops_proto_nn.h |
+| [AddRowRanges](ops/AddRowRanges.md) | ops_proto_legacy.h |
 | [AddSparseToTensorsMap](ops/AddSparseToTensorsMap.md) | ops_proto_legacy.h |
-| [AddV2](ops/AddV2.md) | ops_proto_math.h |
+| [AddV2](ops/AddV2.md) | ops_proto_legacy.h |
 | [Addcdiv](ops/Addcdiv.md) | ops_proto_math.h |
 | [Addcmul](ops/Addcmul.md) | ops_proto_math.h |
 | [Adds](ops/Adds.md) | ops_proto_math.h |
@@ -134,22 +57,21 @@
 | [ApplyAdagradDA](ops/ApplyAdagradDA.md) | ops_proto_nn.h |
 | [ApplyAdagradV2](ops/ApplyAdagradV2.md) | ops_proto_nn.h |
 | [ApplyAdam](ops/ApplyAdam.md) | ops_proto_nn.h |
-| [ApplyAdamV2](ops/ApplyAdamV2.md) | ops_proto_nn.h |
+| [ApplyAdamV2](ops/ApplyAdamV2.md) | elewise_calculation_ops.h |
 | [ApplyAdamWithAmsgrad](ops/ApplyAdamWithAmsgrad.md) | ops_proto_nn.h |
 | [ApplyAdamWithAmsgradV2](ops/ApplyAdamWithAmsgradV2.md) | ops_proto_nn.h |
-| [ApplyAddSign](ops/ApplyAddSign.md) | ops_proto_nn.h |
-| [ApplyCenteredRMSProp](ops/ApplyCenteredRMSProp.md) | ops_proto_nn.h |
+| [ApplyAddSign](ops/ApplyAddSign.md) | ops_proto_legacy.h |
+| [ApplyCenteredRMSProp](ops/ApplyCenteredRMSProp.md) | nn_training_ops.h |
 | [ApplyFtrl](ops/ApplyFtrl.md) | ops_proto_nn.h |
-| [ApplyFtrlV2](ops/ApplyFtrlV2.md) | ops_proto_nn.h |
+| [ApplyFtrlV2](ops/ApplyFtrlV2.md) | ops_proto_legacy.h |
 | [ApplyGradientDescent](ops/ApplyGradientDescent.md) | ops_proto_nn.h |
-| [ApplyKerasMomentum](ops/ApplyKerasMomentum.md) | ops_proto_nn.h |
+| [ApplyKerasMomentum](ops/ApplyKerasMomentum.md) | ops_proto_legacy.h |
 | [ApplyMomentum](ops/ApplyMomentum.md) | ops_proto_nn.h |
 | [ApplyPowerSign](ops/ApplyPowerSign.md) | ops_proto_nn.h |
 | [ApplyProximalAdagrad](ops/ApplyProximalAdagrad.md) | ops_proto_nn.h |
 | [ApplyProximalGradientDescent](ops/ApplyProximalGradientDescent.md) | ops_proto_nn.h |
 | [ApplyRMSProp](ops/ApplyRMSProp.md) | ops_proto_nn.h |
 | [ApproximateEqual](ops/ApproximateEqual.md) | ops_proto_math.h |
-| [ArgMaxGrad](ops/ArgMaxGrad.md) | ops_proto_legacy.h |
 | [ArgMaxV2](ops/ArgMaxV2.md) | ops_proto_math.h |
 | [ArgMaxWithK](ops/ArgMaxWithK.md) | ops_proto_legacy.h |
 | [ArgMaxWithValue](ops/ArgMaxWithValue.md) | ops_proto_math.h |
@@ -184,7 +106,6 @@
 | [AvgPool3DD](ops/AvgPool3DD.md) | ops_proto_legacy.h |
 | [AvgPool3DGradD](ops/AvgPool3DGradD.md) | ops_proto_legacy.h |
 | [AvgPoolGrad](ops/AvgPoolGrad.md) | ops_proto_nn.h |
-| [AvgPoolUpdate](ops/AvgPoolUpdate.md) | experiment_ops.h |
 | [AvgPoolV2](ops/AvgPoolV2.md) | ops_proto_nn.h |
 | [AvgPoolV2Grad](ops/AvgPoolV2Grad.md) | ops_proto_nn.h |
 | [AvgPoolV2GradD](ops/AvgPoolV2GradD.md) | ops_proto_legacy.h |
@@ -198,7 +119,7 @@
 | [BNInferGrad](ops/BNInferGrad.md) | ops_proto_legacy.h |
 | [BNInference](ops/BNInference.md) | ops_proto_legacy.h |
 | [BNLL](ops/BNLL.md) | ops_proto_nn.h |
-| [BNTrainingReduce](ops/BNTrainingReduce.md) | ops_proto_nn.h |
+| [BNTrainingReduce](ops/BNTrainingReduce.md) | reduce_ops.h |
 | [BNTrainingReduceGrad](ops/BNTrainingReduceGrad.md) | ops_proto_nn.h |
 | [BNTrainingUpdate](ops/BNTrainingUpdate.md) | ops_proto_nn.h |
 | [BNTrainingUpdateGrad](ops/BNTrainingUpdateGrad.md) | ops_proto_nn.h |
@@ -221,8 +142,8 @@
 | [BatchNormGradExt2](ops/BatchNormGradExt2.md) | ops_proto_nn.h |
 | [BatchToSpace](ops/BatchToSpace.md) | ops_proto_math.h |
 | [BatchToSpaceND](ops/BatchToSpaceND.md) | ops_proto_math.h |
-| [BesselI0e](ops/BesselI0e.md) | ops_proto_math.h |
-| [BesselI1e](ops/BesselI1e.md) | ops_proto_math.h |
+| [BesselI0e](ops/BesselI0e.md) | elewise_calculation_ops.h |
+| [BesselI1e](ops/BesselI1e.md) | elewise_calculation_ops.h |
 | [Betainc](ops/Betainc.md) | ops_proto_legacy.h |
 | [Bias](ops/Bias.md) | ops_proto_legacy.h |
 | [BiasAdd](ops/BiasAdd.md) | ops_proto_math.h |
@@ -235,7 +156,7 @@
 | [BitwiseOr](ops/BitwiseOr.md) | ops_proto_math.h |
 | [BitwiseXor](ops/BitwiseXor.md) | ops_proto_math.h |
 | [BoundingBoxDecode](ops/BoundingBoxDecode.md) | ops_proto_cv.h |
-| [BoundingBoxEncode](ops/BoundingBoxEncode.md) | ops_proto_cv.h |
+| [BoundingBoxEncode](ops/BoundingBoxEncode.md) | ops_proto_legacy.h |
 | [BroadcastArgs](ops/BroadcastArgs.md) | ops_proto_legacy.h |
 | [BroadcastGradientArgs](ops/BroadcastGradientArgs.md) | ops_proto_nn.h |
 | [BroadcastTo](ops/BroadcastTo.md) | ops_proto_math.h |
@@ -259,7 +180,6 @@
 | [CheckValid](ops/CheckValid.md) | ops_proto_cv.h |
 | [Cholesky](ops/Cholesky.md) | ops_proto_math.h |
 | [CholeskyGrad](ops/CholeskyGrad.md) | ops_proto_legacy.h |
-| [ClipByNormNoDivSum](ops/ClipByNormNoDivSum.md) | ops_proto_math.h |
 | [ClipByValue](ops/ClipByValue.md) | ops_proto_math.h |
 | [ClipByValueV2](ops/ClipByValueV2.md) | ops_proto_math.h |
 | [Cmo](ops/Cmo.md) | ops_proto_nn.h |
@@ -302,7 +222,7 @@
 | [Cosh](ops/Cosh.md) | ops_proto_math.h |
 | [CosineEmbeddingLoss](ops/CosineEmbeddingLoss.md) | ops_proto_nn.h |
 | [CountUpTo](ops/CountUpTo.md) | ops_proto_legacy.h |
-| [Crop](ops/Crop.md) | selection_ops.h |
+| [Crop](ops/Crop.md) | ops_proto_cv.h |
 | [CropAndResize](ops/CropAndResize.md) | ops_proto_cv.h |
 | [CropAndResizeGradBoxes](ops/CropAndResizeGradBoxes.md) | ops_proto_legacy.h |
 | [CropAndResizeGradImage](ops/CropAndResizeGradImage.md) | ops_proto_legacy.h |
@@ -320,7 +240,6 @@
 | [DecodeCSV](ops/DecodeCSV.md) | ops_proto_legacy.h |
 | [DecodeGif](ops/DecodeGif.md) | ops_proto_legacy.h |
 | [DecodeJpeg](ops/DecodeJpeg.md) | ops_proto_legacy.h |
-| [DecodeJpegPre](ops/DecodeJpegPre.md) | experiment_ops.h |
 | [DecodePng](ops/DecodePng.md) | ops_proto_legacy.h |
 | [DecodeRaw](ops/DecodeRaw.md) | ops_proto_legacy.h |
 | [Deconvolution](ops/Deconvolution.md) | ops_proto_legacy.h |
@@ -391,7 +310,7 @@
 | [Enter](ops/Enter.md) | ops_proto_nn.h |
 | [Equal](ops/Equal.md) | ops_proto_math.h |
 | [Erf](ops/Erf.md) | ops_proto_math.h |
-| [Erfc](ops/Erfc.md) | ops_proto_math.h |
+| [Erfc](ops/Erfc.md) | ops_proto_legacy.h |
 | [EuclideanNorm](ops/EuclideanNorm.md) | ops_proto_nn.h |
 | [Exit](ops/Exit.md) | ops_proto_legacy.h |
 | [Exp](ops/Exp.md) | ops_proto_math.h |
@@ -410,10 +329,10 @@
 | [FSRDetectionOutput](ops/FSRDetectionOutput.md) | ops_proto_legacy.h |
 | [FakeQuantWithMinMaxArgs](ops/FakeQuantWithMinMaxArgs.md) | ops_proto_nn.h |
 | [FakeQuantWithMinMaxArgsGradient](ops/FakeQuantWithMinMaxArgsGradient.md) | ops_proto_nn.h |
-| [FakeQuantWithMinMaxVars](ops/FakeQuantWithMinMaxVars.md) | ops_proto_nn.h |
-| [FakeQuantWithMinMaxVarsGradient](ops/FakeQuantWithMinMaxVarsGradient.md) | ops_proto_nn.h |
-| [FakeQuantWithMinMaxVarsPerChannel](ops/FakeQuantWithMinMaxVarsPerChannel.md) | ops_proto_nn.h |
-| [FakeQuantWithMinMaxVarsPerChannelGradient](ops/FakeQuantWithMinMaxVarsPerChannelGradient.md) | ops_proto_nn.h |
+| [FakeQuantWithMinMaxVars](ops/FakeQuantWithMinMaxVars.md) | ops_proto_legacy.h |
+| [FakeQuantWithMinMaxVarsGradient](ops/FakeQuantWithMinMaxVarsGradient.md) | ops_proto_legacy.h |
+| [FakeQuantWithMinMaxVarsPerChannel](ops/FakeQuantWithMinMaxVarsPerChannel.md) | ops_proto_legacy.h |
+| [FakeQuantWithMinMaxVarsPerChannelGradient](ops/FakeQuantWithMinMaxVarsPerChannelGradient.md) | ops_proto_legacy.h |
 | [FakeQueue](ops/FakeQueue.md) | ops_proto_legacy.h |
 | [FakeRemoteLookupUniqued](ops/FakeRemoteLookupUniqued.md) | ops_proto_legacy.h |
 | [FastGelu](ops/FastGelu.md) | ops_proto_nn.h |
@@ -435,53 +354,6 @@
 | [FloorMod](ops/FloorMod.md) | ops_proto_math.h |
 | [FlowFunc](ops/FlowFunc.md) | ops_proto_legacy.h |
 | [For](ops/For.md) | ops_proto_legacy.h |
-| [ForeachASinInplace](ops/ForeachASinInplace.md) | experiment_ops.h |
-| [ForeachATanInplace](ops/ForeachATanInplace.md) | experiment_ops.h |
-| [ForeachAbsInplace](ops/ForeachAbsInplace.md) | experiment_ops.h |
-| [ForeachAddScalarInplace](ops/ForeachAddScalarInplace.md) | experiment_ops.h |
-| [ForeachAddScalarListInplace](ops/ForeachAddScalarListInplace.md) | experiment_ops.h |
-| [ForeachAddcdivListInplace](ops/ForeachAddcdivListInplace.md) | experiment_ops.h |
-| [ForeachAddcdivScalarInplace](ops/ForeachAddcdivScalarInplace.md) | experiment_ops.h |
-| [ForeachAddcmulListInplace](ops/ForeachAddcmulListInplace.md) | experiment_ops.h |
-| [ForeachAddcmulScalarInplace](ops/ForeachAddcmulScalarInplace.md) | experiment_ops.h |
-| [ForeachBinaryWithScalarOp](ops/ForeachBinaryWithScalarOp.md) | experiment_ops.h |
-| [ForeachCosInplace](ops/ForeachCosInplace.md) | experiment_ops.h |
-| [ForeachCoshInplace](ops/ForeachCoshInplace.md) | experiment_ops.h |
-| [ForeachDivScalarInplace](ops/ForeachDivScalarInplace.md) | experiment_ops.h |
-| [ForeachDivScalarListInplace](ops/ForeachDivScalarListInplace.md) | experiment_ops.h |
-| [ForeachExpInplace](ops/ForeachExpInplace.md) | experiment_ops.h |
-| [ForeachExpm1Inplace](ops/ForeachExpm1Inplace.md) | experiment_ops.h |
-| [ForeachLerpListInplace](ops/ForeachLerpListInplace.md) | experiment_ops.h |
-| [ForeachLerpScalarInplace](ops/ForeachLerpScalarInplace.md) | experiment_ops.h |
-| [ForeachLog10Inplace](ops/ForeachLog10Inplace.md) | experiment_ops.h |
-| [ForeachLog1pInplace](ops/ForeachLog1pInplace.md) | experiment_ops.h |
-| [ForeachLog2Inplace](ops/ForeachLog2Inplace.md) | experiment_ops.h |
-| [ForeachMaximumListInplace](ops/ForeachMaximumListInplace.md) | experiment_ops.h |
-| [ForeachMaximumScalarInplace](ops/ForeachMaximumScalarInplace.md) | experiment_ops.h |
-| [ForeachMaximumScalarListInplace](ops/ForeachMaximumScalarListInplace.md) | experiment_ops.h |
-| [ForeachMinimumListInplace](ops/ForeachMinimumListInplace.md) | experiment_ops.h |
-| [ForeachMinimumScalarInplace](ops/ForeachMinimumScalarInplace.md) | experiment_ops.h |
-| [ForeachMinimumScalarListInplace](ops/ForeachMinimumScalarListInplace.md) | experiment_ops.h |
-| [ForeachMulScalarListInplace](ops/ForeachMulScalarListInplace.md) | experiment_ops.h |
-| [ForeachNegInplace](ops/ForeachNegInplace.md) | experiment_ops.h |
-| [ForeachPowListInplace](ops/ForeachPowListInplace.md) | experiment_ops.h |
-| [ForeachPowScalarInplace](ops/ForeachPowScalarInplace.md) | experiment_ops.h |
-| [ForeachPowScalarListInplace](ops/ForeachPowScalarListInplace.md) | experiment_ops.h |
-| [ForeachReciprocalInplace](ops/ForeachReciprocalInplace.md) | experiment_ops.h |
-| [ForeachRoundOffNumberInplace](ops/ForeachRoundOffNumberInplace.md) | experiment_ops.h |
-| [ForeachScalarPowTensor](ops/ForeachScalarPowTensor.md) | experiment_ops.h |
-| [ForeachSigmoidInplace](ops/ForeachSigmoidInplace.md) | experiment_ops.h |
-| [ForeachSignInplace](ops/ForeachSignInplace.md) | experiment_ops.h |
-| [ForeachSinInplace](ops/ForeachSinInplace.md) | experiment_ops.h |
-| [ForeachSinhInplace](ops/ForeachSinhInplace.md) | experiment_ops.h |
-| [ForeachSqrtInplace](ops/ForeachSqrtInplace.md) | experiment_ops.h |
-| [ForeachSubScalarListInplace](ops/ForeachSubScalarListInplace.md) | experiment_ops.h |
-| [ForeachTanInplace](ops/ForeachTanInplace.md) | experiment_ops.h |
-| [ForeachTanhInplace](ops/ForeachTanhInplace.md) | experiment_ops.h |
-| [ForeachTernaryOp](ops/ForeachTernaryOp.md) | experiment_ops.h |
-| [ForeachTernaryWithScalarOp](ops/ForeachTernaryWithScalarOp.md) | experiment_ops.h |
-| [ForeachUnaryOp](ops/ForeachUnaryOp.md) | experiment_ops.h |
-| [ForeachUnaryWithScalarOp](ops/ForeachUnaryWithScalarOp.md) | experiment_ops.h |
 | [FractionalAvgPool](ops/FractionalAvgPool.md) | ops_proto_legacy.h |
 | [FractionalAvgPoolGrad](ops/FractionalAvgPoolGrad.md) | ops_proto_legacy.h |
 | [FractionalMaxPool](ops/FractionalMaxPool.md) | ops_proto_legacy.h |
@@ -489,14 +361,7 @@
 | [FullyConnection](ops/FullyConnection.md) | ops_proto_legacy.h |
 | [FullyConnectionCompress](ops/FullyConnectionCompress.md) | ops_proto_legacy.h |
 | [FusedBatchNormV2](ops/FusedBatchNormV2.md) | ops_proto_legacy.h |
-| [FusedBiasLeakyRelu](ops/FusedBiasLeakyRelu.md) | experiment_ops.h |
-| [FusedBiasLeakyReluGrad](ops/FusedBiasLeakyReluGrad.md) | ops_proto_nn.h |
-| [FusedMulAdd](ops/FusedMulAdd.md) | ops_proto_math.h |
-| [FusedMulAddAdd](ops/FusedMulAddAdd.md) | ops_proto_math.h |
-| [FusedMulAddNL2loss](ops/FusedMulAddNL2loss.md) | ops_proto_legacy.h |
-| [FusedMulApplyKerasMomentum](ops/FusedMulApplyKerasMomentum.md) | ops_proto_nn.h |
-| [FusedMulApplyMomentum](ops/FusedMulApplyMomentum.md) | ops_proto_legacy.h |
-| [FusedMulApplyMomentumExtern](ops/FusedMulApplyMomentumExtern.md) | ops_proto_legacy.h |
+| [FusedMulApplyKerasMomentum](ops/FusedMulApplyKerasMomentum.md) | ops_proto_legacy.h |
 | [GEMM](ops/GEMM.md) | ops_proto_nn.h |
 | [GIoU](ops/GIoU.md) | ops_proto_cv.h |
 | [GIoUGrad](ops/GIoUGrad.md) | ops_proto_cv.h |
@@ -518,7 +383,6 @@
 | [Ger](ops/Ger.md) | ops_proto_math.h |
 | [GetDynamicDims](ops/GetDynamicDims.md) | ops_proto_legacy.h |
 | [GetNext](ops/GetNext.md) | ops_proto_legacy.h |
-| [GlobalLpPool](ops/GlobalLpPool.md) | ops_proto_legacy.h |
 | [Greater](ops/Greater.md) | ops_proto_math.h |
 | [GreaterEqual](ops/GreaterEqual.md) | ops_proto_math.h |
 | [GridAssignPositive](ops/GridAssignPositive.md) | ops_proto_cv.h |
@@ -537,7 +401,7 @@
 | [HardtanhGrad](ops/HardtanhGrad.md) | ops_proto_nn.h |
 | [HashTable](ops/HashTable.md) | ops_proto_legacy.h |
 | [Histogram](ops/Histogram.md) | ops_proto_math.h |
-| [HistogramFixedWidth](ops/HistogramFixedWidth.md) | ops_proto_math.h |
+| [HistogramFixedWidth](ops/HistogramFixedWidth.md) | ops_proto_legacy.h |
 | [IFFT](ops/IFFT.md) | ops_proto_legacy.h |
 | [IFFT2D](ops/IFFT2D.md) | ops_proto_legacy.h |
 | [IFMR](ops/IFMR.md) | ops_proto_nn.h |
@@ -545,7 +409,7 @@
 | [IMGWarpOffsets](ops/IMGWarpOffsets.md) | ops_proto_cv.h |
 | [IMGWarpResize](ops/IMGWarpResize.md) | ops_proto_cv.h |
 | [INInferV2](ops/INInferV2.md) | ops_proto_nn.h |
-| [INTrainingReduceGrad](ops/INTrainingReduceGrad.md) | ops_proto_nn.h |
+| [INTrainingReduceGrad](ops/INTrainingReduceGrad.md) | reduce_ops.h |
 | [INTrainingReduceV2](ops/INTrainingReduceV2.md) | ops_proto_nn.h |
 | [INTrainingUpdateGrad](ops/INTrainingUpdateGrad.md) | ops_proto_nn.h |
 | [INTrainingUpdateGradGammaBeta](ops/INTrainingUpdateGradGammaBeta.md) | ops_proto_nn.h |
@@ -568,10 +432,10 @@
 | [InitData](ops/InitData.md) | ops_proto_legacy.h |
 | [InitEmbeddingHashmapV2](ops/InitEmbeddingHashmapV2.md) | ops_proto_legacy.h |
 | [InitializeTable](ops/InitializeTable.md) | ops_proto_legacy.h |
-| [InplaceAdd](ops/InplaceAdd.md) | ops_proto_math.h |
+| [InplaceAdd](ops/InplaceAdd.md) | ops_proto_nn.h |
 | [InplaceIndexAdd](ops/InplaceIndexAdd.md) | ops_proto_nn.h |
-| [InplaceSub](ops/InplaceSub.md) | ops_proto_math.h |
-| [InplaceUpdate](ops/InplaceUpdate.md) | ops_proto_nn.h |
+| [InplaceSub](ops/InplaceSub.md) | ops_proto_nn.h |
+| [InplaceUpdate](ops/InplaceUpdate.md) | selection_ops.h |
 | [InstanceNorm](ops/InstanceNorm.md) | ops_proto_nn.h |
 | [InstanceNormGrad](ops/InstanceNormGrad.md) | ops_proto_nn.h |
 | [Inv](ops/Inv.md) | ops_proto_math.h |
@@ -637,11 +501,11 @@
 | [LpNormReduce](ops/LpNormReduce.md) | ops_proto_nn.h |
 | [LpNormReduceV2](ops/LpNormReduceV2.md) | ops_proto_nn.h |
 | [LpNormUpdate](ops/LpNormUpdate.md) | ops_proto_nn.h |
-| [LpNormUpdateV2](ops/LpNormUpdateV2.md) | ops_proto_nn.h |
+| [LpNormUpdateV2](ops/LpNormUpdateV2.md) | ops_proto_legacy.h |
 | [LpNormV2](ops/LpNormV2.md) | ops_proto_nn.h |
 | [Lu](ops/Lu.md) | ops_proto_legacy.h |
 | [MVN](ops/MVN.md) | ops_proto_legacy.h |
-| [MVNV2](ops/MVNV2.md) | ops_proto_nn.h |
+| [MVNV2](ops/MVNV2.md) | nn_norm_ops.h |
 | [MapClear](ops/MapClear.md) | ops_proto_legacy.h |
 | [MapIncompleteSize](ops/MapIncompleteSize.md) | ops_proto_legacy.h |
 | [MapIndex](ops/MapIndex.md) | ops_proto_nn.h |
@@ -669,7 +533,7 @@
 | [MatrixDiagV2](ops/MatrixDiagV2.md) | ops_proto_math.h |
 | [MatrixDiagV3](ops/MatrixDiagV3.md) | ops_proto_math.h |
 | [MatrixInverse](ops/MatrixInverse.md) | ops_proto_nn.h |
-| [MatrixSetDiagV2](ops/MatrixSetDiagV2.md) | ops_proto_math.h |
+| [MatrixSetDiagV2](ops/MatrixSetDiagV2.md) | ops_proto_legacy.h |
 | [MatrixSetDiagV3](ops/MatrixSetDiagV3.md) | ops_proto_legacy.h |
 | [MatrixSolve](ops/MatrixSolve.md) | ops_proto_legacy.h |
 | [MatrixSolveLs](ops/MatrixSolveLs.md) | ops_proto_legacy.h |
@@ -681,7 +545,7 @@
 | [MaxPool3DGrad](ops/MaxPool3DGrad.md) | ops_proto_nn.h |
 | [MaxPool3DGradGrad](ops/MaxPool3DGradGrad.md) | ops_proto_legacy.h |
 | [MaxPool3DWithArgmax](ops/MaxPool3DWithArgmax.md) | ops_proto_legacy.h |
-| [MaxPoolExt2](ops/MaxPoolExt2.md) | ops_proto_nn.h |
+| [MaxPoolExt2](ops/MaxPoolExt2.md) | nn_pooling_ops.h |
 | [MaxPoolGrad](ops/MaxPoolGrad.md) | ops_proto_nn.h |
 | [MaxPoolGradGradWithArgmax](ops/MaxPoolGradGradWithArgmax.md) | ops_proto_nn.h |
 | [MaxPoolGradWithArgmax](ops/MaxPoolGradWithArgmax.md) | ops_proto_nn.h |
@@ -696,7 +560,6 @@
 | [Maximum](ops/Maximum.md) | ops_proto_math.h |
 | [MaximumGrad](ops/MaximumGrad.md) | ops_proto_legacy.h |
 | [Merge](ops/Merge.md) | ops_proto_nn.h |
-| [MinAreaPolygons](ops/MinAreaPolygons.md) | experiment_ops.h |
 | [Minimum](ops/Minimum.md) | ops_proto_math.h |
 | [MinimumGrad](ops/MinimumGrad.md) | ops_proto_legacy.h |
 | [MirrorPad](ops/MirrorPad.md) | ops_proto_math.h |
@@ -736,7 +599,7 @@
 | [NonZeroWithValueShapeV2](ops/NonZeroWithValueShapeV2.md) | ops_proto_legacy.h |
 | [Normal](ops/Normal.md) | ops_proto_legacy.h |
 | [Normalize](ops/Normalize.md) | ops_proto_legacy.h |
-| [NormalizeBBox](ops/NormalizeBBox.md) | ops_proto_cv.h |
+| [NormalizeBBox](ops/NormalizeBBox.md) | ops_proto_nn.h |
 | [NotEqual](ops/NotEqual.md) | ops_proto_math.h |
 | [NthElement](ops/NthElement.md) | ops_proto_legacy.h |
 | [OCRDetectionPostHandle](ops/OCRDetectionPostHandle.md) | ops_proto_legacy.h |
@@ -759,11 +622,9 @@
 | [OutfeedEnqueueOpV2](ops/OutfeedEnqueueOpV2.md) | ops_proto_legacy.h |
 | [PRelu](ops/PRelu.md) | ops_proto_nn.h |
 | [PReluGrad](ops/PReluGrad.md) | ops_proto_nn.h |
-| [PSAMask](ops/PSAMask.md) | experiment_ops.h |
-| [PSAMaskGrad](ops/PSAMaskGrad.md) | experiment_ops.h |
 | [PSROIPooling](ops/PSROIPooling.md) | ops_proto_legacy.h |
 | [PSROIPoolingGradV2D](ops/PSROIPoolingGradV2D.md) | ops_proto_legacy.h |
-| [PSROIPoolingV2](ops/PSROIPoolingV2.md) | ops_proto_nn.h |
+| [PSROIPoolingV2](ops/PSROIPoolingV2.md) | nn_detect_ops.h |
 | [Pack](ops/Pack.md) | ops_proto_math.h |
 | [Pad](ops/Pad.md) | ops_proto_math.h |
 | [PadV2](ops/PadV2.md) | ops_proto_math.h |
@@ -786,7 +647,6 @@
 | [Pinverse](ops/Pinverse.md) | ops_proto_legacy.h |
 | [PlaceHolder](ops/PlaceHolder.md) | ops_proto_legacy.h |
 | [PlaceholderWithDefault](ops/PlaceholderWithDefault.md) | ops_proto_legacy.h |
-| [PointsInPolygons](ops/PointsInPolygons.md) | experiment_ops.h |
 | [Poisson](ops/Poisson.md) | ops_proto_legacy.h |
 | [Pooling](ops/Pooling.md) | ops_proto_legacy.h |
 | [PopulationCount](ops/PopulationCount.md) | ops_proto_math.h |
@@ -813,7 +673,7 @@
 | [RNNTLoss](ops/RNNTLoss.md) | ops_proto_legacy.h |
 | [ROIAlign](ops/ROIAlign.md) | nn_detect_ops.h |
 | [ROIAlignGrad](ops/ROIAlignGrad.md) | ops_proto_cv.h |
-| [ROIPooling](ops/ROIPooling.md) | ops_proto_nn.h |
+| [ROIPooling](ops/ROIPooling.md) | nn_detect_ops.h |
 | [RaggedBincount](ops/RaggedBincount.md) | ops_proto_legacy.h |
 | [RaggedCountSparseOutput](ops/RaggedCountSparseOutput.md) | ops_proto_legacy.h |
 | [RaggedGather](ops/RaggedGather.md) | ops_proto_legacy.h |
@@ -864,7 +724,6 @@
 | [RefSwitch](ops/RefSwitch.md) | ops_proto_nn.h |
 | [Relu](ops/Relu.md) | ops_proto_nn.h |
 | [Relu6](ops/Relu6.md) | ops_proto_nn.h |
-| [Relu6D](ops/Relu6D.md) | ops_proto_legacy.h |
 | [Relu6Grad](ops/Relu6Grad.md) | ops_proto_nn.h |
 | [ReluGrad](ops/ReluGrad.md) | ops_proto_nn.h |
 | [ReluGradV2](ops/ReluGradV2.md) | ops_proto_nn.h |
@@ -879,7 +738,7 @@
 | [ResizeBicubicGrad](ops/ResizeBicubicGrad.md) | ops_proto_legacy.h |
 | [ResizeBilinearV2](ops/ResizeBilinearV2.md) | ops_proto_cv.h |
 | [ResizeBilinearV2Grad](ops/ResizeBilinearV2Grad.md) | ops_proto_cv.h |
-| [ResizeGrad](ops/ResizeGrad.md) | ops_proto_legacy.h |
+| [ResizeGrad](ops/ResizeGrad.md) | ops_proto_cv.h |
 | [ResizeNearestNeighborV2](ops/ResizeNearestNeighborV2.md) | ops_proto_cv.h |
 | [ResizeNearestNeighborV2Grad](ops/ResizeNearestNeighborV2Grad.md) | ops_proto_cv.h |
 | [ResizeTrilinear](ops/ResizeTrilinear.md) | ops_proto_cv.h |
@@ -921,13 +780,12 @@
 | [ScatterNdAdd](ops/ScatterNdAdd.md) | ops_proto_nn.h |
 | [ScatterNdMax](ops/ScatterNdMax.md) | ops_proto_nn.h |
 | [ScatterNdMin](ops/ScatterNdMin.md) | ops_proto_nn.h |
-| [ScatterNdSub](ops/ScatterNdSub.md) | ops_proto_nn.h |
+| [ScatterNdSub](ops/ScatterNdSub.md) | ops_proto_legacy.h |
 | [ScatterNdUpdate](ops/ScatterNdUpdate.md) | ops_proto_nn.h |
-| [ScatterNonAliasingAdd](ops/ScatterNonAliasingAdd.md) | ops_proto_nn.h |
+| [ScatterNonAliasingAdd](ops/ScatterNonAliasingAdd.md) | selection_ops.h |
 | [ScatterSub](ops/ScatterSub.md) | ops_proto_nn.h |
 | [ScatterUpdate](ops/ScatterUpdate.md) | ops_proto_nn.h |
 | [SdcaOptimizerV2](ops/SdcaOptimizerV2.md) | ops_proto_legacy.h |
-| [SearchN](ops/SearchN.md) | experiment_ops.h |
 | [SearchSorted](ops/SearchSorted.md) | ops_proto_math.h |
 | [SegmentMax](ops/SegmentMax.md) | ops_proto_legacy.h |
 | [SegmentSum](ops/SegmentSum.md) | ops_proto_nn.h |
@@ -950,7 +808,7 @@
 | [ShuffleChannel](ops/ShuffleChannel.md) | ops_proto_legacy.h |
 | [Sigmoid](ops/Sigmoid.md) | ops_proto_nn.h |
 | [SigmoidCrossEntropyWithLogits](ops/SigmoidCrossEntropyWithLogits.md) | ops_proto_nn.h |
-| [SigmoidCrossEntropyWithLogitsGrad](ops/SigmoidCrossEntropyWithLogitsGrad.md) | ops_proto_nn.h |
+| [SigmoidCrossEntropyWithLogitsGrad](ops/SigmoidCrossEntropyWithLogitsGrad.md) | nn_norm_ops.h |
 | [SigmoidCrossEntropyWithLogitsGradV2](ops/SigmoidCrossEntropyWithLogitsGradV2.md) | ops_proto_legacy.h |
 | [SigmoidCrossEntropyWithLogitsV2](ops/SigmoidCrossEntropyWithLogitsV2.md) | ops_proto_nn.h |
 | [SigmoidFocalLoss](ops/SigmoidFocalLoss.md) | ops_proto_legacy.h |
@@ -959,34 +817,32 @@
 | [SignBitsPack](ops/SignBitsPack.md) | ops_proto_math.h |
 | [SignBitsUnpack](ops/SignBitsUnpack.md) | ops_proto_math.h |
 | [SilentCheck](ops/SilentCheck.md) | ops_proto_legacy.h |
-| [SilentCheckV2](ops/SilentCheckV2.md) | experiment_ops.h |
-| [SilentCheckV3](ops/SilentCheckV3.md) | experiment_ops.h |
 | [SiluGrad](ops/SiluGrad.md) | ops_proto_nn.h |
 | [Sin](ops/Sin.md) | ops_proto_math.h |
 | [Sinh](ops/Sinh.md) | ops_proto_math.h |
 | [Size](ops/Size.md) | ops_proto_legacy.h |
 | [Slice](ops/Slice.md) | ops_proto_math.h |
-| [SliceLastDim](ops/SliceLastDim.md) | ops_proto_math.h |
-| [SliceWithAxes](ops/SliceWithAxes.md) | ops_proto_math.h |
+| [SliceLastDim](ops/SliceLastDim.md) | ops_proto_legacy.h |
+| [SliceWithAxes](ops/SliceWithAxes.md) | ops_proto_legacy.h |
 | [SliceWrite](ops/SliceWrite.md) | ops_proto_math.h |
-| [SmoothL1Loss](ops/SmoothL1Loss.md) | ops_proto_nn.h |
+| [SmoothL1Loss](ops/SmoothL1Loss.md) | nn_norm_ops.h |
 | [SmoothL1LossGrad](ops/SmoothL1LossGrad.md) | ops_proto_nn.h |
 | [SmoothL1LossGradV2](ops/SmoothL1LossGradV2.md) | ops_proto_nn.h |
 | [SmoothL1LossV2](ops/SmoothL1LossV2.md) | ops_proto_nn.h |
 | [Snapshot](ops/Snapshot.md) | ops_proto_legacy.h |
 | [SobolSample](ops/SobolSample.md) | ops_proto_legacy.h |
 | [SoftShrink](ops/SoftShrink.md) | ops_proto_nn.h |
-| [SoftShrinkGrad](ops/SoftShrinkGrad.md) | ops_proto_nn.h |
+| [SoftShrinkGrad](ops/SoftShrinkGrad.md) | nonlinear_fuc_ops.h |
 | [SoftmaxCrossEntropyLoss](ops/SoftmaxCrossEntropyLoss.md) | ops_proto_nn.h |
 | [SoftmaxCrossEntropyWithLogits](ops/SoftmaxCrossEntropyWithLogits.md) | ops_proto_nn.h |
 | [SoftmaxFocalLoss](ops/SoftmaxFocalLoss.md) | ops_proto_nn.h |
 | [SoftmaxGrad](ops/SoftmaxGrad.md) | ops_proto_nn.h |
 | [SoftmaxV2](ops/SoftmaxV2.md) | ops_proto_nn.h |
 | [Softplus](ops/Softplus.md) | ops_proto_nn.h |
-| [SoftplusGrad](ops/SoftplusGrad.md) | ops_proto_nn.h |
+| [SoftplusGrad](ops/SoftplusGrad.md) | ops_proto_legacy.h |
 | [SoftplusV2](ops/SoftplusV2.md) | ops_proto_nn.h |
 | [SoftplusV2Grad](ops/SoftplusV2Grad.md) | ops_proto_nn.h |
-| [Softsign](ops/Softsign.md) | ops_proto_nn.h |
+| [Softsign](ops/Softsign.md) | ops_proto_legacy.h |
 | [Sort](ops/Sort.md) | ops_proto_math.h |
 | [SortV2](ops/SortV2.md) | ops_proto_legacy.h |
 | [SpaceToBatch](ops/SpaceToBatch.md) | ops_proto_math.h |
@@ -994,13 +850,13 @@
 | [SpaceToDepth](ops/SpaceToDepth.md) | ops_proto_math.h |
 | [SparseAdd](ops/SparseAdd.md) | ops_proto_legacy.h |
 | [SparseAddGrad](ops/SparseAddGrad.md) | ops_proto_legacy.h |
-| [SparseApplyAdadelta](ops/SparseApplyAdadelta.md) | ops_proto_nn.h |
+| [SparseApplyAdadelta](ops/SparseApplyAdadelta.md) | ops_proto_legacy.h |
 | [SparseApplyAdagrad](ops/SparseApplyAdagrad.md) | ops_proto_legacy.h |
-| [SparseApplyAdagradV2](ops/SparseApplyAdagradV2.md) | ops_proto_nn.h |
-| [SparseApplyFtrl](ops/SparseApplyFtrl.md) | ops_proto_nn.h |
-| [SparseApplyFtrlV2](ops/SparseApplyFtrlV2.md) | ops_proto_nn.h |
-| [SparseApplyProximalAdagrad](ops/SparseApplyProximalAdagrad.md) | ops_proto_nn.h |
-| [SparseApplyRMSProp](ops/SparseApplyRMSProp.md) | ops_proto_nn.h |
+| [SparseApplyAdagradV2](ops/SparseApplyAdagradV2.md) | nn_training_ops.h |
+| [SparseApplyFtrl](ops/SparseApplyFtrl.md) | nn_training_ops.h |
+| [SparseApplyFtrlV2](ops/SparseApplyFtrlV2.md) | ops_proto_legacy.h |
+| [SparseApplyProximalAdagrad](ops/SparseApplyProximalAdagrad.md) | ops_proto_legacy.h |
+| [SparseApplyRMSProp](ops/SparseApplyRMSProp.md) | ops_proto_legacy.h |
 | [SparseConcat](ops/SparseConcat.md) | ops_proto_legacy.h |
 | [SparseCountSparseOutput](ops/SparseCountSparseOutput.md) | ops_proto_legacy.h |
 | [SparseCross](ops/SparseCross.md) | ops_proto_legacy.h |
@@ -1014,7 +870,7 @@
 | [SparseReduceSum](ops/SparseReduceSum.md) | ops_proto_legacy.h |
 | [SparseReduceSumSparse](ops/SparseReduceSumSparse.md) | ops_proto_legacy.h |
 | [SparseReorder](ops/SparseReorder.md) | ops_proto_legacy.h |
-| [SparseReshape](ops/SparseReshape.md) | ops_proto_math.h |
+| [SparseReshape](ops/SparseReshape.md) | ops_proto_legacy.h |
 | [SparseSegmentMean](ops/SparseSegmentMean.md) | ops_proto_nn.h |
 | [SparseSegmentMeanGrad](ops/SparseSegmentMeanGrad.md) | ops_proto_legacy.h |
 | [SparseSegmentSum](ops/SparseSegmentSum.md) | ops_proto_legacy.h |
@@ -1029,6 +885,7 @@
 | [SparseTensorDenseMatMul](ops/SparseTensorDenseMatMul.md) | ops_proto_nn.h |
 | [SparseToDense](ops/SparseToDense.md) | ops_proto_nn.h |
 | [SparseToSparseSetOperation](ops/SparseToSparseSetOperation.md) | ops_proto_legacy.h |
+| [SpatialTransformer](ops/SpatialTransformer.md) | ops_proto_cv.h |
 | [SpatialTransformerD](ops/SpatialTransformerD.md) | ops_proto_legacy.h |
 | [Split](ops/Split.md) | ops_proto_math.h |
 | [SplitToSequence](ops/SplitToSequence.md) | ops_proto_legacy.h |
@@ -1073,11 +930,11 @@
 | [StatelessRandomUniformV2](ops/StatelessRandomUniformV2.md) | ops_proto_math.h |
 | [StatelessRandperm](ops/StatelessRandperm.md) | ops_proto_math.h |
 | [StatelessSampleDistortedBoundingBox](ops/StatelessSampleDistortedBoundingBox.md) | ops_proto_legacy.h |
-| [StatelessTruncatedNormalV2](ops/StatelessTruncatedNormalV2.md) | ops_proto_math.h |
+| [StatelessTruncatedNormalV2](ops/StatelessTruncatedNormalV2.md) | ops_proto_legacy.h |
 | [StaticRegexFullMatch](ops/StaticRegexFullMatch.md) | ops_proto_legacy.h |
 | [StaticRegexReplace](ops/StaticRegexReplace.md) | ops_proto_legacy.h |
 | [StopGradient](ops/StopGradient.md) | ops_proto_legacy.h |
-| [StrideAdd](ops/StrideAdd.md) | ops_proto_math.h |
+| [StrideAdd](ops/StrideAdd.md) | ops_proto_legacy.h |
 | [StridedSlice](ops/StridedSlice.md) | ops_proto_math.h |
 | [StridedSliceAssign](ops/StridedSliceAssign.md) | ops_proto_math.h |
 | [StridedSliceGrad](ops/StridedSliceGrad.md) | ops_proto_math.h |
@@ -1093,7 +950,6 @@
 | [Swish](ops/Swish.md) | ops_proto_nn.h |
 | [SwishGrad](ops/SwishGrad.md) | ops_proto_nn.h |
 | [Switch](ops/Switch.md) | ops_proto_nn.h |
-| [SwitchByIndex](ops/SwitchByIndex.md) | experiment_ops.h |
 | [SwitchN](ops/SwitchN.md) | ops_proto_nn.h |
 | [Sxpy](ops/Sxpy.md) | ops_proto_legacy.h |
 | [SyncBatchNormBackwardElemt](ops/SyncBatchNormBackwardElemt.md) | ops_proto_nn.h |
@@ -1143,18 +999,17 @@
 | [TensorScatterMax](ops/TensorScatterMax.md) | ops_proto_legacy.h |
 | [TensorScatterMin](ops/TensorScatterMin.md) | ops_proto_legacy.h |
 | [TfIdfVectorizer](ops/TfIdfVectorizer.md) | ops_proto_legacy.h |
-| [ThreeNN](ops/ThreeNN.md) | experiment_ops.h |
 | [Threshold](ops/Threshold.md) | ops_proto_nn.h |
 | [ThresholdedRelu](ops/ThresholdedRelu.md) | ops_proto_legacy.h |
 | [Tile](ops/Tile.md) | ops_proto_math.h |
-| [TileWithAxis](ops/TileWithAxis.md) | ops_proto_math.h |
+| [TileWithAxis](ops/TileWithAxis.md) | ops_proto_legacy.h |
 | [ToAbsoluteBBox](ops/ToAbsoluteBBox.md) | ops_proto_cv.h |
 | [ToBool](ops/ToBool.md) | ops_proto_legacy.h |
 | [TopK](ops/TopK.md) | ops_proto_math.h |
 | [TopKPQDistanceV2](ops/TopKPQDistanceV2.md) | ops_proto_legacy.h |
 | [TopKV2](ops/TopKV2.md) | ops_proto_math.h |
 | [TopKV2D](ops/TopKV2D.md) | ops_proto_legacy.h |
-| [Trace](ops/Trace.md) | ops_proto_math.h |
+| [Trace](ops/Trace.md) | ops_proto_legacy.h |
 | [TransArgb](ops/TransArgb.md) | ops_proto_cv.h |
 | [TransData](ops/TransData.md) | ops_proto_math.h |
 | [TransDataRNN](ops/TransDataRNN.md) | ops_proto_legacy.h |
@@ -1162,7 +1017,6 @@
 | [Transpose](ops/Transpose.md) | ops_proto_math.h |
 | [TridiagonalSolve](ops/TridiagonalSolve.md) | ops_proto_legacy.h |
 | [Tril](ops/Tril.md) | ops_proto_math.h |
-| [Trilu](ops/Trilu.md) | ops_proto_math.h |
 | [Triu](ops/Triu.md) | ops_proto_math.h |
 | [TruncateDiv](ops/TruncateDiv.md) | ops_proto_math.h |
 | [TruncateMod](ops/TruncateMod.md) | ops_proto_math.h |
@@ -1179,10 +1033,10 @@
 | [Unpack](ops/Unpack.md) | ops_proto_math.h |
 | [UnravelIndex](ops/UnravelIndex.md) | ops_proto_legacy.h |
 | [UnsortedSegmentJoin](ops/UnsortedSegmentJoin.md) | ops_proto_legacy.h |
-| [UnsortedSegmentMax](ops/UnsortedSegmentMax.md) | ops_proto_nn.h |
+| [UnsortedSegmentMax](ops/UnsortedSegmentMax.md) | ops_proto_legacy.h |
 | [UnsortedSegmentMin](ops/UnsortedSegmentMin.md) | ops_proto_nn.h |
 | [UnsortedSegmentMinD](ops/UnsortedSegmentMinD.md) | ops_proto_legacy.h |
-| [UnsortedSegmentProd](ops/UnsortedSegmentProd.md) | ops_proto_nn.h |
+| [UnsortedSegmentProd](ops/UnsortedSegmentProd.md) | ops_proto_legacy.h |
 | [UnsortedSegmentSum](ops/UnsortedSegmentSum.md) | ops_proto_nn.h |
 | [UnsortedSegmentSumD](ops/UnsortedSegmentSumD.md) | ops_proto_legacy.h |
 | [Unsqueeze](ops/Unsqueeze.md) | ops_proto_math.h |
@@ -1194,7 +1048,6 @@
 | [UpsampleNearest3dGrad](ops/UpsampleNearest3dGrad.md) | ops_proto_cv.h |
 | [Variable](ops/Variable.md) | ops_proto_legacy.h |
 | [ViewCopy](ops/ViewCopy.md) | ops_proto_math.h |
-| [Voxelization](ops/Voxelization.md) | experiment_ops.h |
 | [WarpAffine](ops/WarpAffine.md) | ops_proto_legacy.h |
 | [WarpAffineV2](ops/WarpAffineV2.md) | ops_proto_legacy.h |
 | [WarpPerspective](ops/WarpPerspective.md) | ops_proto_legacy.h |
@@ -1203,7 +1056,6 @@
 | [Xdivy](ops/Xdivy.md) | ops_proto_math.h |
 | [Xlog1py](ops/Xlog1py.md) | ops_proto_math.h |
 | [Xlogy](ops/Xlogy.md) | ops_proto_math.h |
-| [YUVToRGB](ops/YUVToRGB.md) | experiment_ops.h |
 | [Yolo](ops/Yolo.md) | ops_proto_cv.h |
 | [YoloBoxesEncode](ops/YoloBoxesEncode.md) | ops_proto_cv.h |
 | [YoloPreDetection](ops/YoloPreDetection.md) | ops_proto_cv.h |
@@ -1219,4 +1071,4 @@
 | [_ParallelConcatStart](ops/_ParallelConcatStart.md) | ops_proto_legacy.h |
 | [_While](ops/_While.md) | ops_proto_legacy.h |
 
-Total: 1124 operators
+Total: 1046 operators

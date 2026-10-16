@@ -11,16 +11,16 @@ REG_OP(DiagPart)
 
 ## Brief
 
-Returns the batched diagonal part of a batched tensor . 
+Returns the batched diagonal part of a batched tensor .
 
 ## Inputs
 
 x: A Tensor. Must be one of the following types:
-   float16, float32, int32, int64, double, complex64, complex128. Supported format list ["ND"]. 
+   float16, float32, int32, int64, double, complex64, complex128. Supported format list ["ND"].
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x". Supported format list ["ND"]. 
+y: A Tensor. Has the same type as "x". Supported format list ["ND"].
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Compatible with the TensorFlow operator DiagPart.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

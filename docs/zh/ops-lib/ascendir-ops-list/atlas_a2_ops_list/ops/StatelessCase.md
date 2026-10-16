@@ -11,7 +11,7 @@ REG_OP(StatelessCase)
 
 ## Brief
 
-Select one of the subgraphs to pass the input tensors and return the output tensors . 
+Select one of the subgraphs to pass the input tensors and return the output tensors .
 
 ## Inputs
 
@@ -20,12 +20,12 @@ Select one of the subgraphs to pass the input tensors and return the output tens
 
 ## Outputs
 
-output: The output tensors returned by one of branches . It's a dynamic output. 
+output: The output tensors returned by one of branches . It's a dynamic output.
 
 ## Graphs
 
 branches: A list of subgraphs, each of which takes 'input' and returns a list of tensors,
-         whose types are the same as what every other subgraph returns . 
+         whose types are the same as what every other subgraph returns .
 
 ## Third-party framework compatibility
 
@@ -34,4 +34,4 @@ Compatible with the TensorFlow operator Case.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

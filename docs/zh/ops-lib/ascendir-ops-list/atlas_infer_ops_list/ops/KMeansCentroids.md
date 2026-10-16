@@ -15,7 +15,7 @@ REG_OP(KMeansCentroids)
 
 ## Brief
 
-Perform k-means clustering on a data matrix. 
+Perform k-means clustering on a data matrix.
 
 ## Inputs
 
@@ -33,7 +33,7 @@ Three required inputs and one optional inputs, including:
 
 ## Attributes
 
-use_actual_distance: Indicates whether to calculate the complete distance. 
+use_actual_distance: Indicates whether to calculate the complete distance.
 
 ## Data Types
 
@@ -49,4 +49,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

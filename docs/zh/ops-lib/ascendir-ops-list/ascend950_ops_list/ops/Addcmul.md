@@ -24,11 +24,11 @@ Four inputs, including:
 - x2: A mutable input Tensor of the same dtype as input_data.
 - value: A ND mutable input tensor which includes only one element.
            Must be one of the following types:
-           float16, bfloat16, float32, double, int64, int8, int32, uint8. 
+           float16, bfloat16, float32, double, int64, int8, int32, uint8.
 
 ## Outputs
 
-y: A mutable output Tensor. Has the same dtype as input_data. 
+y: A mutable output Tensor. Has the same dtype as input_data.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with the PyTorch operator Addcmul.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

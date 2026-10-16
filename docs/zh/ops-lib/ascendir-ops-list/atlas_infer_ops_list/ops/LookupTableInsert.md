@@ -11,7 +11,7 @@ REG_OP(LookupTableInsert)
 
 ## Brief
 
-Updates the table to associates keys with values. 
+Updates the table to associates keys with values.
 
 ## Inputs
 
@@ -40,4 +40,4 @@ Compatible with tensorflow LookupTableInsert operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

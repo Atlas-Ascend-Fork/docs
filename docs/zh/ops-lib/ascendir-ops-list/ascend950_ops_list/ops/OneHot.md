@@ -30,7 +30,7 @@ Four inputs, including:
 
 ## Outputs
 
-y: A 1-8D tensor. Has the same type as "on_value" . 
+y: A 1-8D tensor. Has the same type as "on_value" .
 
 ## Attributes
 
@@ -59,4 +59,4 @@ Compatible with the TensorFlow operator OneHot.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

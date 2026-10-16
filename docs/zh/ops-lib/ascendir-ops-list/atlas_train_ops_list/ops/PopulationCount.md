@@ -14,11 +14,11 @@ Computes element-wise population count.
 ## Inputs
 
 x: A ND Tensor, Must be one of the following types:
-int32, uint8, int16, int8, int64, uint16, uint32, uint64. 
+int32, uint8, int16, int8, int64, uint16, uint32, uint64.
 
 ## Outputs
 
-y: A ND Tensor of type uint8. 
+y: A ND Tensor of type uint8.
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator PopulationCount.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

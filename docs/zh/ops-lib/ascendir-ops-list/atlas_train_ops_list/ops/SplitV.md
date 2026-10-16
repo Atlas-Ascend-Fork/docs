@@ -32,17 +32,17 @@ quint8, qint16, quint16, qint32, string, bfloat16.
 Specifies a list containing the sizes of each output tensor along the split dimension.
 The elements in "size_splits" sum to the size of dimension "split_dim".
 - split_dim: Must be the following type:int32, int64. Specifies the
-dimension along which to split. Must be in the range [-len(x.shape), len(x.shape)) . 
+dimension along which to split. Must be in the range [-len(x.shape), len(x.shape)) .
 
 ## Outputs
 
 - y:  Dynamic output.A list of output tensors.
-Has the same type and format as "x" . 
+Has the same type and format as "x" .
 
 ## Attributes
 
 - num_split: A required int includes all types of int. Specifies the number of output tensors.
-No default value . 
+No default value .
 
 ## Data Types
 
@@ -70,4 +70,4 @@ Compatible with the TensorFlow operator SplitV.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

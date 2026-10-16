@@ -15,7 +15,7 @@ REG_OP(CropAndResizeGradImage)
 ## Brief
 
 Computes the gradient of the crop_and_resize op wrt the input
-images tensor . 
+images tensor .
 
 ## Inputs
 
@@ -30,12 +30,12 @@ in normalized coordinates [y1, x1, y2, x2].
 refers to.
 - image_size: A 1-D tensor with value [batch, image_height, image_width,
 depth] containing the original image size. Both image_height and image_width
-need to be positive . 
+need to be positive .
 
 ## Outputs
 
 y:A 4-D tensor of shape [batch, image_height, image_width, depth]. The format
-must be NHWC. 
+must be NHWC.
 
 ## Attributes
 
@@ -55,7 +55,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input grads must be a 4-D tensor . 
+Input grads must be a 4-D tensor .
 
 ## Third-party framework compatibility
 
@@ -64,4 +64,4 @@ Compatible with tensorflow CropAndResizeGradImage operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

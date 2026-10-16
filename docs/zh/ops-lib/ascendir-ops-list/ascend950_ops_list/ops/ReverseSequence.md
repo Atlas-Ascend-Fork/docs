@@ -16,7 +16,7 @@ REG_OP(ReverseSequence)
 
 ## Brief
 
-Reverses variable length slices. 
+Reverses variable length slices.
 
 ## Inputs
 
@@ -26,13 +26,13 @@ complex64, complex128, double, float32, float16, int16, int32, int64, int8, uint
 
 ## Outputs
 
-y: A rank ND tensor. Has the same shape as input. The extracted banded tensor. 
+y: A rank ND tensor. Has the same shape as input. The extracted banded tensor.
 
 ## Attributes
 
 - seq_dim: The dimension along which reversal is performed.
 - batch_dim: An optional int. Defaults to "0". The dimension along which
-reversal is performed. 
+reversal is performed.
 
 ## Data Types
 
@@ -60,4 +60,4 @@ Compatible with the TensorFlow operator ReverseSequence.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

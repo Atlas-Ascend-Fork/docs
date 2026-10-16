@@ -19,7 +19,7 @@ dimension.
 ## Inputs
 
 One input:
-x: A multi-dimensional tensor of type bfloat16, float16, float32, int64, int32. 
+x: A multi-dimensional tensor of type bfloat16, float16, float32, int64, int32.
 
 ## Outputs
 
@@ -28,7 +28,7 @@ x: A multi-dimensional tensor of type bfloat16, float16, float32, int64, int32.
 "dimension" compared with that of "x". Otherwise, the output keeps the dimensions, but
 the length of corresponding dimension will be set to "1".)
 - values: A ND tensor, specifying the maximum value. Has the same dimensions
-as "indice" and the same dtype as "x". 
+as "indice" and the same dtype as "x".
 
 ## Attributes
 
@@ -51,7 +51,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - If there are multiple maximum values, the index of the first maximum
 value is used.
 - The value range of "dimension" is [-dims, dims - 1]. "dims" is the
-dimension length of "x". 
+dimension length of "x".
 
 ## Third-party framework compatibility
 
@@ -61,4 +61,4 @@ sequence is opposite to that of PyTorch).
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -19,15 +19,15 @@ where the activations function in GLU is SwishGrad.
 
 two input, including:
 - y_grad: A Tensor, which is the output gradient of forward operator and which
-has the same shape as "x" except for the dimension specified by the "dim" parameter. 
-The dimension size specified by "dim" is half of the corresponding dimension of x. 
+has the same shape as "x" except for the dimension specified by the "dim" parameter.
+The dimension size specified by "dim" is half of the corresponding dimension of x.
 Must be one of the following types: bfloat16, float16, float32.
 - x: A Tensor. Must be one of the following types: bfloat16, float16, float32.
 
 ## Outputs
 
 one Output, including:
-x_grad: A Tensor, which is the gradient of x and has the same shape as "x". 
+x_grad: A Tensor, which is the gradient of x and has the same shape as "x".
 Must be one of the following types: bfloat16, float16, float32.
 
 ## Attributes
@@ -50,4 +50,4 @@ New operator SwiGluGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

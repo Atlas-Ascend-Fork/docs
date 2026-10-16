@@ -36,7 +36,7 @@ Two outputs, including:
 - virial: A 2D Tensor with shape [nframes, 9]. Must be one of the following types: float16, float32,
 float64.
 - atom_virial: A 2D Tensor with shape [nframes, nall * 9]. Must be one of the following types: float16,
-float32, float64. 
+float32, float64.
 
 ## Attributes
 
@@ -60,4 +60,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

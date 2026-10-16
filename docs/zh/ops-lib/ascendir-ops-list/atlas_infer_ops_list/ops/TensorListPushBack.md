@@ -15,7 +15,7 @@ REG_OP(TensorListPushBack)
 ## Brief
 
 Returns a list which has the passed-in `Tensor` as last element
-and the other elements of the given list in `input_handle`. 
+and the other elements of the given list in `input_handle`.
 
 ## Inputs
 
@@ -24,11 +24,11 @@ and the other elements of the given list in `input_handle`.
 
 ## Outputs
 
-output_handle:A list with the elements of old list followed by tensor. 
+output_handle:A list with the elements of old list followed by tensor.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with tensorflow TensorListPushBack operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

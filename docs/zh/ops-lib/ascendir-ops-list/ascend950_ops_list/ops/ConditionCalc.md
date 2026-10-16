@@ -11,7 +11,7 @@ REG_OP(ConditionCalc)
 
 ## Brief
 
-Calculate condition value by input tensor which will be used for if input or case input. 
+Calculate condition value by input tensor which will be used for if input or case input.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ x: the data or shape of input.  all types are available. It's a dynamic input.
 ## Outputs
 
 cond: condition value calculated by cond fuction.
-It will be cond input of if or branch_index input of case. 
+It will be cond input of if or branch_index input of case.
 
 ## Attributes
 
@@ -30,4 +30,4 @@ It will be cond input of if or branch_index input of case.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

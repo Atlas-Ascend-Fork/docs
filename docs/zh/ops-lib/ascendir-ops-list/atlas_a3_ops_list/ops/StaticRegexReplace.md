@@ -12,12 +12,12 @@ REG_OP(StaticRegexReplace)
 
 ## Brief
 
-Replaces the match of pattern in input with rewrite. 
+Replaces the match of pattern in input with rewrite.
 
 ## Inputs
 
 include:
-input:A Tensor of type string. The text to be processed. 
+input:A Tensor of type string. The text to be processed.
 
 ## Outputs
 
@@ -40,4 +40,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

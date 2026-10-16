@@ -19,28 +19,28 @@ Quantizes the input tensor x with the given scale and calculates the
 ## Inputs
 
 - x: A required tensor of type FLOAT32, FLOAT16 or BFLOAT16, specifying the input tensor
-       to be quantized. The format must be ND. Shape supports 1D to 8D. 
+       to be quantized. The format must be ND. Shape supports 1D to 8D.
 - scale: A required 1D tensor of type FLOAT32 with shape [1], specifying the
-           quantization scaling factor. 
+           quantization scaling factor.
 
 ## Outputs
 
 - y: A required tensor of type HIFLOAT8, FLOAT8_E5M2 or FLOAT8_E4M3FN,
        specifying the quantized output. The format must be ND.
-       Shape is the same as input "x". Data type is determined by dst_type. 
+       Shape is the same as input "x". Data type is determined by dst_type.
 - amax: A required 1D tensor of type FLOAT32, FLOAT16 or BFLOAT16 with shape [1],
           specifying the absolute maximum value of input "x".
-          Data type must be the same as input "x". 
+          Data type must be the same as input "x".
 
 ## Attributes
 
 - round_mode: An optional string, specifying the rounding mode for the cast operation.
                 Default value: "rint". Valid values depend on dst_type:
                 - For FLOAT8_E5M2 (35) or FLOAT8_E4M3FN (36): only "rint" is supported.
-                - For HIFLOAT8 (34): "round" or "hybrid" is supported. 
+                - For HIFLOAT8 (34): "round" or "hybrid" is supported.
 - dst_type: An optional int64, specifying the output quantized data type.
               Default value: 35 (FLOAT8_E5M2).
-              Valid values: 34 (HIFLOAT8), 35 (FLOAT8_E5M2), 36 (FLOAT8_E4M3FN). 
+              Valid values: 34 (HIFLOAT8), 35 (FLOAT8_E5M2), 36 (FLOAT8_E4M3FN).
 
 ## Data Types
 
@@ -58,4 +58,4 @@ It is a custom operator on Ascend NPU.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

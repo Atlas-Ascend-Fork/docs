@@ -26,7 +26,7 @@ Updates "ref" by assigning "value" to it. Donot support broadcasting operations.
 ## Outputs
 
 ref: A ND Tensor that holds the new value of ref after the value has been assigned.
-Has the same shape and dtype and format as the input "ref". 
+Has the same shape and dtype and format as the input "ref".
 
 ## Attributes
 
@@ -37,7 +37,7 @@ If "true", the operation will validate that the shape of "value" matches the sha
 - use_locking: An optional bool. Defaults to false.
 If True, the assignment will be protected by a lock;
 otherwise the behavior is undefined, but may exhibit less contention.
-                This attribute is reserved. 
+                This attribute is reserved.
 
 ## Data Types
 
@@ -58,4 +58,4 @@ Compatible with the TensorFlow operator Assign.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

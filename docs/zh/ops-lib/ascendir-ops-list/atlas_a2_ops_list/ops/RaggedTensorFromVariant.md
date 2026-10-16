@@ -14,7 +14,7 @@ REG_OP(RaggedTensorFromVariant)
 
 ## Brief
 
-Decodes a variant Tensor into a RaggedTensor. 
+Decodes a variant Tensor into a RaggedTensor.
 
 ## Outputs
 
@@ -41,7 +41,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Input
 
-encoded_ragged:  A Tensor of type variant. A variant Tensor containing encoded RaggedTensors. 
+encoded_ragged:  A Tensor of type variant. A variant Tensor containing encoded RaggedTensors.
 
 ## Third-party framework compatibility.
 
@@ -50,4 +50,4 @@ Compatible with tensorflow RaggedTensorFromVariant operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

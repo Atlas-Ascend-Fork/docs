@@ -30,7 +30,7 @@ for the mean of "x". Shape must be C channel.
 Has the same format as "grads".
 - batch_variance: A 1D tensor of type float32,
 for the variance of "x" . Shape must be C channel.
-Has the same format as "grads". 
+Has the same format as "grads".
 
 ## Outputs
 
@@ -39,12 +39,12 @@ for the offset of "scale". Shape must be C channel.
 Has the same format as "grads".
 - diff_offset: A 1D Tensor of type float32,
 for the offset of "offset". Shape must be C channel.
-Has the same format as "grads". 
+Has the same format as "grads".
 
 ## Attributes
 
 epsilon: An optional float32. Defaults to "0.0001".
-Represents a very small positive number that is added to the variance of "x" to prevent division by zero. 
+Represents a very small positive number that is added to the variance of "x" to prevent division by zero.
 
 ## Data Types
 
@@ -60,4 +60,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

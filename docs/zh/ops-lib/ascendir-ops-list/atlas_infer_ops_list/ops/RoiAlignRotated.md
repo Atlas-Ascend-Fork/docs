@@ -16,7 +16,7 @@ REG_OP(RoiAlignRotated)
 
 ## Brief
 
-Performs the backpropagation of ROI Align Rotated . 
+Performs the backpropagation of ROI Align Rotated .
 
 ## Inputs
 
@@ -43,7 +43,7 @@ to the ROI coordinates.
 If True, align the results more perfectly. Default: True.
 - clockwise: A required bool, if True, the angle in each proposal follows a clockwise
 fashion in image space,
-Otherwise, the angle is counterclockwise. Default: False. 
+Otherwise, the angle is counterclockwise. Default: False.
 
 ## Data Types
 
@@ -60,4 +60,4 @@ It has a corresponding operator in MMCV.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

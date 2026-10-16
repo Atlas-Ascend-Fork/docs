@@ -33,7 +33,9 @@ then applies block-wise quantization along the specified axis.
 The size of the dimension specified by activate_dim must be divisible by 2.
 Supports 2-7 dimensional tensors.
 - group_index: An optional tensor. Must be one of the following types: int32, int64.
-If provided, group_index must be 1-dimensional and its shape must be less than or equal to 256.
+If provided, group_index must be 1-dimensional and its shape must be greater than 0 and less than or equal to 256.
+Each element must be a non-negative integer, and the sum of all elements must not exceed the
+total number of rows of x to be quantized.
 
 ## Outputs
 
@@ -41,24 +43,31 @@ If provided, group_index must be 1-dimensional and its shape must be less than o
 Shape is same as input except activate_dim dimension is halved.
 Data type is one of: float4_e2m1, float4_e1m2, float8_e4m3fn, float8_e5m2.
 - mxscale: Scale factors for each quantization block. Data type is float8_e8m0.
-Shape calculation: 
-- Let act_shape be the shape after SwiGLU (input shape with activate_dim halved) 
-- axis_idx = axis if axis >= 0 else axis + rank(act_shape) 
-- mxscale.shape = act_shape 
-- mxscale.shape[axis_idx] = ceil(act_shape[axis_idx] / 32) 
-- mxscale.shape[-1] = (mxscale.shape[-1] + 1) // 2  (packed storage) 
-- mxscale.shape = mxscale.shape + [2]  (last dimension expanded to 2 for real/imaginary parts)
+Shape calculation:
+- Let act_shape be the shape after SwiGLU (input shape with activate_dim halved)
+- axis_idx = axis if axis >= 0 else axis + rank(act_shape)
+- mxscale.shape = act_shape
+- mxscale.shape[axis_idx] = ceil(ceil(act_shape[axis_idx] / 32) / 2) (block count padded to even)
+- When group_index is provided and axis is not the last axis,
+mxscale.shape[axis_idx] = act_shape[axis_idx] / 64 + group_num (integer division)
+- mxscale.shape = mxscale.shape + [2]  (last dimension of 2 holds the scales of two adjacent 32-element blocks)
 
 ## Attributes
 
-- activate_left: An optional bool. Reserved parameter for SwiGLU activation side. Defaults to false.
 - activate_dim: An optional int. Dimension along which to split input for SwiGLU.
 Must be last or second-to-last dimension. Defaults to -1.
-- swiglu_mode: An optional int. Reserved parameter for SwiGLU variant mode. Defaults to 0. When swiglu_mode = 1,
-clamp_limit must greater than 0
-- clamp_limit: An optional float. Reserved parameter for clamp limit in SwiGLU variant. Defaults to 7.0.
-- glu_alpha: An optional float. Reserved parameter for alpha value in SwiGLU variant. Defaults to 1.702.
-- glu_bias: An optional float. Reserved parameter for bias value in SwiGLU variant. Defaults to 1.0.
+- activate_left: An optional bool. Whether to activate the left half of the split input.
+When false, the right half is activated. Ignored when swiglu_mode=1. Defaults to false.
+- swiglu_mode: An optional int. SwiGLU computation mode: 0=standard SwiGLU, 1=interleaved
+variant, 2=split-half clamp variant, 3=split-half sigmoid-clamp variant. Defaults to 0.
+When swiglu_mode is 1, 2 or 3, clamp_limit must be greater than 0. When swiglu_mode is 2 or 3,
+axis must be -1.
+- clamp_limit: An optional float. Clamp limit used by variant SwiGLU (swiglu_mode=1/2/3).
+Defaults to 7.0.
+- glu_alpha: An optional float. Sigmoid scale used by variant SwiGLU (swiglu_mode=1/2).
+Defaults to 1.702.
+- glu_bias: An optional float. Linear-path bias used by variant SwiGLU (swiglu_mode=1/2).
+Defaults to 1.0.
 - group_mode: An optional int. Group index mode. Effective when group_index is provided.
 0=count mode, 1=cumsum mode. Defaults to 0.Currently only supports 0.
 - axis: An optional int. Axis along which to perform block-wise quantization.
@@ -69,8 +78,8 @@ Must be last or second-to-last dimension. Defaults to -1.
 Supports "rint", "floor", "round". Defaults to "rint". When dst_type = 35 or 36, round_mode must be "rint".
 - scale_alg: An optional int. Algorithm for computing scale factors.
 0=OCP, 1=cuBLAS, 2=RNE. Defaults to 0.When dst_type = 40 or 41, scale_alg must be 0.
-- max_dtype_value: An optional float. Reserved parameter for maximum dtype value. Used when scale_alg=2 and
-dst_type=FP4_E1M2. Defaults to 0.
+- max_dtype_value: An optional float. Reserved parameter, not used in current version.
+Defaults to 0.
 
 ## Data Types
 
@@ -93,11 +102,15 @@ It is a custom operator. It has no corresponding operator in Caffe, ONNX, Tensor
 - When dst_type is FP8_E4M3FN (36) or FP8_E5M2 (35), round_mode supports "rint".
 - When dst_type is FP4_E2M1 (40) or FP4_E1M2 (41), round_mode supports "rint", "floor", "round".
 - When activate_dim or axis is not the last axis, if group_index is provided, input x shape must be 2-dimensional.
-- If group_index is provided, it must be 1-dimensional and its shape must be less than or equal to 256.
+- If group_index is provided, it must be 1-dimensional and its shape must be greater than 0 and less than or
+equal to 256.
+Each element must be a non-negative integer, and the sum of all elements must not exceed
+the total number of rows of x to be quantized.
 - When dst_type is FP4 (40 or 41), scale_alg must be 0.
 - When activate_dim is not the last axis, swiglu_mode must be 0.
+- When swiglu_mode is 2 or 3, axis must be -1.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

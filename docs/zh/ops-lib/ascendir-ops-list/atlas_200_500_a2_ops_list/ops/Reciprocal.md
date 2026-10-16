@@ -21,7 +21,7 @@ x:A ND Tensor of type float16, float32, double,
 
 ## Outputs
 
-y:A ND Tensor with same type as "x". 
+y:A ND Tensor with same type as "x".
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator Reciprocal.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

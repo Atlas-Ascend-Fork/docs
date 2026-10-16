@@ -36,4 +36,4 @@ y: A tensor, which is the same dtype as x.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

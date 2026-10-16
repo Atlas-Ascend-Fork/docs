@@ -31,7 +31,7 @@ Adds up a SparseTensor and a dense tensor.
 
 ## Outputs
 
-y: A tensor. Has the same type as "x1_values". 
+y: A tensor. Has the same type as "x1_values".
 
 ## Data Types
 
@@ -50,4 +50,4 @@ Compatible with the TensorFlow operator SparseDenseCwiseAdd.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

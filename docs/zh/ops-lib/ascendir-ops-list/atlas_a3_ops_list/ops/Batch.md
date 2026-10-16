@@ -22,21 +22,21 @@ REG_OP(Batch)
 
 ## Brief
 
-Creates batches of tensors in "x_tensors" .   
+Creates batches of tensors in "x_tensors" .
 
 ## Inputs
 
 Input "x_tensors" is a list or a dictionary of tensors.
 x_tensors: The list or dictionary of tensors to enqueue.
 It's a dynamic input. Must be one of the following types:
-float16, float32, int8, int16, uint16, uint8, int32, int64, bool, double.  
+float16, float32, int8, int16, uint16, uint8, int32, int64, bool, double.
 
 ## Outputs
 
 - y_index: A Tensor. The index of a BatchTensor. Must be in row-major order.
 - y_id: A Tensor. The ID of a BatchTensor. Must be in row-major order.
 - y_tensors: A list or dictionary of tensors with
-the same types as "x_tensors" .  It's a dynamic output.  
+the same types as "x_tensors" .  It's a dynamic output.
 
 ## Attributes
 
@@ -63,7 +63,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Batch runs on the Ascend AI CPU, which delivers poor performance.   
+Batch runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -72,4 +72,4 @@ Compatible with the TensorFlow operator Batch.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -25,9 +25,9 @@ Two inputs, including:
 
 ## Outputs
 
-y: A Tensor of the same type as "x". Supported format list ["ND"]. 
+y: A Tensor of the same type as "x". Supported format list ["ND"].
 - Due to different architectures, the calculation results of this operator
-on NPU and CPU may be inconsistent. 
+on NPU and CPU may be inconsistent.
 
 ## Data Types
 
@@ -45,7 +45,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 If the type of x is float4_e2m1 or float4_e1m2, paddings values should be even number.
 If the type of x is hifloat8, float8_e5m2, float8_e4m3fn or float8_e8m0,
-paddings values should be non-negative integers. 
+paddings values should be non-negative integers.
 
 ## Third-party framework compatibility
 
@@ -54,4 +54,4 @@ Compatible with TensorFlow operator Pad.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

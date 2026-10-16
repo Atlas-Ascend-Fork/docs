@@ -40,7 +40,7 @@ Nine inputs, including:
 - grad: A tensor, specifying the gradient. Support dtype: float32, support format: [NC1HWC0,ND].
 - indices: A vector of indices into the first dimension of "var", "mom" and "ms". Support dtype: int32,
 int64, support format: [ND].
-The value of indices must be unique. Otherwise, the result is unpredictable . 
+The value of indices must be unique. Otherwise, the result is unpredictable .
 
 ## Outputs
 
@@ -84,4 +84,4 @@ Compatible with the TensorFlow operator SparseApplyRMSProp.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

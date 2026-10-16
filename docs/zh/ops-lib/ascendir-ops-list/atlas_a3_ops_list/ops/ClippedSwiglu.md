@@ -52,4 +52,4 @@ The dim dimension of x must be divisible by 2, and the dim dimension of y must b
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -21,7 +21,7 @@ REG_OP(UnbatchGrad)
 ## Brief
 
 Acts like Batch but using the given "batch_index" index of batching
-things as they become available .   
+things as they become available .
 
 ## Inputs
 
@@ -33,14 +33,14 @@ Input "x_input" is a list or a dictionary of tensors.
 
 ## Outputs
 
-y_grad: The return value, either an empty tensor or the batched gradient .   
+y_grad: The return value, either an empty tensor or the batched gradient .
 
 ## Attributes
 
 - container: An optional string. If non-empty, this queue is placed in the given container.
 Otherwise, a default container is used. Defaults to "".
 - shared_name: An optional string. If set, this queue will be shared under the given name
-across multiple sessions. Defaults to "".   
+across multiple sessions. Defaults to "".
 
 ## Data Types
 
@@ -54,7 +54,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-UnbatchGrad runs on the Ascend AI CPU, which delivers poor performance.   
+UnbatchGrad runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -63,4 +63,4 @@ Compatible with the TensorFlow operator UnbatchGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

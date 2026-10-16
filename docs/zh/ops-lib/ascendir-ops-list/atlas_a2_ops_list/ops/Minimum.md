@@ -10,7 +10,7 @@ REG_OP(Minimum)
 
 ## Brief
 
-Returns the min of "x1" and "x2" (i.e. x1 < x2 ? x1: x2) element-wise. Support broadcasting operations. 
+Returns the min of "x1" and "x2" (i.e. x1 < x2 ? x1: x2) element-wise. Support broadcasting operations.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ Two inputs, include:
 
 ## Outputs
 
-y: A ND Tensor of the same dtype as "x1". 
+y: A ND Tensor of the same dtype as "x1".
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with the TensorFlow operator Minimum.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

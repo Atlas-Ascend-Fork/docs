@@ -16,25 +16,27 @@ REG_OP(IndexToAddr)
 
 ## Brief
 
-Converts block index to address table.
+get block tensor according to base addr tensor, for hccl remote read to use.
 
 ## Inputs
 
-- base_addr: Base address tensor, supports DT_INT64 and DT_UINT64.
-- x: Index tensor, supports DT_INT64 and DT_UINT64.
+- base_addr: A Tensor of type int64/uint64.
+- x:A Tensor of type int64/uint64.
 
 ## Outputs
 
-- addrs_table: Address table tensor, supports DT_INT64 and DT_UINT64.
+- addrs_table: list of [rank id, host addr, device addr, read size].
 
 ## Attributes
 
-- ori_shape: Original matrix shape.
-- block_size: Block matrix shape.
-- ori_storage_mode: Storage mode of original tensor, default "Matrix".
-- block_storage_mode: Storage mode of block tensor, default "Matrix".
-- rank_id: Rank id, default 0.
-- dtype: Base tensor dtype, default DT_FLOAT.
+- ori_shape: An required list int. Shape of base tensor.
+- block_size: An required list int. Shape of split block tensor.
+- ori_storage_mode: An optional string from: '"Matrix", "UT"'. Defaults to
+"Matrix". Currently only support Matrix storage.
+- block_storage_mode: An optional string from: '"Matrix", "UT"'. Defaults to
+"Matrix". Currently only support Matrix storage.
+- rank_id: An optional int of rank id. Defaults is 0.
+- dtype: An optional Type of base tensor. Defaults is DT_FLOAT.
 
 ## Data Types
 
@@ -47,4 +49,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

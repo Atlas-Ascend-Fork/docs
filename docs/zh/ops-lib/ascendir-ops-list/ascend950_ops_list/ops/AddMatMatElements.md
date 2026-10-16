@@ -34,12 +34,12 @@ Three inputs, including:
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 c: bfloat16,float16,float32
-- input1 a: bfloat16,float16,float32
-- input2 b: bfloat16,float16,float32
-- input3 beta: bfloat16,float16,float32
-- input4 alpha: bfloat16,float16,float32
-- output0 c: bfloat16,float16,float32
+- input0 c: float16,float32
+- input1 a: float16,float32
+- input2 b: float16,float32
+- input3 beta: float16,float32
+- input4 alpha: float16,float32
+- output0 c: float16,float32
 
 ## Third-party framework compatibility
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator AddMatMatElements.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

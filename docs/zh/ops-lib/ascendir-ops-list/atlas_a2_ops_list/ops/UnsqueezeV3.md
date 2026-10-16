@@ -11,22 +11,22 @@ REG_OP(UnsqueezeV3)
 ## Brief
 
 Inserts a dimension of 1 into a tensor's shape. Only the tensor shape
-is changed, but the data is not changed. 
+is changed, but the data is not changed.
 
 ## Inputs
 
-x: A tensor. All data types are supported. 
-axes: A list of int64, which indicates the dimensions to be inserted. 
+x: A tensor. All data types are supported.
+axes: A list of int64, which indicates the dimensions to be inserted.
 
 ## Outputs
 
-y: Reshape tensor with same data as input. The same type as input x. 
+y: Reshape tensor with same data as input. The same type as input x.
 
 ## Third-party framework compatibility
 
-Compatible with the Onnx operator Unsqueeze in V3. 
+Compatible with the Onnx operator Unsqueeze in V3.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

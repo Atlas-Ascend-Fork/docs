@@ -14,11 +14,11 @@ where Φ(x) the standard Gaussian cumulative distribution function.
 
 ## Inputs
 
-x: A Tensor. Must be one of the following types: bfloat16, float16, float32. 
+x: A Tensor. Must be one of the following types: bfloat16, float16, float32.
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x". 
+y: A Tensor. Has the same type as "x".
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Compatible with the TensorFlow operator Gelu.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

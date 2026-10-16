@@ -14,7 +14,7 @@ REG_OP(StatelessRandomUniformIntV2)
 
 ## Brief
 
-Outputs deterministic pseudorandom random integers from a uniform distribution. 
+Outputs deterministic pseudorandom random integers from a uniform distribution.
 
 ## Inputs
 
@@ -27,7 +27,7 @@ Outputs deterministic pseudorandom random integers from a uniform distribution.
 
 ## Outputs
 
-y: Returns Random values with specified shape. 
+y: Returns Random values with specified shape.
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with TensorFlow StatelessRandomUniformIntV2 operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

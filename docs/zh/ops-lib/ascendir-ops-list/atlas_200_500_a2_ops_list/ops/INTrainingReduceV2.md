@@ -2,7 +2,7 @@
 
 ```c
 REG_OP(INTrainingReduceV2)
-    .INPUT(x, TensorType({DT_FLOAT16, DT_FLOAT}))
+    .INPUT(x, TensorType({DT_FLOAT16,DT_FLOAT}))
     .OUTPUT(sum, TensorType({DT_FLOAT}))
     .OUTPUT(square_sum, TensorType({DT_FLOAT}))
     .OP_END_FACTORY_REG(INTrainingReduceV2)
@@ -29,4 +29,4 @@ This operator is used in conjunction with INTrainingUpdateV2.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

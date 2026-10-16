@@ -34,7 +34,7 @@ linear models with L1 + L2 regularization. As global optimization objective is
 strongly-convex, the optimizer optimizes the dual objective at each step. The
 optimizer applies each update one example at a time. Examples are sampled
 uniformly, and the optimizer is learning rate free and enjoys linear convergence
-rate . 
+rate .
 
 ## Inputs
 
@@ -94,4 +94,4 @@ Compatible with tensorflow SdcaOptimizerV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

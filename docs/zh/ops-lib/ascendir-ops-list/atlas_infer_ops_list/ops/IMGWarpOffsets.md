@@ -37,4 +37,4 @@ When input dtype of offsets is int32, images should be float16.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

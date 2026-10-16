@@ -18,7 +18,7 @@ if the input matches the regex pattern provided.
 ## Inputs
 
 include:
-input:A Tensor of type string. The text to be processed. 
+input:A Tensor of type string. The text to be processed.
 
 ## Outputs
 
@@ -38,4 +38,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -16,13 +16,13 @@ REG_OP(TensorArray)
 
 ## Brief
 
-Class wrapping dynamic-sized, per-time-step, write-once Tensor arrays. 
+Class wrapping dynamic-sized, per-time-step, write-once Tensor arrays.
 
 ## Inputs
 
 The input size must be type int32. Inputs include:
 - size: int32 scalar Tensor: the size of the TensorArray. Required if
-handle is not provided. 
+handle is not provided.
 
 ## Outputs
 
@@ -58,4 +58,4 @@ Compatible with tensorflow TensorArray operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

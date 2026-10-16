@@ -22,7 +22,7 @@ int32, int8.
 
 ## Outputs
 
-y: A ND Tensor, Has the same dtype as "x". 
+y: A ND Tensor, Has the same dtype as "x".
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with the TensorFlow operator InvGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

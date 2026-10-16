@@ -12,7 +12,7 @@ REG_OP(InplaceUpdate)
 ## Brief
 
 Updates specified rows with values in v.
-Computes y = x; y[indices[i], ...] = v[i, ...]; return y.
+Computes x[i, :] = v; return x.
 
 ## Inputs
 
@@ -25,12 +25,12 @@ Three inputs, including:
     Indices into the left-most dimension of "x".
 - v: A Tensor of the same type as "x", Format is ND.
     Same dimension sizes as x except the first dimension,
-    which must be the same as the size of "indices".
+    which must be the same as the size of "indices" .
 
 ## Outputs
 
 y: A Tensor of the same type as "x", Format is ND.
-   An alias of "x". The content of "y" is undefined if there are duplicates in indices.
+  An alias of "x". The content of "y" is undefined if there are duplicates in indices.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with the TensorFlow operator InplaceUpdate.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

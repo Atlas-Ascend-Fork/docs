@@ -15,12 +15,12 @@ REG_OP(Unique)
 
 ## Brief
 
-Finds unique elements in a 1D tensor. 
+Finds unique elements in a 1D tensor.
 
 ## Inputs
 
 x: 1D tensor. Support all types mentioned in TensorType.
-Input "x" is a 1D tensor. 
+Input "x" is a 1D tensor.
 
 ## Outputs
 
@@ -29,7 +29,7 @@ Input "x" is a 1D tensor.
 
 ## Attributes
 
-out_idx: An optional DType from: "int32, int64". Defaults to "int32". 
+out_idx: An optional DType from: "int32, int64". Defaults to "int32".
 
 ## Data Types
 
@@ -51,4 +51,4 @@ Compatible with the TensorFlow operator Unique.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -37,7 +37,7 @@ BasicLSTMInplaceFillWindowCache calculation.
 
 ## Inputs
 
-eight inputs: 
+eight inputs:
 - x:Each time step is a 3D Tensor. Must be one of the following types: float16.
 - w:Each direction is a 3D Tensor. Must be one of the following types: int8.
 - r:Each direction is a 3D Tensor. Must be one of the following types: int8.
@@ -50,7 +50,7 @@ eight inputs:
 
 ## Outputs
 
-three outputs: 
+three outputs:
 - y:First dimension is time step, second dimension is direction, others is a 4D Tensor. Must be one of the following types: float16.
 - y_h:Each direction is a 3D Tensor. Must be one of the following types: float16.
 - y_c:Each direction is a 3D Tensor. Must be one of the following types: float16.
@@ -75,4 +75,4 @@ three outputs:
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

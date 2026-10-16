@@ -12,7 +12,7 @@ REG_OP(Embedding)
 
 ## Brief
 
-According to the indices, return the embedding vectors. 
+According to the indices, return the embedding vectors.
 
 ## Inputs
 
@@ -40,4 +40,4 @@ a non-continuous axis scenario.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -12,20 +12,20 @@ REG_OP(FileConstant)
 
 ## Brief
 
-Creates a file constant tensor, The operator is used to process the very large weight which is store in file. 
+Creates a file constant tensor, The operator is used to process the very large weight which is store in file.
 
 ## Outputs
 
-y: The FileConstant tensor. 
+y: The FileConstant tensor.
 
 ## Attributes
 
-file_path: A string, used to record file path. 
-file_id: A string, used to record file id. 
-shape: data shape. 
-dtype: data type. 
+file_path: A string, used to record file path.
+file_id: A string, used to record file id.
+shape: data shape.
+dtype: data type.
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

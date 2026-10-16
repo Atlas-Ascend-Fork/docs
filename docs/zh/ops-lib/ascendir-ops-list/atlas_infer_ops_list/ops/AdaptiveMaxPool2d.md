@@ -6,6 +6,7 @@ REG_OP(AdaptiveMaxPool2d)
     .OUTPUT(y, TensorType({DT_FLOAT16, DT_FLOAT32, DT_DOUBLE}))
     .OUTPUT(argmax, TensorType::IndexNumberType())
     .REQUIRED_ATTR(output_size, ListInt)
+    .ATTR(argmax_dtype, Int, 3)
     .OP_END_FACTORY_REG(AdaptiveMaxPool2d)
 ```
 
@@ -18,7 +19,7 @@ The output is of size H x W, for any input size.
 
 One input, including:
 - x: A Tensor. Must be one of the following data types:
-    float16, float32, float64. 
+    float16, float32, float64.
 
 ## Outputs
 
@@ -28,7 +29,9 @@ One input, including:
 ## Attributes
 
 - output_size: A required list of 2 ints
-   specifying the size (H,W) of the output tensor. 
+   specifying the size (H,W) of the output tensor.
+- argmax_dtype: An optional int. Data type of "argmax" output.
+   The value 3 indicates int32, and the value 9 indicates int64. The default value is 3.
 
 ## Data Types
 
@@ -49,4 +52,4 @@ Compatible with the Pytorch operator AdaptiveMaxPool2d.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

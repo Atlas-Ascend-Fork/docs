@@ -21,12 +21,12 @@ Three inputs, including:
 Diagonal offset(s). Positive value means superdiagonal, 0 refers to the main
 diagonal, and negative value means subdiagonals. `k` can be a single integer
 (for a single diagonal) or a pair of integers specifying the low and high ends
-of a matrix band. `k[0]` must not be larger than `k[1]`. 
+of a matrix band. `k[0]` must not be larger than `k[1]`.
 - padding_value: The value to fill the area outside the specified diagonal band with.
 
 ## Outputs
 
-diagonal: The extracted diagonal(s). 
+diagonal: The extracted diagonal(s).
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Compatible with the TensorFlow operator ScatterUpdate.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

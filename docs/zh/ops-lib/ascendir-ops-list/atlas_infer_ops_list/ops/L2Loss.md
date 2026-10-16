@@ -13,11 +13,11 @@ Computes half the L2 norm of a tensor without the sqrt .
 
 ## Inputs
 
-x: A Tensor. TensorType::FloatingDataType() or bfloat16. 
+x: A Tensor. TensorType::FloatingDataType() or bfloat16.
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x". 
+y: A Tensor. Has the same type as "x".
 
 ## Data Types
 
@@ -32,7 +32,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 if performances better in format NZ, please close
-"MatmulTransdataFusionPass" in fusion configuration. 
+"MatmulTransdataFusionPass" in fusion configuration.
 
 ## Third-party framework compatibility
 
@@ -41,4 +41,4 @@ Compatible with the TensorFlow operator L2Loss.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

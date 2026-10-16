@@ -27,12 +27,12 @@ Performs average pooling on the input.
 
 ## Inputs
 
-x: A tensor of shape [N, C, H, W] or [N, H, W, C] which supports data type float16, float32, bfloat16, double. 
+x: A tensor of shape [N, C, H, W] or [N, H, W, C] which supports data type float16, float32, bfloat16, double.
 
 ## Outputs
 
 y: The average pooled output tensor. Has the same type and format
-as input "x". 
+as input "x".
 
 ## Attributes
 
@@ -44,7 +44,7 @@ sliding window. The strides of the N and C dimensions are 1.
 either "VALID" or "SAME". With "SAME" means that the outputs will have the
 same spatial dimensions as its inputs. With "VALID" means no padding.
 - data_format: An optional string, specifying the data format of "ksize"
-and "strides", either "NCHW", or "NHWC" (default). 
+and "strides", either "NCHW", or "NHWC" (default).
 
 ## Data Types
 
@@ -60,13 +60,13 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - This operator applies only to a TensorFlow network.
 - Only single input and single output are supported.
-- For Atlas Training Series Product, Atlas A2 Training Series Product/Atlas 800I A2 Inference Product,
-Atlas A3 Training Series Product: "ksize_H" and "ksize_W" are positive integers within the range [1, 255].
-ksize_H * ksize_W < 256. 
+- For Atlas training products, Atlas A2 products,
+Atlas A3 products: "ksize_H" and "ksize_W" are positive integers within the range [1, 255].
+ksize_H * ksize_W < 256.
 For Ascend 950 AI Processor: The ksize of the H and W dimensions should be greater than 0.
-- For Atlas Training Series Product, Atlas A2 Training Series Product/Atlas 800I A2 Inference Product,
-Atlas A3 Training Series Product: the values of "strides_h" and "strides_w" are positive integers within
-the range [1, 63]. 
+- For Atlas training products, Atlas A2 products,
+Atlas A3 products: the values of "strides_h" and "strides_w" are positive integers within
+the range [1, 63].
 For Ascend 950 AI Processor: The stride of the H and W dimensions should be greater than 0.
 - When the C axis is greater than 1, if points with the same H and W dimensions in x contain one INF input
 on the C axis, the output of the INF input covered by the sliding window on this C axis is INF, and the
@@ -74,7 +74,7 @@ outputs of other C axis without INF input covered by the sliding window are Nan.
 H and W dimensions in x contain more than one INF input on the C axis, the outputs of all INF input data
 covered by the sliding window on the C axis are Nan. this constraints not for Ascend 950 AI Processor.
 - The ouput "y" shape at the N and C dimensions should be equal with input "x" shape at same dimensions. The output
-shape at the H and W dimensions is calculated by below formula: 
+shape at the H and W dimensions is calculated by below formula:
 
 ## Third-party framework compatibility
 
@@ -83,4 +83,4 @@ Compatible with the TensorFlow operator AvgPool.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

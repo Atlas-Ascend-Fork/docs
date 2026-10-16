@@ -8,13 +8,13 @@ REG_OP(TensorArrayClose)
 
 ## Brief
 
-Delete the TensorArray from its resource container. 
+Delete the TensorArray from its resource container.
 
 ## Inputs
 
 The input handle must be type resource. Inputs include:
 handle: A Tensor of type resource. The handle to a TensorArray
-(output of TensorArray or TensorArrayGrad). 
+(output of TensorArray or TensorArrayGrad).
 
 ## Data Types
 
@@ -29,4 +29,4 @@ Compatible with tensorflow TensorArrayClose operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

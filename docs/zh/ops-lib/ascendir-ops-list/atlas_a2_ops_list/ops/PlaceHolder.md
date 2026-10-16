@@ -13,15 +13,15 @@ REG_OP(PlaceHolder)
 
 ## Brief
 
-Inserts a placeholder for a tensor that will be always fed. 
+Inserts a placeholder for a tensor that will be always fed.
 
 ## Inputs
 
-x: A tensor. 
+x: A tensor.
 
 ## Outputs
 
-y: The created placeholder tensor. 
+y: The created placeholder tensor.
 
 ## Attributes
 
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator PlaceHolder.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

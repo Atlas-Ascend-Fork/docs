@@ -16,7 +16,7 @@ Computes the output as (shift + scale * x) ^ power .
 
 ## Inputs
 
-x: A tensor of type float16, float32 or bfloat16 . 
+x: A tensor of type float16, float32 or bfloat16 .
 
 ## Outputs
 
@@ -42,4 +42,4 @@ Compatible with the Caffe operator Power.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

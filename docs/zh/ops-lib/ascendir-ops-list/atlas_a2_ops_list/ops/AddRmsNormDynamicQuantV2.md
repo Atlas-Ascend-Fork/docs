@@ -23,41 +23,45 @@ REG_OP(AddRmsNormDynamicQuantV2)
 
 ## Brief
 
-Fused Operator of AddRmsNorm and DynamicQuant . 
+Fused Operator of AddRmsNorm and DynamicQuant .
 
 ## Inputs
 
 - x1: A tensor of type float16/bfloat16. Supported format "ND".
 - x2: A tensor of type float16/bfloat16. Has the same dtype and shape as x1. Supported format "ND".
 - gamma: A tensor of type float16/bfloat16. Supported format "ND".
-The dtype is the same as x1, and the shape matches the last axis of x1. 
+The dtype is the same as x1, and the shape matches the last axis of x1.
 - smooth_scale1: Optional Input. A tensor of type float16/bfloat16. Supported format "ND".
-The dtype is the same as x1, and the shape matches the last axis of x1. 
+The dtype is the same as x1, and the shape matches the last axis of x1.
 - smooth_scale2: Optional Input. A tensor of type float16/bfloat16. Supported format "ND".
-The dtype is the same as x1, and the shape matches the last axis of x1. 
+The dtype is the same as x1, and the shape matches the last axis of x1.
+- beta: Optional Input. A tensor of type float16/bfloat16. Supported format "ND".
+The dtype is the same as x1, and the shape matches the last axis of x1.
 
 ## Outputs
 
-- y1: A tensor of type int8/hifloat8/float8_e5m2/float8_e4m3fn/int4, quantize result for rmsnorm(x1+x2)*smooth1+beta. Supported format "ND".
-Has the same shape as x1. 
-- y2: A tensor of type int8/hifloat8/float8_e5m2/float8_e4m3fn/int4, quantize result for rmsnorm(x1+x2)*smooth2+beta. Supported format "ND".
-Has the same shape as x1. 
+- y1: A tensor of type int8/hifloat8/float8_e5m2/float8_e4m3fn/int4, quantize result for
+rmsnorm(x1+x2)*smooth1+beta. Supported format "ND".
+Has the same shape as x1.
+- y2: A tensor of type int8/hifloat8/float8_e5m2/float8_e4m3fn/int4, quantize result for
+rmsnorm(x1+x2)*smooth2+beta. Supported format "ND".
+Has the same shape as x1.
 - y3: A tensor of type float32, cast result for rmsnorm(x1+x2). Supported format "ND".
-Has the same shape as x1. 
+Has the same shape as x1.
 - y4: A tensor of type float16/bfloat16, describe the result for rmsnorm(x1+x2). Supported format "ND".
-Has the same dtype and shape as x1. 
+Has the same dtype and shape as x1.
 - x: A tensor of type float16/bfloat16, describing the result of x1 + x2. Supported format "ND".
-Has the same dtype and shape as x1. 
+Has the same dtype and shape as x1.
 - scale1: A tensor of type float32, describing the result of dynamic quantize scales. Supported format "ND".
-Consistent with x1 except for the last axis, with one less dimension than x1. 
+Consistent with x1 except for the last axis, with one less dimension than x1.
 - scale2: A tensor of type float32, describing the result of dynamic quantize scales. Supported format "ND".
-Consistent with x1 except for the last axis, with one less dimension than x1. 
+Consistent with x1 except for the last axis, with one less dimension than x1.
 
 ## Attributes
 
-epsilon: An optional float, default value is 1e-6.
-output_mask: An optional listbool, default value is 1e-6.
-dst_type: An optional int, default value is DT_INT8.
+epsilon: An optional Float, default value is 1e-6.
+output_mask: An optional listBool, default value is {}.
+dst_type: An optional Int, default value is DT_INT8.
 
 ## Data Types
 
@@ -80,4 +84,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

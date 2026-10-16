@@ -18,16 +18,16 @@ REG_OP(EncodeJpeg)
 
 ## Brief
 
-JPEG-encode an image. 
+JPEG-encode an image.
 
 ## Inputs
 
 Input image must be unit8 type. Inputs include:
-image: A 3-D uint8 Tensor of shape [height, width, channels] . 
+image: A 3-D uint8 Tensor of shape [height, width, channels] .
 
 ## Outputs
 
-contents: 0-D. JPEG-encoded image. 
+contents: 0-D. JPEG-encoded image.
 
 ## Attributes
 
@@ -59,4 +59,4 @@ Compatible with tensorflow EncodeJpeg operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

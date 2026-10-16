@@ -11,7 +11,7 @@ REG_OP(RotatedBoxEncode)
 
 ## Brief
 
-RotatedBoxEncode. 
+RotatedBoxEncode.
 
 ## Inputs
 
@@ -23,7 +23,7 @@ Two inputs, including:
 - gt_box: A 3D Tensor of float32 (float16) with shape (B, 5, N).
 "B" indicates the number of batch size
 "N" indicates the number of bounding boxes, and the value "5" refers to
-"x0", "x1", "y0", "y1" and "angle". 
+"x0", "x1", "y0", "y1" and "angle".
 
 ## Outputs
 
@@ -46,4 +46,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

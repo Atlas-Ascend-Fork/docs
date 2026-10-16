@@ -10,7 +10,7 @@ REG_OP(Iou3D)
 
 ## Brief
 
-Calculate the intersection ratio of two rotated cuboids . 
+Calculate the intersection ratio of two rotated cuboids .
 
 ## Inputs
 
@@ -40,4 +40,4 @@ In each batch, the invalid box cannot appear before the valid box.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

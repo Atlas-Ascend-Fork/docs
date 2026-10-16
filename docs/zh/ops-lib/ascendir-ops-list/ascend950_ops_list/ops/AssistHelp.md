@@ -12,12 +12,12 @@ REG_OP(AssistHelp)
 
 ## Brief
 
-aicpu assit help op for auxiliary matrix generation. 
+aicpu assit help op for auxiliary matrix generation.
 
 ## Inputs
 
 x: The input is dynamic for attribute func_name. Must be one of the following types:
-float32, float16, int8, int16, uint8, uint16, int32, int64, uint32, uint64, double, bool. 
+float32, float16, int8, int16, uint8, uint16, int32, int64, uint32, uint64, double, bool.
 
 ## Outputs
 
@@ -30,4 +30,4 @@ y: The output is dynamic for attribute func_name. The output type is the same as
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

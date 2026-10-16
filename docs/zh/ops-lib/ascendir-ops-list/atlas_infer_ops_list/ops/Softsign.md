@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator Softsign.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

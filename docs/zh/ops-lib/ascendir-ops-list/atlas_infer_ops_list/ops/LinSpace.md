@@ -26,7 +26,7 @@ float32, float16, double, bfloat16, int32, int16, int8, uint8.
 
 ## Outputs
 
-output: A 1D Tensor, Type is same with "start". 
+output: A 1D Tensor, Type is same with "start".
 
 ## Data Types
 
@@ -49,4 +49,4 @@ Compatible with the TensorFlow operator lin_space.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

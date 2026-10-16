@@ -10,7 +10,7 @@ REG_OP(BroadcastArgs)
 
 ## Brief
 
-Returns the target shape for broadcasting shapes "x1" and "x2". 
+Returns the target shape for broadcasting shapes "x1" and "x2".
 
 ## Inputs
 
@@ -19,7 +19,7 @@ Returns the target shape for broadcasting shapes "x1" and "x2".
 
 ## Outputs
 
-y: A tensor. The broadcasted shape. 
+y: A tensor. The broadcasted shape.
 
 ## Data Types
 
@@ -36,4 +36,4 @@ Compatible with the TensorFlow operator BroadcastArgs.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

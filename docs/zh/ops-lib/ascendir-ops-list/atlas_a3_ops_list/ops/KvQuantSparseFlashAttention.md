@@ -11,6 +11,7 @@ REG_OP(KvQuantSparseFlashAttention)
     .OPTIONAL_INPUT(block_table, TensorType({DT_INT32}))
     .OPTIONAL_INPUT(actual_seq_lengths_query, TensorType({DT_INT32}))
     .OPTIONAL_INPUT(actual_seq_lengths_kv, TensorType({DT_INT32}))
+    .OPTIONAL_INPUT(sinks, TensorType({DT_FLOAT}))
     .OUTPUT(attention_out, TensorType({DT_FLOAT16, DT_BF16}))
     .REQUIRED_ATTR(scale_value, Float)
     .REQUIRED_ATTR(key_quant_mode, Int)
@@ -52,6 +53,7 @@ The block mapping table used in KV storage of PageAttention.
 Efective sequence length of query in different batches.
 - actual_seq_lengths_kv: A matrix tensor. The type support int32.
 Effective sequence length of key/value in different batches.
+- sinks: A tensor. The type support float.
 
 ## Outputs
 
@@ -98,4 +100,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -9,7 +9,7 @@ REG_OP(Erf)
 
 ## Brief
 
-Computes the Gauss error function of 'x' element-wise. 
+Computes the Gauss error function of 'x' element-wise.
 
 ## Inputs
 
@@ -18,7 +18,7 @@ x: A Tensor of type bfloat16, float16, float32 or double. the format can be
 
 ## Outputs
 
-y: A Tensor. Has the same type, format and shape as 'x'. 
+y: A Tensor. Has the same type, format and shape as 'x'.
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator Erf.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

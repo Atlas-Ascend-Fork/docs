@@ -20,11 +20,11 @@ Calculate the inverse gradient of RotaryMul.
 ## Inputs
 
 - x: A 4-dimensions tensor with layout BNSD, BSND or SBND, where B, N < 1000 and D is multiples of 64.
-Must be one of the following types: float16, float, bfloat16. 
+Must be one of the following types: float16, float, bfloat16.
 - r1: A 4-dimensions tensor with layout 11SD/BNSD, 1S1D/BSND or S11D/SBND, indicates cos value.
-When r1 broadcasts to x, the product of the broadcast axes needs to be less than 1024. The dtype must be same as "x". 
+When r1 broadcasts to x, the product of the broadcast axes needs to be less than 1024. The dtype must be same as "x".
 - r2: A 4-dimensions tensor with layout 11SD/BNSD, 1S1D/BSND or S11D/SBND, indicates sin value.
-Has the same shape and dtype as "r1". 
+Has the same shape and dtype as "r1".
 - dy: A 4-dimensions tensor. Data of grad increment. Has the same shape and dtype as "x".
 
 ## Outputs
@@ -52,4 +52,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

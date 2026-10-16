@@ -17,7 +17,7 @@ REG_OP(RoiPoolingWithArgMax)
 
 ## Brief
 
-Performs Region of Interest (ROI) Pooling . 
+Performs Region of Interest (ROI) Pooling .
 
 ## Inputs
 
@@ -31,7 +31,7 @@ the index of the input feature map, "x1", "y1", "x2", or "y2" must be
 greater than or equal to "0.0". Note that shape[0] batch should not exceed 1024.
 It has the same data type with x.
 - roi_actual_num: An optional tensor of type int32, specifying
-the number of ROIs per batch . 
+the number of ROIs per batch .
 
 ## Outputs
 
@@ -39,7 +39,7 @@ Two outputs, including:
 - y: A tensor of type float16 or float32, describing the result,
 with shape [batch, C, pooled_h, pooled_w]. It has the same data type with x.
 - argmax: A tensor of type int32, describing the index of the result,
-with shape [batch, C, pooled_h, pooled_w]. 
+with shape [batch, C, pooled_h, pooled_w].
 
 ## Attributes
 
@@ -82,4 +82,4 @@ It has a corresponding operator in MMCV.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

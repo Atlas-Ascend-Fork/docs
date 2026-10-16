@@ -35,4 +35,4 @@ Per-tensor anti-quantization with scalar scale / offset attributes.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

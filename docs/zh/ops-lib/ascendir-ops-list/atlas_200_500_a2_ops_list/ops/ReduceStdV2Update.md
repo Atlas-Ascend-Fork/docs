@@ -2,9 +2,9 @@
 
 ```c
 REG_OP(ReduceStdV2Update)
-    .INPUT(x, TensorType({ DT_FLOAT, DT_FLOAT16, DT_BF16}))
-    .INPUT(mean, TensorType({ DT_FLOAT, DT_FLOAT16, DT_BF16}))
-    .OUTPUT(output_var, TensorType({ DT_FLOAT, DT_FLOAT16, DT_BF16}))
+    .INPUT(x, TensorType({DT_FLOAT, DT_FLOAT16, DT_BF16}))
+    .INPUT(mean, TensorType({DT_FLOAT, DT_FLOAT16, DT_BF16}))
+    .OUTPUT(output_var, TensorType({DT_FLOAT, DT_FLOAT16, DT_BF16}))
     .REQUIRED_ATTR(dim, ListInt)
     .ATTR(if_std, Bool, false)
     .ATTR(unbiased, Bool, true)
@@ -37,12 +37,12 @@ Five Attributes, including:
     If "False", Calculate the variance
 - unbiased: An optional bool. Defaults to "True".
     If "True", Use Bessel Correction.
-    If "False", Do not use Bessel Correction. 
+    If "False", Do not use Bessel Correction.
 - keepdim: An optional bool. Defaults to "False".
     If "True", Keep the original tensor dimension.
-    If "False", Do not keep the original tensor dimension. 
+    If "False", Do not keep the original tensor dimension.
 - correction: An optional int. Defaults to 1.
-    If unbiased is "True", use Bessel Correction. 
+    If unbiased is "True", use Bessel Correction.
 
 ## Data Types
 
@@ -59,4 +59,4 @@ Compatible with the Pytorch operator Var_mean.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

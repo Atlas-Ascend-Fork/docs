@@ -13,24 +13,32 @@ REG_OP(BallQuery)
 
 ## Brief
 
-Find nearby points in spherical space or spherical layer. 
+Ball query: for each query center point center_xyz[m, b],
+      search the point set xyz[b] (coordinates stored in the middle
+      dimension) and collect the indices of points whose squared
+      distance d2 to the center satisfies d2 == 0 ||
+      (min_radius^2 <= d2 < max_radius^2). Up to sample_num points
+      are kept in order; when fewer points are found, the remaining
+      slots are filled with the index of the first selected point.
 
 ## Inputs
 
 Two inputs, including:
-- xyz: A 3D Tensor of type float16 or float32, xyz coordinates of the features.
-- center_xyz: A 3D Tensor of type float16 or float32. centers coordinates of the ball query.
+- xyz: A ND Tensor of shape (B, 3, N) where coordinates lie in the
+        middle dimension. Must be one of: float16, float32.
+- center_xyz: A ND Tensor of shape (M, B, 3) holding the query
+               center coordinates. Must be same dtype as xyz.
 
 ## Outputs
 
-One outputs:
-- idx: A 3D(B, M, sample_num) Tensor of type int32 with the indices of the features that form the query balls.
+idx: A ND Tensor of shape (M, B, sample_num) holding the selected
+    point indices. Type int32.
 
 ## Attributes
 
-- min_radius: A required float, minimum radius of the balls.
-- max_radius: A required float, maximum radius of the balls.
-- sample_num: A required int, maximum number of features in the balls.
+- min_radius: Float, inner radius of the query ball, must be >= 0.
+- max_radius: Float, outer radius of the query ball, must be > 0.
+- sample_num: Int, max number of sampled points per ball, must be >= 1.
 
 ## Data Types
 
@@ -40,11 +48,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - input1 center_xyz: float16,float32
 - output0 idx: int32
 
-## Third-party framework compatibility
-
-Compatible with the MMCV operator BallQuery(BallQuery branch).
-
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

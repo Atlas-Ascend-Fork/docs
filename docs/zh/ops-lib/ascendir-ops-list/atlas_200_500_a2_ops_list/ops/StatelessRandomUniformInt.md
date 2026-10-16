@@ -12,7 +12,7 @@ REG_OP(StatelessRandomUniformInt)
 
 ## Brief
 
-Outputs deterministic pseudorandom random integers from a uniform distribution. 
+Outputs deterministic pseudorandom random integers from a uniform distribution.
 
 ## Inputs
 
@@ -23,7 +23,7 @@ Outputs deterministic pseudorandom random integers from a uniform distribution.
 
 ## Outputs
 
-y: Returns Random values with specified shape. 
+y: Returns Random values with specified shape.
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with TensorFlow StatelessRandomUniformInt operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

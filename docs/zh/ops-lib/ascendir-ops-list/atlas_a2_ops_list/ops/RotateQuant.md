@@ -19,7 +19,7 @@ REG_OP(RotateQuant)
 ## Brief
 
 Performs rotation transformation on the input tensor x using a rotation matrix,
-followed by per-token symmetric dynamic quantization or per-group dynamic MX quantization. 
+followed by per-token symmetric dynamic quantization or per-group dynamic MX quantization.
 
 ## Inputs
 
@@ -30,14 +30,14 @@ Must be one of the following types: float16, bfloat16. Has the same type as inpu
 The format supports ND.
 - alpha: A tensor. Optional scaling coefficient for clamp range limitation.
 Only supported when y_dtype is float4_e2m1, float8_e4m3fn, or float8_e5m2. Not supported when y_dtype is int4 or int8.
-Must be bfloat16. The format supports ND. 
+Must be bfloat16. The format supports ND.
 
 ## Outputs
 
 - y: When the output data type is int4 or int8, the shape is [M, N].
-When the output data type is float4_e2m1, float8_e4m3fn, or float8_e5m2, the shape is [M, N]. 
+When the output data type is float4_e2m1, float8_e4m3fn, or float8_e5m2, the shape is [M, N].
 - scale: When the output data type is float32, the shape is [M].
-When the output data type is float8_e8m0, the shape is [M, ceilDiv(N,64), 2]. 
+When the output data type is float8_e8m0, the shape is [M, ceilDiv(N,64), 2].
 
 ## Attributes
 
@@ -60,20 +60,20 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Constraints
 
-Atlas A3 supports per-token dynamic quantization.Atlas A5 supports per-group dynamic MX quantization.
-Atlas A3 Training Series Products/Atlas A3 Inference Series Products, Atlas A2 Training Series Products/Atlas A2
-Inference Series Products, Atlas 950 Series Products: 
+Atlas A3 supports per-token dynamic quantization. Ascend 950PR&950DT products support per-group dynamic MX
+quantization.
+Atlas A3 products, Atlas A2 products, Ascend 950PR&950DT products:
 - x shape is [M, N], rot shape is [K, K]. rot must be a square matrix.
 - N must be a multiple of K, and N must be divisible by 8.
 - x and rot must have the same data type.
 - scale output shape must be [M].
-- N range: [128, 16000], K range: [16, 1024]. 
-Atlas A5 Series Products:
+- N range: [128, 16000], K range: [16, 1024].
+Ascend 950PR&950DT products:
 - x is 1-D to 7-D, with the last dimension being N.
 - rot shape is [K, K] or [blockNum, K, K], where blockNum = K/N, and N must divide K.
 - x and rot must have the same data type.
 - scale output shape is [*, ceilDiv(N,64), 2].
-- K must be one of {32, 64, 128}. 
+- K must be one of {32, 64, 128}.
 | x        | rot      | alpha | y              | scale       |
 |----------|----------|-------|----------------|-------------|
 | BF16     | BF16     | N/A   | INT4           | FLOAT32     |
@@ -90,4 +90,4 @@ Atlas A5 Series Products:
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

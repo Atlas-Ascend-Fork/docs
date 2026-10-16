@@ -9,18 +9,18 @@ REG_OP(MatrixDeterminant)
 
 ## Brief
 
-Computes the determinant of one or more square matrices . 
+Computes the determinant of one or more square matrices .
 
 ## Inputs
 
 The input x is a tensor of shape [N, M, M] whose inner-most 2 dimensions
 form square matrices. Inputs include:
 x:A Tensor. Must be one of the following types: double, float32, complex64,
-complex128. Shape is [..., M, M] . 
+complex128. Shape is [..., M, M] .
 
 ## Outputs
 
-y:A Tensor. Has the same type as x . 
+y:A Tensor. Has the same type as x .
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with tensorflow MatrixDeterminant operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -33,7 +33,7 @@ probability of each class. Class 0 is the background class.
 - im_info: An ND tensor of type float16 or float32, specifying the Image
 information.
 - actual_rois_num: An optional NCHW tensor of type int32, specifying the
-number of valid boxes per batch. 
+number of valid boxes per batch.
 
 ## Outputs
 
@@ -55,7 +55,7 @@ predicted. The value must be greater than 0.
 filtering. The value range is [0.0, 1.0].
 - iou_threshold: An required float, specifying the confidence threshold for
 box filtering, which is the output "obj" of operator Region. The value range
-is (0.0, 1.0). 
+is (0.0, 1.0).
 
 ## Data Types
 
@@ -76,7 +76,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 where "total_num" indicates the number of valid input boxes of all images.
 - "bbox_delta" must be with shape (total_num, (num_classes*4+15)//16, 1, 1,
 16), where "total_num" indicates the number of valid input boxes of all
-images. 
+images.
 
 ## Third-party framework compatibility
 
@@ -85,4 +85,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

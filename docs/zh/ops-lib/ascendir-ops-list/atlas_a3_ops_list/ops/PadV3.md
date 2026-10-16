@@ -67,12 +67,12 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-"symmetric" and "circular" mode is supported since arch35. 
-"symmetric" mode: the leftpad_i and rightpad_i should be in [-x.shape[i], x.shape[i]]. 
-"reflect" mode: the leftpad_i and rightpad_i should be in [-x.shape[i], x.shape[i]). 
-"constant" mode: the leftpad_i and rightpad_i should be greater than or equal to -x.shape[i]. 
-"edge" mode: the leftpad_i and rightpad_i should be greater than or equal to -x.shape[i]. 
-"circular" mode: the leftpad_i and rightpad_i should be in [-x.shape[i], x.shape[i]]. 
+"symmetric" and "circular" mode is supported since arch35.
+"symmetric" mode: the leftpad_i and rightpad_i should be in [-x.shape[i], x.shape[i]].
+"reflect" mode: the leftpad_i and rightpad_i should be in [-x.shape[i], x.shape[i]).
+"constant" mode: the leftpad_i and rightpad_i should be greater than or equal to -x.shape[i].
+"edge" mode: the leftpad_i and rightpad_i should be greater than or equal to -x.shape[i].
+"circular" mode: the leftpad_i and rightpad_i should be in [-x.shape[i], x.shape[i]].
 
 ## Third-party framework compatibility
 
@@ -81,4 +81,4 @@ Compatible with ONNX operator Pad.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

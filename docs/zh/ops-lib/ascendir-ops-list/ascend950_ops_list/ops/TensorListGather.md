@@ -15,7 +15,7 @@ REG_OP(TensorListGather)
 
 ## Brief
 
-Creates a Tensor by indexing into the TensorList. 
+Creates a Tensor by indexing into the TensorList.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ Creates a Tensor by indexing into the TensorList.
 
 ## Outputs
 
-values: The tensor. 
+values: The tensor.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow TensorListGather operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -14,11 +14,11 @@ Change the shape of output according to the attr outShape
 
 ## Inputs
 
-x: A Tensor. 
+x: A Tensor.
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x".It's required and the value should equal to output_num. 
+y: A Tensor. Has the same type as "x".It's required and the value should equal to output_num.
 
 ## Attributes
 
@@ -27,4 +27,4 @@ outShape: The shape of output will be inferred according to the attribute
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

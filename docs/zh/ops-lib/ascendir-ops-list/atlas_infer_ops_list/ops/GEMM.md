@@ -64,4 +64,4 @@ is float16) or 32 (input type is int8).
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

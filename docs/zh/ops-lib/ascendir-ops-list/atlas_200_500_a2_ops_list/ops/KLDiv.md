@@ -19,7 +19,7 @@ Two inputs, including:
 - x: Tensor with one of the following types: float16, float32, double, bfloat16. Support 1D ~ 8D. Support format:
 ["ND", "NC1HWC0", "FRACTAL_Z", "HWCN", "FRACTAL_NZ", "C1HWNCoC0"].
 - target: Tensor of the same shape and format and dtype as x. Support 1D ~ 8D. Support format:
-["ND", "NC1HWC0", "FRACTAL_Z", "HWCN", "FRACTAL_NZ", "C1HWNCoC0"]. 
+["ND", "NC1HWC0", "FRACTAL_Z", "HWCN", "FRACTAL_NZ", "C1HWNCoC0"].
 
 ## Outputs
 
@@ -29,7 +29,7 @@ when reduction='none', output y is a tensor, Support 1D ~ 8D. Must have the same
 ## Attributes
 
 reduction: An required "string", Specifies the reduction to apply to the output;
-Reduction supports the three modes of "sum" and "batchmean" and "none". 
+Reduction supports the three modes of "sum" and "batchmean" and "none".
 
 ## Attention Constraints
 
@@ -42,4 +42,4 @@ Compatible with the PyTorch operator kl_div.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -13,7 +13,7 @@ Returns element-wise smallest integer not less than "x".
 
 ## Inputs
 
-x: A ND Tensor of type bfloat16 or float16 or float32 or float64. 
+x: A ND Tensor of type bfloat16 or float16 or float32 or float64.
 
 ## Outputs
 
@@ -36,4 +36,4 @@ Compatible with the TensorFlow operator Ceil.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

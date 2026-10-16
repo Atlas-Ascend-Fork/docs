@@ -17,7 +17,7 @@ REG_OP(LarsV2Update)
 
 ## Brief
 
-Update "g" according to the LARS algorithm . 
+Update "g" according to the LARS algorithm .
 
 ## Inputs
 
@@ -39,7 +39,7 @@ Three Attributes, including:
 - hyperpara: An optional float. Default value is 0.001.
 - epsilon: An optional float. Default value is 1e-5.Avoid denominator is 0.
 - use_clip: An optional bool. Defaults to "False".
-    If "True", updating learning rate . 
+    If "True", updating learning rate .
 
 ## Data Types
 
@@ -56,4 +56,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

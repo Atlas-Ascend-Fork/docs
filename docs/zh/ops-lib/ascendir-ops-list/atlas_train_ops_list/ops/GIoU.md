@@ -15,7 +15,7 @@ REG_OP(GIoU)
 
 First calculate the minimum closure area of the two boxes, IoU,
 the proportion of the closed area that does not belong to the two boxes in the closure area,
-and finally subtract this proportion from IoU to get GIoU . 
+and finally subtract this proportion from IoU to get GIoU .
 
 ## Inputs
 
@@ -25,12 +25,12 @@ shape (N, 4). "N" indicates the number of bounding boxes, and the value
 "4" refers to [x1, y1, x2, y2] or [x, y, w, h].
 - gtboxes: Ground-truth boxes, a 2D Tensor of type float16 or float32
 with shape (M, 4). "M" indicates the number of ground truth boxes, and
-the value "4" refers to [x1, y1, x2, y2] or [x, y, w, h] . 
+the value "4" refers to [x1, y1, x2, y2] or [x, y, w, h] .
 
 ## Outputs
 
 overlap: A 2D Tensor of type float16 or float32 with shape [M, N] or [1, N],
-specifying the IoU or IoF ratio . 
+specifying the IoU or IoF ratio .
 
 ## Attributes
 
@@ -54,4 +54,4 @@ length and width are scaled by 0.2 internally.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

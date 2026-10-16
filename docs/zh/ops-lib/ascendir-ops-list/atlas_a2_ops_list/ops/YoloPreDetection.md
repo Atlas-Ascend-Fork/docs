@@ -18,13 +18,13 @@ REG_OP(YoloPreDetection)
 
 ## Brief
 
-Normalizes data. It is called Region on YOLO v2 and Yolo on YOLO v3 . 
+Normalizes data. It is called Region on YOLO v2 and Yolo on YOLO v3 .
 
 ## Inputs
 
 x: An NCHW tensor of type float16. The data is with shape (N, boxes*(coords+obj+classes), H, W),
 where, "obj" indicates the confidence of an object, and only one confidence is supported. Boxes are arranged
-as xx...xyy...yww...whh...hbb...bc0c0..c0c1c1...c1......cncn...cn . 
+as xx...xyy...yww...whh...hbb...bc0c0..c0c1c1...c1......cncn...cn .
 
 ## Outputs
 
@@ -33,7 +33,7 @@ where "ceil" indicates that a detected box is aligned upwards with the second pa
 - obj_prob: A float16 with shape [N, ceilx(boxes*height*width *2+32, 32)/2],
 where "ceil" indicates that a detected box is aligned upwards with the second parameter. Specifies the confidence.
 - classes_prob: A float16 with shape [N, classes, ceilx(boxes*height*width *2+32, 32)/2],
-where "ceil" indicates that a detected box is aligned upwards with the second parameter. Specifies the prediction classes . 
+where "ceil" indicates that a detected box is aligned upwards with the second parameter. Specifies the prediction classes .
 
 ## Attributes
 
@@ -66,4 +66,4 @@ It is a custom operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

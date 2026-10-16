@@ -51,4 +51,4 @@ Compatible with the TensorFlow operator ScatterMax.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

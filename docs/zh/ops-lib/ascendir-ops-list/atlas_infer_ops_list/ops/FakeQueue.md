@@ -9,7 +9,7 @@ REG_OP(FakeQueue)
 
 ## Brief
 
-FakeQueue, support tf api FixedLengthRecordReader. 
+FakeQueue, support tf api FixedLengthRecordReader.
 
 ## Inputs
 
@@ -18,7 +18,7 @@ resource: A Tensor of type DT_RESOURCE.
 
 ## Outputs
 
-handle: A Tensor of type DT_STRING ref. 
+handle: A Tensor of type DT_STRING ref.
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Compatible with the TensorFlow operator FakeQueue.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

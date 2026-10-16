@@ -16,7 +16,7 @@ REG_OP(SparseAddGrad)
 
 ## Brief
 
-The gradient operator for the SparseAdd op. 
+The gradient operator for the SparseAdd op.
 
 ## Inputs
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator SparseAddGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

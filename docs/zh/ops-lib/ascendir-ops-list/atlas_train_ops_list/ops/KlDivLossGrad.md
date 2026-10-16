@@ -13,7 +13,7 @@ REG_OP(KlDivLossGrad)
 
 ## Brief
 
-Computes Kl_div_loss_grad or Kl_div_loss_backward. 
+Computes Kl_div_loss_grad or Kl_div_loss_backward.
 
 ## Inputs
 
@@ -23,21 +23,21 @@ Three inputs, including:
  Required.
 - input: A tensor. Has the same type as "grad". Required.
 - target: A tensor. Has the same type as "grad". Required.
- Shape needs to satisfy the broadcast relationship with input. 
+ Shape needs to satisfy the broadcast relationship with input.
 
 ## Outputs
 
 y: A tensor. Has the same type as "grad".
-Has the same shape as "input"  
+Has the same shape as "input"
 
 ## Attributes
 
 - reduction: An optional attribute of type String. Defaults to "mean".
- Supports "none" | "mean" | "sum" | "batchmean".  
- 'none' means no reduction should be applied.  
- 'mean' means the total output will be divided by the number of elements in the output.  
- 'sum' means the output will be summed. 
- 'batchmean' means the total output will be divided by the number of batches. 
+ Supports "none" | "mean" | "sum" | "batchmean".
+ 'none' means no reduction should be applied.
+ 'mean' means the total output will be divided by the number of elements in the output.
+ 'sum' means the output will be summed.
+ 'batchmean' means the total output will be divided by the number of batches.
 - log_target: An optional attribute of type Bool. Defaults to false.
 
 ## Data Types
@@ -56,4 +56,4 @@ Compatible with the Pytorch operator KlDivLossGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

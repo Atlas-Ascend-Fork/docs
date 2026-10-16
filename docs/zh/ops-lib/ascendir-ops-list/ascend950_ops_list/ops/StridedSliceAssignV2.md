@@ -17,31 +17,31 @@ REG_OP(StridedSliceAssignV2)
 Assigns "value" to the sliced l-value reference of "var".
 The values of "value" are assigned to the positions in the variable. "var"
 that are selected by the slice parameters. The slice parameters "begin, "end",
-"strides", etc. work exactly as in "StridedSlice" . 
+"strides", etc. work exactly as in "StridedSlice" .
 
 ## Inputs
 
 Five inputs, including:
 - var: A mutable ND Tensor of type BasicType.
-Support dtype: [float16, float32, bfloat16, int32, int64, double, int8], Supoort format: [ND]. 
+Support dtype: [float16, float32, bfloat16, int32, int64, double, int8], Supoort format: [ND].
 - input_value: A mutable ND Tensor of type BasicType .
-Support dtype: [float16, float32, bfloat16, int32, int64, double, int8], Supoort format: [ND]. 
+Support dtype: [float16, float32, bfloat16, int32, int64, double, int8], Supoort format: [ND].
 - begin: A mutable ND Tensor of type IndexNumberType.
-Support dtype: [int64], Supoort format: [ND]. 
+Support dtype: [int64], Supoort format: [ND].
 Specifies the index of the first value to select.
 - end: A mutable ND Tensor of type IndexNumberType.
-Support dtype: [int64], Supoort format: [ND]. 
+Support dtype: [int64], Supoort format: [ND].
 Specifies the index of the last value to select.
 - strides: A mutable ND Tensor of type IndexNumberType.
-Support dtype: [int64], Supoort format: [ND]. 
+Support dtype: [int64], Supoort format: [ND].
 Specifies the stride to select.
 - axes: Optional. A mutable ND Tensor of type IndexNumberType.
-Support dtype: [int64], Supoort format: [ND]. 
-Specifies the stride to select. 
+Support dtype: [int64], Supoort format: [ND].
+Specifies the stride to select.
 
 ## Outputs
 
-var: A mutable Tensor. Has the same type and format as "var" . 
+var: A mutable Tensor. Has the same type and format as "var" .
 
 ## Data Types
 
@@ -58,7 +58,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 This operator currently does not support broadcasting. Therefore, the shape
-of "value" must be exactly the shape produced by the slice of "var" . 
+of "value" must be exactly the shape produced by the slice of "var" .
 @see StridedSlice()
 
 ## Third-party framework compatibility
@@ -68,4 +68,4 @@ of "value" must be exactly the shape produced by the slice of "var" .
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -22,7 +22,7 @@ Must be one of the following types: float
 
 ## Outputs
 
-argmax: A Tensor. Has the same type and format as input "indices" . 
+argmax: A Tensor. Has the same type and format as input "indices" .
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

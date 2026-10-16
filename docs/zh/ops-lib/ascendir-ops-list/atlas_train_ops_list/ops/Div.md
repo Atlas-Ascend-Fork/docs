@@ -28,7 +28,7 @@ Two inputs, including:
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype and format as input "x1". 
+y: A ND Tensor. Has the same dtype and format as input "x1".
 
 ## Data Types
 
@@ -49,4 +49,4 @@ Compatible with the TensorFlow operator Div.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

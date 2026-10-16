@@ -61,4 +61,4 @@ Compatible with the TensorFlow operator reduce_min.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

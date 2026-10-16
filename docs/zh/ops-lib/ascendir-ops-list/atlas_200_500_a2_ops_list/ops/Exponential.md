@@ -11,7 +11,7 @@ REG_OP(Exponential)
 
 ## Brief
 
-Outputs random values from the Exponential distribution(s) described by rate . 
+Outputs random values from the Exponential distribution(s) described by rate .
 
 ## Inputs
 
@@ -20,13 +20,13 @@ Inputs include:
 
 ## Outputs
 
-y: A Tensor of type dtype float16, float32, double. 
+y: A Tensor of type dtype float16, float32, double.
 
 ## Attributes
 
 - lambda: An optional float. Defaults to 1.
 - seed: An optional int. Defaults to 0.The random number generator is seeded by the given seed.
-Otherwise, it is seeded by a random seed. 
+Otherwise, it is seeded by a random seed.
 
 ## Data Types
 
@@ -46,4 +46,4 @@ The implementation for Exponential on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -35,7 +35,7 @@ The index of the last value to select.
 
 ## Outputs
 
-output: A Tensor has the same type as "dy" . 
+output: A Tensor has the same type as "dy" .
 
 ## Attributes
 
@@ -52,7 +52,7 @@ A bitmask where bit "i" being "1" means the "i"th
 specification creates a new shape 1 dimension.
 - shrink_axis_mask: A Tensor of type int32.
 A bitmask where bit "i" implies that the "i"th
-specification should shrink the dimensionality . 
+specification should shrink the dimensionality .
 
 ## Data Types
 
@@ -79,4 +79,4 @@ Compatible with the TensorFlow operator StridedSliceGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

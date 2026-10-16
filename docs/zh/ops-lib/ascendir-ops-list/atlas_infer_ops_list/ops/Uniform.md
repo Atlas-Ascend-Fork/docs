@@ -11,15 +11,15 @@ REG_OP(Uniform)
 
 ## Brief
 
-: Fill the input tensor with values drawn from the uniform distribution U(from, to). 
+: Fill the input tensor with values drawn from the uniform distribution U(from, to).
 
 ## Inputs
 
-x: A Tensor. Must be one of the following types: float16, float, double. 
+x: A Tensor. Must be one of the following types: float16, float, double.
 
 ## Outputs
 
-y: A Tensor has the same type as x. 
+y: A Tensor has the same type as x.
 
 ## Attributes
 
@@ -29,4 +29,4 @@ y: A Tensor has the same type as x.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

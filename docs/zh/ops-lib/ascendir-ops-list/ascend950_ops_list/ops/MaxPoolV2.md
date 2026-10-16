@@ -22,11 +22,11 @@ Three inputs:
 - strides: A required type of int32 values,
 specifying the stride of the sliding window for each dimension of the input tensor. No default value.
 - ksize: A required type of int32 values,
-specifying the size of the window for each dimension of the input tensor. No default value. 
+specifying the size of the window for each dimension of the input tensor. No default value.
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as input "x" . 
+y: A Tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -61,4 +61,4 @@ Compatible with the TensorFlow operator MaxPoolV2.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -18,19 +18,19 @@ an input signal composed of several input planes.
 
 Two input, including:
 - y_grad: A Tensor. Must be one of the following data types:
-    float16, bfloat16, float32. 
+    float16, bfloat16, float32.
 - x: A Tensor. Must be one of the following data types:
-    float16, bfloat16, float32. 
+    float16, bfloat16, float32.
 
 ## Outputs
 
-    x_grad: A Tensor. Has the same data type as "x". 
+    x_grad: A Tensor. Has the same data type as "x".
 
 ## Attributes
 
     data_format: An optional string, Specify the data format of the input and
-output data. With the default format "NDHWC". 
-For Ascend 950PR/Ascend 950DT, both "NDHWC" and "NCDHW" are supported. All other platforms support only "NDHWC".
+output data. With the default format "NDHWC".
+For Ascend 950PR&950DT products, both "NDHWC" and "NCDHW" are supported. All other platforms support only "NDHWC".
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with the PyTorch operator AdaptiveAvgPool3dGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

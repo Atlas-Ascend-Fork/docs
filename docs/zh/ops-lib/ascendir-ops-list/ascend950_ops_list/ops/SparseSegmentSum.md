@@ -23,11 +23,11 @@ uint8, int16, int8, int64, uint16, uint32, uint64.
 - indices: A Tensor. Must be one of the following types: int32, int64.
 A 1-D tensor. Has same rank as segment_ids.
 - segment_ids: A Tensor of type int32. A 1-D tensor. Values should be
-sorted and can be repeated. 
+sorted and can be repeated.
 
 ## Outputs
 
-y:A Tensor. Has the same type as x. 
+y:A Tensor. Has the same type as x.
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with tensorflow SparseSegmentSum operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

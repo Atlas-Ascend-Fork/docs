@@ -14,7 +14,7 @@ REG_OP(CTCGreedyDecoder)
 
 ## Brief
 
-Performs greedy decoding on the logits given in inputs. 
+Performs greedy decoding on the logits given in inputs.
 
 ## Inputs
 
@@ -30,11 +30,11 @@ of a `SparseTensor<int64, 2>`.  The vector stores the decoded classes.
 - decoded_shape: Shape vector, size `(2)`, of the decoded SparseTensor.
 Values are: `[batch_size, max_decoded_length]`.
 - log_probability: Matrix, size `(batch_size x 1)`, containing sequence
-log-probabilities. 
+log-probabilities.
 
 ## Attributes
 
-merge_repeated: If True, merge repeated classes in output. 
+merge_repeated: If True, merge repeated classes in output.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with TensorFlow CTCGreedyDecoder operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

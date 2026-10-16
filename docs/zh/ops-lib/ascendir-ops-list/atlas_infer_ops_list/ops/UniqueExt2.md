@@ -14,7 +14,7 @@ REG_OP(UniqueExt2)
 
 ## Brief
 
-Finds unique elements in a 1D tensor. 
+Finds unique elements in a 1D tensor.
 
 ## Inputs
 
@@ -32,7 +32,7 @@ Including:
 ## Attributes
 
 out_idx: An optional DType from: "int32, int64".
-Defaults to "int32". 
+Defaults to "int32".
 
 ## Data Types
 
@@ -45,7 +45,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-UniqueExt2 runs on the Ascend AI CPU, which delivers poor performance. 
+UniqueExt2 runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -54,4 +54,4 @@ Compatible with the TensorFlow operator UniqueExt2.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -15,7 +15,7 @@ REG_OP(WarpAffine)
 
 ## Brief
 
-Applies a affine transformation to an image. 
+Applies a affine transformation to an image.
 
 ## Inputs
 
@@ -38,4 +38,4 @@ Must be greater than "0".
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

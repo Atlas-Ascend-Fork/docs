@@ -14,7 +14,7 @@ REG_OP(PoissonNllLoss)
 
 ## Brief
 
-Calculate the PoissonNllLoss function.  
+Calculate the PoissonNllLoss function.
        target follow distribution of Poisson(input)loss(input,target) = input - target * log(input) + log(target!)
 
 ## Inputs
@@ -25,7 +25,7 @@ Two inputs, including:
 
 ## Outputs
 
-loss: A Tensor has same element type as two inputs. 
+loss: A Tensor has same element type as two inputs.
 
 ## Attributes
 
@@ -45,9 +45,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator PoissonNllLoss. 
+Compatible with the Pytorch operator PoissonNllLoss.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

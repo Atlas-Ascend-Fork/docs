@@ -16,12 +16,12 @@ REG_OP(UniqueWithCounts)
 
 ## Brief
 
-Finds unique elements in a 1D tensor. 
+Finds unique elements in a 1D tensor.
 
 ## Inputs
 
 x: 1D tensor. Support all types mentioned in TensorType.
-Input "x" is a k-dimensional tensor. 
+Input "x" is a k-dimensional tensor.
 
 ## Outputs
 
@@ -31,7 +31,7 @@ Input "x" is a k-dimensional tensor.
 
 ## Attributes
 
-out_idx: A required DType from: "int32, int64". 
+out_idx: A required DType from: "int32, int64".
 
 ## Data Types
 
@@ -54,4 +54,4 @@ Compatible with the TensorFlow operator UniqueWithCounts.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

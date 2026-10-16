@@ -16,7 +16,7 @@ REG_OP(CIoU)
 ## Brief
 
 First calculate the minimum closure area of the two boxes, IoU,
-The CIoU is obtained by combining the center distance and width to height ratio and IoU. 
+The CIoU is obtained by combining the center distance and width to height ratio and IoU.
 
 ## Inputs
 
@@ -27,7 +27,7 @@ shape (4, N). "N" indicates the number of bounding boxes, and the value
 - gtboxes: Ground-truth boxes, a 2D tensor of type float16 or float32
 with shape (4, M). "M" indicates the number of ground truth boxes, and
 the value "4" refers to [x1, y1, x2, y2] or [x, y, w, h]. Data type should
-be the same with bboxes. 
+be the same with bboxes.
 
 ## Outputs
 
@@ -37,7 +37,7 @@ specifying the IoU(Intersection over Union) or IoF(Intersection over Foreground)
 Data type should be the same with inputs.
 - atan_sub: A 2D tensor of type float16 or float32 with shape [M, N] or [1, N],
 specifying the IoU or IoF ratio. Data type should be the same with inputs.
-The shape of atan_sub is the same with overlap. 
+The shape of atan_sub is the same with overlap.
 
 ## Attributes
 
@@ -46,7 +46,7 @@ The shape of atan_sub is the same with overlap.
 The output shape is [M, N] if is_cross is true. The output shape is [1, N] if is_cross is false.
 - mode: An optional string, computation mode, a character string with the value range of [iou, iof].
 - atan_sub_flag: An optional bool, control whether to output atan_sub.
-If true, output atan_sub. If false, not output atan_sub. 
+If true, output atan_sub. If false, not output atan_sub.
 
 ## Data Types
 
@@ -66,4 +66,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -22,11 +22,11 @@ Computes gradients of mse loss.
 
 ## Outputs
 
-y: An ND tensor tensor with the same shape and type as "predict". 
+y: An ND tensor tensor with the same shape and type as "predict".
 
 ## Attributes
 
-reduction: An optional string.Defaults to "mean". 
+reduction: An optional string.Defaults to "mean".
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Compatible with the Pytorch operator MseLossGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

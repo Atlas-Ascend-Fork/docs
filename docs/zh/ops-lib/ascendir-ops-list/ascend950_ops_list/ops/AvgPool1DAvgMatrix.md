@@ -16,7 +16,7 @@ REG_OP(AvgPool1DAvgMatrix)
 
 ## Brief
 
-Generate an auxiliary matrix .  
+Generate an auxiliary matrix .
 
 ## Inputs
 
@@ -25,7 +25,7 @@ int64, float16, float, double.The format must be NHWC/NCHW.
 
 ## Outputs
 
-y_tensor: A  tensor with the same types as "x" .  
+y_tensor: A  tensor with the same types as "x" .
 
 ## Attributes
 
@@ -49,4 +49,4 @@ Compatible with the TensorFlow operator Unbatch.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

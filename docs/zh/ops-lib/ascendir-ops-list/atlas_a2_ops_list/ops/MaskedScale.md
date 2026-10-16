@@ -24,7 +24,7 @@ y: The output tensor of type float16 or float32. Same dtype and shape as x.
 
 ## Attributes
 
-value: An optional float, default value is 1.0. 
+value: An optional float, default value is 1.0.
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

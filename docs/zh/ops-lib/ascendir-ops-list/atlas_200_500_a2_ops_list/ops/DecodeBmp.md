@@ -10,11 +10,11 @@ REG_OP(DecodeBmp)
 
 ## Brief
 
-Bmp-decode an image. 
+Bmp-decode an image.
 
 ## Inputs
 
-contents: A Tensor of type string. 0-D. The BMP-encoded image. 
+contents: A Tensor of type string. 0-D. The BMP-encoded image.
 
 ## Outputs
 
@@ -22,7 +22,7 @@ image: A Tensor dtype of uint8.
 
 ## Attributes
 
-channels: Decode the desired number of color channels of the image. An optional int, default is 0. 
+channels: Decode the desired number of color channels of the image. An optional int, default is 0.
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Compatible with tensorflow DecodeBmp operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

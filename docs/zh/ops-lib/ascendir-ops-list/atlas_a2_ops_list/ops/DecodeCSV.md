@@ -18,27 +18,27 @@ REG_OP(DecodeCSV)
 ## Brief
 
 Converts each string in the input Tensor to the specified numeric
-type . 
+type .
 
 ## Inputs
 
 Inputs include:
 - records: Each string is a record/row in the csv and all records should have the
-same format. 
+same format.
 - record_defaults: One tensor per column of the input record, with either a
 scalar default value for that column or an empty vector if the column is
-required. 
+required.
 
 ## Outputs
 
-output: A Tensor. Has the same type as x. 
+output: A Tensor. Has the same type as x.
 
 ## Attributes
 
 - OUT_TYPE: An optional attribute. The numeric type to interpret each string in string_tensor as.
 - field_delim: An optional string. Defaults to ",". The char delimiter to separate fields in a record.
 - use_quote_delim: An optional bool. Defaults to true. If false, treats double quotation marks as regular characters
-inside of the string fields (ignoring RFC 4180, Section 2, Bullet 5). 
+inside of the string fields (ignoring RFC 4180, Section 2, Bullet 5).
 - na_value: An optional string. Defaults to ",". Additional string to recognize as NA/NaN.
 - select_cols: An optional attribute that is a sorted list of column indices to select. If specified,
 only this subset of columns will be parsed and returned.
@@ -54,7 +54,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The implementation for StringToNumber on Ascend uses AICPU, with bad
-performance. 
+performance.
 
 ## Third-party framework compatibility
 
@@ -63,4 +63,4 @@ performance.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

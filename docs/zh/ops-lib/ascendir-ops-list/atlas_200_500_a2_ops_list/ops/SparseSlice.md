@@ -17,7 +17,7 @@ REG_OP(SparseSlice)
 
 ## Brief
 
-Slices a SparseTensor based on the "start" and "size". 
+Slices a SparseTensor based on the "start" and "size".
 
 ## Inputs
 
@@ -60,4 +60,4 @@ Compatible with the TensorFlow operator SparseSlice.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

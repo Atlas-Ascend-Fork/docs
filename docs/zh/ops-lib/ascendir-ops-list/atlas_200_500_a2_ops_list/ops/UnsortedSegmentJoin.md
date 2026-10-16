@@ -12,7 +12,7 @@ REG_OP(UnsortedSegmentJoin)
 
 ## Brief
 
-A Tensor of type string. The input to be joined. 
+A Tensor of type string. The input to be joined.
 
 ## Inputs
 
@@ -42,4 +42,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -32,7 +32,7 @@ loc predictions, used as the input of operator SSDDetectionOutput.
 - score: An ND tensor of type floa16 or float32, specifying the box
 confidences data, used as the input of operator SSDDetectionOutput.
 - anchors: An ND tensor of type floa16 or float32, output from operator
-PriorBoxD, used as the input of operator SSDDetectionOutput. 
+PriorBoxD, used as the input of operator SSDDetectionOutput.
 
 ## Outputs
 
@@ -63,7 +63,7 @@ The corner is 1, center_size is 2, corner_size is 3.
 - keep_top_k: An optional int, specify the topk value after nms.
 Defaults to -1.
 - confidence_threshold: An optional float, specify the topk filter threshold.
-Only consider detections with confidence greater than the threshold. 
+Only consider detections with confidence greater than the threshold.
 
 ## Data Types
 
@@ -78,4 +78,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

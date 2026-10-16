@@ -11,19 +11,19 @@ REG_OP(Lu)
 
 ## Brief
 
-Computes the LU decomposition of one or more square matrices . 
+Computes the LU decomposition of one or more square matrices .
 
 ## Inputs
 
 input: A tensor of shape `[..., M, M]` whose inner-most 2 dimensions form
-matrices of size `[M, M]` . 
+matrices of size `[M, M]` .
 
 ## Outputs
 
 - lu: A tensor of shape `[..., M, M]` whose strictly lower triangular part
 denotes the lower triangular factor `L` with unit diagonal.
 - p: upper triangular part denotes the upper triangular factor `U`.Permutation
-of the rows encoded as a list of indices in `0..M-1`. Shape is `[..., M]` . 
+of the rows encoded as a list of indices in `0..M-1`. Shape is `[..., M]` .
 
 ## Attributes
 
@@ -44,4 +44,4 @@ Compatible with TensorFlow Lu operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

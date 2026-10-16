@@ -13,7 +13,7 @@ REG_OP(ReduceMeanWithCount)
 
 ## Brief
 
-Calculate the total mean based on the mean of each device . 
+Calculate the total mean based on the mean of each device .
 
 ## Inputs
 
@@ -24,7 +24,7 @@ Three inputs, including:
 
 ## Outputs
 
-y: The reduced tensor. Has the same type and format as input "x" . 
+y: The reduced tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -47,4 +47,4 @@ Compatible with the TensorFlow operator Sum.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -10,20 +10,20 @@ REG_OP(MultinomialAliasSetup)
 
 ## Brief
 
-Prepares for MultinomialAliasDraw to create a multinomial distribution. 
+Prepares for MultinomialAliasDraw to create a multinomial distribution.
 
 ## Inputs
 
 Inputs include:
 - probs: A Tensor. Must be one of the following types: float, double.
-1-D Tensor with shape [num_classes]. 
+1-D Tensor with shape [num_classes].
 
 ## Outputs
 
 j: A Tensor. Must be one of the following types: int64.
 1-D Tensor with shape [num_classes].
 q: A Tensor. Must be one of the following types: float, double.
-1-D Tensor with shape [num_classes]. 
+1-D Tensor with shape [num_classes].
 
 ## Data Types
 
@@ -43,4 +43,4 @@ The implementation for MultinomialAliasSetup on Ascend uses AICPU, with bad perf
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

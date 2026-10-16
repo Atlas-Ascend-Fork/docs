@@ -9,7 +9,7 @@ REG_OP(LookupTableRemove)
 
 ## Brief
 
-Remove keys in the given table. 
+Remove keys in the given table.
 
 ## Inputs
 
@@ -30,4 +30,4 @@ Compatible with tensorflow LookupTableInsert operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

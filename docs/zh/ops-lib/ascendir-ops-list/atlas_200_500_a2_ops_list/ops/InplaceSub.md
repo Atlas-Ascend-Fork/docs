@@ -20,12 +20,12 @@ Computes y = x; y[i, :] -= v; return y.
 - x: A Tensor. TensorType::BasicType(), Format is ND.
 - indices: A vector of type int32, Format is ND. Indices into the left-most dimension of x.
 - v: A Tensor of the same type as "x", Format is ND.
-Same dimension sizes as "x" except the first dimension, which must be the same as the size of "indices" . 
+Same dimension sizes as "x" except the first dimension, which must be the same as the size of "indices" .
 
 ## Outputs
 
 y: A Tensor. Has the same type as "x", Format is ND.
- An alias of "x". The content of "y" is undefined if there are duplicates in indices . 
+ An alias of "x". The content of "y" is undefined if there are duplicates in indices .
 
 ## Data Types
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator InplaceSub.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -14,7 +14,7 @@ REG_OP(StatelessParameterizedTruncatedNormal)
 
 ## Brief
 
-Outputs random values from a normal distribution. 
+Outputs random values from a normal distribution.
 
 ## Inputs
 
@@ -29,7 +29,7 @@ The shape of the output tensor. Batches are indexed by the 0th dimension.
 
 ## Outputs
 
-y: A Tensor. Has the same type as means. 
+y: A Tensor. Has the same type as means.
 
 ## Data Types
 
@@ -45,7 +45,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The implementation for StatelessParameterizedTruncatedNormal on Ascend uses AICPU, with bad performance. 
+The implementation for StatelessParameterizedTruncatedNormal on Ascend uses AICPU, with bad performance.
 
 ## Third-party framework compatibility
 
@@ -54,4 +54,4 @@ The implementation for StatelessParameterizedTruncatedNormal on Ascend uses AICP
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

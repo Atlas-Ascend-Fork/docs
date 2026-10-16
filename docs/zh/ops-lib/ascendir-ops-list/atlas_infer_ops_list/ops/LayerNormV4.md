@@ -21,10 +21,10 @@ REG_OP(LayerNormV4)
 
 ## Brief
 
-LayernormV4 operator interface implementation 
- calculating: x, gamma, beta 
- mean  = np.mean(x, reduce_axis, keepdims=True) 
- rstd = np.rsqrt(np.mean(np.power((x - mean),2), reduce_axis, keepdims=True) + epsilon)) 
+LayernormV4 operator interface implementation
+ calculating: x, gamma, beta
+ mean  = np.mean(x, reduce_axis, keepdims=True)
+ rstd = np.rsqrt(np.mean(np.power((x - mean),2), reduce_axis, keepdims=True) + epsilon))
  y = gamma*((x - mean) * rstd) + beta
 
 ## Inputs
@@ -61,4 +61,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

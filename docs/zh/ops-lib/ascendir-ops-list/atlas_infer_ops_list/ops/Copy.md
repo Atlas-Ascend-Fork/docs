@@ -14,16 +14,16 @@ REG_OP(Copy)
 
 Derived from the Caffe operator Split that splits an input blob to
    multiple output blobs for feeding a blob into multiple output layers.
-The Split node is removed from the graph after the split operation is completed. 
+The Split node is removed from the graph after the split operation is completed.
 
 ## Inputs
 
 x: A Tensor. Must be one of the following types:
-fp16, fp32, int8, uint8, int16, uint16, int32, uint32, int64, uint64. 
+fp16, fp32, int8, uint8, int16, uint16, int32, uint32, int64, uint64.
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x".It's required and the value should equal to output_num. 
+y: A Tensor. Has the same type as "x".It's required and the value should equal to output_num.
 
 ## Attributes
 
@@ -32,4 +32,4 @@ N: A required int. The parameter will get the number of dynamic outputs.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

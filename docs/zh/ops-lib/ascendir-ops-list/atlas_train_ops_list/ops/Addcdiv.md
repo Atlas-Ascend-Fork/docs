@@ -24,11 +24,11 @@ Four inputs, including:
 - x2: A ND mutable input tensor of the same dtype as input_data.
 - value: A ND mutable input tensor which includes only one element.
            Must be one of the following types: float16, bfloat16, float32, double, int64, int32.
-           Type combination of [input_data(bf16)/value(int32)] is not supported. 
+           Type combination of [input_data(bf16)/value(int32)] is not supported.
 
 ## Outputs
 
-y: A mutable tensor. Has the same dtype as input_data. 
+y: A mutable tensor. Has the same dtype as input_data.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with the PyTorch operator Addcdiv(version-1.5.0).
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

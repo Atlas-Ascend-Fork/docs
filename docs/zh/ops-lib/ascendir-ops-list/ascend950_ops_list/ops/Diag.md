@@ -15,12 +15,12 @@ Create a diagonal tensor
 
 One input, include:
 x: A mutable Tensor with rank k, where k is at most 4. Must be one of the Must be one of the following types:
-    bfloat16, float16, float32, double, int32, int64, complex64, complex128. Supported format list ["ND"]. 
-    Note: bfloat16 is only supported on Ascend950PR/Ascend950DT.
+    bfloat16, float16, float32, double, int32, int64, complex64, complex128. Supported format list ["ND"].
+    Note: bfloat16 is only supported on Ascend 950PR&950DT products.
 
 ## Outputs
 
-y: A mutable Tensor. Has the same type as "x". Supported format list ["ND"]. 
+y: A mutable Tensor. Has the same type as "x". Supported format list ["ND"].
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Compatible with the TensorFlow operator Diag.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

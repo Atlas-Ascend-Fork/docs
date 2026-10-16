@@ -24,11 +24,11 @@ Required.
 
 ## Outputs
 
-y: A Tensor. Has the same type as "grads". 
+y: A Tensor. Has the same type as "grads".
 
 ## Attributes
 
-reduction: An optional attribute of type String. Defaults to "mean". 
+reduction: An optional attribute of type String. Defaults to "mean".
 
 ## Data Types
 
@@ -41,9 +41,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-- In Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and
-Atlas A3 Training Series Product/Atlas A3 Inference Series Product,
-broadcasting is not allowed between input grads, input predict and input label, the three inputs must have the same shape. 
+- In Atlas A2 products and
+Atlas A3 products,
+broadcasting is not allowed between input grads, input predict and input label, the three inputs must have the same shape.
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with the Pytorch operator L1LossGrad.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

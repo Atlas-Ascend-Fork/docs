@@ -19,7 +19,7 @@ REG_OP(SparseSplit)
 
 ## Brief
 
-Splits a SparseTensor into "num_split" tensors along one dimension. 
+Splits a SparseTensor into "num_split" tensors along one dimension.
 
 ## Inputs
 
@@ -39,7 +39,7 @@ The indices of the SparseTensor.
 
 ## Attributes
 
-num_split: An int that is >= 1. The number of ways to split. 
+num_split: An int that is >= 1. The number of ways to split.
 
 ## Data Types
 
@@ -57,4 +57,4 @@ Compatible with the TensorFlow operator SparseSplit.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

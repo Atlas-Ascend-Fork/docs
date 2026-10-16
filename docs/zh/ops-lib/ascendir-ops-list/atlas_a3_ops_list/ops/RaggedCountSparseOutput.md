@@ -50,9 +50,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator RaggedCountSparseOutput. 
+Compatible with the TensorFlow operator RaggedCountSparseOutput.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

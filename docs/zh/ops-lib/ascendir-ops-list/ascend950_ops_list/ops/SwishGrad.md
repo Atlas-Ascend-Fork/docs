@@ -28,7 +28,7 @@ grad_x: A tensor, which is the gradient of x. Has the same type, shape and forma
 
 ## Attributes
 
-scale: An optional scalar, the multiplier of x. The data type is float, default value = 1.0. 
+scale: An optional scalar, the multiplier of x. The data type is float, default value = 1.0.
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with the PyTorch operator SwishGrad.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

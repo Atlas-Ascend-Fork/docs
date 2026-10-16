@@ -17,7 +17,7 @@ REG_OP(SparseReduceMaxSparse)
 
 ## Brief
 
-Computes the max of elements across dimensions of a SparseTensor. 
+Computes the max of elements across dimensions of a SparseTensor.
 
 ## Inputs
 
@@ -29,7 +29,7 @@ SparseTensor, possibly not in canonical ordering.
 `N` non-empty values corresponding to `x_indices`.
 - x_shape:A `tensor` of type `int64`.1-D.  Shape of the input SparseTensor.
 - reduction_axes:A `tensor` of type `int32`.1-D.
-Length-`K` vector containing the reduction axes. 
+Length-`K` vector containing the reduction axes.
 
 ## Outputs
 
@@ -40,7 +40,7 @@ Length-`K` vector containing the reduction axes.
 ## Attributes
 
 keep_dims:An optional `bool`. Defaults to `False`.
-If true, retain reduced dimensions with length 1. 
+If true, retain reduced dimensions with length 1.
 
 ## Data Types
 
@@ -61,4 +61,4 @@ Compatible SparseReduceMaxSparse operator in Tensorflow.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

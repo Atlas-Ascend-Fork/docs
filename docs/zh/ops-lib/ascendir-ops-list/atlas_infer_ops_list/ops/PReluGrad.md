@@ -29,7 +29,7 @@ channels(the dim1 number of features's shape) or 1.
 - dx: Reverse gradient of "features".
 Has the same shape and dtype with "features".
 - da: Reverse gradient of "weights".
-Has the same shape and dtype with "weights". 
+Has the same shape and dtype with "weights".
 
 ## Third-party framework compatibility
 
@@ -38,4 +38,4 @@ Compatible with PyTorch operator PReluGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

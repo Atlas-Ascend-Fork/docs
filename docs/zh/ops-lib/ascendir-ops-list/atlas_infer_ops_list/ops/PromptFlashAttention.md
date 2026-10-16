@@ -95,4 +95,4 @@ For `sparseMode = 4`, the condition for interception is `preTokens < 0` or `next
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

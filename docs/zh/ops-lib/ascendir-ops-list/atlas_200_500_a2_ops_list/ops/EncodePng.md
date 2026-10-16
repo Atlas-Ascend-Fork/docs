@@ -17,15 +17,15 @@ PNG-encode an image.
 Input image must be unit8 or uint16 type. Inputs include:
 image: is a 3-D uint8 or uint16 Tensor of shape [height, width, channels]
 where channels is: 1: for grayscale; 2: for grayscale + alpha; 3: for RGB;
-4: for RGBA. 
+4: for RGBA.
 
 ## Outputs
 
-contents: 0-D. PNG-encoded image. 
+contents: 0-D. PNG-encoded image.
 
 ## Attributes
 
-compression: Compression level. An optional int, default is -1. 
+compression: Compression level. An optional int, default is -1.
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with tensorflow EncodePng operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

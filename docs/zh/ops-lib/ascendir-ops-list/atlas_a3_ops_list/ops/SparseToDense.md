@@ -16,7 +16,7 @@ REG_OP(SparseToDense)
 
 ## Brief
 
-Converts a sparse representation into a dense tensor. 
+Converts a sparse representation into a dense tensor.
 
 ## Inputs
 
@@ -26,22 +26,22 @@ Data between different rows(Corresponding index of output) cannot be duplicated,
 Index cannot exceed the size of each dimension of output.
 - output_shape: A 1D Tensor has the same dtype of indices.
 - values: A 1D Tensor, Values corresponding to each row of indices, or a scalar value to be used for all sparse
-indices. 
+indices.
 Must be one of the following types: float32, float16, bfloat16, int16, uint16, int32, int64, int8, uint8, bool,
 double.
 - default_value: An ND Tensor of the same dtype as values .
-Size must be 1.  
+Size must be 1.
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as input "values" . 
+y: A Tensor. Has the same type and format as input "values" .
 
 ## Attributes
 
 - validate_indices: An optional bool.
 If true, indices are checked to make sure they are sorted by ascending, no repeats, and cannot exceed the size of each
 dimension.
-This param is currently not effective in Ascend950PR/Ascend950DT. 
+This param is currently not effective in Ascend 950PR&950DT products.
 
 ## Data Types
 
@@ -56,4 +56,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

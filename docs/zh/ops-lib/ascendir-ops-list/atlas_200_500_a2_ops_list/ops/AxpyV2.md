@@ -27,7 +27,7 @@ The shapes of "x1", "x2" must comply with the broadcast rule.
 ## Outputs
 
 y: An ND tensor with type is after 'x1', 'x2' and 'alpha' type promotion,
-whose shape is generated after 'x1', 'x2' broadcast opratioan. 
+whose shape is generated after 'x1', 'x2' broadcast opratioan.
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with the PyTorch operator Axpy.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

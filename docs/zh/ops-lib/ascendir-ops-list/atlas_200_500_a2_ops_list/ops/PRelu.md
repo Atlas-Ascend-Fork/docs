@@ -17,11 +17,11 @@ Performs parametric ReLU .
 Two inputs, including:
 - x: A multi-dimensional Tensor of type bfloat16, float16 or float32.
 - weight: A Scalar or 1D Tensor of type bfloat16, float16 or float32, specifying the weight,
-initial value of "a". The number of dimensions must be the same as the number of channels . 
+initial value of "a". The number of dimensions must be the same as the number of channels .
 
 ## Outputs
 
-y: An activated Tensor. Has the same dimensions with "x" . 
+y: An activated Tensor. Has the same dimensions with "x" .
 
 ## Third-party framework compatibility
 
@@ -30,4 +30,4 @@ Compatible with PyTorch and Caffe operator PReLU.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

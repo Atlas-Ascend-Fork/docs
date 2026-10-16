@@ -18,10 +18,10 @@ to the same data type as the elements of the second input tensor.
 Two inputs, including:
 - x:A ND Tensor. Must be one of the following types:
 float16, float, int8, int32, uint32, uint8, int64, uint64, int16, uint16, double,
-complex64, complex128, qint8, quint8, qint16, quint16, qint32, bfloat16, bool, string.  
+complex64, complex128, qint8, quint8, qint16, quint16, qint32, bfloat16, bool, string.
 - target:A ND Tensor. Must be one of the following types:
 float16, float, int8, int32, uint32, uint8, int64, uint64, int16, uint16, double,
-complex64, complex128, qint8, quint8, qint16, quint16, qint32, bfloat16, bool, string.  
+complex64, complex128, qint8, quint8, qint16, quint16, qint32, bfloat16, bool, string.
 
 ## Outputs
 
@@ -34,4 +34,4 @@ Compatible with the onnx operator CastLike.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

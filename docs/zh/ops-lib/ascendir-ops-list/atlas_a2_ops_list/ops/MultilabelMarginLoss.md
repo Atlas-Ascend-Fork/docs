@@ -13,7 +13,7 @@ REG_OP(MultilabelMarginLoss)
 ## Brief
 
 Creates a criterion that optimizes a multi-class multi-classification hinge loss (margin-based loss)
-       between input x (a 2D mini-batch Tensor) and output y (which is a 2D Tensor of target class indices) 
+       between input x (a 2D mini-batch Tensor) and output y (which is a 2D Tensor of target class indices)
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Two inputs, including:
 - x: A tensor. Must be one of the following types:
     float16, float32, bfloat16.
 - target: A tensor. Must be the following types:
-    int32. 
+    int32.
 
 ## Outputs
 
@@ -30,7 +30,7 @@ Two inputs, including:
 
 ## Attributes
 
-reduction: An optional string. Defaults to "mean" 
+reduction: An optional string. Defaults to "mean"
 
 ## Data Types
 
@@ -43,9 +43,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator MultiLabelMarginLoss. 
+Compatible with the Pytorch operator MultiLabelMarginLoss.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

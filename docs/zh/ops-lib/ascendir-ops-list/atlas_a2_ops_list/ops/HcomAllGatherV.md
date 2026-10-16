@@ -41,9 +41,9 @@ participating in the op.
 
 - "group" is limited to 128 characters. Use "hccl_world_group"
 as the name of a world group.
-- Only the single-node system scenario of the Atlas A2 Training Series Product is supported.
+- Only the single-node system scenario of the Atlas A2 products is supported.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -13,7 +13,7 @@ REG_OP(MxToBlockMxQuant)
 
 ## Brief
 
-Convert FP4-MX format data into FP8 block-quantized format. 
+Convert FP4-MX format data into FP8 block-quantized format.
 
 ## Inputs
 
@@ -55,4 +55,4 @@ It is a custom operator. It has no corresponding operator in Caffe, Onnx, Tensor
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

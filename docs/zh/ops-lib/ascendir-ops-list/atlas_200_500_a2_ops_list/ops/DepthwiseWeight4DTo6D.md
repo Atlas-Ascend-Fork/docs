@@ -9,15 +9,15 @@ REG_OP(DepthwiseWeight4DTo6D)
 
 ## Brief
 
-Convert tensor format from HWCN to C1HWNCoC0 . 
+Convert tensor format from HWCN to C1HWNCoC0 .
 
 ## Inputs
 
-x: A Tensor. Must be 4D Tensor of type float16, float32, int32, uint16, with format HWCN . 
+x: A Tensor. Must be 4D Tensor of type float16, float32, int32, uint16, with format HWCN .
 
 ## Outputs
 
-y: A 6D Tensor. Has the same type as "x", with format C1HWNCoC0. 
+y: A 6D Tensor. Has the same type as "x", with format C1HWNCoC0.
 
 ## Data Types
 
@@ -33,4 +33,4 @@ THIS OPERATOR IS DEPRECATED. It will be removed in a future version.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

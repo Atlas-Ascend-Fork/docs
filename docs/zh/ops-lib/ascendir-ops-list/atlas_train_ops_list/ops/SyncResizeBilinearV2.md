@@ -16,19 +16,19 @@ REG_OP(SyncResizeBilinearV2)
 
 ## Brief
 
-Resize images to size using bilinear interpolation . 
+Resize images to size using bilinear interpolation .
 
 ## Inputs
 
 Input images must be a 4-D tensor. Inputs include:
 - x: 4-D float32 tensor. Must set the format, supported format NC1HWC0.
 - size: A 1-D int32 Tensor of 2 elements: new_height, new_width. The new
-size for the images. 
+size for the images.
 
 ## Outputs
 
 y: 4-D with shape [batch, new_height, new_width, channels].
-Must be one of the following types: float. The format support NC1HWC0. 
+Must be one of the following types: float. The format support NC1HWC0.
 
 ## Attributes
 
@@ -51,7 +51,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images can be of different types but output images are always float . 
+Input images can be of different types but output images are always float .
 
 ## Third-party framework compatibility
 
@@ -60,4 +60,4 @@ Compatible with mindspore ResizeBilinearV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -43,11 +43,11 @@ y: A matrix tensor. The format support ND. The type support float16, bfloat16.
 ## Attributes
 
 - dtype: An int. Declare the output dtype, supports 1(float16), 27(bfloat16).
-- transpose_x1: A bool. If True, changes the shape of "x1" from [M, K] to [K, M]. Now only support false.
+- transpose_x1: A bool. If True, changes the shape of "x1" from [M, K] to [K, M]. Now only supports false.
 Default value is false.
 - transpose_x2: A bool. If True, changes the shape of "x2" from [K, N] to [N, K] and
 "x2_level1_scale" from [Ceil(K/(2*level1_group_size)), N, 2] to [N, Ceil(K/(2*level1_group_size)), 2].
-Now only support true. Default value is true.
+Now only supports true. Default value is true.
 - level0_group_size: An int. First-level quantization parameter. Size supports 512.
 Default value is 512.
 - level1_group_size: An int. Second-level quantization parameter. Size supports 32.
@@ -69,4 +69,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

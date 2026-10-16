@@ -14,7 +14,7 @@ REG_OP(ResizeBicubic)
 
 ## Brief
 
-Resize images to size using bicubic interpolation . 
+Resize images to size using bicubic interpolation .
 
 ## Inputs
 
@@ -22,12 +22,12 @@ Input images must be a 4-D tensor. Inputs include:
 - images: 4-D with shape [batch, height, width, channels] (format is NHWC) or
 [batch, channels, height, width] (format is NCHW).
 - size: A 1-D int32 Tensor of 2 elements: new_height, new_width. The new
-size for the images . 
+size for the images .
 
 ## Outputs
 
 y: 4-D with shape [batch, height, width, channels] (format is NHWC) or
-[batch, channels, height, width] (format is NCHW). 
+[batch, channels, height, width] (format is NCHW).
 
 ## Attributes
 
@@ -57,4 +57,4 @@ Compatible with tensorflow ResizeBicubic operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

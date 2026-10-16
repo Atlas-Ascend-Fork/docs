@@ -34,7 +34,7 @@ The format of the filter tensor must be one of the followings:
 [out_channels, in_channels/groups, filter_depth, filter_height, filter_width] or
 [filter_depth, filter_height, filter_width, in_channels/groups, out_channels].
 In short, the filter tensor supports format NCDHW, NDHWC and DHWCN.
-In Ascend 950PR/Ascend 950DT, the filter_height and filter_width dimensions must be in [1, 2147483647],
+In Ascend 950PR&950DT products, the filter_height and filter_width dimensions must be in [1, 2147483647],
 for other products filter_height and filter_width dimensions must be in [1, 511].
 The other dimensions must be in [1, 2147483647].
 - out_backprop: A 5-D Tensor. Must have the same type as filter.
@@ -63,7 +63,7 @@ The other values of strides must be in [1, 2147483647].
 feature map in each directions. Supports only pads along the depth(D),
 height(H) and width(W) dimensions.
 The pads sequence is as follows: [front, back, top, bottom, left, right].
-In Ascend 950PR/Ascend 950DT, the top, bottom, left and right must be in [0, 2147483647],
+In Ascend 950PR&950DT products, the top, bottom, left and right must be in [0, 2147483647],
 for other products top, bottom, left and right must be in [0, 255].
 The front and back must be in [0, 2147483647].
 Modes "SAME" and "VALID" padding can be achieved with appropriate values of each direction in pads.
@@ -73,13 +73,13 @@ The dilations has the same axes sequence as filter:
 [out_channels, in_channels/groups, depth, dilation_height, dilation_width] or
 [depth, dilation_height, dilation_width, in_channels/groups, out_channels].
 The batch(N), in_channels/groups(C) dimensions must be 1.
-In Ascend 950PR/Ascend 950DT, depth (D), height (H) and width (W) dimensions must be in [1, 2147483647],
+In Ascend 950PR&950DT products, depth (D), height (H) and width (W) dimensions must be in [1, 2147483647],
 for other products depth (D), height (H) and width (W) dimensions must be in [1, 255].
 - groups: Optional. Defaults to 1 and the value must be in [1, 65535].
 Number of blocked connections from in_channels to out_channels.
 The in_channels and out_channels must be divisible by groups.
-When the groups value differs, it is supported on Atlas 200/500 A2 Inference Product and
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component as follows: 
+When the groups value differs, it is supported on Atlas 200I/500 A2 inference products and
+Atlas A2 products as follows:
 | groups |        dtype           | out_backprop format | filter format |     y format   |
 |--------|------------------------|---------------------|---------------|----------------|
 |  =1    |float16/bfloat16/float32|       NCDHW         |      NCDHW    |     NCDHW      |
@@ -110,7 +110,7 @@ Compatible with Tensorflow's conv3d_backprop_input
 
 ## Attention Constraints:
 
-In Ascend 950PR/Ascend 950DT: The behavior of gradient computation in the padding region depends on the input shape.
+In Ascend 950PR&950DT products: The behavior of gradient computation in the padding region depends on the input shape.
 Depending on the operator optimization strategy, the padding gradients may be directly set to 0.
 Due to hardware resource restrictions,
 the operator fails to be executed in scenarios of some parameter value combinations.
@@ -120,4 +120,4 @@ If the fault persists, visit https://www.hiascend.com/support for technical supp
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

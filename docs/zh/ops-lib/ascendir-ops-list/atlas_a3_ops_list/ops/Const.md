@@ -10,15 +10,15 @@ REG_OP(Const)
 ## Brief
 
 Creates a constant tensor from a tensor-like object. This operator is used for inference.
-Operator Const has the same definition as operator Constant. 
+Operator Const has the same definition as operator Constant.
 
 ## Outputs
 
-y: A constant tensor. 
+y: A constant tensor.
 
 ## Attributes
 
-value: Required. The value and type of the resulting tensor, and no restrictions on type. 
+value: Required. The value and type of the resulting tensor, and no restrictions on type.
 
 ## Third-party framework compatibility
 
@@ -27,4 +27,4 @@ Compatible with the TensorFlow operator Const.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

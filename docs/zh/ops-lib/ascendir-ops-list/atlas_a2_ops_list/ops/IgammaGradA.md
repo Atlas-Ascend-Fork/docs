@@ -20,7 +20,7 @@ The input a and x must have the same type. Inputs include:
 
 ## Outputs
 
-y:A Tensor. Has the same type as a. 
+y:A Tensor. Has the same type as a.
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with tensorflow IgammaGradA operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

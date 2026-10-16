@@ -11,7 +11,7 @@ REG_OP(INTrainingUpdateGradGammaBeta)
 
 ## Brief
 
-Performs the backpropagation of InstanceNorm. 
+Performs the backpropagation of InstanceNorm.
 
 ## Inputs
 
@@ -34,4 +34,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -15,7 +15,7 @@ REG_OP(TensorListSplit)
 
 ## Brief
 
-Splits a tensor into a list. 
+Splits a tensor into a list.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ Splits a tensor into a list.
 
 ## Outputs
 
-output_handle: The list. 
+output_handle: The list.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow TensorListSplit operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

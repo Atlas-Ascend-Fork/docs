@@ -11,7 +11,7 @@ REG_OP(StatelessRandomGammaV2)
 
 ## Brief
 
-Outputs deterministic pseudorandom random numbers from a gamma distribution. 
+Outputs deterministic pseudorandom random numbers from a gamma distribution.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Outputs deterministic pseudorandom random numbers from a gamma distribution.
 
 ## Outputs
 
-y: A Tensor. Has the same type as alpha. 
+y: A Tensor. Has the same type as alpha.
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Compatible with TensorFlow StatelessRandomGammaV2 operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

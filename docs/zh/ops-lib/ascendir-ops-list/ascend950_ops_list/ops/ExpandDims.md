@@ -10,7 +10,7 @@ REG_OP(ExpandDims)
 
 ## Brief
 
-Inserts a dimension of 1 into a tensor's shape. Only the tensor shape is changed, without changing the data. 
+Inserts a dimension of 1 into a tensor's shape. Only the tensor shape is changed, without changing the data.
 
 ## Inputs
 
@@ -19,7 +19,7 @@ Inserts a dimension of 1 into a tensor's shape. Only the tensor shape is changed
 
 ## Outputs
 
-y: A tensor with the same data as input, with an additional dimension inserted at the index specified by axis. 
+y: A tensor with the same data as input, with an additional dimension inserted at the index specified by axis.
 
 ## Third-party framework compatibility
 
@@ -28,4 +28,4 @@ Compatible with the TensorFlow operator ExpandDims.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -17,18 +17,18 @@ split input tensors and concat along one dimension .
 
 One input:
 x: Dynamic input. A ND Tensor.
-   Must be one of the following types: float32, float16, bfloat16. 
+   Must be one of the following types: float32, float16, bfloat16.
 
 ## Outputs
 
-y: A ND Tensor. concat by x . 
+y: A ND Tensor. concat by x .
 
 ## Attributes
 
 - dim: A required int32, or int64.
 Specifies the dimension along which to chunk. No default value.
 - num_chunks:  A required int32, or int64.
-Specifies the number of chunks to split "x" into. No default value. 
+Specifies the number of chunks to split "x" into. No default value.
 
 ## Data Types
 
@@ -45,9 +45,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the PyTorch operator ChunkCat. 
+Compatible with the PyTorch operator ChunkCat.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

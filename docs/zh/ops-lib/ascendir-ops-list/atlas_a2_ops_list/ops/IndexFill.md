@@ -22,30 +22,26 @@ This is a non in-place replacement operator and does not affect the input tensor
 
 Three inputs, including:
 - x: A tensor that serves as the source; its duplicate is created and subsequently filled with the specified values.
-In Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component or Atlas A3
-Training Series
-Product/Atlas A3 Inference Series Product, a tensor of type float16, float32, bfloat16, int64, int32, bool can be
-supported. 
-In Ascend 950 AI Processor, a tensor of type float16, float32, bfloat16, int64, int32, bool, int8, uint8, int16,
-double can be supported. 
+In Atlas A2 products or Atlas A3 products, a tensor of type float16, float32, bfloat16, int64, int32, bool can be
+supported.
+In Ascend 950PR&950DT products, a tensor of type float16, float32, bfloat16, int64, int32, bool, int8, uint8, int16,
+double can be supported.
 - indices: A tensor, which equivalent to a vector or scalar. indices of input tensor to fill in. Must be one of the
 following types:
-    int32, int64. 
+    int32, int64.
 - val: The value to fill with. It's a scalar or a one-dimensional tensor with only one element.
-In Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component or Atlas A3
-Training Series
-Product/Atlas A3 Inference Series Product, a tensor of type float16, float32, bfloat16, int64, int32, bool can be
-supported. 
-In Ascend 950 AI Processor, a tensor of type float16, float32, bfloat16, int64, int32, bool, int8, uint8, int16,
-double can be supported. 
+In Atlas A2 products or Atlas A3 products, a tensor of type float16, float32, bfloat16, int64, int32, bool can be
+supported.
+In Ascend 950PR&950DT products, a tensor of type float16, float32, bfloat16, int64, int32, bool, int8, uint8, int16,
+double can be supported.
 
 ## Outputs
 
-y: A tensor with the same shape as 'x'. 
+y: A tensor with the same shape as 'x'.
 
 ## Attributes
 
-dim: A required int. Used to select the dimension of the input tensor. 
+dim: A required int. Used to select the dimension of the input tensor.
 
 ## Data Types
 
@@ -63,9 +59,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator index_fill. 
+Compatible with the Pytorch operator index_fill.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

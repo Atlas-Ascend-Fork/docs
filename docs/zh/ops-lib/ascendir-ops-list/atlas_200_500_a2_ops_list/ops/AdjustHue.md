@@ -11,7 +11,7 @@ REG_OP(AdjustHue)
 
 ## Brief
 
-Adjust the hue of one or more images . 
+Adjust the hue of one or more images .
 
 ## Inputs
 
@@ -24,7 +24,7 @@ At least 3-D. The format could be NHWC, NCHW or ND.
 ## Outputs
 
 y: Images to adjust. Must be one of the following types:uint8, float16, float32.
-At least 3-D. The format could be NHWC, NCHW or ND. 
+At least 3-D. The format could be NHWC, NCHW or ND.
 
 ## Attributes
 
@@ -42,7 +42,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 Input images is a tensor of at least 3 dimensions. The last dimension is
-interpretted as channels, and must be three . 
+interpretted as channels, and must be three .
 
 ## Third-party framework compatibility
 
@@ -51,4 +51,4 @@ Compatible with tensorflow AdjustHue operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -39,8 +39,8 @@ y: A matrix Tensor. The type support float16, bfloat16. The format supports ND. 
 - is_trans_b: A bool. If True, changes the shape of "x2" from [N, K] to [K, N] before multiplication. Default: false.
 - comm_turn: An int. Number of communications with AICPU. Default: 0. The comm_turn only supports 0 in current version.
 - rank_size: An int. Number of ranks in the group. Default: 0.
-The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 2, 4, 8. 
-The Atlas A3 Training Series Product/Atlas A3 Inference Series Product support 2, 4, 8, 16. 
+The Atlas A2 products support 2, 4, 8.
+The Atlas A3 products support 2, 4, 8, 16.
 
 ## Data Types
 
@@ -54,4 +54,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -13,13 +13,14 @@ REG_OP(ResizeGrad)
     .ATTR(extrapolation_value, Float, 0.0)
     .ATTR(mode, String, "nearest")
     .ATTR(nearest_mode, String, "round_prefer_floor")
+    .ATTR(data_format, String, "NCHW")
     .OP_END_FACTORY_REG(ResizeGrad)
 ```
 
 ## Brief
 
 Calculate the resize_grad function.
-support resize_grad image tensor using nearest(1d) and linear(1d) and bicubic(2d) interpolation. 
+support resize_grad image tensor using nearest(1d) and linear(1d) and bicubic(2d) interpolation.
 
 ## Inputs
 
@@ -36,7 +37,7 @@ Only takes effect when attr coordinate_transformation_modeis "tf_crop_and_resize
 
 - y: A Tensor with the same type of grads's, shape depends on grads and sizes.
 The format support ND. Must be one of the following types: uint8, uint16, uint32, uint64,
-int16, int32, int64, float16, float, double. 
+int16, int32, int64, float16, float, double.
 
 ## Attributes
 
@@ -55,7 +56,7 @@ this value is used as the corresponding output value.
 - mode: String. Defaults to nearest. Three interpolation modes: nearest (default),
 linear and cubic.
 - nearest_mode: String. Defaults to round_prefer_floor. Four modes: round_prefer_floor,
-round_prefer_ceil, floor, ceil. Only used by nearest interpolation. 
+round_prefer_ceil, floor, ceil. Only used by nearest interpolation.
 
 ## Data Types
 
@@ -70,4 +71,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

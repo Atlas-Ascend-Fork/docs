@@ -14,15 +14,15 @@ REG_OP(NonZeroWithValueShape)
 
 ## Brief
 
-Returns a tensor with updated shape from NonZeroWithValue. 
+Returns a tensor with updated shape from NonZeroWithValue.
 
 ## Inputs
 
-value: A Tensor. The output of NonZeroWithValue. 
-index: A Tensor. The output of NonZeroWithValue. 
-count: A Tensor. The type is INT32, means count for non_zero ele in input. 
-out_value: A Tensor. Has the same type as "value" . 
-out_index: A Tensor. Has the same type as "index". 
+value: A Tensor. The output of NonZeroWithValue.
+index: A Tensor. The output of NonZeroWithValue.
+count: A Tensor. The type is INT32, means count for non_zero ele in input.
+out_value: A Tensor. Has the same type as "value" .
+out_index: A Tensor. Has the same type as "index".
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

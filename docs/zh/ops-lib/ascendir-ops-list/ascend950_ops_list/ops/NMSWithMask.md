@@ -14,27 +14,27 @@ REG_OP(NMSWithMask)
 
 Iteratively removes lower scoring boxes which have an IoU greater than
 iou_threshold with higher scoring box according to their
-intersection-over-union (IoU) . 
+intersection-over-union (IoU) .
 
 ## Inputs
 
-box_scores: 2-D tensor with shape of [N, 8], including proposal boxes and
-corresponding confidence scores . Support dtype: [float16, float32, bfloat16], Support format: [ND]. 
+box_scores: 2-D tensor with shape of [N, 5], including proposal boxes and
+corresponding confidence scores . Support dtype: [float16, float32, bfloat16], Support format: [ND].
 
 ## Outputs
 
 - selected_boxes: 2-D tensor with shape of [N,5], representing filtered
 boxes including proposal boxes and corresponding confidence scores.
-Support dtype: [float16, float32, bfloat16], Support format: [ND]. 
+Support dtype: [float16, float32, bfloat16], Support format: [ND].
 - selected_idx: 1-D tensor with shape of [N], representing the index of
-input proposal boxes. Support dtype: [int32], Support format: [ND]. 
+input proposal boxes. Support dtype: [int32], Support format: [ND].
 - selected_mask: 1-D tensor with shape of [N], the symbol judging whether
-the output proposal boxes is valid . Support dtype: [uint8,bool], Support format: [ND]. 
+the output proposal boxes is valid . Support dtype: [uint8], Support format: [ND].
 
 ## Attributes
 
 iou_threshold: An optional float. The threshold for deciding whether boxes
-overlap too much with respect to IOU . Default value is 0.5 
+overlap too much with respect to IOU . Default value is 0.5
 
 ## Data Types
 
@@ -47,9 +47,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The 2nd-dim of input box_scores must be equal to 8.
+The 2nd-dim of input box_scores must be equal to 5.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

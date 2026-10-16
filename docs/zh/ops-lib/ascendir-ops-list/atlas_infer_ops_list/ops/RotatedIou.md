@@ -15,7 +15,7 @@ REG_OP(RotatedIou)
 
 ## Brief
 
-RotatedIou . 
+RotatedIou .
 
 ## Inputs
 
@@ -54,4 +54,4 @@ In each batch, the invalid box cannot appear before the valid box.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

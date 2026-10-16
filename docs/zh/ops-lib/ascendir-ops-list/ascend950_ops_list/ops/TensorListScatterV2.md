@@ -16,7 +16,7 @@ REG_OP(TensorListScatterV2)
 
 ## Brief
 
-Creates a TensorList by indexing into a Tensor. 
+Creates a TensorList by indexing into a Tensor.
 
 ## Inputs
 
@@ -26,15 +26,15 @@ Creates a TensorList by indexing into a Tensor.
 the shape of the tensor).
 - num_elements: The size of the output list. Must be large enough to accommodate
 the largest index in indices. If -1, the list is just large enough to include
-the largest index in indices. 
+the largest index in indices.
 
 ## Outputs
 
-output_handle: The TensorList. 
+output_handle: The TensorList.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with tensorflow TensorListScatterV2 operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

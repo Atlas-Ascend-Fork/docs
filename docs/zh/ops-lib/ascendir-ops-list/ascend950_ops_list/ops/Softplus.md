@@ -14,7 +14,7 @@ Computes softplus: log(exp(x) + 1) .
 ## Inputs
 
 One input:
-x: A Tensor of type bfloat16, float16 or float32. Up to 8D . 
+x: A Tensor of type bfloat16, float16 or float32. Up to 8D .
 
 ## Outputs
 
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator Softplus.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

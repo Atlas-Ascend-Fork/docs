@@ -114,4 +114,4 @@ Compatible with the TF operator LSTM.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

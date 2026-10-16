@@ -9,16 +9,16 @@ REG_OP(Tanh)
 
 ## Brief
 
-Computes hyperbolic tangent of "x" element-wise . 
+Computes hyperbolic tangent of "x" element-wise .
 
 ## Inputs
 
-One input: 
-x: A Tensor that supports the data type UnaryDataType. 
+One input:
+x: A Tensor that supports the data type UnaryDataType.
 
 ## Outputs
 
-y: A Tensor with the same dtype and shape of input "x". 
+y: A Tensor with the same dtype and shape of input "x".
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with TensorFlow operator Tanh.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

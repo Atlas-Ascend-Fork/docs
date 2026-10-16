@@ -13,22 +13,22 @@ REG_OP(ExtractVolumePatches)
 ## Brief
 
 Extract "patches" from "input" and put them in the "depth"
-dimension of the output . 
+dimension of the output .
 
 ## Inputs
 
-x: A Tensor with shape [batch, in_planes, depth1, in_rows, in_cols, depth0] . 
-   Support dtype: [float16,int8,uint8] 
-   Support format: [NDC1HWC0] 
+x: A Tensor with shape [batch, in_planes, depth1, in_rows, in_cols, depth0] .
+   Support dtype: [float16,int8,uint8]
+   Support format: [NDC1HWC0]
 
 ## Outputs
 
 Output: A Tensor with shape [batch, out_planes, out_rows, out_cols, ksize_planes *
 ksize_rows * ksize_cols * depth] containing patches with size (ksize_rows * ksize_cols
 * depth) vectorized in the "depth" dimension. Note "out_planes", "out_rows" and "out_cols"
-are the dimensions of the output patches . 
-   Support dtype: [float16,int8,uint8]. 
-   Support format: [NDC1HWC0] 
+are the dimensions of the output patches .
+   Support dtype: [float16,int8,uint8].
+   Support format: [NDC1HWC0]
 
 ## Attributes
 
@@ -37,7 +37,7 @@ dimension of "x".
 - strides: A required list or tuple. How far the centers of two consecutive
 patches are in "x". Must be: [1, stride_planes, stride_rows, stride_cols, 1].
 - padding: A required string. The type of padding algorithm to use ,
-support "SAME" or "VALID" . 
+support "SAME" or "VALID" .
 
 ## Data Types
 
@@ -57,4 +57,4 @@ Compatible with the TensorFlow operator ExtractVolumePatches.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

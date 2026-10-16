@@ -25,9 +25,9 @@ y:A Tensor of the same type as x
 
 ## Attributes
 
-alpha: An optional float. Defaults to 1.0. 
+alpha: An optional float. Defaults to 1.0.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

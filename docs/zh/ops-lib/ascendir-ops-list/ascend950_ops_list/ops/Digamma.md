@@ -17,7 +17,7 @@ Computes the logarithmic derivative of the gamma function on input.
 
 ## Outputs
 
-y:A Tensor. Has the same type as x. 
+y:A Tensor. Has the same type as x.
 
 ## Data Types
 
@@ -33,4 +33,4 @@ Compatible with tensorflow Digamma operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

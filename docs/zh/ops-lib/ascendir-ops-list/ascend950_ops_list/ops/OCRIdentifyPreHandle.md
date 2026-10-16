@@ -34,4 +34,4 @@ resized_imgs: A Tensor of type uint8. Multi imgs after identify pre handle.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

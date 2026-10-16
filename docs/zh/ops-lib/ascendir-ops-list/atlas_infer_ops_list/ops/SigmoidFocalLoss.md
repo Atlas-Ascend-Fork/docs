@@ -25,7 +25,7 @@ Three inputs, including:
 
 ## Outputs
 
-y: Sigmoid focal loss between the predicted value and target value. Has the same dimensions as "pred". 
+y: Sigmoid focal loss between the predicted value and target value. Has the same dimensions as "pred".
 
 ## Attributes
 
@@ -34,7 +34,7 @@ to balance easy/hard examples. Defaults to 2.0.
 - alpha: An optional float, specifying the weighting factor in range (1, 0) to balance
 the importance of positive/negative examples or less than 0 for ignore. Defaults to 0.25.
 - reduction: A optional character string from "none", "mean", and "sum", specifying the
-reduction type to be applied to the output. Defaults to "mean".  
+reduction type to be applied to the output. Defaults to "mean".
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with mmcv operator SigmoidFocalLoss.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

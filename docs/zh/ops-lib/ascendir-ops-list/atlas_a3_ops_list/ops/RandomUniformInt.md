@@ -13,7 +13,7 @@ REG_OP(RandomUniformInt)
 
 ## Brief
 
-Outputs random integers from a uniform distribution. 
+Outputs random integers from a uniform distribution.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ Inputs include:
 
 ## Outputs
 
-y: A Tensor. Has the same type as min. 
+y: A Tensor. Has the same type as min.
 
 ## Attributes
 
@@ -52,4 +52,4 @@ The implementation for RandomUniformInt on Ascend uses AICPU, with bad performan
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

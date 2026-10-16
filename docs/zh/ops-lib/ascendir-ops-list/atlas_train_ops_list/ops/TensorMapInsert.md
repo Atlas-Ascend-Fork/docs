@@ -12,7 +12,7 @@ REG_OP(TensorMapInsert)
 ## Brief
 
 Returns a map that is the 'input_handle'
-with the given key-value pair inserted. 
+with the given key-value pair inserted.
 
 ## Inputs
 
@@ -20,12 +20,12 @@ with the given key-value pair inserted.
 - key: A Tensor,the key to be inserted.Must be one of
 the following types: int32, int64, string.
 - value: A Tensor,the value to be inserted.Must be
-one of BasicType types. 
+one of BasicType types.
 
 ## Outputs
 
 output_handle: The map with key and value inserted.
-Must be type: DT_VARIANT. 
+Must be type: DT_VARIANT.
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

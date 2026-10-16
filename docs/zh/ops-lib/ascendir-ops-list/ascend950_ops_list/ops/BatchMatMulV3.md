@@ -16,7 +16,7 @@ REG_OP(BatchMatMulV3)
 
 ## Brief
 
-Multiplies matrix "x1" by matrix "x2", producing "x1 * x2".
+Multiplies matrix "x1" by matrix "x2", producing "x1 @ x2".
 
 ## Inputs
 
@@ -27,7 +27,7 @@ float32, bfloat16. 2D-6D. Has format [ND, NHWC, NCHW].
 float32, bfloat16. 2D-6D. Has format [ND, NHWC, NCHW].
 - bias: A optional Tensor. Must be one of the following types: float16,
 float32, bfloat16. Has format [ND, NHWC, NCHW],
-bfloat16 is only supported in Ascend 950 AI processor
+bfloat16 is only supported in Ascend 950PR&950DT products
 - offset_w: A optional Tensor. Must be one of the following types:
 int8, int4. Has format [ND, NHWC, NCHW].
 
@@ -44,7 +44,7 @@ float32, bfloat16. 2D-6D. Has format [ND, NHWC, NCHW]. BatchMatMulV3 supports br
 [B, N, K] before multiplication.
 - offset_x: An optional integer for quantized BatchMatMulV3.
 - enable_hf32: An optional bool for BatchMatMulV3. If True, enable enable_hi_float_32_execution
-before multiplication. 
+before multiplication.
 
 ## Data Types
 
@@ -59,4 +59,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

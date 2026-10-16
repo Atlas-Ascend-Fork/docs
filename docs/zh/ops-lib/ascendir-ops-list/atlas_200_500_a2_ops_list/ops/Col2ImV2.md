@@ -14,7 +14,7 @@ REG_OP(Col2ImV2)
 
 ## Brief
 
-Performs Col2ImV2 for each batch entry. 
+Performs Col2ImV2 for each batch entry.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ where ho/wo is do = (output_d + 2*padding_d - dilation_d*(kernel_d - 1) - 1)//st
 
 ## Outputs
 
-y: The img Tensor. 4-D, shape: `(n, c, output_h, output_w)`. 
+y: The img Tensor. 4-D, shape: `(n, c, output_h, output_w)`.
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Compatible with ONNX Col2Im operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

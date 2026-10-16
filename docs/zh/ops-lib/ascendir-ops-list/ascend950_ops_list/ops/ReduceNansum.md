@@ -25,11 +25,11 @@ Two inputs, including:
 
 ## Outputs
 
-y: The reduced tensor. Has the same type and format as input "x" . 
+y: The reduced tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
-keepdims: An optional bool. If "true", retains reduced dimensions with length 1. Defaults to "false" . 
+keepdims: An optional bool. If "true", retains reduced dimensions with length 1. Defaults to "false" .
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with the Pytorch operator ReduceNansum.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

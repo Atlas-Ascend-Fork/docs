@@ -17,7 +17,7 @@ REG_OP(TransposeBatchMatMul)
 
 ## Brief
 
-Multiplies matrix "a" by matrix "b", producing "a @ b". 
+Multiplies matrix "a" by matrix "b", producing "a @ b".
 
 ## Inputs
 
@@ -35,7 +35,7 @@ supports ND. The shape is 1D (t,), with t equal to b*n, where b, n is the same a
 ## Outputs
 
 y: The result matrix tensor. 3D. Must be one of the following
-types: float32, float16, int8, bfloat16. 3D. Has format ND. 
+types: float32, float16, int8, bfloat16. 3D. Has format ND.
 
 ## Attributes
 
@@ -59,4 +59,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

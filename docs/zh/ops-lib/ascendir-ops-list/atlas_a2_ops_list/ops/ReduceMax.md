@@ -20,7 +20,7 @@ Two inputs, including:
 - x: A multi-dimensional Tensor of Must be the type of NumberType. Supported format list ["ND"]
 - axes: A Scalar of type in IndexNumberType(IndexNumberType includes the
 following types: int32, int64.), specifying the axes information
-of the index with the maximum value. Supported format list ["ND"] 
+of the index with the maximum value. Supported format list ["ND"]
 
 ## Outputs
 
@@ -33,7 +33,7 @@ Otherwise, the output has one fewer dimension than "x").Supported format list ["
 ## Attributes
 
 keep_dims: A bool, specifying whether to keep dimensions for the output Tensor.
-Optional and defaults to "false". 
+Optional and defaults to "false".
 noop_with_empty_axes: An optional bool. Defaults to "true" .
 - If true, when axes = [], not reduce.
 - If false, when axes = [], reduce all.
@@ -66,4 +66,4 @@ Compatible with TensorFlow operator Max.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

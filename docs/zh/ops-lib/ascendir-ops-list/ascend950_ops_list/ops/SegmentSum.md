@@ -21,7 +21,7 @@ with "x.shape[0]".
 
 ## Outputs
 
-y: A Tensor of type NumberType. 
+y: A Tensor of type NumberType.
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with the TensorFlow operator SegmentSum.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

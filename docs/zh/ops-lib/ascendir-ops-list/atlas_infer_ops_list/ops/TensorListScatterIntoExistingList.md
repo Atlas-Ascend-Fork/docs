@@ -15,7 +15,7 @@ REG_OP(TensorListScatterIntoExistingList)
 
 ## Brief
 
-Scatters tensor at indices in an input list. 
+Scatters tensor at indices in an input list.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ Scatters tensor at indices in an input list.
 
 ## Outputs
 
-output_handle: The TensorList. 
+output_handle: The TensorList.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow TensorListScatterIntoExistingList operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

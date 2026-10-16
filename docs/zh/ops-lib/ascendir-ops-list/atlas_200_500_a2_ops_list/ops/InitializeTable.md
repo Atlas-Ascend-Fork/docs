@@ -12,7 +12,7 @@ REG_OP(InitializeTable)
 ## Brief
 
 Table initializer that takes two tensors for keys and values
-respectively. 
+respectively.
 
 ## Inputs
 
@@ -37,4 +37,4 @@ Compatible with tensorflow InitializeTable operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

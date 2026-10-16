@@ -13,7 +13,7 @@ REG_OP(InitEmbeddingHashmapV2)
 
 ## Brief
 
-init embedding hash map table. 
+init embedding hash map table.
 
 ## Inputs
 
@@ -40,4 +40,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

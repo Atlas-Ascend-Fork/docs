@@ -14,7 +14,7 @@ REG_OP(Dropout)
 ## Brief
 
 The dropout operator randomly sets (according to the given dropout probability)
-the outputs of some units to zero, while others are remain unchanged. . 
+the outputs of some units to zero, while others are remain unchanged. .
 
 ## Inputs
 
@@ -23,7 +23,7 @@ One input, including:
 
 ## Outputs
 
-y: A Variable holding Tensor representing the dropout, has same shape and data type with x. 
+y: A Variable holding Tensor representing the dropout, has same shape and data type with x.
 
 ## Attributes
 
@@ -35,4 +35,4 @@ y: A Variable holding Tensor representing the dropout, has same shape and data t
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

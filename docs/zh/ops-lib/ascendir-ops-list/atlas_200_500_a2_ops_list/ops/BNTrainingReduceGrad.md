@@ -37,20 +37,19 @@ The scaling parameter in batch normalization, used to adjust the normalized outp
 Has the same format as "grads".
 - batch_mean: A 1D tensor of type float32, the shape is same as dim C of input grads, for the mean of "x".
 Has the same format as "grads".
-- batch_variance: A 1D tensor of type float32, the shape is same as dim C of input grads, for the variance of
-"x".
-Has the same format as "grads". 
+- batch_variance: A 1D tensor of type float32, the shape is same as dim C of input grads, for the variance of "x".
+Has the same format as "grads".
 
 ## Outputs
 
 y: A Tensor of type float16, float32 or bfloat16, with format NHWC or NCHW.
 It represents the gradient of the loss function with respect to the input data x.
-Has the same type, format and shape as "grads". 
+Has the same type, format and shape as "grads".
 
 ## Attributes
 
 epsilon: An optional float32. Defaults to "0.0001".
-Represents a small positive number added to the variance of "x" to prevent division by zero. 
+Represents a small positive number added to the variance of "x" to prevent division by zero.
 
 ## Data Types
 
@@ -67,10 +66,10 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The preceding layer of this operator must be BNTrainingUpdateGrad . 
+The preceding layer of this operator must be BNTrainingUpdateGrad .
 @see BNTrainingUpdateGrad
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

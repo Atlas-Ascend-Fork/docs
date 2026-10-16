@@ -12,12 +12,12 @@ REG_OP(PeekData)
 
 ## Brief
 
-Get the batch of data in data processing. 
+Get the batch of data in data processing.
 
 ## Outputs
 
 y: A nested structure of Tensor objects. Must be one of the types:int8, uint8, int16,
-uint16, int32, int64, uint32, uint64, float16, float32, double, bool. 
+uint16, int32, int64, uint32, uint64, float16, float32, double, bool.
 
 ## Attributes
 
@@ -34,4 +34,4 @@ Compatible with tensorflow GetNext operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

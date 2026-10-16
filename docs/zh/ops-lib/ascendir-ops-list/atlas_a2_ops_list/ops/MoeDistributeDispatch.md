@@ -38,7 +38,8 @@ MoeDistributeDispatch operator interface implementation.
 
 Five inputs, including:
 - x: A tensor. Support dtype: float16,bfloat16, dimension must be 2. Shape supports (BS, H), support format: ND.
-- expertIds: A tensor. Support dtype: int32, indicates top k experts of each token, dimension must be 2. Shape supports (BS, K), support format: ND.
+- expertIds: A tensor. Support dtype: int32, indicates top k experts of each token, dimension must be 2. Shape
+supports (BS, K), support format: ND.
 - scales: An optional tensor. Support dtype: float32, dimension must be 2, support format: ND.
 - x_active_mask: An optional tensor. Support dtype: bool, support format: ND.
 - expert_scales: An optional tensor. Support dtype: float32. Shape supports (BS, K), support format: ND.
@@ -46,13 +47,16 @@ Five inputs, including:
 ## Outputs
 
 Seven outputs, including:
-- expand_x: A tensor. Result of each expert after dispatching. Support dtype: float16,bfloat16,int8. Shape supports (A, H), support format: ND.
-- dynamic_scales: If quant is enabled, scale value of each token. A tensor. Support dtype: float32. Shape supports (A, ), support format: ND.
+- expand_x: A tensor. Result of each expert after dispatching. Support dtype: float16,bfloat16,int8. Shape supports
+(A, H), support format: ND.
+- dynamic_scales: If quant is enabled, scale value of each token. A tensor. Support dtype: float32. Shape supports
+(A, ), support format: ND.
 - expand_idx: A tensor. Support dtype: int32. Shape supports (BS*K, ), support format: ND.
 - expert_token_nums: A tensor. Tokens nums of expand_x. Support dtype: int64, support format: ND.
 - ep_recv_count: A tensor. Received token nums after dispatching. Support dtype: int32, support format: ND.
 - tp_recv_count: A tensor. Received token nums after allgather. Support dtype: int32, support format: ND.
-- expand_scales: A tensor. Scales of each token to sum for combine. Support dtype: float32. Shape supports (A, ), support format: ND.
+- expand_scales: A tensor. Scales of each token to sum for combine. Support dtype: float32. Shape supports (A, ),
+support format: ND.
 
 ## Attributes
 
@@ -66,7 +70,8 @@ Seven outputs, including:
 - expert_shard_type: Input moe shard type, dtype: int64.
 - shared_expert_num: Input shared expert num, dtype: int64.
 - shared_expert_rank_num: Input shared expert rank num, dtype: int64.
-- quant_mode: Input quant mode. The options are 0 (non-quantization), 1 (static quantization), and 2 (dynamic quantization). dtype: int64.
+- quant_mode: Input quant mode. The options are 0 (non-quantization), 1 (static quantization), and 2 (dynamic
+quantization). dtype: int64.
 - global_bs: Input global batch size, dtype: int64.
 - expert_token_nums_type: Input expert token nums type, dtype: int64.
 
@@ -90,4 +95,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

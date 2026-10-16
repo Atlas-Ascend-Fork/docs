@@ -27,17 +27,17 @@ Three inputs, including:
     shape of pred should be (B, D), B means batch size, D means the number of labels.
     shape of target should be (D, ).
     shape of weight should be (D, ).
-The type support float16 and float32. 
+The type support float16 and float32.
 
 ## Outputs
 
-grad: A mutable Tensor. Has the same type and shape as "pred". 
+grad: A mutable Tensor. Has the same type and shape as "pred".
 
 ## Attributes
 
 - alpha: A attribute is used to reweight the sample. The type is float .
 - gamma: A attribute is used to calculate the power of the probability.
-    The type is float . 
+    The type is float .
 - reduction: a type of the reduce method. default is 'mean', which means computing the average loss.
 'sum' means computing the sum of the loss, 'none' means no reducing .
 
@@ -58,4 +58,4 @@ Compatible with the MMCV operator SigmoidFocalLoss.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

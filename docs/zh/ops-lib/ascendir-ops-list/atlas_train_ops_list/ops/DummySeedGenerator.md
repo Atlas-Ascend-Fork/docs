@@ -9,11 +9,11 @@ REG_OP(DummySeedGenerator)
 ## Brief
 
 Create a placeholder handle to rewrite and pass
-to use during the graph compilation phase. 
+to use during the graph compilation phase.
 
 ## Outputs
 
-handle:Output random number . 
+handle:Output random number .
 
 ## Data Types
 
@@ -24,4 +24,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

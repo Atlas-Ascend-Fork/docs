@@ -23,11 +23,11 @@ indices passed to the corresponding SparseSegmentMean op.
 - segment_ids: A Tensor. Must be one of the following types: int32, int64. segment_ids passed to the
 corresponding SparseSegmentMean op.
 - output_dim0: A Tensor of type int32. dimension 0 of "x" passed to
-SparseSegmentMean op. 
+SparseSegmentMean op.
 
 ## Outputs
 
-y:A Tensor. Has the same type as x. 
+y:A Tensor. Has the same type as x.
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with tensorflow SparseSegmentMeanGrad operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

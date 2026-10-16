@@ -10,7 +10,7 @@ REG_OP(DrawBoundingBoxes)
 
 ## Brief
 
-Draw bounding boxes on a batch of images . 
+Draw bounding boxes on a batch of images .
 
 ## Inputs
 
@@ -18,11 +18,11 @@ Input images must be a 4-D tensor. Inputs include:
 - images: A Tensor. Must be one of the following types: float. 4-D with
 shape [batch, height, width, depth]. A batch of images. The format must be NHWC.
 - boxes: A Tensor of type float32. 3-D with shape [batch,
-num_bounding_boxes, 4] containing bounding boxes . 
+num_bounding_boxes, 4] containing bounding boxes .
 
 ## Outputs
 
-A Tensor. Has the same type as images. The format must be NHWC. 
+A Tensor. Has the same type as images. The format must be NHWC.
 
 ## Data Types
 
@@ -34,7 +34,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images must be a 4-D tensor . 
+Input images must be a 4-D tensor .
 
 ## Third-party framework compatibility
 
@@ -43,4 +43,4 @@ Compatible with tensorflow DrawBoundingBoxes operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

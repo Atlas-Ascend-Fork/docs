@@ -13,11 +13,11 @@ REG_OP(PaddingFIFOQueue)
 
 ## Brief
 
-A queue that produces elements in first-in first-out order. 
+A queue that produces elements in first-in first-out order.
 
 ## Outputs
 
-handle: A Tensor of type DT_RESOURCE. 
+handle: A Tensor of type DT_RESOURCE.
 
 ## Attributes
 
@@ -37,7 +37,7 @@ is placed in the given container. Otherwise, a default container is used.
 - shared_name: An optional string. Defaults to "". If non-empty, this queue
 will be shared under the given name across multiple sessions.
 - component_types: A list of DTypes that has length >= 1. The type of each
-component in a tuple. 
+component in a tuple.
 
 ## Data Types
 
@@ -56,4 +56,4 @@ Compatible with the TensorFlow operator PaddingFIFOQueue.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -11,7 +11,7 @@ REG_OP(EmbeddingHashmapSize)
 
 ## Brief
 
-get export size of the embedding hashmap. 
+get export size of the embedding hashmap.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ get export size of the embedding hashmap.
 
 - filter_export_flag: An optional bool that represents filter export flag on counter filter scenario. Defaults to "false".
 - export_mode: An optional string that is export mode. The value of export mode has two values:
-    "all" and "new". Defaults to "all". 
+    "all" and "new". Defaults to "all".
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

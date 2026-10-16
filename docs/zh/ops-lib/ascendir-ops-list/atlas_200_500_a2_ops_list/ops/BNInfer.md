@@ -27,12 +27,12 @@ Five inputs, including:
 
 ## Outputs
 
-y: A 4D tensor of type float16 or float32 or bfloat16 for the normalized "x", with format NHWC or NCHW. 
+y: A 4D tensor of type float16 or float32 or bfloat16 for the normalized "x", with format NHWC or NCHW.
 
 ## Attributes
 
 epsilon: An optional float32, specifying the small value added to variance to
-avoid dividing by zero. Defaults to "0.0001" . 
+avoid dividing by zero. Defaults to "0.0001" .
 
 ## Data Types
 
@@ -53,4 +53,4 @@ square root instruction.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

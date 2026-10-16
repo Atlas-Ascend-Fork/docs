@@ -11,17 +11,17 @@ REG_OP(Cholesky)
 
 ## Brief
 
-Computes the Cholesky decomposition of one or more square matrices . 
+Computes the Cholesky decomposition of one or more square matrices .
 
 ## Inputs
 
 The input x has to be symmetric and positive definite.Inputs include:
 x:A Tensor. Must be one of the following types: double, float32, float16,
-complex64, complex128. Shape is [..., M, M] . 
+complex64, complex128. Shape is [..., M, M] .
 
 ## Outputs
 
-y:A Tensor. Has the same type as x . 
+y:A Tensor. Has the same type as x .
 
 ## Data Types
 
@@ -43,4 +43,4 @@ Compatible with tensorflow Cholesky operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

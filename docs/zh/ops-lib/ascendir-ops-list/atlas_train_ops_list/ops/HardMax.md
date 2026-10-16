@@ -32,4 +32,4 @@ axis:A required int attribute that decides which dimension will be used to cal t
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

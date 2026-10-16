@@ -13,11 +13,11 @@ REG_OP(PriorityQueue)
 
 ## Brief
 
-A queue that produces elements sorted by the first component value. 
+A queue that produces elements sorted by the first component value.
 
 ## Outputs
 
-handle: A Tensor of type DT_RESOURCE. 
+handle: A Tensor of type DT_RESOURCE.
 
 ## Attributes
 
@@ -31,7 +31,7 @@ elements are not constrained, and only one element may be dequeued at a time.
 is placed in the given container. Otherwise, a default container is used.
 - capacity:An integer. Defaults to "-1". The upper bound on the number of elements that may be stored in this queue.
 - shared_name: An optional string. Defaults to "". If non-empty, this
-queue will be shared under the given name across multiple sessions. 
+queue will be shared under the given name across multiple sessions.
 
 ## Data Types
 
@@ -50,4 +50,4 @@ Compatible with the TensorFlow operator PriorityQueue.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

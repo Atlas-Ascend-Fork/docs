@@ -12,13 +12,13 @@ REG_OP(SequenceConstruct)
 ## Brief
 
 constrct a tensor sequence cotaining 'input' tensors,
-all tensors in 'inputs' must have the same data type. 
+all tensors in 'inputs' must have the same data type.
 
 ## Inputs
 
 - inputs: A list of input tensor objects. Must be one of the following types:
 uint8, uint16, uint32, uint64, int8, int16, int32, int64, float16, float, double,
-bool, complex64, complex128. It's a dynamic input. 
+bool, complex64, complex128. It's a dynamic input.
 
 ## Outputs
 
@@ -33,4 +33,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

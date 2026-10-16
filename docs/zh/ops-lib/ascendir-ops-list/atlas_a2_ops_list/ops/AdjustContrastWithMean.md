@@ -12,7 +12,7 @@ REG_OP(AdjustContrastWithMean)
 
 ## Brief
 
-Adjust the contrast of images for DVPP with mean, need mean input. 
+Adjust the contrast of images for DVPP with mean, need mean input.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ must be NHWC.
 
 ## Outputs
 
-y: A Tensor of type float. The format must be NHWC. 
+y: A Tensor of type float. The format must be NHWC.
 
 ## Attributes
 
@@ -44,7 +44,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - This operator will be deprecated in the future.
 - Input images is a tensor of at least 3 dimensions. The last dimension is
-interpretted as channels, and must be three . 
+interpretted as channels, and must be three .
 
 ## Third-party framework compatibility
 
@@ -53,4 +53,4 @@ Compatible with tensorflow AdjustContrast operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

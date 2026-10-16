@@ -15,7 +15,7 @@ REG_OP(RandomUniformIntV2)
 
 ## Brief
 
-Outputs random integers from a uniform distribution with a given offset. 
+Outputs random integers from a uniform distribution with a given offset.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ Inputs include:
 - min: A 1-D Tensor. Must be one of the following types: int32, int64.
 - max: A 1-D Tensor. Must be one of the following types: int32, int64.
 - offset: A 1-D Tensor, should be const data. Must be one of the following types: int64.
-The value of offset should not be less than 0 and will be set to the default value 0 if it is negative.  
+The value of offset should not be less than 0 and will be set to the default value 0 if it is negative.
 
 ## Outputs
 
@@ -51,4 +51,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

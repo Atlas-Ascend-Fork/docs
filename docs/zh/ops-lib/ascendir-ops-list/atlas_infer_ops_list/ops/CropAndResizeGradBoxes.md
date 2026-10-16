@@ -15,7 +15,7 @@ REG_OP(CropAndResizeGradBoxes)
 ## Brief
 
 Computes the gradient of the crop_and_resize op wrt the input
-boxes tensor . 
+boxes tensor .
 
 ## Inputs
 
@@ -30,16 +30,16 @@ specifies the coordinates of a box in the box_ind[i] image and is specified in
 normalized coordinates [y1, x1, y2, x2].
 - box_index: A 1-D tensor of shape [num_boxes] with int32 values in
 [0, batch). The value of box_ind[i] specifies the image that the i-th box
-refers to . 
+refers to .
 
 ## Outputs
 
-y:A 2-D tensor of shape [num_boxes, 4] . 
+y:A 2-D tensor of shape [num_boxes, 4] .
 
 ## Attributes
 
 method: A string specifying the interpolation method. Only 'bilinear' is
-supported for now . 
+supported for now .
 
 ## Data Types
 
@@ -53,7 +53,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images and grads must be a 4-D tensor . 
+Input images and grads must be a 4-D tensor .
 
 ## Third-party framework compatibility
 
@@ -62,4 +62,4 @@ Compatible with tensorflow CropAndResizeGradBoxes operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

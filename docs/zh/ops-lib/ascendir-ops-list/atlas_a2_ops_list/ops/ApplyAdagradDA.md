@@ -17,7 +17,7 @@ REG_OP(ApplyAdagradDA)
 
 ## Brief
 
-Updates "var" according to the proximal adagrad scheme . 
+Updates "var" according to the proximal adagrad scheme .
 
 ## Inputs
 
@@ -36,18 +36,18 @@ Eight inputs, including:
 - l2: A Tensor of the same type as "var".
     L2 regulariation. Must be a scalar.
 - global_step: A Tensor of type int32 or int64.
-    Training step number. Must be a scalar . 
+    Training step number. Must be a scalar .
 
 ## Outputs
 
-var: A mutable Tensor. Has the same type as "var" . 
+var: A mutable Tensor. Has the same type as "var" .
 
 ## Attributes
 
 use_locking: An optional bool. Defaults to "False".
     If "True", updating of the var and accum tensors will be
     protected by a lock; otherwise the behavior is undefined,
-    but may exhibit less contention . 
+    but may exhibit less contention .
 
 ## Data Types
 
@@ -70,4 +70,4 @@ Compatible with the TensorFlow operator ApplyAdagradDA.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

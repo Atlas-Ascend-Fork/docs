@@ -22,7 +22,7 @@ REG_OP(SampleDistortedBoundingBoxExt2)
 
 ## Brief
 
-Generate a single randomly distorted bounding box for an image . 
+Generate a single randomly distorted bounding box for an image .
 
 ## Inputs
 
@@ -33,7 +33,7 @@ boxes associated with the image.
 - min_object_covered: The cropped area of the image must contain at least
 this fraction of any bounding box supplied. The value of this parameter should
 be non-negative. In the case of 0, the cropped area does not need to overlap
-any of the bounding boxes supplied . 
+any of the bounding boxes supplied .
 
 ## Outputs
 
@@ -56,7 +56,7 @@ image of the specified constraints. After max_attempts failures, return the
 entire image.
 - use_image_if_no_bounding_boxes: An optional bool, default is false, controls behavior if no bounding boxes
 supplied. If true, assume an implicit bounding box covering the whole input.
-If false, raise an error . 
+If false, raise an error .
 
 ## Data Types
 
@@ -71,7 +71,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images can be of different types but output images are always float . 
+Input images can be of different types but output images are always float .
 
 ## Third-party framework compatibility
 
@@ -80,4 +80,4 @@ Compatible with tensorflow SampleDistortedBoundingBoxExt2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

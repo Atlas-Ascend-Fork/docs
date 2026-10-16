@@ -11,15 +11,15 @@ REG_OP(FlattenV2)
 
 ## Brief
 
-Flattens the input tensor to one-dimensional . 
+Flattens the input tensor to one-dimensional .
 
 ## Inputs
 
-x: An ND tensor. All data types are supported. 
+x: An ND tensor. All data types are supported.
 
 ## Outputs
 
-y: The flattened ND tensor. All data types are supported. 
+y: The flattened ND tensor. All data types are supported.
 
 ## Attributes
 
@@ -37,4 +37,4 @@ Compatible with the Caffe operator Flatten.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

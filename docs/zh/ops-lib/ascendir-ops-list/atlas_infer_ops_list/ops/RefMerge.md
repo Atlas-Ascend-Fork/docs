@@ -20,13 +20,13 @@ Forwards the value of an available tensor from input "x" to output "y".
 
 x: The input tensors, one of which will become available.
   Must be one of the following types: float16, float32, float64, int8,
-  int16, int32, int64, uint8, uint16, uint32, uint64, bool, string . It's a dynamic input. 
+  int16, int32, int64, uint8, uint16, uint32, uint64, bool, string . It's a dynamic input.
 
 ## Outputs
 
 - y: The available tensor. Has the same type as "x".
 - value_index: A scalar of type int32, for the index of the chosen input
-                tensor . 
+                tensor .
 @see Switch() | Merge()
 
 ## Third-party framework compatibility
@@ -36,4 +36,4 @@ Compatible with the TensorFlow operator RefMerge.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

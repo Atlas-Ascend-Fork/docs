@@ -12,7 +12,7 @@ REG_OP(ImgCrop)
 
 ## Brief
 
-Applies crop to image. 
+Applies crop to image.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ Applies crop to image.
 
 ## Outputs
 
-y: output tensor, NHWC or NCHW, type must be float32 or uint8. 
+y: output tensor, NHWC or NCHW, type must be float32 or uint8.
 
 ## Attributes
 
@@ -47,4 +47,4 @@ This operator will be deprecated in the future.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

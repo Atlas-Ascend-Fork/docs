@@ -13,11 +13,11 @@ Returns the truth value of NOT "x" element-wise.
 
 ## Inputs
 
-x: A ND Tensor of type bool. 
+x: A ND Tensor of type bool.
 
 ## Outputs
 
-y: A ND Tensor of type bool. 
+y: A ND Tensor of type bool.
 
 ## Data Types
 
@@ -31,7 +31,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The input and output values are "1" or "0", corresponding to bool values "true" and "false". 
+The input and output values are "1" or "0", corresponding to bool values "true" and "false".
 
 ## Third-party framework compatibility
 
@@ -40,4 +40,4 @@ Compatible with the TensorFlow operator logical_not.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

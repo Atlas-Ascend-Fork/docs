@@ -19,7 +19,7 @@ polls data from FFNToAttention to confirm its readiness state.
 ## Outputs
 
 schedule_context: A ND Tensor that holds the new value of schedule_context after the value has been assigned.
-Has the same shape and dtype and format as the input "schedule_context". 
+Has the same shape and dtype and format as the input "schedule_context".
 
 ## Data Types
 
@@ -31,4 +31,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

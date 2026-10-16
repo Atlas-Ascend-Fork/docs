@@ -16,7 +16,7 @@ REG_OP(ApplyAdadelta)
 
 ## Brief
 
-Updates "var" according to the proximal adadelta scheme . 
+Updates "var" according to the proximal adadelta scheme .
 
 ## Inputs
 
@@ -34,14 +34,14 @@ Seven inputs, including:
 
 ## Outputs
 
-var: A mutable Tensor. Has the same type as "var" . 
+var: A mutable Tensor. Has the same type as "var" .
 
 ## Attributes
 
 use_locking: An optional bool. Defaults to "False".
     If "True", updating of the "var", "accum" and "accum_update" tensors will be
     protected by a lock; otherwise the behavior is undefined,
-    but may exhibit less contention . 
+    but may exhibit less contention .
 
 ## Data Types
 
@@ -63,4 +63,4 @@ Compatible with the TensorFlow operator ApplyAdadelta.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

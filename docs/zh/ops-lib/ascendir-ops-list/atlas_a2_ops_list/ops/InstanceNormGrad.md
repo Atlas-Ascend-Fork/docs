@@ -32,7 +32,7 @@ Support format: [NCHW, NHWC, NDHWC, NCDHW] and DHW=1. Has the same dtype and for
 The shapes of "variance" and "mean" are consistent, and the N and C axes are consistent with those of "x", and the other dimensions are 1.
 - gamma: Represents the optional weight parameter. Support dtype: float16, float32. Suppor shape 4D or 5D.
 Support format: [NCHW, NHWC, NDHWC, NCDHW].  Has the same dtype as "x".
-The C axis of "gamma" is consistent with that of "x", and the other dimensions are 1. 
+The C axis of "gamma" is consistent with that of "x", and the other dimensions are 1.
 
 ## Outputs
 
@@ -60,4 +60,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

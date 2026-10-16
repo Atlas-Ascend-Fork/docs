@@ -25,7 +25,7 @@ double, complex64, complex128.
 
 ## Outputs
 
-z: A ND Tensor. Has the same dtype as "x". 
+z: A ND Tensor. Has the same dtype as "x".
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with TensorFlow operator Xlog1py.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

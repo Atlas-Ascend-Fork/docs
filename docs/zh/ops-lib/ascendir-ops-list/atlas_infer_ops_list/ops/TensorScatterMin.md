@@ -25,7 +25,7 @@ int8, uint8, int16, uint16, int32, uint32, int64, uint64, qint8, quint8, qint16,
 
 ## Outputs
 
-output: A Tensor with the same type as input. 
+output: A Tensor with the same type as input.
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

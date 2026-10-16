@@ -16,15 +16,15 @@ Calculate the soft shrinkage function.
 
 One inputs, including:
 input_x: A tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 
 ## Outputs
 
-output_y: A Tensor with the same dtype and shape of input_x's. 
+output_y: A Tensor with the same dtype and shape of input_x's.
 
 ## Attributes
 
-lambd: An optional float. Defaults to 0.5. 
+lambd: An optional float. Defaults to 0.5.
 
 ## Data Types
 
@@ -35,9 +35,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Softshrink. 
+Compatible with the Pytorch operator Softshrink.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

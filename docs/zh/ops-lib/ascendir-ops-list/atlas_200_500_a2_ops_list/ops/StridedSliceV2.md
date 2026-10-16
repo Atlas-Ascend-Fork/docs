@@ -21,7 +21,7 @@ REG_OP(StridedSliceV2)
 Extracts a strided slice of a tensor. Roughly speaking, this op
   extracts a slice of size (end-begin)/stride from the given input tensor.
   Starting at the location specified by begin the slice continues by
-  adding stride to the index until all dimensions are not less than end. 
+  adding stride to the index until all dimensions are not less than end.
 
 ## Inputs
 
@@ -37,7 +37,7 @@ float8_e5m2, float8_e4m3fn, float8_e8m0.
 - axes: A Tensor of type int32 or int64, indicate axis to be select.
     When not provided, slices all dimensions.
 - strides: A Tensor of type int32 or int64, for the increment.
-    When not provided, stride defaults to 1. All elements in strides must be non-zero integers. 
+    When not provided, stride defaults to 1. All elements in strides must be non-zero integers.
 
 ## Outputs
 
@@ -58,7 +58,7 @@ y: A Tensor that has the same type as "x".
     specification creates a new shape 1 dimension. Default value is 0.
 - shrink_axis_mask: An attribute of type Int.
     A bitmask where bit "i" implies that the "i"th
-    specification should shrink the dimensionality. Default value is 0. 
+    specification should shrink the dimensionality. Default value is 0.
 
 ## Data Types
 
@@ -78,4 +78,4 @@ Compatible with the onnx operator Slice.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

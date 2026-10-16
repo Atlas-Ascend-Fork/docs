@@ -21,7 +21,7 @@ dequeue data acording to queue_id and queue_name.
 ## Outputs
 
 data: A Tensor of type RealNumberType, dequeue tensor. Must be one of the types:double, float32, float16,
-int16, int32, int64, int8, uint16, uint32, uint64, uint8, bf16. 
+int16, int32, int64, int8, uint16, uint32, uint64, uint8, bf16.
 
 ## Attributes
 
@@ -32,4 +32,4 @@ int16, int32, int64, int8, uint16, uint32, uint64, uint8, bf16.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

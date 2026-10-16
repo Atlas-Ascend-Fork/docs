@@ -11,21 +11,21 @@ REG_OP(FillDiagonalV2)
 
 ## Brief
 
-Fill diagonal of at least 2 dimension tensors with value inplace. 
+Fill diagonal of at least 2 dimension tensors with value inplace.
 
 ## Inputs
 
 - x: A tensor. Must be one of the following types:float16, float32, float64, int8,
-int16, int32, int64, uint8, bool, bfloat16. 
+int16, int32, int64, uint8, bool, bfloat16.
 - fill_value: A tensor. Scalar value to be filled, Must have the same type as "x".
 
 ## Outputs
 
-x: A tensor. Refers to the same tensor as input "x". 
+x: A tensor. Refers to the same tensor as input "x".
 
 ## Attributes
 
-wrap: An optional bool. Defaults to "False". If "True", use recursive fill. 
+wrap: An optional bool. Defaults to "False". If "True", use recursive fill.
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with the Pytorch operator FillDiagonal.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

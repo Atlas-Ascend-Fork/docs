@@ -39,4 +39,4 @@ Compatible with the TensorFlow operator BesselI1e.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -13,7 +13,7 @@ REG_OP(RngSkip)
 Advance the counter of a counter-based RNG. The state of the RNG after
 `rng_skip(n)` will be the same as that after `stateful_uniform([n])`
 (or any other distribution). The actual increment added to the
-counter is an unspecified implementation detail . 
+counter is an unspecified implementation detail .
 
 ## Inputs
 
@@ -36,4 +36,4 @@ Compatible with tensorflow RngSkip operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

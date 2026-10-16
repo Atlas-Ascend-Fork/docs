@@ -35,7 +35,7 @@ boxes to be selected by non max suppression per class.
 - iou_threshold: A 0-D float tensor representing the threshold for deciding whether
 boxes overlap too much with respect to IOU.
 - score_threshold: A 0-D float tensor representing the threshold for deciding when to remove
-boxes based on score . 
+boxes based on score .
 
 ## Outputs
 
@@ -53,11 +53,22 @@ output nmsed boxes, scores and classes are padded to be of length
 which case it is clipped to `max_total_size`. Defaults to false.
 - clip_boxes: If true, assume the box coordinates are between [0, 1] and clip the output boxes
 if they fall beyond [0, 1]. If false, do not do clipping and output the box
-coordinates as it is. If not specified, defaults to true . 
+coordinates as it is. If not specified, defaults to true .
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 boxes: float16,float32
+- input1 scores: float16,float32
+- input2 max_output_size_per_class: int32
+- input3 max_total_size: int32
+- input4 iou_threshold: float32
+- input5 score_threshold: float32
+- output0 nmsed_boxes: float16,float32
+- output1 nmsed_scores: float16,float32
+- output2 nmsed_classes: float16,float32
+- output3 valid_detections: int32
 ### AI CPU
 - input0 boxes: float32
 - input1 scores: float32
@@ -77,4 +88,4 @@ Compatible with tensorflow CombinedNonMaxSuppression operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

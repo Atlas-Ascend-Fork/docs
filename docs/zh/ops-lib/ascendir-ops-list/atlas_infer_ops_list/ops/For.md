@@ -13,7 +13,7 @@ REG_OP(For)
 
 ## Brief
 
-Cyclic execute the "body" subgraph until the first input of For op exceed upper bound . 
+Cyclic execute the "body" subgraph until the first input of For op exceed upper bound .
 
 ## Inputs
 
@@ -24,11 +24,11 @@ Cyclic execute the "body" subgraph until the first input of For op exceed upper 
 
 ## Outputs
 
-output: The output tensors returned by "body". Has the same type as "input" . It's a dynamic output. 
+output: The output tensors returned by "body". Has the same type as "input" . It's a dynamic output.
 
 ## Graphs
 
-body: A subgraph takes 'input' and returns another list of tensors . 
+body: A subgraph takes 'input' and returns another list of tensors .
 
 ## Third-party framework compatibility
 
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator For.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

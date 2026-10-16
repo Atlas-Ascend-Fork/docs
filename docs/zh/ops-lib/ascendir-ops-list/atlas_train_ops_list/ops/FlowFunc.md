@@ -15,7 +15,7 @@ REG_OP(FlowFunc)
 
 ## Brief
 
-User define function process. 
+User define function process.
 
 ## Inputs
 
@@ -36,4 +36,4 @@ User define function process.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

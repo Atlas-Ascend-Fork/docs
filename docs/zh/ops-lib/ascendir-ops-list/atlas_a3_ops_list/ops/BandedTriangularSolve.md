@@ -15,7 +15,7 @@ REG_OP(BandedTriangularSolve)
 
 ## Brief
 
-Solution of banded triangular matrix. 
+Solution of banded triangular matrix.
 
 ## Inputs
 
@@ -35,7 +35,7 @@ diagonals.
 - lower:An optional bool. Defaults to True.True: indicates the lower
 triangular matrix. False: indicates the upper triangular matrix.
 - adjoint:An optional bool. Defaults to False.Boolean indicating whether to
-solve with matrix or its (block-wise) adjoint. 
+solve with matrix or its (block-wise) adjoint.
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with tensorflow BandedTriangularSolve operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

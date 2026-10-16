@@ -20,22 +20,22 @@ REG_OP(MultiAddRmsNormDynamicQuant)
 ## Brief
 
 Fused Operator of 0~4 Add, 1 RmsNorm and 1 DynamicQuant.
-Calculating input: x1, x2, gamma, smooth_scale1, smooth_scale2 
-Calculating process: 
- x = sum(x1) + x2 
- rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon)) 
- rmsnorm_out = x * rstd * gamma 
- if smooth_scales1 exist: 
-   scale1 = row_max(abs(rmsnorm_out * smooth_scale1)) / 127 
- if smooth_scales1 not exist: 
-   scale1 = row_max(abs(rmsnorm_out)) / 127 
- y1 = round(rmsnorm_out / scale1) 
- if smooth_scales2 exist: 
-   scale2 = row_max(abs(rmsnorm_out * smooth_scale2)) / 127 
-   y2 = round(rmsnorm_out / scale2) 
- if smooth_scales2 not exist:  
-   not calculate scale2 and y2. 
- Only for experimental use. 
+Calculating input: x1, x2, gamma, smooth_scale1, smooth_scale2
+Calculating process:
+ x = sum(x1) + x2
+ rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon))
+ rmsnorm_out = x * rstd * gamma
+ if smooth_scales1 exist:
+   scale1 = row_max(abs(rmsnorm_out * smooth_scale1)) / 127
+ if smooth_scales1 not exist:
+   scale1 = row_max(abs(rmsnorm_out)) / 127
+ y1 = round(rmsnorm_out / scale1)
+ if smooth_scales2 exist:
+   scale2 = row_max(abs(rmsnorm_out * smooth_scale2)) / 127
+   y2 = round(rmsnorm_out / scale2)
+ if smooth_scales2 not exist:
+   not calculate scale2 and y2.
+ Only for experimental use.
 
 ## Inputs
 
@@ -89,4 +89,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -18,7 +18,7 @@ the format can be [NCHW,NHWC,ND]
 
 ## Outputs
 
-y: A ND Tensor of the same dtype as "x". 
+y: A ND Tensor of the same dtype as "x".
 
 ## Data Types
 
@@ -32,9 +32,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator Cos. 
+Compatible with the TensorFlow operator Cos.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

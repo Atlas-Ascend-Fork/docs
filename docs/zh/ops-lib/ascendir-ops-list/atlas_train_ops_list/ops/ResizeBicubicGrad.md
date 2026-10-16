@@ -12,7 +12,7 @@ REG_OP(ResizeBicubicGrad)
 
 ## Brief
 
-Computes the gradient of bicubic interpolation . 
+Computes the gradient of bicubic interpolation .
 
 ## Inputs
 
@@ -21,11 +21,11 @@ Input grads must be a 4-D tensor. Inputs include:
 channels]. The format must be NHWC.
 - original_image: A Tensor. Must be one of the following types: float,
 double. 4-D with shape [batch, orig_height, orig_width, channels], The image
-tensor that was resized. The format must be NHWC. 
+tensor that was resized. The format must be NHWC.
 
 ## Outputs
 
-y: A Tensor. Has the same type as original_image. The format must be NHWC. 
+y: A Tensor. Has the same type as original_image. The format must be NHWC.
 
 ## Attributes
 
@@ -53,4 +53,4 @@ Compatible with tensorflow ResizeBicubicGrad operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

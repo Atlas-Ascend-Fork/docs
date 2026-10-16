@@ -10,19 +10,19 @@ REG_OP(ReadVariableOp)
 
 ## Brief
 
-Reads and returns the value of the input variable tensor. 
+Reads and returns the value of the input variable tensor.
 
 ## Inputs
 
-x: A tensor must have numeric type. 
+x: A tensor must have numeric type.
 
 ## Outputs
 
-y: A tensor must have numeric type. 
+y: A tensor must have numeric type.
 
 ## Attributes
 
-dtype: Same as the input data type. The output data type. Defaults to int32. 
+dtype: Same as the input data type. The output data type. Defaults to int32.
 
 ## Third-party framework compatibility
 
@@ -31,4 +31,4 @@ Compatible with the TensorFlow operator ReadVariableOp.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -17,7 +17,7 @@ REG_OP(OrderedMapUnstage)
 
 ## Brief
 
-Removes and returns the values associated with the key. 
+Removes and returns the values associated with the key.
 
 ## Inputs
 
@@ -29,7 +29,7 @@ Including:
 
 values: A list of Tensor objects. Must be one of the following types:
 DT_INT8, DT_UINT8, DT_INT16, DT_UINT16, DT_INT32, DT_INT64, DT_FLOAT,
-DT_FLOAT16, DT_DOUBLE, DT_BOOL, DT_UINT32, DT_UINT64. 
+DT_FLOAT16, DT_DOUBLE, DT_BOOL, DT_UINT32, DT_UINT64.
 
 ## Attributes
 
@@ -57,4 +57,4 @@ Compatible with the TensorFlow operator OrderedMapUnstage.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

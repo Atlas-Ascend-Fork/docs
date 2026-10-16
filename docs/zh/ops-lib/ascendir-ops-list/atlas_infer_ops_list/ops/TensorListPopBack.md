@@ -16,7 +16,7 @@ REG_OP(TensorListPopBack)
 ## Brief
 
 The last element of the input list as well as a
-list with all but that element. 
+list with all but that element.
 
 ## Inputs
 
@@ -30,7 +30,7 @@ list with all but that element.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with tensorflow TensorListPopBack operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

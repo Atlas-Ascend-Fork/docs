@@ -48,4 +48,4 @@ received. The supported types are: int8, int16, int32, float16, float32.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

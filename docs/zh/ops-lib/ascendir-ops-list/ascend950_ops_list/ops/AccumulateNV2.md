@@ -19,7 +19,7 @@ Returns a Tensor of same shape and type as the elements of inputs.
 ## Inputs
 
 Dynamic inputs, including:
-x: A tensor. Must be one of the following types: float16, float32, int32, int8, uint8. It's a dynamic input. 
+x: A tensor. Must be one of the following types: float16, float32, int32, int8, uint8. It's a dynamic input.
 
 ## Outputs
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator AccumulateNV2.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

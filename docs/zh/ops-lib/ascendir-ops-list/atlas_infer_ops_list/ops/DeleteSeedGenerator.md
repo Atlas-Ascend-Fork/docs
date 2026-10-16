@@ -9,7 +9,7 @@ REG_OP(DeleteSeedGenerator)
 
 ## Brief
 
-DeleteSeedGenerator. 
+DeleteSeedGenerator.
 
 ## Inputs
 
@@ -30,4 +30,4 @@ Compatible with TensorFlow DeleteSeedGenerator operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

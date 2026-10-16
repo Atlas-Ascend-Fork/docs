@@ -23,7 +23,7 @@ uint8, uint16, uint32, uint64, complex64, complex128, bool, bfloat16
 
 ## Outputs
 
-result: A tensor. Has the same type as "then" . 
+result: A tensor. Has the same type as "then" .
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator SelectV2.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

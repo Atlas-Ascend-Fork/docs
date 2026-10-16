@@ -13,11 +13,11 @@ REG_OP(MapIncompleteSize)
 
 ## Brief
 
-Returns the number of incomplete elements in the underlying container. 
+Returns the number of incomplete elements in the underlying container.
 
 ## Outputs
 
-size: A Tensor of type DT_INT32. 
+size: A Tensor of type DT_INT32.
 
 ## Attributes
 
@@ -44,4 +44,4 @@ Compatible with the TensorFlow operator MapIncompleteSize.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

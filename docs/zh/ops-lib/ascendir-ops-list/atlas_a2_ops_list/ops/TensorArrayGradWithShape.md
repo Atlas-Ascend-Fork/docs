@@ -14,7 +14,7 @@ REG_OP(TensorArrayGradWithShape)
 ## Brief
 
 Creates a TensorArray for storing multiple gradients of values in
-the given handle. 
+the given handle.
 
 ## Inputs
 
@@ -23,7 +23,7 @@ The input handle must be type resource. Inputs include:
 - flow_in: A Tensor of type float. A float scalar that enforces proper
 chaining of operations.
 - shape_to_prepend: A Tensor of type int32. An int32 vector representing
-a shape. 
+a shape.
 
 ## Outputs
 
@@ -33,7 +33,7 @@ a shape.
 ## Attributes
 
 source: A string. The gradient source string, used to decide which gradient
-TensorArray to return. 
+TensorArray to return.
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with tensorflow TensorArrayGradWithShape operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

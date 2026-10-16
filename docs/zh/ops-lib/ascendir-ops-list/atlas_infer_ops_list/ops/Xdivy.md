@@ -24,7 +24,7 @@ double, complex64, complex128.
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype as "x1". 
+y: A ND Tensor. Has the same dtype as "x1".
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with TensorFlow operator Xdivy.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

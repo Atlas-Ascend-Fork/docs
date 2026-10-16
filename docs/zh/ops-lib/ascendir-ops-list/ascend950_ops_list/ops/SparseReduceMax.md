@@ -15,7 +15,7 @@ REG_OP(SparseReduceMax)
 
 ## Brief
 
-Computes the max of elements across dimensions of a SparseTensor. 
+Computes the max of elements across dimensions of a SparseTensor.
 
 ## Inputs
 
@@ -27,16 +27,16 @@ SparseTensor, possibly not in canonical ordering.
 `N` non-empty values corresponding to `x_indices`.
 - x_shape:A `tensor` of type `int64`.1-D.  Shape of the input SparseTensor.
 - reduction_axes:A `tensor` of type `int32`.1-D.
-Length-`K` vector containing the reduction axes. 
+Length-`K` vector containing the reduction axes.
 
 ## Outputs
 
-y:A `tensor`. Has the same type as `x_values`. 
+y:A `tensor`. Has the same type as `x_values`.
 
 ## Attributes
 
 keep_dims:An optional `bool`. Defaults to `False`.
-If true, retain reduced dimensions with length 1. 
+If true, retain reduced dimensions with length 1.
 
 ## Data Types
 
@@ -55,4 +55,4 @@ Compatible SparseReduceMax operator in Tensorflow.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

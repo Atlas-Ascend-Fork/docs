@@ -64,4 +64,4 @@ Custom operator with no direct mapping in Caffe/ONNX/TensorFlow/PyTorch.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

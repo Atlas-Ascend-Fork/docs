@@ -9,7 +9,7 @@ REG_OP(IdentityN)
 
 ## Brief
 
-Returns a list of tensors with the same shapes and contents as the input tensors. 
+Returns a list of tensors with the same shapes and contents as the input tensors.
 
 ## Inputs
 
@@ -19,7 +19,7 @@ float32、float16、int8、int16、uint16、uint8、int32、int64、uint32、uin
 ## Outputs
 
 y: A list of Tensor objects, with the same length、shape、data type and contents as the input tensor list.
-It's a dynamic output. 
+It's a dynamic output.
 
 ## Third-party framework compatibility
 
@@ -28,4 +28,4 @@ Compatible with the TensorFlow operator IdentityN.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

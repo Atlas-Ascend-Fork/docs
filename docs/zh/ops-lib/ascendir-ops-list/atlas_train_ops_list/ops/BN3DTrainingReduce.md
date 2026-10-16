@@ -16,17 +16,14 @@ Performs reduced batch normalization .
 
 x: A 5D tensor of type float16 or float32 or bfloat16, with format NDHWC or NCDHW.
 Represents the input tensor in batch normalization training.
-When the C axis is 0, other dimensions support empty tensors; when the C axis is not 0, other dimensions do not
-support empty tensors.
+When the C axis is 0, other dimensions support empty tensors; when the C axis is not 0, other dimensions do not support empty tensors.
 
 ## Outputs
 
-- sum: A 1D tensor of type float32 for SUM reduced "x". It represents the sum of the input tensor "x" on the C
-axis.
+- sum: A 1D tensor of type float32 for SUM reduced "x". It represents the sum of the input tensor "x" on the C axis.
 The shape of sum is consistent with the C axis of "x". Has the same format as "x".
-- square_sum: A 1D tensor of type float32 for SUMSQ reduced "x". It represents the sum of squares of the input
-tensor "x" on the C axis.
-The shape of sum is consistent with the C axis of "x". Has the same format as "x". 
+- square_sum: A 1D tensor of type float32 for SUMSQ reduced "x". It represents the sum of squares of the input tensor "x" on the C axis.
+The shape of sum is consistent with the C axis of "x". Has the same format as "x".
 
 ## Data Types
 
@@ -45,4 +42,4 @@ This operator is used in conjunction with BN3DTrainingReduce.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

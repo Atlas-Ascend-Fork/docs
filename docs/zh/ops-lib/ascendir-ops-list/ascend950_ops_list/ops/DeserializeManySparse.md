@@ -14,13 +14,13 @@ REG_OP(DeserializeManySparse)
 
 ## Brief
 
-Deserializes and concatenates SparseTensors from a serialized minibatch. 
+Deserializes and concatenates SparseTensors from a serialized minibatch.
 
 ## Inputs
 
 One inputs, including:
 serialized_sparse: A 2D tensor of type string.
-The "N" serialized SparseTensor objects. Must have 3 columns. 
+The "N" serialized SparseTensor objects. Must have 3 columns.
 
 ## Outputs
 
@@ -30,7 +30,7 @@ The "N" serialized SparseTensor objects. Must have 3 columns.
 
 ## Attributes
 
-dtype: The type of the serialized SparseTensor objects. 
+dtype: The type of the serialized SparseTensor objects.
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator DeserializeManySparse.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

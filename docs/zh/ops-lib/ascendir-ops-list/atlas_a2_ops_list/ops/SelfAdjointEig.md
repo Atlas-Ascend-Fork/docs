@@ -11,13 +11,13 @@ REG_OP(SelfAdjointEig)
 
 ## Brief
 
-Computes the eigen decomposition of a batch of self-adjoint matrices . 
+Computes the eigen decomposition of a batch of self-adjoint matrices .
 
 ## Inputs
 
 The input shape of x must be [..., N, N]. Inputs include:
 x:Tensor of shape [..., N, N]. Only the lower triangular part of each inner
-inner matrix is referenced . 
+inner matrix is referenced .
 
 ## Outputs
 
@@ -27,7 +27,7 @@ contain eigenvectors of the corresponding matrices in tensor.
 
 ## Attributes
 
-compute_v:bool. Defaults to True . 
+compute_v:bool. Defaults to True .
 
 ## Data Types
 
@@ -40,7 +40,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The input x is a tensor of shape [..., N, N] whose inner-most 2 dimensions
-form square matrices.   
+form square matrices.
 
 ## Third-party framework compatibility
 
@@ -49,4 +49,4 @@ Compatible with tensorflow SelfAdjointEig operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

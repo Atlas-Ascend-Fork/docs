@@ -25,11 +25,11 @@ Two inputs, including:
 
 ## Outputs
 
-y: The reduced tensor. Has the same type and format as input "x" . 
+y: The reduced tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
-keepdims: An optional bool. If "true", retains reduced dimensions with length 1. Defaults to "false" . 
+keepdims: An optional bool. If "true", retains reduced dimensions with length 1. Defaults to "false" .
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with the Pytorch operator ReduceNansum.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

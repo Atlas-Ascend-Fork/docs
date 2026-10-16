@@ -30,7 +30,7 @@ Performs Dilation2DBackpropFilter on the input.
 
 ## Outputs
 
-y: The output tensor. Has the same type and format as input "filter" . 
+y: The output tensor. Has the same type and format as input "filter" .
 
 ## Attributes
 
@@ -57,4 +57,4 @@ Compatible with the TensorFlow operator Dilation2DBackpropFilter.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -15,11 +15,11 @@ Computes the generalized inverse of any matrix.
 ## Inputs
 
 - x: input matrix. Must be one of the following types:
-    double, float. 
+    double, float.
 
 ## Outputs
 
-y: A Tensor with the same type and shape of x's transpose. 
+y: A Tensor with the same type and shape of x's transpose.
 
 ## Attributes
 
@@ -35,4 +35,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -18,7 +18,7 @@ REG_OP(AddLayerNorm)
 
 ## Brief
 
-Fused Operator of Add and LayerNorm. 
+Fused Operator of Add and LayerNorm.
 
 ## Inputs
 
@@ -57,4 +57,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

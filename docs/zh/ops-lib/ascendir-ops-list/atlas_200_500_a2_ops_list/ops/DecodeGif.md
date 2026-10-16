@@ -9,15 +9,15 @@ REG_OP(DecodeGif)
 
 ## Brief
 
-Decode the frame(s) of a GIF-encoded image to a uint8 tensor . 
+Decode the frame(s) of a GIF-encoded image to a uint8 tensor .
 
 ## Inputs
 
-contents: A Tensor of type string. 0-D. The GIF-encoded image. 
+contents: A Tensor of type string. 0-D. The GIF-encoded image.
 
 ## Outputs
 
-image: A Tensor of type uint8. 
+image: A Tensor of type uint8.
 
 ## Data Types
 
@@ -33,4 +33,4 @@ Compatible with tensorflow DecodeGif operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

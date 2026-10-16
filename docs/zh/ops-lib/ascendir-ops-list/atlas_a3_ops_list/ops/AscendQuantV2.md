@@ -15,7 +15,7 @@ REG_OP(AscendQuantV2)
 
 ## Brief
 
-Quantizes the input, scale/offset support broadcasting operations. 
+Quantizes the input, scale/offset support broadcasting operations.
 
 ## Inputs
 
@@ -24,12 +24,12 @@ float32, bfloat16. The format support ND. Shape support 1D ~ 8D. Specifying the 
 - scale: A required Tensor. Must be one of the following types: float16,
 float32, bfloat16. The format support ND. Shape support 1D ~ 8D. Specifying the scaling ratio.
 - offset: An optional Tensor. Must be one of the following types: float16,
-float32, bfloat16. The format support ND. Shape support 1D ~ 8D. Shape is same as "scale". Specifying the offset. 
+float32, bfloat16. The format support ND. Shape support 1D ~ 8D. Shape is same as "scale". Specifying the offset.
 
 ## Outputs
 
 y: The quantized output tensor of type int8, int4, hifloat8, float8_e5m2 or float8_e4m3fn. The format support ND.
-Shape support 1D ~ 8D. Has the same shape as input "x". Dtype should be the same as the attribute dst_type. 
+Shape support 1D ~ 8D. Has the same shape as input "x". Dtype should be the same as the attribute dst_type.
 
 ## Attributes
 
@@ -41,7 +41,7 @@ The value range is ["round", "floor", "ceil", "trunc", "hybrid"]. Defaults to "r
 The value range is [DT_INT8, DT_INT4, DT_HIFLOAT8, DT_FLOAT8_E5M2, DT_FLOAT8_E4M3FN]. Defaults to DT_INT8.
 - axis: An optional int32, describes which dimension of the input tensor x to be processed. Default is -1.
 Suppose x's dim number is D, axis should be in [-D, D - 1].
-if D > 2, axis should be -1, -2, D-2 or D-1. 
+if D > 2, axis should be -1, -2, D-2 or D-1.
 
 ## Data Types
 
@@ -64,9 +64,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - When scale's dimension number is 1, it should be 1 or the same with the dimension specified by attributes[axis] of
 input x.
 - When scale's dimension number is the same with x, the dimension specified by attributes[axis] shoule be 1 or the
-same with x's, others should be 1. 
+same with x's, others should be 1.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

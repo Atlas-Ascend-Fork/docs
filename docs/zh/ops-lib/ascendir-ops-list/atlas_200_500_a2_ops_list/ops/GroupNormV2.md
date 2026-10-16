@@ -17,7 +17,7 @@ REG_OP(GroupNormV2)
 
 ## Brief
 
-Performs group normalization . 
+Performs group normalization .
 
 ## Inputs
 
@@ -31,7 +31,7 @@ The data type and shape of x must meet the following conditions:
 - gamma: A ND tensor of type bfloat16, float16, float32. Must be 1D. Specifies the scaling factor.
 The value of "gamma" needs to be consistent with the C-axis value of "x". Has the same dype as "x".
 - beta: A ND tensor of type bfloat16, float16, float32. Must be 1D. Specifies the offset.
-The value of "beta" needs to be consistent with the C-axis value of "x". Has the same dype as "x". 
+The value of "beta" needs to be consistent with the C-axis value of "x". Has the same dype as "x".
 
 ## Outputs
 
@@ -40,7 +40,7 @@ Three outputs
 - mean: A ND tensor of type bfloat16, float16, float32. Must be 2D (N, num_groups). Specifies the mean of "x".
 Has the same dype as "x".
 - rstd: A ND tensor of type bfloat16, float16, float32. Must be 2D (N, num_groups). Specifies the rstd of "x".
-Has the same dype as "x". 
+Has the same dype as "x".
 
 ## Attributes
 
@@ -49,7 +49,7 @@ Has the same dype as "x".
 - data_format: An optional string, specifying the format of "x". Defaults to "NHWC". This parameter is reserved and does not take effect.
 - is_training: An optional bool, specifying if the operation is used for training or inference. Defaults to "True".
 - When set to true, it indicates training mode and uses the mean and variance of the current batch.
-- When set to false, it indicates inference mode and uses the mean and variance saved during training. 
+- When set to false, it indicates inference mode and uses the mean and variance saved during training.
 
 ## Third-party framework compatibility
 
@@ -58,4 +58,4 @@ Has the same dype as "x".
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

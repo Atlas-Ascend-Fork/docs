@@ -20,23 +20,23 @@ exploding gradients.
 ## Inputs
 
 - predict: A ND multi-dimensional tensor of type float16, bfloat16 or float32,
-specifying the predictive value. 
+specifying the predictive value.
 - label: A ND multi-dimensional tensor, has same type and shape as "predict",
-specifying the target value. 
+specifying the target value.
 
 ## Outputs
 
 loss: A multi-dimensional Tensor of type float16, bfloat16 or float32. Indicates the loss between the predictive value and target value.
-Has the same dimensions as "predict". 
+Has the same dimensions as "predict".
 
 ## Attributes
 
 - sigma: An optional float. Specifies the threshold of loss. The value must be positive number. Defaults
-to "1.0". 
+to "1.0".
 - reduction: An optional string. Specifies the reduction to apply to
 the output: 'none' | 'mean' | 'sum'. 'none': no reduction will be applied;
 'mean': the sum of the output will be divided by the number of elements in
-the output;'sum': the output will be summed. Default: 'mean'. 
+the output;'sum': the output will be summed. Default: 'mean'.
 
 ## Data Types
 
@@ -47,9 +47,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator smooth_l1_loss. 
+Compatible with the Pytorch operator smooth_l1_loss.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

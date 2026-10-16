@@ -16,7 +16,7 @@ REG_OP(MatrixBandPart)
 
 ## Brief
 
-Copies a tensor setting everything outside a central band in each innermost matrix. 
+Copies a tensor setting everything outside a central band in each innermost matrix.
 
 ## Inputs
 
@@ -26,11 +26,11 @@ are 0D scalars.
 - num_lower: A 0D tensor. Number of superdiagonals to keep. If negative,
 keeps entire upper triangle.
 - num_upper: A 0D tensor. Number of superdiagonals to keep. If negative,
-keeps entire upper triangle. 
+keeps entire upper triangle.
 
 ## Outputs
 
-y: A rank k tensor. Has the same shape as input. The extracted banded tensor. 
+y: A rank k tensor. Has the same shape as input. The extracted banded tensor.
 
 ## Data Types
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-MatrixBandPart runs on the Ascend AI CPU, which delivers poor performance. 
+MatrixBandPart runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator MatrixBandPart.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

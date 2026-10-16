@@ -69,7 +69,7 @@ In per-in-group fake-quantization cases, when having experts/having no expert, s
 
 y: A matrix Tensor. The type support float16, bfloat16.
 Format support ND, FRACTAL_NZ. Num of dimension should be same as x.
-The following are the supported data formats and data types (for Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component):
+The following are the supported data formats and data types (for Atlas A2 products):
 | Tensor    | x       | weight1/weight2 | bias1/bias2 | scale/offset | deq_scale1/deq_scale2 | antiquant_scale1/antiquant_scale2  | antiquant_offset1/antiquant_offset2 | y       |
 | :-------: | :-----: | :-------------: | :---------: | :----------: | :-------------------: | :--------------------------------: | :---------------------------------: | :-----: |
 | Format1   | ND      | ND              | ND          | ND           | ND                    | ND                                 | ND                                  | ND      |
@@ -83,7 +83,7 @@ The following are the supported data formats and data types (for Atlas A2 Traini
 |           | bfloat16| int8            | float32     | -            | -                     | bfloat16                           | bfloat16                            | bfloat16|
 |           | float16 | int4            | float16     | -            | -                     | float16                            | float16                             | float16 |
 |           | bfloat16| int4            | float32     | -            | -                     | bfloat16                           | bfloat16                            | bfloat16|
-The following are the supported data formats and data types (for Atlas Inference Series Product):
+The following are the supported data formats and data types (for Atlas inference products):
 | Tensor    | x          | weight1/weight2 | bias1/bias2 | scale/offset | deq_scale1/deq_scale2 | antiquant_scale1/antiquant_scale2  | antiquant_offset1/antiquant_offset2 | y          |
 | :-------: | :--------: | :-------------: | :---------: | :----------: | :-------------------: | :--------------------------------: | :---------------------------------: | :--------: |
 | Format1   | FRACTAL_NZ | FRACTAL_NZ      | ND          | ND           | ND                    | ND                                 | ND                                  | FRACTAL_NZ |
@@ -118,7 +118,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-- Atlas Inference Series Product only support non-quantization high performance no-expert cases; x and y must have two dimensions; activation only supports gelu/fastgelu/relu/silu.
+- Atlas inference products only support non-quantization high performance no-expert cases; x and y must have two dimensions; activation only supports gelu/fastgelu/relu/silu.
 - If expert_tokens is passed, when tokens_index_flag is true, it must be a non-negative monotone non-decreasing array; when tokens_index_flag is false, it must be a non-negative array.
 - If expert_tokens is passed, when tokens_index_flag is false, sum of expert_tokens should be equal to the first dim M of x; when tokens_index_flag is true, the last value in expert_tokens should be equal to the first dim M of x.
 - If activation is geglu/swiglu/reglu, only supporting float16 (data type of required inputs are all float16) high performance no-expert cases, and should satisfy N1=2*K2.
@@ -134,4 +134,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

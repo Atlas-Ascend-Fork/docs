@@ -22,7 +22,7 @@ get complex.
 
 ## Outputs
 
-out: An ND tensor of type complex32, complex64, complex128 
+out: An ND tensor of type complex32, complex64, complex128
 
 ## Attributes
 
@@ -39,4 +39,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

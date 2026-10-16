@@ -13,14 +13,14 @@ REG_OP(OutfeedEnqueueOpV2)
 
 ## Brief
 
-Enqueue a Tensor on the computation outfeed. 
+Enqueue a Tensor on the computation outfeed.
 
 ## Inputs
 
 Inputs include:
 x: A Tensor. Must be one of the following types: double, float32, float16, bfloat16, complex32, complex64, complex128,
-int8, uint8, int16, uint16, int32, uint32, int64, uint64, qint8, quint8, qint16, quint16, qint32, bool, string. It's a dynamic input. 
-tensor_name: A Tensor. Must be string types. 
+int8, uint8, int16, uint16, int32, uint32, int64, uint64, qint8, quint8, qint16, quint16, qint32, bool, string. It's a dynamic input.
+tensor_name: A Tensor. Must be string types.
 
 ## Attributes
 
@@ -46,4 +46,4 @@ The implementation for OutfeedEnqueueOpV2 on Ascend uses AICPU, with bad perform
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

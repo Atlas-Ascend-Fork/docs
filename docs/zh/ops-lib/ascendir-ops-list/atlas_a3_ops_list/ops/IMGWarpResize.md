@@ -10,7 +10,7 @@ REG_OP(IMGWarpResize)
 
 ## Brief
 
-Resizes "images" with "offset" using bilinear interpolation. 
+Resizes "images" with "offset" using bilinear interpolation.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ The format support ND.
 
 warp_img: A Tensor after ResizeBilinear, A 4-D tensor of shape `[n, c, h, w]`.
 The format support ND. Must be one of the following types: float16, float32.
-Must has the same type as "img". 
+Must has the same type as "img".
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

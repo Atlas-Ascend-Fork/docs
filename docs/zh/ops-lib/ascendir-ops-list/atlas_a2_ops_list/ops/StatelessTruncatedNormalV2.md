@@ -2,37 +2,35 @@
 
 ```c
 REG_OP(StatelessTruncatedNormalV2)
-    .INPUT(shape, TensorType({DT_INT32, DT_INT64}))
-    .INPUT(key, TensorType({DT_UINT64}))
-    .INPUT(counter, TensorType({DT_UINT64}))
-    .INPUT(alg, TensorType({DT_INT32}))
-    .OUTPUT(y, TensorType({DT_FLOAT16, DT_BF16, DT_FLOAT, DT_DOUBLE}))
+    .INPUT(shape, TensorType({ DT_INT32, DT_INT64 }))
+    .INPUT(key, TensorType({ DT_UINT64 }))
+    .INPUT(counter, TensorType({ DT_UINT64 }))
+    .INPUT(alg, TensorType({ DT_INT32 }))
+    .OUTPUT(y, TensorType({ DT_FLOAT16, DT_BF16, DT_FLOAT, DT_DOUBLE }))
     .ATTR(dtype, Type, DT_FLOAT)
     .OP_END_FACTORY_REG(StatelessTruncatedNormalV2)
 ```
 
 ## Brief
 
-Outputs random values from a truncated normal distribution (stateless version). 
+Outputs random values from a truncated normal distribution.
 
 ## Inputs
 
 Inputs include:
-shape: A tensor. Must be one of the following types: int32, int64 . 
-key: A tensor of type uint64 with shape [1]. The key for the random number generator. 
-counter: A tensor of type uint64 with shape [2]. The counter for the random number generator. 
-counter: Shape[1] for threefry, Shape[1] for philox. 
-alg: A scalar tensor of type int32. The algorithm id (1 = Philox). 
-alg: The default setting in this operator is 1. 
+- shape: A Tensor. Must be one of the following types: int32, int64.
+- key: Key of RNG algorithm. Shape[1].
+- counter: Counter of RNG algorithm. Shape[2] for philox, shape[1] for threefry.
+- alg: RNG algorithm. 1:philox, 2:threefry.
 
 ## Outputs
 
-- y: A tensor of types: float16, float32, bfloat16, double. A tensor of the specified shape
-filled with random truncated normal values. 
+y: A Tensor of types: float16, bfloat16, float32, double. A tensor of the specified shape
+filled with random truncated normal values.
 
 ## Attributes
 
-- dtype: An optional type. Defaults to DT_FLOAT. The data type of y. It supports 1(float16), 27(bfloat16) and 0(float32).
+- dtype: dtype: A optional attr, specifying the output data type. Defaults to "DT_FLOAT".
 
 ## Data Types
 
@@ -45,14 +43,13 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-This is a stateless version. The same key+counter input always produces the same output.
-Only Philox algorithm (alg=1) is currently supported.
+The implementation for StatelessTruncatedNormalV2 on Ascend uses AICPU, with bad performance.
 
 ## Third-party framework compatibility
 
-Compatible with tensorflow StatelessTruncatedNormalV2 operator.
+- compatible with tensorflow StatelessTruncatedNormalV2 operator.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -12,7 +12,7 @@ REG_OP(MatrixDiagPartV3)
 
 ## Brief
 
-Returns the batched diagonal part of a batched tensor. 
+Returns the batched diagonal part of a batched tensor.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Returns the batched diagonal part of a batched tensor.
 single integer (for a single diagonal) or a pair of integers specifying the low and
 high ends of a matrix band. k[0] must not be larger than k[1].
 - padding_value:A Tensor. Must have the same type as input. The value to fill the area
-outside the specified diagonal band with. 
+outside the specified diagonal band with.
 
 ## Outputs
 
@@ -48,4 +48,4 @@ Compatible with the Tensorflow  operator FillDiagonal.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

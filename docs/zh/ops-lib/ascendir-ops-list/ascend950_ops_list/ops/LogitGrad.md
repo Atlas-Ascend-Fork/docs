@@ -11,7 +11,7 @@ REG_OP(LogitGrad)
 
 ## Brief
 
-Backpropagation of Logit. 
+Backpropagation of Logit.
 
 ## Inputs
 
@@ -22,11 +22,11 @@ The format must be ND.
 
 ## Outputs
 
-dx: A output ensor with the same type, shape, format as "x". Probability to logit conversion backpropagates the output data. 
+dx: A output ensor with the same type, shape, format as "x". Probability to logit conversion backpropagates the output data.
 
 ## Attributes
 
-eps: The epslion of "x", an optional attribute, the type is float. Defaults to -1.0. 
+eps: The epslion of "x", an optional attribute, the type is float. Defaults to -1.0.
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

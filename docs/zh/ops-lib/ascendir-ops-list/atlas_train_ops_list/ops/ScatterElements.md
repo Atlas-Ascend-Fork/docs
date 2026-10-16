@@ -13,7 +13,7 @@ REG_OP(ScatterElements)
 
 ## Brief
 
-Uses "updates" to update tensor "data" by "indices". 
+Uses "updates" to update tensor "data" by "indices".
 
 ## Inputs
 
@@ -29,13 +29,13 @@ qint32, qint8, quint8, uint16, uint32, uint64, uint8, bfloat16, complex32.
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as input "data" . 
+y: A Tensor. Has the same type and format as input "data" .
 
 ## Attributes
 
 - axis: An optional int. Defaults to 0.
 - reduction: An optional string. Defaults to string "none" and can be
-"add" or "mul". 
+"add" or "mul".
 
 ## Data Types
 
@@ -53,9 +53,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-- In Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and
-Atlas A3 Training Series Product/Atlas A3 Inference Series Product,
-you are advised to replace ScatterElements with ScatterElementsV2(When there are duplicate indexes, ScatterElementsV2 provides higher precision). 
+- In Atlas A2 products and
+Atlas A3 products,
+you are advised to replace ScatterElements with ScatterElementsV2(When there are duplicate indexes, ScatterElementsV2 provides higher precision).
 
 ## Third-party framework compatibility
 
@@ -64,4 +64,4 @@ Compatible with the ONNX operator ScatterElements.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

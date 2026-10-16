@@ -15,7 +15,7 @@ REG_OP(StatelessNormal)
 ## Brief
 
 Outputs deterministic pseudorandom values from a normal distribution,
-with GPU-parity (same seed+offset produces same sequence as CUDA). 
+with GPU-parity (same seed+offset produces same sequence as CUDA).
 
 ## Inputs
 
@@ -28,12 +28,12 @@ with GPU-parity (same seed+offset produces same sequence as CUDA).
 ## Outputs
 
 y: Returns random values with specified shape.
-Must be one of the following types: float16, bfloat16, float32. 
+Must be one of the following types: float16, bfloat16, float32.
 
 ## Attributes
 
 dtype: Output data type. Must be one of the following types: float16, bfloat16, float32.
-Defaults to float32. 
+Defaults to float32.
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with PyTorch torch.normal (stateless, GPU-parity mode).
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

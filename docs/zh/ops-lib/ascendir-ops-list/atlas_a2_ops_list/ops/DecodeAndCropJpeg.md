@@ -17,7 +17,7 @@ REG_OP(DecodeAndCropJpeg)
 
 ## Brief
 
-Function parse image from string to int. 
+Function parse image from string to int.
 
 ## Inputs
 
@@ -58,4 +58,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

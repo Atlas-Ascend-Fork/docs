@@ -17,12 +17,12 @@ Copy data from x to output_x.
 
 One input, including:
 x: A ND Tensor. Must be one of the following types:
-bfloat16, float16, float32, int8, uint8, int16, uint16, int32, uint32, int64, uint64. 
-Format is ND, Support 1D ~ 8D. 
+bfloat16, float16, float32, int8, uint8, int16, uint16, int32, uint32, int64, uint64.
+Format is ND, Support 1D ~ 8D.
 
 ## Outputs
 
-output_x: A ND Tensor. Has the same dtype and format as "x". 
+output_x: A ND Tensor. Has the same dtype and format as "x".
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

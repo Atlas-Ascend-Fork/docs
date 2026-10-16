@@ -33,10 +33,10 @@ float16, float32, int32.
 
 - grad_x: An optional bool. Defaults to "True".
 If "True", "y1" will be output.
-If "False", "y1" will not be output. 
+If "False", "y1" will not be output.
 - grad_y: An optional bool. Defaults to "True".
 If "True", "y2" will be output.
-If "False", "y2" will not be output. 
+If "False", "y2" will not be output.
 
 ## Data Types
 
@@ -55,4 +55,4 @@ Compatible with the TensorFlow operator MinimumGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

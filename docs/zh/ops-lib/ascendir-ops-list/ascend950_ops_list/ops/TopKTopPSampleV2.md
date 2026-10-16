@@ -47,7 +47,7 @@ supported types are: float16, bfloat16, float32, Supports non-contiguous tensors
 ## Outputs
 
 - logits_select_idx: A 2D tensor which is the sequence of numbers, format supports ND, and must be a non-null
-pointer. The supported types are: int64. 
+pointer. The supported types are: int64.
 - logits_top_kp_select: An optional 2D tensor. Acts as the logits remaining in the logits file after undergoing the
 topK-topP-minP calculation process. When `is_need_logits=False`, it is disabled and outputs a null pointer; when
 `is_need_logits=True`, it is enabled and outputs a dimension that must be [batch, voc_size]. The supported types are:
@@ -98,4 +98,4 @@ Compatible with the TensorFlow operator Range or PyTorch operator Range/Arange.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

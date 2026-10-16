@@ -13,16 +13,16 @@ REG_OP(UnsortedSegmentSum)
 
 ## Brief
 
-Computes the sum along segments of a tensor . 
+Computes the sum along segments of a tensor .
 Computes a tensor such that (output[i] = sum_{j...} x[j...] where
 the sum is over tuples j... such that segment_ids[j...] == i.If the sum
-is empty for a given segment ID i, output[i] = 0 
-for example:x = [[0,1,2],[3,4,5],[6,7,8]] , segment_ids = [0,0,4] num_segments = 5 
-output[0] = [3, 5, 7] 
-output[1] = [0, 0, 0] 
-output[2] = [0, 0, 0] 
-output[3] = [0, 0, 0] 
-output[4] = [6, 7, 8] 
+is empty for a given segment ID i, output[i] = 0
+for example:x = [[0,1,2],[3,4,5],[6,7,8]] , segment_ids = [0,0,4] num_segments = 5
+output[0] = [3, 5, 7]
+output[1] = [0, 0, 0]
+output[2] = [0, 0, 0]
+output[3] = [0, 0, 0]
+output[4] = [6, 7, 8]
 
 ## Inputs
 
@@ -32,11 +32,11 @@ Three inputs, including:
 A tensor of type int32, int64, and the rank is less than or equal to x rank.
 Whose shape is a prefix of "x.shape". Format is ND.
 - num_segments: A tensor of type int32, int64, format is ND.
-Indicates the output segment . 
+Indicates the output segment .
 
 ## Outputs
 
-y: Type and format is the same as x . 
+y: Type and format is the same as x .
 
 ## Attributes
 
@@ -64,4 +64,4 @@ Compatible with the TensorFlow operator UnsortedSegmentSum
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

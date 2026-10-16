@@ -10,7 +10,7 @@ REG_OP(EncodeJpegVariableQuality)
 
 ## Brief
 
-JPEG encode input image with provided compression quality. 
+JPEG encode input image with provided compression quality.
 
 ## Inputs
 
@@ -19,7 +19,7 @@ JPEG encode input image with provided compression quality.
 
 ## Outputs
 
-contents: an output string. 
+contents: an output string.
 
 ## Data Types
 
@@ -36,4 +36,4 @@ Compatible with tensorflow EncodeJpegVariableQuality operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

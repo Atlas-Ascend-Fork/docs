@@ -70,4 +70,4 @@ Compatible with the Pytorch backward operator of max_pool2d_with_indices.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

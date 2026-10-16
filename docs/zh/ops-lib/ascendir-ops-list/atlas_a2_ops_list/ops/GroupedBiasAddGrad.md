@@ -45,13 +45,13 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-group_idx: A maximum of 2048 groups are supported. 
-When group_idx is inputted, it is required to ensure that the values of the tensor do not exceed the maxium value of INT32 and are non-negative. 
+group_idx: A maximum of 2048 groups are supported.
+When group_idx is inputted, it is required to ensure that the values of the tensor do not exceed the maxium value of INT32 and are non-negative.
 When group_idx is inputted and group_idx_type is 0, it is necessary to ensure that the tensor data is in ascending order, and the last numerical value is equal to the
-size of the 0th dimension of grad_y. 
+size of the 0th dimension of grad_y.
 When group_idx is inputted and group_idx_type is 1, it is necessary to ensure that the sum of the tensor values must equal the size of grad_y in the 0th dimension.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

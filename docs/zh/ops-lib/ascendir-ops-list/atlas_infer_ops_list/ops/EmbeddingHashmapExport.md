@@ -15,7 +15,7 @@ REG_OP(EmbeddingHashmapExport)
 
 ## Brief
 
-Export table data from the embedding table to file. 
+Export table data from the embedding table to file.
 
 ## Inputs
 
@@ -32,7 +32,7 @@ and folder path without a file name prefix such as /home/path/.
 - filter_flags: Tensors which number is consistent with table's number, dtype is uint8,
                 indicates the filter flag of each hashmap.
 - values: Tensors which number is consistent with table's number, dtype is float32.
-               indicates the value of each hashmap. 
+               indicates the value of each hashmap.
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -13,7 +13,7 @@ REG_OP(SpaceToBatchND)
 
 Zeros-pads and then permutes blocks of spatial data into batch.
 The values from the height and width dimensions are moved in spatial blocks to the batch dimension.
-After zeros-pads the height and width dimensions. 
+After zeros-pads the height and width dimensions.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ int16, complex64, complex128, qint8, quint8, qint16, quint16, qint32, bfloat16.
 
 ## Outputs
 
-y: A tensor, the same type and format as "x". 
+y: A tensor, the same type and format as "x".
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator SpaceToBatchND.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

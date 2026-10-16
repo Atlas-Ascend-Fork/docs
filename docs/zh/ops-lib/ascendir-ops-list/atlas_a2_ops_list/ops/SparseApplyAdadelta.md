@@ -37,7 +37,7 @@ Eight inputs, including:
 - grad: A tensor, specifying the gradient. Has the same type and format as var.
 - indices: A vector of indices into the first dimension of "var", "accum" and "accum_update". Support dtype: int32,
 int64, support format: [ND].
-The value of indices must be unique. Otherwise, the result is unpredictable . 
+The value of indices must be unique. Otherwise, the result is unpredictable .
 
 ## Outputs
 
@@ -80,4 +80,4 @@ Compatible with the TensorFlow operator SparseApplyAdadelta.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

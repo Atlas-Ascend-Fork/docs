@@ -22,16 +22,16 @@ Specifies the dimension along which to concatenate .
 Must be one of the BasicType:
 complex128, complex64, double, float32, float16, int16, int32, int64, int8,
 qint16, qint32, qint8, quint16, quint8, uint16, uint32, uint64, uint8,
-bfloat16, complex32, bool, HIFLOAT8、FLOAT8_E5M2、FLOAT8_E4M3FN、FLOAT8_E8M0.. 
+bfloat16, complex32, bool, HIFLOAT8、FLOAT8_E5M2、FLOAT8_E4M3FN、FLOAT8_E8M0..
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as "x" . 
+y: A Tensor. Has the same type and format as "x" .
 
 ## Attributes
 
 N: An optional int8, int16, int32, or int64. Specifies the number of elements in "x" .
-Defaults to "1". 
+Defaults to "1".
 
 ## Data Types
 
@@ -51,9 +51,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator Concat. 
+Compatible with the TensorFlow operator Concat.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

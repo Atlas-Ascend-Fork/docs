@@ -19,7 +19,7 @@ an input signal composed of several input planes.
 
 One input, including:
 - x: A Tensor. Must be one of the following data types:
-    float16, bfloat16, float32. 
+    float16, bfloat16, float32.
 
 ## Outputs
 
@@ -31,9 +31,9 @@ One input, including:
 - output_size: A required list of 0, 1 or 3 ints.
 0 specifies the shape of the output tensor is the same as x.
 1 specifies the size (D,D,D) of the output tensor.
-3 specifies the size (D,H,W) of the output tensor. 
+3 specifies the size (D,H,W) of the output tensor.
 - indices_dtype: An optional int, default value is 3.
-(3 is int32, 9 is int64) 
+(3 is int32, 9 is int64)
 
 ## Data Types
 
@@ -50,4 +50,4 @@ Compatible with the Pytorch operator AdaptiveMaxPool3d.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -34,4 +34,4 @@ resized_imgs: A Tensor of type uint8. Multi imgs after identify pre handle.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

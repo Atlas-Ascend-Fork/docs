@@ -18,7 +18,7 @@ Get the next batch of data in data processing.
 ## Outputs
 
 y:A nested structure of Tensor objects.
-Must be one of the following types: int8, uint8, int16, uint16, int32, int64, uint32, uint64, float16, float, double, bool. 
+Must be one of the following types: int8, uint8, int16, uint16, int32, int64, uint32, uint64, float16, float, double, bool.
 
 ## Attributes
 
@@ -36,4 +36,4 @@ Compatible with tensorflow GetNext operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

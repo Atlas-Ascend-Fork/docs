@@ -23,11 +23,11 @@ indices passed to the corresponding SparseSegmentSum op.
 - segment_ids: A ND(Support 1D) Tensor of type int32, int64. segment_ids passed to the
 corresponding SparseSegmentSum op, has save rank as indices.
 - output_dim0: A Scalar of type int32. dimension 0 of "x" passed to
-SparseSegmentSum op . 
+SparseSegmentSum op .
 
 ## Outputs
 
-output:A ND(Support 1D) Tensor. Has the same type as grad . 
+output:A ND(Support 1D) Tensor. Has the same type as grad .
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with tensorflow SparseSegmentSumGrad operator
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

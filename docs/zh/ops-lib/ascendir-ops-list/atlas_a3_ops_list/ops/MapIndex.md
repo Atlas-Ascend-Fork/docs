@@ -23,7 +23,7 @@ Format support ND, the max dim is 400 (128 on Lhisi(Hi3796CV300CS, SD3403), 2400
 Format support ND, specifying the mapped table is queried.
 The length of data_seq must be multiple of the length of x, and the length of data_seq / x <= 100 (256 on Ascend 950 AI Processor).
 - level_index: One dimensional tensor of type int32, the length of level_index must be equal to the length of data_seq divided by the length of x.
-Format support ND, specifying secondary index. 
+Format support ND, specifying secondary index.
 
 ## Outputs
 
@@ -53,4 +53,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -26,7 +26,7 @@ x: A Tensor of type: float16, float32, float64, int8, int16, int32, int64, uint8
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as input "x" . 
+y: A Tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -58,4 +58,4 @@ Compatible with the TensorFlow operator MaxPoolV2.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

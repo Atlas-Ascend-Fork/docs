@@ -15,11 +15,11 @@ Gather selected dims of input which returns the shape of tensor shape after gath
 
 ## Inputs
 
-x: A list of input tensors. All data types are supported. It's a dynamic input. 
+x: A list of input tensors. All data types are supported. It's a dynamic input.
 
 ## Outputs
 
-shape: The shape of tensor shape after gathershapes. Must be one of the following types: int32、int64. 
+shape: The shape of tensor shape after gathershapes. Must be one of the following types: int32、int64.
 
 ## Attributes
 
@@ -29,4 +29,4 @@ shape: The shape of tensor shape after gathershapes. Must be one of the followin
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

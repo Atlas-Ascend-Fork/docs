@@ -9,11 +9,11 @@ REG_OP(CacheUpdate)
 
 ## Brief
 
-aicpu cache help for lhisi cache flush. 
+aicpu cache help for lhisi cache flush.
 
 ## Inputs
 
-The input is dynamic for attribute func_name   
+The input is dynamic for attribute func_name
 
 ## Outputs
 
@@ -22,4 +22,4 @@ The output is dynamic for attribute func_name.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

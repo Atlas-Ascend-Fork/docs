@@ -11,15 +11,15 @@ REG_OP(_While)
 
 ## Brief
 
-Cyclic execute the "body" subgraph until the return tensor of "cond" subgraph means False . 
+Cyclic execute the "body" subgraph until the return tensor of "cond" subgraph means False .
 
 ## Inputs
 
-input: The input tensors . It's a dynamic input. 
+input: The input tensors . It's a dynamic input.
 
 ## Outputs
 
-output: The output tensors returned by "body". Has the same type as "input" . 
+output: The output tensors returned by "body". Has the same type as "input" .
 
 ## Graphs
 
@@ -38,4 +38,4 @@ Compatible with the TensorFlow operator _While.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

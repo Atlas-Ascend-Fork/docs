@@ -11,7 +11,7 @@ REG_OP(AssignSubVariableOp)
 
 ## Brief
 
-Subtracts a value to the current value of a variable. 
+Subtracts a value to the current value of a variable.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ Subtracts a value to the current value of a variable.
 
 ## Attributes
 
-dtype: required, type. 
+dtype: required, type.
 @see AssignSubVariableOp.
 
 ## Data Types
@@ -33,4 +33,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

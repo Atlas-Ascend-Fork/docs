@@ -10,7 +10,7 @@ REG_OP(TensorMapErase)
 
 ## Brief
 
-Returns a tensor map with item from given key erased. 
+Returns a tensor map with item from given key erased.
 
 ## Inputs
 
@@ -19,7 +19,7 @@ Returns a tensor map with item from given key erased.
 
 ## Outputs
 
-output_handle: A scalar Tensor of type variant. The map with value from given key removed. 
+output_handle: A scalar Tensor of type variant. The map with value from given key removed.
 
 ## Data Types
 
@@ -36,4 +36,4 @@ Compatible with tensorflow TensorMapErase operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -38,7 +38,7 @@ specifying the stride of the sliding window.
 
 ## Attention Constraints
 
-- Only Atlas Training Series Product is supported.
+- Only Atlas training products is supported.
 - "orig_x" and "grads" must have the same shape.
 - "orig_y" and "y" must have the same shape. Otherwise, an error is reported.
 - "orig_x", "orig_y", "grads", and "y" must be 5D tensors .
@@ -50,4 +50,4 @@ specifying the stride of the sliding window.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

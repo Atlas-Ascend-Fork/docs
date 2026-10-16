@@ -11,7 +11,7 @@ REG_OP(BlendImagesCustom)
 
 ## Brief
 
-Generate rgb and frame images into a out image with alpha transparency. 
+Generate rgb and frame images into a out image with alpha transparency.
 
 ## Inputs
 
@@ -35,4 +35,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

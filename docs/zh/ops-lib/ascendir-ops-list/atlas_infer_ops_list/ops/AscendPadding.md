@@ -15,11 +15,11 @@ Ascend Padding, pad the last dimension of input.
 ## Inputs
 
 One input, include:
-x: Tensor which last dimension must be 1. For example: [624000, 1]. 
+x: Tensor which last dimension must be 1. For example: [624000, 1].
 
 ## Outputs
 
-y: Padding the last dimension of x to padDimSize, [624000, padDimSize]. 
+y: Padding the last dimension of x to padDimSize, [624000, padDimSize].
 
 ## Data Types
 
@@ -35,4 +35,4 @@ Compatible with the TensorFlow operator Diag.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -11,22 +11,22 @@ REG_OP(MatrixInverse)
 ## Brief
 
 Computes the inverse of one or more square invertible matrices or
-their adjoints (conjugate transposes) . 
+their adjoints (conjugate transposes) .
 
 ## Inputs
 
 The input x is a tensor of shape [..., M, M] whose inner-most 2 dimensions
 form square matrices. Inputs include:
-x:A Tensor of input. Shape is [..., M, M] . 
+x:A Tensor of input. Shape is [..., M, M] .
 
 ## Outputs
 
-y:A Tensor. Has the same type as x . 
+y:A Tensor. Has the same type as x .
 
 ## Attributes
 
 adjoint:An optional bool. Defaults to False.Boolean indicating whether to
-deal with matrix or its (block-wise) adjoint . 
+deal with matrix or its (block-wise) adjoint .
 
 ## Data Types
 
@@ -38,7 +38,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The input x is a tensor of shape [..., M, M] whose inner-most 2 dimensions
-form square matrices.  
+form square matrices.
 
 ## Third-party framework compatibility
 
@@ -47,4 +47,4 @@ Compatible with tensorflow MatrixInverse operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

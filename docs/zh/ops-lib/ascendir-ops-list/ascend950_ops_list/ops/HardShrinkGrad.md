@@ -18,17 +18,17 @@ Computes the gradient for the HardShrink: if x > lambda or x < -lambda, x,otherw
 
 Two inputs, including:
 - gradients: A tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 - features: A tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 
 ## Outputs
 
-backprops: A tensor with the same type and shape as 'features'. 
+backprops: A tensor with the same type and shape as 'features'.
 
 ## Attributes
 
-lambd: An optional float.Defaults to 0.5. 
+lambd: An optional float.Defaults to 0.5.
 
 ## Data Types
 
@@ -40,9 +40,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Hardshrink_backward. 
+Compatible with the Pytorch operator Hardshrink_backward.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

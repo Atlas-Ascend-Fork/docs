@@ -10,7 +10,7 @@ REG_OP(Heaviside)
 
 ## Brief
 
-Apply the heaviside step function element-wise to the input. 
+Apply the heaviside step function element-wise to the input.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ The format must be ND.
 
 ## Outputs
 
-output: A tensor has the same type, shape and format as "input". 
+output: A tensor has the same type, shape and format as "input".
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

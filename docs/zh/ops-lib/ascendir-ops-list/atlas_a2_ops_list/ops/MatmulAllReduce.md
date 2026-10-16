@@ -48,11 +48,11 @@ The type support float32, float8_e8m0, float16, bf16.
 - comm_quant_scale_1: A matrix tensor. The per-channel quantization coefficient after the matmulAdd computation.
 The type support float16, bf16, float32.
 - comm_quant_scale_2: A matrix tensor. The per-channel quantization coefficient after the allGather computation.
-The type support float16, bf16, float32. 
+The type support float16, bf16, float32.
 
 ## Outputs
 
-y: A matrix tensor. The type support float16, bf16. 
+y: A matrix tensor. The type support float16, bf16.
 
 ## Attributes
 
@@ -100,7 +100,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - The input data type of x1, x2 and bias (if supported) computation must be the same as the output data
  type of output computation.
 - The x2 matrix can be transposed or not transposed. The x1 matrix cannot be transposed.
-- The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 1, 2, 4, and 8 cards.
+- The Atlas A2 products support 1, 2, 4, and 8 cards.
 - Constraints for WeightQuantMatmulAllreudce:
 - WeightQuantMatmulAllreudce has poor performance when the product of the 1th dimension(b) and 2st dimension(s) of input x1 is small.
 - x1 can be 2-dimensional or 3-dimensional, and the dimension is (b, s, k) or (m, k). x2 must be
@@ -122,7 +122,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - In the long sequence scenario, as b/s or m increases, OOM or computation timeout may occur.
 - When the format of x2 is FRACTAL_NZ, only two dimensions are supported. CalculateMatmulWeightSizeV2
  TransMatmulWeightGetWorkspaceSize/TransMatmulWeight needs to be used to convert the format ND into NZ.
-- The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 1, 2, 4, and 8 cards.
+- The Atlas A2 products support 1, 2, 4, and 8 cards.
 - Constraints for QuantMatmulAllreudce:
 - QuantMatmulAllreudce has poor performance when the product of the 1th dimension(b) and 2st dimension(s) of input x1 is small.
 - x1 can be a 2-dimensional or 3-dimensional tensor and cannot be empty. The dimension of x1 is (b, s, k)
@@ -140,9 +140,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - The x2 matrix can be transposed or not transposed. The x1 matrix cannot be transposed.
 - The Ascend 950 AI processor newly suported hifloat8, float8_e5m2, float8_e4m3, float4_e2m1, float4_e1m2,
  output suport float32 when input datatype is hifloat8, float8_e5m2, float8_e4m3, float4_e2m1, float4_e1m2.
-- The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 1, 2, 4, and 8 cards.
+- The Atlas A2 products support 1, 2, 4, and 8 cards.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

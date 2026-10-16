@@ -10,7 +10,7 @@ REG_OP(SequenceErase)
 
 ## Brief
 
-ouputs a tensor sequence that remove the tensor at 'position' from input_sequence. 
+ouputs a tensor sequence that remove the tensor at 'position' from input_sequence.
 
 ## Inputs
 
@@ -18,12 +18,12 @@ ouputs a tensor sequence that remove the tensor at 'position' from input_sequenc
 - index: position of the tensor in the sequence. negative value means
 counting position from back, accepted range in [-n, n - 1],
 where n is the number of tensors in sequence,
-it must be a scalar(tensor of empty shape), Must be one of the following types: int32, int64, it is scalar. 
+it must be a scalar(tensor of empty shape), Must be one of the following types: int32, int64, it is scalar.
 
 ## Outputs
 
 - handle_y: the handle of the sequence that has the tensor
-at the specified position removed. 
+at the specified position removed.
 
 ## Data Types
 
@@ -35,4 +35,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

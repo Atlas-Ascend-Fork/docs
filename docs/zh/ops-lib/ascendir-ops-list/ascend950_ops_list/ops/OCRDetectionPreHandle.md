@@ -16,7 +16,7 @@ ocr detection pre handle.
 
 ## Inputs
 
-img: A Tensor of type uint8. img data value. 
+img: A Tensor of type uint8. img data value.
 
 ## Outputs
 
@@ -32,4 +32,4 @@ data_format: An optional string from: '"NHWC", "NCHW"'. Defaults to
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

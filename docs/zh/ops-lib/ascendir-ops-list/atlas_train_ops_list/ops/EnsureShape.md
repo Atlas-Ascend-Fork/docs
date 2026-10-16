@@ -12,25 +12,25 @@ REG_OP(EnsureShape)
 
 ## Brief
 
-Ensures that the tensor's shape matches the expected shape. 
+Ensures that the tensor's shape matches the expected shape.
 
 ## Inputs
 
 input: A Tensor. that need to be checked with desired shape
        Must be one of the following types:
        int8, uint8, int16, uint16, int32, int64, float16, float,
-       double, complex64, complex128 
+       double, complex64, complex128
 
 ## Outputs
 
 output: A tensor. has the same type and contents as input
        Must be one of the following types:
        int8, uint8, int16, uint16, int32, int64, float16, float,
-       double, complex64, complex128 
+       double, complex64, complex128
 
 ## Attributes
 
-shape: required, a desired tensor shape. type: list int 
+shape: required, a desired tensor shape. type: list int
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

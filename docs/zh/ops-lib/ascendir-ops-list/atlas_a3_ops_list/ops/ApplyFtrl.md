@@ -17,7 +17,7 @@ REG_OP(ApplyFtrl)
 
 ## Brief
 
-Updates "var" according to the Ftrl-proximal scheme . 
+Updates "var" according to the Ftrl-proximal scheme .
 
 ## Inputs
 
@@ -36,14 +36,14 @@ Eight inputs, including:
 
 ## Outputs
 
-var: A mutable Tensor. Has the same type as "var" . 
+var: A mutable Tensor. Has the same type as "var" .
 
 ## Attributes
 
 use_locking: An optional bool. Defaults to "False".
     If "True", updating of the "var" and "accum" tensors will be
     protected by a lock; otherwise the behavior is undefined,
-    but may exhibit less contention . 
+    but may exhibit less contention .
 
 ## Data Types
 
@@ -66,4 +66,4 @@ Compatible with the TensorFlow operator ApplyFtrl.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

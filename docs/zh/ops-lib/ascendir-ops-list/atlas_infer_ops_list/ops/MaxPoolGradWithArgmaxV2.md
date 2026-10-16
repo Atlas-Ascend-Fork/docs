@@ -27,12 +27,12 @@ Must set the format, supported format list ["NC1HWC0"]
 - grad: An 5hd tensor of type float16.
 Must set the format, supported format list ["NC1HWC0"]
 - argmax: An 5hd tensor of type uint16 or int64.
-Must set the format, supported format list ["NC1HWC0"] 
+Must set the format, supported format list ["NC1HWC0"]
 For Ascend 950 AI Processor: The uint16 data type is not supported.
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as input "x". 
+y: A Tensor. Has the same type and format as input "x".
 
 ## Attributes
 
@@ -41,7 +41,7 @@ specifying the size of the window for each dimension of the input tensor. No def
 - strides: A required list of int8, int16, int32, or int64 values,
 specifying the stride of the sliding window for each dimension of the input tensor. No default value.
 - pads: A required list of int8, int16, int32, or int64 values,
-specifying the pad of the input feature map. No default value. 
+specifying the pad of the input feature map. No default value.
 - dtype: A optional int. default value is 3.
 - dilation: A optional list of int8, int16, int32, or int64 values.
 - ceil_mode: A optional bool. default value is false.
@@ -74,4 +74,4 @@ Compatible with the PyTorch backward operator of max_pool2d_with_indices.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

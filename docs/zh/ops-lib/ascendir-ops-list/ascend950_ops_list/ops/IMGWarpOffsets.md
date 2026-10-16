@@ -37,4 +37,4 @@ When input dtype of offsets is int32, images should be float16.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

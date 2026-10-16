@@ -9,18 +9,18 @@ REG_OP(QueueClose)
 
 ## Brief
 
-Closes the given queue. 
+Closes the given queue.
 
 ## Inputs
 
 Including:
-handle: A Tensor of type DT_RESOURCE. The handle to a queue. 
+handle: A Tensor of type DT_RESOURCE. The handle to a queue.
 
 ## Attributes
 
 cancel_pending_enqueues: An optional bool. Defaults to "False".
 If true, all pending enqueue requests that are blocked on
-the given queue will be canceled. 
+the given queue will be canceled.
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Compatible with the TensorFlow operator QueueClose.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -13,11 +13,11 @@ Compute sigmoid of "x" element-wise .
 
 ## Inputs
 
-A Tensor of type complex64, complex128, bfloat16, float16, float32 or double . 
+A Tensor of type complex64, complex128, bfloat16, float16, float32 or double .
 
 ## Outputs
 
-A Tensor. Has the same type as "x" . 
+A Tensor. Has the same type as "x" .
 @see Relu()
 
 ## Data Types
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator Sigmoid.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

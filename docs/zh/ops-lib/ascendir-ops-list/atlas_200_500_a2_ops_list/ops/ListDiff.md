@@ -15,7 +15,7 @@ REG_OP(ListDiff)
 
 ## Brief
 
-Calculates the difference between two numbers or a list of strings. 
+Calculates the difference between two numbers or a list of strings.
 
 ## Inputs
 
@@ -30,7 +30,7 @@ Inputs "x" and "y" are 1D vectors.
 
 ## Attributes
 
-out_idx: An optional DType from: "int32, int64". Defaults to "int32". 
+out_idx: An optional DType from: "int32, int64". Defaults to "int32".
 
 ## Data Types
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-ListDiff runs on the Ascend AI CPU, which delivers poor performance. 
+ListDiff runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator ListDiff.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

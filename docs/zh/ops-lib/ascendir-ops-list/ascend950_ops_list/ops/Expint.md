@@ -25,8 +25,8 @@ y: A ND Tensor of the same dtype as "x".
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 x: bfloat16,float16,float32
-- output0 y: bfloat16,float16,float32
+- input0 x: float32
+- output0 y: float32
 
 ## Third-party framework compatibility
 
@@ -35,4 +35,4 @@ Compatible with TensorFlow operator Expint.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

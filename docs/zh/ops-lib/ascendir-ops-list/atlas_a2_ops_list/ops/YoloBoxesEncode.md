@@ -13,7 +13,7 @@ REG_OP(YoloBoxesEncode)
 ## Brief
 
 Generates bounding boxes based on yolo's "anchor" and "ground-truth" boxes.
-It is a customized mmdetection operator . 
+It is a customized mmdetection operator .
 
 ## Inputs
 
@@ -26,7 +26,7 @@ of ROIs, "N" indicates the number of ROIs, and the value "4" refers to (tx, ty, 
 "N" indicates the number of ROIs, and 4 indicates "dx", "dy", "dw", and "dh" .
 - stride: Scale for each box.
  A 1D Tensor of type int32 shape (N,).
-"N" indicates the number of ROIs. 
+"N" indicates the number of ROIs.
 
 ## Outputs
 
@@ -51,9 +51,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-input anchor boxes only support maximum N=20480. 
+input anchor boxes only support maximum N=20480.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

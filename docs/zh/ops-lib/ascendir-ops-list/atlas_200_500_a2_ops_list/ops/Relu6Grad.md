@@ -19,11 +19,11 @@ Computes rectified linear 6 gradients for a Relu6 operation.
 gradients to the corresponding Relu6 operation.
 - features: A ND Tensor with the same type as gradients.The features passed
 as input to the corresponding Relu6 operation, or its output;
-using either one produces the same result.  
+using either one produces the same result.
 
 ## Outputs
 
-backprops: A Tensor of type RealNumberType . 
+backprops: A Tensor of type RealNumberType .
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Compatible with the TensorFlow operator Relu6Grad.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

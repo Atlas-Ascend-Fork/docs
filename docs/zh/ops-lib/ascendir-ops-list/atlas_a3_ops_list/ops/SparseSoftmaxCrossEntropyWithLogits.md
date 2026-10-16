@@ -20,13 +20,13 @@ Two inputs, including:
 A "batch_size * num_classes" matrix.
 - labels: A Tensor. Must be one of the following types: 'int32', 'int64'.
 batch_size vector with values in [0, num_classes).
-This is the label for the given minibatch entry. 
+This is the label for the given minibatch entry.
 
 ## Outputs
 
 - loss: A Tensor for per example loss (a "batch_size" vector). Has the same type as "features".
 - backprop: A Tensor for the backpropagated gradients (a batch_size * num_classes matrix).
-Has the same type as "features" . 
+Has the same type as "features" .
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Compatible with the TensorFlow operator SparseSoftmaxCrossEntropyWithLogits.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

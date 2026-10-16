@@ -16,7 +16,7 @@ REG_OP(SparseReorder)
 
 ## Brief
 
-Reorders a SparseTensor into the canonical, row-major ordering. 
+Reorders a SparseTensor into the canonical, row-major ordering.
 
 ## Inputs
 
@@ -46,4 +46,4 @@ Compatible with the TensorFlow operator SparseReorder.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -18,7 +18,7 @@ REG_OP(SparseDenseCwiseDiv)
 
 ## Brief
 
-Divides a SparseTensor by a dense tensor. 
+Divides a SparseTensor by a dense tensor.
 
 ## Inputs
 
@@ -29,7 +29,7 @@ Divides a SparseTensor by a dense tensor.
 
 ## Outputs
 
-y: A tensor. Has the same type as "x1_values". 
+y: A tensor. Has the same type as "x1_values".
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator SparseDenseCwiseDiv.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

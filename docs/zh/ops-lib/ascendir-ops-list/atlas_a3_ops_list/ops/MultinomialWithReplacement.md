@@ -13,7 +13,7 @@ REG_OP(MultinomialWithReplacement)
 
 ## Brief
 
-Returns a tensor where each row contains numsamples indices sampled from the multinomial distribution. 
+Returns a tensor where each row contains numsamples indices sampled from the multinomial distribution.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ generator is seeded by a random seed. Otherwise, it is seeded by the given seed.
 
 ## Outputs
 
-y: A Tensor, with type int64 . 
+y: A Tensor, with type int64 .
 
 ## Attributes
 
@@ -47,4 +47,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

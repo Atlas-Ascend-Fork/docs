@@ -16,16 +16,16 @@ REG_OP(RmsNormDynamicQuant)
 ## Brief
 
 Fused Operator of RmsNorm and DynamicQuant.
-Calculating input: x, gamma, smooth_scales 
-Calculating process: 
- rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon)) 
- rmsnorm_out = x * rstd * gamma 
- if smooth_scales exist: 
-   input = rmsnorm_out * smooth_scales 
-   scale = row_max(abs(input)) / max_val 
- if smooth_scales not exist: 
-   scale = row_max(abs(rmsnorm_out)) / max_val 
- y = round(input / scale) 
+Calculating input: x, gamma, smooth_scales
+Calculating process:
+ rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon))
+ rmsnorm_out = x * rstd * gamma
+ if smooth_scales exist:
+   input = rmsnorm_out * smooth_scales
+   scale = row_max(abs(input)) / max_val
+ if smooth_scales not exist:
+   scale = row_max(abs(rmsnorm_out)) / max_val
+ y = round(input / scale)
 
 ## Inputs
 
@@ -66,4 +66,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

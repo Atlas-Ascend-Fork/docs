@@ -17,7 +17,7 @@ REG_OP(EmbeddingHashTableExport)
 
 ## Brief
 
-embedding hashtable export. 
+embedding hashtable export.
 
 ## Inputs
 
@@ -38,7 +38,7 @@ embedding hashtable export.
 
 - export_mode: An optional String. Represents export mode, can be either "all" or "new". Defaults to "all".
 - filtered_export_flag: An optional Bool. Represents filter export flag on counter filter scenario.
-Defaults to false. 
+Defaults to false.
 
 ## Data Types
 
@@ -57,9 +57,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - table_handles, table_sizes, embedding_dims and bucket_sizes have same shape len.
 - the number of tensors in each dynamic output tensor list (keys/counters/filter_flags/values) shall be equal to
-the shape len of table_handles. 
+the shape len of table_handles.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

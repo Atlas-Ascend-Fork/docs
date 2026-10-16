@@ -14,7 +14,7 @@ REG_OP(ExtractImagePatches)
 ## Brief
 
 Extract "patches" from "images" and stacks them in the "depth"
-dimension of the output . 
+dimension of the output .
 
 ## Inputs
 
@@ -29,7 +29,7 @@ y: A Tensor with shape [batch, out_rows, out_cols, ksize_rows *
 ksize_cols * depth] containing image patches with size ksize_rows x ksize_cols
 x depth vectorized in the "depth" dimension. Note "out_rows" and "out_cols"
 are the dimensions of the output patches . Support dtype: [float16, float32, bfloat16, int8, uint8],
-Support format: [NHWC] 
+Support format: [NHWC]
 
 ## Attributes
 
@@ -44,7 +44,7 @@ with patch_sizes_eff = patch_sizes + (patch_sizes - 1) *
 (rates - 1), followed by subsampling them spatially by a factor of rates.
 This is equivalent to rate in dilated (a.k.a. Atrous) convolutions.
 - padding: A required string. The type of padding algorithm to use,
-support "SAME" or "VALID". 
+support "SAME" or "VALID".
 
 ## Data Types
 
@@ -55,7 +55,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-"ksizes", "strides" and "rates" are lists of integers . 
+"ksizes", "strides" and "rates" are lists of integers .
 
 ## Third-party framework compatibility
 
@@ -64,4 +64,4 @@ Compatible with the TensorFlow operator ExtractImagePatches.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

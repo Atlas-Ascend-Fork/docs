@@ -48,4 +48,4 @@ Compatible with TensorFlow operator Exp.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -16,12 +16,12 @@ Compare two tensors are totally equal or not, only output a bool value"
 
 Two inputs, including:
 - input_x: A ND tensor. the first tensor. Must be one of the following types: float16, float32, double,
-int64, int32, int8, uint8, bool, bfloat16, int16, uint16, uint32, uint64. 
+int64, int32, int8, uint8, bool, bfloat16, int16, uint16, uint32, uint64.
 - input_y: A ND tensor of the same dtype as "input_x".
 
 ## Outputs
 
-output_z: A ND tensor. Bool type, compare result of the two inputs. True if element in input_x is equal to input_y, False otherwise. 
+output_z: A ND tensor. Bool type, compare result of the two inputs. True if element in input_x is equal to input_y, False otherwise.
 
 ## Data Types
 
@@ -37,9 +37,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the PyTorch equal operator. 
+Compatible with the PyTorch equal operator.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -17,15 +17,15 @@ Performs the the backward operation for "BiasAdd" on the "bias" tensor.
 
 ## Inputs
 
-x: A Tensor of type NumberType . 
+x: A Tensor of type NumberType .
 
 ## Outputs
 
-y: A Tensor.Has the same type as "x" . 
+y: A Tensor.Has the same type as "x" .
 
 ## Attributes
 
-data_format: A required attr. Data format. Defaults to "NHWC" . 
+data_format: A required attr. Data format. Defaults to "NHWC" .
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Compatible with the TensorFlow operator BiasAddGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

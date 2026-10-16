@@ -15,7 +15,7 @@ REG_OP(StatelessUniform)
 ## Brief
 
 Outputs deterministic pseudorandom values from a uniform distribution in [from, to),
-       bit-exact with CUDA/PyTorch H20 GPU uniform_() implementation. 
+       bit-exact with CUDA/PyTorch H20 GPU uniform_() implementation.
 
 ## Inputs
 
@@ -28,12 +28,12 @@ Outputs deterministic pseudorandom values from a uniform distribution in [from, 
 ## Outputs
 
 y: Returns random values with specified shape. Values are in [from, to).
-Must be one of the following types: float16, bfloat16, float32. 
+Must be one of the following types: float16, bfloat16, float32.
 
 ## Attributes
 
 dtype: Output data type. Must be one of the following types: float16, bfloat16, float32.
-Defaults to float32. 
+Defaults to float32.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with PyTorch torch.Tensor.uniform_() operator (bit-exact with CUDA H2
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

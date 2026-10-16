@@ -38,4 +38,4 @@ grad_y: A Tensor, the interpolate backward output with dtype of float32 and floa
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

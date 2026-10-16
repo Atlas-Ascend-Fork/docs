@@ -58,4 +58,4 @@ Compatible with tensorflow and pytorch ResizeBilinearV2Grad operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

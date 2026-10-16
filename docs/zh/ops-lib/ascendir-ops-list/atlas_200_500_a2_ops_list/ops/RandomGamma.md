@@ -12,7 +12,7 @@ REG_OP(RandomGamma)
 
 ## Brief
 
-Outputs random values from the Gamma distribution(s) described by alpha. 
+Outputs random values from the Gamma distribution(s) described by alpha.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Inputs include:
 
 ## Outputs
 
-y: A Tensor. Has the same type as alpha. 
+y: A Tensor. Has the same type as alpha.
 
 ## Attributes
 
@@ -48,4 +48,4 @@ The implementation for RandomGamma on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

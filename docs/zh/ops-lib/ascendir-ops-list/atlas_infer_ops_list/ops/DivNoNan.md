@@ -21,12 +21,12 @@ Two inputs, including:
 - x1: A ND Tensor. Must be one of the following types:float16, float32, int32,
    int8, uint8, double, bfloat16.
 - x2: A ND Tensor which has the same dtype as "x1". The shapes of "x1", "x2",
-   and "y" must comply with the broadcast rule. 
+   and "y" must comply with the broadcast rule.
 
 ## Outputs
 
 y: A ND Tensor which has the same dtype as "x1".The shapes of "x1", "x2",
-and "y" must comply with the broadcast rule. 
+and "y" must comply with the broadcast rule.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with the TensorFlow operator DivNoNan.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

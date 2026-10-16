@@ -20,7 +20,7 @@ Add tensor with scale y = x1 + x2*alpha. Support broadcasting operations.
 
 ## Outputs
 
-y: A ND Tensor. should be broadcast shape of x1 and x2. 
+y: A ND Tensor. should be broadcast shape of x1 and x2.
 
 ## Attributes
 
@@ -41,4 +41,4 @@ Compatible with the PyTorch operator Axpy.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

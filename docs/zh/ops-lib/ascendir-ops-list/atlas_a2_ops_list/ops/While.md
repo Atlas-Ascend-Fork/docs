@@ -12,15 +12,15 @@ REG_OP(While)
 
 ## Brief
 
-Cyclic execute the "body" subgraph until the return tensor of "cond" subgraph means False . 
+Cyclic execute the "body" subgraph until the return tensor of "cond" subgraph means False .
 
 ## Inputs
 
-input: The input tensors . It's a dynamic input. 
+input: The input tensors . It's a dynamic input.
 
 ## Outputs
 
-output: The output tensors returned by "body". Has the same type as "input" . It's a dynamic output. 
+output: The output tensors returned by "body". Has the same type as "input" . It's a dynamic output.
 
 ## Graphs
 
@@ -34,7 +34,7 @@ output: The output tensors returned by "body". Has the same type as "input" . It
 
 ## Attributes
 
-parallel_iterations: An optional int, default as 10 . 
+parallel_iterations: An optional int, default as 10 .
 
 ## Third-party framework compatibility
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator While.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

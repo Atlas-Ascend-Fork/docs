@@ -16,7 +16,7 @@ REG_OP(STFT)
 
 ## Brief
 
-Computes the Fourier transform of short overlapping windows of the input. 
+Computes the Fourier transform of short overlapping windows of the input.
 
 ## Inputs
 
@@ -24,12 +24,12 @@ Computes the Fourier transform of short overlapping windows of the input.
 float32, double, complex64, complex128.
 - window: An optional tensor. The optional window function.
 Must be one of the following types: float32, double, complex64, complex128.
-Default: None (treated as window of all 1 s) 
+Default: None (treated as window of all 1 s)
 
 ## Outputs
 
 y: A tensor containing the STFT result with shape described above. Must be
-one of the following types: float32, double, complex64, complex128. 
+one of the following types: float32, double, complex64, complex128.
 
 ## Attributes
 
@@ -42,7 +42,7 @@ Default: 0 (treated as equal to n_fft)
 - onesided: An optional bool. Controls whether to return half of results to avoid redundancy for real inputs.
 Default: True for real input and window, False otherwise.
 - return_complex: An optional bool. Whether to return a complex tensor, or a real tensor
-with an extra last dimension for the real and imaginary components. Default: True. 
+with an extra last dimension for the real and imaginary components. Default: True.
 
 ## Data Types
 
@@ -59,4 +59,4 @@ Compatible with pytorch STFT operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

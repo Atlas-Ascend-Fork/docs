@@ -26,19 +26,19 @@ the shape is same as input grads.
 - batch_mean: A 1D tensor of type float32,
 for the mean of "x", the shape is same as dim C of input grads.
 - batch_variance: A 1D tensor of type float32,
-for the variance of "x", the shape is same as dim C of input grads. 
+for the variance of "x", the shape is same as dim C of input grads.
 
 ## Outputs
 
 - diff_scale: A 1D Tensor of type float32,
 for the offset of "scale", the shape is same as dim C of input grads.
 - diff_offset: A 1D Tensor of type float32,
-for the offset of "offset", the shape is same as dim C of input grads. 
+for the offset of "offset", the shape is same as dim C of input grads.
 
 ## Attributes
 
 epsilon: An optional float32. Defaults to "0.0001". A small float number
-added to the variance of "x" . 
+added to the variance of "x" .
 
 ## Data Types
 
@@ -54,4 +54,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

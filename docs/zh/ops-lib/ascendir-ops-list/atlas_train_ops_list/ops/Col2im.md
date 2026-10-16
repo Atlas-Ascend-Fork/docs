@@ -49,4 +49,4 @@ Compatible with PyTorch torch.nn.Fold operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

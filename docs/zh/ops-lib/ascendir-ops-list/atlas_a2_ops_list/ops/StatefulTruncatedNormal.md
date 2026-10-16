@@ -14,7 +14,7 @@ REG_OP(StatefulTruncatedNormal)
 Outputs random values from a truncated normal distribution.
 The generated values follow a normal distribution with mean 0 and standard
 deviation 1, except that values whose magnitude is more than 2 standard
-deviations from the mean are dropped and re-picked . 
+deviations from the mean are dropped and re-picked .
 
 ## Inputs
 
@@ -24,7 +24,7 @@ deviations from the mean are dropped and re-picked .
 
 ## Outputs
 
-y:A Returns Random values with specified shape . 
+y:A Returns Random values with specified shape .
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with tensorflow StatefulTruncatedNormal operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

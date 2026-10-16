@@ -29,4 +29,4 @@ perform.The supported operation are: "sum", "max", "min", "prod".
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

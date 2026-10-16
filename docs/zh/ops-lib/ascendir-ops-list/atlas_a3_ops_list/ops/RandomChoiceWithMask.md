@@ -13,12 +13,12 @@ REG_OP(RandomChoiceWithMask)
 
 ## Brief
 
-Shuffle index of no-zero element . 
+Shuffle index of no-zero element .
 
 ## Inputs
 
 include:
-x:A tensor <= 5-D . 
+x:A tensor <= 5-D .
 
 ## Outputs
 
@@ -36,4 +36,4 @@ Otherwise, it is seeded by a random seed.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

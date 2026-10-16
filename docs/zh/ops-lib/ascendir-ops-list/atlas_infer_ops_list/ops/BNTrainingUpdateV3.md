@@ -24,37 +24,30 @@ don't contain assign moving average .
 ## Inputs
 
 Five inputs, including:
-- x: A 4D tensor of type float16 or float32 or bfloat16, with format NHWC or NCHW. Empty tensors are not
-supported.
+- x: A 4D tensor of type float16 or float32 or bfloat16, with format NHWC or NCHW. Empty tensors are not supported.
 Input tensor, that is, the original data that needs to be normalized.
-- sum: A 1D tensor of type float32, the shape is same as dim C of input "x", for the output of operator
-BNTrainingReduce.
+- sum: A 1D tensor of type float32, the shape is same as dim C of input "x", for the output of operator BNTrainingReduce.
 It represents the sum of the input tensor "x" on the C axis. Has the same format as "x".
-- square_sum: A 1D tensor of type float32, the shape is same as dim C of input "x", for the output of operator
-BNTrainingReduce.
+- square_sum: A 1D tensor of type float32, the shape is same as dim C of input "x", for the output of operator BNTrainingReduce.
 It represents the sum of squares of the input tensor "x" on the C axis. Has the same format as "x".
-- scale: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling factor. Has the
-same format as "x".
-- offset: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling offset. Has the
-same format as "x". 
+- scale: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling factor. Has the same format as "x".
+- offset: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling offset. Has the same format as "x".
 
 ## Outputs
 
 - y: A 4D tensor of type float16 or float32 or bfloat16, for normalized "x". Empty tensors are not supported.
 Has the same dype, format and shape as "x".
-- batch_mean: A 1D tensor of type float32, for the mean of "x". shape must be C channel. Has the same format as
-"x".
-- batch_variance: A 1D tensor of type float32, for the variance of "x" . shape must be C channel. Has the same
-format as "x".
+- batch_mean: A 1D tensor of type float32, for the mean of "x". shape must be C channel. Has the same format as "x".
+- batch_variance: A 1D tensor of type float32, for the variance of "x" . shape must be C channel. Has the same format as "x".
 - reserve_1: A 1D tensor of type float32, for the mean of batch "x".
 Has the same type, shape and format as input "sum".
 - reserve_2: A 1D tensor of type float32, for the variance of batch "x".
-Has the same type, shape and format as input "sum". 
+Has the same type, shape and format as input "sum".
 
 ## Attributes
 
 epsilon: A required float32, specifying the small value added to variance
-to avoid dividing by zero. 
+to avoid dividing by zero.
 
 ## Data Types
 
@@ -80,4 +73,4 @@ the square root instruction.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

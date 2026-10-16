@@ -12,7 +12,7 @@ REG_OP(Range)
 
 ## Brief
 
-Creates a sequence of numbers . 
+Creates a sequence of numbers .
 
 ## Inputs
 
@@ -24,18 +24,18 @@ Three inputs, including:
   defaults to the value of "start" while the first entry of the range
   defaults to "0". The supported types are:float16, float32, int32, double, int64, bfloat16, format supports ND.
 - delta: A 0D tensor (scalar). Number that increments "start".
-  Defaults to "1". The supported types are:float16, float32, int32, double, int64, bfloat16, format supports ND. 
+  Defaults to "1". The supported types are:float16, float32, int32, double, int64, bfloat16, format supports ND.
 
 ## Outputs
 
 y: A 1D tensor which is the sequence of numbers, format supports ND.
-   The supported types are:float16, float32, int32, double, int64, bfloat16. 
-   The types of start/limit/delta and output should be the same when the dtypes are:float16, bfloat16, int64. 
+   The supported types are:float16, float32, int32, double, int64, bfloat16.
+   The types of start/limit/delta and output should be the same when the dtypes are:float16, bfloat16, int64.
    The auto inferred type of output is the same as input when the types of start/limit/delta are the same,
-   otherwise the auto inferred type of output is float32. 
-   The double type of y is not supported in Ascend950 AI Processor. 
+   otherwise the auto inferred type of output is float32.
+   The double type of y is not supported in Ascend950 AI Processor.
    If the input parameters start, limit, delta are all of type double,
-   the output parameters y is only supported as float32 in Ascend950 AI Processor. 
+   the output parameters y is only supported as float32 in Ascend950 AI Processor.
 
 ## Attributes
 
@@ -63,4 +63,4 @@ Compatible with the TensorFlow operator Range or PyTorch operator Range/Arange.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

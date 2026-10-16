@@ -35,7 +35,7 @@ boxes to be selected by non max suppression per class.
 - iou_threshold: A 0-D float tensor representing the threshold for deciding whether
 boxes overlap too much with respect to IOU.
 - score_threshold: A 0-D float tensor representing the threshold for deciding when to remove
-boxes based on score . 
+boxes based on score .
 
 ## Outputs
 
@@ -53,7 +53,7 @@ output nmsed boxes, scores and classes are padded to be of length
 which case it is clipped to `max_total_size`. Defaults to false.
 - clip_boxes: If true, assume the box coordinates are between [0, 1] and clip the output boxes
 if they fall beyond [0, 1]. If false, do not do clipping and output the box
-coordinates as it is. If not specified, defaults to true . 
+coordinates as it is. If not specified, defaults to true .
 
 ## Data Types
 
@@ -88,4 +88,4 @@ Compatible with tensorflow CombinedNonMaxSuppression operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

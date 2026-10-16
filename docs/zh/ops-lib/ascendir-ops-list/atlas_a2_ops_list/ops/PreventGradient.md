@@ -10,19 +10,19 @@ REG_OP(PreventGradient)
 
 ## Brief
 
-Outputs its input tensor as is and triggers an error if a gradient is requested. 
+Outputs its input tensor as is and triggers an error if a gradient is requested.
 
 ## Inputs
 
-x: A tensor. 
+x: A tensor.
 
 ## Outputs
 
-y: The input tensor. 
+y: The input tensor.
 
 ## Attributes
 
-message: Will be printed in the error at the attempt to request a gradient. 
+message: Will be printed in the error at the attempt to request a gradient.
 
 ## Third-party framework compatibility
 
@@ -31,4 +31,4 @@ Compatible with the TensorFlow operator PreventGradient.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

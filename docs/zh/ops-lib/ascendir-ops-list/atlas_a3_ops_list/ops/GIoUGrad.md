@@ -15,7 +15,7 @@ REG_OP(GIoUGrad)
 
 ## Brief
 
-Calculate the inverse gradient of GIoU. 
+Calculate the inverse gradient of GIoU.
 
 ## Inputs
 
@@ -26,7 +26,7 @@ shape (4, N). "N" indicates the number of bounding boxes, and the value
 "4" refers to [x1, y1, x2, y2] or [x, y, w, h].
 - gtboxes: Ground-truth boxes, a 2D Tensor of type float16 or float32
 with shape (4, M). "M" indicates the number of ground truth boxes, and
-the value "4" refers to [x1, y1, x2, y2] or [x, y, w, h] . 
+the value "4" refers to [x1, y1, x2, y2] or [x, y, w, h] .
 
 ## Outputs
 
@@ -38,7 +38,7 @@ the value "4" refers to [x1, y1, x2, y2] or [x, y, w, h] .
 - trans: An optional attr, true for 'xywh', false for 'xyxy', only support true now.
 - is_cross: An optional attr, if false M equals N, only support false now.
 - mode: An optional attr, a character string with the value range of ['iou', 'iof'],
-         only support 'iou' now. 
+         only support 'iou' now.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

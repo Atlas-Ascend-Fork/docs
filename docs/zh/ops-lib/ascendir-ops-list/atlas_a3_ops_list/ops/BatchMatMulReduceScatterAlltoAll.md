@@ -27,7 +27,7 @@ x (E/ep, ep*C, M/tp).
 - weight: A matrix Tensor. The type support float16, bfloat16 and its type must be the same as the tpye of x. The weight only supports 3 dimensions. The data format can be ND.
 weigh (E/ep, M/tp, H).
 - bias: A matrix Tensor. The type support float16, float32. If x is float16, bias must be float16. If x is bfloat16, bias must be float32. 2D and 3D are supported. The data format can be ND.
-y_shard_type 0: bias (E/ep, 1, H/tp), y_shard_type 1: bias (E/ep, 1, H), 3 dims; 
+y_shard_type 0: bias (E/ep, 1, H/tp), y_shard_type 1: bias (E/ep, 1, H), 3 dims;
 y_shard_type 0: bias (E/ep, H/tp), y_shard_type 1: bias (E/ep, H), 2 dims.
 
 ## Outputs
@@ -47,7 +47,7 @@ participating in the op. The string length must be greater than 0 and less than 
 Default: "0". The value 0 indicates that ReduceScatter is performed by tensor parallel group in the H dimension (2nd dimension of the BatchMatMul computation result, which has three dimensions: 0th, 1st, and 2nd).
 The value 1 indicates that ReduceScatter is performed by tensor parallel group in the C dimension (1st dimension of the BatchMatMul computation result).
 - transpose_weight: A bool. If True, changes the shape of "weight" from [E, N, K] to
-[E, K, N] before multiplication. Default: "false". 
+[E, K, N] before multiplication. Default: "false".
 
 ## Data Types
 
@@ -71,4 +71,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

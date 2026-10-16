@@ -16,11 +16,11 @@ Normalizes the input .
 ## Inputs
 
 One input:
-x: An NCHW tensor of type float16 or float32 . 
+x: An NCHW tensor of type float16 or float32 .
 
 ## Outputs
 
-y: An NCHW tensor of type float16 or float32 . 
+y: An NCHW tensor of type float16 or float32 .
 
 ## Attributes
 
@@ -45,4 +45,4 @@ Compatible with the ONNX operator MeanVarianceNormalization.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

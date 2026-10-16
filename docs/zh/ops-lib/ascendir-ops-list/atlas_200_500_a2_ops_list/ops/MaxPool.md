@@ -36,7 +36,7 @@ int32, int64, uint8, uint16, qint8. Supported format: NHWC, NCHW.
 
 ## Outputs
 
-y: A 4-D Tensor. Has the same type and format as input "x" . 
+y: A 4-D Tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -48,7 +48,7 @@ specifying the stride of the sliding window for each dimension of
 the input tensor. No default value.
 - padding: A required string. Supported modes: SAME, VALID. No default value.
 when padding is "SAME": pads 0 to ensure output shape equal to ceil(input shape / stride) ,
-(output shape equal to input shape when stride=1). 
+(output shape equal to input shape when stride=1).
 when padding is "VALID": no padding. The kernel slides only over valid regions, resulting in smaller output .
 - data_format: An optional string. Supported format: NHWC, NCHW. Defaults to "NHWC" .
 
@@ -66,15 +66,15 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - "ksize" is a list that has length 4. The ksize of the H and W dimensions should be greater than 0.
 The ksize of the N and C dimensions should be 1. e.g. For "data_format" is "NCHW", ksize[0] = 1 and ksize[1] = 1.
-For "data_format" is "NHWC", ksize[0] = 1 and ksize[3] = 1. 
+For "data_format" is "NHWC", ksize[0] = 1 and ksize[3] = 1.
 For Non-Ascend 950 AI Processor: The produce of the ksize in H and W dimensions
-should be less than or equal to 255. e.g. For "data_format" is "NCHW", ksize[2] * ksize[3] <= 255. 
+should be less than or equal to 255. e.g. For "data_format" is "NCHW", ksize[2] * ksize[3] <= 255.
 - "strides" is a list that has length 4. The stride of the N and C dimensions should be 1.
 For Non-Ascend 950 AI Processor: The stride of the H and W dimensions should be greater than 0 and
-smaller than 64. 
+smaller than 64.
 For Ascend 950 AI Processor: The stride of the H and W dimensions should be greater than 0.
 - The ouput "y" shape at the N and C dimensions should be equal with input "x" shape at same dimensions. The output
-shape at the H and W dimensions is calculated by below formula: 
+shape at the H and W dimensions is calculated by below formula:
 
 ## Third-party framework compatibility
 
@@ -83,4 +83,4 @@ Compatible with the TensorFlow operator MaxPool.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

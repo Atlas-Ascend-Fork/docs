@@ -11,7 +11,7 @@ REG_OP(Select)
 
 ## Brief
 
-Selects elements from "x1" or "x2", depending on "condition" . 
+Selects elements from "x1" or "x2", depending on "condition" .
 
 ## Inputs
 
@@ -49,4 +49,4 @@ Compatible with the TensorFlow operator Select.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

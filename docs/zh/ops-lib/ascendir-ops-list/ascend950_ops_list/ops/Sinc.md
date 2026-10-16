@@ -13,12 +13,12 @@ Computes sinc of "x" element-wise.
 
 ## Inputs
 
-One input: 
-x: An ND Tensor that supports the data type UnaryDataType. 
+One input:
+x: An ND Tensor that supports the data type UnaryDataType.
 
 ## Outputs
 
-y: An ND Tensor with the same dtype and shape of input "x". 
+y: An ND Tensor with the same dtype and shape of input "x".
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Compatible with TensorFlow operator Sinc.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

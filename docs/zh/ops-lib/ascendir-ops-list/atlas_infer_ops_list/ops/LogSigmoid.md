@@ -15,12 +15,12 @@ Calculate -ln(1+e^(-x)).
 
 One inputs, including:
 x: A tensor. Must be one of the following types:
-      float16, float32, bfloat16. 
+      float16, float32, bfloat16.
 
 ## Outputs
 
 One outputs, including:
-y: A tensor with the same type and shape of x's. 
+y: A tensor with the same type and shape of x's.
 
 ## Data Types
 
@@ -31,9 +31,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator LogSigmoid. 
+Compatible with the Pytorch operator LogSigmoid.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

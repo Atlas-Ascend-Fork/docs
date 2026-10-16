@@ -9,15 +9,15 @@ REG_OP(MatrixSquareRoot)
 
 ## Brief
 
-Computes the matrix square root of one or more square matrices . 
+Computes the matrix square root of one or more square matrices .
 
 ## Inputs
 
-input: Shape is `[..., M, M]` . 
+input: Shape is `[..., M, M]` .
 
 ## Outputs
 
-y: Shape is `[..., M, M]` . 
+y: Shape is `[..., M, M]` .
 
 ## Data Types
 
@@ -33,4 +33,4 @@ Compatible with TensorFlow MatrixSquareRoot operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

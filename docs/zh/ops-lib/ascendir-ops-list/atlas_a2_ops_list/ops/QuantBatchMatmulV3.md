@@ -24,44 +24,44 @@ Quant Batch Matmul Calculation.
 
 Six inputs, including:
 - x1: A matrix tensor. Must be one of the following types: int8, int4, hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1.
-when the data type is int8, int4, hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1, the format only supports ND format. 
+when the data type is int8, int4, hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1, the format only supports ND format.
 - In ND format, the shape ranges from 2D to 6D. When transpose_x1 is false, the shape is (batch,m,k), where
-batch is optional. 
+batch is optional.
 - In NZ (Ascend affinity) format, the shape ranges from 4D to 8D. When tranpose_x1 is true, the shape is
 (batch,x1_m1,x1_k1,x1_k0,x1_m0), where batch is optional, x1_m0 = 32, and x1_k0 = 16. When transpose_x1 is false, the shape is
-(batch,x1_k1,x1_m1,x1_m0,x1_k0), where batch is optional, x1_m0 = 16, and x1_k0 = 32. 
-When the data type is int4, float4_e2m1, the last dim must be even. 
+(batch,x1_k1,x1_m1,x1_m0,x1_k0), where batch is optional, x1_m0 = 16, and x1_k0 = 32.
+When the data type is int4, float4_e2m1, the last dim must be even.
 - x2: A matrix tensor. Must be one of the following types: int8, int4, hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1.
-when the data type is int8, hifloat8, float8_e4m3fn, float4_e2m1, the format supports ND and NZ formats. 
-when the data type is int4, float8_e5m2, the format only supports ND. 
+when the data type is int8, hifloat8, float8_e4m3fn, float4_e2m1, the format supports ND and NZ formats.
+when the data type is int4, float8_e5m2, the format only supports ND.
 - In ND format and Non-int4 type, the shape ranges from 2D to 6D. When transpose_x2 is false, the shape is (batch,k,n), where
-batch is optional; In int4 type, shape only supports 2D. 
-- In NZ (Ascend affinity) format, the shape ranges from 4D to 8D. 
-- When transpose_x2 is true, the shape is (batch,x2_k1,x2_n1,x2_n0,x2_k0), where batch is optional, x2_k0 = 32, and x2_n0 = 16. 
-- When transpose_x2 is false, the shape is (batch,x2_n1,x2_k1,x2_k0,x2_n0), where batch is optional, x2_k0 = 16, and x2_n0 = 32. 
-- When x1 is ND format, k in the shape of x1 and the shape of x2 must meet the following requirement: 
-ceil(k / x2_k0) == x2_k1. 
-- When x1 is NZ format, the shape of x1 and x2 must meet the following requirement: 
-- when x1_k0 == x2_k0, x1_k1 == x2_k1, 
-- when x1_k0 > x2_k0, ceil((x2_k0 * x2_k1) / x1_k0) == x1_k1, 
-- when x1_k0 < x2_k0, ceil((x1_k0 * x1_k1) / x2_k0) == x2_k1. 
-When the data type is int4, float4_e2m1, the last dim must be even. 
+batch is optional; In int4 type, shape only supports 2D.
+- In NZ (Ascend affinity) format, the shape ranges from 4D to 8D.
+- When transpose_x2 is true, the shape is (batch,x2_k1,x2_n1,x2_n0,x2_k0), where batch is optional, x2_k0 = 32, and x2_n0 = 16.
+- When transpose_x2 is false, the shape is (batch,x2_n1,x2_k1,x2_k0,x2_n0), where batch is optional, x2_k0 = 16, and x2_n0 = 32.
+- When x1 is ND format, k in the shape of x1 and the shape of x2 must meet the following requirement:
+ceil(k / x2_k0) == x2_k1.
+- When x1 is NZ format, the shape of x1 and x2 must meet the following requirement:
+- when x1_k0 == x2_k0, x1_k1 == x2_k1,
+- when x1_k0 > x2_k0, ceil(x2_k0 * x2_k1) / x1_k0) == x1_k1,
+- when x1_k0 < x2_k0, ceil(x1_k0 * x1_k1) / x2_k0) == x2_k1.
+When the data type is int4, float4_e2m1, the last dim must be even.
 - scale: A matrix tensor, quantization parameter,
-Must be one of the following types: uint64, float32, int64, bfloat16, float8_e8m0, supports ND format. 
+Must be one of the following types: uint64, float32, int64, bfloat16, float8_e8m0, supports ND format.
 - When the data type is bfloat16, uint64 or int64,
-the shape is 1D (t,), with t equal to 1 or n, where n is the same as that of x2. 
+the shape is 1D (t,), with t equal to 1 or n, where n is the same as that of x2.
 - When the data type is float8_e8m0, the shape is 3D. When the shape of x2 is (n, k), scale is (n, z, 2),
-when the shape of x2 is (k, n), scale is (z, n, 2), where z = ceil(k / 64) and k is the reduce axis of x2. 
+when the shape of x2 is (k, n), scale is (z, n, 2), where z = ceil(k / 64) and k is the reduce axis of x2.
 - when the data type is float32,
-the dimension of shape should be 1D or same as that of x2. 
+the dimension of shape should be 1D or same as that of x2.
 - When the quant mode of x2 is perchannel or pertensor, the shape is 1D (t,),
-with t equal to 1 or n, where n is the same as that of x2. 
+with t equal to 1 or n, where n is the same as that of x2.
 - When the quant mode of x2 is perblock, the dimension of shape is same as x2, when x2 is (batch, k, n),
-scale is (batch, ceil(k / 128), ceil(n / 128)), where 128 is group_size_k, group_size_n(refer to group_size). 
+scale is (batch, ceil(k / 128), ceil(n / 128)), where 128 is group_size_k, group_size_n(refer to group_size).
 - When x2 format is NZ and the data type of x1 and x2 is hifloat8,
-scale must be uint64 or int64. 
+scale must be uint64 or int64.
 - When x2 format is NZ, the data type of x1 and x2 is float8_e4m3fn
-and quantization mode is pertensor-perchannel/pertensor-pertensor, scale must be uint64 or int64. 
+and quantization mode is pertensor-perchannel/pertensor-pertensor, scale must be uint64 or int64.
 - offset: An optional matrix tensor, quantization parameter. Must be one of the following types: float32.
 supports ND format. The shape is 1D (t,), with t equal to 1 or n, where n is the same as that of x2.
 - bias: An optional matrix tensor. Must be one of the following types: int32, bfloat16, float16, float32, supports ND format.
@@ -69,14 +69,14 @@ The shape is 1D (t,) or 3D (batch, 1, n),
 with t equal to n, where n is the same as that of x2.
 - pertoken_scale: An optional matrix tensor. The type supports float32, float8_e8m0, supports ND format.
 - When the data type is float8_e8m0, the shape is 3D. When the shape of x1 is (m, k), scale is (m, z, 2),
-when the shape of x1 is (k, m), scale is (z, m, 2), where z = ceil(k / 64) and k is the reduce axis of x1. 
+when the shape of x1 is (k, m), scale is (z, m, 2), where z = ceil(k / 64) and k is the reduce axis of x1.
 - When the data type is float32, the dimension of shape should be 1D or same as that of x1. ,
 - When the quant mode of x1 is pertoken or pertensor, the shape is 1D (t,),
-with t equal to 1 or m, where m is the same as that of x1. 
+with t equal to 1 or m, where m is the same as that of x1.
 - When the quant mode of x1 is perblock or pergroup, the dimension of shape is same as x1,
 when x2 is (batch, m, k), for perblock, pertoken_scale is (batch, ceil(m / 128), ceil(k / 128)),
 for pergroup, pertoken_scale is (batch, m, ceil(k / 128)),
-where 128 is group_size_m, group_size_k(refer to group_size). 
+where 128 is group_size_m, group_size_k(refer to group_size).
 
 ## Outputs
 
@@ -85,7 +85,7 @@ y: A matrix Tensor. Must be one of the following types: float16, int8, bfloat16,
 The format supports ND. The shape ranges from 2D to 6D,
 that is (batch, m, n), where batch is optional. Broadcasting can be performed on the batch dimension of x1 and x2.
 The output batch is the same as the batch after broadcasting, m is the same as that of x1, and n is the same as
-that of x2. 
+that of x2.
 
 ## Attributes
 
@@ -96,17 +96,17 @@ Four attributes, including:
 - transpose_x2: An optional bool. If true, changes the shape of "x2" from [k, n] to
 [n, k] before multiplication. Default: false.
 - group_size: An optional Int. Indicating the ratio between pertoken_scale/scale and x1/x2 in group dequantization.
-If the value of pertoken_scale along the k-dimension is n, one value in pertoken_scale can be used to dequantize n values in x1 along the k-dimension. 
+If the value of pertoken_scale along the k-dimension is n, one value in pertoken_scale can be used to dequantize n values in x1 along the k-dimension.
 The group_size is composed of the group_size_m, group_size_n, and group_size_k, total occupying 48 bits.
 0-15 bits of group_size indicate group_size_k, 16-31 bits indicate group_size_n, 32-47 bits indicate group_size_m,
-48-63 bits of group_size are noneffective. 
+48-63 bits of group_size are noneffective.
 If any of group_size_m, group_size_n, group_size_k calculated by group_size is 0, recalculate it by
-input shape, eg: group_size_m = m / scale_m （m % scale_m must be 0). 
-Final group_size_m, group_size_n, group_size_k should satisify following requirements: 
-In mx quantification, the supported final [group_size_m, group_size_n, group_size_k] combinations are [1, 1, 32]. 
+input shape, eg: group_size_m = m / scale_m （m % scale_m must be 0).
+Final group_size_m, group_size_n, group_size_k should satisify following requirements:
+In mx quantification, the supported final [group_size_m, group_size_n, group_size_k] combinations are [1, 1, 32].
 In pergroup-perblock && perblock-perblock quantification,
 the supported final [group_size_m, group_size_n, group_size_k] combinations are [1, 128, 128] and [128, 128, 128].
-For other input types, the group_size value must be 0. 
+For other input types, the group_size value must be 0.
 
 ## Data Types
 
@@ -125,13 +125,13 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - The shape of bias should be 1D when the shape of out is 2D, 4D, 5D or 6D, and the shape of bias should be 1D or 3D
 when the out shape is 3D.
 - The size of the last dimension of x1 and x2 cannot exceed 65535 only on the following computing platforms:
-Atlas A2 Training Series Product/Atlas A2 Inference Series Product and
-Atlas A3 Training Series Product/Atlas A3 Inference Series Product.
+Atlas A2 products and
+Atlas A3 products.
 The last dimension of x1 refers to m when transpose_x1 is true or k when transpose_x1 is false.
 The last dimension of x2 refers to k when transpose_x2 is true or n when transpose_x2 is false.
 - If input type of x1 and x2 is int4, transpose_x1 should be false, the size of the last dimension of x1 or x2 should
 be an even number.
-- On the Ascend 950PR/Ascend 950DT platforms, when x2 is ND format, the output is an empty tensor if input x1 has m=0 or x2 has n=0.
+- On the Ascend 950PR&950DT products platforms, when x2 is ND format, the output is an empty tensor if input x1 has m=0 or x2 has n=0.
 When x2 is NZ format, the output is an empty tensor if input x1 has m=0.
 In all other cases, inputs does not support tensor with dimension size 0.
 - If input type of x1 and x2 is int4, transpose_x1 should be false.
@@ -150,13 +150,13 @@ In all other cases, inputs does not support tensor with dimension size 0.
 - When x2 is NZ format and input type of x1 and x2 is hifloat8, scale must be uint64/int64.
 - When x2 format is NZ, the data type of x1 and x2 is float8_e4m3fn and quantization mode is pertensor-perchannel/pertensor-pertensor, scale must be uint64 or int64.
 - The following are the supported data type combinations by platform.
-- Atlas Inference Series Product:
+- Atlas inference products:
 | x1       | x2       | scale        | offset        | bias          | pertoken | out      |
 | :------: | :------: | :----------: | :-----------: | :-----------: | :------: | :------: |
 | int8     | int8     | uint64/int64 | null          | null/int32    | null     | float16  |
 | int8     | int8     | uint64/int64 | null/float32  | null/int32    | null     | int8     |
-- Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component or
-Atlas A3 Training Series Product/Atlas A3 Inference Series Product:
+- Atlas A2 products or
+Atlas A3 products:
 | x1       | x2       | scale            | offset        | bias                        | pertoken     | out      |
 | :------: | :------: | :--------------: | :-----------: | :-------------------------: | :----------: | :------: |
 | int8     | int8     | uint64/int64     | null          | null/int32                  | null         | float16  |
@@ -182,7 +182,7 @@ Atlas A3 Training Series Product/Atlas A3 Inference Series Product:
 | float4_e2m1               | float4_e2m1               | float8_e8m0          | null          | null/float32                | float8_e8m0 | float16/bfloat16/float32               |
 | int8                      | int8                      | float32/bfloat16     | null          | null/int32                  | null        | int32                                  |
 | int4/int32                | int4/int32                | uint64/int64         | null          | null/int32                  | null        | float16                                |
-- Ascend950PR/Ascend950DT, supported data type and quant mode combinations:
+- Ascend 950PR&950DT products, supported data type and quant mode combinations:
 pertensor-perchannel && pertensor-pertensor:
 | x1 type                   | x2 type                   | pertoken type    | scale type       |
 | ------------------------- | ------------------------- | ---------------- | ---------------- |
@@ -210,7 +210,7 @@ mx quant：
 | ------------------------- | ------------------------- | ---------------- | ---------------- |
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | float8_e8m0      | float8_e8m0      |
 | float4_e2m1               | float4_e2m1               | float8_e8m0      | float8_e8m0      |
-- Ascend950PR/Ascend950DT with group_sizes scenarios, supported data type and shapes combinations:
+- Ascend 950PR&950DT products with group_sizes scenarios, supported data type and shapes combinations:
 | quantization      | x1 type                            | scale type  | x1 shape      | x2 shape      | scale shape                           | pertoken shape                        | group_size      |
 |-------------------|------------------------------------|-------------|---------------|---------------|---------------------------------------|---------------------------------------|-----------------|
 | perblock-perblock | float8_e4m3fn/float8_e5m2/hifloat8 | float32     | (batch, m, k) | (batch, k, n) | (batch, ceil(k / 128), ceil(n / 128)) | (batch, ceil(m / 128), ceil(k / 128)) | [128, 128, 128] |
@@ -233,4 +233,4 @@ mx quant：
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

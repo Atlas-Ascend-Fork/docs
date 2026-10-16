@@ -14,7 +14,7 @@ REG_OP(StatelessRandom)
 
 ## Brief
 
-Outputs deterministic pseudorandom random integers from a uniform distribution. 
+Outputs deterministic pseudorandom random integers from a uniform distribution.
 
 ## Inputs
 
@@ -27,12 +27,12 @@ Outputs deterministic pseudorandom random integers from a uniform distribution.
 ## Outputs
 
 y: Returns Random values with specified shape.
-Must be one of the following types: float16, bfloat16, float32, int64, int32, int16, int8, uint8, bool. 
+Must be one of the following types: float16, bfloat16, float32, int64, int32, int16, int8, uint8, bool.
 
 ## Attributes
 
 dtype:Output data type. Must be one of the following types: float16, bfloat16, float32, int64, int32,
-int16, int8, uint8, bool. Defaults to int32. 
+int16, int8, uint8, bool. Defaults to int32.
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with TensorFlow StatelessRandom operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

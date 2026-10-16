@@ -19,7 +19,7 @@ REG_OP(DenseToSparseSetOperation)
 
 ## Brief
 
-Applies set operation along last dimension of Tensor and SparseTensor . 
+Applies set operation along last dimension of Tensor and SparseTensor .
 
 ## Inputs
 
@@ -63,4 +63,4 @@ The implementation for DenseToSparseSetOperation on Ascend uses AICPU, with bad 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

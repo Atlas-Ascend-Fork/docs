@@ -20,7 +20,7 @@ The input q must be the same type as x. Inputs include:
 
 ## Outputs
 
-z:A Tensor. Has the same type as x. 
+z:A Tensor. Has the same type as x.
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with tensorflow Zeta operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -15,12 +15,12 @@ REG_OP(QueueDequeue)
 
 ## Brief
 
-Dequeues n tuples of one or more tensors from the given queue. 
+Dequeues n tuples of one or more tensors from the given queue.
 
 ## Inputs
 
 The input handle must have the resource type. Inputs include:
-handle:A Tensor of type mutable resource. The handle to a queue. 
+handle:A Tensor of type mutable resource. The handle to a queue.
 
 ## Outputs
 
@@ -28,7 +28,7 @@ components:A list of Tensor objects of type component_types.
 Must be one of the following types:
 float32, float16, int8, int16, uint16, uint8, int32, int64, uint32, uint64,
 bool, double, resource, string, complex64, complex128, qint16, quint16, qint8,
-quint8, qint32. It's a dynamic output. 
+quint8, qint32. It's a dynamic output.
 
 ## Attributes
 
@@ -36,7 +36,7 @@ quint8, qint32. It's a dynamic output.
 operation will block for up to timeout_ms milliseconds. Note: This option is
 not supported yet.
 - component_types: A list of DTypes that has length >= 1. The type of each
-component in a tuple. 
+component in a tuple.
 
 ## Data Types
 
@@ -51,4 +51,4 @@ Compatible with tensorflow QueueDequeue operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

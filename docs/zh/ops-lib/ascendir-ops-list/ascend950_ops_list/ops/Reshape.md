@@ -12,7 +12,7 @@ REG_OP(Reshape)
 
 ## Brief
 
-Reshapes a tensor. Only the tensor shape is changed, without changing the data. 
+Reshapes a tensor. Only the tensor shape is changed, without changing the data.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Reshapes a tensor. Only the tensor shape is changed, without changing the data.
 
 ## Outputs
 
-y: A tensor. The same type as input x. 
+y: A tensor. The same type as input x.
 
 ## Attributes
 
@@ -30,7 +30,7 @@ y: A tensor. The same type as input x.
 
 ## Attention Constraints
 
-This operator cannot be directly called by the acllopExecute API. 
+This operator cannot be directly called by the acllopExecute API.
 
 ## Third-party framework compatibility
 
@@ -40,4 +40,4 @@ This operator cannot be directly called by the acllopExecute API.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

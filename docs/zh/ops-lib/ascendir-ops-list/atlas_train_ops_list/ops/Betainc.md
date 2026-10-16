@@ -22,7 +22,7 @@ The input b and x must have the same types as a. Inputs include:
 
 ## Outputs
 
-z:A Tensor. Has the same type as a. 
+z:A Tensor. Has the same type as a.
 
 ## Data Types
 
@@ -40,4 +40,4 @@ Compatible with tensorflow Betainc operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

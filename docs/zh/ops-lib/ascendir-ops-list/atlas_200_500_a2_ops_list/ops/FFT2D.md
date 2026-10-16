@@ -9,7 +9,7 @@ REG_OP(FFT2D)
 
 ## Brief
 
-2D fast Fourier transform. 
+2D fast Fourier transform.
 
 ## Inputs
 
@@ -18,7 +18,7 @@ x: A complex64 or complex128 tensor.
 ## Outputs
 
 y: A complex64 or complex128 tensor of the same shape as x. The inner-most 2
-dimensions of `input` are replaced with their 2D Fourier transform. 
+dimensions of `input` are replaced with their 2D Fourier transform.
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Compatible with TensorFlow FFT2D operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

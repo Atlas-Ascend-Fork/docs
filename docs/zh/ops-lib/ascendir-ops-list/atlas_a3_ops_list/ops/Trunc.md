@@ -14,11 +14,11 @@ Returns a new tensor with the truncated integer values of the elements of input.
 ## Inputs
 
 One inputs, including:
-input_x: A tensor. Must be one of the following types: float16, bfloat16, float32, int8, uint8, int32. 
+input_x: A tensor. Must be one of the following types: float16, bfloat16, float32, int8, uint8, int32.
 
 ## Outputs
 
-output_y: A tensor with the same type and shape of input_x 
+output_y: A tensor with the same type and shape of input_x
 
 ## Data Types
 
@@ -29,9 +29,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Trunc. 
+Compatible with the Pytorch operator Trunc.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -38,7 +38,7 @@ Shape support 1D ~ 8D. Has the same shape as input "x".
 
 - num_bits: An optional attribute specifying the quantization bit width. Type is int. Defaults to "8".
 - narrow_range: An optional attribute specifying whether to use a narrow range for quantization.
-Type is bool. Defaults to "False". 
+Type is bool. Defaults to "False".
 
 ## Data Types
 
@@ -66,4 +66,4 @@ Compatible with the operator FakeQuantWithMinMaxVarsGradient.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

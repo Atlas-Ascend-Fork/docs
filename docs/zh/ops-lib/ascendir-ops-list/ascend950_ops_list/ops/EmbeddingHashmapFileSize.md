@@ -13,7 +13,7 @@ REG_OP(EmbeddingHashmapFileSize)
 
 ## Brief
 
-get import size of the embedding hashmap file. 
+get import size of the embedding hashmap file.
 
 ## Inputs
 
@@ -43,4 +43,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

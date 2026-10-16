@@ -58,4 +58,4 @@ Compatible with the TensorFlow operator reduce_any.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

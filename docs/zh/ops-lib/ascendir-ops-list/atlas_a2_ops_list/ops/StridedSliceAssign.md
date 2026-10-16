@@ -21,7 +21,7 @@ REG_OP(StridedSliceAssign)
 Assigns "value" to the sliced l-value reference of "var".
 The values of "value" are assigned to the positions in the variable. "var"
 that are selected by the slice parameters. The slice parameters "begin, "end",
-"strides", etc. work exactly as in "StridedSlice" . 
+"strides", etc. work exactly as in "StridedSlice" .
 
 ## Inputs
 
@@ -35,11 +35,11 @@ Specifies the index of the last value to select.
 - strides: A mutable ND Tensor of type IndexNumberType. Support dtype: [int64], support format: [ND].
 Specifies the stride to select.
 - input_value: A mutable ND Tensor of type BasicType .
-Support Dtype: [float16,float32,int32,int16,bfloat16], Support format: [ND]. 
+Support Dtype: [float16,float32,int32,int16,bfloat16], Support format: [ND].
 
 ## Outputs
 
-var: A mutable Tensor. Has the same type as "var" . 
+var: A mutable Tensor. Has the same type as "var" .
 
 ## Attributes
 
@@ -52,7 +52,7 @@ var: A mutable Tensor. Has the same type as "var" .
 ## Attention Constraints
 
 This operator currently does not support broadcasting. Therefore, the shape
-of "value" must be exactly the shape produced by the slice of "var" . 
+of "value" must be exactly the shape produced by the slice of "var" .
 @see StridedSlice()
 
 ## Third-party framework compatibility
@@ -62,4 +62,4 @@ of "value" must be exactly the shape produced by the slice of "var" .
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

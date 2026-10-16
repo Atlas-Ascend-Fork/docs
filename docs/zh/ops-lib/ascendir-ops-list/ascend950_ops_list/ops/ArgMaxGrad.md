@@ -12,22 +12,31 @@ REG_OP(ArgMaxGrad)
 
 ## Brief
 
-Returns the reverse tensor of the ArgMax operator of a tensor. 
+Returns the reverse tensor of the ArgMax operator of a tensor.
 
 ## Inputs
 
 three input, including:
-var: A ND Tensor of type float16, float32, int32 or int8. 
-indices: A ND Tensor of type int32. 
-updates: A ND Tensor of type float16, float32, int32 or int8. 
+var: A ND Tensor of type float16, float32, int32 or int8.
+indices: A ND Tensor of type int32.
+updates: A ND Tensor of type float16, float32, int32 or int8.
 
 ## Outputs
 
-y: A ND Tensor of type float16, float32, int32 or int8. 
+y: A ND Tensor of type float16, float32, int32 or int8.
 
 ## Attributes
 
 - dimension: An integer of type int, specifying the axis information of the index with the maximum value.
+
+## Data Types
+
+Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 var: float16,float32,int8,int32
+- input1 indices: int32
+- input2 updates: float16,float32,int8,int32
+- output0 y: float16,float32,int8,int32
 
 ## Attention Constraints
 
@@ -40,9 +49,9 @@ y: A ND Tensor of type float16, float32, int32 or int8.
 not support all scene like pytorch operator scatter
 exp:
 var.shape=[2,3,4,5], dim=2, the shape of indices and updates should be [2,3,5]
-not support the shape of indices and updates is [2,3,2,5] like pytorch operator scatter. 
+not support the shape of indices and updates is [2,3,2,5] like pytorch operator scatter.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

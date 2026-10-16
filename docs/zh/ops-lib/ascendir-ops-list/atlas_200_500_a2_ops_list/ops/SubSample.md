@@ -18,11 +18,11 @@ included in the sample.
 ## Inputs
 
 One input:
-labels: shape of labels,(N, ) label vector with values. 
+labels: shape of labels,(N, ) label vector with values.
 
 ## Outputs
 
-y: The result of subSample. 
+y: The result of subSample.
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Compatible with the Pytorch operator SubSample.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

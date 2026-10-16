@@ -36,7 +36,7 @@ specifying the size of the window for each dimension of the input tensor. No def
 - strides: A required list of int8, int16, int32, or int64 values,
 specifying the stride of the sliding window for each dimension of the input tensor. No default value.
 - pads: A required list of int8, int16, int32, or int64 values,
-specifying the pad of the input feature map. No default value. 
+specifying the pad of the input feature map. No default value.
 - dtype: A optional int. default value is 3.
 - dilation: A optional list of int8, int16, int32, or int64 values.
 - ceil_mode: A optional bool. default value is false .
@@ -67,4 +67,4 @@ Compatible with the PyTorch operator max_pool2d_with_indices.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -22,7 +22,7 @@ No inputs
 
 y: A Tensor with targeted type and shape. Must be one of the following types:
   complex128, complex64, double, float32, float16, int16, int32, int64, int8, qint16,
-  qint32, qint8, quint16, quint8, uint16, uint32, uint64, uint8, bfloat16, complex32, bool. 
+  qint32, qint8, quint16, quint8, uint16, uint32, uint64, uint8, bfloat16, complex32, bool.
 
 ## Attributes
 
@@ -39,9 +39,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Eye. 
+Compatible with the Pytorch operator Eye.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

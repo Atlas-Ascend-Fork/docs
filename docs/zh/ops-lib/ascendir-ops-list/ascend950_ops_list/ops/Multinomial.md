@@ -24,7 +24,7 @@ Inputs include:
 
 ## Outputs
 
-y_indices: A Tensor of type output_dtype . 
+y_indices: A Tensor of type output_dtype .
 
 ## Attributes
 
@@ -51,4 +51,4 @@ The implementation for Multinomial on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

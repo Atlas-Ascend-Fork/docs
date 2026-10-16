@@ -17,7 +17,7 @@ REG_OP(CropAndResize)
 
 Extracts crops from the input image tensor and resizes them. Extracts
 crops from the input image tensor and resizes them using bilinear sampling or
-nearest neighbor sampling to a common output size specified by crop_size . 
+nearest neighbor sampling to a common output size specified by crop_size .
 
 ## Inputs
 
@@ -29,11 +29,11 @@ int16, int32, int64, float16, float, double. A 4-D tensor of shape
 - box_index: A Tensor of type int32. A 1-D tensor of shape [num_boxes] with
 int32 values in [0, batch).
 - crop_size: A Tensor of type int32. A 1-D tensor of 2 elements, crop_size
-= [crop_height, crop_width]. All cropped image patches are resized to this size . 
+= [crop_height, crop_width]. All cropped image patches are resized to this size .
 
 ## Outputs
 
-y: A Tensor. Must be one of the following types: float16, float. The format must be NHWC. 
+y: A Tensor. Must be one of the following types: float16, float. The format must be NHWC.
 
 ## Attributes
 
@@ -41,7 +41,7 @@ y: A Tensor. Must be one of the following types: float16, float. The format must
 extrapolation, when applicable.
 - method: An optional string from: '"bilinear", "nearest"'. Defaults to
 "bilinear". Currently two sampling methods are supported: Bilinear and
-NearestNeighbor . 
+NearestNeighbor .
 
 ## Data Types
 
@@ -55,7 +55,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images must be a 4-D tensor . 
+Input images must be a 4-D tensor .
 
 ## Third-party framework compatibility
 
@@ -64,4 +64,4 @@ Compatible with tensorflow CropAndResize operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

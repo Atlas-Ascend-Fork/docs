@@ -12,7 +12,7 @@ REG_OP(AnonymousSeedGenerator)
 
 ## Brief
 
-Create a random number seed generator. 
+Create a random number seed generator.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Must be one of the types:int32 or int64.
 - seed2:1-D Tensor,the seed to generate random.
 Must be one of the types:int32 or int64.
 - reshuffle:1-D Tensor.Seed selection, True:random seed, False:fixed seed.
-Must be one of the types:bool.  
+Must be one of the types:bool.
 
 ## Outputs
 
@@ -48,4 +48,4 @@ compatible with AnonymousSeedGenerator op of tensorflow.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

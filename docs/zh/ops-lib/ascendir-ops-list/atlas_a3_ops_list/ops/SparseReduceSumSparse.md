@@ -19,7 +19,7 @@ REG_OP(SparseReduceSumSparse)
 
 ## Brief
 
-Computes the sum of elements across dimensions of a SparseTensor. 
+Computes the sum of elements across dimensions of a SparseTensor.
 
 ## Inputs
 
@@ -31,7 +31,7 @@ SparseTensor, possibly not in canonical ordering.
 "N" non-empty values corresponding to "x_indices".
 - x_shape: A 1D tensor of type int64. Shape of the input SparseTensor.
 - reduction_axes: A 1D tensor of type int32.
-A length-"K" vector containing the reduction axes. 
+A length-"K" vector containing the reduction axes.
 
 ## Outputs
 
@@ -42,7 +42,7 @@ A length-"K" vector containing the reduction axes.
 ## Attributes
 
 keep_dims: An optional bool. Defaults to "False".
-If true, retains reduced dimensions with length 1. 
+If true, retains reduced dimensions with length 1.
 
 ## Data Types
 
@@ -63,4 +63,4 @@ Compatible with the TensorFlow operator SparseReduceSumSparse.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

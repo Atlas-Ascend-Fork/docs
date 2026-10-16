@@ -15,7 +15,7 @@ REG_OP(ChamferDistanceGrad)
 
 ## Brief
 
-Applies set operation along last dimension of 6 Tensor inputs. 
+Applies set operation along last dimension of 6 Tensor inputs.
 
 ## Inputs
 
@@ -47,4 +47,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

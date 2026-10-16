@@ -15,7 +15,7 @@ REG_OP(FakeQuantAffineCachemask)
 
 ## Brief
 
-Fake-quantize the data of 'x' tensor with scale, zero_point, quant_min and quant_max. 
+Fake-quantize the data of 'x' tensor with scale, zero_point, quant_min and quant_max.
 
 ## Inputs
 
@@ -27,7 +27,7 @@ Three inputs, including:
 ## Outputs
 
 y: A Tensor of type float32 or float16.
-mask: A Tensor of type bool. 
+mask: A Tensor of type bool.
 
 ## Attributes
 
@@ -52,4 +52,4 @@ Compatible with Pytorch operator FakeQuantAffineCachemask.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

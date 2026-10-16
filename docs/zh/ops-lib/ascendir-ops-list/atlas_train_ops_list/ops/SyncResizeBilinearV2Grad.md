@@ -16,19 +16,19 @@ REG_OP(SyncResizeBilinearV2Grad)
 
 ## Brief
 
-Computes the gradient of bilinear interpolation . 
+Computes the gradient of bilinear interpolation .
 
 ## Inputs
 
 Two inputs, including:
 - grads: A 5D tensor of type float32. Must set the format, supported format NC1HWC0.
 - original_image: A 5D tensor of type float32. Must set the format, supported format NC1HWC0.
-The image tensor that was resized. 
+The image tensor that was resized.
 
 ## Outputs
 
 y: A 5D Tensor of type float32. The format support NC1HWC0.
-Has the same type as original_image. 
+Has the same type as original_image.
 
 ## Attributes
 
@@ -40,7 +40,7 @@ Has the same type as original_image.
 the 4 corner pixels of the input and grad tensors are aligned. Defaults to
 false .
 - half_pixel_centers: Bool type, indicates if the offset coordinates are normalized. Defaults
-to false . 
+to false .
 
 ## Data Types
 
@@ -52,7 +52,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input grads must be a 5D tensor. 
+Input grads must be a 5D tensor.
 
 ## Third-party framework compatibility
 
@@ -61,4 +61,4 @@ Compatible with mindspore ResizeBilinearV2Grad operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

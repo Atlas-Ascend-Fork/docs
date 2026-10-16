@@ -15,7 +15,7 @@ REG_OP(AddManySparseToTensorsMap)
 
 ## Brief
 
-Generates sparse cross from a list of sparse and dense tensors. 
+Generates sparse cross from a list of sparse and dense tensors.
 
 ## Inputs
 
@@ -27,14 +27,14 @@ The "indices" of the minibatch SparseTensor.
 
 ## Outputs
 
-handles: A tensor of type int64. 
+handles: A tensor of type int64.
 
 ## Attributes
 
 - container: An optional string. Defaults to "".
 The container name for the "SparseTensorsMap" created by this op.
 - shared_name: An optional string. Defaults to "".
-The shared name for the "SparseTensorsMap" created by this op. 
+The shared name for the "SparseTensorsMap" created by this op.
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator AddManySparseToTensorsMap.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

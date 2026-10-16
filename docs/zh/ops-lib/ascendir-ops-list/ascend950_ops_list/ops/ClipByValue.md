@@ -20,7 +20,7 @@ REG_OP(ClipByValue)
 ## Brief
 
 Clips tensor values to a specified min and max.
-When the input is bfloat16, float16, float32, int32 or int64, broadcasting operations are supported.  
+When the input is bfloat16, float16, float32, int32 or int64, broadcasting operations are supported.
 
 ## Inputs
 
@@ -32,7 +32,7 @@ int32, int64, int8, qint32, qint8, quint8, uint16, uint8, bfloat16, complex32.
 
 ## Outputs
 
-y: A ND tensor. Has the same dtype as "x". 
+y: A ND tensor. Has the same dtype as "x".
 
 ## Data Types
 
@@ -55,4 +55,4 @@ Compatible with the TensorFlow operator ClipByValue.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

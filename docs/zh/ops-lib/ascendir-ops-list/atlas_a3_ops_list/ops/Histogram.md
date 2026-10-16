@@ -16,11 +16,11 @@ Computes the histogram of a tensor.
 
 ## Inputs
 
-x: A Tensor of type float16,float32,int64,int32,int16,int8,uint8. 
+x: A Tensor of type float16,float32,int64,int32,int16,int8,uint8.
 
 ## Outputs
 
-y: A Tensor. A Tensor of type float32,int64,int32,int16,int8,uint8 . 
+y: A Tensor. A Tensor of type float32,int64,int32,int16,int8,uint8 .
 
 ## Attributes
 
@@ -37,7 +37,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The operator will use the interface set_atomic_add(), therefore weights and output should be float32 only. 
+The operator will use the interface set_atomic_add(), therefore weights and output should be float32 only.
 
 ## Third-party framework compatibility
 
@@ -46,4 +46,4 @@ Compatible with the Pytorch operator Histc.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

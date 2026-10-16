@@ -10,21 +10,21 @@ REG_OP(ExtractJpegShape)
 
 ## Brief
 
-Extract the shape information of a JPEG-encoded image . 
+Extract the shape information of a JPEG-encoded image .
 
 ## Inputs
 
 Input contents must be 0-D. Inputs include:
-contents: 0-D. The JPEG-encoded image . 
+contents: 0-D. The JPEG-encoded image .
 
 ## Outputs
 
-image_shape: 1-D. The image shape with format [height, width, channels] . 
+image_shape: 1-D. The image shape with format [height, width, channels] .
 
 ## Attributes
 
 output_type: The output type of the operation (int32 or int64). Defaults
-to int32 . 
+to int32 .
 
 ## Data Types
 
@@ -40,4 +40,4 @@ Compatible with tensorflow ExtractJpegShape operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

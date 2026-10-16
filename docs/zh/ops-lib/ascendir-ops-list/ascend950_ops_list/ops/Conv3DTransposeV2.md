@@ -33,10 +33,10 @@ is NDHWC or NCDHW.
 The format is NCDHW，NDHWC, and DHWCN.
 The NCDHW can be one of the following types: float16, bfloat16, float32, hifloat8, float8_e4m3fn.
 The DHWCN and NDHWC can be one of the following types: float16, bfloat16, float32.
-The height (H), width (W) dimension must be greater than 0.
+The height (H), width (W) dimension must be in [1, 511].
 - bias: Optional. An optional 1D tensor of type float16 or float32. Reserved.
 - offset_w: Optional. An optional 1D tensor of type int8 for quantized deconvolution.
- Reserved. 
+ Reserved.
 
 ## Outputs
 
@@ -49,34 +49,32 @@ for each dimension of "x". The strides have the same axes sequence as "x":
 [batch, stride_depth, stride_height, stride_width, channels] or
 [batch, channels, stride_depth, stride_height, stride_width].
 The N and C dimensions must be 1.
-The depth (D), The height (H) and width (W) dimensions must be greater than 0.
+The height (H) and width (W) dimensions must be in [1, 63].
+The depth (D) dimension must be in [1, 255].
 - pads: Required. A tuple/list of 6 integers.
-All dimensions must be greater than or equal to 0.
+All dimensions must be in [0, 255].
 - dilations: Optional. A tuple/list of 5 integers,
-The dilation factor for each dimension of input. Defaults to [1, 1, 1, 1, 1]. 
+The dilation factor for each dimension of input. Defaults to [1, 1, 1, 1, 1].
 The batch(N) and channels dimensions must be 1.
-The width (W), height (H) and depth(D) dimensions must be greater than 0.
+The width (W), height (H) and depth(D) dimensions must be in [1, 255].
 The dilations have the same axes sequence "x":
 [batch, channels, dilation_depth, dilation_height, dilation_width] or
 [batch, dilation_depth, dilation_height, dilation_width, channels].
 - groups: An optional integer within the effective range of [1, 65535]. Default to 1.
 Number of blocked connections from in_channels to out_channels.
 The in_channels and out_channels must be divisible by groups.
-When the groups value differs, the supported data type may vary, specifically as follows: 
-| groups |        dtype           |   x format  | filter format |    y format    |
-|--------|------------------------|-------------|---------------|----------------|
-|  =1    |hifloat8/float8_e4m3fn  |    NCDHW    |      NCDHW    |     NCDHW      |
-|  =1    |hifloat8/float8_e4m3fn  |    NDHWC    |      NCDHW    |     NDHWC      |
-|  =1    |float16/bfloat16/float32|    NCDHW    |      NCDHW    |     NCDHW      |
-|  =1    |float16/bfloat16/float32|    NCDHW    |      NDHWC    |     NCDHW      |
-|  =1    |float16/bfloat16/float32|    NCDHW    |      DHWCN    |     NCDHW      |
-|  =1    |float16/bfloat16/float32|    NDHWC    |      NDHWC    |     NDHWC      |
-|  =1    |float16/bfloat16/float32|    NDHWC    |      NCDHW    |     NDHWC      |
-|  =1    |float16/bfloat16/float32|    NDHWC    |      DHWCN    |     NDHWC      |
-|  >1    |hifloat8/float8_e4m3fn  |    NCDHW    |      NCDHW    |     NCDHW      |
-|  >1    |float16/bfloat16/float32|    NCDHW    |      NCDHW    |     NCDHW      |
-|  >1    |float16/bfloat16/float32|    NCDHW    |      NDHWC    |     NCDHW      |
-|  >1    |float16/bfloat16/float32|    NCDHW    |      DHWCN    |     NCDHW      |
+When the groups value differs, the supported data type may vary, specifically as follows:
+| groups  |        dtype           |   x format  | filter format |    y format    |
+|---------|------------------------|-------------|---------------|----------------|
+|  =1     |hifloat8/float8_e4m3fn  |    NCDHW    |      NCDHW    |     NCDHW      |
+|  =1     |hifloat8/float8_e4m3fn  |    NDHWC    |      NCDHW    |     NDHWC      |
+|  =1     |float16/bfloat16/float32|    NDHWC    |      NDHWC    |     NDHWC      |
+|  =1     |float16/bfloat16/float32|    NDHWC    |      NCDHW    |     NDHWC      |
+|  =1     |float16/bfloat16/float32|    NDHWC    |      DHWCN    |     NDHWC      |
+|  >=1    |float16/bfloat16/float32|    NCDHW    |      NCDHW    |     NCDHW      |
+|  >=1    |float16/bfloat16/float32|    NCDHW    |      NDHWC    |     NCDHW      |
+|  >=1    |float16/bfloat16/float32|    NCDHW    |      DHWCN    |     NCDHW      |
+|  >1     |hifloat8/float8_e4m3fn  |    NCDHW    |      NCDHW    |     NCDHW      |
 - data_format:  An optional string. The value must be one of ["NDHWC", "NCDHW"]. Defaults to "NDHWC".
 The correspondence is as follows: batch(N), depth(D), height(H), width(W), channels(C).
 Specify the data format of the x and y.
@@ -84,7 +82,7 @@ Specify the data format of the x and y.
 Defaults to [0, 0, 0, 0, 0]. The N and C dimensions must be 0.
 - offset_x: Optional. Defaults to 0. Reserved.
 - enable_hf32: Optional. An optional bool parameter. Used to enable hf32 computation.
-If true, enable hf32 computation, otherwise, disable hf32 computation. Defaults to false. 
+If true, enable hf32 computation, otherwise, disable hf32 computation. Defaults to false.
 
 ## Data Types
 
@@ -99,10 +97,11 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-In Ascend 950PR/Ascend 950DT: The behavior of gradient computation in the padding region depends on the input shape.
+In Ascend 950PR&950DT products: The behavior of gradient computation in the padding region depends on the input
+shape.
 Depending on the operator optimization strategy, the padding gradients may be directly set to 0.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

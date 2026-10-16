@@ -10,20 +10,20 @@ REG_OP(StringToNumber)
 
 ## Brief
 
-Converts each string in the input Tensor to the specified numeric type . 
+Converts each string in the input Tensor to the specified numeric type .
 
 ## Inputs
 
 Inputs include:
-x: A Tensor. Must be one of the following types: string. 
+x: A Tensor. Must be one of the following types: string.
 
 ## Outputs
 
-y: A Tensor. Must be one of the following types: float, double, int32, int64. 
+y: A Tensor. Must be one of the following types: float, double, int32, int64.
 
 ## Attributes
 
-out_type: The numeric type to interpret each string in string_tensor as. Defaults to float. 
+out_type: The numeric type to interpret each string in string_tensor as. Defaults to float.
 
 ## Data Types
 
@@ -34,7 +34,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The implementation for StringToNumber on Ascend uses AICPU, with bad performance. 
+The implementation for StringToNumber on Ascend uses AICPU, with bad performance.
 
 ## Third-party framework compatibility
 
@@ -43,4 +43,4 @@ The implementation for StringToNumber on Ascend uses AICPU, with bad performance
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

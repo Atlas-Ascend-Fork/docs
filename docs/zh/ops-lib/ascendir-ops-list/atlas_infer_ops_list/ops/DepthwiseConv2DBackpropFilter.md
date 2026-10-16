@@ -16,7 +16,7 @@ REG_OP(DepthwiseConv2DBackpropFilter)
 ## Brief
 
 Computes the gradients of depthwise convolution with respect to
-the filter. 
+the filter.
 
 ## Inputs
 
@@ -28,12 +28,12 @@ in_channels, out_channels] or [out_channels, filter_height, filter_width,
 in_channels]. The dimensions of filter_height and filter_width.
 support type int32 and int64.
 - out_backprop: 4D tensor with shape [N, C, H, W] or [N, H, W, C].
-Must be one of the following types: float16, bfloat16 and float32. 
+Must be one of the following types: float16, bfloat16 and float32.
 
 ## Outputs
 
 filter_grad: Gradient of the deep convolution relative to the filter with
-shape [H, W, C, K]. Must be one of the following types: float32. 
+shape [H, W, C, K]. Must be one of the following types: float32.
 
 ## Attributes
 
@@ -49,7 +49,7 @@ or [1, dilation_height, dilation_width, 1]. Defaults to [1, 1, 1, 1].
 - pads: A required list or tuple. Padding added to each dimension of the
 input.
 - data_format: An optional string. Input data format, either "NHWC" or
-"NCHW". Defaults to "NHWC". 
+"NCHW". Defaults to "NHWC".
 
 ## Data Types
 
@@ -70,7 +70,7 @@ where K is fixed at 1, and Co and C0 are 16.
 Output backprop is 4D with shape [N, C, Ho, Wo] or [N, Ho, Wo, C], but the
 data is 5D with shape [N, C1, Ho, Wo, C0],
 where C is the same as that of the feature map and C0 is 16.
-In Ascend 950PR/Ascend 950DT: The behavior of gradient computation in the padding region depends on the input shape.
+In Ascend 950PR&950DT products: The behavior of gradient computation in the padding region depends on the input shape.
 Depending on the operator optimization strategy, the padding gradients may be directly set to 0.
 Only 4-dimensional data is supported currently.
 
@@ -82,4 +82,4 @@ Only 4-dimensional data is supported currently.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

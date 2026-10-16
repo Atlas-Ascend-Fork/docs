@@ -24,9 +24,9 @@ y: The output tensor of type float16 or float32. Same dtype and shape as x.
 
 ## Attributes
 
-value: An optional float, default value is 1.0. 
+value: An optional float, default value is 1.0.
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

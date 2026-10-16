@@ -28,8 +28,7 @@ Performs reduced batch normalization .
 Seven inputs, including:
 - x: A 5D tensor of type float16 or float32 or bfloat16, with format NDHWC or NCDHW.
 - sum: A 1D tensor of type float32 for the output of operator BN3DTrainingUpdate. shape must be C channel.
-- square_sum: A 1D tensor of type float32 for the output of operator BN3DTrainingUpdate. shape must be C
-channel.
+- square_sum: A 1D tensor of type float32 for the output of operator BN3DTrainingUpdate. shape must be C channel.
 - scale: A 1D tensor of type float32, for the scaling factor. shape must be C channel.
 - offset: A 1D tensor of type float32, for the scaling offset. shape must be C channel.
 - mean: A 1D tensor of type float32, for the updated mean. shape must be C channel.
@@ -49,7 +48,7 @@ Five outputs, including:
 - epsilon: A required float32, specifying the small value added to variance
 to avoid dividing by zero.
 - factor: A required float32, specifying the weight for updating the mean
-and variance . 
+and variance .
 
 ## Data Types
 
@@ -79,4 +78,4 @@ root instruction.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

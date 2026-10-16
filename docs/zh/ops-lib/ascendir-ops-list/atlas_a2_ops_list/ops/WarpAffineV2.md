@@ -15,14 +15,14 @@ REG_OP(WarpAffineV2)
 
 ## Brief
 
-Applies a affine transformation to an image. 
+Applies a affine transformation to an image.
 
 ## Inputs
 
 - x: An tensor of at least 3 dimensions, type must be float32 or uint8.
 - matrix: transformation matrix, format ND , shape must be (2, 3), type must be float32.
 - dst_size: Required int32 and int64, shape must be (1, 2), specifying the size of the output image.
-Must be greater than "0". 
+Must be greater than "0".
 
 ## Outputs
 
@@ -37,7 +37,7 @@ only support "bilinear"/"nearest"/"cubic"/"area", default "bilinear".
 Data type is the same as that of the original picture. The number of data is the same as that of the original
 picture channels. Default value is 0.
 - data_format: An optional string. Could be "HWC" or "CHW". Defaults to "HWC".
-Value used for inferring real format of images. 
+Value used for inferring real format of images.
 
 ## Data Types
 
@@ -56,4 +56,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

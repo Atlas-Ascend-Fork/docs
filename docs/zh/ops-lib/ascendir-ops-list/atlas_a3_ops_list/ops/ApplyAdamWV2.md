@@ -33,13 +33,13 @@ Updates "var" "m" "v" and "max_grad_norm" according to the AdamWV2 algorithm.
 
 ## Attributes
 
-- lr: A required float, default is 0.1
-- beta1: A required float, default is 0.1
-- beta2: A required float,default is 0.1
-- weight_decay: A required float, default is 0.1
-- eps: A required float, default is 0.1
-- amsgrad: A required bool, default is false.
-- maximize: A required bool, default is false.
+- lr: A optional float, default is 0.1
+- beta1: A optional float, default is 0.1
+- beta2: A optional float,default is 0.1
+- weight_decay: A optional float, default is 0.1
+- eps: A optional float, default is 0.1
+- amsgrad: A optional bool, default is false.
+- maximize: A optional bool, default is false.
 
 ## Data Types
 
@@ -68,4 +68,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

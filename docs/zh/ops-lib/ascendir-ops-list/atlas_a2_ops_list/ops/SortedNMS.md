@@ -15,32 +15,23 @@ REG_OP(SortedNMS)
 
 ## Brief
 
-Greedily selects a subset of bounding boxes in descending order of
-score . 
+Greedily selects non-suppressed boxes in the supplied descending score order.
 
 ## Inputs
 
-- boxes: A 2-D float tensor of shape [num_boxes, 4]. They are expected to be in (x1, y1, x2, y2) format
-with 0 <= x1 < x2 and 0 <= y1 < y2. Supported type: float16, float32. Supported format: ND.
-- sorted_scores: A 1-D float tensor of shape [num_boxes] representing boxes' scores, which is sorted
-by descending order. Supported type: float16, float32. Supported format: ND.
-- input_indices: A 1-D integer tensor of shape [num_boxes] representing the indices for each row of
-boxes that would sort row of boxes by scores in descending order. Supported type: int32. Supported format: ND.
-- max_output_size: A scalar integer tensor representing the maximum number
-of boxes to be selected by non max suppression. Supported type: int32. Supported format: ND.
-- iou_threshold: A 0-D float tensor representing the threshold for deciding
-whether boxes overlap too much with respect to IOU. Supported type: float16, float32. Supported format: ND.
-- score_threshold: A 0-D float tensor representing the threshold for
-deciding when to remove boxes based on score. Supported type: float16, float32. Supported format: ND . 
+- boxes: A 2-D tensor of shape [num_boxes, 4].
+- sorted_scores: A 1-D tensor of shape [num_boxes], sorted in descending order.
+- input_indices: A 1-D int32 tensor of shape [num_boxes], with values in [0, num_boxes).
+- max_output_size: A scalar int32 tensor giving the maximum number of selected boxes.
+- iou_threshold: A scalar float tensor in [0, 1].
+- score_threshold: A scalar float tensor.
+boxes and iou_threshold must have the same type (float16 or float32). sorted_scores and
+score_threshold must have the same type (float16 or float32), independently of boxes.
 
 ## Outputs
 
-- selected_indices: A 1-D integer tensor of shape [M] representing the selected
-indices from the boxes tensor, where M <= max_output_size. Supported type: int32. Supported format: ND . 
-
-## Attributes
-
-offset: An optional int. Defaults to "0". 
+selected_indices: A 1-D int32 tensor of shape [M], where M is computed at runtime and
+M <= min(max_output_size, num_boxes).
 
 ## Data Types
 
@@ -54,11 +45,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - input5 score_threshold: float16,float32
 - output0 selected_indices: int32
 
-## Attention Constraints
-
-Input boxes and scores must be float type . 
-
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -35,7 +35,7 @@ Must be one of the following types: int32. The value of "sample_count" needs to 
 Must be one of the following types: bfloat16, float16, float32. The value of "mean" needs to be consistent with the C-axis value of "total_sum".
 - variance: A 1-D tensor. Runtime variance. The format must be ND.
 Must be one of the following types: bfloat16, float16, float32. Has the same type, shape and format as input "mean".
-The value of "variance" needs to be consistent with the C-axis value of "total_sum". 
+The value of "variance" needs to be consistent with the C-axis value of "total_sum".
 
 ## Outputs
 
@@ -47,7 +47,7 @@ Must be one of the following types: bfloat16, float16, float32. Has the same typ
 - mean: A 1-D tensor. Updated Runtime mean.
 Must be one of the following types: bfloat16, float16, float32. Has the same type, shape and format as input "mean".
 - variance: A 1-D tensor. Updated Runtime variance.
-Must be one of the following types: bfloat16, float16, float32. Has the same type, shape and format as input "mean". 
+Must be one of the following types: bfloat16, float16, float32. Has the same type, shape and format as input "mean".
 
 ## Attributes
 
@@ -72,4 +72,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

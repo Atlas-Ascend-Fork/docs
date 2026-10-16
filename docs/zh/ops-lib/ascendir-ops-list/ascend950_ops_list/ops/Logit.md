@@ -10,7 +10,7 @@ REG_OP(Logit)
 
 ## Brief
 
-The logit function is a mathematical operation for converting probability to numeric variable. 
+The logit function is a mathematical operation for converting probability to numeric variable.
 
 ## Inputs
 
@@ -19,11 +19,11 @@ Shape support 0D ~ 8D. The format must be ND.
 
 ## Outputs
 
-y: A tensor with the same type, shape, format as "x". Output data from probability to logit transformation. 
+y: A tensor with the same type, shape, format as "x". Output data from probability to logit transformation.
 
 ## Attributes
 
-eps: The epslion of "x", an optional attribute, the type is float. Defaults to -1.0. 
+eps: The epslion of "x", an optional attribute, the type is float. Defaults to -1.0.
 
 ## Data Types
 
@@ -33,4 +33,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

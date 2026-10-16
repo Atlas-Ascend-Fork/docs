@@ -14,7 +14,7 @@ REG_OP(StatelessRandperm)
 
 ## Brief
 
-Returns the random permutation of integers from 0 to n-1. 
+Returns the random permutation of integers from 0 to n-1.
 
 ## Inputs
 
@@ -28,7 +28,7 @@ Otherwise, it is seeded by the given seed.
 ## Outputs
 
 - y: A mutable tensor, shape is [n]. Must be one of the following types:
-float16, float32, double, int8, uint8, int16, int32, int64, bfloat16. 
+float16, float32, double, int8, uint8, int16, int32, int64, bfloat16.
 
 ## Attributes
 
@@ -60,4 +60,4 @@ Compatible with Pytorch Randperm operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

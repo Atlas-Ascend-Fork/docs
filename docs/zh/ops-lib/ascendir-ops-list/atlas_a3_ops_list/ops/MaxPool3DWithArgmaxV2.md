@@ -64,4 +64,4 @@ Compatible with the PyTorch operator max_pool3d_with_indices.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

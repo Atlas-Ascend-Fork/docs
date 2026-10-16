@@ -12,19 +12,19 @@ REG_OP(Cdist)
 ## Brief
 
 Computes batched the p-norm distance between each pair of
-the two collections of row vectors. 
+the two collections of row vectors.
 
 ## Inputs
 
 Two inputs, including:
 - x1: A tensor with shpae: BxPXM. Must be one of the following types:
-    float16, float32. 
+    float16, float32.
 - x2: A tensor with shpae: BxRxM. Must be one of the following types:
-    float16, float32. 
+    float16, float32.
 
 ## Outputs
 
-y: A Tensor with the same type of x1's and with shape BxPxR. 
+y: A Tensor with the same type of x1's and with shape BxPxR.
 
 ## Attributes
 
@@ -40,9 +40,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Cdist. 
+Compatible with the Pytorch operator Cdist.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

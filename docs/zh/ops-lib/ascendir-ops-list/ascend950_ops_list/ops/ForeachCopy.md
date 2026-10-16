@@ -2,8 +2,10 @@
 
 ```c
 REG_OP(ForeachCopy)
-    .DYNAMIC_INPUT(x, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_BF16, DT_INT8, DT_UINT8, DT_INT16, DT_UINT16, DT_UINT32, DT_INT64, DT_DOUBLE, DT_BOOL}))
-    .DYNAMIC_OUTPUT(y, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_BF16, DT_INT8, DT_UINT8, DT_INT16, DT_UINT16, DT_UINT32, DT_INT64, DT_DOUBLE, DT_BOOL}))
+    .DYNAMIC_INPUT(x, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_BF16, DT_INT8, DT_UINT8, DT_INT16, DT_UINT16,
+                                  DT_UINT32, DT_INT64, DT_DOUBLE, DT_BOOL}))
+    .DYNAMIC_OUTPUT(y, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_BF16, DT_INT8, DT_UINT8, DT_INT16, DT_UINT16,
+                                   DT_UINT32, DT_INT64, DT_DOUBLE, DT_BOOL}))
     .OP_END_FACTORY_REG(ForeachCopy)
 ```
 
@@ -34,4 +36,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -18,7 +18,7 @@ Returns a tensor where each sub-tensor of input along dimension
 ## Inputs
 
 One input, including:
-x: A tensor. Support one of the following types: float32, float16, bfloat16. The dimension range is [2, 8]. 
+x: A tensor. Support one of the following types: float32, float16, bfloat16. The dimension range is [2, 8].
 
 ## Outputs
 
@@ -41,4 +41,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

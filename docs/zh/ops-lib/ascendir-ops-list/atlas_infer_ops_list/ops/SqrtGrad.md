@@ -23,7 +23,7 @@ float16, float32, complex128, complex64.
 
 ## Outputs
 
-z: A ND Tensor. Has the same dtype as "y". 
+z: A ND Tensor. Has the same dtype as "y".
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

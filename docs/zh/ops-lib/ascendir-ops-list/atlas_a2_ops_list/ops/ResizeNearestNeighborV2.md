@@ -15,7 +15,7 @@ REG_OP(ResizeNearestNeighborV2)
 
 ## Brief
 
-Resize images to size using nearest neighbor interpolation. 
+Resize images to size using nearest neighbor interpolation.
 
 ## Inputs
 
@@ -25,12 +25,12 @@ Must be one of the following types: int8, uint8, int16, uint16, int32, int64, fl
 double, bfloat16.
 - size: A 1-D int32 tensor of 2 elements: new_height, new_width.
 Indicates the size of the target image, which is used to determine the height and width of the output image.
-Must be the type int32. 
+Must be the type int32.
 
 ## Outputs
 
 y: A 4-D tensor. Indicates the target image. Has the same type and format as input "x".
-The N, C dimension must be the same as x. 
+The N, C dimension must be the same as x.
 
 ## Attributes
 
@@ -42,7 +42,7 @@ Defaults to false.
 - half_pixel_centers: An optional bool. Determines the pixel center position during interpolation.
 If this parameter is set to True, the interpolation algorithm considers the center point of the pixel
 to estimate the pixel value more accurately. When set to false, the pixel center is on the integer coordinate point.
-Defaults to false. 
+Defaults to false.
 - scales: An optional listfloat. Multiplier for spatial size. Defaults to {0.0f, 0.0f} .
 
 ## Data Types
@@ -68,4 +68,4 @@ Compatible with tensorflow ResizeNearestNeighbor operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

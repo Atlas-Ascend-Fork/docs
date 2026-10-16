@@ -13,15 +13,15 @@ REG_OP(StringNormalizer)
 
 ## Brief
 
-StringNormalization performs string operations for basic cleaning . 
+StringNormalization performs string operations for basic cleaning .
 
 ## Inputs
 
-input: only accepts [C] or [1, C] UTF-8 strings tensor . 
+input: only accepts [C] or [1, C] UTF-8 strings tensor .
 
 ## Outputs
 
-output: UTF-8 strings tensor after cleaning . 
+output: UTF-8 strings tensor after cleaning .
 
 ## Attributes
 
@@ -37,7 +37,7 @@ values are "LOWER", "UPPER", "NONE". Default is "NONE".
 - locale : string (default is "C").
 Environment dependent string that denotes the locale according to which output
 strings needs to be upper/lowercased.Default C or platform specific equivalent
-as decided by the implementation. 
+as decided by the implementation.
 
 ## Attention Constraints
 
@@ -46,4 +46,4 @@ input can be either a 1-D or 2-D tensor, the shape of 2-D tensor must be [1, C].
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

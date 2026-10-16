@@ -13,11 +13,11 @@ REG_OP(ArgMaxWithK)
 
 ## Brief
 
-Returns the index number corresponding to the maximum value entered. 
+Returns the index number corresponding to the maximum value entered.
 
 ## Inputs
 
-x: A tensor. Must be one of the following types: float16, float32. 
+x: A tensor. Must be one of the following types: float16, float32.
 
 ## Outputs
 
@@ -47,4 +47,4 @@ Compatible with the Caffe operator ArgMax.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

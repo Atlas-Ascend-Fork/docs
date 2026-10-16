@@ -49,7 +49,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - shape of argmax must be (fmap_n, fmap_c1, kernel_h * kernel_w,
 (shape_max_pool[2] * shape_max_pool[3] + 15) // 16 * 16, 1),
 or (fmap_n, fmap_c1, kernel_h * kernel_w,
-(shape_max_pool[2] * shape_max_pool[3] + 31) // 16, 16), else failed . 
+(shape_max_pool[2] * shape_max_pool[3] + 31) // 16, 16), else failed .
 
 ## Third-party framework compatibility
 
@@ -58,4 +58,4 @@ Compatible with the TensorFlow operator MaxPoolGradGradWithArgmax.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

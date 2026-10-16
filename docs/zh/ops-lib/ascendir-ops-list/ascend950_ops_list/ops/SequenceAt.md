@@ -12,7 +12,7 @@ REG_OP(SequenceAt)
 
 ## Brief
 
-ouputs a tensor copy from the tensor at 'position' in input_sequence. 
+ouputs a tensor copy from the tensor at 'position' in input_sequence.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ ouputs a tensor copy from the tensor at 'position' in input_sequence.
 - index: position of the tensor in the sequence. negative value means
 counting position from back, accepted range in [-n, n - 1],
 where n is the number of tensors in sequence,
-it must be a scalar(tensor of empty shape), it is scalar. 
+it must be a scalar(tensor of empty shape), it is scalar.
 
 ## Outputs
 
@@ -37,4 +37,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

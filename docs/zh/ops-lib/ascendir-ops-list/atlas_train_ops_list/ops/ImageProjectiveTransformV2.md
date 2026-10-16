@@ -14,7 +14,7 @@ REG_OP(ImageProjectiveTransformV2)
 
 ## Brief
 
-image to transforms. 
+image to transforms.
 
 ## Inputs
 
@@ -54,4 +54,4 @@ Compatible with tensorflow ImageProjectiveTransformv2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)
