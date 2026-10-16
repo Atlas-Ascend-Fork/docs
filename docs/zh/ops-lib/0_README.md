@@ -11,7 +11,7 @@
   - [Transformer类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-transformer/blob/9.2.0/docs/zh/menu_aclnn_api.md)
   - [RAS类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-ras/blob/9.2.0/docs/zh/menu_aclnn_api.md)
 <!-- npu="950,A3,910b" id5 -->
-- [算子接口（torch\_extension）](op_interface_torch.md)
+- [算子接口（torch\_extension）<a npu_parse_enabled="true"></a>](op_interface_torch.md)
   - [NN类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-nn/blob/9.2.0/docs/zh/menu_torch_api.md)
   - [Transformer类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-transformer/blob/9.2.0/docs/zh/menu_torch_api.md)
   <!-- end id5 -->
