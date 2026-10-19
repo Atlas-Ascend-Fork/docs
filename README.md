@@ -50,8 +50,8 @@ docs/
 ### 开发工具
 
 - [ATC离线模型编译工具](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/atc_tools/README.md)
-- [性能调优工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/profiling/README.md)
-- [HCCL性能测试工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/hccl_test/README.md)
+- [性能调优工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/profiling/README.md)
+- [HCCL性能测试工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/hccl_test/README.md)
 
 ### 编译器
 

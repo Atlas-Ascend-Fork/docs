@@ -31,8 +31,8 @@
 - 《[ATC离线模型编译工具](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/atc_tools/README.md)》
 - 《[AOE调优工具](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/aoe/auxiliarydevtool_aoe_0001.html)》
 - 《[精度调试工具](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/ModelAccuracyAnalyzer/atlasaccuracy_16_0001.html)》
-- 《[性能调优工具](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/Profiling/atlasprofiling_16_0001.html)》
-- 《[HCCL性能测试工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/hccl_test/README.md)》
+- 《[性能调优工具](https://gitcode.com/cann/docs/blob/master/docs/zh/profiling/profiling_menu.md)》
+- 《[HCCL性能测试工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/hccl_test/README.md)》
 - 《[AMCT模型压缩工具](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/amct/atlasamct_16_0001.html)》
 
 ## 编译器

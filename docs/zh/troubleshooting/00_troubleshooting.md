@@ -52,8 +52,8 @@
       - [fork方式创建子进程导致应用进程卡死](fork_subprocess_app_stuck.md)
 
 - [故障定位工具](troubleshooting_tools.md)
-  - [asys工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/README.md)
-  - [msaicerr工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/msaicerr/README.md)
+  - [asys工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/asys/README.md)
+  - [msaicerr工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/msaicerr/README.md)
 
 - [常用定位操作](common_diagnostic_operations.md)
   - [通过Device日志获取故障ID并排查RAS硬件故障](device_log_ras_hardware_fault.md)
@@ -175,4 +175,3 @@
   - [Nnopbase-Errors<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/en/error_code/Nnopbase-Errors/Nnopbase-Errors.md)
   - [AOE相关错误码](error-codes/AOE-Error.md)
   - [E*9*** Internal error](error-codes/E-9-Inner-Error.md)
-  
