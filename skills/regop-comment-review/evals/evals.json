@@ -1,0 +1,29 @@
+{
+  "skill_name": "regop-comment-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "请审查PR 1411（PR 含算子原型头文件 .h 的注释变更：@brief 后加冒号、REG_OP 新增输入参数但注释未同步、约束中出现 910B 字眼）",
+      "expected_output": "切换 PR 分支后按 PC/FM/BF/IN/AT/OT/CT/DT/OF 九维度检视；输出含概览表的问题报告（严重/高危/一般/建议分组，规则编号+绝对行号）；识别 PC-06 原型与注释不同步、BF-01 冒号、CT-04 芯片代号；生成报告后询问用户确认提交，未经确认不自动提交评论",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "原型注释评审 opp/built-in/op_proto/inc/nn/conv2d.h（单文件，含 REG_OP 定义与完整注释块）",
+      "expected_output": "本地模式完整评审：解析 REG_OP 建立原型基准，逐维度输出问题清单（JSON 检视意见格式 + 中文报告），末尾附通过项确认清单；无 Token/PR 交互",
+      "files": ["fixtures/conv2d.h"]
+    },
+    {
+      "id": 3,
+      "prompt": "检查这段原型注释有什么问题（粘贴片段，含 @brief 后加冒号、单个输入误用 @li、一句话中间加 \\n、出现 910B 字眼等典型错误）",
+      "expected_output": "仅做格式与写法类检查并按规则编号给出修改写法；报告备注说明片段模式下无法做与 REG_OP 的一致性核对",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "注释检视 opp/built-in/op_proto/inc/math 目录（批量，多个头文件）",
+      "expected_output": "批量评审报告：开头为逐文件汇总表（文件/算子名/CRITICAL/HIGH/MEDIUM/LOW/结论），后接各文件问题清单；手写的 @par Data Types 标记 DT-01 而非缺陷",
+      "files": []
+    }
+  ]
+}
