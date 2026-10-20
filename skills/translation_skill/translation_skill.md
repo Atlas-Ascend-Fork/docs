@@ -14,7 +14,16 @@
 
 ## 执行流程
 
-### 1. 扫描所有md文档并统计
+### 1. 交互式获取本地仓库路径（必须首先执行）
+
+**不通过远程地址推断仓库名**，直接交互式询问用户：
+
+1. 使用交互式提问工具（question）向用户输出提示：`请输入需要翻译的本地仓库路径：`
+2. 用户输入clone到本地的仓库路径（如`D:\WorkSpace\metadef_trunk`）
+3. 校验用户输入的路径存在且为git仓库（路径下存在`.git`目录），校验失败则重新提示输入
+4. 后续扫描、翻译、提交等所有操作均以该路径为仓库根目录（在该目录下执行扫描、git等命令）
+
+### 2. 扫描所有md文档并统计
 
 扫描用户本地仓库的所有`.md`文档（排除.git目录），**必须先统计排除路径文件数量，再计算实际需翻译数量**。
 
@@ -65,21 +74,20 @@
 - 实际需翻译：150个
 ```
 
-### 2. 读取排除列表配置
+### 3. 读取排除列表配置
 
 读取配置文件：`${current_path}\exclude_docs.json`
 
-### 3. 判断文档是否需要翻译
+### 4. 判断文档是否需要翻译
 
 对每个md文档按以下流程判断：
 
-**步骤1：提取仓库名并匹配排除配置**
+**步骤1：根据本地仓库路径匹配排除配置**
 
-1. 获取本地仓库远程地址
-2. 从远程地址提取仓库名（去除.git后缀）
-3. 在配置中查找repoName是否包含仓库名（关键字匹配）
-   - 匹配成功 → 该仓库有docs路径排除配置
-   - 不匹配 → 需要翻译所有docs文档
+1. 使用执行流程第1步中用户交互式输入的本地仓库路径（如`D:\WorkSpace\metadef_trunk`）
+2. 将本地仓库路径与配置中的repoName进行模糊匹配（路径中包含repoName关键字即匹配成功，如`metadef_trunk`匹配`metadef`）
+   - 匹配成功 → 该仓库有docs路径排除配置，读取excludeDocsPaths
+   - 未匹配 → 无文件排除，整个仓库进行翻译
 
 **步骤2：判断文档是否需要翻译**
 
@@ -96,11 +104,11 @@
 
 **重要提示：**
 
-- `excludeDocsPaths`配置的含义是：这些docs子路径已经在公开仓库维护，不需要在本仓库翻译
+- `excludeDocsPaths`配置的含义是：配置内的docs子路径由翻译人员完成专业翻译，不在本仓库进行翻译
 - 其他docs路径的文档仍然需要翻译
-- 仓库名匹配采用**关键字匹配**（如`ge_en_test`匹配`ge`）
+- 仓库匹配采用**模糊匹配**：用户输入的本地仓库路径包含repoName关键字即匹配成功（如`D:\WorkSpace\ge_test`匹配`ge`），未匹配则无文件排除、整个仓库翻译
 
-### 4. 确定翻译文件存放路径
+### 5. 确定翻译文件存放路径
 
 **非docs目录文档：**
 
@@ -158,19 +166,19 @@
 
 > 详细路径说明和示例见 [Q2: 如何确定翻译文件存放路径](#q2-如何确定翻译文件存放路径)
 
-### 5. 检查是否存在翻译文件
+### 6. 检查是否存在翻译文件
 
 根据文档路径类型检查对应的翻译文件是否存在。
 
 > 详细检查方法和示例见 [Q4: 如何检查是否存在翻译文件](#q4-如何检查是否存在翻译文件)
 
-### 6. 检查文档变更
+### 7. 检查文档变更
 
 如果翻译文件已存在，检查原文档是否有变更。
 
 > 详细检查方法见 [Q5: 如何检测文档变更](#q5-如何检测文档变更)
 
-### 7. 读取翻译标准（必须执行）
+### 8. 读取翻译标准（必须执行）
 
 > **⚠️ 重要警告：翻译前必须先读取翻译标准！遗漏此步骤会导致翻译不符合规范，需要返工修正！**
 
@@ -371,7 +379,7 @@
 
 英文翻译中，将非断行连字符（U+2011）统一替换为 ASCII 连字符（U+002D，即普通减号 `-`）。
 
-### 8. 执行翻译
+### 9. 执行翻译
 
 **不存在翻译文件（完整翻译）：**
 
@@ -388,7 +396,7 @@
 
 > 详细处理方法见 [Q8: 如何处理已存在的翻译文件](#q8-如何处理已存在的翻译文件)
 
-### 9. 使用todowrite跟踪进度
+### 10. 使用todowrite跟踪进度
 
 创建任务列表跟踪翻译进度，**必须包含统计步骤**（避免误导用户）。
 
@@ -396,7 +404,8 @@
 
 ```text
 [
-  {"content": "扫描所有md文档并统计总数", "status": "in_progress", "priority": "high"},
+  {"content": "交互式获取用户输入的本地仓库路径", "status": "in_progress", "priority": "high"},
+  {"content": "扫描所有md文档并统计总数", "status": "pending", "priority": "high"},
   {"content": "统计排除路径文件数量（docs/dflow_api、docs/graph_engine_api等）", "status": "pending", "priority": "high"},
   {"content": "计算实际需翻译数量（总数-排除数）", "status": "pending", "priority": "high"},
   {"content": "读取翻译标准文档（必须执行）", "status": "pending", "priority": "high"},
@@ -422,7 +431,7 @@
 - 待翻译文件：147个
 ```
 
-### 10. 提交变更到远程仓库
+### 11. 提交变更到远程仓库
 
 翻译完成后，将所有变更的中英文md文档提交到远程仓库。
 
@@ -442,14 +451,13 @@
 - **路径**：`${current_path}\exclude_docs.json`
 - **作用**：定义公开产品文档仓库及其需要排除翻译的 docs 子路径
 - **格式**：JSON格式，包含 mapping 数组，每个元素包含：
-  - `repoName`: 仓库名（用于匹配）
-  - `publicRepo`: 公开仓库完整地址
+  - `repoName`: 仓库名（用于与用户输入的本地仓库路径进行模糊匹配）
   - `excludeDocsPaths`: 需要跳过翻译的 docs 子路径列表
 - **匹配规则**：
-  1. 获取本地仓库远程地址
-  2. 从远程地址提取仓库名
-  3. 在配置中查找 repoName 是否匹配
-  4. 如果匹配成功，该仓库 docs 目录下 excludeDocsPaths 中列出的子路径跳过翻译
+  1. 用户交互式输入本地仓库路径
+  2. 将本地仓库路径与配置中的 repoName 进行模糊匹配（路径中包含 repoName 关键字即匹配成功）
+  3. 如果匹配成功，该仓库 docs 目录下 excludeDocsPaths 中列出的子路径跳过翻译
+  4. 如果未匹配，无文件排除，整个仓库进行翻译
 
 > 详细检查方法见 [Q3: 如何检查排除列表](#q3-如何检查排除列表)
 
@@ -650,11 +658,11 @@
    → 否：需要翻译（非docs目录文档）
    → 是：继续检查排除列表
 
-2. 从本地仓库远程地址提取仓库名
-   → 示例：https://gitcode.com/sophia1213/ge_en_test.git → 提取仓库名 "ge"
+2. 将用户输入的本地仓库路径与exclude_docs.json中的repoName进行模糊匹配（路径中包含repoName关键字即匹配成功）
+   → 示例：`D:\WorkSpace\ge_test` → 模糊匹配到repoName "ge"
 
-3. 在exclude_docs.json中查找repoName是否匹配
-   → 不匹配：需要翻译（该仓库不在排除列表中）
+3. 匹配结果判断
+   → 未匹配：无文件排除，整个仓库进行翻译
    → 匹配：继续检查文档路径是否在excludeDocsPaths中
 
 4. 文档路径是否在excludeDocsPaths列表中？
@@ -689,8 +697,7 @@ find . -name "*.md" -not -path "./.git/*" \
 # 3. 检查文档是否在docs目录
 echo $filepath | grep "^./docs/"
 
-# 4. 获取本地仓库远程地址
-git remote -v
+# 4. 本地仓库路径由用户交互式输入获取（提示：请输入需要翻译的仓库名称）
 
 # 5. 读取排除列表配置
 current_path=$(pwd)
@@ -699,12 +706,12 @@ cat ${current_path}\exclude_docs.json
 
 **示例场景：**
 
-| 本地仓库远程地址 | 提取仓库名 | 配置中repoName匹配 | docs路径 | excludeDocsPaths | 是否翻译 |
+| 用户输入的本地仓库路径 | 匹配到的repoName | 配置中repoName匹配 | docs路径 | excludeDocsPaths | 是否翻译 |
 | ----------------- | ----------- | ------------------ | --------- | ----------------- | --------- |
-| `https://gitcode.com/sophia1213/ge.git` | ge | 匹配 | `docs/dflow_api/guide.md` | `["docs/dflow_api", "docs/graph_engine_api"]` | 跳过（在排除路径） |
-| `https://gitcode.com/sophia1213/ge.git` | ge | 匹配 | `docs/architecture/feature.md` | `["docs/dflow_api", "docs/graph_engine_api"]` | 翻译（不在排除路径） |
-| `https://gitcode.com/user/pypto.git` | pypto | 匹配 | `docs/api/guide.md` | `["docs"]` | 跳过（整个docs目录排除） |
-| `https://gitcode.com/user/custom.git` | custom | 不匹配 | `docs/any.md` | - | 翻译（不在排除列表） |
+| `D:\WorkSpace\ge_test` | ge | 匹配 | `docs/dflow_api/guide.md` | `["docs/dflow_api", "docs/graph_engine_api"]` | 跳过（在排除路径） |
+| `D:\WorkSpace\ge_test` | ge | 匹配 | `docs/architecture/feature.md` | `["docs/dflow_api", "docs/graph_engine_api"]` | 翻译（不在排除路径） |
+| `D:\WorkSpace\pypto` | pypto | 匹配 | `docs/api/guide.md` | `["docs"]` | 跳过（整个docs目录排除） |
+| `D:\WorkSpace\custom_repo` | 无（未匹配） | 不匹配 | `docs/any.md` | - | 翻译（无排除，整个仓库翻译） |
 
 ### Q2: 如何确定翻译文件存放路径
 
@@ -759,63 +766,60 @@ cat ${current_path}\exclude_docs.json
    cat ${current_path}\exclude_docs.json
    ```
 
-2. **获取本地仓库的远程地址并提取仓库名**
+2. **获取用户输入的本地仓库路径**
 
-   ```bash
-   # 获取远程地址
-   git remote -v
+   本地仓库路径通过交互式输入获取，提示语：`请输入需要翻译的仓库名称：`
 
-   # 提取仓库名示例：
-   # https://gitcode.com/sophia1213/ge_en_test.git → ge
-   # https://gitcode.com/cann/pypto.git → pypto
-   # https://gitcode.com/user/custom_repo.git → custom_repo
+   ```text
+   # 用户输入示例：
+   # D:\WorkSpace\metadef_trunk → 模糊匹配到repoName "metadef"
+   # D:\WorkSpace\ge_test → 模糊匹配到repoName "ge"
+   # D:\WorkSpace\custom_repo → 未匹配任何repoName，整个仓库翻译
    ```
 
 3. **匹配逻辑**
    - 在配置文件的 mapping 数组中查找 repoName 字段
-   - 如果 repoName 与本地仓库名匹配：
+   - 将用户输入的本地仓库路径与 repoName 进行模糊匹配（路径中包含 repoName 关键字即匹配成功；若匹配到多个repoName，取关键字最长的配置项）
+   - 如果匹配成功：
+     - 读取该配置项的 excludeDocsPaths 列表
      - 检查文档路径是否在 excludeDocsPaths 列表中
      - 在排除路径：跳过翻译
      - 不在排除路径：需要翻译
-   - 如果 repoName 不匹配：需要翻译（该仓库的所有文档）
+   - 如果未匹配：无文件排除，整个仓库进行翻译
 
    **配置文件格式：**
 
    ```json
    {
        "mapping": [
-          {
-               "repoName": "ge",
-               "publicRepo": "https://gitcode.com/cann/ge",
-               "excludeDocsPaths": ["docs/dflow_api", "docs/graph_engine_api", "docs/llm_datadist_api"]
+         {
+              "repoName": "ge",
+              "excludeDocsPaths": ["docs/dflow_api", "docs/graph_engine_api", "docs/llm_datadist_api"]
          },
          {
-               "repoName": "pypto",
-             "publicRepo": "https://gitcode.com/cann/pypto",
-               "excludeDocsPaths": ["docs"]
-          }
+              "repoName": "pypto",
+              "excludeDocsPaths": ["docs"]
+         }
       ]
    }
    ```
 
    **匹配示例：**
 
-   | 本地仓库名 | 配置repoName | excludeDocsPaths | docs文档路径 | 是否跳过 |
+   | 用户输入的本地仓库路径 | 配置repoName | excludeDocsPaths | docs文档路径 | 是否跳过 |
    | ----------- | ------------- | ----------------- | ------------ | --------- |
-   | ge | ge | `["docs/dflow_api"]` | `docs/dflow_api/cpp/AddInvokedClosure.md` | 跳过 |
-   | ge | ge | `["docs/dflow_api"]` | `docs/architecture/architecture.md` | 翻译 |
-   | pypto | pypto | `["docs"]` | `docs/any/path.md` | 跳过（整个docs排除） |
-   | custom | 不匹配 | - | `docs/any.md` | 翻译 |
+   | `D:\WorkSpace\ge_test` | ge | `["docs/dflow_api"]` | `docs/dflow_api/cpp/AddInvokedClosure.md` | 跳过 |
+   | `D:\WorkSpace\ge_test` | ge | `["docs/dflow_api"]` | `docs/architecture/architecture.md` | 翻译 |
+   | `D:\WorkSpace\pypto` | pypto | `["docs"]` | `docs/any/path.md` | 跳过（整个docs排除） |
+   | `D:\WorkSpace\1020\custom_repo` | 未匹配 | - | `docs/any.md` | 翻译（无排除，整个仓库翻译） |
 
    **代码实现示例：**
 
-   ```bash
-   # 从远程地址提取仓库名
-   remote_url=$(git remote get-url origin)
-   repo_name=$(basename "$remote_url" .git)
+   ```text
+   # 本地仓库路径由用户交互式输入获取（如 D:\WorkSpace\metadef_trunk）
 
    # 检查是否在排除列表
-   # 需要解析JSON配置并匹配repoName
+   # 需要解析JSON配置，将用户输入的本地仓库路径与repoName进行模糊匹配
    ```
 
 ### Q4: 如何检查是否存在翻译文件
