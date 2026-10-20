@@ -81,7 +81,7 @@ md-review-skill/
 3. 开始审查：
 
    ```bash
-   请审查 PR #<pr_number>
+   请审查PR <pr_number>
    ```
 
 ## 常见问题
