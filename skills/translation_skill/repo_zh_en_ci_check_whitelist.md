@@ -26,3 +26,4 @@
 | [https://gitcode.com/cann/ops-transformer](https://gitcode.com/cann/ops-transformer) | / | / |
 | [https://gitcode.com/cann/docs](https://gitcode.com/cann/docs) | 是，已完成拦截 | **产品文档：**<br>docs/zh/app-dev<br>docs/zh/troubleshooting<br>docs/en/app-dev<br>docs/en/troubleshooting |
 | [https://gitcode.com/cann/pypto-vscode](https://gitcode.com/cann/pypto-vscode) | 是，已完成拦截 | **产品文档：**<br>docs/zh |
+| [https://gitcode.com/cann/asc-comm](https://gitcode.com/cann/asc-comm) | 是，已完成拦截 | **产品文档：**<br>docs/zh/api <br>docs/zh/guide <br>docs/zh/programming_model <br>docs/zh/index.md <br>docs/en/api <br>docs/en/guide <br>docs/en/programming_model <br>docs/en/index.md |
