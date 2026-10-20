@@ -539,7 +539,7 @@ acldvppSetPicDescSize(vpcInputDesc_, jpegOutBufferSize);
 vpcOutputBatchDesc_ = acldvppCreateBatchPicDesc(2);
 for (uint32_t index=0; index<2; ++index){
      vecOutPtr_.push_back(vpcOutBufferDev_);
-     vpcOutputDesc_ = acldvppGetPicDesc(vpcInputBatchDesc_, index);
+     vpcOutputDesc_ = acldvppGetPicDesc(vpcOutputBatchDesc_, index);
     acldvppSetPicDescData(vpcOutputDesc_, vpcOutBufferDev_);
     acldvppSetPicDescFormat(vpcOutputDesc_, PIXEL_FORMAT_YUV_SEMIPLANAR_420);
     acldvppSetPicDescWidth(vpcOutputDesc_, dvppOutWidth);
@@ -583,8 +583,8 @@ if(runMode == ACL_HOST){
     (void)acldvppFree(vpcOutBufferDev_);
 }
 }
-acldvppDestroyBatchPicDesc(vpcInputDesc_);
-acldvppDestroyBatchPicDesc(vpcOutputDesc_);
+acldvppDestroyBatchPicDesc(vpcInputBatchDesc_);
+acldvppDestroyBatchPicDesc(vpcOutputBatchDesc_);
 acldvppDestroyChannel(dvppChannelDesc_);
 (void)acldvppDestroyChannelDesc(dvppChannelDesc_);
 dvppChannelDesc_ = nullptr;
