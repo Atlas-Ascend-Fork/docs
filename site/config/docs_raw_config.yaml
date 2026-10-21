@@ -1,5 +1,5 @@
 # ============================================================================
-# 文档打包配置文件，包含markdown文档与examples
+# 文档打包配置文件，包含markdown文档、examples、部分仓库头文件以及skills
 #
 # scan_all_repos:    打包整个工作区顶层的仓库
 # special_tar_repos: 走特殊清单打包的仓库（md/png/jpg + examples全量）
@@ -21,18 +21,18 @@ special_tar_repos:
 
 repo_dirs:
 # 打包指定目录
-  runtime: [docs, python/docs, example]
-  asc-devkit: [docs, examples, .devcontainer]
+  runtime: [docs, python/docs, example, include, .agents]
+  asc-devkit: [docs, examples, include, .agent, .devcontainer]
   asc-tools: [docs, examples]
-  hccl: [docs, examples]
-  hcomm: [docs, examples]
-  hixl: [docs, examples]
+  hccl: [docs, examples, include, .agents]
+  hcomm: [docs, examples, include, .agents]
+  hixl: [docs, examples, include, .agents]
   pyasc: [docs, examples]
   oam-tools: [docs, examples]
   amct: [docs, examples]
-  ge: [docs, examples]
-  metadef: [docs, example]
-  opbase: [docs, examples]
+  ge: [docs, examples, inc, .claude]
+  metadef: [docs, example, inc, .claude]
+  opbase: [docs, examples, include]
   pypto: [docs, examples]
   pto-isa: [docs]
   tensorflow: [docs]
