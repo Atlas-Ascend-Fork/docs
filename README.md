@@ -16,12 +16,17 @@
 
 ```txt
 docs/
-├── docs/                       # 文档
-│   ├── app-dev                 # 应用开发
-│   ├── env-vars                # 环境变量参考
-│   ├── fusion-patterns         # 图融合和UB融合规则参考
-│   ├── ops-lib                 # 算子库公共
-│   └── troubleshooting         # 故障处理
+├── docs/                       # 文档源文件
+│   ├── en/                     # 英文文档
+│   │   ├── fusion-patterns     # 图融合和UB融合规则参考（英文）
+│   │   └── troubleshooting     # 故障处理（英文）
+│   └── zh/                     # 中文文档
+│       ├── app-dev             # 应用开发
+│       ├── env-vars            # 环境变量参考
+│       ├── fusion-patterns     # 图融合和UB融合规则参考
+│       ├── ops-lib             # 算子库公共
+│       ├── profiling           # 性能调优
+│       └── troubleshooting     # 故障处理
 └── README.md                   # 本文件
 ```
 

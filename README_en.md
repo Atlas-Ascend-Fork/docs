@@ -17,11 +17,16 @@ The key directory structure is as follows:
 ```txt
 docs/
 ├── docs/                       # Documents
-│   ├── app-dev                 # Application development
-│   ├── env-vars                # Environment variable reference
-│   ├── fusion-patterns         # Graph fusion and UB fusion rule reference
-│   ├── ops-lib                 # Operator library public documents
-│   └── troubleshooting         # Troubleshooting
+│   ├── en/                     # English documents
+│   │   ├── fusion-patterns     # Graph fusion and UB fusion rule reference
+│   │   └── troubleshooting     # Troubleshooting
+│   └── zh/                     # Chinese documents
+│       ├── app-dev             # Application development
+│       ├── env-vars            # Environment variable reference
+│       ├── fusion-patterns     # Graph fusion and UB fusion rule reference
+│       ├── ops-lib             # Operator library public documents
+│       ├── profiling           # Performance profiling
+│       └── troubleshooting     # Troubleshooting
 └── README.md                   # This file
 ```
 
