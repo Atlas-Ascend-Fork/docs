@@ -119,7 +119,7 @@ ret = acl.util.stop_thread(tid)
 # 3.释放运行时资源。
 ret = acl.rt.destroy_stream(self.stream)
 ret = acl.rt.destroy_context(self.context)
-ret = acl.rt.reset_device(self.model_id)
+ret = acl.rt.reset_device(self.device_id)
 
 # 4.去初始化。
 ret = acl.finalize()
