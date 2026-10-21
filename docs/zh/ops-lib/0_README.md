@@ -26,7 +26,7 @@
   - [RAS类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-ras/blob/master/docs/zh/menu_aclnn_api.md)
 <!-- end id4 -->
 <!-- npu="950,A3,910b" id5 -->
-- [算子接口（torch\_extension）](op_interface_torch.md)
+- [算子接口（torch\_extension）<a npu_parse_enabled="true"></a>](op_interface_torch.md)
   - [NN类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_torch_api.md)
   - [Transformer类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_torch_api.md)
   <!-- end id5 -->
@@ -41,7 +41,7 @@
   - [nnopbase接口（当前版本不支持）<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/0_opdev_api_list.md)
   <!-- end id7 -->
   <!-- npu="950,A3,910b,910,310p,310b" id9 -->
-  - [op_common接口<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/0_op_common_list.md)
+  - [op_common接口<a name="sub_menu" npu_parse_enabled="true"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/0_op_common_list.md)
   <!-- end id9 -->
   <!-- npu="IPV350" id10 -->
   - [op_common接口（当前版本不支持）<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/0_op_common_list.md)
