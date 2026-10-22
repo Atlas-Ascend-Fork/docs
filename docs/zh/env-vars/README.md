@@ -38,8 +38,8 @@
 <!-- end id6 -->
 <!-- npu="950,A3,910b,910,310p" id7 -->
 - [性能数据采集](./_dump_profile.md)
-  - [PROFILING_MODE](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/env-vars/PROFILING_MODE.md)
-  - [PROFILING_OPTIONS](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/env-vars/PROFILING_OPTIONS.md)
+  - [PROFILING_MODE](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/env-vars/PROFILING_MODE.md)
+  - [PROFILING_OPTIONS](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/env-vars/PROFILING_OPTIONS.md)
 <!-- end id7 -->
 <!-- npu="950,A3,910b,910,310p,310b" id9 -->
 - [日志](./_dump_log.md)
