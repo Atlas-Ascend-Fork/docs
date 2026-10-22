@@ -194,7 +194,7 @@ if (aclrtGetRunMode(&runMode) == ACL_HOST) {
         resultDistance = (float *)malloc(dataLen);
         resultDistancePtr.reset(resultDistance);
         aclrtMemcpy(id0, dataLen, id0Dev.get(), dataLen, ACL_MEMCPY_DEVICE_TO_HOST);
-        aclrtMemcpy(id1, dataLen, id0Dev.get(), dataLen, ACL_MEMCPY_DEVICE_TO_HOST);
+        aclrtMemcpy(id1, dataLen, id1Dev.get(), dataLen, ACL_MEMCPY_DEVICE_TO_HOST);
         aclrtMemcpy(resultOffset, dataLen, resultOffsetDev.get(), dataLen, ACL_MEMCPY_DEVICE_TO_HOST);
         aclrtMemcpy(resultDistance, dataLen, resultDistanceDev.get(), dataLen, ACL_MEMCPY_DEVICE_TO_HOST);
 }
