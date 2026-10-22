@@ -5,13 +5,13 @@
 报错格式如下，占位符%s表示接口名：
 
 ```text
-Some argument are invalid. For details, See the description of API %s in the API Reference, the slog of device will display detailed errors.
+Some arguments are invalid. For details, see the description of API %s in the API Reference, the slog of device will display detailed errors.
 ```
 
 报错示例如下：
 
 ```text
-Some argument are invalid. For details, See the description of API hi_mpi_sys_init in the API Reference, the slog of device will display detailed errors.
+Some arguments are invalid. For details, see the description of API hi_mpi_sys_init in the API Reference, the slog of device will display detailed errors.
 ```
 
 ## 解决方法
