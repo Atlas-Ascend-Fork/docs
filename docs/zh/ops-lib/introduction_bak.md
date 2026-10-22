@@ -7,7 +7,7 @@
 > <!-- npu="950,A3,910b,910,310p,310b" id1 -->
 > - 本算子库提供的算子均为CANN内置算子，您可以直接调用；如需自定义算子，请参考[《Ascend C算子开发指南》](https://hiascend.com/document/redirect/CannCommunityOpdevAscendC)完成算子开发。
 > <!-- end id1 -->
-> - CANN算子源码已在[Gitcode CANN开源项目](https://gitcode.com/cann)开放，您可以进一步了解社区生态或算子开发和贡献流程。
+> - CANN算子源码已在[GitCode CANN开源项目](https://gitcode.com/cann)开放，您可以进一步了解社区生态或算子开发和贡献流程。
 
 [CANN](https://www.hiascend.com/cann)（Compute Architecture for Neural Networks）提供了一系列丰富且经过深度优化、硬件亲和的高性能算子，可直接应用于AI业务，为网络在AI处理器上的加速计算奠定了基础。
 

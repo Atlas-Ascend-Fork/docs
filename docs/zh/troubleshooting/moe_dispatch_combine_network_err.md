@@ -62,13 +62,13 @@ Ascend EP形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\
 
 本示例通过Device系统类日志找到最早退出的进程，并确认其属于上述的场景1或场景2。
 
-1. 登陆Server物理机自带的msnpureport工具，执行如下命令收集Device系统类日志。
+1. 登录Server物理机自带的msnpureport工具，执行如下命令收集Device系统类日志。
 
-    >**说明：** 
+    >**说明：**
     >工具的获取和参数介绍参见[《msnpureport工具》](https://support.huawei.com/enterprise/zh/ascend-computing/ascend-hdk-pid-252764743?category=reference-guides&subcategory=command-reference)。
 
     ```bash
-    msnpureport -f 
+    msnpureport -f
     ```
 
     执行完后，在当前路径下生成以时间戳命名的文件夹，假设为“2025-12-20-19-11-27”。

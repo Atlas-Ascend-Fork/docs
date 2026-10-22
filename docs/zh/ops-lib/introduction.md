@@ -10,7 +10,7 @@
 - 如果您调用算子过程中出现问题，请参考[《故障处理》](https://hiascend.com/document/redirect/CannCommunitytrouble)进行问题定位和分析。
 
 <!-- npu="950,A3,910b,910,310p,310b" id2 -->
-CANN内置算子的源码已在Gitcode [CANN>算子库](https://gitcode.com/cann)项目开放，您可以进一步了解社区生态和算子开发/贡献流程。
+CANN内置算子的源码已在GitCode [CANN>算子库](https://gitcode.com/cann)项目开放，您可以进一步了解社区生态和算子开发/贡献流程。
 <!-- end id2 -->
 
 ## 算子库架构
