@@ -172,7 +172,10 @@ int32_t Init(int32_t deviceId, aclrtContext* context, aclrtStream* stream)
     initFunc = acldvppInit;
     finalizeFunc = acldvppFinalize;
 
-    auto initFunc(nullptr);
+    const int32_t initRet = initFunc(nullptr);
+    if (initRet != 0) {
+        return initRet;
+    }
     ScopeGuard autoDeinit([] { finalizeFunc(); });
 
     aclrtSetDevice(deviceId);
@@ -209,7 +212,10 @@ int32_t main()
     int32_t deviceId = 0;
     aclrtContext context;
     aclrtStream stream;
-    Init(deviceId, &context, &stream);
+    const int32_t initRet = Init(deviceId, &context, &stream);
+    if (initRet != 0) {
+        return initRet;
+    }
     // jpeg图片编码
     encode_jpeg(stream);
 
