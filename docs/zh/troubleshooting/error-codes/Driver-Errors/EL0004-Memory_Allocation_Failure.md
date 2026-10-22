@@ -5,7 +5,13 @@
 报错格式如下：
 
 ```text
-Failed to allocate memory.
+Failed to allocate memory requested by %s module.
+```
+
+报错示例如下：
+
+```text
+Failed to allocate memory requested by RUNTIME module.
 ```
 
 ## 可能原因

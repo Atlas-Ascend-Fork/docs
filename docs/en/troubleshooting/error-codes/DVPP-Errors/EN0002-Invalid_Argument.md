@@ -11,7 +11,7 @@ Some arguments are invalid. For details, see the description of API %s in the AP
 Error example:
 
 ```text
-Some argument are invalid. For details, See the description of API hi_mpi_sys_init in the API Reference, the slog of device will display detailed errors.
+Some arguments are invalid. For details, see the description of API hi_mpi_sys_init in the API Reference, the slog of device will display detailed errors.
 ```
 
 ## Solution
