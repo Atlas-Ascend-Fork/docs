@@ -267,13 +267,13 @@ include_directories(
 target_link_libraries(opapi_test PRIVATE
                       ${ASCEND_PATH}/lib64/libascendcl.so
                       ${ASCEND_PATH}/lib64/libnnopbase.so
-                      ${ASCEND_PATH}/lib64/libopapi_${ops_project}.so)
+                      ${ASCEND_PATH}/lib64/libopapi_math.so)
 
 # 可执行文件在CMakeLists文件所在目录的bin目录下
 install(TARGETS opapi_test DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 ```
 
-其中$\{ops\_project\}表示不同类型算子库，请按需引用：
+Add算子属于Math类，本示例链接`libopapi_math.so`。其他算子请按所属算子库选择依赖：
 
 - Math类算子：引用对应libopapi\_math.so。
 - NN类算子：引用libopapi\_math.so和libopapi\_nn.so。
@@ -288,8 +288,12 @@ find_package(Threads REQUIRED)
 target_link_libraries(opapi_test PRIVATE
                       ${ASCEND_PATH}/lib64/libascendcl.so
                       ${ASCEND_PATH}/lib64/libnnopbase.so
-                      ${ASCEND_PATH}/lib64/libopapi_${ops_project}.so
+                      ${ASCEND_PATH}/lib64/libopapi_math.so
+                      ${ASCEND_PATH}/lib64/libopapi_transformer.so
+                      ${ASCEND_PATH}/lib64/libc_sec.so
+                      -Wl,--no-as-needed
                       ${ASCEND_PATH}/lib64/libhccl.so      # 集合通信库文件
+                      ${ASCEND_PATH}/lib64/libhccl_fwk.so
                       ${CMAKE_THREAD_LIBS_INIT})            # 多线程依赖的库文件
 ```
 
