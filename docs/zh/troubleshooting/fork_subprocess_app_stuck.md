@@ -96,12 +96,14 @@
         例如，在上图70行的位置增加如下代码，用于在fork启进程的地方触发堆栈消息打印：
 
         ```py
+        import os
         import traceback
         import time
         timestamp = time.time()
         timestamp_str = str(int(timestamp))
         file_name = f"stack_{timestamp_str}.txt"
-        with open("/home/{}.txt".format(file_name),"a") as f:
+        stack_path = os.path.join(os.path.expanduser("~"), file_name)
+        with open(stack_path, "a") as f:
             traceback.print_stack(file=f)
         ```
 
