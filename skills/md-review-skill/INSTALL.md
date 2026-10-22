@@ -12,7 +12,8 @@
 ### 1. 放置 Skill 文件
 
 ```bash
-cp -r md-review-skill ~/.config/opencode/skills/
+mkdir -p ~/.config/opencode/skills
+cp -r skills/md-review-skill ~/.config/opencode/skills/
 ```
 
 ### 2. 配置 Token
