@@ -40,6 +40,6 @@ To add a document, create a Markdown file in an appropriate directory. For the d
 
 2. Edit the directory index file to add the new file to the website.
 
-    Take the environment variable reference as an example. When you add a file, first locate the directory file `README.md` in the `docs/en/env-vars` directory. This file defines the organization structure of the operator library documentation. Add a link to the new file at the appropriate position.
+    Take the environment variable reference as an example. When you add a file, first locate the directory file `README.md` in the `docs/zh/env-vars` directory. This file defines the organization structure of the operator library documentation. Add a link to the new file at the appropriate position.
 
 After you complete the preceding operations, submit a PR to contribute.
