@@ -73,6 +73,8 @@ HIXL（Huawei Xfer Library）是一个灵活、高效的昇腾单边通信库，
         reg_desc.len = sizeof(int32_t);
         MemHandle handle = nullptr;
         CHECK_HIXL(hixl_engine.RegisterMem(reg_desc, MEM_DEVICE, handle));
+
+        // 应用需通过自己的控制通道将reinterpret_cast<uintptr_t>(dev_buf)发送给Client。
         ```
 
 2. 在Client侧向Server侧发起建链。
@@ -87,7 +89,10 @@ HIXL（Huawei Xfer Library）是一个灵活、高效的昇腾单边通信库，
 
         ```cpp
         // 单边读：从对端Server的MEM_DEVICE读取预写的1到本地Host内存。
-        TransferOpDesc xfer{reinterpret_cast<uintptr_t>(&host_buf), dev_buf, sizeof(int32_t)};
+        // ReceiveServerDevBufAddr由应用实现，通过控制通道接收Server发送的dev_buf地址。
+        uintptr_t ReceiveServerDevBufAddr();
+        uintptr_t remote_dev_addr = ReceiveServerDevBufAddr();
+        TransferOpDesc xfer{reinterpret_cast<uintptr_t>(host_buf), remote_dev_addr, sizeof(int32_t)};
         CHECK_HIXL(hixl_engine.TransferSync(remote_engine, READ, {xfer}));
         printf("after READ: %d\n", *host_buf);
         
