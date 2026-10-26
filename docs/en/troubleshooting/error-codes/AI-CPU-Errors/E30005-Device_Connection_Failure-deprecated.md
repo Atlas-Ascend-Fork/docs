@@ -1,4 +1,4 @@
-# E30005 Device\_Connection\_Failure（已废弃）
+# E30005 Device\_Connection\_Failure(deprecated)
 
 ## Symptom
 

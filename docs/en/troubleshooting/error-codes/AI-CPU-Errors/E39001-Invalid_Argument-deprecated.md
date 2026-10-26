@@ -1,4 +1,4 @@
-# E39001 Invalid\_Argument（已废弃）
+# E39001 Invalid\_Argument(deprecated)
 
 ## Symptom
 

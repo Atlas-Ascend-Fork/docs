@@ -1,4 +1,4 @@
-# E30004 NN\_Process\_Bin\_Error（已废弃）
+# E30004 NN\_Process\_Bin\_Error(deprecated)
 
 ## Symptom
 

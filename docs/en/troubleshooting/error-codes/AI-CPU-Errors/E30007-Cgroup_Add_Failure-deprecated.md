@@ -1,4 +1,4 @@
-# E30007 Cgroup\_Add\_Failure（已废弃）
+# E30007 Cgroup\_Add\_Failure(deprecated)
 
 ## Symptom
 

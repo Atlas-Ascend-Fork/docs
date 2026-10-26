@@ -2,19 +2,19 @@
 
 - [E30003 Not\_Supported\_Specification](E30003-Not_Supported_Specification.md)
 
-- [E30004 NN\_Process\_Bin\_Error（已废弃）](E30004-NN_Process_Bin_Error-deprecated.md)
+- [E30004 NN\_Process\_Bin\_Error(deprecated)](E30004-NN_Process_Bin_Error-deprecated.md)
 
-- [E30005 Device\_Connection\_Failure（已废弃）](E30005-Device_Connection_Failure-deprecated.md)
+- [E30005 Device\_Connection\_Failure(deprecated)](E30005-Device_Connection_Failure-deprecated.md)
 
 - [E30006 Package\_Error\_Verify\_OPP](E30006-Package_Error_Verify_OPP.md)
 
-- [E30007 Cgroup\_Add\_Failure（已废弃）](E30007-Cgroup_Add_Failure-deprecated.md)
+- [E30007 Cgroup\_Add\_Failure(deprecated)](E30007-Cgroup_Add_Failure-deprecated.md)
 
 - [E30008 Execution\_Error\_AICPU\_Operator\_Timeout](E30008-Execution_Error_AICPU_Operator_Timeout.md)
 
 - [E30009 Package\_Error\_Verify\_Package](E30009-Package_Error_Verify_Package.md)
 
-- [E39001 Invalid\_Argument（已废弃）](E39001-Invalid_Argument-deprecated.md)
+- [E39001 Invalid\_Argument(deprecated)](E39001-Invalid_Argument-deprecated.md)
 
 - [E39002 Inner\_Error\_Driver\_API\_Call\_Failed](E39002-Inner_Error_Driver_API_Call_Failed.md)
 
