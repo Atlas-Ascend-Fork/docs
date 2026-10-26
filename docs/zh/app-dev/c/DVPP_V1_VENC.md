@@ -115,10 +115,10 @@ uint32_t dataSize = fileLen;
 // 调用aclrtGetRunMode接口获取软件栈的运行模式，如果调用aclrtGetRunMode接口获取软件栈的运行模式为ACL_HOST，则需要通过aclrtMemcpy接口将输入图片数据传输到Device，数据传输完成后，需及时释放内存；否则直接申请并使用Device的内存
 aclrtRunMode runMode;
 ret = aclrtGetRunMode(&runMode);
+void *dataDev = nullptr;
 if(runMode == ACL_HOST){ 
     void *dataHost = malloc(fileLen);
     size_t readSize = fread(dataHost, 1, fileLen, fp);
-    void *dataDev = nullptr;
     ret = acldvppMalloc(&dataDev, dataSize);
     ret = aclrtMemcpy(dataDev, dataSize, dataHost, fileLen, ACL_MEMCPY_HOST_TO_DEVICE);
     // 完成数据传输后，需及时释放内存
@@ -157,7 +157,7 @@ ret = aclvencSendFrame(vencChannelDesc_, nullptr, nullptr, vencFrameConfig_, nul
 (void)acldvppDestroyPicDesc(inputPicputDesc_);
 (void)aclvencDestroyFrameConfig(vencFrameConfig_);
 // 释放内存和销毁线程
-(void)acldvppFree(inBufferDev_);
+(void)acldvppFree(dataDev);
 void *res = nullptr;
 int joinThreadErr = pthread_join(threadId_, &res);
 
