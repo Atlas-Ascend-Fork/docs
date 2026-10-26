@@ -16,7 +16,7 @@ Vector addition result:
 
 ## 编译及运行应用
 
-您可以单击[Link](https://gitcode.com/cann/runtime/tree/master/example/0_quickstart/0_hello_cann)获取完整样例代码，同时，该样例的README.md文件中也提供了编译和运行的指导。
+您可以单击[Link](https://gitcode.com/cann/runtime/tree/9.3.0-beta.1/example/0_quickstart/0_hello_cann)获取完整样例代码，同时，该样例的README.md文件中也提供了编译和运行的指导。
 
 ## 了解关键代码逻辑
 
@@ -26,8 +26,8 @@ Vector addition result:
 
     ```cpp
     // 初始化系统，nullptr表示采用默认配置初始化系统，调用其它acl接口前，必须先初始化，否则可能会导致后续系统内部资源初始化出错，进而导致其它业务异常
-    aclInit(nullptr); 
-    
+    aclInit(nullptr);
+
     // 指定计算设备
     int32_t deviceId = 0;
     aclrtSetDevice(deviceId);
@@ -81,9 +81,9 @@ Vector addition result:
         aclScalar* alpha = nullptr;
         std::vector<float> selfHostData = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f};    // self向量输入数据
         std::vector<float> otherHostData = {0.5f, 1.0f, 1.5f, 2.0f, 2.5f, 3.0f, 3.5f, 4.0f};   // other向量输入数据
-        std::vector<float> outHostData(8, 0.0f);   
+        std::vector<float> outHostData(8, 0.0f);
         float alphaValue = 1.0f;       // 系数值
-        
+
         // 创建输入 Tensor
         CreateAclTensor(selfHostData, shape, &selfDeviceAddr, aclDataType::ACL_FLOAT, &self);
         CreateAclTensor(otherHostData, shape, &otherDeviceAddr, aclDataType::ACL_FLOAT, &other);
@@ -97,16 +97,16 @@ Vector addition result:
 
     ```cpp
     // 调用CANN内置的算子，通常调用两段式接口
-    
+
     // 第一段接口aclnnAddGetWorkspaceSize，该接口内部执行入参校验、在动态Shape场景下推导输出Shape、数据切块（Tiling）以及计算执行算子所需的workspace内存大小等任务
     uint64_t workspaceSize = 0;
     aclOpExecutor* executor = nullptr;
     ret = aclnnAddGetWorkspaceSize(self, other, alpha, out, &workspaceSize, &executor);
-    
+
     // 第二段接口aclnnAdd，执行算子计算，接口内部涉及DFX（例如Dump、溢出检测等）、调用Runtime提供的LaunchKernel接口等
     // workspaceAddr表示在Device侧申请的workspace内存地址
     ret = aclnnAdd(workspaceAddr, workspaceSize, executor, stream);
-    
+
     // 同步等待任务完成
     aclrtSynchronizeStream(stream);
     ```
@@ -129,13 +129,13 @@ Vector addition result:
     aclDestroyTensor(other);
     aclDestroyScalar(alpha);
     aclDestroyTensor(out);
-     
+
     // 释放Device内存
     aclrtFree(selfDeviceAddr);
     aclrtFree(otherDeviceAddr);
     aclrtFree(outDeviceAddr);
     aclrtFree(workspaceAddr);
-    
+
     // 销毁Stream
     aclrtDestroyStream(stream);
     ```

@@ -10,7 +10,7 @@ The locating process is as follows:
 
 1. Use the asys tool to obtain the call stack information of the suspended process. In addition, check whether the online operator compilation of the framework takes a long time based on the plog run logs.
 
-    The following is an example of the asys command. For details about how to install the asys tool and its parameters, see  [Environment Setup](https://gitcode.com/cann/oam-tools/blob/master/docs/en/asys/asys_environment_preparation.md).
+    The following is an example of the asys command. For details about how to install the asys tool and its parameters, see  [Environment Setup](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/asys/asys_environment_preparation.md).
 
     ```bash
     # pid indicates the ID of the suspended user process. Replace it with the actual ID.

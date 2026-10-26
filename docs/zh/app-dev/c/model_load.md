@@ -9,10 +9,10 @@
 - 如图1所示，针对不同的加载方式（从文件加载、从内存加载等），只需**设置接口中的配置参数**，适用各种加载方式，但涉及**多个接口配合使用**，分别用于创建配置对象、设置对象中的属性值、加载模型。
 - 如图2所示，根据不同的加载方式（从文件加载、从内存加载等）**选择不同的接口**，操作相对简单，但需要**记住各种方式的加载接口**。
 
-    **图 1**  模型加载流程（通过接口中的配置参数区分加载方式）  
+    **图 1**  模型加载流程（通过接口中的配置参数区分加载方式）
     ![](figures/model_load_set_param.png "模型加载流程（通过接口中的配置参数区分加载方式）")
 
-    **图 2**  模型加载流程（通过不同接口区分加载方式）  
+    **图 2**  模型加载流程（通过不同接口区分加载方式）
     ![](figures/model_load_different_APIs.png "模型加载流程（通过不同接口区分加载方式）")
 
 关键接口的说明如下：
@@ -39,7 +39,7 @@
 以下是关键步骤的代码示例，不能直接拷贝编译运行，仅供参考。调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。
 
 <!-- npu="950,A3,910b,910,310p,310b" id1 -->
-您可以单击[resnet50\_imagenet\_classification](https://gitcode.com/cann/ge/tree/master/examples/acl/1_sample_resnet50_imagenet_classification)获取样例。
+您可以单击[resnet50\_imagenet\_classification](https://gitcode.com/cann/ge/tree/9.3.0-beta.1/examples/acl/1_sample_resnet50_imagenet_classification)获取样例。
 <!-- end id1 -->
 
 ```cpp

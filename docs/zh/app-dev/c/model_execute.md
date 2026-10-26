@@ -10,7 +10,7 @@
 
 ## 模型执行流程
 
-**图 1**  基本的模型推理流程  
+**图 1**  基本的模型推理流程
 ![](figures/basic_model_inference_process.png "基本的模型推理流程")
 
 关键接口的说明如下：
@@ -85,12 +85,12 @@
 
     调用aclDataBuffer类型下的操作接口获取内存地址、内存大小等。
 
-    **图 2**  aclmdlDataset类型与aclDataBuffer类型的关系  
+    **图 2**  aclmdlDataset类型与aclDataBuffer类型的关系
     ![](figures/relationship_between_aclmdlDataset_and_aclDataBuffer.png "aclmdlDataset类型与aclDataBuffer类型的关系")
 
 了解相关的数据类型后，可以使用这些数据类型的操作接口准备模型的输入、输出数据结构，如下图所示。
 
-**图 3**  模型执行的输入/输出数据结构的准备流程  
+**图 3**  模型执行的输入/输出数据结构的准备流程
 ![](figures/prepare_model_input_output.png "模型执行的输入-输出数据结构的准备流程")
 
 关键说明如下：
@@ -106,7 +106,7 @@
 以下是关键步骤的代码示例，不能直接拷贝编译运行，仅供参考。调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。
 
 <!-- npu="950,A3,910b,910,310p,310b" id7 -->
-您可以单击[resnet50\_imagenet\_classification](https://gitcode.com/cann/ge/tree/master/examples/acl/1_sample_resnet50_imagenet_classification)获取样例。
+您可以单击[resnet50\_imagenet\_classification](https://gitcode.com/cann/ge/tree/9.3.0-beta.1/examples/acl/1_sample_resnet50_imagenet_classification)获取样例。
 <!-- end id7 -->
 
 ```cpp
@@ -141,7 +141,7 @@ for (size_t i = 0; i < outputSize; ++i) {
     size_t buffer_size = aclmdlGetOutputSizeByIndex(modelDesc_, i);
     void *outputBuffer = nullptr;
     ret = aclrtMalloc(&outputBuffer, buffer_size, ACL_MEM_MALLOC_HUGE_FIRST);
-    aclDataBuffer* outputData = aclCreateDataBuffer(outputBuffer, buffer_size);   
+    aclDataBuffer* outputData = aclCreateDataBuffer(outputBuffer, buffer_size);
     ret = aclmdlAddDatasetBuffer(output_, outputData);
     }
 
@@ -156,7 +156,7 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
     void *inputBuff = nullptr;
     uint32_t inputBuffSize = 0;
     auto ret1 = Utils::ReadBinFile(fileName, inputBuff, inputBuffSize);
-    
+
     // 4.2 准备模型推理的输入数据
     // 在申请运行时资源时调用aclrtGetRunMode接口获取软件栈的运行模式
     // 如果运行模式为ACL_DEVICE，则g_isDevice参数值为true，表示软件栈运行在Device侧，无需传输图片数据或在Device内传输数据 ；否则，需要调用内存复制接口将数据传输到Device
@@ -174,9 +174,9 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
     // modelId_表示模型ID，在模型加载成功后，会返回标识模型的ID
     // input_、output_分别表示模型推理的输入、输出数据，在准备模型推理的输入、输出数据结构时已定义
     ret = aclmdlExecute(modelId_, input_, output_);
-        
 
-    // 处理模型推理的输出数据，输出top5置信度的类别编号 
+
+    // 处理模型推理的输出数据，输出top5置信度的类别编号
     // output_表示模型执行的输出
     for (size_t i = 0; i < aclmdlGetDatasetNumBuffers(output_); ++i) {
     // 获取每个输出的内存地址和内存大小
@@ -188,7 +188,7 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
         // 将内存中的数据转换为float类型
         float *outData = NULL;
         outData = reinterpret_cast<float*>(data);
-        
+
         // 屏显每张图片的top5置信度的类别编号
         map<float, int, greater<float> > resultMap;
         for (int j = 0; j < len / sizeof(float); ++j) {
@@ -251,9 +251,9 @@ uint32_t pos = 0;
 void* p_batchDst = NULL;
 std::vector<std::string>inferFile_vec;
 
-for (int i = 0; i < files.size(); ++i) 
+for (int i = 0; i < files.size(); ++i)
         {
-            // 每8个文件，申请一次Device上的内存，存放8 Batch的输入数据 
+            // 每8个文件，申请一次Device上的内存，存放8 Batch的输入数据
             if (cnt % batchSize == 0)
             {
                 pos = 0;
@@ -263,7 +263,7 @@ for (int i = 0; i < files.size(); ++i)
             }
 
             // TODO: 从某个目录下读入文件，计算文件大小fileSize
-            
+
             // 根据文件大小，申请内存，存放文件数据
             aclrtMallocHost(&p_imgBuf, fileSize);
 

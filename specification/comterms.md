@@ -12,14 +12,14 @@
 - 《[Ascend C算子开发](https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/guide/index.md)》
 - 《[PyPTO算子开发](https://gitcode.com/cann/pypto/blob/master/docs/zh/guide/index_hiascend.md)》
 - 《[通信算子开发](https://gitcode.com/cann/hcomm/blob/master/docs/zh/comm_op_dev_guide/README.md)》
-- 《[应用开发](https://gitcode.com/cann/docs/blob/master/docs/zh/app-dev/README.md)》
+- 《[应用开发](https://gitcode.com/cann/docs/blob/9.3.0-beta.1/docs/zh/app-dev/README.md)》
 - 《[图开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/graph_dev/README.md)》
 
 ## API参考
 
 - 《[Ascend C API](https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/api/README.md)》
 - 《[PyPTO API](https://gitcode.com/cann/pypto/blob/master/docs/zh/api/index_hiascend.md)》
-- 《[Runtime运行时API](https://gitcode.com/cann/runtime/blob/master/docs/zh/api_ref/README.md)》
+- 《[Runtime运行时API](https://gitcode.com/cann/runtime/blob/9.3.0-beta.1/docs/zh/api_ref/README.md)》
 - 《[图引擎API](https://gitcode.com/cann/ge/blob/master/docs/zh/api/graph_engine_api/README.md)》
 - 《[算子库](https://gitcode.com/cann/docs/blob/master/docs/zh/ops-lib/0_README.md)》
 - 《[HCCL集合通信库](https://gitcode.com/cann/hccl/blob/master/docs/zh/user_guide/README.md)》
@@ -42,7 +42,7 @@
 
 ## 参考
 
-- 《[故障处理](https://gitcode.com/cann/docs/blob/master/docs/zh/troubleshooting/00_troubleshooting.md)》
+- 《[故障处理](https://gitcode.com/cann/docs/blob/9.3.0-beta.1/docs/zh/troubleshooting/00_troubleshooting.md)》
 - 《[日志参考](https://gitcode.com/cann/runtime/blob/master/docs/zh/log_ref/README.md)》
 - 《[环境变量参考](https://gitcode.com/cann/docs/blob/master/docs/zh/env-vars/README.md)》
 - 《[图融合和UB融合规则参考](https://gitcode.com/cann/docs/blob/master/docs/zh/fusion-patterns/README.md)》

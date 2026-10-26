@@ -2,7 +2,7 @@
 
 集合通信库HCCL（Huawei Collective Communication Library）是基于昇腾硬件的高性能集合通信库，为计算集群提供高性能、高可靠的通信方案。
 
->**说明：** 
+>**说明：**
 >本节仅针对HCCL做简要介绍，关于HCCL的详细使用方法可参见《HCCL集合通信库》。
 
 ## 核心功能
@@ -18,7 +18,7 @@
 
 HCCL是CANN的核心组件，为NPU集群提供高性能、高可靠性的通信方案。HCCL向上支持多种AI框架，向下实现多款昇腾AI处理器之间的高效互联，其架构如下图所示。
 
-**图 1**  集合通信库软件架构图  
+**图 1**  集合通信库软件架构图
 ![](figures/HCCL_arch.png "集合通信库软件架构图")
 
 HCCL包含HCCL集合通信库与HCOMM（Huawei Communication）通信基础库：
@@ -48,7 +48,7 @@ HCCL包含HCCL集合通信库与HCOMM（Huawei Communication）通信基础库�
 
 - 样例介绍
 
-    用户可以点击[Link](https://gitcode.com/cann/hcomm/tree/master/examples/01_communicators/03_one_device_per_pthread)获取完整样例代码，该样例基于root节点信息创建通信域，在一个进程中管理一个AI Server，其中每个NPU设备由一个线程进行管理，主要包含以下功能点：
+    用户可以点击[Link](https://gitcode.com/cann/hcomm/tree/9.3.0-beta.1/examples/01_communicators/03_one_device_per_pthread)获取完整样例代码，该样例基于root节点信息创建通信域，在一个进程中管理一个AI Server，其中每个NPU设备由一个线程进行管理，主要包含以下功能点：
 
     1. 设备检测，通过aclrtGetDeviceCount\( \)接口查询可用设备数量。
     2. 将rank0作为root节点，通过HcclGetRootInfo\( \)接口生成root节点的rootInfo标识信息。

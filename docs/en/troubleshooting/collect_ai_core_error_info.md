@@ -33,7 +33,7 @@ When locating AI Core errors, you need to collect fault information in advance. 
 | Collection Method | Description |
 | --- | --- |
 | Manual collection | Collect information related only to AI Core errors, including exception dump files, operator compilation information, and host application log files. For details about the collection method, see [Manual Collection](#section420651516422). |
-| Automatic collection | Use the [asys](https://gitcode.com/cann/oam-tools/blob/master/docs/en/asys/asys_functions_and_restrictions.md) tool to collect all fault information (more than manually collected information), including the installation version, device health status, exception dump files, operator compilation information, and full log files. For details about the collection method, see [Automatic Collection](#section194651132144216).<br>Note: The asys tool can be used to collect fault information in only limited scenarios, excluding cluster, container, virtual machines, and cloud. |
+| Automatic collection | Use the [asys](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/asys/asys_functions_and_restrictions.md) tool to collect all fault information (more than manually collected information), including the installation version, device health status, exception dump files, operator compilation information, and full log files. For details about the collection method, see [Automatic Collection](#section194651132144216).<br>Note: The asys tool can be used to collect fault information in only limited scenarios, excluding cluster, container, virtual machines, and cloud. |
 
 <a id="section420651516422"></a>
 
@@ -63,7 +63,7 @@ When locating AI Core errors, you need to collect fault information in advance. 
         >**NOTE:**
         >- If no abnormal operator compilation information is obtained based on the preceding environment variables or default directories, obtain the information by referring to  [Manually Collecting Operator Compilation Information \(.o and .json Files\)](collect_operator_compile_info.md).
         >- The trace logs on the host server cannot be automatically cleared and may occupy a large amount of disk space. If the memory space is limited, you can run the following command to copy the trace logs of a specified process in the  **$HOME/ascend/atrace/**  directory as required:  **cp -rf $HOME/ascend/atrace/trace\__\{PID\}_\* aic\_err\_info/**.
-        >- The collected dump files cannot be viewed using a text tool. To view the dump file content, see  [Parsing Dump Files](https://gitcode.com/cann/oam-tools/blob/master/docs/en/msaicerr/Dump_files_parsing.md).
+        >- The collected dump files cannot be viewed using a text tool. To view the dump file content, see  [Parsing Dump Files](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/msaicerr/Dump_files_parsing.md).
 
     3. Collect on-device system logs and other maintenance and debugging information, including slogs, syslogs, and black box logs.
 
@@ -126,7 +126,7 @@ When locating AI Core errors, you need to collect fault information in advance. 
 
 ## Automatic Collection
 
-For details about the restrictions on using the asys tool, see  [Functions and Restrictions of the asys Tool](https://gitcode.com/cann/oam-tools/blob/master/docs/en/asys/asys_functions_and_restrictions.md). Before using the asys tool, install and configure it. For details, see the prerequisites in  [Environment Setup](https://gitcode.com/cann/oam-tools/blob/master/docs/en/asys/asys_environment_preparation.md).
+For details about the restrictions on using the asys tool, see  [Functions and Restrictions of the asys Tool](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/asys/asys_functions_and_restrictions.md). Before using the asys tool, install and configure it. For details, see the prerequisites in  [Environment Setup](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/asys/asys_environment_preparation.md).
 
 - When service re-run is not required, run the  **asys collect**  command to collect fault information.
 
@@ -134,7 +134,7 @@ For details about the restrictions on using the asys tool, see  [Functions and R
     asys collect --output=path
     ```
 
-    **output**  indicates the directory for saving collected information. For details about the parameters and restrictions, see  [Fault Information Collection](https://gitcode.com/cann/oam-tools/blob/master/docs/en/asys/fault_information_collection.md).
+    **output**  indicates the directory for saving collected information. For details about the parameters and restrictions, see  [Fault Information Collection](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/asys/fault_information_collection.md).
 
 - When service re-run is required, run the  **asys launch**  command to concurrently re-run the service and collect fault information.
 
@@ -142,7 +142,7 @@ For details about the restrictions on using the asys tool, see  [Functions and R
     asys launch --task="sh ../app_run.sh" --output=path
     ```
 
-    **task**  indicates the task to be re-run, and  **output**  indicates the directory for storing the collected information. For details about the parameters and restrictions, see  [Service Re-run And Fault Information Collection](https://gitcode.com/cann/oam-tools/blob/master/docs/en/asys/rerun_fault_information_collection.md).
+    **task**  indicates the task to be re-run, and  **output**  indicates the directory for storing the collected information. For details about the parameters and restrictions, see  [Service Re-run And Fault Information Collection](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/asys/rerun_fault_information_collection.md).
 
     Note: In an offline inference scenario, to rebuild a model \(for example, using the ATC tool to convert the model\), run the  **asys launch**  command to re-run the model building task, and then run the  **asys launch**  command to re-run the inference service based on the recompiled model. Additionally, place the maintenance and debugging information collected during model building and inference in the same directory, for example,  **$HOME/asys\_output**.
 

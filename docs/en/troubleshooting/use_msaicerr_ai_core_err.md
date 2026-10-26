@@ -1,6 +1,6 @@
 # Using the msaicerr Tool to Analyze AI Core Errors
 
-For details about the functions and restrictions of the msaicerr tool, see  [Functions and Restrictions of the msaicerr Tool](https://gitcode.com/cann/oam-tools/blob/master/docs/en/msaicerr/msaicerr_functions_and_restrictions.md). For details about how to prepare the environment, see  [msaicerr – Tool Environment Preparation](https://gitcode.com/cann/oam-tools/blob/master/docs/en/msaicerr/msaicerr_environment_preparation.md).
+For details about the functions and restrictions of the msaicerr tool, see  [Functions and Restrictions of the msaicerr Tool](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/msaicerr/msaicerr_functions_and_restrictions.md). For details about how to prepare the environment, see  [msaicerr – Tool Environment Preparation](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/msaicerr/msaicerr_environment_preparation.md).
 
 ## Procedure
 
@@ -41,4 +41,4 @@ For details about the functions and restrictions of the msaicerr tool, see  [Fun
     2. Check the operator parameters by referring to  [Operator Input Argument Errors](operator_input_args_error.md).
     3. After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.  Perform this operation if the fault cannot be located.
 
-    For details about other parameters and functions of the msaicerr tool, see  [Functions and Restrictions of the msaicerr Tool](https://gitcode.com/cann/oam-tools/blob/master/docs/en/msaicerr/msaicerr_functions_and_restrictions.md).
+    For details about other parameters and functions of the msaicerr tool, see  [Functions and Restrictions of the msaicerr Tool](https://gitcode.com/cann/oam-tools/blob/9.3.0-beta.1/docs/en/msaicerr/msaicerr_functions_and_restrictions.md).

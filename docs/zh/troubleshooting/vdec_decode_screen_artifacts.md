@@ -24,4 +24,4 @@
 
     - 通过对应版本的sample，解码这段保留下来的码流，验证码流是否正常或VDEC是否支持该格式。
 
-        如果sample解码正常，那就是开发本身的代码逻辑有问题，可以参考[《应用开发C&C++》](https://gitcode.com/cann/docs/blob/master/docs/zh/app-dev/c/00_acl_cpp_dev.md)中的“专用加速器 \> 媒体数据处理（DVPP）\> 媒体数据处理V1 \>VDEC视频解码”或“专用加速器 \> 媒体数据处理（DVPP）\> 媒体数据处理V2 \>VDEC视频解码”章节优化代码逻辑。
+        如果sample解码正常，那就是开发本身的代码逻辑有问题，可以参考[《应用开发C&C++》](https://gitcode.com/cann/docs/blob/9.3.0-beta.1/docs/zh/app-dev/c/00_acl_cpp_dev.md)中的“专用加速器 \> 媒体数据处理（DVPP）\> 媒体数据处理V1 \>VDEC视频解码”或“专用加速器 \> 媒体数据处理（DVPP）\> 媒体数据处理V2 \>VDEC视频解码”章节优化代码逻辑。
