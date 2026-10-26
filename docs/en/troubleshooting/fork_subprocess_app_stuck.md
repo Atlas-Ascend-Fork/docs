@@ -41,8 +41,12 @@ In the multi-device training scenario, the training process is suspended, the tr
     ```bash
     # Run the gdb command. pid indicates the ID of the suspended process. Replace it with the actual process ID.
     gdb -p pid
-    # Check the call stack.
-    (gdb)bt
+    ```
+
+    At the GDB prompt, enter the following command to check the call stack:
+
+    ```text
+    (gdb) bt
     ```
 
     The following is an example of stack information:
