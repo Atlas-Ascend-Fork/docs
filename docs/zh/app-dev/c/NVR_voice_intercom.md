@@ -30,7 +30,7 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 
 3. 调用hi\_mpi\_sys\_bind接口**绑定ADEC与AO**。
 
-    | ADEC设备ID | ADEC通道号 | AO设备ID | AO通道号 |
+| ADEC设备ID | ADEC通道号 | AO设备ID | AO通道号 |
 | --- | --- | --- | --- |
 | 0 | 0 | 2 | 0 |
 | 0 | 1 | 3 | 0 |
@@ -62,7 +62,7 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 2. 调用hi\_mpi\_aenc\_create\_chn接口**创建音频编码通道**。
 3. 调用hi\_mpi\_sys\_bind接口**绑定AI与AENC**。
 
-    | AI设备ID | AI通道号 | AENC设备ID | AENC通道号 |
+| AI设备ID | AI通道号 | AENC设备ID | AENC通道号 |
 | --- | --- | --- | --- |
 | 2 | 0 | 0 | 0 |
 

@@ -34,7 +34,7 @@ According to the error log, the maximum number of channels in the  Ascend virtua
 
     **Table  1** **Ascend virtual instance  configuration**  \(Atlas inference products\)
 
-    | Name (of Compute Group) | Specification | Number of AI Cores in Compute Resources | Memory (GB) | AI CPU (device_aicpu in Compute Resources) | VPC | JPEGD | JPEGE | VENC | VDEC |
+| Name (of Compute Group) | Specification | Number of AI Cores in Compute Resources | Memory (GB) | AI CPU (device_aicpu in Compute Resources) | VPC | JPEGD | JPEGE | VENC | VDEC |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Total resources | 1 | 8 | The value is the same as the value of memory_size obtained by calling dsmi_get_memory_info. | 7 | 12 | 16 | 8 | 3 | 12 |
 | vir04 | 1/2 | 4 | memory_size/2 | 4 | 6 | 8 | 4 | 2 | 6 |
