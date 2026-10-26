@@ -45,7 +45,7 @@ The device memory is insufficient.
             uint32_t streamId = aclrtGetStreamIdFromExceptionInfo(exception_info);
             uint32_t deviceId = aclrtGetDeviceIdFromExceptionInfo(exception_info);
 
-            if(taskId == 0xffffffff) || (streamId == 0xffffffff) {
+            if ((taskId == 0xffffffff) || (streamId == 0xffffffff)) {
                 //Device exception. Forcibly kill the process.
             } else {
                 //Task exception. Forcibly kill the process if the exception occurs frequently (based on the exceptions triggered within a period of time, for example, 1s).

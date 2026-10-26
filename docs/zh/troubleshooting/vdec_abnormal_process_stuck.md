@@ -45,7 +45,7 @@ Device内存不足，AI CPU无法处理VDEC解码任务，导致任务超时。
             uint32_t streamId = aclrtGetStreamIdFromExceptionInfo(exception_info);
             uint32_t deviceId = aclrtGetDeviceIdFromExceptionInfo(exception_info);
         
-            if(taskId == 0xffffffff) || (streamId == 0xffffffff) {
+            if ((taskId == 0xffffffff) || (streamId == 0xffffffff)) {
                 //Device异常，强制退出进程
             } else {
                 //任务异常，如果频繁出现（例如，统计1秒内触发异常回调函数的次数），进程退出
