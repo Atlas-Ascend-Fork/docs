@@ -4,7 +4,7 @@
 
 针对如下图中的结构时，将卷积算子Input1的shape和format配置为输出的shape和format。
 
-![](../figures/ConvFormatRefreshFusionPas_1.png)
+![](../figures/ConvFormatRefreshFusionPass_1.png)
 
 ## 使用约束
 

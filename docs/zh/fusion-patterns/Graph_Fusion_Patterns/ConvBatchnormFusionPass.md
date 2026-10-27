@@ -8,7 +8,7 @@
 
 融合为
 
-![](../figures/ConvBatchnormFusionPass_1.png)
+![](../figures/ConvBatchnormFusionPass_2.png)
 
 ## 使用约束
 

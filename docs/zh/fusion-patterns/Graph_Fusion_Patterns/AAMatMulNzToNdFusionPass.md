@@ -22,7 +22,7 @@
 
 - **场景3：**
 
-![](../figures/AAMatMulNzToNdFusionPass_4.png)
+![](../figures/AAMatMulNzToNdFusionPass_5.png)
 
 融合成
 
