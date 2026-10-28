@@ -626,3 +626,15 @@ python3 ~/.config/opencode/skills/md-review-skill/scripts/api_client.py DELETE \
     ├── gitcode-config.json     # Token 配置（需手动创建）
     └── gitcode-config.example.json
 ```
+
+
+仓库中的 Host 回归测试（相对于仓库根目录，不属于安装后的 config 目录）：
+
+```text
+tests/
+└── host/
+    └── test_pagination_completion.py  # 完整分页、截断与异常页面的临时 HTTP 服务回归
+```
+
+在仓库根目录执行 `python3 -m pytest tests/host/test_pagination_completion.py -q`。
+测试仅访问临时 loopback HTTP 服务，不需要真实 GitCode 凭证。
