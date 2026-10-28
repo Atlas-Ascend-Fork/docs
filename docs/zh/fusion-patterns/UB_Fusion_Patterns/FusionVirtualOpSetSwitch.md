@@ -9,7 +9,7 @@
 对比当前图ge\_onnx\_\*\*\*\*PreRunAfterOptimizeGraphBeforeBuild.pbtxt和前一张图ge\*.pbtxt中的SplitD/SplitVD的"\_no\_task"属性变化，由0-\>1表示pass生效。
 
 >[!NOTE]说明 
-> 如上.pbtxt文件的生成，需要在执行训练或者推理之前设置如下环境变量。更多环境变量信息请参见《[环境变量参考](https://gitcode.com/cann/docs/blob/master/docs/zh/env-vars/README.md)》。
+> 如上.pbtxt文件的生成，需要在执行训练或者推理之前设置如下环境变量。更多环境变量信息请参见《[环境变量参考](https://gitcode.com/cann/docs/blob/9.3.0-beta.1/docs/zh/env-vars/README.md)》。
 > 
 > - DUMP\_GE\_GRAPH=2 //把整个流程中各个阶段的图描述信息打印到文件中，此环境变量控制dump图的内容多少。
 > 
