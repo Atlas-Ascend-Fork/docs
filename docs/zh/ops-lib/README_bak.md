@@ -26,9 +26,9 @@
   <!-- npu="950,A3,910b,910,310p,310b" id6 -->
   - [nnopbase接口<a name="sub_menu" npu_parse_enabled="true"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/0_opdev_api_list.md)
   <!-- end id6 -->
-  <!-- npu="IPV350" id10 -->
-  - [op_common接口（当前版本不支持）<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/0_op_common_list.md)
-  <!-- end id10 -->
+  <!-- npu="950,A3,910b,910,310p,310b" id9 -->
+  - [op_common接口<a name="sub_menu" npu_parse_enabled="true"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/0_op_common_list.md)
+  <!-- end id9 -->
   <!-- npu="950,910b,910,310p" id8 -->
   - [算子性能提升专题](appendix/performance_improve_series.md)
     - [使用静态Kernel提升算子执行性能](appendix/performance_improve_by_staticKernel.md)
@@ -36,6 +36,7 @@
       - [环境准备](appendix/staticKernel_env_setup.md)
       - [算子调优](appendix/staticKernel_tuning.md)
       <!-- end id8 -->
+
   - [FAQ](appendix/FAQ.md)
     - [如何获取aclnn接口调用过程中的日志](appendix/faq_get_aclnn_call_logs.md)
     - [常见算子故障案例](appendix/faq_failure_cases.md)
