@@ -1,6 +1,6 @@
 # 进程中断问题定位思路
 
-您可以按如下步骤定位问题，若无法解决问题，再联系技术支持。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+您可以按如下步骤定位问题，若无法解决问题，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
 ![](figures/process_interruption_fault_locating.png)
 
@@ -8,17 +8,17 @@
 
 定位阶段如下：
 
-在Host应用类日志中$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log中，执行**grep -rn "ERROR"**命令，若首报错存在错误码（但E\*9\*\*\*类的错误除外，这部分错误码表示系统内部错误码），可以参见[错误码参考](usage_guide.md)中解决方法尝试解决，若无法解决再联系技术支持；若首报错不存在错误码，则继续下面的步骤排查问题。
+在Host应用类日志中$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log中，执行**grep -rn "ERROR"**命令，若首报错存在错误码（但E\*9\*\*\*类的错误除外，这部分错误码表示系统内部错误码），可以参见[错误码参考](usage_guide.md)中的解决方法尝试解决；若首报错不存在错误码，则继续下面的步骤排查问题。
 
 1. 排查接口使用类错误。
 
-    从收集的Host应用类日志中，找到发生进程中断问题附近时间的日志$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log，检查日志中是否存在"acl\*\*\*" 、“\[drv api\]”、“rt\*\*\*”等接口报错，若不存在，则跳转到下一步继续排查；若存在对外发布接口的报错（一般acl开头的接口是对外接口），则需根据对应的API参考检查接口使用说明、参数说明，其它内部接口报错需联系技术支持进一步定位，典型问题案例请参见[调用SetDevice接口错误导致无可用Context](setdevice_error_no_context.md)、[rtMemcpyAsync异步参数校验报错](rtmemcpy_async_param_check_error.md)。
+    从收集的Host应用类日志中，找到发生进程中断问题附近时间的日志$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log，检查日志中是否存在"acl\*\*\*" 、“\[drv api\]”、“rt\*\*\*”等接口报错，若不存在，则跳转到下一步继续排查；若存在对外发布接口的报错（一般acl开头的接口是对外接口），则需根据对应的API参考检查接口使用说明、参数说明，其它内部接口报错需按照日志进一步定位，典型问题案例请参见[调用SetDevice接口错误导致无可用Context](setdevice_error_no_context.md)、[rtMemcpyAsync异步参数校验报错](rtmemcpy_async_param_check_error.md)。
 
 2. 排查任务执行错误。
 
-    按本步骤中的内容先排查算子执行类的任务报错，再排查其它任务执行报错，若存在任务执行报错，则需提供对应报错信息，联系技术支持进一步定位问题；若不存在，则跳转到[3](#li0635816105615)继续排查。
+    按本步骤中的内容先排查算子执行类的任务报错，再排查其他任务执行报错，若存在任务执行报错，则需根据对应报错信息进一步定位问题；若不存在，则跳转到[3](#li0635816105615)继续排查。
 
-    1. 在Host应用类日志中$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log中，执行**grep -rn "fault kernel\_name"**命令或执行**grep -rn "kernelName"**命令搜索关键字，若存在“fault kernel\_name”关键字且其为首报错或者在“kernelName”关键字处存在报错，那么表示算子执行报错，这时需获取报错处的kernel名称，联系技术支持进一步定位问题；
+    1. 在Host应用类日志中$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log中，执行**grep -rn "fault kernel\_name"**命令或执行**grep -rn "kernelName"**命令搜索关键字，若存在“fault kernel\_name”关键字且其为首报错或者在“kernelName”关键字处存在报错，那么表示算子执行报错，这时需获取报错处的kernel名称。
         - 存在“fault kernel\_name”首报错的日志示例：
 
             ```bash
@@ -37,7 +37,7 @@
         - 在“kernelName”关键字处存在报错的日志示例：
 
             ```bash
-            [ERROR] RUNTIME(3280125,python3):2023-12-11-11:42:58.805.278 [task_info.cc:8323]3280125 DoCompIeteSuccForFftspIusTask:[LOAD][LOAD]fftsplus report error, retcode=0x10f,  [fftsplus task exception]. 
+            [ERROR] RUNTIME(3280125,python3):2023-12-11-11:42:58.805.278 [task_info.cc:8323]3280125 DoCompIeteSuccForFftspIusTask:[LOAD][LOAD]fftsplus report error, retcode=0x10f,  [fftsplus task exception].
             [ERROR] RUNTIME(3280125,python3):2023-12-11-11:42:58.805.293 [stream.cc:1463]3280125 GetError:[LOAD][LOAD]Stream Synchronize failed,  stream_id = 2,  retcode=0x10f,  [fftsplus task exception].
             [ERROR] RUNTIME(3280125,python3):2023-12-11-11:42:58.805.409 [task_info.cc:8196]3280125 PrintAicAivErrorInfoForFftsPlusTask:[LOAD][LOAD]fftsplus task execute failed,  dev_id=0, stream_id=2, task_id=1948, context_id=0, thread_id=0,  err_type=11[fftsplus aicore error], pcStart=0x124dbce99914, kernelName:IncreFlashAttetion_b79da629624fb10fa525b749f186c95f_high_performance_18_mix_aic
             [ERROR] RUNTIME(3280125,python3):2023-12-11-11:42:58.805.476 [task_info.cc:8196]3280125 TaskFailCallBackForFftsPlusTask:[LOAD][LOAD]fftsplus streamId=2, taskId=1948, context_id=0, expandtype=1, rtCode=0x715006c,[fftsplus task exception]
@@ -50,7 +50,7 @@
 
     2. 在Host应用类日志中$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log中，若存在“Task run failed”关键字，且其为首报错，那么表示CANN内部组件执行任务报错。
 
-        此时可以先使用ascend-dmi工具的故障诊断功能压测，提供压测报告以及报错日志，联系技术支持进一步定位问题。若暂时不具备压测环境，也可以在联系技术支持时提供报错日志，由技术支持进一步定位后，再决定是否进行压测。ascend-dmi工具在MindCluster ToolBox软件包中，该软件与CANN的配套关系请单击[Link](https://www.hiascend.com/developer/download/community/result?module=dl+cann)查询，ascend-dmi工具的安装及详细使用指导请参见[Link](https://hiascend.com/document/redirect/mindxdl-ascenddmiug)。
+        此时可以先使用ascend-dmi工具的故障诊断功能压测，提供压测报告以及报错日志，以便后续进一步定位问题。若暂时不具备压测环境，也可以在后续反馈问题时先提供报错日志，根据报错定位问题后，再决定是否进行压测。ascend-dmi工具在MindCluster ToolBox软件包中，该软件与CANN的配套关系请单击[Link](https://www.hiascend.com/developer/download/community/result?module=dl+cann)查询，ascend-dmi工具的安装及详细使用指导请参见[Link](https://hiascend.com/document/redirect/mindxdl-ascenddmiug)。
 
         日志报错处的sqe\_type表示报错组件或模块，当首错的sqe\_type是notify wait时，注意区分是否为模型里的算子报错，在下面plog中查看Error报错，然后再继续搜索“fault kernel\_name”找到具体报错的算子。
 
@@ -65,6 +65,6 @@
         ```
 
 3. 排查心跳丢失问题。<a id="li0635816105615"></a>
-    - Host应用类日志（\${HOME}/err_log_info/log/[run|debug]/plog/plog-pid_*.log）中存在“Device lost heartbeat”关键字，且Device侧黑匣子日志history.log（在$\{HOME\}/err\_log\_info/report/\*/hisi\_logs目录下）中存在“HEARTBEAT EXCEPTION”关键字，则表示TaskScheduler CPU心跳丢失，需联系技术支持进一步定位问题。
-    - Device侧syslog日志（$\{HOME\}/err\_log\_info/report/\*/message目录下）中存在“fatal panic”关键字，则表示Control CPU心跳丢失，需要联系技术支持进一步定位问题。
     - Host应用类日志$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log日志中存在“RESOURCE\_ALLOC\_FAIL”关键字，表示存在资源未释放的情况，需检查应用程序的代码逻辑，在内存等资源使用完成后，需及时释放。
+    - Host应用类日志（\${HOME}/err_log_info/log/[run|debug]/plog/plog-pid_*.log）中存在“Device lost heartbeat”关键字，且Device侧黑匣子日志history.log（在$\{HOME\}/err\_log\_info/report/\*/hisi\_logs目录下）中存在“HEARTBEAT EXCEPTION”关键字，则表示TaskScheduler CPU心跳丢失，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
+    - Device侧syslog日志（$\{HOME\}/err\_log\_info/report/\*/message目录下）中存在“fatal panic”关键字，则表示Control CPU心跳丢失，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。

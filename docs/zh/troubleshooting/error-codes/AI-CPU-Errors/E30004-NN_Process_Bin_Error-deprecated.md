@@ -12,4 +12,4 @@ Device侧出现ECC内存错误。
 
 ## 解决方法
 
-获取Host侧和Device侧日志后分析是否有ECC相关报错，并通过<https://www.hiascend.com/support>联系技术支持。
+获取Host侧和Device侧日志后分析是否有ECC相关报错，在<https://www.hiascend.com/support>页面反馈问题。

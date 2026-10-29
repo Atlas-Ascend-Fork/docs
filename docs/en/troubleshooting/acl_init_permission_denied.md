@@ -65,7 +65,7 @@ The possible causes are as follows:
     usermod -g Group name User name
     ```
 
-3. If the problem persists, perform the following steps to obtain the log and contact technical support.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+3. If the problem persists, perform the following steps to obtain and click [here](https://www.hiascend.com/support) to submit feedback.
     1. Log in to the environment where the app is running and run the following command to set the log level to  **Debug**:
 
         ```bash

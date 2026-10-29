@@ -45,4 +45,4 @@ Ascend RC形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\
 
 将算子输入的标量按照1维Tensor创建。
 
-若仍无法解决，  您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+若仍无法解决，  您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。

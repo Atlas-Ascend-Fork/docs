@@ -25,4 +25,4 @@ Rectify the fault as follows:
 
 - Check the memory allocation for the input image frame in the user code. If the memory is not allocated by calling  **hi\_mpi\_dvpp\_malloc**, VENC cannot access the memory properly, and there is no encoding output. In this case, you need to use  **hi\_mpi\_dvpp\_malloc**  to allocate the input memory.
 - Check whether the memory and resolution of the input image frame match with each other. For example, for the YUV NV12 or NV21 format, the size of an image frame is width x height x 1.5. If the size of the memory sent to VENC is less than the configured resolution \(width x height x 1.5\), unexpected behavior such as out-of-bounds access occurs. In addition, no encoding output is generated. Ensure that the requested memory size matches the configured resolution.
-- If the fault persists, the OS memory management may be faulty.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+- If the fault persists, the OS memory management may be faulty.  After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.

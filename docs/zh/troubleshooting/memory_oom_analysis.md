@@ -1,6 +1,6 @@
 # 内存OOM问题定位思路
 
-您可以按如下步骤定位问题，若无法解决问题，再联系技术支持。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+您可以按如下步骤定位问题，若无法解决问题，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
 ![](figures/oom_error_locating.png)
 
@@ -18,10 +18,10 @@
 
     - 如果报错处的提示信息使用CANN提供的aclrtMallocHost接口申请Host内存，则是因为**Host内存问题导致OOM**。
 
-        针对该场景的问题，则可在日志中搜索“mem\_stats”关键字，查看各组件申请内存的统计信息，日志分析方法请参见[查看CANN各组件内存统计信息](view_cann_memory_stats.md)，若各组件占用的内存不符合预期，需联系技术支持进一步定位问题。
+        针对该场景的问题，则可在日志中搜索“mem\_stats”关键字，查看各组件申请内存的统计信息，日志分析方法请参见[查看CANN各组件内存统计信息](view_cann_memory_stats.md)，若各组件占用的内存不符合预期，需进一步定位问题，或者获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
     - 如果报错处的提示信息是使用CANN提供的aclrtMalloc、aclrtMallocPhysical、hi\_mpi\_dvpp\_malloc等接口申请Device内存，则是因为**Device内存问题导致OOM**。
 
-        针对该场景的问题，可在日志中搜索“mem\_stats”关键字，查看各组件或框架申请内存的统计信息，日志分析方法请参见[查看CANN各组件内存统计信息](view_cann_memory_stats.md)，若各组件占用的内存不符合预期，需联系技术支持进一步定位问题。
+        针对该场景的问题，可在日志中搜索“mem\_stats”关键字，查看各组件或框架申请内存的统计信息，日志分析方法请参见[查看CANN各组件内存统计信息](view_cann_memory_stats.md)，若各组件占用的内存不符合预期，需进一步定位问题，或者获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
-    - 其它报错提示信息，一般是因为**Device业务进程异常导致OOM**，可在日志中搜索“DEV\_PROC\_MEM”关键字，查看各业务进程的内存统计信息，日志分析方法请参见[查看Device业务进程内存统计信息](view_device_process_mem_stats.md)，若业务进程占用的内存不符合预期，需联系技术支持进一步定位问题。
+    - 其它报错提示信息，一般是因为**Device业务进程异常导致OOM**，可在日志中搜索“DEV\_PROC\_MEM”关键字，查看各业务进程的内存统计信息，日志分析方法请参见[查看Device业务进程内存统计信息](view_device_process_mem_stats.md)，若业务进程占用的内存不符合预期，需进一步定位问题，或者获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。

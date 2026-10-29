@@ -52,7 +52,7 @@ The stream synchronization may fail, with acl API error message "Execute model f
 
     If  **op\_type**  in the plog of the first error reported on the device is  **MoedistributeDispatch**  or  **MoeDistributeCombine**  and the error message is "The DDR address of the MTE instruction is out of range", check whether the network switch is faulty at the time when the error is reported. Otherwise, the error "The DDR address of the MTE instruction is out of range" in the EP domain is caused by the abnormal process of the first error. In this case, check the host and plogs of the rank at the exit time to check whether other abnormal behaviors exist.
 
-5. After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.  Perform this operation if the fault persists.
+5. After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.  Perform this operation if the fault persists.
 
 ## Fault Example
 

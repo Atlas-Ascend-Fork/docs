@@ -38,7 +38,7 @@ Ascend RC形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\
 
 ## 解决方法
 
-该类型错误，需要联系技术支持定位排查。
+该类型错误，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
 ## 可能导致的故障
 

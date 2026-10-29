@@ -1,6 +1,6 @@
 # Locating Process Interruption Faults
 
-You can perform the following steps to locate a fault. If the fault persists, contact technical support.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+You can perform the following steps to locate a fault. If the fault persists, obtain the logs, and click [here](https://www.hiascend.com/support) to submit feedback.
 
 ![](figures/process_interruption_fault_locating.png)
 
@@ -8,17 +8,17 @@ In the preparation phase, you need to collect CANN log files. For details about 
 
 The locating process is as follows:
 
-In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**, run the  **grep -rn "ERROR"**  command. If the first reported error contains an error code \(except E\*9\*\*\* errors, which are internal system error codes\), rectify the fault by referring to the solution in  [Error Code Reference](error_code_desc.md). If the fault persists, contact technical support. If the first reported error does not contain an error code, go to the next step.
+In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**, run the  **grep -rn "ERROR"**  command. If the first reported error contains an error code \(except E\*9\*\*\* errors, which are internal system error codes\), rectify the fault by referring to the solution in  [Error Code Reference](error_code_desc.md). If the first reported error does not contain an error code, go to the next step.
 
 1. Check for API usage errors.
 
-    In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**  collected, check whether the logs generated around the time when the process interruption occurs contain interface errors such as  **acl\*\*\***,  **\[drv api\]**, and  **rt\*\*\***. If the logs do not contain interface errors, go to next step. If an error is reported for an external interface \(generally, starting with  **acl**\), check the interface usage description and parameter description in the corresponding API reference. For other internal interface errors, contact technical support for further fault locating. For details about typical error cases, see  [No Context Is Available Due to an Error in Invoking the SetDevice Interface](setdevice_error_no_context.md)  and  [Reported error in rtMemcpyAsync asynchronous parameter verification](rtmemcpy_async_param_check_error.md).
+    In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**  collected, check whether the logs generated around the time when the process interruption occurs contain interface errors such as  **acl\*\*\***,  **\[drv api\]**, and  **rt\*\*\***. If the logs do not contain interface errors, go to next step. If an error is reported for an external interface \(generally, starting with  **acl**\), check the interface usage description and parameter description in the corresponding API reference. For other internal interface errors, provide the error information for further locating. For details about typical error cases, see  [No Context Is Available Due to an Error in Invoking the SetDevice Interface](setdevice_error_no_context.md)  and  [Reported error in rtMemcpyAsync asynchronous parameter verification](rtmemcpy_async_param_check_error.md).
 
 2. Check for task execution errors.
 
-    Perform this step to check for operator execution errors and then check for other task execution errors. If a task execution error is reported, provide the error information and contact technical support for further locating. If no task execution error is reported, go to  [3](#li0635816105615).
+    Perform this step to check for operator execution errors and then check for other task execution errors. If a task execution error is reported, provide the error information for further locating. If no task execution error is reported, go to  [3](#li0635816105615).
 
-    1. In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**, run the  **grep -rn "fault kernel\_name"**  or  **grep -rn "kernelName"**  command to search for the keyword. If the keyword  **fault kernel\_name**  exists and is the first error or an error is reported at the keyword  **kernelName**, an error occurs during operator execution. In this case, obtain the kernel name where the error is reported and contact technical support for further locating.
+    1. In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**, run the  **grep -rn "fault kernel\_name"**  or  **grep -rn "kernelName"**  command to search for the keyword. If the keyword  **fault kernel\_name**  exists and is the first error or an error is reported at the keyword  **kernelName**, an error occurs during operator execution. In this case, obtain the kernel name where the error is reported.
         - The following is an example of the log where the first error message  **fault kernel\_name**  is displayed:
 
             ```text
@@ -50,7 +50,7 @@ In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/p
 
     2. In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**, if the keyword  **Task run failed**  exists and is the first error, an error occurs for the CANN internal component execution task.
 
-        In this case, you can use the fault diagnosis function of the ascend-dmi tool to perform the stress test, provide the stress test report and error logs, and contact technical support for further locating. If the stress test environment is unavailable, you can also provide error logs and contact technical support. The technical support can determine whether to perform the stress test after further locating faults. The ascend-dmi tool is contained in the MindCluster ToolBox software package. For details about the mapping between the software and CANN, click  [here](https://www.hiascend.com/developer/download/community/result?module=dl+cann). For details about how to install and use the ascend-dmi tool, click  [here](https://www.hiascend.com/document/detail/en/mindcluster/latest/toolbox/toolboxug/toolboxug_0002.html).
+        In this case, you can use the fault diagnosis function of the ascend-dmi tool to perform the stress test, provide the stress test report and error logs. If the stress test environment is unavailable, you can also provide error logs first and determine whether to perform the stress test after further locating faults. The ascend-dmi tool is contained in the MindCluster ToolBox software package. For details about the mapping between the software and CANN, click  [here](https://www.hiascend.com/developer/download/community/result?module=dl+cann). For details about how to install and use the ascend-dmi tool, click  [here](https://www.hiascend.com/document/detail/en/mindcluster/latest/toolbox/toolboxug/toolboxug_0002.html).
 
         **sqe\_type**  in the error log indicates the component or module where the error is reported. If  **sqe\_type**  in the first error is  **notify wait**, check whether the error is reported by an operator in the model. View the error in the following plog and search for  **fault kernel\_name**  to find the operator that reports the error.
 
@@ -66,6 +66,6 @@ In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/p
 
 <a id="li0635816105615"></a>
 3. Rectify the heartbeat loss fault.
-    - If the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**  contains the keyword  **Device lost heartbeat**  and the black box log file  **history.log**  \(in the  **$\{HOME\}/err\_log\_info/report/\*/hisi\_logs**  directory\) on the device contains the keyword  **HEARTBEAT EXCEPTION**, the TaskScheduler CPU heartbeat is lost. In this case, contact technical support for further fault locating.
-    - If the syslog file \(in the  **$\{HOME\}/err\_log\_info/report/\*/message**  directory\) on the device contains the keyword  **fatal panic**, the control CPU heartbeat is lost. In this case, contact technical support for further fault locating.
     - In the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**, if the keyword  **RESOURCE\_ALLOC\_FAIL**  exists, the error that resources are not released occurs. In this case, check the code logic of the application and release the resources in a timely manner after the resources such as memory are used.
+    - If the host application log file  **$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log**  contains the keyword  **Device lost heartbeat**  and the black box log file  **history.log**  \(in the  **$\{HOME\}/err\_log\_info/report/\*/hisi\_logs**  directory\) on the device contains the keyword  **HEARTBEAT EXCEPTION**, the TaskScheduler CPU heartbeat is lost. In this case, click [here](https://www.hiascend.com/support) to submit feedback.
+    - If the syslog file \(in the  **$\{HOME\}/err\_log\_info/report/\*/message**  directory\) on the device contains the keyword  **fatal panic**, the control CPU heartbeat is lost. In this case, click [here](https://www.hiascend.com/support) to submit feedback.

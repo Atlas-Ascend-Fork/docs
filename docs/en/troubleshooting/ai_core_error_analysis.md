@@ -1,6 +1,6 @@
 # Locating AI Core Errors
 
-You can perform the following steps to locate a fault. If the fault persists, contact technical support.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+You can perform the following steps to locate a fault. If the fault persists, you need to obtain the logs and click [here](https://www.hiascend.com/support) to submit feedback.
 
 **Figure  1**  Locating process
 ![](figures/aicore_error_locating.png)
@@ -21,7 +21,7 @@ The locating process is as follows:
 
     - If no, go to step 3.
 
-        If so, continue to use the ascend-dmi tool to perform a stress test on the AI Core. If the stress test is abnormal, a known hardware fault occurs. In this case, contact technical support to replace the hardware. For details about typical cases, see  [AI Core Hardware Fault](ai_core_hardware_fault.md). If the stress test is normal, specify another device in the program and run the program to check whether the problem recurs. If the problem recurs, go to step 3. If the problem does not recur, the hardware may be faulty. In this case, contact technical support to replace the hardware.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+        If so, continue to use the ascend-dmi tool to perform a stress test on the AI Core. If the stress test is abnormal, a known hardware fault occurs. In this case, replace the hardware. For details about typical cases, see [AI Core Hardware Fault](ai_core_hardware_fault.md). If the stress test is normal, specify another device in the program and run the program to check whether the problem recurs. If the problem recurs, go to step 3. If the problem does not recur, the hardware may be faulty. In this case, replace the hardware.  After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.
 
         The ascend-dmi tool needs to be installed separately. The following is the example command for performing a stress test on the AI Core. If the error message  **GENERAL\_WARN**  or  **EMERGENCY\_WARN**  is reported, the AI Core may be faulty.
 
@@ -36,6 +36,6 @@ The locating process is as follows:
 
         Typical index operators include GatherV2, Scatter, and GatherElements.
 
-    2. Use the msaicerr tool to analyze the information collected in the preparation phase. The msaicerr tool generates an analysis report \(**info.txt**  file\). Provide the msaicerr-generated result data \(including the minimum set information for analyzing AI Core errors and the analysis report\) to technical support for further analysis.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+    2. Use the msaicerr tool to analyze the information collected in the preparation phase. The msaicerr tool generates an analysis report \(**info.txt**  file\). Provide the msaicerr-generated result data \(including the minimum set information for analyzing AI Core errors and the analysis report\) for further analysis. After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.
 
         For details about how to use the msaicerr tool, see  [Using the msaicerr Tool to Analyze AI Core Errors](use_msaicerr_ai_core_err.md).

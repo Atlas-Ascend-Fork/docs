@@ -32,6 +32,6 @@ The ascend-dmi tool is contained in the MindCluster ToolBox software package. Fo
 
 ## Handling Method
 
-Power off and restart the device and then use the ascend-dmi tool to perform a stress test again. If the timeout error persists, the hardware is faulty. Contact technical support to replace the hardware.
+Power off and restart the device and then use the ascend-dmi tool to perform a stress test again. If the timeout error persists, the hardware is faulty. Replace the hardware.
 
-After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.

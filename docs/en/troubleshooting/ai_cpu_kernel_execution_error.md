@@ -79,4 +79,4 @@ In  Ascend RC  form, the logs,  **device-app-_pid_\__\*_.log**, are stored in  *
 
 Check whether the operator code is correct. For example, check the dimension and format of the input data, out-of-bounds access, and execution timeout.
 
-After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.  Perform this operation if the fault persists.
+After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.  Perform this operation if the fault persists.

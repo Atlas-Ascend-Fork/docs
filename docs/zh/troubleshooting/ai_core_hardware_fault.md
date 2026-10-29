@@ -22,4 +22,4 @@ ascend-dmi工具在MindCluster ToolBox软件包中，该软件与CANN的配套�
 
 ## 处理方法
 
-AI Core故障，需联系技术支持更换硬件。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+AI Core故障，需更换硬件。您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。

@@ -32,6 +32,6 @@ ascend-dmi工具在MindCluster ToolBox软件包中，该软件与CANN的配套�
 
 ## 处理方法
 
-建议下电重启后再使用ascend-dmi工具压测，如果对应设备依旧出现timeout报错，则判断为硬件故障，需联系技术支持更换硬件。
+建议下电重启后再使用ascend-dmi工具压测，如果对应设备依旧出现timeout报错，则判断为硬件故障，需更换硬件。
 
-您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。

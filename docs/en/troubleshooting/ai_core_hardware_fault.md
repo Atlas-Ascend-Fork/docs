@@ -18,8 +18,8 @@ The ascend-dmi tool needs to be installed separately. The following is an exampl
 ascend-dmi --dg -i aicore
 ```
 
-The ascend-dmi tool is contained in the MindCluster ToolBox software package. For details about the mapping between the software and CANN, click  [here](https://www.hiascend.com/developer/download/community/result?module=dl+cann). For details about how to install and use the ascend-dmi tool, click  [here](https://www.hiascend.com/document/detail/en/mindcluster/latest/toolbox/toolboxug/toolboxug_0002.html).
+The ascend-dmi tool is contained in the MindCluster ToolBox software package. For details about the mapping between the software and CANN, click  [here](https://www.hiascend.com/developer/download/community/result?module=dl+cann). For details about how to install and use the ascend-dmi tool, click [here](https://www.hiascend.com/document/detail/en/mindcluster/latest/toolbox/toolboxug/toolboxug_0002.html).
 
 ## Solution
 
-Contact technical support to replace the hardware.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+Replace the hardware.  After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.

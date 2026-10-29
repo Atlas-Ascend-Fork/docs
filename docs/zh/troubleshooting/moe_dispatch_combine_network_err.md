@@ -54,7 +54,7 @@ Ascend EP形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\
 
     若首报错卡plog日志的op\_type为MoedistributeDispatch或MoeDistributeCombine，且错误为“The DDR address of the MTE instruction is out of range”，请检查报错时间点是否存在网络交换机故障；否则EP域内的“The DDR address of the MTE instruction is out of range”报错为首报错进程异常所导致，需进一步检查Rank在退出时间点的HOST、plog日志，检查是否有其他异常行为。
 
-5. 若仍未解决问题，您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+5. 若仍未解决问题，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
 <a id="section5623024911"></a>
 

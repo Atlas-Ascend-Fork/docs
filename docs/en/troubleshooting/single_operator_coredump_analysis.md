@@ -17,4 +17,4 @@ Memory is freed repeatedly due to incorrect code logic.
 1. Load the executable file to GDB.
 2. Debug with GDB.
 3. Check the called stack.
-4. After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.  Perform this operation if the problem does not lie in the code
+4. After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.  Perform this operation if the problem does not lie in the code

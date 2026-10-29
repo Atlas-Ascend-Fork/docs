@@ -38,4 +38,4 @@ The API prototype is defined as follows:
 aclError aclrtSetOpExecuteTimeOut(uint32_t timeout)      // timeout, in seconds.
 ```
 
-After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.  Perform this operation if the fault persists.
+After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.  Perform this operation if the fault persists.

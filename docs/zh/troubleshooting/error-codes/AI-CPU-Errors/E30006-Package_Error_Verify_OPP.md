@@ -14,4 +14,4 @@ Failed to verify the OPP.
 ## 解决方法
 
 1. 安装正确算子包。
-2. 获取Host侧和Device侧日志后分析是否有ECC相关报错，并通过<https://www.hiascend.com/support>联系技术支持。
+2. 获取Host侧和Device侧日志后分析是否有ECC相关报错，在<https://www.hiascend.com/support>页面反馈问题。

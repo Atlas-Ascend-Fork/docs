@@ -30,7 +30,7 @@ AI Core Error发生后，框架会在错误的回调里尝试通过输入/输出
 
 查看info.txt文件中“4. Operator Input/Output Memory”处的输入/输出地址，同时判断该算子是否为推理中的首算子。
 
-如果为推理首算子，则需要查看用户推理脚本，确认是否为网络分配了足够的地址空间；如果不是首算子，则需要联系技术支持分析错误地址的来源。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+如果为推理首算子，则需要查看用户推理脚本，确认是否为网络分配了足够的地址空间；如果不是首算子，则需要进一步分析错误地址的来源。您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
 ```text
 ****************4. Operator Input/Output Memory*******************

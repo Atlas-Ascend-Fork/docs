@@ -34,4 +34,4 @@ The msaicerr tool checks the logs related to the addresses in which memories are
 If the address is invalid, check whether the operator address is valid. The options are:
 
 1. If the error occurs in the input/output of an offline inference graph or single-operator call, the address space requested in the user application is incorrect. In this case, check the application source code.
-2. In other cases, the error occurs generally because the address space requested by the framework is abnormal. You need to prepare the fault information collected by the asys tool and the analysis result files of the msaicerr tool, and then contact technical support for check and locating.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+2. In other cases, the error occurs generally because the address space requested by the framework is abnormal. You need to prepare the fault information collected by the asys tool and the analysis result files of the msaicerr tool, and then click [here](https://www.hiascend.com/support) to submit feedback.

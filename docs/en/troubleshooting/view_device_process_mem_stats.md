@@ -12,7 +12,7 @@
     **DEV\_PROC\_MEM**  indicates a process on the device.  **module\_name**  is used to identify a process on the device \(such as the AI CPU process, custom operator CUSTOM process, or HCCP process\).  **total\_size**  indicates the physical memory used by each process, including the resident physical memory occupied by malloc of the process and the sharedpool memory allocated for the process to call the buff allocation API.
 
 2. **Check which device service process whose allocated memory increases causes OOM.**
-    - If you run the application for the first time, check whether the memory usage of each process meets the expectation or exceeds the physical memory of the hardware based on the memory statistics in the logs. If the memory usage does not meet the expectation or exceeds the physical memory of the hardware, contact technical support for further fault locating.
+    - If you run the application for the first time, check whether the memory usage of each process meets the expectation or exceeds the physical memory of the hardware based on the memory statistics in the logs. If the memory usage does not meet the expectation or exceeds the physical memory of the hardware, click [here](https://www.hiascend.com/support) to submit feedback.
     - If the application is not run for the first time, compare the memory statistics in the historical success scenario with that in the current failure scenario to focus on the service process whose allocated memory is greatly different from that in the historical success scenario.
 
         The following is an example of the memory statistics for a historical success scenario \(about 72 MB memory is allocated for the AI CPU process\):

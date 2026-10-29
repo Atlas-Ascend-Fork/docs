@@ -22,7 +22,7 @@ EL0003: The argument is invalid.
         [Init][Version]init soc version failed, ret = 507008[FUNC:ReportInnerError][FILE:log_inner.cpp][LINE:145]
         ctx is NULL![FUNC:GetDevErrMsg][FILE:api_impl.cc][LINE:3490]
         rtGetDevMsg execute failed, reason=[context pointer null][FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:49]
- 
+
 [ERROR] acl init failed
 [ERROR] Sample init resource failed
 ```
@@ -65,7 +65,7 @@ EL0003: The argument is invalid.
     usermod -g 组名 用户名
     ```
 
-3. 如果以上方法解决不了问题，则需要参考如下步骤获取日志，联系技术支持。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+3. 如果以上方法解决不了问题，则需要参考如下步骤获取日志，再单击[Link](https://www.hiascend.com/support)反馈问题。
     1. 登录到运行应用程序的环境，执行如下命令将日志级别设置为Debug。
 
         ```bash

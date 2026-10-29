@@ -24,4 +24,4 @@ The number of dimensions of the input/output parameter of the AI CPU operator ex
 
 Modify the input/output dimensions of the operator parameters to ensure that the number of dimensions does not exceed 8.
 
-After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.  Perform this operation if the fault persists.
+After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.  Perform this operation if the fault persists.

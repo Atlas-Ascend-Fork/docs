@@ -13,4 +13,4 @@ Failed to send the OPP to the device.
 
 ## 解决方法
 
-获取Host侧和Device侧日志，通过<https://www.hiascend.com/support>联系技术支持。
+获取Host侧和Device侧日志，在<https://www.hiascend.com/support>页面反馈问题。

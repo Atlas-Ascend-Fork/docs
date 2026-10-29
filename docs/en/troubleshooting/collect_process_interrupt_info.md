@@ -32,7 +32,7 @@ To collect application logs, on-device system logs, and other maintenance and de
 
 For details about log levels, log paths, and log files, see  [Log Reference](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/910/maintenref/logreference/logreference_0001.html).
 
-In addition, when locating problems, technical support may need onsite service information and user operation logs. Onsite service information indicates whether the onsite service is a single operator, model inference, or model training service. If the onsite service is a training service, the onsite service information contains scale of the training cluster and etc. User operation logs record user operations on the host server. Based on this part, technical support can learn about the basic onsite information and check whether the process is manually interrupted.
+In addition, when locating problems, you may need onsite service information and user operation logs. Onsite service information indicates whether the onsite service is a single operator, model inference, or model training service. If the onsite service is a training service, the onsite service information contains scale of the training cluster and etc. User operation logs record user operations on the host server. Based on this part, you can learn about the basic onsite information and check whether the process is manually interrupted.
 
 ## Automatic Collection
 

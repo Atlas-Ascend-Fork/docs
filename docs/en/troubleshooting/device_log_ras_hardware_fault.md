@@ -33,4 +33,4 @@ RAS hardware faults refer to faults related to hardware reliability, availabilit
 
     ![](figures/image_0000001937528841.png)
 
-3. From the black box logs collected in step 1, find the black box logs of the corresponding device around the time when the fault occurs in the  **hisi\_logs/device-_id_/_\*_/bbox**  directory, and check whether the keyword  **Hardware Error**  exists in the logs. If not, no hardware failure has been identified. If so, an unknown hardware fault occurs, and it is necessary to contact technical support for further fault locating.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+3. From the black box logs collected in step 1, find the black box logs of the corresponding device around the time when the fault occurs in the  **hisi\_logs/device-_id_/_\*_/bbox**  directory, and check whether the keyword  **Hardware Error**  exists in the logs. If not, no hardware failure has been identified. If so, an unknown hardware fault occurs.  After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.

@@ -38,7 +38,7 @@ View the plog and obtain the names of the operator and function that report the 
 
 ## Solution
 
-Contact technical support for troubleshooting.
+Click [here](https://www.hiascend.com/support) to submit feedback
 
 ## Possible Fault
 

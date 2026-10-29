@@ -13,5 +13,5 @@ Failed to connect the device.
 
 ## 解决方法
 
-1. 获取Host侧和Device侧日志，通过<https://www.hiascend.com/support>联系技术支持。
-2. 尝试重启，恢复设备。
+1. 尝试重启，恢复设备。
+2. 获取Host侧和Device侧日志，在<https://www.hiascend.com/support>页面反馈问题。

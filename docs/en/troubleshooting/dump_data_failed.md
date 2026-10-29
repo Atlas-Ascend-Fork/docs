@@ -30,7 +30,7 @@ If the preceding information is displayed, perform the following operations:
 
 View the input/output address in  **4. Operator Input/Output Memory**  in the  **info.txt**  file and check whether the operator is the first operator in inference.
 
-If the operator is the first operator for inference, view the user inference script to check whether sufficient address space is allocated to the network. If it is not the first operator, contact technical support to analyze the source of the incorrect address.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+If the operator is the first operator for inference, view the user inference script to check whether sufficient address space is allocated to the network. If it is not the first operator, analyze the source of the incorrect address.  After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.
 
 ```text
 ****************4. Operator Input/Output Memory*******************

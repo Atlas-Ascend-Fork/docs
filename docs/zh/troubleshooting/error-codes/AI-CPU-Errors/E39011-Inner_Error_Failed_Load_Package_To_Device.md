@@ -22,4 +22,4 @@ Failed to load the package Ascend-aicpu_legacy.tar.gz on the device.
 
 ## 解决方法
 
-获取Host侧和Device侧日志并联系技术支持，网址为<https://www.hiascend.com/support>。
+获取Host侧和Device侧日志，在<https://www.hiascend.com/support>页面反馈问题。

@@ -1,6 +1,6 @@
 # 进程卡住问题定位思路
 
-您可以按如下步骤定位问题，若无法解决问题，再联系技术支持。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+您可以按如下步骤定位问题，若无法解决问题，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
 ![](figures/process_suspension_fault_location.png)
 
@@ -25,7 +25,7 @@
 
         CANN内部函数来源于CANN软件安装目录下的库文件，CANN软件默认安装目录为“/usr/local/Ascend”。
 
-    - 如果plog运行日志中有“**watchdog timeout**”关键字，说明可能算子在线编译时间长导致进程卡住，需要联系技术支持进一步定位问题。
+    - 如果plog运行日志中有“**watchdog timeout**”关键字，说明可能算子在线编译时间长导致进程卡住。
 
         plog运行日志（即$\{HOME\}/err\_log\_info/log/run/plog/plog-_pid_\_\*.log日志）示例片段如下：
 
@@ -119,7 +119,7 @@
             2024-06-14 16:16:43.550.044 Binary reuse statistics:simple key mismatch times:1
             ```
 
-    - **如果栈信息中有“SendTask”关键函数**，说明卡在CANN任务下发阶段，需联系技术支持定位任务下发代码逻辑问题。
+    - **如果栈信息中有“SendTask”关键函数**，说明卡在CANN任务下发阶段，需检查任务下发代码逻辑问题。
 
         栈信息片段示例如下：
 
@@ -212,11 +212,11 @@
 
     3. 排查卡住的原因是本任务执行异常，还是其它任务执行异常导致。
         - 如果卡住任务的任务类型是wait任务（日志有Event Wait关键字，同时日志中会打印event\_id），则说明该任务是在等待另一个任务的执行结果，另一个任务可能执行异常，需跳转到下一步继续排查；
-        - 对于非wait任务，任务类型可能为计算任务，则需联系技术支持进一步定位问题。
+        - 对于非wait任务，任务类型可能为计算任务，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
     4. 梳理流间依赖关系，排查任务卡住的原因。
 
-        在trace日志（schedule\_tracer\_\*.txt文件）中通过event\_id，例如执行**grep -rn "event\_id=1"**命令搜索关键字，找到下发Event Record任务的流，该流的record任务没执行，导致另一条流的event wait任务卡住。定位到任务卡住的原因后，需联系技术支持进一步排查软件问题或用户调用逻辑问题。
+        在trace日志（schedule\_tracer\_\*.txt文件）中通过event\_id，例如执行**grep -rn "event\_id=1"**命令搜索关键字，找到下发Event Record任务的流，该流的record任务没执行，导致另一条流的event wait任务卡住。定位到任务卡住的原因后，需先排查用户调用逻辑问题。
 
         **日志示例及解析如下**：通过event\_id=1，找到对应的event\_record任务所在的stream 2，通过日志中的信息发现stream 2上的任务执行停留在任务0（即pos\[0\]任务），导致任务卡住，这是因为该流的event\_record任务（即pos\[1\]）没有执行，进而导致其它流卡住。
 

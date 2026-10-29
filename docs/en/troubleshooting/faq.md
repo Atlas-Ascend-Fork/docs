@@ -51,4 +51,4 @@
 
     4. The real-time stack export function is abnormal.
 
-        In this case, you can search for the keyword  **ERROR**  in the plog \(**_$HOME_/ascend/log/run|debug/plog/plog-_pid_\__\*_.log**  by default\) to view the error information and contact technical support.  Click  [here](https://www.hiascend.com/support)  to contact technical support.
+        In this case, you can search for the keyword  **ERROR**  in the plog \(**_$HOME_/ascend/log/run|debug/plog/plog-_pid_\__\*_.log**  by default\) to view the error information. Click [here](https://www.hiascend.com/support) to submit feedback.

@@ -17,4 +17,4 @@ double free or corruption(!prev)
 1. gdb挂载可执行文件。
 2. 执行gdb调试。
 3. 查看调用栈。
-4. 如果该问题非用户代码问题，您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+4. 如果该问题非用户代码问题，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。

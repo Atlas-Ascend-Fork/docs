@@ -45,4 +45,4 @@ Some AI CPU operator inputs do not support 0D tensors \(scalars\).
 
 Create the scalar input of the operator as a 1D tensor.
 
-After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.  Perform this operation if the fault persists.
+After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.  Perform this operation if the fault persists.

@@ -1,6 +1,6 @@
 # Locating Process Suspension Faults
 
-You can perform the following steps to locate a fault. If the fault persists, contact technical support.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+You can perform the following steps to locate a fault. If the fault persists, obtain the logs, and click [here](https://www.hiascend.com/support) to submit feedback..
 
 ![](figures/process_suspension_fault_location.png)
 
@@ -25,7 +25,7 @@ The locating process is as follows:
 
         The CANN internal functions come from the library files in the CANN software installation directory. The default CANN software installation directory is  **/usr/local/Ascend**.
 
-    - If the plog run log contains the keyword  **watchdog timeout**, the process is suspended because online compilation of the operator takes a long time. In this case, contact technical support to further locate the fault.
+    - If the plog run log contains the keyword  **watchdog timeout**, the process is suspended because online compilation of the operator takes a long time.
 
         An example of a plog run log \($\{HOME\}/err\_log\_info/log/run/plog/plog-_pid_  \_\*.log\) is as follows:
 
@@ -119,7 +119,7 @@ The locating process is as follows:
             2024-06-14 16:16:43.550.044 Binary reuse statistics:simple key mismatch times:1
             ```
 
-    - If the stack information contains the key function  **SendTask**, the CANN task delivery is suspended. In this case, contact technical support to locate the code logic error of task delivery.
+    - If the stack information contains the key function  **SendTask**, the CANN task delivery is suspended. In this case, locate the code logic error of task delivery.
 
         An example of the stack information fragment is as follows:
 
@@ -212,11 +212,11 @@ The locating process is as follows:
 
     3. Check whether the suspension is caused by the execution exception of the current task or other tasks.
         - If the type of the suspended task is wait \(the log contains the keyword  **Event Wait**  and  **event\_id**  is printed in the log\), the task is waiting for the execution result of another task. The execution of the other task may be abnormal. In this case, go to next step to locate the fault.
-        - If the type of the task is not  **Wait**, the task may be a computing task. In this case, contact technical support to further locate the fault.
+        - If the type of the task is not  **Wait**, the task may be a computing task. In this case, obtain the logs, and click [here](https://www.hiascend.com/support) to submit feedback..
 
     4. Sort out the dependency between streams and locate the cause of task suspension.
 
-        In the trace log \(schedule\_tracer\_\*.txt file\), use event\_id. For example, run the  **grep -rn "event\_id=1"**  command to search for the keyword and find the flow that delivers the Event Record task. The record task of the flow is not executed. As a result, the event wait task of another flow is suspended. After locating the cause of the task suspension, contact technical support to further check the software or user invoking logic.
+        In the trace log \(schedule\_tracer\_\*.txt file\), use event\_id. For example, run the  **grep -rn "event\_id=1"**  command to search for the keyword and find the flow that delivers the Event Record task. The record task of the flow is not executed. As a result, the event wait task of another flow is suspended. After locating the cause of the task suspension, check the software or user invoking logic.
 
         The log example and parsing are as follows: Find stream 2 where the corresponding event\_record task is located based on  **event\_id=1**. The log information shows that the task execution on stream 2 is suspended at task 0 \(pos\[0\] task\) and the event\_record task \(pos\[1\]\) of the stream 2 is not executed. As a result, other streams are suspended.
 

@@ -47,14 +47,14 @@
 
     - If the statistics shows that the component whose  **module\_name**  is  **APP**  uses a large amount of memory, the application process uses a large amount of memory. In this case, you need to analyze the difference between the allocated memory and the estimated memory. If the difference is large, you need to analyze the cause, locate the fault, and optimize the memory allocation logic in the application code.
     - If the value of  **module\_name**  is  **GE**,  **RUNTIME**, or  **HCCL**, the memory is used by the CANN component. Check whether the memory usage of the CANN component is high based on the following memory usage values:
-        - In training scenarios, the memory usage of CANN components varies depending on the framework. The following uses the PyTorch framework as an example. The memory usage of key components is listed below for reference. If a CANN component uses a large amount of memory, contact technical support.
+        - In training scenarios, the memory usage of CANN components varies depending on the framework. The following uses the PyTorch framework as an example. The memory usage of key components is listed below for reference.
             - GE: about 3 MB
             - RUNTIME: about 26 MB
             - HCCL: Memory usage = Memory used by communication links + Buffer memory. The memory used by communication links depends on the cluster scale and communication links. The memory used by buffers depends on the number of communicators and the buffer size used by a single communicator.
 
                 For example, there are 1,024 servers in a cluster, 10 communication links and 3 communicators need to be established, and each communicator occupies the sending and receiving memory of 2 x  **HCCL\_BUFFSIZE**. \(**HCCL\_BUFFSIZE**  is an environment variable and is configured by the user. The default value is 200 MB.\) In this case, the memory usage calculation formulas are as follows: Memory used by communication links in single-operator mode = Number of communication links x 4 MB = 10 x 4 MB = 40 MB; Memory used by communication links in graph mode = Number of communication links x Number of operators in the graph x 0.3 MB = 10 x Number of operators in the graph x 0.3 MB = Number of operators in the graph x 3 MB; Buffer memory = Number of communicators x Sending and receiving memory occupied by each communicator = 3 x 2 x 200 MB.
 
-        - In inference scenarios, take the PyTorch model as an example. The following lists the memory usage of key components when the model is converted into the  AI processor-adapted offline model  for inference. The memory usage can be used for reference during problem analysis. If a CANN component uses a large amount of memory, contact technical support.
+        - In inference scenarios, take the PyTorch model as an example. The following lists the memory usage of key components when the model is converted into the  AI processor-adapted offline model  for inference. The memory usage can be used for reference during problem analysis.
             - GE: about 86 MB
             - RUNTIME: about 18 MB
 

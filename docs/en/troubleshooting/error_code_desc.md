@@ -40,5 +40,5 @@ The \[--dynamic\_batch\_size\], \[--dynamic\_image\_size\], or \[--dynamic\_dims
 >**NOTE:**
 >
 >- In the scenario of executing asynchronous tasks, such as issuing multiple operator execution tasks continuously, multiple operators may report errors, so the error message may contain errors of multiple operators. You need to troubleshoot the problems starting from the first error-reporting operator.
->- Generally, E_\*_9_\*\*\*_  indicates an internal error code. If an internal error code is displayed, contact Huawei technical support for troubleshooting.  After obtaining the logs, click  [here](https://www.hiascend.com/support)  to contact technical support.
+>- Generally, E_\*_9_\*\*\*_  indicates an internal error code. If an internal error code is displayed, obtain the logs, and click [here](https://www.hiascend.com/support) to submit feedback.
 >- The error code information described in this document has been completely displayed on the screen, including possible causes and solutions. Here is an example for reference only.
