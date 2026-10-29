@@ -1,6 +1,6 @@
 # 翻译skill使用方法
 
-1. 将exclude_docs.json和translation_skill.md下载到本地。
+1. 将exclude_docs.json和translation_skill.md下载到本地同一目录存放（如`D:\skills\translation_skill\`）。skill从translation_skill.md所在目录读取排除配置`exclude_docs.json`，与待翻译仓库的位置无关；该目录下无配置文件时视为无排除项，整个仓库进行翻译。
 
 2. 修改exclude_docs.json文件中需要排除翻译的信息：
 
@@ -9,7 +9,7 @@
 
 3. 在opencode中输入类似如下信息，启动skill翻译任务：
 
-   根据translation_skill.md skill，处理xxx仓或yyy.md文件，其中，xxx为用户clone到本地的组件仓库，yyy为仓中的md文档。
+   根据\<skill_dir>\translation_skill.md skill，处理xxx仓或yyy.md文件。其中，\<skill_dir>为exclude_docs.json和translation_skill.md所在目录，xxx为用户clone到本地的组件仓库，yyy为仓中的md文档。
 
    skill启动后会交互式提示"请输入需要翻译的本地仓库路径"，此时输入clone到本地的仓库路径（如`D:\WorkSpace\metadef_trunk`）即可。
 
