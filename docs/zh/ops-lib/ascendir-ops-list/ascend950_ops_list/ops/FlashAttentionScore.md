@@ -89,7 +89,7 @@ layout need to be setted TND. ex. If the kv seqlen is [2,2,2,2,2], this paramete
 - sparse_mode: An int. 0, defaultMsk. 1, allMask. 2, leftUpCausal. 3, rightDownCausal. 4, band. 5, prefix.
 6, prefixCompress. 7, rightDownCausalBand. 8, bandLeftUpCausal.
 - pse_type: An int. Optional attribute. Users can pass in 1 if they do not specify it.
-The supported configuration values ​​are 0, 1, 2, and 3.
+The supported configuration values are 0, 1, 2, and 3.
 - seed: An int. Optional attribute. Default: 0.
 - offset: An int. Optional attribute.  Default: 0.
 - out_dtype: An int. Optional attribute.  Default: 0.

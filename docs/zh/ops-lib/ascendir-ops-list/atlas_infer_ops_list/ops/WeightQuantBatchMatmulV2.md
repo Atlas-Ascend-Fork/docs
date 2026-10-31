@@ -54,7 +54,7 @@ Additionally, the type supports float8_e8m0 when the weight dtype is float4_e2m1
 - antiquant_offset: An Optional tensor for antiquant offset. Shape, format
 and type should be the same with antiquant_scale if antiquant_scale's type is
 not uint64/int64. If antiquant_scale's type is uint64/int64, antiquant_offset should be int32.
-When weight dtype is float8_e5m2, float8_e4m3fn, hifloat8, float4_e2m1 or float4_e1m2, antiquant_offset is ​excluded from selection.
+When weight dtype is float8_e5m2, float8_e4m3fn, hifloat8, float4_e2m1 or float4_e1m2, antiquant_offset is excluded from selection.
 - quant_scale: An Optional tensor for quantization parameters.
 Shape supports (1)/(1,n), format supports ND.
 The type support float32, uint64.

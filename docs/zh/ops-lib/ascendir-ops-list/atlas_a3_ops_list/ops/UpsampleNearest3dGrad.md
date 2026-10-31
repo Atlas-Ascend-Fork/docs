@@ -12,7 +12,7 @@ REG_OP(UpsampleNearest3dGrad)
 
 ## Brief
 
-Upsample the 3-D gradient data with the nearest neighbor ​interpolation algorithm. 
+Upsample the 3-D gradient data with the nearest neighbor interpolation algorithm. 
 
 ## Inputs
 

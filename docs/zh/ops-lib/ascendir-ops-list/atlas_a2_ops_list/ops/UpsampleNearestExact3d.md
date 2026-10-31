@@ -11,7 +11,7 @@ REG_OP(UpsampleNearestExact3d)
 
 ## Brief
 
-Upsample the 3-D data with the nearest neighbor ​interpolation algorithm. 
+Upsample the 3-D data with the nearest neighbor interpolation algorithm. 
 
 ## Inputs
 
