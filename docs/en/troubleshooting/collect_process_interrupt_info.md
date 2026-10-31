@@ -30,7 +30,7 @@ To collect application logs, on-device system logs, and other maintenance and de
     msnpureport -f
     ```
 
-For details about log levels, log paths, and log files, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md).
+For details about log levels, log paths, and log files, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/en/log_ref/README.md).
 
 In addition, when locating problems, technical support may need onsite service information and user operation logs. Onsite service information indicates whether the onsite service is a single operator, model inference, or model training service. If the onsite service is a training service, the onsite service information contains scale of the training cluster and etc. User operation logs record user operations on the host server. Based on this part, technical support can learn about the basic onsite information and check whether the process is manually interrupted.
 

@@ -15,7 +15,7 @@ The troubleshooting process includes collecting the fault information, analyzing
 
     - Application logs: record user-mode logs generated when applications run on the host and device. The common log is  **plog-_pid_\__\*_.log**, which is usually called plog.
 
-        For details about log levels, log paths, and log files, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md).
+        For details about log levels, log paths, and log files, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/en/log_ref/README.md).
 
     - On-device system logs and other maintenance and debugging information: record system running information, including kernel-mode logs and user-mode logs generated during system process running.
 

@@ -27,4 +27,4 @@ Check whether the shape inference result of the current node is correct \(that i
 ![](figures/image_0000001927835337.png)
 
 >**NOTE:**
->After running the  **export ASCEND\_GLOBAL\_LOG\_LEVEL=0**  command to enable the debug-level log and completing the debugging, run the  **export ASCEND\_GLOBAL\_LOG\_LEVEL=3**  command to enable the error-level log. For details about the log levels, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md).
+>After running the  **export ASCEND\_GLOBAL\_LOG\_LEVEL=0**  command to enable the debug-level log and completing the debugging, run the  **export ASCEND\_GLOBAL\_LOG\_LEVEL=3**  command to enable the error-level log. For details about the log levels, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/en/log_ref/README.md).

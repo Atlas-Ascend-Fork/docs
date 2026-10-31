@@ -79,7 +79,7 @@ The possible causes are as follows:
 ## Fault Locating
 
 1. Locate the VPC configuration parameter based on the error information in the log and modify the parameter as prompted.
-2. Based on the error information in the log, rectify the fault by referring to  DVPP Media Acceleration Library \> Media Data Processing V1 APIs \> VPC Image Processing  or  DVPP Media Acceleration Library \> Media Data Processing V2 APIs \> VPC Image Processing in [DVPP Media Acceleration Library](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html).
+2. Based on the error information in the log, rectify the fault by referring to  DVPP Media Acceleration Library \> Media Data Processing V1 APIs \> VPC Image Processing  or  DVPP Media Acceleration Library \> Media Data Processing V2 APIs \> VPC Image Processing in [DVPP Media Acceleration Library](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html).
 
 ## Solution
 

@@ -29,7 +29,7 @@ CANN operators are mainly classified into the following categories:
 
     Operators that fuse and parallelize collective communication and MatMul computation are collectively referred to as merged compute and communication operators (MC2 operators for short), such as AllGatherMatmul, AlltoAllAllGatherBatchMatMul, BatchMatMulReduceScatterAlltoAll, MatMulAllReduce, MatMulAllReduceAddRmsNorm, and MatMulReduceScatter.
 
-For details about the operator Intermediate Representation (IR) specifications, see "Ascend IR Operator Specifications" in [Operator Library](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/ops-lib/0_README.md). For details about the API documentation corresponding to operators, see "Operator APIs (aclnn)" in [Operator Library](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/ops-lib/0_README.md).
+For details about the operator Intermediate Representation (IR) specifications, see "Ascend IR Operator Specifications" in [Operator Library](https://gitcode.com/cann/docs/blob/9.2.0/docs/en/ops-lib/0_README.md). For details about the API documentation corresponding to operators, see "Operator APIs (aclnn)" in [Operator Library](https://gitcode.com/cann/docs/blob/9.2.0/docs/en/ops-lib/0_README.md).
 
 When calling operator APIs, include the required header files and library files. Replace **$\{INSTALL\_DIR\}** with the file storage path after CANN software installation. For example, when it is installed by the **root** user, the default file storage path is **/usr/local/Ascend/cann**.
 
@@ -55,7 +55,7 @@ The key APIs are described as follows. For details about the **acl**-prefixed AP
 3. **Allocate data memory and transfer data.**
 
     1. Call **aclrtMalloc** to allocate memory on the device to store the input and output data of the operator to be executed.
-    2. Call **aclCreateTensor**, **aclCreateIntArray**, and other APIs to construct the input and output parameters of the operator. For details about the related APIs, see "Common APIs" in [Operator Library](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/ops-lib/0_README.md).
+    2. Call **aclCreateTensor**, **aclCreateIntArray**, and other APIs to construct the input and output parameters of the operator. For details about the related APIs, see "Common APIs" in [Operator Library](https://gitcode.com/cann/docs/blob/9.2.0/docs/en/ops-lib/0_README.md).
 
     If data on the host needs to be transferred to the device, call **aclrtMemcpy** (synchronous API) or **aclrtMemcpyAsync** (asynchronous API) to transfer data through memory copy.
 
@@ -70,7 +70,7 @@ The key APIs are described as follows. For details about the **acl**-prefixed AP
     If the operator execution result data on the device needs to be transferred to the host, call the **aclrtMemcpy** API (synchronous API) or the **aclrtMemcpyAsync** API (asynchronous API) to transfer the data through memory copy, and then release the memory.
 
 7. **Release runtime resources**.
-    1. Call **aclDestroyTensor**, **aclDestroyIntArray**, and other APIs to release the input and output parameters of the operator. For details about the related APIs, see "Common APIs" in [Operator Library](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/ops-lib/0_README.md).
+    1. Call **aclDestroyTensor**, **aclDestroyIntArray**, and other APIs to release the input and output parameters of the operator. For details about the related APIs, see "Common APIs" in [Operator Library](https://gitcode.com/cann/docs/blob/9.2.0/docs/en/ops-lib/0_README.md).
     2. After all data is released, call APIs such as **aclrtDestroyStream** and **aclrtResetDevice** to release the runtime resources (stream, context, and device) in sequence.
 
 8. **Perform deinitialization:** Call the **aclFinalize** API to implement deinitialization.

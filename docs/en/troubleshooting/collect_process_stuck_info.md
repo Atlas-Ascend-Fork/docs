@@ -24,7 +24,7 @@ To collect application logs and trace logs, perform the following steps:
     mv $HOME/ascend/atrace ${HOME}/err_log_info/
     ```
 
-For details about log levels, log paths, and log files, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md).
+For details about log levels, log paths, and log files, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/en/log_ref/README.md).
 
 ## Automatic Collection
 

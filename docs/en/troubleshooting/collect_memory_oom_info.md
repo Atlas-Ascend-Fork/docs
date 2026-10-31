@@ -30,7 +30,7 @@ To collect application logs, on-device system logs, and other maintenance and de
     msnpureport -f
     ```
 
-For details about log levels, log paths, and log files, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md).
+For details about log levels, log paths, and log files, see  [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/en/log_ref/README.md).
 
 ## Automatic Collection Method
 

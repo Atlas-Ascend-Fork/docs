@@ -12,4 +12,4 @@ Logs are mainly used to record the running process and exception information of 
     - Logs printed by components such as GE, Runtime, and HCCL on the host side.
     - Logs printed by the AI CPU process on the device side.
 
-For details about how to view logs and set log levels, see [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md).
+For details about how to view logs and set log levels, see [Log Reference](https://gitcode.com/cann/runtime/blob/9.2.0/docs/en/log_ref/README.md).
