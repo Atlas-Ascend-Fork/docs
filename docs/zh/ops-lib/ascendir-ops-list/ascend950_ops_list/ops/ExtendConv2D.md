@@ -63,6 +63,7 @@ The following are the supported data types and data formats:
 |           | hifloat8 | hifloat8 | float32 | uint64 or int64 | float32                    | hifloat8                 | float32, float16, bfloat16 or hifloat8|
 |           | float8   | float8   | float32 | uint64 or int64 | float32                    | float8                   | float32, float16, bfloat16 or float8_e4m3|
 | Format    | NCHW     | NCHW     | ND      | ND              | ND                         | ND                       | NCHW                               |
+
 | Tensor    | x        | filter   | bias    | scale0, scale1  | relu_weight0, relu_weight1 | clip_value0, clip_value1 | y0, y1             |
 | :-------: | :------: | :------: | :-----: | :-------------: | :------------------------: | :----------------------: | :---------------: |
 | Data Type | int8     | int8     | int32   | uint64 or int64 | float32                    | int8                     | float16 or int8    |
