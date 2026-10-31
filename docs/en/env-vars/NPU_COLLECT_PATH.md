@@ -44,11 +44,11 @@ export NPU_COLLECT_PATH=$HOME/demo/
     BatchMatMulReduceScatterAlltoAll
 
 - If the **NPU_COLLECT_PATH** environment variable is configured, enabling the switch for detecting whether Global Memory is out of bounds is not supported. Otherwise, the compiled model file or operator kernel package will report an error when used. The switch for detecting whether Global Memory is out of bounds can be enabled in the following ways:
-  - When using the ATC model conversion tool, configure **oom** in the configuration file specified by the **--op_debug_config** parameter. For detailed configuration, see [*ATC Offline Model Build Tool*](https://hiascend.com/document/redirect/cannCommunityATC).
+  - When using the ATC model conversion tool, configure **oom** in the configuration file specified by the **--op_debug_config** parameter. For detailed configuration, see [*ATC Offline Model Build Tool*](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md).
   <!-- npu="950,A3,910b,910,310p,310b" id1 -->
   - When using the **op_compiler** operator build tool, configure **oom** in the configuration file specified by the **--op_debug_config** parameter. For detailed configuration, see [*Operator Build Tool*](https://hiascend.com/document/redirect/CannCommunityopcompiler).
   <!-- end id1 -->
-  - When building graphs in Ascend Graph mode, configure **oom** in the configuration file specified by the **op_debug_config** or **OP_DEBUG_CONFIG** parameter. For detailed configuration, see [*Graph Development*](https://hiascend.com/document/redirect/CannCommunityGraphguide).
+  - When building graphs in Ascend Graph mode, configure **oom** in the configuration file specified by the **op_debug_config** or **OP_DEBUG_CONFIG** parameter. For detailed configuration, see [*Graph Development*](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/graph_dev/README.md).
   <!-- npu="950,A3,910b,910,310p" id2 -->
   - When migrating a training script developed based on the TensorFlow Python API to an AI processor for training, configure **oom** in the configuration file specified by the **op_debug_config** parameter. For detailed configuration, see [*TensorFlow Product Documentation*](https://www.hiascend.com/document/detail/en/TensorFlowCommunity/latest/index/index.html).
   <!-- end id2 -->
