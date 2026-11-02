@@ -72,6 +72,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 The combination of transpose_x1/transpose_x2 is only supported true/false for now.
 - The following are the supported data type combinations by platform.
 - Ascend 950 AI Processor with group_sizes scenarios, supported data type and shapes combinations:
+
 | quantization  | x1 type                    | x2 type                   | x2_scale type | y type  | x2_scale type | x1 shape    | x2 shape   | x2_scale shape   | y shape     | x1_scale shape    | group_size |
 |---------------|----------------------------|---------------------------|---------------|---------|---------------|-------------|------------|------------------|-------------|-------------------|------------|
 | mx            | float8_e4m3fn/float8_e5m2  | float8_e4m3fn/float8_e5m2 |  float8_e8m0  | float32 | float8_e8m0   | (k,m)       | (k,n)      | (ceil(k/64),n,2) | (m,n)       | (ceil(k/64),m,2)  | [1, 1, 32] |

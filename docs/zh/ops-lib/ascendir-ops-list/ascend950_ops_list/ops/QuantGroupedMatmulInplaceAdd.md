@@ -35,6 +35,7 @@ Format supports ND. The data type supports float32, float8_e8m0.
 y: A Tensor. Format supports ND.
 The data type supports float32.
 - The following are the supported quantization modes, data types and shapes(for Ascend950PR/Ascend950DT):
+
 | quantization         | x1 type                   | x2 type                   | scale1 type                    | scale2 type                    | x1 shape  | x2 shape            | y shape   | scale2 shape                  | scale1 shape          |
 |----------------------|---------------------------|---------------------------|--------------------------------|--------------------------------|-----------|---------------------|-----------|-------------------------------|-----------------------|
 | pertensor-pertensor  | hifloat8                  | hifloat8                  | float32                        | float32                        | (K,M)     | (K,N)               | (B,M,N)   | (B,)/(B,1)                    | (B,)/(B,1)            |

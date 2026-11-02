@@ -151,12 +151,14 @@ In all other cases, inputs does not support tensor with dimension size 0.
 - When x2 format is NZ, the data type of x1 and x2 is float8_e4m3fn and quantization mode is pertensor-perchannel/pertensor-pertensor, scale must be uint64 or int64.
 - The following are the supported data type combinations by platform.
 - Atlas Inference Series Product:
+
 | x1       | x2       | scale        | offset        | bias          | pertoken | out      |
 | :------: | :------: | :----------: | :-----------: | :-----------: | :------: | :------: |
 | int8     | int8     | uint64/int64 | null          | null/int32    | null     | float16  |
 | int8     | int8     | uint64/int64 | null/float32  | null/int32    | null     | int8     |
 - Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component or
 Atlas A3 Training Series Product/Atlas A3 Inference Series Product:
+
 | x1       | x2       | scale            | offset        | bias                        | pertoken     | out      |
 | :------: | :------: | :--------------: | :-----------: | :-------------------------: | :----------: | :------: |
 | int8     | int8     | uint64/int64     | null          | null/int32                  | null         | float16  |
@@ -168,6 +170,7 @@ Atlas A3 Training Series Product/Atlas A3 Inference Series Product:
 | int4     | int4     | float32/bfloat16 | null          | null/int32/bfloat16/float32 | float32      | bfloat16 |
 | int4     | int4     | float32          | null          | null/int32/float16/float32  | float32      | float16  |
 - Ascend 950 AI Processor:
+
 | x1                        | x2                        | scale                | offset        | bias                        | pertoken    | out                                    |
 | :-----------------------: | :-----------------------: | :------------------: | :-----------: | :-------------------------: | :---------: | :------------------------------------: |
 | int8                      | int8                      | uint64/int64         | null          | null/int32                  | null        | float16/bfloat16                       |
@@ -184,6 +187,7 @@ Atlas A3 Training Series Product/Atlas A3 Inference Series Product:
 | int4/int32                | int4/int32                | uint64/int64         | null          | null/int32                  | null        | float16                                |
 - Ascend950PR/Ascend950DT, supported data type and quant mode combinations:
 pertensor-perchannel && pertensor-pertensor:
+
 | x1 type                   | x2 type                   | pertoken type    | scale type       |
 | ------------------------- | ------------------------- | ---------------- | ---------------- |
 | int8                      | int8                      | null             | uint64/int64     |
@@ -194,6 +198,7 @@ pertensor-perchannel && pertensor-pertensor:
 | hifloat8                  | hifloat8                  | float32          | float32          |
 | int4/int32                | int4/int32                | null             | uint64/int64     |
 pertoken-perchannel && pertoken-pertensor
+
 | x1 type                   | x2 type                   | pertoken type    | scale type       |
 | ------------------------- | ------------------------- | ---------------- | ---------------- |
 | int8                      | int8                      | float32          | float32/bfloat16 |
@@ -201,16 +206,19 @@ pertoken-perchannel && pertoken-pertensor
 | hifloat8                  | hifloat8                  | float32          | float32          |
 | int4/int32                | int4/int32                | float32          | uint64/int64     |
 pergroup-perblock && perblock-perblock:
+
 | x1 type                   | x2 type                   | pertoken type    | scale type       |
 | ------------------------- | ------------------------- | ---------------- | ---------------- |
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | float32          | float32          |
 | hifloat8                  | hifloat8                  | float32          | float32          |
 mx quant：
+
 | x1 type                   | x2 type                   | pertoken type    | scale type       |
 | ------------------------- | ------------------------- | ---------------- | ---------------- |
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | float8_e8m0      | float8_e8m0      |
 | float4_e2m1               | float4_e2m1               | float8_e8m0      | float8_e8m0      |
 - Ascend950PR/Ascend950DT with group_sizes scenarios, supported data type and shapes combinations:
+
 | quantization      | x1 type                            | scale type  | x1 shape      | x2 shape      | scale shape                           | pertoken shape                        | group_size      |
 |-------------------|------------------------------------|-------------|---------------|---------------|---------------------------------------|---------------------------------------|-----------------|
 | perblock-perblock | float8_e4m3fn/float8_e5m2/hifloat8 | float32     | (batch, m, k) | (batch, k, n) | (batch, ceil(k / 128), ceil(n / 128)) | (batch, ceil(m / 128), ceil(k / 128)) | [128, 128, 128] |

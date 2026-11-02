@@ -32,6 +32,7 @@ or the format "NCHW" which shape is [out_channels, in_channels / groups, kernel_
 The data is stored in the order of: [out_channels].
 - offset_w: An optional quantitative offset tensor. Reserved.
 The following are the supported data types and data formats (except IPV350 and Ascend 950 AI Processor):
+
 | Tensor    | x        | filter   | bias     | y        |
 | :-------: | :------: | :------: | :------: | :------: |
 | Data Type | float16  | float16  | float16  | float16  |
@@ -44,6 +45,7 @@ The following are the supported data types and data formats (except IPV350 and A
 |           | NHWC     | HWCN     | ND       | NHWC     |
 |           | NCHW     | HWCN     | ND       | NCHW     |
 The following are the supported data types and data formats for IPV350:
+
 | Tensor    | x       | filter  | bias    | y       |
 | :-------: | :-----: | :-----: | :-----: | :-----: |
 | Data Type | int16   | int8    | int32   | int32   |
@@ -51,6 +53,7 @@ The following are the supported data types and data formats for IPV350:
 | Format    | NCHW    | NCHW    | ND      | NCHW    |
 |           | NHWC    | HWCN    | ND      | NHWC    |
 The following are the supported data types and data formats for Ascend 950 AI Processor:
+
 | Tensor    | x        | filter   | bias     | y        |
 | :-------: | :------: | :------: | :------: | :------: |
 | Data Type | float16  | float16  | float16  | float16  |
@@ -106,6 +109,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - The following value range restrictions must be met:
+
 | Name             | Field      | Scope       |
 | :--------------: | :--------: | :---------: |
 | x size           | h          | [1, 100000] |

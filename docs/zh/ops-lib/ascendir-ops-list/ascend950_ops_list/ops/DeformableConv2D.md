@@ -35,6 +35,7 @@ filter_height * filter_width * 3, out_height, out_width].
 - bias: An optional 1D tensor of additive biases to the filter outputs.
  The data is stored in the order of: [out_channels].
  The following are the supported data types and data formats:
+
 |  Tensor    | x       | filter  | offsets | bias    | y       |
 |  :-------: | :-----: | :-----: | :-----: | :-----: | :-----: |
 |  Data Type | float16 | float16 | float16 | float16 | float16 |
@@ -77,6 +78,7 @@ deformable group partitions. In_channels must be divisible by
 - modulated: Optional. Specify version of DeformableConv2D, true means v2,
 false means v1, currently only support v2.
  The following value range restrictions must be met:
+
 |  Name             | Field    | Scope                       |
 |  :--------------: | :------: | :-------------------------: |
 |  Input Image Size | H        | [1, 100000 / filter_height] |

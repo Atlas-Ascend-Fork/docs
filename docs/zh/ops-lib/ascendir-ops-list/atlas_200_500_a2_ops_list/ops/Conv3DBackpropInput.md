@@ -80,6 +80,7 @@ Number of blocked connections from in_channels to out_channels.
 The in_channels and out_channels must be divisible by groups.
 When the groups value differs, it is supported on Atlas 200/500 A2 Inference Product and
 Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component as follows: 
+
 | groups |        dtype           | out_backprop format | filter format |     y format   |
 |--------|------------------------|---------------------|---------------|----------------|
 |  =1    |float16/bfloat16/float32|       NCDHW         |      NCDHW    |     NCDHW      |

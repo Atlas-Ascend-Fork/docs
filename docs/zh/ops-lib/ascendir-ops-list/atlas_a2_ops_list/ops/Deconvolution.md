@@ -33,6 +33,7 @@ Two optional inputs:
 - offset_w: An optional 1D tensor for quantized deconvolution.
 Type is int8. Reserved.
 The following are the supported data types and data formats:
+
 | Tensor    | x       | filter  | bias    | y      |
 |-----------|---------|---------|---------|--------|
 | Data Type | float16 | float16 | float16 | float16|
@@ -69,6 +70,7 @@ Specify the data format of the input and output data.
 The negative offset added to the input image for int8 type. Ensure offset_x
 within the effective range of int8 [-128, 127]. Defaults to "0".
 The following value range restrictions must be met:
+
 | Name             | Field    | Scope        |
 |------------------|----------|--------------|
 | x (out_backprop) | H*strideH| [1, 4096]    |

@@ -40,6 +40,7 @@ The following are the supported data types and data formats
 (for Atlas Inference Series Product, Atlas Training Series Product,
 Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and
 Atlas A3 Training Series Product/Atlas A3 Inference Series Product)
+
 | Tensor    | x       | filter  | scale         | bias    | offset  | y       |
 | :-------: | :-----: | :-----: | :-----------: | :-----: | :-----: | :-----: |
 | Data Type | int8    | int8    | uint64/int64  | int32   | float32 | float16 |
@@ -47,6 +48,7 @@ Atlas A3 Training Series Product/Atlas A3 Inference Series Product)
 |           | NCHW    | HWCN    | ND            | ND      | ND      | NCHW    |
 |           | NHWC    | HWCN    | ND            | ND      | ND      | NHWC    |
 The following are the supported data types and data formats (for Ascend 950 AI Processor):
+
 | Tensor    | x           | filter      | scale        | bias    | offset  | y                                   |
 | :-------: | :---------: | :---------: | :----------: | :------:| :------:| :---------------------------------: |
 | Data Type | int8        | int8        | uint64/int64 | int32   | float32 | float16                             |
@@ -105,6 +107,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - The following value range restrictions must be met:
+
 | Name             | Field      | Scope       |
 | :--------------: | :--------: | :---------: |
 | x size           | h          | [1, 100000] |

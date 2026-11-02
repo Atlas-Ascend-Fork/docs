@@ -74,6 +74,7 @@ Atlas A5 Series Products:
 - x and rot must have the same data type.
 - scale output shape is [*, ceilDiv(N,64), 2].
 - K must be one of {32, 64, 128}. 
+
 | x        | rot      | alpha | y              | scale       |
 |----------|----------|-------|----------------|-------------|
 | BF16     | BF16     | N/A   | INT4           | FLOAT32     |

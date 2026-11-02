@@ -48,6 +48,7 @@ Currently offset_w is not supported on Atlas 200/500 A2 Inference Product,
 Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component
 and Ascend 950PR/Ascend 950DT. Reserved.
 In Ascend 950PR/Ascend 950DT, the following are the supported data types and data formats:
+
 | Tensor    | x       | filter  | bias    | y      |
 |-----------|---------|---------|---------|--------|
 | Data Type | float16 | float16 | float16 | float16 |
@@ -59,6 +60,7 @@ In Ascend 950PR/Ascend 950DT, the following are the supported data types and dat
 | Format    | NCHW    | NCHW    | ND      | NCHW    |
 |           | NHWC    | HWCN    | ND      | NHWC    |
 The following are the supported data types and data formats for other products:s
+
 | Tensor    | x       | filter  | bias    | y      |
 |-----------|---------|---------|---------|--------|
 | Data Type | float16 | float16 | float16 | float16 |

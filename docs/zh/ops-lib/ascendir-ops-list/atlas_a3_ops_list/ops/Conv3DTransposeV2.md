@@ -63,6 +63,7 @@ The dilations have the same axes sequence "x":
 Number of blocked connections from in_channels to out_channels.
 The in_channels and out_channels must be divisible by groups.
 When the groups value differs, the supported data type may vary, specifically as follows: 
+
 | groups |        dtype           |   x format  | filter format |    y format    |
 |--------|------------------------|-------------|---------------|----------------|
 |  =1    |hifloat8/float8_e4m3fn  |    NCDHW    |      NCDHW    |     NCDHW      |

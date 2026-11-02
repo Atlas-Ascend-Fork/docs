@@ -65,6 +65,7 @@ In Ascend 950 AI Processor, this parameter is not supported.
 - The following are the supported data types and data formats for
 (Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and
 Atlas A3 Training Series Product/Atlas A3 Inference Series Product):
+
 | Tensor    | x        | filter   | bias     | scale   | offset  |    y     |
 | :-------: | :------: | :------: | :------: | :-----: | :-----: | :------: |
 | Data Type | float16  | float16  | float16  | float32 | float32 | float16  |
@@ -73,6 +74,7 @@ Atlas A3 Training Series Product/Atlas A3 Inference Series Product):
 |           | int8     | int8     | float32  | float32 | float32 | bfloat16 |
 | Format    | NCDHW    | NCDHW    | ND       | ND      | ND      | NCDHW    |
 The following are the supported data types and data formats for Ascend 950 AI Processor:
+
 | Tensor    | x        | filter   | bias     |    y     |
 | :-------: | :------: | :------: | :------: | :------: |
 | Data Type | float16  | float16  | float16  | float16  |
@@ -145,6 +147,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - The following value range restrictions must be met:
+
 | Name             | Field                | Scope        |
 | :--------------: | :------------------: | :----------: |
 | x size           | n                    | [1, 1000000] |

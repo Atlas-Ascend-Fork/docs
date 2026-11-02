@@ -75,6 +75,7 @@ The width (W), height (H) and depth(D) dimensions must be greater than 0.
 Number of blocked connections from in_channels to out_channels.
 The in_channels and out_channels must be divisible by groups.
 When the groups value differs, the supported data type may vary, specifically as follows: 
+
 | groups |        dtype           | out_backprop format | filter format |     y format   |
 |--------|------------------------|---------------------|---------------|----------------|
 |  =1    |float16/bfloat16/float32|       NCDHW         |      NCDHW    |     NCDHW      |

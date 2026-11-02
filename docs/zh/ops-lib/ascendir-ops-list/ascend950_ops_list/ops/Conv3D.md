@@ -47,6 +47,7 @@ The data is stored in the order of: [out_channels].
 In Ascend 950 AI Processor, the out_channels dimension must be in [1, 1000000]
 - offset_w: An optional quantitative offset tensor. Reserved.
 The following are the supported data types and data formats for Ascend 950 AI Processor:
+
 | Tensor    | x        | filter   | bias     |   y      |
 | :-------: | :------: | :------: | :------: | :------: |
 | Data Type | float16  | float16  | float16  | float16  |
@@ -56,6 +57,7 @@ The following are the supported data types and data formats for Ascend 950 AI Pr
 | Format    | NCDHW    | NCDHW    | ND       | NCDHW    |
 |           | NDHWC    | DHWCN    | ND       | NDHWC    |
 The following are the supported data types and data formats for other products:
+
 | Tensor    | x        | filter   | bias     | y        |
 | :-------: | :------: | :------: | :------: | :------: |
 | Data Type | float16  | float16  | float16  | float16  |

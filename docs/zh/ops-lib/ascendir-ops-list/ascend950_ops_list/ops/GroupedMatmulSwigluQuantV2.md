@@ -77,6 +77,7 @@ When group_list_type is 1, it must be a non-negative array. Sum of values in gro
 - y: A tensor. The type supports int8, float8_e5m2, float8_e4m3fn, float4_e2m1, float4_e1m2, hifloat8. The format supports ND.
 - y_scale: A tensor. The type supports float32, float8_e8m0. The format supports ND.
 - The following are the supported format, data types and shapes(for Ascend950PR/Ascend950DT):
+
 | Tensor    | x                         | x_scale             | group_list | weight                                            | weight_scale                                    | y                                                    | y_scale                  |
 | :-------: | :-----------------------: | :-----------------: | :--------: | :-----------------------------------------------: | :---------------------------------------------: | :--------------------------------------------------: |:-----------------------: |
 | Format1   | ND                        | ND                  | ND         | ND                                                | ND                                              | ND                                                   | ND                       |

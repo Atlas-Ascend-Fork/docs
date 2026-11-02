@@ -36,6 +36,7 @@ out_height, out_width]. Gradients with respect to the output of the
 convolution.
 Support type float16, bfloat16 and float32.
 The following are the supported data types and data formats:
+
 | Tensor    | x        | out_backprop | y       |
 |-----------|--------- |--------------|---------|
 | Data Type | float16  |    float16   | float32 |
@@ -69,6 +70,7 @@ channels.
 - data_format: An optional string from: "NHWC", "NCHW". Defaults to
 "NHWC". Specify the data format of the input and output data.
 The following value range restrictions must be met, except for Ascend 950PR/Ascend 950DT:
+
 | Name             | Field    | Scope        |
 |------------------|----------|--------------|
 | x(fmap)          | H        | [1, 4096]  |
@@ -89,6 +91,7 @@ The following value range restrictions must be met, except for Ascend 950PR/Asce
 |                  | W        | [1, 255]     |
 | groups           | H        | [1, 4096]    |
 The following are supported value range restrictions for Ascend 950PR/Ascend 950DT:
+
 | Name             | Field    | Scope           |
 |------------------|----------|-----------------|
 | x(fmap)          | H        | [1, 4096]       |

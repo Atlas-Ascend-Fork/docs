@@ -34,6 +34,7 @@ or the format "NCHW" which shape is [out_channels, in_channels / groups, kernel_
 The data is stored in the order of: [out_channels].
 - offset_w: An optional quantitative offset tensor. A tensor of type int8. Reserved.
 The following are the supported data types and data formats:
+
 | Tensor    | x        | filter   | bias     | y        |
 | :-------: | :------: | :------: | :------: | :------: |
 | Data Type | float16  | float16  | float16  | float16  |
@@ -43,6 +44,7 @@ The following are the supported data types and data formats:
 | Format    | NCHW     | NCHW     | ND       | NCHW     |
 |           | NHWC     | HWCN     | ND       | NHWC     |
 The following are the supported data types and data formats for MC62:
+
 | Tensor    | x        | filter                   | bias    | y        |
 | :-------: | :------: | :----------------------: | :-----: | :------: |
 | Data Type | float16  | float16                  | float16 | float16  |
@@ -102,6 +104,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - The following value range restrictions must be met:
+
 | Name             | Field                | Scope        |
 | :--------------: | :------------------: | :----------: |
 | x size           | n                    | [1, 1000000] |

@@ -41,6 +41,7 @@ or [batch, out_channels, out_height, out_width].
 Any dimension of out_backprop shape must be in [1, 2147483647].
 Gradients with respect to the output of the convolution.
 In Ascend 950PR/Ascend 950DT, the following are the supported data types and data formats:
+
 | Tensor    | out_bckprop | filter   | y       |
 |-----------|-------------|----------|---------|
 | Data Type | float16     | float16  | float16 |
@@ -50,6 +51,7 @@ In Ascend 950PR/Ascend 950DT, the following are the supported data types and dat
 | Format    | NCHW        | NCHW     | NCHW    |
 | Format    | NHWC        | HWCN     | NHWC    |
 The following are the supported data types and data formats for other products:
+
 | Tensor    | out_bckprop | filter   | y       |
 |-----------|-------------|----------|---------|
 | Data Type | float16     | float16  | float16 |

@@ -57,6 +57,7 @@ the second output, which is of the scalar type or channelwise type.
 - clip_value1: An optional 1D tensor. Truncated value of clip relu corresponding to the second output.
 The value is of the scalar type.
 The following are the supported data types and data formats:
+
 | Tensor    | x        | filter   | bias    | scale0, scale1  | relu_weight0, relu_weight1 | clip_value0, clip_value1 | y0, y1                             |
 | :-------: | :------: | :------: | :-----: | :-------------: | :------------------------: | :----------------------: | :--------------------------------: |
 | Data Type | int8     | int8     | int32   | uint64 or int64 | float32                    | int8                     | float16 or int8                    |
@@ -69,6 +70,7 @@ The following are the supported data types and data formats:
 | Data Type | int8     | int8     | int32   | uint64 or int64 | float32                    | int8                     | float16 or int8    |
 | Format    | NHWC     | HWCN     | ND      | ND              | ND                         | ND                       | NHWC               |
 The following are the supported data types and data formats for MC62:
+
 | Tensor    | x        | filter                   | bias    | scale0, scale1  | relu_weight0, relu_weight1 | clip_value0, clip_value1 | y0, y1          |
 | :-------: | :------: | :----------------------: | :-----: | :-------------: | :------------------------: | :----------------------: | :-------------: |
 | Data Type | int8     | int8                     | int32   | uint64 or int64 | float32                    | float16 or int8          | float16 or int8 |
@@ -154,6 +156,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - The following value range restrictions must be met:
+
 | Name              | Field                | Scope        |
 | :---------------: | :------------------: | :----------: |
 | x size            | n                    | [1, 1000000] |

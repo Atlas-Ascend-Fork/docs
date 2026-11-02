@@ -38,6 +38,7 @@ or the format "NCDHW" which shape is [out_channels, in_channels / groups, kernel
 The data is stored in the order of: [out_channels].
 - offset: An optional quantitative offset tensor. Reserved.
 The following are the supported data types and data formats (for Ascend 950 AI Processor):
+
 | Tensor    | x           | filter      | scale        | bias    | offset  | y                                   |
 | :-------: | :---------: | :---------: | :----------: | :------:| :------:| :---------------------------------: |
 | Data Type | int8        | int8        | uint64/int64 | int32   | float32 | float16                             |
@@ -101,6 +102,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - The following value range restrictions must be met:
+
 | Name             | Field                | Scope        |
 | :--------------: | :------------------: | :----------: |
 | x size           | n                    | [1, 1000000] |
