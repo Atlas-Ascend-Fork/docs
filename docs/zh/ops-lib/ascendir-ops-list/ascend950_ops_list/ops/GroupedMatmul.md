@@ -54,6 +54,7 @@ Format supports ND. The type support float32, float8_e8m0.
 y: A Tensor List. Format supports ND.
 The type support float16, bfloat16, int8, float32, int32.
 - The following are the supported data formats and corresponding data types (for Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component):
+
 | Tensor    | x       | weight    | bias    | scale   | offset  | antiquant_scale | antiquant_offset | per_token_scale | y       |
 | :-------: | :-----: | :-------: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Format1   | ND      | ND        | ND      | ND      | ND      | ND      | ND      | ND      | ND      |
@@ -73,11 +74,13 @@ The type support float16, bfloat16, int8, float32, int32.
 |           | int8    | int8      | int32   | float32 | float32 | float16 | float16 | float32 | float16 |
 |           | int8    | int8      | int32   | uint64  | float32 | float16 | float16 |    -    | int32   |
 - The following are the supported data formats and data types (for Atlas Inference Series Product):
+
 | Tensor    | x       | weight    | bias    | scale   | offset  | antiquant_scale | antiquant_offset | per_token_scale | y       |
 | :-------: | :-----: | :-------: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Format2   | ND      | FRACTAL_NZ| ND      | ND      | ND      | ND      | ND      | ND      | ND      |
 | Data Type | float16 | float16   | float16 | uint64  | float32 | float16 | float16 |    -    | float16 |
 - The following are the supported data formats and data types (for Ascend950PR/Ascend950DT):
+
 | Tensor    | x                         | weight                                  | bias                   | scale            | offset  | antiquant_scale | antiquant_offset | per_token_scale | y   |
 | :-------: | :-----------------------: | :-------------------------------------: | :--------------------: | :--------------: | :-----: | :---------: | :-----: | :---------: | :----------------------: |
 | Format1   | ND                        | ND                                      | ND                     | ND               | ND      | ND          | ND      | ND          | ND                       |
@@ -116,6 +119,7 @@ The type support float16, bfloat16, int8, float32, int32.
 |           | float8_e4m3fn             | float4_e2m1                             | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
 |           | int8                      | int32                                   | float32                | float32          | float32 | float16     | float16 | float32     | bfloat16/float16                |
 - The following are the supported data types and no quantization modes(for Ascend950PR/Ascend950DT):
+
 | x                         | weight                    | bias                   |   y                      | group_type |
 | :-----------------------: | :-----------------------: | :--------------------: | :----------------------: | :--------: |
 | float16                   | float16                   | float16/float32        | float16                  |-1/0/2      |
@@ -123,6 +127,7 @@ The type support float16, bfloat16, int8, float32, int32.
 | float32                   | float32                   | float32/float32        | float32                  |-1/0/2      |
 - The following are the supported data types and quantization modes(for Ascend950PR/Ascend950DT):
 pertensor-perchannel && pertensor-pertensor:
+
 | x type                    | weight type               | per_token_scale type | scale type       | group_type |
 | ------------------------- | ------------------------- | -------------------- | ---------------- | ---------- |
 | int8                      | int8                      | -                    | uint64/int64     | 0          |
@@ -132,23 +137,27 @@ pertensor-perchannel && pertensor-pertensor:
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | -/float32            | float32          | 0/2        |
 | hifloat8                  | hifloat8                  | -/float32            | float32          | 0/2        |
 pertoken-perchannel && pertoken-pertensor
+
 | x type                    | weight type               | per_token_scale type | scale type       | group_type |
 | ------------------------- | ------------------------- | -------------------- | ---------------- | ---------- |
 | int8                      | int8                      | float32              | float32/bfloat16 | 0          |
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | float32              | float32          | 0/2        |
 | hifloat8                  | hifloat8                  | float32              | float32          | 0/2        |
 pergroup-perblock(group_size_m = 1, group_size_k = 128, group_size_n = 128):
+
 | x type                    | weight type               | per_token_scale type | scale type       | group_type |
 | ------------------------- | ------------------------- | -------------------- | ---------------- | ---------- |
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | float32              | float32          | 0/2        |
 | hifloat8                  | hifloat8                  | float32              | float32          | 0/2        |
 mx quant(group_size_k = 32)：
+
 | x type                    | weight type               | per_token_scale type | scale type       | group_type |
 | ------------------------- | ------------------------- | -------------------- | ---------------- | ---------- |
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | float8_e8m0          | float8_e8m0      | 0/2        |
 | float4_e2m1               | float4_e2m1               | float8_e8m0          | float8_e8m0      | 0          |
 | float4_e2m1/float4_e1m2   | float4_e2m1/float4_e1m2(weight NZ)| float8_e8m0  | float8_e8m0      | 0          |
 perchannel：
+
 | x type                    | weight type                             | antiquant_scale type | antiquant_offset type | group_type |
 | ------------------------- | --------------------------------------- | -------------------- | --------------------- | ---------- |
 | float16                   | int8/float8_e4m3fn/float8_e5m2/hifloat8 | float16              | float16               | 0          |
@@ -156,16 +165,19 @@ perchannel：
 | float16                   | int4                                    | float16              | float16               | 0          |
 | bfloat16                  | int4                                    | bfloat16             | bfloat16              | 0          |
 pertoken-(perchannel & pergroup)：
+
 | x type                    | weight type               | per_token_scale type | scale type            | antiquant_scale type | group_type |
 | ------------------------- | ------------------------- | -------------------- | --------------------- | -------------------- | ---------- |
 | int8                      | int4/int32                | float32              | float32               | float16              | 0          |
 mx fake-quant(group_size_k = 32)：
+
 | x type                    | weight type                     | antiquant_scale type | antiquant_offset type | per_token_scale type | group_type |
 | ------------------------- | ------------------------------- | -------------------- | --------------------- | -------------------- | ---------- |
 | float16                   | float4_e2m1/float32             | float8_e8m0          | float16               |           -          | 0          |
 | bfloat16                  | float4_e2m1/float32             | float8_e8m0          | bfloat16              |           -          | 0          |
 | float8_e4m3fn             | float4_e2m1/float32             | float8_e8m0          | float16/bfloat16      | float8_e8m0          | 0          |
 - The following are the supported quantization modes, data types and shapes(for Ascend950PR/Ascend950DT):
+
 | quantization         | group_type | x type                             | scale type                      | x shape   | weight shape        | y shape   | scale shape                               | per_token_scale shape | bias shape |
 |----------------------|------------|------------------------------------|-------------------------------  |-----------|---------------------|-----------|-------------------------------------------|-----------------------|------------|
 | pertensor-pertensor  | 0          | int8                               | -/uint64/int64/float32/bfloat16 | [(M,K)]   | [(B,N,K)]/[(B,K,N)] | [(M,N)]   | -/[(B,)]/[(B,1)]                          | -                     | -/[(B,N)]  |
@@ -191,7 +203,7 @@ mx fake-quant(group_size_k = 32)：
 | mx                 | 0     | float4_e2m1/float4_e1m2 | float8_e8m0 | [(M,K)] | [(B,ceil(K/64),ceil(N/16),16,64)]/[(B,ceil(N/64),ceil(K/16),16,64)] | [(M,N)] | [(B,N,ceil(K/64),2)]/[(B,ceil(K/64),N,2)] | (M,ceil(K/64),2) | -/[(B,N)] |
 
 | quantization                      | group_type | x type        | weight type                        | per_token_scale type | scale type | antiquant_scale type | antiquant_offset type | x shape | weight shape                      | y shape | per_token_scale shape | scale shape | antiquant_scale shape       | antiquant_offset shape |
-|---------------------------------- |------------|---------------|------------------------------------|----------------------|------------|----------------------|-----------------------|---------------------------------------------|---------|-----------------------|-------------|-----------------------------|------------------------|---|
+|---------------------------------- |------------|---------------|------------------------------------|----------------------|------------|----------------------|-----------------------|---------|-----------------------------------|---------|-----------------------|-------------|-----------------------------|------------------------|
 | perchannel                        | 0          | float16       | int8                               | -                    | uint64     | float16              | float16               | [(M,K)] | [(B,N,K)]/[(B,K,N)]               | [(M,N)] | -                     | [(0)]       | [(B,N,)]                    | [(0)]/[(B,N,)]         |
 | perchannel                        | 0          | bfloat16      | int8                               | -                    | uint64     | bfloat16             | bfloat16              | [(M,K)] | [(B,N,K)]/[(B,K,N)]               | [(M,N)] | -                     | [(0)]       | [(B,N,)]                    | [(0)]/[(B,N,)]         |
 | perchannel                        | -1         | float16       | int8                               | -                    | uint64     | float16              | float16               | [(M1,K1),(M2,K2),...] | [(N1,K1),(N2,K2),...]/[(K1,N1),(K2,N2),...] | [(M1,N1),(M2,N2),...] | - | [(0)] | [(N1,),(N2,)...] | [(0)]/[(N1,),(N2,)...] |
@@ -259,6 +271,7 @@ Quantization is supported only when group_type is set to 0 or 2 for Ascend950PR/
 For example, "SMS" indicates single-tensor x, multi-tensor weight, and single-tensor y;
 "optional-dynamic inputs" stands for DYNAMIC_INPUT not needed in all scenarios, which includes bias/scale/antiquant_scale/antiquant_offset. Offset is not needed in all scenarios.
 The following are the supported shapes and constrains for different scenarios(for Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and Atlas Inference Series Product):
+
 | group_type | supported scenario | x shape | weight shape | y shape | optional-dynamic inputs shape if needed | group_list shape if passed | per_token_scale shape if passed |    constrains    |
 | :--------: | :----------------: | :-----: | :----------: | :-----: | :-------------------------------------: | :------------------------: | :-----------------------------: | :--------------: |
 | -1         |        MMM         | [(M1,K1),(M2,K2),...] | [(K1,N1),(K2,N2),...] | [(M1,N1),(M2,N2),...] | [(N1),(N2),...] | not support | not support |1) K1,K2,... < 65536.<br>2) N1,N2,... < 65536.<br>3) B <= 128.|
@@ -266,6 +279,7 @@ The following are the supported shapes and constrains for different scenarios(fo
 | 0          |        SMS         | [(M,K)] | [(K,N),(K,N),...] | [(M,N)] | [(N),(N),...] | (B) | not support |1) K < 65536.<br>2) N < 65536.<br>3) B <= 128.|
 | 0          |        MMS         | [(M1,K1),(M2,K2),...] | [(K1,N),(K2,N),...] | [(M,N)] | [(N),(N),...] | (B) | not support |1) K1,K2,... < 65536.<br>2) N < 65536.<br>3) B <= 128.|
 The following are the supported shapes and constrains for different scenarios(for Ascend950PR/Ascend950DT):
+
 | group_type | supported scenario | x shape | weight shape | y shape | optional-dynamic inputs shape if needed | group_list shape if passed | per_token_scale shape if passed |    constrains    |
 | :--------: | :----------------: | :-----: | :----------: | :-----: | :-------------------------------------: | :------------------------: | :-----------------------------: | :--------------: |
 | -1         |        MMM         | [(M1,K1),(M2,K2),...] | [(K1,N1),(K2,N2),...] | [(M1,N1),(M2,N2),...] | [(N1),(N2),...] | not support | not support |1) B <= 128.|
@@ -279,6 +293,7 @@ The constrains of inputs' shape in quantization(for Ascend950PR/Ascend950DT) can
 - When weight has format NZ, N axis should align to 32 bytes, i.e. if weight has data type int8 , N axis align to 32; if weight has data type float16 , N axis align to 16.
 - In the MXFP4 scenario, the constraint that k must be even and not equal 2. Under non-transposed weight, n must also be even.
 - The following are the supported group_type and constrains for different scenarios:
+
 | group_type | supported scenario |    constrains    |
 | :--------: | :----------------: | :--------------: |
 | -1         |        MMM         |1) tensors in x support dim num 2-6, tensors in weight support dim num 2, tensors in y should have the same dim num with tensor in x.<br>2) group_list must be passed as null.|
