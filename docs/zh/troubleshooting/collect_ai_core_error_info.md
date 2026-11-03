@@ -74,7 +74,7 @@
         msnpureport -f
 
         # 移动日志文件到aic_err_info目录
-        mv ${HOME}/ascend/report aic_err_info/
+        mv ${HOME}/ascend/report ${HOME}/aic_err_info/
         ```
 
     4. 将$\{HOME\}/aic\_err\_info目录下的信息移动到另一个目录下，目录名上可带上时间戳，便于按时间管理每一次收集的故障信息。

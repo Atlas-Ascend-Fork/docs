@@ -42,7 +42,9 @@
     while (runFlag) {
             // Notice: timeout 1000ms
             aclError ret = aclrtProcessReport(1000);
-            printf("aclrtProcessReport failed, ret=%d.\n", ret);
+            if (ret != ACL_SUCCESS) {
+                    printf("aclrtProcessReport failed, ret=%d.\n", ret);
+            }
     }
     ```
 
