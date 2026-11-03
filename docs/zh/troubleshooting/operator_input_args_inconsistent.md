@@ -31,7 +31,7 @@ args after  execute: [[0x124080042000, 0x124080022000, 0x0, 0x0, 0x0, 0x0, 0x0, 
 
 出现上面情况，参考以下方法处理：
 
-打开算子踩内存检测开关（参考下文描述），再通过asys复跑业务收集故障信息，通过[https://gitee.com/ascend网站](https://gitee.com/ascend)提交issue获取帮助。
+打开算子踩内存检测开关（参考下文描述），再通过asys复跑业务收集故障信息，通过[https://gitcode.com/cann](https://gitcode.com/cann)提交issue获取帮助。
 
 **推理场景**：执行ATC模型转换，通过--op\_debug\_config调测选项开启内存检测功能。
 
@@ -63,7 +63,7 @@ npu.open().as_default()
 op_debug_config = ccec_O0,ccec_g,oom
 ```
 
->**说明：** 
+>**说明：**
 >
 >- --op\_debug\_config调测选项的详细介绍请参考[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)。
 >- npu.global\_options\(\).op\_debug\_config配置项的详细介绍请参考[《TensorFlow 2.6.5模型迁移》](https://hiascend.com/document/redirect/canncommercial-tfmigr26)。

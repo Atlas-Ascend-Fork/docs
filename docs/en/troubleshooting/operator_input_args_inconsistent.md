@@ -31,7 +31,7 @@ Check the values of  **args before execute**  and  **args after execute**  in th
 
 If the preceding information is displayed, perform the following operations:
 
-Enable the memory corruption detection function of the operator \(for details, see the following description\), use the asys to rerun services to collect fault information, and use the  [https://gitee.com/ascend](https://gitee.com/ascend)  to submit an issue for help.
+Enable the memory corruption detection function of the operator \(for details, see the following description\), use the asys to rerun services to collect fault information, and use the  [https://gitcode.com/cann](https://gitcode.com/cann)  to submit an issue for help.
 
 **Inference scenario**: Perform ATC model conversion and enable the memory detection function by using the  **--op\_debug\_config**  debugging option.
 

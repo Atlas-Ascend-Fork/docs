@@ -5,7 +5,7 @@
 When the input stream is decoded by VDEC, the obtained decoded data is incorrect, causing artifacts, as shown in Figure 1. The log contains information similar to "decode error", "input stream error, can't decode, report to user", "num\_ref\_idx\_l0\_active\(30\) out of range\(0,16\)", "dvpp\_vdec\_vdm\_process failed", and "Chan 0 ErrRatio = 44".
 
 **Figure  1**  Video artifacts
-![](figures/video-artifacts.png "video-artifacts")
+![](figures/video_artifacts.png "video_artifacts")
 
 ## Possible Cause
 

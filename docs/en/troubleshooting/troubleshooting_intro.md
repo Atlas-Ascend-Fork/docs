@@ -5,7 +5,7 @@ This document provides self-service fault locating and troubleshooting methods b
 The troubleshooting process includes collecting the fault information, analyzing the fault cause, and rectifying the fault.  Figure 1 shows the troubleshooting process.
 
 **Figure  1**  Troubleshooting process
-![](figures/troubleshooting-process.png "troubleshooting-process")
+![](figures/troubleshooting_process.png "troubleshooting_process")
 
 - Collecting the fault information
 
