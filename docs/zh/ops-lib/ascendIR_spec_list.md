@@ -25,7 +25,3 @@ CANN算子是基于Ascend IR定义的算子，文档中所列出的算子仅适�
 <!-- npu="910" id3 -->
 [算子规格说明\(Atlas训练系列产品\)](ascendir-ops-list/atlas_train_ops_list/README.md)
 <!-- end id3 -->
-
-<!-- npu="IPV350" id6 -->
-算子规格说明\(IPV350\)
-<!-- end id6 -->

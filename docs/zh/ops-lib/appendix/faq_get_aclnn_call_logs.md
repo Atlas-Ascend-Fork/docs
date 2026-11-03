@@ -23,7 +23,7 @@
     通过aclGetRecentErrMsg接口获取aclnn接口调用过程中的异常信息，使用方法如下：
 
     ```cpp
-    printf(aclGetRecentErrMsg());
+    printf("%s", aclGetRecentErrMsg());
     ```
 
     打印错误信息样例如下：
