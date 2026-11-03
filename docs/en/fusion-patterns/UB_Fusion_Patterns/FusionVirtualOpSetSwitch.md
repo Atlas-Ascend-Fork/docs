@@ -9,7 +9,7 @@ This special fusion pattern is not written into `fusion_result.json` when it tak
 Compares the `_no_task` attribute of SplitD/SplitVD in the current graph `ge_onnx_****PreRunAfterOptimizeGraphBeforeBuild.pbtxt` with that in the previous graph `ge*.pbtxt`. A change from `0` to `1` means the pass has taken effect.
 
 >[!NOTE]
-> To generate a .pbtxt file, set the following environment variables before training or inference. For more information about environment variables, see [Environment Variables] <!-- (https://gitcode.com/cann/docs/blob/master/docs/en/env-vars/README.md). -->
+> To generate a .pbtxt file, set the following environment variables before training or inference. For more information about environment variables, see [Environment Variables](https://gitcode.com/cann/docs/blob/master/docs/en/env-vars/README.md).
 > 
 > - DUMP_GE_GRAPH=2 // Dumps the graph description of each phase in the entire process to a file. This environment variable specifies the amount of graph content to dump.
 > 
