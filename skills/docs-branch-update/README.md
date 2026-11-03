@@ -47,7 +47,7 @@ python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py [-d <目录|
 ## 工作流
 
 1. 在需要修改的版本分支上，按需求意图选择模式直接执行（只更新链接 / 只删除产品内容 / 两者都处理）；
-2. 查看输出的修改清单（分支映射、逐文件命中统计、链接替换前后对照、NPU 删除/改写统计）；
+2. 查看输出的修改清单（分支映射、逐文件命中统计、链接替换前后对照、NPU 删除/改写统计；update_links 修改完成后会自动对修改后的链接做在线有效性校验，404 无效链接会告警）；
 3. 复查后按需提交，必要时 `git checkout` 回退。改动文件较多时用范围级复查代替逐行人审：
    - `git diff --stat` 文件清单、增删行数与修改清单对账（不一致即有异常）；
    - 抽查代表文件的 `git diff` 明细；
@@ -63,7 +63,7 @@ python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py -d docs/zh/g
 
 ## 处理规则摘要
 
-- 链接更新（7 规则）：gitcode cann 仓 `master` -> 当前版本分支（`cann-samples`、`pypto-gym` 除外）；`cann/pypto-gym` 仓（无 beta 分支）`master` -> 上一个正式版本（beta 按分组规则，如 `9.3.0-beta.1` -> `9.2.0`）；gitcode Ascend 仓 `master` -> 映射 Ascend 分支（`9.X.0`->`26.X.0`、`9.X.0-beta.N`->`26.(X-1).0`，`Ascend/docs`、`Ascend/pytorch` 除外）；`Ascend/pytorch` -> CommonTerms 手册名称汇总表在线查询（懒加载，运行过程仅查询一次）；hiascend 三产品 `latest` -> `930beta1`/`2620`/`920`。
+- 链接更新（7 规则）：gitcode cann 仓 `master` -> 当前版本分支（仅匹配完整 `master` 分支段，`master-backup` 等前缀同名的其他分支不受影响；`cann-samples`、`pypto-gym` 除外）；`cann/pypto-gym` 仓（无 beta 分支）`master` -> 上一个正式版本（beta 按分组规则，如 `9.3.0-beta.1` -> `9.2.0`）；gitcode Ascend 仓 `master` -> 映射 Ascend 分支（`9.X.0`->`26.X.0`、`9.X.0-beta.N`->`26.(X-1).0`，`Ascend/docs`、`Ascend/pytorch` 除外）；`Ascend/pytorch` -> CommonTerms 手册名称汇总表在线查询（懒加载，运行过程仅查询一次）；hiascend 三产品 `latest` -> `930beta1`/`2620`/`920`。
 - 产品内容删除：单一类型块整删（id 配对、行首前缀整行、CRLF 兼容）、混合标签列表移除目标类型、清空即删、嵌套子块删除保留外层；接缝处 3+ 连续 `<br>` 整删、表格尾 `<br>\|` 收敛、3+ 空行收敛（均局部生效，不误删与标签无关的既有格式）。
 
 完整规则、分支映射表与约束说明见 [SKILL.md](./SKILL.md)。
@@ -72,6 +72,7 @@ python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py -d docs/zh/g
 
 - Python 3（仅标准库），执行环境需可运行 `git`（识别仓库根目录与当前分支）；
 - `update_links.py` 的 `Ascend/pytorch` 仓分支映射需在线访问 gitcode.com（懒加载，仅当目标中存在该类链接时才查询），网络不可用时该类链接保持 `master` 并告警；
+- `update_links.py` 修改完成后自动在线校验修改后链接的有效性（gitcode 链接校验分支与路径存在性；hiascend 为 SPA 站点跳过校验），网络不可用时校验结果报告为不可达；并发校验内置 WAF 限流防护（全局限速约 ≤10 req/s，429 按 Retry-After/指数退避重试、耗尽报“限流”，403 延迟重试一次），限流与不可达区分避免误报；
 - `remove_npu_tags.py` 的缺省标签范围需在线访问 gitcode.com 获取文档写作规范"分支文档维护要求-产品标签使用要求"（仅在未显式指定 `--npu` 时查询一次），网络不可用时退出并提示显式指定 `--npu`；
 - 全程字节级处理，保持文件原有编码（UTF-8/GBK）与行尾（LF/CRLF）不变；
 - 当前分支为 `master`/`main`/`HEAD` 时链接更新拒绝执行（更新无意义），可切换版本分支或 `-b` 显式指定。

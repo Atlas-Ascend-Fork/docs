@@ -78,6 +78,10 @@ python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py
 `Ascend/pytorch` 的分支映射需在线访问 gitcode.com（懒加载，仅当目标中存在该类链接时才查询，
 整个运行过程只查询一次），网络不可用时保持 `master` 并告警。
 
+仅替换**完整的 `master` 分支段**：`master` 之后不能是字母、数字、下划线、点或连字符
+（`/`、`?`、`#`、`)`、空格等任意非分支字符或链接结尾均可），
+`master-backup`、`masterDocs` 等以 master 为前缀的其他分支链接不受影响。
+
 ### 产品内容删除（remove_npu_tags.py）
 
 **待删除标签缺省范围**：从 cann/docs 仓文档写作规范 `specification/document_writing_specs.md`
@@ -108,3 +112,13 @@ python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py
 
 两个脚本各自输出所属修改项的清单：分支与版本号映射（链接脚本）、逐文件命中统计、
 链接替换前后对照明细（去重）、NPU 标签列表改写明细、汇总与告警，可用 `--output` 落盘留档。
+
+**修改后链接有效性校验**（update_links.py 修改完成后自动执行，结果追加到清单）：
+
+- 对本次修改产生的所有唯一链接（去重后）做在线校验，gitcode.com 链接通过 GitCode API
+  校验分支与路径存在性（有路径用 contents API、仓库根链接用 branches API），
+  按 OK / 404 / 格式异常 / 限流 / 不可达 / 跳过分级报告，404 链接输出告警请人工核查；
+- 并发校验内置 WAF 突发限流防护：API 请求全局限速（相邻请求起始间隔 ≥ 0.1s，约 ≤10 req/s），
+  429 优先按 Retry-After 头等待、否则指数退避（1s/2s/4s + 抖动）重试，耗尽报“限流”并告警，
+  403（WAF 拦截页常见）延迟重试一次；限流与不可达区分，避免误报；
+- www.hiascend.com 为 SPA 站点，HTTP 状态不反映内容存在性，跳过校验。

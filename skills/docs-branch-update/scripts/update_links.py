@@ -21,23 +21,29 @@ import argparse
 import base64
 import json
 import os
+import random
 import re
 import subprocess
 import sys
+import threading
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 
 # 1. gitcode.com/cann 组织下仓库的 master -> 当前版本分支 (cann/cann-samples、cann/pypto-gym 仓库除外)
-CANN_LINK_PATTERN = re.compile(rb'(gitcode\.com/cann/(?!cann-samples/)(?!pypto-gym/)[\w.-]+/(?:blob|tree)/)master')
+#    master 后加 (?![-\w.]) 边界: 仅匹配完整分支段, master-backup/masterDocs 等其他分支不受影响
+CANN_LINK_PATTERN = re.compile(rb'(gitcode\.com/cann/(?!cann-samples/)(?!pypto-gym/)[\w.-]+/(?:blob|tree)/)master(?![\w.-])')
 # 2. gitcode.com/cann/pypto-gym 仓库的 master -> 当前分支映射的上一个正式版本
 #    (该仓无 beta 分支, beta 分支按分组规则映射到上一个 9.x.0, 如 9.3.0-beta.1 -> 9.2.0)
-PYTO_GYM_PATTERN = re.compile(rb'(gitcode\.com/cann/pypto-gym/(?:blob|tree)/)master')
+PYTO_GYM_PATTERN = re.compile(rb'(gitcode\.com/cann/pypto-gym/(?:blob|tree)/)master(?![\w.-])')
 # 3. gitcode.com/Ascend 组织下仓库的 master -> 当前 CANN 分支映射的 Ascend 分支
 #    (Ascend/docs、Ascend/pytorch 仓库除外)
-ASCEND_LINK_PATTERN = re.compile(rb'(gitcode\.com/Ascend/(?!docs/)(?!pytorch/)[\w.-]+/(?:blob|tree)/)master')
+ASCEND_LINK_PATTERN = re.compile(rb'(gitcode\.com/Ascend/(?!docs/)(?!pytorch/)[\w.-]+/(?:blob|tree)/)master(?![\w.-])')
 # 4. gitcode.com/Ascend/pytorch 仓库的 master -> CommonTerms 手册名称汇总表第三列第一个
 #    pytorch 链接的分支号 (懒加载, 仅当目标中存在该类链接时才在线查询)
-PYTORCH_CODE_PATTERN = re.compile(rb'(gitcode\.com/Ascend/pytorch/(?:blob|tree)/)master')
+PYTORCH_CODE_PATTERN = re.compile(rb'(gitcode\.com/Ascend/pytorch/(?:blob|tree)/)master(?![\w.-])')
 # 5. www.hiascend.com CANN 社区版: latest -> 分支名删除 '.' 与 '-'
 HIAS_CANN_PATTERN = re.compile(rb'(www\.hiascend\.com/document/detail/zh/CANNCommunityEdition/)latest(/)')
 # 6. www.hiascend.com Pytorch: latest -> Ascend 分支删除 '.'
@@ -216,7 +222,7 @@ def process_file(path, branch, link_rules, ascend_branch, warnings):
     with open(path, 'rb') as handle:
         original = handle.read()
     data = original
-    stats = {'links': {}, 'link_pairs': {}}
+    stats = {'links': {}, 'link_pairs': {}, 'checked_urls': set()}
 
     for name, pattern, repl in link_rules:
         if not pattern.search(data):
@@ -232,14 +238,179 @@ def process_file(path, branch, link_rules, ascend_branch, warnings):
             continue
         count = 0
         for m in pattern.finditer(data):
-            key = (name, m.group(0), m.expand(repl))
+            after = m.expand(repl)
+            key = (name, m.group(0), after)
             stats['link_pairs'][key] = stats['link_pairs'].get(key, 0) + 1
+            stats['checked_urls'].add(extract_full_url(data, m.start(), m.end(), after))
             count += 1
         if count:
             stats['links'][name] = stats['links'].get(name, 0) + count
             data = pattern.sub(repl, data)
 
     return data, data != original, stats
+
+
+# =========================================================================================================
+# 修改后链接有效性校验
+# =========================================================================================================
+# URL 向前识别的 scheme 前缀
+URL_SCHEMES = (b'https://', b'http://')
+# URL 终止字符: 空白 ) " ' < > | ` ] 以及非 ASCII 字节
+URL_STOP_BYTES = b' \t\r\n)"\'<>|`]'
+
+
+def extract_full_url(data, match_start, match_end, replacement):
+    """提取匹配所在的完整 URL, 返回替换后的完整 URL (bytes)。
+
+    自匹配处向后扫描至链接终止字符, 向前识别 https:// 或 http:// 前缀;
+    保留普通路径、查询串 (?...)、片段 (#...) 及 Markdown/HTML 包装的完整形态。"""
+    end = match_end
+    while end < len(data):
+        byte = data[end]
+        if byte in URL_STOP_BYTES or byte > 126 or byte < 33:
+            break
+        end += 1
+    start = match_start
+    for scheme in URL_SCHEMES:
+        pos = match_start - len(scheme)
+        if pos >= 0 and data[pos:match_start] == scheme:
+            start = pos
+            break
+    return data[start:match_start] + replacement + data[match_end:end]
+
+
+GITCODE_URL_RE = re.compile(
+    r'https?://gitcode\.com/([\w.-]+)/([\w.-]+)/(?:blob|tree)/([^/?#\s]+)(?:[/?#]\S*)?')
+
+# ---- WAF 突发限流防护: 全局限速 + 429/403 退避重试 ----
+# 相邻请求起始的最小间隔 (秒), 全局生效, 约束 API 请求总速率不超过 ~10 req/s
+REQUEST_MIN_INTERVAL = 0.1
+# 429 最多重试次数, 退避时长为 1s/2s/4s 再加随机抖动
+RATE_LIMIT_RETRIES = 3
+# Retry-After 响应头的等待上限 (秒), 防止异常大的响应值阻塞整个校验
+RATE_LIMIT_MAX_SLEEP = 30.0
+
+_throttle_lock = threading.Lock()
+_throttle_next_start = [0.0]
+
+
+def throttle_request():
+    """全局限速: 锁内预约本请求的起始时刻, 保证相邻请求起始间隔不小于
+    REQUEST_MIN_INTERVAL; 等待在锁外 sleep, 不阻塞其他线程预约。"""
+    with _throttle_lock:
+        now = time.monotonic()
+        start = max(now, _throttle_next_start[0] + REQUEST_MIN_INTERVAL)
+        _throttle_next_start[0] = start
+    if start > now:
+        time.sleep(start - now)
+
+
+def retry_after_seconds(error):
+    """解析 429 响应的 Retry-After 头 (仅支持秒数值): 无头或无法解析返回 None,
+    交由指数退避兜底; 解析结果按 RATE_LIMIT_MAX_SLEEP 封顶。"""
+    if not error.headers:
+        return None
+    try:
+        return max(0.0, min(float(error.headers.get('Retry-After', '')),
+                            RATE_LIMIT_MAX_SLEEP))
+    except ValueError:
+        return None
+
+
+def check_link(url):
+    """校验单个修改后链接的有效性, 返回 (状态, 说明)。
+
+    gitcode.com 链接通过 GitCode API 检查分支与路径是否存在 (200 -> 有效,
+    404 -> 分支或路径不存在): 有路径时用 contents API, 无路径 (仓库根) 时
+    contents API 不校验 ref, 改用 branches API 校验分支存在性;
+    www.hiascend.com 为 SPA 站点, HTTP 状态不反映内容存在性, 跳过校验。
+    无 scheme 前缀的 gitcode.com / www.hiascend.com 链接 (替换与 URL 提取均
+    不强制 scheme), 补 https:// 前缀后按上述规则正常校验/跳过。
+
+    每次 API 请求 (含重试) 均先经全局限速; 429 优先按 Retry-After 头等待,
+    否则指数退避 (1s/2s/4s + 抖动) 重试, 耗尽报 '限流'; 403 (WAF 拦截页
+    常见) 延迟重试一次, 仍失败按 '不可达' 处理。"""
+    text = url.decode('utf-8', errors='replace')
+    if text.startswith('gitcode.com/') or text.startswith('www.hiascend.com/'):
+        text = 'https://' + text
+    if text.startswith('https://www.hiascend.com') or text.startswith('http://www.hiascend.com'):
+        return ('跳过', 'hiascend 为 SPA 站点, HTTP 状态不反映内容存在性')
+    match = GITCODE_URL_RE.match(text)
+    if not match:
+        return ('格式异常', '链接格式无法解析')
+    org, repo, branch = match.group(1), match.group(2), match.group(3)
+    rest = text[match.end(3):]
+    for sep in ('#', '?'):
+        rest = rest.split(sep, 1)[0]
+    path = rest.lstrip('/')
+    if path:
+        api = ('https://gitcode.com/api/v5/repos/{0}/{1}/contents/{2}?ref={3}'.format(
+            org, repo, urllib.parse.quote(path, safe='/%'), branch))
+    else:
+        api = 'https://gitcode.com/api/v5/repos/{0}/{1}/branches/{2}'.format(org, repo, branch)
+
+    rate_limit_retries = 0
+    forbidden_retried = False
+    while True:
+        try:
+            request = urllib.request.Request(api, headers={'User-Agent': 'Mozilla/5.0'})
+            throttle_request()
+            response = urllib.request.urlopen(request, timeout=10)
+            response.read(256)
+            response.close()
+            return ('OK', '')
+        except urllib.error.HTTPError as error:
+            if error.code == 404:
+                return ('404', '分支或路径不存在')
+            if error.code == 429:
+                if rate_limit_retries >= RATE_LIMIT_RETRIES:
+                    return ('限流', '重试 {0} 次后仍 HTTP 429'.format(rate_limit_retries))
+                delay = retry_after_seconds(error)
+                if delay is None:
+                    delay = (1 << rate_limit_retries) + random.uniform(0, 0.5)
+                time.sleep(delay)
+                rate_limit_retries += 1
+                continue
+            if error.code == 403 and not forbidden_retried:
+                forbidden_retried = True
+                time.sleep(1.0 + random.uniform(0, 0.5))
+                continue
+            return ('不可达', 'HTTP {0}'.format(error.code))
+        except Exception as error:
+            return ('不可达', str(error)[:60])
+
+
+def check_all_links(urls):
+    """并发校验全部唯一链接 (全局限速 + 限流退避重试), 返回 {url: (状态, 说明)},
+    按链接排序保证输出稳定。"""
+    results = {}
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        future_map = {url: executor.submit(check_link, url) for url in urls}
+        for url in sorted(urls):
+            results[url] = future_map[url].result()
+    return results
+
+
+def render_link_check(results):
+    """渲染链接有效性校验段落, 问题链接在前。"""
+    if not results:
+        return []
+    order = {'404': 0, '格式异常': 1, '限流': 2, '不可达': 3, '跳过': 4, 'OK': 5}
+    lines = ['', '---- 链接有效性校验 ({0} 个唯一链接) ----'.format(len(results))]
+    sorted_results = sorted(results.items(), key=lambda item: (order.get(item[1][0], 9), item[0]))
+    for url, (status, detail) in sorted_results:
+        suffix = ' ({0})'.format(detail) if detail else ''
+        lines.append('[{0}] {1}{2}'.format(status, url.decode('utf-8', errors='replace'), suffix))
+    counts = {}
+    for _, (status, _) in results.items():
+        counts[status] = counts.get(status, 0) + 1
+    lines.append('汇总: ' + ', '.join('{0} {1}'.format(k, v) for k, v in sorted(counts.items())))
+    if '404' in counts:
+        lines.append('[WARN] 存在无效链接 (404), 请人工核查分支或路径是否正确')
+    if '限流' in counts:
+        lines.append('[WARN] {0} 个链接因接口限流未能完成校验, 建议稍后重跑复查'
+                     .format(counts['限流']))
+    return lines
 
 
 def render_manifest(target, branch, ascend_branch, file_stats, warnings):
@@ -347,6 +518,16 @@ def main():
                 handle.write(new_data)
 
     manifest = render_manifest(target, branch, ascend_branch, file_stats, warnings)
+
+    # 修改完成后, 对本次修改产生的所有唯一链接做在线有效性校验
+    checked_urls = set()
+    for _, stats in file_stats:
+        checked_urls.update(stats['checked_urls'])
+    if checked_urls:
+        print('[INFO] 正在校验 {0} 个修改后链接的有效性...'.format(len(checked_urls)),
+              file=sys.stderr)
+        results = check_all_links(checked_urls)
+        manifest += '\n'.join(render_link_check(results))
     print(manifest)
 
     if args.output:
