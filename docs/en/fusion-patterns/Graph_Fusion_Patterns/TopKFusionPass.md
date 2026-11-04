@@ -46,4 +46,4 @@ Scenario 3: The TopK/TopKV2 operator is split into the combination of SegmentSor
 
 ## Applicable Products
 
-The validity of this pass depends on whether the running product supports the TopK/TopKV2 operator type. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
+The validity of this pass depends on whether the running product supports the TopK/TopKV2 operator type. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/en-sg/document/detail/en/CANNCommunityEdition/920/API/aolapi/operatorlist_00094.html) in the operator library.
