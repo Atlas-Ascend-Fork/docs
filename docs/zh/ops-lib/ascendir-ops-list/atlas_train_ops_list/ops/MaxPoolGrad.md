@@ -25,7 +25,7 @@ Computes gradients of the maxpooling function .
 
 ## Outputs
 
-y: A mutable tensor. Has the same shape, type and format as "x1" . 
+y: A mutable tensor. Has the same shape, type and format as "x1" .
 
 ## Attributes
 
@@ -36,7 +36,7 @@ window for each dimension of the input tensor.
 - padding: A required string, specifying the type of padding algorithm
 to use.
 - data_format: An optional string, Specify the data format of the input and
-output data. With the default format "NHWC" . 
+output data. With the default format "NHWC" .
 
 ## Data Types
 
@@ -50,7 +50,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - ksize is limited by buffer with full tiling.
-- "ksize" is in the range [1, 255]. "strides" is in the range [1, 63](valid situation: tik branch)
+- "ksize" is in the range [1, 255]. "strides" is in the range [1, 63] (valid situation: tik branch)
 - In static situation, when atomic_flag is True, the output y only support float16.
 - Atlas Inference Series Product and Atlas Training Series Product only support float16 input.
 - Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and
