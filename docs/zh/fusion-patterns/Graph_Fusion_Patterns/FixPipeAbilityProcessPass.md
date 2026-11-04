@@ -12,7 +12,7 @@
 
 该融合规则不可关闭。
 
-该Pass的有效性依赖于运行的产品是否支持相应算子类型，具体信息请参考《算子库》中的“[Ascend IR算子规格说明](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html)”章节。
+该Pass的有效性依赖于运行的产品是否支持相应算子类型，具体信息请参考《算子库》中的“[Ascend IR算子规格说明](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/aolapi/docs/zh/ops-lib/ascendIR_spec_intro.md)”章节。
 
 ## 支持的型号
 

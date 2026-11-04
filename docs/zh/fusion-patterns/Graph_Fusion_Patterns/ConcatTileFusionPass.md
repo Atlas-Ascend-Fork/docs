@@ -28,7 +28,7 @@
 
     vector\_calculate\_size和vector\_core\_num的查看方法如下。
 
-    查看“$\{INSTALL\_DIR\}/$\{arch\}/data/platform\_config”文件夹中的相应平台信息文件，分别搜索关键字“vec\_calc\_size”或“vector\_core\_cnt”以获取vector\_calculate\_size和vector\_core\_num的值。$\{INSTALL\_DIR\}请替换为CANN软件安装后文件存储路径。以root用户安装为例，安装后文件默认存储路径为：/usr/local/Ascend/cann。
+    查看`${INSTALL_DIR}/${arch}/data/platform_config`文件夹中的相应平台信息文件，分别搜索关键字`vec_calc_size`或`vector_core_cnt`以获取`vector_calculate_size`和`vector_core_num`的值。`${INSTALL_DIR}`请替换为CANN软件安装后文件存储路径。以root用户安装为例，安装后文件默认存储路径为：/usr/local/Ascend/cann。
 
 ## 支持的型号
 

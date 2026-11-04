@@ -12,7 +12,7 @@ Adds the `support_fixpipe_ability` attribute to a Fixpipe node. This attribute h
 
 This fusion pattern cannot be disabled.
 
-The validity of this pass depends on whether the running product supports the corresponding operator type. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
+The validity of this pass depends on whether the running product supports the corresponding operator type. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/en-sg/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
 
 ## Applicable Products
 

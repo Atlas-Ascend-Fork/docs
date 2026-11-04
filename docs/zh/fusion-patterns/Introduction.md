@@ -7,7 +7,7 @@
 系统内置了一些图融合和UB融合规则，均为默认开启且能关闭的（如有其他情况，会特殊说明）。当前文档仅对这部分融合规则进行介绍。
 
 >[!NOTE] 说明
->本文档涉及到的算子具体信息请参考《算子库》中的“[Ascend IR算子规格说明](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html)”章节。
+>本文档涉及到的算子具体信息请参考《算子库》中的“[Ascend IR算子规格说明](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/aolapi/docs/zh/ops-lib/ascendIR_spec_intro.md)”章节。
 
 ## 图融合
 

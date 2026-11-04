@@ -9,7 +9,7 @@ Graph fusion is a key method to improve network performance.
 The system has a range of built-in graph fusion and UB fusion patterns, which are enabled by default and can be disabled. (If any pattern is disabled by default, special description will be provided.) This document describes only part of the fusion patterns.
 
 >[!NOTE]
->For details about the operators involved in this document, see [Ascend IR Operator Specifications](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
+>For details about the operators involved in this document, see [Ascend IR Operator Specifications](https://www.hiascend.com/en-sg/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
 
 ## Graph Fusion
 
