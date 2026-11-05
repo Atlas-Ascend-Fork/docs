@@ -1,85 +1,85 @@
-# Operator Specifications (Atlas A2 Products)
+# Operator Specifications (Atlas A2 products)
 
-文档中所列出的算子仅适用用当前芯片版本，如果原型中有算子不在该手册中，则说明当前芯片版本不支持该算子。
+The operators listed in the document apply only to the current chip version. If an operator is not included in the document, the current chip version does not support the operator.
 
-## 文档说明
+## Document Description
 
-该文档通过头文件注释提取生成，当算子接口注释中带有@par Restrictions字段时，标识该接口不稳定或处于实验性质，不推荐使用。本文档仅生成正式发布接口。
+This document is generated based on the comments in the header file. If the comments of an operator interface contain the @par Restrictions field, the interface is unstable or experimental and not recommended. This document contains only interfaces that are officially released.
 
-## 整体约束
+## Constraints
 
-- HIFLOAT8、FLOAT8\_E5M2、FLOAT8\_E4M3FN、FLOAT8\_E8M0、FLOAT6\_E3M2、FLOAT6\_E2M3、FLOAT4\_E2M1、FLOAT4\_E1M2在当前产品型号不支持。
+- HIFLOAT8, FLOAT8_E5M2, FLOAT8_E4M3FN, FLOAT8_E8M0, FLOAT6_E3M2, FLOAT6_E2M3, FLOAT4_E2M1, and FLOAT4_E1M2 are not supported by the current product model.
 
-- Atlas A2系列产品不支持Caffe框架。
+- Atlas A2 products do not support the Caffe framework.
 
-- DynamicRNN、DynamicGRUV2、BNInference这三个算子的实现公式请点击[Link](https://gitee.com/ascend/modelzoo/wikis/%E5%8E%86%E5%8F%B2%E6%95%99%E7%A8%8B%E5%BD%92%E6%A1%A3/%E6%98%87%E8%85%BE%E4%BC%97%E6%99%BA/CANN%E5%86%85%E7%BD%AE%E7%AE%97%E5%AD%90%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%8F%82%E8%80%83/BNInference)查看。
+- For the implementation formulas of the DynamicRNN, DynamicGRUV2, and BNInference operators, click [Link](https://gitee.com/ascend/modelzoo/wikis/历史教程归档/昇腾众智/CANN内置算子数学公式参考/BNInference).
 
-- MatMul、MatMulV2、BatchMatmul、BatchMatMulV2算子，在Atlas A2系列产品上不支持INT32数据类型。
+- MatMul, MatMulV2, BatchMatmul, and BatchMatMulV2 operators do not support the INT32 data type on the Atlas A2 products.
 
-- 如下算子groups属性支持最大取值范围为65535：
+- The following operators support a maximum value of 65535 for the groups attribute:
 
-  TransData、Deconvolution、Conv2D、Conv2DTranspose、Conv2DBackpropInput、Conv2dBackpropFilter、Conv3D、Conv3DTranspose、Conv3DBackpropInput、Conv3DBackpropFilter、DeformableConv2D、Correlation。
+  TransData, Deconvolution, Conv2D, Conv2DTranspose, Conv2DBackpropInput, Conv2dBackpropFilter, Conv3D, Conv3DTranspose, Conv3DBackpropInput, Conv3DBackpropFilter, DeformableConv2D, and Correlation
 
-- 如下算子已废弃支持DVPP（Digital Visual Preprocessing）引擎：
+- The following operators do not support the Digital Visual Preprocessing (DVPP) engine:
 
-  Crop、CropAndResize、DecodeAndCropJpeg、DecodeJpeg、PadV3D、Resize、ResizeV2、ResizeBicubic、ResizeBilinearV2、ResizeNearestNeighborV2、ReverseV2、WarpPerspective    、WarpAffineV2、AdjustContrast、AdjustHue、AdjustSaturation。
+  Crop, CropAndResize, DecodeAndCropJpeg, DecodeJpeg, PadV3D, Resize, ResizeV2, ResizeBicubic, ResizeBilinearV2, ResizeNearestNeighborV2, ReverseV2, WarpPerspective, WarpAffineV2, AdjustContrast, AdjustHue, and AdjustSaturation
 
-- Sin算子约束：
+- Sin operator constraints:
 
-  针对Atlas A2系列产品，支持高精度和高性能两种模式，不同模式下的约束为：
+  For Atlas A2 products, the high-precision and high-performance modes are supported. The constraints in different modes are as follows:
 
-  - 高精度模式，由于硬件限制，FLOAT32、FLOAT16、BFLOAT16类型的输入数据，范围为\[-13493037704, 13493037704\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
-  - 高性能模式，由于硬件限制，FLOAT32、FLOAT16、BFLOAT16类型的输入数据，范围为\[-10^7, 10^7\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
+  - In high-precision mode, due to hardware restrictions, the operator only guarantees the precision of FLOAT32, FLOAT16, and BFLOAT16 inputs within the range of [–13493037704, 13493037704]. If the input data is beyond this range, the precision cannot be guaranteed. In this case, use the CPU for computation.
+  - In high-performance mode, due to hardware restrictions, the operator only guarantees the precision of FLOAT32, FLOAT16, and BFLOAT16 inputs within the range of [-10^7, 10^7]. If the input data is beyond this range, the precision cannot be guaranteed. In this case, use the CPU for computation.
 
-- Cos算子约束：
+- Cos operator constraints:
 
-  针对Atlas A2系列产品，支持高精度和高性能两种模式，不同模式下的约束为：
+  For Atlas A2 products, the high-precision and high-performance modes are supported. The constraints in different modes are as follows:
 
-  - 高精度模式，由于硬件限制，FLOAT32、FLOAT16、BFLOAT16类型的输入数据，范围为\[-13493037704, 13493037704\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
-  - 高性能模式，由于硬件限制，FLOAT32、FLOAT16、BFLOAT16类型的输入数据，范围为\[-10^7, 10^7\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
+  - In high-precision mode, due to hardware restrictions, the operator only guarantees the precision of FLOAT32, FLOAT16, and BFLOAT16 inputs within the range of [–13493037704, 13493037704]. If the input data is beyond this range, the precision cannot be guaranteed. In this case, use the CPU for computation.
+  - In high-performance mode, due to hardware restrictions, the operator only guarantees the precision of FLOAT32, FLOAT16, and BFLOAT16 inputs within the range of [-10^7, 10^7]. If the input data is beyond this range, the precision cannot be guaranteed. In this case, use the CPU for computation.
 
-- Tan算子约束：
+- Tan operator constraints:
 
-  由于硬件限制，FLOAT32、BFLOAT16、FLOAT16、INT32、INT64数据类型的输入数据范围为\[-65504,65504\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
+  Due to hardware restrictions, the operator only guarantees the precision of FLOAT32, BFLOAT16, FLOAT16, INT32, and INT64 inputs within the range of [–65504, 65504]. If the input data is beyond this range, the precision cannot be guaranteed. In this case, use the CPU for computation.
 
-- Pow算子约束：
+- Pow operator constraints:
 
-  INT32类型的输入数据，超过下表所列范围时，调用Pow算子会超时：
+  If the input data of the INT32 type exceeds the range listed in the following table, calling the Pow operator will time out.
 
   <table><tbody><tr id="row20671102654120"><td class="cellrowborder" valign="top" width="43.9%"><p id="p567111268418"><a name="p567111268418"></a><a name="p567111268418"></a>Shape</p>
   </td>
   <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p556912379411"><a name="p556912379411"></a><a name="p556912379411"></a>Exponent value</p>
   </td>
   </tr>
-  <tr id="row1671182664116"><td class="cellrowborder" valign="top" width="43.9%"><p id="p15224573441"><a name="p15224573441"></a><a name="p15224573441"></a><=1000000(十万）</p>
+  <tr id="row1671182664116"><td class="cellrowborder" valign="top" width="43.9%"><p id="p15224573441"><a name="p15224573441"></a><a name="p15224573441"></a><=1000000</p>
   </td>
-  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p467115264418"><a name="p467115264418"></a><a name="p467115264418"></a>-20000000~20000000（两亿）</p>
-  </td>
-  </tr>
-  <tr id="row1674154114318"><td class="cellrowborder" valign="top" width="43.9%"><p id="p2067435474316"><a name="p2067435474316"></a><a name="p2067435474316"></a><=1000000(百万）</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p136747541434"><a name="p136747541434"></a><a name="p136747541434"></a>-20000000~20000000（两千万）</p>
+  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p467115264418"><a name="p467115264418"></a><a name="p467115264418"></a>-20000000 to 20000000</p>
   </td>
   </tr>
-  <tr id="row17395715438"><td class="cellrowborder" valign="top" width="43.9%"><p id="p441657184313"><a name="p441657184313"></a><a name="p441657184313"></a><=10000000(千万)</p>
+  <tr id="row1674154114318"><td class="cellrowborder" valign="top" width="43.9%"><p id="p2067435474316"><a name="p2067435474316"></a><a name="p2067435474316"></a><=1000000</p>
   </td>
-  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p341457204313"><a name="p341457204313"></a><a name="p341457204313"></a>-2000000~2000000（两百万）</p>
-  </td>
-  </tr>
-  <tr id="row31314591436"><td class="cellrowborder" valign="top" width="43.9%"><p id="p61345915432"><a name="p61345915432"></a><a name="p61345915432"></a><=100000000(亿)</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p8131159204315"><a name="p8131159204315"></a><a name="p8131159204315"></a>-200000~200000（二十万）</p>
+  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p136747541434"><a name="p136747541434"></a><a name="p136747541434"></a>-20000000 to 20000000</p>
   </td>
   </tr>
-  <tr id="row13960124194420"><td class="cellrowborder" valign="top" width="43.9%"><p id="p2960184124413"><a name="p2960184124413"></a><a name="p2960184124413"></a><=1000000000(十亿)</p>
+  <tr id="row17395715438"><td class="cellrowborder" valign="top" width="43.9%"><p id="p441657184313"><a name="p441657184313"></a><a name="p441657184313"></a><=10000000</p>
   </td>
-  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p7960174113442"><a name="p7960174113442"></a><a name="p7960174113442"></a>-20000 ~ 20000（两万）</p>
+  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p341457204313"><a name="p341457204313"></a><a name="p341457204313"></a>-2000000 to 2000000</p>
+  </td>
+  </tr>
+  <tr id="row31314591436"><td class="cellrowborder" valign="top" width="43.9%"><p id="p61345915432"><a name="p61345915432"></a><a name="p61345915432"></a><=100000000</p>
+  </td>
+  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p8131159204315"><a name="p8131159204315"></a><a name="p8131159204315"></a>-200000 to 200000</p>
+  </td>
+  </tr>
+  <tr id="row13960124194420"><td class="cellrowborder" valign="top" width="43.9%"><p id="p2960184124413"><a name="p2960184124413"></a><a name="p2960184124413"></a><=1000000000</p>
+  </td>
+  <td class="cellrowborder" valign="top" width="56.10000000000001%"><p id="p7960174113442"><a name="p7960174113442"></a><a name="p7960174113442"></a>-20000 to 20000</p>
   </td>
   </tr>
   </tbody>
   </table>
 
-- Conv2D和DepthwiseConv2D算子，在Atlas A2系列产品中，支持的数据类型如下：
+- Conv2D and DepthwiseConv2D operators support the following data types in the Atlas A2 products.
 
   <table><tbody><tr id="row59917511449"><td class="cellrowborder" valign="top" width="7.519248075192481%"><p id="p1840912812349"><a name="p1840912812349"></a><a name="p1840912812349"></a>Tensor</p>
   </td>
@@ -151,7 +151,7 @@
   </tbody>
   </table>
 
-## 算子列表
+## Operator list
 
 | Operator | Source Header |
 |---|---|

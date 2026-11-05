@@ -1,66 +1,66 @@
-# Operator Specifications (Ascend 950PR&950DT Products)
+# Operator Specifications (Ascend 950PR&950DT products)
 
-文档中所列出的算子仅适用用当前芯片版本，如果原型中有算子不在该手册中，则说明当前芯片版本不支持该算子。
+The operators listed in the document apply only to the current chip version. If an operator is not included in the document, the current chip version does not support the operator.
 
-## 文档说明
+## Document Description
 
-该文档通过头文件注释提取生成，当算子接口注释中带有@par Restrictions字段时，标识该接口不稳定或处于实验性质，不推荐使用。本文档仅生成正式发布接口。
+This document is generated based on the comments in the header file. If the comments of an operator interface contain the @par Restrictions field, the interface is unstable or experimental and not recommended. This document contains only interfaces that are officially released.
 
-## 整体约束
+## Constraints
 
-- Ascend 950PR&950DT系列产品不支持Caffe框架。
+- Ascend 950PR&950DT products don't support the Caffe framework.
 
-- DynamicRNN、DynamicGRUV2、BNInference三个算子的实现公式请点击[Link](https://gitee.com/ascend/modelzoo/wikis/%E5%8E%86%E5%8F%B2%E6%95%99%E7%A8%8B%E5%BD%92%E6%A1%A3/%E6%98%87%E8%85%BE%E4%BC%97%E6%99%BA/CANN%E5%86%85%E7%BD%AE%E7%AE%97%E5%AD%90%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%8F%82%E8%80%83/BNInference)查看。
+- For the implementation formulas of the DynamicRNN, DynamicGRUV2, and BNInference operators, click [Link](https://gitee.com/ascend/modelzoo/wikis/历史教程归档/昇腾众智/CANN内置算子数学公式参考/BNInference).
 
-- 如下算子groups属性支持最大取值范围为65535：
+- The following operators support a maximum value of 65535 for the groups attribute:
 
-  TransData、Deconvolution、Conv2D、Conv2DTranspose、Conv2DBackpropInput、Conv2dBackpropFilter、Conv3D、Conv3DTranspose、Conv3DBackpropInput、Conv3DBackpropFilter、DeformableConv2D、Correlation。
+  TransData, Deconvolution, Conv2D, Conv2DTranspose, Conv2DBackpropInput, Conv2dBackpropFilter, Conv3D, Conv3DTranspose, Conv3DBackpropInput, Conv3DBackpropFilter, DeformableConv2D, and Correlation
 
-- Tan算子约束：
+- Tan operator constraints:
 
-  由于硬件限制，FLOAT32、BFLOAT16、FLOAT16、INT32、INT64类型的输入数据，范围为\[-65504,65504\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
+  Due to hardware restrictions, the operator only guarantees the precision of FLOAT32, BFLOAT16, FLOAT16, INT32, and INT64 inputs within the range of [–65504, 65504]. If the input data is beyond this range, the precision cannot be guaranteed. In this case, use the CPU for computation.
 
-- Pow算子约束：
+- Pow operator constraints:
 
-  INT32类型的输入数据，超过下表所列范围时，调用Pow算子会超时：
+  If the input data of the INT32 type exceeds the range listed in the following table, calling the Pow operator will time out.
 
   <table><tbody><tr id="row1433052913236"><td class="cellrowborder" valign="top" width="39.7%"><p id="p933010292231"><a name="p933010292231"></a><a name="p933010292231"></a>Shape</p>
   </td>
   <td class="cellrowborder" valign="top" width="60.3%"><p id="p16330529112316"><a name="p16330529112316"></a><a name="p16330529112316"></a>Exponent value</p>
   </td>
   </tr>
-  <tr id="row16330132932319"><td class="cellrowborder" valign="top" width="39.7%"><p id="p13302294232"><a name="p13302294232"></a><a name="p13302294232"></a><=1000000(十万）</p>
+  <tr id="row16330132932319"><td class="cellrowborder" valign="top" width="39.7%"><p id="p13302294232"><a name="p13302294232"></a><a name="p13302294232"></a><=1000000</p>
   </td>
-  <td class="cellrowborder" valign="top" width="60.3%"><p id="p533032992320"><a name="p533032992320"></a><a name="p533032992320"></a>-200000000~200000000（两亿）</p>
-  </td>
-  </tr>
-  <tr id="row1233022912233"><td class="cellrowborder" valign="top" width="39.7%"><p id="p8330129102320"><a name="p8330129102320"></a><a name="p8330129102320"></a><=1000000(百万）</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="60.3%"><p id="p18331929172316"><a name="p18331929172316"></a><a name="p18331929172316"></a>-20000000~20000000（两千万）</p>
+  <td class="cellrowborder" valign="top" width="60.3%"><p id="p533032992320"><a name="p533032992320"></a><a name="p533032992320"></a>-200000000 to 200000000</p>
   </td>
   </tr>
-  <tr id="row03311829112312"><td class="cellrowborder" valign="top" width="39.7%"><p id="p533102922316"><a name="p533102922316"></a><a name="p533102922316"></a><=10000000(千万)</p>
+  <tr id="row1233022912233"><td class="cellrowborder" valign="top" width="39.7%"><p id="p8330129102320"><a name="p8330129102320"></a><a name="p8330129102320"></a><=1000000</p>
   </td>
-  <td class="cellrowborder" valign="top" width="60.3%"><p id="p13316299232"><a name="p13316299232"></a><a name="p13316299232"></a>-2000000~2000000（两百万）</p>
-  </td>
-  </tr>
-  <tr id="row11331229192312"><td class="cellrowborder" valign="top" width="39.7%"><p id="p163310291236"><a name="p163310291236"></a><a name="p163310291236"></a><=100000000(亿)</p>
-  </td>
-  <td class="cellrowborder" valign="top" width="60.3%"><p id="p433110298235"><a name="p433110298235"></a><a name="p433110298235"></a>-200000~200000（二十万）</p>
+  <td class="cellrowborder" valign="top" width="60.3%"><p id="p18331929172316"><a name="p18331929172316"></a><a name="p18331929172316"></a>-20000000 to 20000000</p>
   </td>
   </tr>
-  <tr id="row433117294232"><td class="cellrowborder" valign="top" width="39.7%"><p id="p133311129162313"><a name="p133311129162313"></a><a name="p133311129162313"></a><=1000000000(十亿)</p>
+  <tr id="row03311829112312"><td class="cellrowborder" valign="top" width="39.7%"><p id="p533102922316"><a name="p533102922316"></a><a name="p533102922316"></a><=10000000</p>
   </td>
-  <td class="cellrowborder" valign="top" width="60.3%"><p id="p33311529192311"><a name="p33311529192311"></a><a name="p33311529192311"></a>-20000 ~ 20000（两万）</p>
+  <td class="cellrowborder" valign="top" width="60.3%"><p id="p13316299232"><a name="p13316299232"></a><a name="p13316299232"></a>-2000000 to 2000000</p>
+  </td>
+  </tr>
+  <tr id="row11331229192312"><td class="cellrowborder" valign="top" width="39.7%"><p id="p163310291236"><a name="p163310291236"></a><a name="p163310291236"></a><=100000000</p>
+  </td>
+  <td class="cellrowborder" valign="top" width="60.3%"><p id="p433110298235"><a name="p433110298235"></a><a name="p433110298235"></a>-200000 to 200000</p>
+  </td>
+  </tr>
+  <tr id="row433117294232"><td class="cellrowborder" valign="top" width="39.7%"><p id="p133311129162313"><a name="p133311129162313"></a><a name="p133311129162313"></a><=1000000000</p>
+  </td>
+  <td class="cellrowborder" valign="top" width="60.3%"><p id="p33311529192311"><a name="p33311529192311"></a><a name="p33311529192311"></a>-20000 to 20000</p>
   </td>
   </tr>
   </tbody>
   </table>
 
-## 算子列表
+## Operator list
 
 | Operator | Source Header |
-|---|---|
+| --- | --- |
 | [Abs](ops/Abs.md) | ops_proto_math.h |
 | [AbsGrad](ops/AbsGrad.md) | ops_proto_legacy.h |
 | [AccumulateNV2](ops/AccumulateNV2.md) | ops_proto_math.h |

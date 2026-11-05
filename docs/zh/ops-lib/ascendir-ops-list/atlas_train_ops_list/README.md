@@ -1,4 +1,4 @@
-# Operator Specifications (Atlas Training Products)
+# Operator Specifications (Atlas training products)
 
 文档中所列出的算子仅适用用当前芯片版本，如果原型中有算子不在该手册中，则说明当前芯片版本不支持该算子。
 
