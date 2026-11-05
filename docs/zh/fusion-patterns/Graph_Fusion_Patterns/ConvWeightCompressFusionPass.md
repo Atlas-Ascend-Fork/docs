@@ -23,4 +23,4 @@ Cube类算子支持Conv2D、FullyConnection、MatMulV2。
 
 ## 支持的型号
 
-该Pass的有效性依赖于目标平台是否支持相应算子类型，具体信息请参考《算子库》中的“[Ascend IR算子规格说明](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html)”章节。
+该Pass的有效性依赖于目标平台是否支持相应算子类型，具体信息请参考《算子库》中的“[Ascend IR算子规格说明](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/930beta1/API/aolapi/docs/zh/ops-lib/ascendIR_spec_intro.md)”章节。
