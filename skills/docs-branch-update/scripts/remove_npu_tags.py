@@ -226,6 +226,14 @@ def collect_md_files(target):
     return files
 
 
+def display_relpath(path):
+    """相对当前目录的展示路径; Windows 跨盘符等无法取相对路径时回退绝对路径。"""
+    try:
+        return os.path.relpath(path)
+    except ValueError:
+        return os.path.abspath(path)
+
+
 def process_file(path, npu_types):
     """处理单个文件的 NPU 标签删除, 返回 (新数据, 是否有变化, 文件级统计)。不写回。"""
     with open(path, 'rb') as handle:
@@ -337,7 +345,7 @@ def main():
 
     for path in files:
         new_data, changed, stats = process_file(path, npu_types)
-        file_stats.append((os.path.relpath(path), stats))
+        file_stats.append((display_relpath(path), stats))
         if changed:
             with open(path, 'wb') as handle:
                 handle.write(new_data)
