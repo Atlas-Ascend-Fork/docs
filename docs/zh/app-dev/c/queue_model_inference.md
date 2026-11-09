@@ -34,8 +34,8 @@ const char* omModelPath = "../model/resnet50.om";
 
 // 1.1 创建模型的输入队列，如果模型有多个输入，则创建多个输入队列，此处以一个输入为例
 acltdtQueueAttr *attr = acltdtCreateQueueAttr();
-uint32_t *inputQueueList = new (nothrow) uint32_t[num];
 int32_t inputNum = 1;
+uint32_t *inputQueueList = new (nothrow) uint32_t[inputNum];
 
 for (int n = 0; n < inputNum; n++) {
         uint32_t inputQid;
@@ -44,8 +44,8 @@ for (int n = 0; n < inputNum; n++) {
     }
 
 // 1.2 创建模型的输出队列，如果模型有多个输出，则创建多个输出队列，此处以一个输出为例
-uint32_t *outputQueueList = new (nothrow) uint32_t[num];
 int32_t outputNum = 1;
+uint32_t *outputQueueList = new (nothrow) uint32_t[outputNum];
 
 for (int n = 0; n < outputNum; n++) {
         uint32_t outputQid;
@@ -78,7 +78,7 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
         ret = Utils::ReadBinFile(testFile[index], picDevBuffer, devBufferSize);
 
         // 将模型输入数据传入队列中，执行模型推理，-1是表示阻塞程序直到输入数据入队完成
-        ret = acltdtEnqueueData(inputQid, picDevBuffer, devBufferSize, nullptr, 0, -1, 0);
+        ret = acltdtEnqueueData(inputQueueList[0], picDevBuffer, devBufferSize, nullptr, 0, -1, 0);
         // 获取每个输出的大小
     size_t dataSize = aclmdlGetOutputSizeByIndex(modelDesc, 0);
     void *data = nullptr;
@@ -90,14 +90,14 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
         aclError aclRet = aclrtMalloc(&data, dataSize, ACL_MEM_MALLOC_HUGE_FIRST);
      }
          // 等待模型推理执行完毕，从输出内存中获取结果数据，-1是表示阻塞程序直到推理输出数据入队完成
-         ret = acltdtDequeueData(outputQid, data, dataSize, &retDataSize, nullptr, 0, -1);
+         ret = acltdtDequeueData(outputQueueList[0], data, dataSize, &retDataSize, nullptr, 0, -1);
          //将输出内存中的数据转换为float类型
          float *outData = NULL;
          outData = reinterpret_cast<float*>(data);
         
          // 显示每张图片的top5置信度的类别编号
          map<float, int, greater<float> > resultMap;
-         for (int j = 0; j < len / sizeof(float); ++j) {
+         for (size_t j = 0; j < retDataSize / sizeof(float); ++j) {
             resultMap[*outData] = j;
             outData++;
          }
@@ -121,8 +121,14 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
 // 2. 卸载模型，并释放模型推理相关资源
 aclmdlUnload(modelId);
 aclmdlDestroyDesc(modelDesc);
-acltdtDestroyQueue(inputQid);
-acltdtDestroyQueue(outputQid);
+for (int n = 0; n < inputNum; n++) {
+    acltdtDestroyQueue(inputQueueList[n]);
+}
+for (int n = 0; n < outputNum; n++) {
+    acltdtDestroyQueue(outputQueueList[n]);
+}
+delete[] inputQueueList;
+delete[] outputQueueList;
 acltdtDestroyQueueAttr(attr);
 
 ......
