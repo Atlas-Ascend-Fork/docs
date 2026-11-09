@@ -144,7 +144,7 @@ def set_tensor_desc():
     inputDesc = acl.create_tensor_desc(0, shapes, 0)
 
     # 设置index为0的动态输入的Tensor描述信息。
-    ret = acl.mdl.set_dataset_tensor_desc(input_, inputDesc, 0)
+    dataset, ret = acl.mdl.set_dataset_tensor_desc(input_, inputDesc, 0)
     # ......
 
 # 4. 创建Allocator描述符、注册Allocator
