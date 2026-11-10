@@ -13,7 +13,7 @@
 
 3. 运行代码时，直接运行对应的Python脚本即可。如：
 
-    ```python
+    ```bash
     python3 main.py
     ```
 

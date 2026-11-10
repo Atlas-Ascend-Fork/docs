@@ -28,6 +28,6 @@
 
     若启用`enable_oom_killer`，您需登录Device，在“/proc/sys/vm”目录下，以root用户启用`enable_oom_killer`，命令示例如下，1表示启用，0表示禁用：
 
-    ```python
+    ```bash
     echo 1 > enable_oom_killer
     ```
