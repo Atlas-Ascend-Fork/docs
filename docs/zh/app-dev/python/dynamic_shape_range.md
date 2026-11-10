@@ -102,16 +102,16 @@ def model_execute():
     # 调用acl.rt.get_run_mode接口获取软件栈的运行模式，并根据运行模式判断是否进行数据传输。
     runMode, ret = acl.rt.get_run_mode()
     if runMode == ACL_HOST:
-        ret = acl.rt.malloc_host(outHostData, outputDesc_size)
+        outHostData, ret = acl.rt.malloc_host(outputDesc_size)
 
         # 由于动态shape申请的内存比较大，而真实数据的大小是outputDesc_size，所以此处用真实数据大小去拷贝内存。
         ret = acl.rt.memcpy(outHostData, outputDesc_size, data, outputDesc_size, ACL_MEMCPY_DEVICE_TO_HOST)
         with open(outputFileName, "wb") as f:
-            f.write(outHostData)
+            f.write(acl.util.ptr_to_bytes(outHostData, outputDesc_size))
         ret = acl.rt.free_host(outHostData)
     else:
         with open(outputFileName, "wb") as f:
-            f.write(data)
+            f.write(acl.util.ptr_to_bytes(data, outputDesc_size))
     # ......
 
 # 5.处理模型推理结果
@@ -184,16 +184,16 @@ def model_execute():
     # 调用acl.rt.get_run_mode接口获取软件栈的运行模式，并根据运行模式判断是否进行数据传输。
     runMode, ret = acl.rt.get_run_mode()
     if runMode == ACL_HOST:
-        ret = acl.rt.malloc_host(outHostData, outputDesc_size)
+        outHostData, ret = acl.rt.malloc_host(outputDesc_size)
 
         # 由于动态shape申请的内存比较大，而真实数据的大小是outputDesc_size，所以此处用真实数据大小去拷贝内存。
         ret = acl.rt.memcpy(outHostData, outputDesc_size, data, outputDesc_size, ACL_MEMCPY_DEVICE_TO_HOST)
         with open(outputFileName, "wb") as f:
-            f.write(outHostData)
+            f.write(acl.util.ptr_to_bytes(outHostData, outputDesc_size))
         ret = acl.rt.free_host(outHostData)
     else:
         with open(outputFileName, "wb") as f:
-            f.write(data)
+            f.write(acl.util.ptr_to_bytes(data, outputDesc_size))
     # ......
 
 # 5.处理模型推理结果
