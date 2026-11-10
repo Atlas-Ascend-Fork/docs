@@ -103,17 +103,19 @@ else: # Decode Fail
 
 # 7.2 如果运行模式为ACL_HOST，且Host上需要展示PNGD输出的图片数据，则需要申请Host内存，通过acl.rt.memcpy接口将Device的输出图片数据传输到Host。
 # 获取PNGD的输出图片数据。
-if run_mode == ACL_HOST:
-    # 申请Host内存。
-    output_buffer, ret= acl.rt.malloc_host(output_size)
+if ret == 0 and run_mode == ACL_HOST:
+    # 使用成功解码返回的图片描述申请Host内存并复制图片数据。
+    output_size = pic_info['picture_buffer_size']
+    output_buffer, ret = acl.rt.malloc_host(output_size)
     # 数据传输。
-    ret = acl.rt.memcpy(output_buffer, output_size, stream['pack'][0]['addr'], output_size, ACL_MEMCPY_DEVICE_TO_HOST)
+    ret = acl.rt.memcpy(output_buffer, output_size, pic_info['picture_address'], output_size, ACL_MEMCPY_DEVICE_TO_HOST)
     # ......
     # 数据使用完成后，及时释放不使用的内存。
     ret = acl.rt.free_host(output_buffer)
-else:
-    # 可以直接使用PNGD的输出图片数据，在outputPic.picture_address指向的内存中。
+elif ret == 0:
+    # 可以直接使用PNGD的输出图片数据，在pic_info['picture_address']指向的内存中。
     # ......
+    ...
 
 # 7.3 释放输入内存和输出码流。
 ret = acl.himpi.dvpp_free(input_addr)
