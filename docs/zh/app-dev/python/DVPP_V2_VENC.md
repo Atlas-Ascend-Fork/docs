@@ -192,7 +192,7 @@ events, eventCount, ret = acl.himpi.sys_wait_epoll(epoll_fd, 3, 1000)
 # 9.2 获取编码结果。
 status, ret = acl.himpi.venc_query_status(channel_id)
 stream = {'pack_cnt': status['cur_packs']}
-stream, ret = acl.himpi.venc_get_stream(self.channel_id, stream, 1000)
+stream, ret = acl.himpi.venc_get_stream(channel_id, stream, 1000)
 # 9.3 如果运行模式为ACL_HOST，且Host上需要使用编码输出的码流，则需要申请Host内存，通过acl.rt.memcpy接口将Device的输出码流传输到Host。
 # 获取编码输出码流数据。
 if run_mode == ACL_HOST:
