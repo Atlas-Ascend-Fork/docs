@@ -69,7 +69,7 @@ ctx2, _ = acl.rt.create_context(0)  # Device 0又显式创建ctx2, 会将线程�
 acl.rt.set_context(current_ctx)  # 切换Context，由于current_ctx=ctx1，线程关联ctx1
 # 线程关联的context: ctx1
 
-acl.rt.set_context(current_ctx)  # 切换Context
+acl.rt.set_context(ctx2)  # 切换Context，线程关联ctx2
 # 线程关联的context: ctx2
 .....
 
