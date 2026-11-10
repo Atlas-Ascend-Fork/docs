@@ -70,7 +70,7 @@ ret = acl.mdl.execute(update_id, update_mdl_input, update_mdl_output)
 ret = acl.mdl.execute(infer_id, infer_mdl_input, infer_mdl_output)
 
 # 9. 卸载捆绑模型
-ret = acl.mdl.unload(bundle_id)
+ret = acl.mdl.bundle_unload(bundle_id)
 
 # 10. 释放资源
 ret = acl.rt.reset_device(0)
