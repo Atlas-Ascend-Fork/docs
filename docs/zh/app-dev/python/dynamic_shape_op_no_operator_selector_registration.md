@@ -44,8 +44,8 @@ for i in range(len(self.out_desc_list)):
     dim_size = []
     for j in range(dim_nums):
         dim, ret = acl.get_tensor_desc_dim_v2(self.out_desc_list[i], j)
-        dim_size.append(dim）
-    out_tensor_dims.append(dim_size))
+        dim_size.append(dim)
+    out_tensor_dims.append(dim_size)
 
 # ......
 ```
