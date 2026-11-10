@@ -80,7 +80,7 @@ def cb_thread_func(self, args_list):
         print("[info] acl.rt.process_report =", ret)
 
 timeout = 1000
-g_callbackRunFlag = True
+self.g_callbackRunFlag = True
 self.cb_thread_id, ret = acl.util.start_thread(self.cb_thread_func, [self.ctx, timeout])
 
 # 3.创建回调函数。
@@ -183,11 +183,17 @@ def venc_process(self, venc_channel_desc, input_mem, input_size, frame_config):
     assert ret == 0
 
 # 9.释放资源。
+# 保持回调线程运行，销毁通道会等待已发送帧及其回调完成。
+ret = acl.media.venc_destroy_channel(self.venc_channel_desc)
+assert ret == 0
+ret = acl.media.venc_destroy_channel_desc(self.venc_channel_desc)
+assert ret == 0
+# 通道销毁完成后，输入内存不再被异步编码任务使用。
 ret = acl.media.dvpp_free(input_mem)
 ret = acl.media.venc_destroy_frame_config(frame_config)
 assert ret == 0
 print("[INFO] free resources")
-g_callbackRunFlag = False
+self.g_callbackRunFlag = False
 ret = acl.util.stop_thread(self.cb_thread_id)
 print("[INFO] thread join")
 
