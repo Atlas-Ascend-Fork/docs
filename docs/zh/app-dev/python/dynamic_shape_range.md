@@ -171,6 +171,9 @@ def model_execute():
     # 执行模型。
     ret = acl.mdl.execute_async(modelId, input_, output_, stream)
 
+    # 等待异步推理完成后，再读取动态输出的Tensor描述及数据。
+    ret = acl.rt.synchronize_stream(stream)
+
     # 获取index为0的动态输出的Tensor描述信息。
     outputDesc = acl.mdl.get_dataset_tensor_desc(output_, 0)
 
