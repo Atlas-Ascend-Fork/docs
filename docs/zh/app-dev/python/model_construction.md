@@ -38,7 +38,7 @@
 
 >[!NOTE]
 > 
->- 如果模型转换时，提示有不支持的算子，请先参见[《Ascend C算子开发指南》](https://hiascend.com/document/redirect/CannCommunityOpdevAscendC)s先完成自定义算子，再重新转换模型。
+>- 如果模型转换时，提示有不支持的算子，请先参见[《Ascend C算子开发指南》](https://hiascend.com/document/redirect/CannCommunityOpdevAscendC)先完成自定义算子，再重新转换模型。
 >- 如果模型转换时，提示有算子编译相关问题，但根据报错信息无法定位问题、需要联系技术支持时（您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。），则需设置DUMP\_GE\_GRAPH、DUMP\_GRAPH\_LEVEL环境变量，再重新模型转换，收集模型转换过程中各个阶段的图描述信息。关于环境变量以及图描述信息的说明，请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的““参考 \> dump图详细信息””。
 >- 如果模型的输入Shape是动态，关于模型构建、模型推理的说明请参见[模型动态Shape输入推理](dynamic_shape_model_inference.md)。
 >- 如果现有网络不满足您的需求，您可以使用AI处理器支持的算子、调用构图接口自行构建自己的网络，再编译成om离线模型文件。详细说明请参见《图开发》。

@@ -72,7 +72,7 @@ def _data_interaction(self, images_dataset_list):
 tid, ret = acl.util.start_thread(self._process_callback, [self.context, 50])
 # 2.3 指定处理Stream上回调函数的线程。
 ret = acl.rt.subscribe_report(tid, self.stream)
-# 2.4 创建回调函数，用户处理模型推理的结果，由用户自行定义。
+# 2.4 创建回调函数，用于处理模型推理的结果，由用户自行定义。
 def callback_func(self, delete_list):
     for temp in delete_list:
         _, infer_output = temp

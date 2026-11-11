@@ -3,7 +3,7 @@
 <!-- end id1 -->
 ## 接口调用流程
 
-如果模型输入Shape是动态的，在模型执行之前调`acl.mdl.set_dataset_tensor_desc`设置该输入的Tensor描述信息（主要是设置Shape信息），在模型执行之后，调用`acl.mdl.get_dataset_tensor_desc`接口获取模型动态输出的Tensor描述信息，再进一步调用aclTensorDesc数据类型的操作接口获取输出Tensor数据占用的内存大小、Tensor的Format信息、Tensor的维度信息等。
+如果模型输入Shape是动态的，在模型执行之前调用`acl.mdl.set_dataset_tensor_desc`设置该输入的Tensor描述信息（主要是设置Shape信息），在模型执行之后，调用`acl.mdl.get_dataset_tensor_desc`接口获取模型动态输出的Tensor描述信息，再进一步调用aclTensorDesc数据类型的操作接口获取输出Tensor数据占用的内存大小、Tensor的Format信息、Tensor的维度信息等。
 
 关键原理说明如下：
 
@@ -49,7 +49,7 @@
 
     调用`acl.mdl.get_dataset_tensor_desc`接口获取动态Shape输出的Tensor描述信息，再利用aclTensorDesc数据类型的操作接口获取Tensor描述信息的属性，此处以获取size（表示Tensor数据占用的空间大小）为例，然后从内存中读取对应size的数据。
 
-8. （可选）若在5步中注册Allocator，则此处需要取消注册、销毁已注册的Allocator。
+8. （可选）若在第5步中注册Allocator，则此处需要取消注册、销毁已注册的Allocator。
 
     用户注册的Allocator和Stream绑定，如需主动释放、销毁Allocator，在释放Stream之前，应先调用`acl.rt.allocator_unregister`取消注册，然后释放流资源、销毁用户的Allocator。
 

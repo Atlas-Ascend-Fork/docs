@@ -150,7 +150,7 @@ for image in images_list:
     # transfer_pic函数的实现请参考样例中源代码。
     img = transfer_pic(image)
 
-    # 2.准备模型推理的输入数据，运行模式默认为运行模式为ACL_HOST，当前实例代码中模型只有一个输入。
+    # 2.准备模型推理的输入数据，运行模式默认为ACL_HOST，当前示例代码中模型只有一个输入。
     if "bytes_to_ptr" in dir(acl.util):
         bytes_data = img.tobytes()
         ptr = acl.util.bytes_to_ptr(bytes_data)

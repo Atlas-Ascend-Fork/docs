@@ -2,7 +2,7 @@
 
 ## 基本原理
 
-目前，pyacl已将GEMM算子（用于矩阵-向量乘、矩阵-矩阵乘）、Cast算子（用于转换数据类型）封装成pyacl接口，可参见《Runtime运行时API》中的CBLAS接口，目前支持以下两种执行方式：
+目前，pyacl已将GEMM算子（用于矩阵-向量乘、矩阵-矩阵乘）、Cast算子（用于转换数据类型）封装成pyacl接口，可参见《Runtime运行时API》中的CBLAS接口，支持以下两种执行方式：
 
 - 不以handle方式执行算子，接口名称中不包含“handle”关键字，例如，调用`acl.blas.gemm_ex`接口（封装GEMM算子）、`acl.op.cast`接口（封装Cast算子）等执行算子。
 - 以handle方式执行算子，接口名称中包含“handle”关键字，例如，调用`acl.blas.create_handle_for_gemm_ex`接口、`acl.op.create_handle_for_cast`接口等创建handle后，还需要调用`acl.op.execute_with_handle`接口执行算子。

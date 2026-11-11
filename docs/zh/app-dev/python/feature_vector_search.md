@@ -129,7 +129,7 @@ repo_range = acl.fv.create_repo_range(0, 1023, 0, 1023)
 search_input = acl.fv.create_search_input(query_table, repo_range, topK)
 
 # 创建检索结果信息，结果用于特征1：N检索。
-search_result = acl.fv.create_search_result(query_cnt, result_num, result_num_data_len, id_0, id_1, result_offert, result_distance, data_len)
+search_result = acl.fv.create_search_result(query_cnt, result_num, result_num_data_len, id_0, id_1, result_offset, result_distance, data_len)
 
 # 5.2 特征1：N检索。
 ret = acl.fv.search(SEARCH_1_N, search_input, search_result)

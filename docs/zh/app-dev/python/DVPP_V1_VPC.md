@@ -81,7 +81,7 @@ width_stride = ((w + 15) // 16) * 16
 height_stride = ((h + 1) // 2) * 2
 buffer_size = (width_stride * height_stride * 3) // 2
 dev_in, ret = acl.media.dvpp_malloc(buffer_size )
-self.dev_buffer['input_0'] = dev
+self.dev_buffer['input_0'] = dev_in
 # 7.申请缩放输出内存，内存大小根据计算公式得出; w和h是输入图片的缩放尺寸。
 width_stride = ((w + 15) // 16) * 16
 height_stride = ((h + 1) // 2) * 2
@@ -138,7 +138,7 @@ ret = acl.finalize()
 - 在实现抠图、缩放等功能时，调用对应的接口（例如`acl.media.dvpp_vpc_crop_async`接口）时，**通过将输入图片和输出图片的格式设置成不同的，达到转换图片格式的目的**。
 - 如果**仅进行图片格式转换**，也可以直接调用`acl.media.dvpp_vpc_convert_color_async`接口。
 
-    以下是格式转换功能关键步骤的代码示例，不能直接拷贝编译运行，仅供参考。调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。以下是关键步骤的代码示例，不可以直接拷贝运行，仅供参考。
+    以下是格式转换功能关键步骤的代码示例，不能直接拷贝编译运行，仅供参考。调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。
 
 ```python
 import acl

@@ -12,7 +12,7 @@
     权重初始化是可选步骤，根据业务场景由用户判断是否需要包含权重初始化图，不包含的情况下，可节省模型加载所需的Device内存。
 
 2. 调用`acl.mdl.bundle_load_from_file`或`acl.mdl.load_from_mem`接口加载模型。
-3. 调用`acl.mdl.bundle_get_model_id`接口获取三个图的ID。
+3. 调用`acl.mdl.bundle_get_model_id`接口获取图ID。
 4. 根据权重初始化图ID，调用模型执行接口（例如`acl.mdl.execute`）执行权重初始化图。
 5. 若需更新权重，在执行权重更新图前，调用`acl.mdl.set_dataset_tensor_desc`接口设置图的tensor描述信息。
 6. 根据权重更新图ID，调用模型执行接口（例如`acl.mdl.execute`）执行权重更新图。
@@ -23,7 +23,7 @@
 
 本节中的示例重点介绍模型推理的代码逻辑，初始化和去初始化请参见[初始化与去初始化](initialization_and_deinitialization.md)，运行时资源申请与释放请参见[运行时资源申请与释放](runtime_resource_allocation_and_release.md)。
 
-调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。以下是关键步骤的代码示例，不可以直接拷贝编译运行，仅供参考。
+调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。以下是关键步骤的代码示例，不可以直接拷贝运行，仅供参考。
 
 ```python
 # 1. 初始化资源

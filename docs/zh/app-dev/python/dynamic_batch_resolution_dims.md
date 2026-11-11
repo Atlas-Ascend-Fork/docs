@@ -33,7 +33,7 @@
         2. 调用`acl.mdl.get_input_size_by_index`根据index获取输入内存大小。
         3. 调用`acl.rt.malloc`接口根据上一步中的大小申请内存。
 
-            申请动态Batch/动态分辨率/动态AIPP/动态维度输入对应的内存后，无需用户设置该内存中的数据（否则可能会导致业务异常），用户调用上一步中的接口后，系统会自动向该内存中填入数据。
+            申请动态Batch/动态分辨率/动态维度输入对应的内存后，无需用户设置该内存中的数据（否则可能会导致业务异常），用户调用上一步中的接口后，系统会自动向该内存中填入数据。
 
         4. 调用`acl.create_data_buffer`接口创建aclDataBuffer类型的数据，用于存放动态Batch/动态分辨率/动态维度输入数据的内存地址、内存大小。
         5. 调用`acl.mdl.create_dataset`接口创建aclmdlDataset类型的数据，并调用`acl.mdl.add_dataset_buffer`接口向aclmdlDataset类型的数据中增加aclDataBuffer类型的数据。

@@ -149,7 +149,7 @@ if run_mode == ACL_HOST:
     # 数据使用完成后，及时释放不使用的内存。
     ret = acl.rt.free_host(output_buffer)
 else:
-    # 可以直接使用JPEGD的输出图片数据，在outputPic.picture_address指向的内存中。
+    # 可以直接使用VDEC的解码输出图片数据，在frame_info['v_frame']['virt_addr'][0]指向的内存中。
     # ......
     pass
 

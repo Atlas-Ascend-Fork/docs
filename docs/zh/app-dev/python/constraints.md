@@ -23,7 +23,7 @@
 <!-- npu="950" id6 -->
 - 对于**Ascend 950PR&950DT系列产品**，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程。
 <!-- end id6 -->
-- 使用内存申请接口（例如`acl.rt.malloc`、`acl.media.dvpp_malloc`等）申请内存后，为确保内存中不会有脏数据，建议在使用内存前先调用`acl.rt.memset`或`acl.rt.memset_async`接口先清空内存，例如acl.rt.memset\(dev\_buffer\_ptr, dev\_buffer\_size, 0, dev\_buffer\_size\)。
+- 使用内存申请接口（例如`acl.rt.malloc`、`acl.media.dvpp_malloc`等）申请内存后，为确保内存中不会有脏数据，建议在使用内存前先调用`acl.rt.memset`或`acl.rt.memset_async`接口清空内存，例如acl.rt.memset\(dev\_buffer\_ptr, dev\_buffer\_size, 0, dev\_buffer\_size\)。
 - Ascend RC形态下，如果应用程序中涉及`acl.rt.malloc`、`acl.media.dvpp_malloc`、`hi_mpi_dvpp_malloc`等内存申请接口，应用程序在Device上运行时，当前默认在内存不足时，应用程序可能会挂起，等待内存资源，用户可以根据实际需求选择启用操作系统提供的一些配置（例如，`enable_oom_killer`），这样在内存不足时，应用程序会自动退出，不会一直等待。
 
     若启用`enable_oom_killer`，您需登录Device，在“/proc/sys/vm”目录下，以root用户启用`enable_oom_killer`，命令示例如下，1表示启用，0表示禁用：

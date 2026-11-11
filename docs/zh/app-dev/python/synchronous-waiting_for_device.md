@@ -18,6 +18,6 @@ stream, ret = acl.rt.create_stream()
 ret = acl.rt.synchronize_device()
 
 # 资源销毁。
-ret = acl.rt.synchronize_stream(stream)
+ret = acl.rt.destroy_stream(stream)
 ret = acl.rt.reset_device(device_id)
 ```

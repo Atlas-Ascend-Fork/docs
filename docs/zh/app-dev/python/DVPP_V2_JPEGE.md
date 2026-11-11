@@ -15,9 +15,9 @@ JPEGE（JPEG Encoder）负责完成图像编码功能，将YUV格式图片编码
 当前系统支持将YUV格式图片编码成JPEG压缩格式的图片文件，关键接口的说明如下：
 
 1. 调用`acl.himpi.sys_init`接口进行媒体数据处理系统初始化。
-2. 调用`acl.himpi.venc_create_chn`函数创建完通道。
+2. 调用`acl.himpi.venc_create_chn`函数创建通道。
 
-    成功创建通道之后，您可以根据实际需求设置编码的高级参数，例如场景模式、码流控制器的高级参数等，请参见`acl.himpi.venc_set_jpeg_param`\~`acl.himpi.venc_compact_jpeg_tables`章节中的接口说明。
+    成功创建通道之后，您可以根据实际需求设置编码的高级参数，例如场景模式、码流控制器的高级参数等，请参见`acl.himpi.venc_set_jpeg_param`~`acl.himpi.venc_compact_jpeg_tables`章节中的接口说明。
 
 3. 调用`acl.himpi.venc_get_fd`将通道ID转换为一个文件句柄。
 4. 调用`acl.himpi.sys_create_epoll`函数创建DVPP epoll实例。
