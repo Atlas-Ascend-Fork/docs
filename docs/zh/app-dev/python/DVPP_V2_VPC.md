@@ -203,7 +203,8 @@ else:
     bytes_data = vpc_file.tobytes()
     vpc_file_ptr = acl.util.bytes_to_ptr(bytes_data)
     # 数据传输。
-    ret = acl.rt.memcpy(input_addr, input_size, vpc_file_ptr, vpc_file_size, ACL_MEMCPY_DEVICE_TO_DEVICE)
+    ret = acl.rt.memcpy(input_pic["picture_address"], input_pic["picture_buffer_size"],
+                        vpc_file_ptr, vpc_file_size, ACL_MEMCPY_DEVICE_TO_DEVICE)
 
 # 6.3 构造存放输出图片信息的字典。
 multithreading_count = 1
