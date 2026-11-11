@@ -246,7 +246,7 @@ ret = acl.rt.memcpy(host_buffer,
                      ACL_MEMCPY_DEVICE_TO_HOST)
 
 # 4.3 在终端窗口显示最大置信度的类别编号。
-bytes_out = acl.util.ptr_to_bytes(buffer_host, self.output_shape)
+bytes_out = acl.util.ptr_to_bytes(host_buffer, self.tensor_size_arg_max_d)
 data = np.frombuffer(bytes_out, dtype=np.int32).reshape((self.output_shape,))
 print("[SingleOP][ArgMaxOp] label of classification result is:{}"
       .format(data[0]))
