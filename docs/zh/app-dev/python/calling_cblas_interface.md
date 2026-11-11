@@ -22,7 +22,7 @@
 import acl
 # ......
 
-ACL_MEM_MALLOC_HUGE_FIRST = 2
+ACL_MEM_MALLOC_HUGE_FIRST = 0
 ACL_TRANS_N = 0
 ACL_COMPUTE_HIGH_PRECISION = 0
 ACL_MEMCPY_HOST_TO_DEVICE = 1
@@ -42,9 +42,9 @@ ret = acl.rt.set_device(device_id)
 # 4.1 申请Device上的内存存放执行算子的输入数据。
 # 对于该矩阵乘示例，size_a表示矩阵A数据的大小，size_b表示矩阵B数据的大小，size_c表示矩阵C数据的大小。
 in_dtype, out_dtype = 1, 1
-size_a = m * k * acl.data_type_size(acl_dtype)
-size_b = k * n * acl.data_type_size(acl_dtype)
-size_c = m * n * acl.data_type_size(acl_dtype)
+size_a = m * k * acl.data_type_size(in_dtype)
+size_b = k * n * acl.data_type_size(in_dtype)
+size_c = m * n * acl.data_type_size(out_dtype)
 dev_matrix_a, ret = acl.rt.malloc(size_a, ACL_MEM_MALLOC_HUGE_FIRST)
 dev_matrix_b, ret = acl.rt.malloc(size_b, ACL_MEM_MALLOC_HUGE_FIRST)
 dev_matrix_c, ret = acl.rt.malloc(size_c, ACL_MEM_MALLOC_HUGE_FIRST)
@@ -64,7 +64,7 @@ ret = acl.rt.memcpy(dev_matrix_b, size_b, host_matrix_b, size_b, ACL_MEMCPY_HOST
 # 6.执行单算子。
 stream, ret = acl.rt.create_stream()
 # 对于该示例，调用acl.blas.gemm_ex接口（异步接口）实现矩阵-矩阵的乘法。
-ret = acl.blas.gemm_ex(ACL_TRANS_N, ACL_TRANS_N, ACL_TRANS_N, m, n, k, dev_alpha, dev_matrix_a, k, input_type, dev_matrix_b, n, input_type, dev_beta, dev_matrix_c, n, output_type, ACL_COMPUTE_HIGH_PRECISION, stream)
+ret = acl.blas.gemm_ex(ACL_TRANS_N, ACL_TRANS_N, ACL_TRANS_N, m, n, k, dev_alpha, dev_matrix_a, -1, in_dtype, dev_matrix_b, -1, in_dtype, dev_beta, dev_matrix_c, -1, out_dtype, ACL_COMPUTE_HIGH_PRECISION, stream)
 # 调用acl.rt.synchronize_stream接口阻塞Host运行，直到指定Stream中的所有任务都完成。
 ret = acl.rt.synchronize_stream(stream)
 
