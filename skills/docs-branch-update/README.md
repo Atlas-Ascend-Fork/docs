@@ -29,10 +29,10 @@ agent 会根据 SKILL.md 的触发描述匹配场景加载本 skill，并按意�
 
 ```bash
 # 只更新链接（-d 缺省为 <仓库根>/docs/zh，-b 缺省自动获取当前分支）
-python3 .agent/skills/docs-branch-update/scripts/update_links.py [-d <目录|文件>] [-b <分支>]
+python3 skills/docs-branch-update/scripts/update_links.py [-d <目录|文件>] [-b <分支>]
 
 # 只删除产品内容（--npu 缺省从文档写作规范在线获取不允许存在的标签范围，仅查询一次）
-python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py [-d <目录|文件>] [--npu 类型...]
+python3 skills/docs-branch-update/scripts/remove_npu_tags.py [-d <目录|文件>] [--npu 类型...]
 
 # 两者都处理：依次执行两个脚本
 ```
@@ -55,10 +55,10 @@ python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py [-d <目录|
 
 ```bash
 # 典型用法 (两个脚本均幂等: 对同一目标执行后重跑一次应零命中, 可作完备性自检; 自检须带相同 -d)
-python3 .agent/skills/docs-branch-update/scripts/update_links.py -d docs/zh/guide --output 清单.md   # 直接修改+清单落盘
-python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py -d docs/zh/guide --output 清单2.md
-python3 .agent/skills/docs-branch-update/scripts/update_links.py -d docs/zh/guide                   # 幂等自检: 应零命中
-python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py -d docs/zh/guide                 # 幂等自检: 应零命中
+python3 skills/docs-branch-update/scripts/update_links.py -d docs/zh/guide --output 清单.md   # 直接修改+清单落盘
+python3 skills/docs-branch-update/scripts/remove_npu_tags.py -d docs/zh/guide --output 清单2.md
+python3 skills/docs-branch-update/scripts/update_links.py -d docs/zh/guide                   # 幂等自检: 应零命中
+python3 skills/docs-branch-update/scripts/remove_npu_tags.py -d docs/zh/guide                 # 幂等自检: 应零命中
 ```
 
 ## 处理规则摘要

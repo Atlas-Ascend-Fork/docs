@@ -23,14 +23,14 @@ git 分支确定版本映射；在 master/main/HEAD 分支上执行链接更新�
 
 ```bash
 # 模式一: 只更新链接
-python3 .agent/skills/docs-branch-update/scripts/update_links.py [-d <目录|文件>] [-b <分支>]
+python3 skills/docs-branch-update/scripts/update_links.py [-d <目录|文件>] [-b <分支>]
 
 # 模式二: 只删除产品内容 (NPU 标签)
-python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py [-d <目录|文件>] [--npu 类型...]
+python3 skills/docs-branch-update/scripts/remove_npu_tags.py [-d <目录|文件>] [--npu 类型...]
 
 # 模式三: 两者都处理 (依次执行两个脚本)
-python3 .agent/skills/docs-branch-update/scripts/update_links.py
-python3 .agent/skills/docs-branch-update/scripts/remove_npu_tags.py
+python3 skills/docs-branch-update/scripts/update_links.py
+python3 skills/docs-branch-update/scripts/remove_npu_tags.py
 ```
 
 | 参数 | 是否可选 | 说明 | 适用脚本 |
