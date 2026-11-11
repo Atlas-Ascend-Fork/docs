@@ -20,7 +20,7 @@
 <tbody><tr id="row14636105118346"><td class="cellrowborder" rowspan="2" valign="top" width="17.608239176082392%" headers="mcps1.2.6.1.1 "><p id="p3425225484"><a name="p3425225484"></a><a name="p3425225484"></a>Ascend 950PR&950DT products</p>
 </td>
 <td class="cellrowborder" valign="top" width="45.03549645035497%" headers="mcps1.2.6.1.2 "><p id="p15883130183817"><a name="p15883130183817"></a><a name="p15883130183817"></a>Ascend 950PR products:</p>
-<a name="ul1158894111713"></a><a name="ul1158894111713"></a><ul id="ul1158894111713"><li>Atlas 350 accelerator cards</li><li>Atlas 850</li><li>Atlas 650</li></ul>
+<a name="ul1158894111713"></a><a name="ul1158894111713"></a><ul id="ul1158894111713"><li>Atlas 350 accelerator cards</li><li>Atlas 850 SuperPoD (Air-Cooled)</li><li>Atlas 650</li></ul>
 </td>
 <td class="cellrowborder" rowspan="2" valign="top" width="13.22867713228677%" headers="mcps1.2.6.1.3 "><p id="p1510162582710"><a name="p1510162582710"></a><a name="p1510162582710"></a>3510</p>
 </td>
@@ -30,7 +30,7 @@
 </td>
 </tr>
 <tr id="row220313919362"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p105806122382"><a name="p105806122382"></a><a name="p105806122382"></a>Ascend 950DT products:</p>
-<a name="ul1405175741514"></a><a name="ul1405175741514"></a><ul id="ul1405175741514"><li>Atlas 850E</li><li>Atlas 650E</li><li>Atlas 950 SuperPoD</li><li>Atlas 950 SuperPoD Flex</li></ul>
+<a name="ul1405175741514"></a><a name="ul1405175741514"></a><ul id="ul1405175741514"><li>Atlas 850E SuperPoD (Air-Cooled)</li><li>Atlas 650E</li><li>Atlas 950 SuperPoD (Liquid-Cooled)</li><li>Atlas 950 SuperPoD Flex (Liquid-Cooled)</li></ul>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p663721215275"><a name="p663721215275"></a><a name="p663721215275"></a>Ascend950DT_95xx. Replace <em id="i362415714712"><a name="i362415714712"></a><a name="i362415714712"></a>xx</em> with the actual query result.</p>
 </td>

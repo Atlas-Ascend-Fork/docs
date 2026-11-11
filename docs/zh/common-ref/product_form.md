@@ -20,7 +20,7 @@
 <tbody><tr id="row14636105118346"><td class="cellrowborder" rowspan="2" valign="top" width="17.608239176082392%" headers="mcps1.2.6.1.1 "><p id="p3425225484"><a name="p3425225484"></a><a name="p3425225484"></a>Ascend 950PR&950DT系列产品</p>
 </td>
 <td class="cellrowborder" valign="top" width="45.03549645035497%" headers="mcps1.2.6.1.2 "><p id="p15883130183817"><a name="p15883130183817"></a><a name="p15883130183817"></a>Ascend 950PR系列产品：</p>
-<a name="ul1158894111713"></a><a name="ul1158894111713"></a><ul id="ul1158894111713"><li>Atlas 350加速卡</li><li>Atlas 850超节点</li><li>Atlas 650服务器</li></ul>
+<a name="ul1158894111713"></a><a name="ul1158894111713"></a><ul id="ul1158894111713"><li>Atlas 350加速卡</li><li>Atlas 850风冷超节点</li><li>Atlas 650服务器</li></ul>
 </td>
 <td class="cellrowborder" rowspan="2" valign="top" width="13.22867713228677%" headers="mcps1.2.6.1.3 "><p id="p1510162582710"><a name="p1510162582710"></a><a name="p1510162582710"></a>3510</p>
 </td>
@@ -30,7 +30,7 @@
 </td>
 </tr>
 <tr id="row220313919362"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p105806122382"><a name="p105806122382"></a><a name="p105806122382"></a>Ascend 950DT系列产品：</p>
-<a name="ul1405175741514"></a><a name="ul1405175741514"></a><ul id="ul1405175741514"><li>Atlas 850E超节点</li><li>Atlas 650E服务器</li><li>Atlas 950 SuperPoD超节点</li><li>Atlas 950 SuperPoD Flex</li></ul>
+<a name="ul1405175741514"></a><a name="ul1405175741514"></a><ul id="ul1405175741514"><li>Atlas 850E风冷超节点</li><li>Atlas 650E服务器</li><li>Atlas 950 SuperPoD液冷超节点</li><li>Atlas 950 SuperPoD Flex液冷超节点</li></ul>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p663721215275"><a name="p663721215275"></a><a name="p663721215275"></a>Ascend950DT_95xx，xx根据实际查询结果进行替换</p>
 </td>
