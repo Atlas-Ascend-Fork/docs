@@ -146,6 +146,7 @@ if run_mode == ACL_HOST:
 else:
     # 可以直接使用JPEGD的输出图片数据，在outputPic.picture_address指向的内存中。
     # ......
+    pass
 
 # 9.3 释放输入、输出内存。
 ret = acl.himpi.dvpp_free(frame_info['v_frame']['virt_addr'][0])

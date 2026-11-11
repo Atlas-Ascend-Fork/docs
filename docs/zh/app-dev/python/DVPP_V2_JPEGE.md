@@ -154,6 +154,7 @@ if run_mode == ACL_HOST:
 else:
     # 可以直接使用编码输出码流数据，在stream['pack'][0]['addr']指向的内存中。
     # ......
+    pass
 
 # 10.释放输入内存和输出码流。
 ret = acl.himpi.dvpp_free(input_addr)

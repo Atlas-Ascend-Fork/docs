@@ -133,9 +133,10 @@ if run_mode == ACL_HOST:
         ret = acl.rt.memcpy(np_output_ptr, output_pic.get('picture_buffer_size'), output_pic.get("picture_address"),
                             output_pic.get('picture_buffer_size'), ACL_MEMCPY_DEVICE_TO_HOST)
         # ......
-else
+else:
     # 可以直接使用VPC的输出图片数据，在outputPic.picture_address指向的内存中。
     # ......
+    pass
 
 # 6.7 释放输入、输出内存。
 ret = acl.himpi.dvpp_free(input_pic['picture_address'])
@@ -240,9 +241,10 @@ if run_mode == ACL_HOST:
     ret = acl.rt.memcpy(np_output_ptr, output_pic.get('picture_buffer_size'), output_pic.get("picture_address"),
                         output_pic.get('picture_buffer_size'), ACL_MEMCPY_DEVICE_TO_HOST)
     # ......
-else
+else:
     # 可以直接使用VPC的输出图片数据，在outputPic.picture_address指向的内存中。
     # ......
+    pass
 
 # 6.7 释放输入、输出内存。
 ret = acl.himpi.dvpp_free(input_pic['picture_address'])
