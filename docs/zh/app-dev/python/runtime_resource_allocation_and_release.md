@@ -31,8 +31,8 @@
 **申请运行时资源**时，需按顺序依次申请：Device、Stream。
 
 1. 调用`acl.rt.set_device`接口**指定用于运算的Device**，同时该接口也会隐式创建默认Context、默认Stream。但需遵循以下约束：
-    - 一个Device对应一个默认Context，默认Context无需显式调用接口释放，会在调用`acl.rt.destroy_context`接口释放资源时一并释放。
-    - 一个Device对应一个默认Stream，默认Stream无需显式调用接口释放，会在调用`acl.rt.destroy_stream`接口释放资源时一并释放。
+    - 一个Device对应一个默认Context，默认Context无需显式调用`acl.rt.destroy_context`接口释放。
+    - 一个Device对应一个默认Stream，默认Stream无需显式调用`acl.rt.destroy_stream`接口释放。
     - 默认Context、默认Stream，是在调用`acl.rt.reset_device`接口后自动释放。
 
 2. 若使用默认Stream作为接口入参时，直接传0，若不使用默认Stream，可调用`acl.rt.create_stream`接口显式创建Stream。
