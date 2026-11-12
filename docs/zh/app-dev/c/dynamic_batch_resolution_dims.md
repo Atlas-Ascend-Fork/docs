@@ -28,43 +28,42 @@
 
 2. **在执行模型推理前**：
     - 需准备动态Batch/动态分辨率/动态维度输入的数据结构：
-        1. 申请动态Batch/动态分辨率/动态维度输入对应的内存前，需要先调用aclmdlGetInputIndexByName接口根据输入名称（固定为ACL\_DYNAMIC\_TENSOR\_NAME）获取模型中标识该输入的index。
+      1. 申请动态Batch/动态分辨率/动态维度输入对应的内存前，需要先调用aclmdlGetInputIndexByName接口根据输入名称（固定为ACL\_DYNAMIC\_TENSOR\_NAME）获取模型中标识该输入的index。
+ 
+          ACL\_DYNAMIC\_TENSOR\_NAME是一个宏，宏的定义如下：
 
-            >**说明：** 
-            >ACL\_DYNAMIC\_TENSOR\_NAME是一个宏，宏的定义如下：
->
-            >```
-            >#define ACL_DYNAMIC_TENSOR_NAME "ascend_mbatch_shape_data"
-            >```
+          ```c
+          #define ACL_DYNAMIC_TENSOR_NAME "ascend_mbatch_shape_data"
+          ```
 
-        2. 调用aclmdlGetInputSizeByIndex根据index获取输入内存大小。
-        3. 调用aclrtMalloc接口根据上一步获取的大小申请内存。
+      2. 调用aclmdlGetInputSizeByIndex根据index获取输入内存大小。
+      3. 调用aclrtMalloc接口根据上一步获取的大小申请内存。
 
-            申请动态Batch/动态分辨率/动态AIPP/动态维度输入对应的内存后，无需用户设置该内存中的数据（否则可能会导致业务异常），用户调用[2.b](#li1767343825610)中的接口后，系统会自动向该内存中填入数据。
+            申请动态Batch/动态分辨率/动态AIPP/动态维度输入对应的内存后，无需用户设置该内存中的数据（否则可能会导致业务异常），用户调用上一步中的接口后，系统会自动向该内存中填入数据。
 
-        4. 调用aclCreateDataBuffer接口创建aclDataBuffer类型的数据，用于存放动态Batch/动态分辨率/动态维度输入数据的内存地址、内存大小。
-        5. 调用aclmdlCreateDataset接口创建aclmdlDataset类型的数据，并调用aclmdlAddDatasetBuffer接口向aclmdlDataset类型的数据中增加aclDataBuffer类型的数据。
+      4. 调用aclCreateDataBuffer接口创建aclDataBuffer类型的数据，用于存放动态Batch/动态分辨率/动态维度输入数据的内存地址、内存大小。
+      5. 调用aclmdlCreateDataset接口创建aclmdlDataset类型的数据，并调用aclmdlAddDatasetBuffer接口向aclmdlDataset类型的数据中增加aclDataBuffer类型的数据。
 
     - 需设置动态Batch/动态分辨率/动态维度参数值：
 
         **图 1**  接口调用流程  
         ![](figures/dynamic_shape_API_call_process.png "接口调用流程")
 
-        1. 调用aclmdlGetInputIndexByName接口根据输入名称（固定为ACL\_DYNAMIC\_TENSOR\_NAME）获取模型中标识该输入的index。
-        2. 设置动态Batch/动态分辨率/动态维度参数值。
-            - 调用aclmdlSetDynamicBatchSize接口设置动态Batch。
+      1. 调用aclmdlGetInputIndexByName接口根据输入名称（固定为ACL\_DYNAMIC\_TENSOR\_NAME）获取模型中标识该输入的index。
+      2. 设置动态Batch/动态分辨率/动态维度参数值。
+         - 调用aclmdlSetDynamicBatchSize接口设置动态Batch。
 
                 此处设置的batch size只能是构建模型时设置的Batch档位中的某一个。
 
                 也可以调用aclmdlGetDynamicBatch接口获取指定模型支持的Batch档位数以及每一档中的batch size。
 
-            - 调用aclmdlSetDynamicHWSize接口设置动态分辨率。
+         - 调用aclmdlSetDynamicHWSize接口设置动态分辨率。
 
                 此处设置的分辨率只能是构建模型时设置的分辨率档位中的某一个。
 
                 也可以调用aclmdlGetDynamicHW接口获取指定模型支持的分辨率档位数以及每一档中的宽、高。
 
-            - 调用aclmdlSetInputDynamicDims接口设置动态维度的维度值。
+         - 调用aclmdlSetInputDynamicDims接口设置动态维度的维度值。
 
                 此处设置的动态维度的值只能是构建模型时设置的档位中的某一档。
 
