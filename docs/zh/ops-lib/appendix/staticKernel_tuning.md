@@ -4,7 +4,7 @@
 
     算子调优前，需要先获取模型中算子信息统计文件（\*.json），包括算子的shape、dtype、format等信息。目前支持两种方式Dump算子json文件，请根据实际情况选择合适的方式。
 
-    - **使用PyTorch的Python接口编程时**，可通过Ascend PyTorch Profiler接口dump算子json文件，具体介绍参见[《性能调优工具》](https://hiascend.com/document/redirect/CannCommunityToolProfiling)中“性能数据其他采集方式 \> Ascend PyTorch Profiler”。
+    - **使用PyTorch的Python接口编程时**，可通过Ascend PyTorch Profiler接口dump算子json文件，具体介绍参见《[性能调优工具](https://hiascend.com/document/redirect/CannCommunityToolProfiling)》中“性能数据其他采集方式 \> Ascend PyTorch Profiler”。
 
         1. 在训练前，开启扩展参数experimental\_config中“算子信息统计功能”，即参数**record\_op\_args**置为True。
 
@@ -12,7 +12,7 @@
 
             训练结束后，Dump的算子信息统计文件默认在\{worker\_name\}\_\{时间戳\}\_ascend\_pt\_op\_args/\{pid\}目录下。
 
-    - **使用acl接口时**，可通过aclopStartDumpArgs和aclopStopDumpArgs接口将算子信息统计文件Dump到指定目录下，接口详见[《Runtime运行时 API》](https://hiascend.com/document/redirect/CannCommunityRuntimeApi)中的“Dump配置”。
+    - **使用acl接口时**，可通过aclopStartDumpArgs和aclopStopDumpArgs接口将算子信息统计文件Dump到指定目录下，接口详见《[Runtime运行时 API](https://hiascend.com/document/redirect/CannCommunityRuntimeApi)》中的“Dump配置”。
 
 2. 编译静态Kernel包。
 
@@ -22,7 +22,7 @@
     op_compiler --op_params_dir=<dump_dir>  --soc_version=<soc_version> --log=info --job=8 --output=<output_dir>
     ```
 
-    关键参数释义如下，全量参数详细介绍请参考[《算子编译工具》](https://hiascend.com/document/redirect/CannCommunityopcompiler)中“**参数说明**”章节，请根据实际情况设置。
+    关键参数释义如下：全量参数详细介绍请参考《[算子编译工具](https://hiascend.com/document/redirect/CannCommunityopcompiler)》中“**参数说明**”章节，请根据实际情况设置。
 
     - --op\_params\_dir：简写为-p，必选，Dump工具导出的统计数据所在的文件夹路径，支持绝对和相对路径。
     - --soc\_version：简写为-v，执行算子编译功能时必选，指定算子编译时AI处理器的型号。
@@ -82,8 +82,8 @@
             |-- config
                |-- ascendxxxx
                    |-- binary_info_config.json             # 全量静态Kernel包的总索引
-            |-- config.ini                                 # 记录安装顺序的配置文件。
-            |-- static_kernel_250924103634186357_988879    # 时间戳为“250924103634186357”且进程号为"988879"的静态Kernel文件
+            |-- config.ini                                 # 记录安装顺序的配置文件
+            |-- static_kernel_250924103634186357_988879    # 时间戳为“250924103634186357”且进程号为“988879”的静态Kernel文件
                |-- ascendxxxx
                |   |-- Add                                 # 算子二进制目录
                |      |-- static_kernel_Add_float16_NCL_xxxx_d0.json

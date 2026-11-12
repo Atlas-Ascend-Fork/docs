@@ -5,9 +5,9 @@
 本手册主要面向**算子调用**场景，旨在帮助您快速、正确地调用[CANN](https://www.hiascend.com/cann)（Compute Architecture for Neural Networks）内置算子。这些算子经过深度优化，具备良好的硬件亲和性，能够加速网络在AI处理器上的计算。
 
 <!-- npu="950,A3,910b,910,310p,310b" id1 -->
-- 如果您需要进行**自定义算子开发或调试**，请参考[《Ascend C算子开发指南》](https://hiascend.com/document/redirect/CannCommunityOpdevAscendC)。
+- 如果您需要进行**自定义算子开发或调试**，请参考《[Ascend C算子开发指南](https://hiascend.com/document/redirect/CannCommunityOpdevAscendC)》。
 <!-- end id1 -->
-- 如果您调用算子过程中出现问题，请参考[《故障处理》](https://hiascend.com/document/redirect/CannCommunitytrouble)进行问题定位和分析。
+- 如果您在调用算子过程中出现问题，请参考《[故障处理](https://hiascend.com/document/redirect/CannCommunitytrouble)》进行问题定位和分析。
 
 <!-- npu="950,A3,910b,910,310p,310b" id2 -->
 CANN内置算子的源码已在GitCode [CANN>算子库](https://gitcode.com/cann)项目开放，您可以进一步了解社区生态和算子开发/贡献流程。
@@ -44,7 +44,7 @@ CANN内置算子的源码已在GitCode [CANN>算子库](https://gitcode.com/cann
 
 ## 算子调用方式
 
-CANN算子支持如下调用方式，请根据实际情况选择。
+CANN算子支持如下调用方式，请根据实际情况选择：
 
 <!-- npu="950,A3,910b,910,310p,310b" id3 -->
 - **aclnn API**：针对全量算子提供标准的C API，便于Host侧调用，即单算子API（又称算子Host API）调用方式，调用流程如[图2](#fig2)所示。
@@ -52,7 +52,7 @@ CANN算子支持如下调用方式，请根据实际情况选择。
 <!-- npu="950,A3,910b" id4 -->
 - **PyTorch API**：针对非PyTorch原生但常见的算子（例如神经网络、大模型类算子），提供了一套兼容PyTorch原生风格的torch\_extension API。该API借助JIT机制（torch.utils.cpp\_extension.load）在首次调用时即时编译C++ Kernel Wrapper，将PyTorch函数桥接到aclnn API。同时，它还通过GE Converter支持TorchAir图模式。
 <!-- end id4 -->
-- **Ascend IR**（Intermediate Representation）：以构图方式实现算子调用。通过GE（Graph Engine）图引擎将主流AI框架算子统一转换为Ascend IR定义，实现计算图在AI处理器上加速执行。图模式调用原理参见[《图开发指南》](https://hiascend.com/document/redirect/CannCommunityGraphguide)中“编程指南”。
+- **Ascend IR**（Intermediate Representation）：以构图方式实现算子调用，通过GE（Graph Engine）图引擎将主流AI框架算子统一转换为Ascend IR定义，实现计算图在AI处理器上加速执行。图模式调用原理参见《[图开发指南](https://hiascend.com/document/redirect/CannCommunityGraphguide)》中“编程指南”。
 
 <!-- npu="950,A3,910b,910,310p,310b" id5 -->
 **图 2**  aclnn API调用流程 <a id="fig2"></a>
@@ -171,7 +171,7 @@ CANN算子支持如下调用方式，请根据实际情况选择。
     - 提供算子开发/调用过程中依赖的op_common公共接口
     - 通过静态Kernel提升算子执行性能
     - 算子调用过程中常见FAQ和案例
-  - [《AI框架算子支持清单》](https://hiascend.com/document/redirect/CannCommunityFwOplist)：获取主流AI框架原生IR算子信息（如TensorFlow、Caffe等）。
+  - 《[AI框架算子支持清单](https://hiascend.com/document/redirect/CannCommunityFwOplist)》：获取主流AI框架原生IR算子信息（如TensorFlow、Caffe等）。
 
 ## 注意事项
 

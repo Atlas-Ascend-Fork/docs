@@ -43,7 +43,7 @@
 
 1. Dump算子信息。
 
-    对算子调优前，需要先获取网络模型中的算子信息。
+    算子调优前，需要先获取网络模型中的算子信息。
 
     - **方式1**：若采用PyTorch的Python接口编程，通过Ascend PyTorch Profiler接口Dump算子json文件。
     - **方式2**：若采用acl接口，直接调用aclopStartDumpArgs和aclopStopDumpArgs接口Dump算子json文件。
@@ -52,7 +52,7 @@
 
     通过**算子编译工具**对Dump的算子信息统计文件（\*.json）进行编译并生成Kernel包。
 
-    > **说明：** 算子编译工具（op\_compiler）是CANN提供的用于进行算子编译生成算子二进制文件的命令行工具。当算子shape固定或者变化较少时，可使用该工具编译静态kernel包并安装，提升算子调用的性能。关于该工具的详细介绍，请参考[《算子编译工具》](https://hiascend.com/document/redirect/CannCommunityopcompiler)。
+    > **说明：** 算子编译工具（op\_compiler）是CANN提供的用于进行算子编译生成算子二进制文件的命令行工具。当算子shape固定或者变化较少时，可使用该工具编译静态Kernel包并安装，提升算子调用的性能。关于该工具的详细介绍，请参考《[算子编译工具](https://hiascend.com/document/redirect/CannCommunityopcompiler)》。
 
 3. 安装静态Kernel包。
 
