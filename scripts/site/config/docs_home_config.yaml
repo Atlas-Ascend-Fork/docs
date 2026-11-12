@@ -1,4 +1,3 @@
-# config/document-config.yaml
 # 开源文档中心首页配置文件
 # 用于管理文档分类、名称、URL及关联字段映射
 
@@ -120,7 +119,7 @@ documents:
   - id: "doc_profiling"
     category_id: "cat_devtools"
     name: "性能调优工具"
-    url: "https://gitcode.com/cann/oam-tools/blob/master/docs/zh/profiling/README.md"
+    url: "https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/profiling/README.md"
 
   - id: "doc_atctool"
     category_id: "cat_devtools"
@@ -130,7 +129,7 @@ documents:
   - id: "doc_hccltest"
     category_id: "cat_devtools"
     name: "HCCL性能测试工具"
-    url: "https://gitcode.com/cann/oam-tools/blob/master/docs/zh/hccl_test/README.md"
+    url: "https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/hccl_test/README.md"
 
 
   # ---------- 编译器 ----------
