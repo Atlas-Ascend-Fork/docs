@@ -20,4 +20,6 @@
 
 调用hi\_mpi\_vpc\_create\_chn接口或hi\_mpi\_vpc\_sys\_create\_chn接口创建VPC通道时，通过hi\_vpc\_chn\_attr结构体内的attr参数设置队列深度。
 
+<!-- npu="950,A3,910b,910,310p,310b" id1 -->
 您可以单击[vpc\_sample](https://gitee.com/ascend/samples/tree/master/cplusplus/level1_single_api/7_dvpp/vpc_sample)获取样例。关于VPC队列深度设置示例代码，参见sample\_vpc.cpp中queue\_len参数。
+<!-- end id1 -->

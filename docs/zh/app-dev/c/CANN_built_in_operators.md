@@ -37,8 +37,6 @@ CANN算子主要包含如下几类：
 
 - 库文件路径：一般默认在“$\{INSTALL\_DIR\}/lib64/”目录，可引用每类算子总库文件libopapi\_math.so、libopapi\_nn.so、libopapi\_cv.so、libopapi\_transformer.so。注意，从CANN 8.5.0版本开始全量算子总库文件libopapi.so要废弃，请勿使用。
 
-如需进一步了解CANN算子库的实现，请访问[CANN开源项目](https://gitcode.com/cann)，学习算子源码的实现过程。
-
 ## 单算子API调用流程
 
 **图 1**  单算子API调用流程  

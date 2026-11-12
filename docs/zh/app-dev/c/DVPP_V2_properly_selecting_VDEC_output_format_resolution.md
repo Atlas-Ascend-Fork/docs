@@ -17,4 +17,4 @@
 
 ## 使用示例
 
-您可以单击[vdec\_sample](https://gitee.com/ascend/samples/tree/master/cplusplus/level1_single_api/7_dvpp/vdec_sample)获取样例。
+您可以查看VDEC视频解码中的[示例代码](DVPP_V2_VDEC.md)。

@@ -30,7 +30,9 @@
 
 以下是异步模型推理功能关键步骤的代码示例，不能直接拷贝编译运行，仅供参考。调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。
 
+<!-- npu="910,310p,310b" id1 -->
 您可以单击[resnet50\_async\_imagenet\_classification](https://gitee.com/ascend/samples/tree/master/cplusplus/level2_simple_inference/1_classification/resnet50_async_imagenet_classification)获取样例。
+<!-- end id1 -->
 
 ```cpp
 #include "acl/acl.h"

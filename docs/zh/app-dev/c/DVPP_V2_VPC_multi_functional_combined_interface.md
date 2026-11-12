@@ -29,4 +29,6 @@
 
 此处以批量抠图、缩放、填充为例说明如何调用多功能组合接口hi\_mpi\_vpc\_batch\_crop\_resize\_make\_border。
 
+<!-- npu="950,A3,910b,910,310p,310b" id1 -->
 您可以单击[sample\_comm\_vpc\_batchCropResizeMakeBorder](https://gitee.com/ascend/samples/blob/master/cplusplus/level1_single_api/7_dvpp/vpc_sample/src/common/sample_comm_vpc_batchCropResizeMakeBorder.cpp)获取样例。
+<!-- end id1 -->
