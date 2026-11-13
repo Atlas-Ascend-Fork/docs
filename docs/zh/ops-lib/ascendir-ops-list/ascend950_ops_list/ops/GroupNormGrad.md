@@ -20,7 +20,7 @@ REG_OP(GroupNormGrad)
 
 ## Brief
 
-backward operator for group normalization. 
+backward operator for group normalization.
 
 ## Inputs
 
@@ -73,4 +73,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

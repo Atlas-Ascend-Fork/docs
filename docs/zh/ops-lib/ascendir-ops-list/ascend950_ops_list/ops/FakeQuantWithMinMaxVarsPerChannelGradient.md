@@ -28,7 +28,7 @@ Has the same shape as "gradients".
 - min: A ND Tensor of type float32. Shape must be 1D.
 Has the same last dimension size as "x".
 - max: A ND Tensor of type float32. Shape must be 1D.
-Has the same last dimension size as "x". 
+Has the same last dimension size as "x".
 
 ## Outputs
 
@@ -37,14 +37,14 @@ Has the same dtype and shape as input "x".
 - backprops_wrt_min: A ND Tensor of type float32.
 Shape must be 1D. Has the same dtype as input "min".
 - backprops_wrt_max: A ND Tensor of type float32.
-Shape must be 1D. Has the same dtype as input "max". 
+Shape must be 1D. Has the same dtype as input "max".
 
 ## Attributes
 
 - num_bits: An optional attribute specifying the quantization bit width.
 Type is int. Defaults to "8".
 - narrow_range: An optional attribute specifying whether to use a narrow range for quantization.
-Type is bool. Defaults to "False". 
+Type is bool. Defaults to "False".
 
 ## Data Types
 
@@ -73,4 +73,4 @@ Compatible with the TensorFlow operator FakeQuantWithMinMaxVarsPerChannelGradien
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

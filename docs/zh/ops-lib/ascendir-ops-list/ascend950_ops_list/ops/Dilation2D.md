@@ -23,11 +23,11 @@ Performs Dilation2D on the input .
 - x: A 4D tensor, format support NHWC. Support following data types:
 float16, float, double, int32, int64, uint8, int16, int8, uint16.
 - filter: A tensor of shape is 3d, the type is same with x,
-and the c dimension is same with x. 
+and the c dimension is same with x.
 
 ## Outputs
 
-y: The output tensor. Has the same type and format as input "x" . 
+y: The output tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -41,15 +41,11 @@ Defaults to "SAME", it support SAME and VALID.
 - ceil_mode: An optional bool. Defaults to "false". Use ceil or floor
 to calculate the output size when padding_mode is "CALCULATED".
 - data_format: An optional string, specifying the data format
-of "rates" and "strides", either "NCHW" or "NHWC" (default). 
+of "rates" and "strides", either "NCHW" or "NHWC" (default).
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
-### AI Core
-- input0 x: float16
-- input1 filter: float16
-- output0 y: float16
 ### AI CPU
 - input0 x: double,float16,float32,int8,int16,int32,int64,uint8,uint16
 - input1 filter: double,float16,float32,int8,int16,int32,int64,uint8,uint16
@@ -62,4 +58,4 @@ Compatible with the TensorFlow operator Dilation2D.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

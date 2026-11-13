@@ -20,7 +20,7 @@ Two inputs:
 
 ## Outputs
 
-backprops: A Tensor. Has the same type and format as input "gradients" . 
+backprops: A Tensor. Has the same type and format as input "gradients" .
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with the TensorFlow operator SoftplusGrad.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

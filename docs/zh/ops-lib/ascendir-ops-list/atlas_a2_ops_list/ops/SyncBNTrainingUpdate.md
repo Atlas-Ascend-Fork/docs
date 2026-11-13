@@ -45,4 +45,4 @@ compatible with the Pytorch operator BatchNormGatherStatsWithCounts.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

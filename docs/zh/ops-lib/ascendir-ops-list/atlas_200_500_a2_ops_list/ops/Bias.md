@@ -50,7 +50,7 @@ the ith axis of "bias" and the (i+n+"axis")th axis of "x" must have the same siz
 "axis + m" must be less than or equal to "n" and the ith axis of "bias" and
 the (i+"axis")th axis of "x" must have the same size (0 <= i < m).
 If "axis < 0", "n + axis + m" must be less than or equal to "n" and
-the ith axis of "bias" and the (i+n+"axis")th axis of "x" must have the same size (0 <= i < m). 
+the ith axis of "bias" and the (i+n+"axis")th axis of "x" must have the same size (0 <= i < m).
 
 ## Third-party framework compatibility
 
@@ -59,4 +59,4 @@ Compatible with the Caffe operator Bias.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

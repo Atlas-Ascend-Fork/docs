@@ -22,7 +22,7 @@ deal complex.
 
 ## Attributes
 
-Tout: representing the output of type. Default is float32. 
+Tout: representing the output of type. Default is float32.
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

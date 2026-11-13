@@ -27,7 +27,7 @@ Must be one of the following types: int32.
 ## Outputs
 
 transformed_images: Has the same type as images,
-4-D tensor with shape[batch, new_height, new_width, channels]. 
+4-D tensor with shape[batch, new_height, new_width, channels].
 
 ## Attributes
 
@@ -38,11 +38,6 @@ Defaults to "CONSTANT". Fill mode, "REFLECT", "WRAP", or "CONSTANT".
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
-### AI Core
-- input0 images: float16,float32,int32,uint8
-- input1 transforms: float32
-- input2 output_shape: int32
-- output0 transformed_images: float16,float32,int32,uint8
 ### AI CPU
 - input0 images: double,float16,float32,int32,int64,uint8
 - input1 transforms: float32
@@ -56,4 +51,4 @@ Compatible with tensorflow ImageProjectiveTransform operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

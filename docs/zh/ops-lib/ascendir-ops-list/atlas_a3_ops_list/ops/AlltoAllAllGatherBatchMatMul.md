@@ -32,7 +32,7 @@ x_shard_type 0: x (E, C, H/tp), x_shard_type 1: x (E, C/tp, H).
 - weight: A matrix Tensor. The type support float16, bfloat16 and its type must be the same as the tpye of x. The format supports ND. The weight only supports 3 dimensions.
 weight (E/ep, H, M/tp).
 - bias: A matrix Tensor. The type support float16, float32. When x is float16, bias must be float16. When x is bfloat16, bias must be float32. 2D and 3D are supported. The data format can be ND.
-bias (E/ep, 1, M/tp), 3 dims; bias (E/ep, M/tp), 2 dims. 
+bias (E/ep, 1, M/tp), 3 dims; bias (E/ep, M/tp), 2 dims.
 
 ## Outputs
 
@@ -41,7 +41,7 @@ x_shard_type 0: y1 (E/ep, ep*C, M/tp), x_shard_type 1: y1 (E/ep, ep*tp*C/tp, M/t
 - y2: A allgather matrix Tensor. The type support float16, bfloat16. 3D is supported. The data type is the same as that of the input x. The data format can be ND. This parameter indicates AllGather output, which may be required for backpropagation. A null pointer indicates that the output is not required.
 x_shard_type 0: y2 (E/ep, ep*C, H), x_shard_type 1: y2 (E/ep, ep*tp*C/tp, H).
 - y3: A batch matmul matrix Tensor. The type support float16, bfloat16. 3D is supported. The data type is the same as that of the input x. The data format can be ND. This parameter indicates BatchMatMul output when there is an activation function. A null pointer indicates that the output is not required.
-x_shard_type 0: y3 (E/ep, ep*C, M/tp), x_shard_type 1: y3 (E/ep, ep*tp*C/tp, M/tp). 
+x_shard_type 0: y3 (E/ep, ep*C, M/tp), x_shard_type 1: y3 (E/ep, ep*tp*C/tp, M/tp).
 
 ## Attributes
 
@@ -59,7 +59,7 @@ The value 1 indicates that AllGather is performed in the C dimension (1st dimens
 - output_y2_flag: A bool. If True, y2 tensor will output a allgather matrix Tensor
 as a result. Default: "false".
 - output_y3_flag: A bool. If True, y3 tensor will output a batch matmul matrix Tensor
-as a result. Default: "false". 
+as a result. Default: "false".
 
 ## Data Types
 
@@ -85,4 +85,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

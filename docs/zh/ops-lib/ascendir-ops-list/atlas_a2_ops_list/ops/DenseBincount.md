@@ -20,7 +20,7 @@ Counts the number of occurrences of each value in an integer array.
 - size: A Tensor. Must have the same type as input. non-negative int scalar Tensor.
 - weights: A Tensor. Must be one of the following types: int32, int64, float32, float64.
 with the same shape as input,
-or a length-0 Tensor, in which case it acts as all weights equal to 1. 
+or a length-0 Tensor, in which case it acts as all weights equal to 1.
 
 ## Outputs
 
@@ -29,7 +29,7 @@ or a length-0 Tensor, in which case it acts as all weights equal to 1.
 ## Attributes
 
 binary_output: An optional bool. Defaults to False. bool;
-Whether the kernel should count the appearance or number of occurrences. 
+Whether the kernel should count the appearance or number of occurrences.
 
 ## Data Types
 
@@ -42,7 +42,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The operator will use the interface set_atomic_add(), therefore weights and output should be float32 only. 
+The operator will use the interface set_atomic_add(), therefore weights and output should be float32 only.
 
 ## Third-party framework compatibility
 
@@ -51,4 +51,4 @@ Compatible with tensorflow DenseBincount operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

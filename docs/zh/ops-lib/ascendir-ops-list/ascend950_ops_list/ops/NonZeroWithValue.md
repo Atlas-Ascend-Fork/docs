@@ -22,7 +22,7 @@ input.
 
 x: A Tensor. Must be one of the following types: float16, float32, int32,
 int64, double, int8, uint8, int16, uint16, uint32, uint64, bool.
-Supported format "ND". 
+Supported format "ND".
 
 ## Outputs
 
@@ -51,4 +51,4 @@ Compatible with the PyTorch operator NonZeroWithValue.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

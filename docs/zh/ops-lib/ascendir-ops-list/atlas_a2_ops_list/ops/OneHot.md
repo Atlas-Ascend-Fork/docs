@@ -30,7 +30,7 @@ Four inputs, including:
 
 ## Outputs
 
-y: A 1-8D tensor. Has the same type as "on_value" . 
+y: A 1-8D tensor. Has the same type as "on_value" .
 
 ## Attributes
 
@@ -59,4 +59,4 @@ Compatible with the TensorFlow operator OneHot.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

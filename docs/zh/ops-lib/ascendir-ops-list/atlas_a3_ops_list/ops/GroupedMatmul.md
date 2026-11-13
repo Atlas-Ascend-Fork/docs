@@ -2,7 +2,7 @@
 
 ```c
 REG_OP(GroupedMatmul)
-    .DYNAMIC_INPUT(x, TensorType({DT_FLOAT16, DT_BF16, DT_INT8, DT_FLOAT, DT_FLOAT8_E5M2, DT_FLOAT8_E4M3FN, DT_HIFLOAT8, DT_FLOAT4_E2M1, DT_FLOAT4_E1M2}))
+    .DYNAMIC_INPUT(x, TensorType({DT_FLOAT16, DT_BF16, DT_INT8, DT_FLOAT, DT_INT4, DT_FLOAT8_E5M2, DT_FLOAT8_E4M3FN, DT_HIFLOAT8, DT_FLOAT4_E2M1, DT_FLOAT4_E1M2}))
     .DYNAMIC_INPUT(weight, TensorType({DT_FLOAT16, DT_BF16, DT_INT8, DT_FLOAT, DT_INT4, DT_FLOAT8_E5M2, DT_FLOAT8_E4M3FN, DT_HIFLOAT8, DT_FLOAT4_E2M1, DT_FLOAT4_E1M2}))
     .DYNAMIC_INPUT(bias, TensorType({DT_FLOAT16, DT_FLOAT, DT_INT32, DT_BF16}))
     .DYNAMIC_INPUT(scale, TensorType({DT_UINT64, DT_INT64, DT_BF16, DT_FLOAT32, DT_FLOAT8_E8M0}))
@@ -29,14 +29,14 @@ Function GroupedMatmul. This op computes groups of matmuls.
 
 ## Inputs
 
-- x: A Tensor List. Format supports ND. The type support float16, bfloat16, int8, float32, hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1, float4_e1m2(only weight NZ supported).
+- x: A Tensor List. Format supports ND. The type support float16, bfloat16, int8, float32, int4, hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1, float4_e1m2(only weight NZ supported).
 Maximum length of x is 128.
 - weight: A Tensor List of weight. Format supports ND/NZ. The type support float16, bfloat16, int8, float32, int4, int32, hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1, float4_e1m2(only weight NZ supported).
-Maximum length of weight is 128. When type is float32/int32 in fake-quantization modes which only supported in Ascend950PR/Ascend950DT, the input is float4_e2m1/int4-packed data.
+Maximum length of weight is 128. When type is float32/int32 in fake-quantization modes which only supported in Ascend 950PR&950DT products, the input is float4_e2m1/int4-packed data.
 - bias: A Tensor List of bias. Format supports ND. The type support float16, float32, int32, bfloat16.
 Length of bias must be the same as weight.
 - scale: A Tensor List of scale. Indicating scaling factor of quantization parameter.
-Format supports ND. The type support uint64, int64, bfloat16, float32, float8_e8m0. Length of scale must be the same as weight.
+Format supports ND. In the MXFP8 weight-NZ scenario, scale also supports FRACTAL_NZ. The type support uint64, int64, bfloat16, float32, float8_e8m0. Length of scale must be the same as weight.
 - offset: A Tensor List of offset. Indicating the offset of the quantization parameter.
 Format supports ND. The type support float32. Length of offset must be the same as weight.
 - antiquant_scale: A Tensor List of antiquant_scale. Indicating the scaling factor of the fake-quantization parameter.
@@ -53,7 +53,7 @@ Format supports ND. The type support float32, float8_e8m0.
 
 y: A Tensor List. Format supports ND.
 The type support float16, bfloat16, int8, float32, int32.
-- The following are the supported data formats and corresponding data types (for Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component):
+- The following are the supported data formats and corresponding data types (for Atlas A2 products):
 | Tensor    | x       | weight    | bias    | scale   | offset  | antiquant_scale | antiquant_offset | per_token_scale | y       |
 | :-------: | :-----: | :-------: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Format1   | ND      | ND        | ND      | ND      | ND      | ND      | ND      | ND      | ND      |
@@ -72,12 +72,12 @@ The type support float16, bfloat16, int8, float32, int32.
 | Data Type | int8    | int8      | int32   | bfloat16| float32 | float16 | float16 | float32 | bfloat16|
 |           | int8    | int8      | int32   | float32 | float32 | float16 | float16 | float32 | float16 |
 |           | int8    | int8      | int32   | uint64  | float32 | float16 | float16 |    -    | int32   |
-- The following are the supported data formats and data types (for Atlas Inference Series Product):
+- The following are the supported data formats and data types (for Atlas inference products):
 | Tensor    | x       | weight    | bias    | scale   | offset  | antiquant_scale | antiquant_offset | per_token_scale | y       |
 | :-------: | :-----: | :-------: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | Format2   | ND      | FRACTAL_NZ| ND      | ND      | ND      | ND      | ND      | ND      | ND      |
 | Data Type | float16 | float16   | float16 | uint64  | float32 | float16 | float16 |    -    | float16 |
-- The following are the supported data formats and data types (for Ascend950PR/Ascend950DT):
+- The following are the supported data formats and data types (for Ascend 950PR&950DT products):
 | Tensor    | x                         | weight                                  | bias                   | scale            | offset  | antiquant_scale | antiquant_offset | per_token_scale | y   |
 | :-------: | :-----------------------: | :-------------------------------------: | :--------------------: | :--------------: | :-----: | :---------: | :-----: | :---------: | :----------------------: |
 | Format1   | ND                        | ND                                      | ND                     | ND               | ND      | ND          | ND      | ND          | ND                       |
@@ -97,31 +97,39 @@ The type support float16, bfloat16, int8, float32, int32.
 |           | bfloat16                  | int8/float8_e4m3fn/float8_e5m2/hifloat8 | bfloat16/float32       | uint64           | float32 | bfloat16    | bfloat16|      -      | bfloat16                 |
 |           | float16                   | int4                                    | float16                | uint64           | float32 | float16     | float16 |      -      | float16                  |
 |           | bfloat16                  | int4                                    | bfloat16/float32       | uint64           | float32 | bfloat16    | bfloat16|      -      | bfloat16                 |
+|           | int8                      | int4                                    | float32                | uint64           | -       | -           | -       | float32     | bfloat16                |
+|           | int8                      | int4                                    | float32                | uint64           | -/float32 | -        | -       | float32     | float16                  |
+|           | int4                      | int4                                    | -                      | uint64           | -       | -           | -       | float32     | float16/bfloat16         |
 | Format2   | ND                        | FRACTAL_NZ                              | ND                     | ND               | ND      | ND          | ND      | ND          | ND                       |
 | Data Type | int8                      | int8                                    | int32                  | uint64/int64     | float32 | float16     | float16 |      -      | float16/bfloat16         |
 |           | int8                      | int8                                    | int32/float16/float32  | float32          | float32 | float16     | float16 | -/float32   | float16                  |
 |           | int8                      | int8                                    | int32/bfloat16/float32 | bfloat16/float32 | float32 | float16     | float16 | -/float32   | bfloat16                 |
 |           | int8                      | int4                                    | float32                | float32          | float32 | float16     | float16 | float32     | float16/bfloat16         |
+|           | int8                      | int4                                    | float32                | uint64           | -       | -           | -       | float32     | bfloat16                |
+|           | int8                      | int4                                    | float32                | uint64           | -/float32 | -        | -       | float32     | float16                  |
+|           | int4                      | int4                                    | -                      | uint64           | -       | -           | -       | float32     | float16/bfloat16         |
 |           | float16                   | float4_e2m1/float32                     | float16                | uint64           | float32 | float8_e8m0 | float16 |      -      | float16                  |
 |           | bfloat16                  | float4_e2m1/float32                     | bfloat16/float32       | uint64           | float32 | float8_e8m0 | bfloat16|      -      | bfloat16                 |
-|           | float8_e4m3fn             | float4_e2m1/float32                     | float16                | uint64           | float32 | float8_e8m0 | float16 | float8_e8m0 | float16                  |
-|           | float8_e4m3fn             | float4_e2m1/float32                     | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
+|           | float8_e4m3fn             | float4_e2m1/float4_e1m2/float32         | float16                | uint64           | float32 | float8_e8m0 | float16 | float8_e8m0 | float16                  |
+|           | float8_e4m3fn             | float4_e2m1/float4_e1m2/float32         | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
 |           | float8_e4m3fn             | float8_e4m3fn                           | -                      | float8_e8m0      | -       | -           | -       | float8_e8m0 | float16/bfloat16/float32 |
 |           | float4_e2m1/float4_e1m2   | float4_e2m1/float4_e1m2                 | float32                | float8_e8m0      | float32 | float8_e8m0 | float16 | float8_e8m0 | float16/bfloat16/float32 |
+| Format5   | ND                        | FRACTAL_NZ                              | ND                     | FRACTAL_NZ       | ND      | ND          | ND      | ND          | ND                       |
+| Data Type | float8_e4m3fn             | float8_e4m3fn                           | -                      | float8_e8m0      | -       | -           | -       | float8_e8m0 | float16/bfloat16/float32 |
 | Format3   | ND                        | FRACTAL_NZ_C0_16                        | ND                     | ND               | ND      | ND          | ND      | ND          | ND                       |
 | Data Type | float16                   | float4_e2m1                             | float16                | uint64           | float32 | float8_e8m0 | float16 |      -      | float16                  |
 |           | bfloat16                  | float4_e2m1                             | bfloat16/float32       | uint64           | float32 | float8_e8m0 | float16 |      -      | bfloat16                 |
 | Format4   | ND                        | FRACTAL_NZ_C0_32                        | ND                     | ND               | ND      | ND          | ND      | ND          | ND                       |
-| Data Type | float8_e4m3fn             | float4_e2m1                             | float16                | uint64           | float32 | float8_e8m0 | float16 | float8_e8m0 | float16                  |
-|           | float8_e4m3fn             | float4_e2m1                             | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
+| Data Type | float8_e4m3fn             | float4_e2m1/float4_e1m2                 | float16                | uint64           | float32 | float8_e8m0 | float16 | float8_e8m0 | float16                  |
+|           | float8_e4m3fn             | float4_e2m1/float4_e1m2                 | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
 |           | int8                      | int32                                   | float32                | float32          | float32 | float16     | float16 | float32     | bfloat16/float16                |
-- The following are the supported data types and no quantization modes(for Ascend950PR/Ascend950DT):
+- The following are the supported data types and no quantization modes(for Ascend 950PR&950DT products):
 | x                         | weight                    | bias                   |   y                      | group_type |
 | :-----------------------: | :-----------------------: | :--------------------: | :----------------------: | :--------: |
 | float16                   | float16                   | float16/float32        | float16                  |-1/0/2      |
 | bfloat16                  | bfloat16                  | bfloat16/float32       | bfloat16                 |-1/0/2      |
 | float32                   | float32                   | float32/float32        | float32                  |-1/0/2      |
-- The following are the supported data types and quantization modes(for Ascend950PR/Ascend950DT):
+- The following are the supported data types and quantization modes(for Ascend 950PR&950DT products):
 pertensor-perchannel && pertensor-pertensor:
 | x type                    | weight type               | per_token_scale type | scale type       | group_type |
 | ------------------------- | ------------------------- | -------------------- | ---------------- | ---------- |
@@ -137,6 +145,11 @@ pertoken-perchannel && pertoken-pertensor
 | int8                      | int8                      | float32              | float32/bfloat16 | 0          |
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | float32              | float32          | 0/2        |
 | hifloat8                  | hifloat8                  | float32              | float32          | 0/2        |
+| int4                      | int4                      | float32              | uint64           | 0          |
+pertoken-pergroup
+| x type                    | weight type               | per_token_scale type | scale type       | group_type |
+| ------------------------- | ------------------------- | -------------------- | ---------------- | ---------- |
+| int4                      | int4                      | float32              | uint64           | 0          |
 pergroup-perblock(group_size_m = 1, group_size_k = 128, group_size_n = 128):
 | x type                    | weight type               | per_token_scale type | scale type       | group_type |
 | ------------------------- | ------------------------- | -------------------- | ---------------- | ---------- |
@@ -146,8 +159,10 @@ mx quant(group_size_k = 32)：
 | x type                    | weight type               | per_token_scale type | scale type       | group_type |
 | ------------------------- | ------------------------- | -------------------- | ---------------- | ---------- |
 | float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2 | float8_e8m0          | float8_e8m0      | 0/2        |
+| float8_e4m3fn/float8_e5m2 | float8_e4m3fn/float8_e5m2(weight NZ)| float8_e8m0  | float8_e8m0      | 0          |
 | float4_e2m1               | float4_e2m1               | float8_e8m0          | float8_e8m0      | 0          |
 | float4_e2m1/float4_e1m2   | float4_e2m1/float4_e1m2(weight NZ)| float8_e8m0  | float8_e8m0      | 0          |
+Int4 only supports transposition when the weight is in NZ format (weightNZ).
 perchannel：
 | x type                    | weight type                             | antiquant_scale type | antiquant_offset type | group_type |
 | ------------------------- | --------------------------------------- | -------------------- | --------------------- | ---------- |
@@ -159,13 +174,18 @@ pertoken-(perchannel & pergroup)：
 | x type                    | weight type               | per_token_scale type | scale type            | antiquant_scale type | group_type |
 | ------------------------- | ------------------------- | -------------------- | --------------------- | -------------------- | ---------- |
 | int8                      | int4/int32                | float32              | float32               | float16              | 0          |
+| int8                      | int4                      | float32              | uint64                | -                    | 0          |
 mx fake-quant(group_size_k = 32)：
 | x type                    | weight type                     | antiquant_scale type | antiquant_offset type | per_token_scale type | group_type |
 | ------------------------- | ------------------------------- | -------------------- | --------------------- | -------------------- | ---------- |
 | float16                   | float4_e2m1/float32             | float8_e8m0          | float16               |           -          | 0          |
 | bfloat16                  | float4_e2m1/float32             | float8_e8m0          | bfloat16              |           -          | 0          |
-| float8_e4m3fn             | float4_e2m1/float32             | float8_e8m0          | float16/bfloat16      | float8_e8m0          | 0          |
-- The following are the supported quantization modes, data types and shapes(for Ascend950PR/Ascend950DT):
+| float8_e4m3fn             | float4_e2m1/float4_e1m2/float32 | float8_e8m0          | float16/bfloat16      | float8_e8m0          | 0          |
+When x is float8_e4m3fn and weight is float4_e2m1, float4_e1m2, or float32, group_size_k must be 32,
+x must not be transposed, and weight must be transposed. When weight is float4_e2m1 or float4_e1m2
+with shape (N,K), the SMS scenario is supported; the tensor list lengths of antiquant_scale,
+antiquant_offset, and bias must be the same as that of weight.
+- The following are the supported quantization modes, data types and shapes(for Ascend 950PR&950DT products):
 | quantization         | group_type | x type                             | scale type                      | x shape   | weight shape        | y shape   | scale shape                               | per_token_scale shape | bias shape |
 |----------------------|------------|------------------------------------|-------------------------------  |-----------|---------------------|-----------|-------------------------------------------|-----------------------|------------|
 | pertensor-pertensor  | 0          | int8                               | -/uint64/int64/float32/bfloat16 | [(M,K)]   | [(B,N,K)]/[(B,K,N)] | [(M,N)]   | -/[(B,)]/[(B,1)]                          | -                     | -/[(B,N)]  |
@@ -182,13 +202,21 @@ mx fake-quant(group_size_k = 32)：
 | pertoken-perchannel  | 0          | int8                               | float32/bfloat16                | [(M,K)]   | [(B,N,K)]/[(B,K,N)] | [(M,N)]   | [(B,N)]                                   | (M,)                  | -/[(B,N)]  |
 | pertoken-perchannel  | 0          | float8_e4m3fn/float8_e5m2/hifloat8 | float32                         | [(M,K)]   | [(B,N,K)]/[(B,K,N)] | [(M,N)]   | [(B,N)]                                   | (M,)                  | -          |
 | pertoken-perchannel  | 2          | float8_e4m3fn/float8_e5m2/hifloat8 | float32                         | [(K,M)]   | [(K,N)]             | [(B,M,N)] | [(B,N)]                                   | (B,M)                 | -          |
+| pertoken-perchannel  | 0          | int4                               | uint64                          | [(M,K)]   | [(B,K,N)]/[(B,K,N)] | [(M,N)]   | [(B,N,)]                                  | (M,)                  | -          |
+| pertoken-pergroup    | 0          | int4                               | uint64                          | [(M,K)]   | [(B,K,N)]/[(B,K,N)] | [(M,N)]   | [(B,ceil(K/group_size),N,)]               | (M,)                  | -          |
+| pertoken-perchannel  | 0          | int8                               | uint64                          | [(M,K)]   | [(B,K,N)]           | [(M,N)]   | [(B,1,N)]                                 | (M,)                  | [(B,N)]    |
+| pertoken-pergroup    | 0          | int8                               | uint64                          | [(M,K)]   | [(B,K,N)]           | [(M,N)]   | [(B,ceil(K/256),N)]                       | (M,)                  | [(B,N)]    |
 | pergroup-perblock    | 0          | float8_e4m3fn/float8_e5m2/hifloat8 | float32                         | [(M,K)]   | [(B,N,K)]           | [(M,N)]   | [(B,ceil(N/128),ceil(K/128))]             | (M,ceil(K/128))       | -          |
 | pergroup-perblock    | 0          | float8_e4m3fn/float8_e5m2/hifloat8 | float32                         | [(M,K)]   | [(B,K,N)]           | [(M,N)]   | [(B,ceil(K/128),ceil(N/128))]             | (M,ceil(K/128))       | -          |
 | pergroup-perblock    | 2          | float8_e4m3fn/float8_e5m2/hifloat8 | float32                         | [(K,M)]   | [(K,N)]             | [(B,M,N)] | [(K/128+B, ceil(N/128))]                  | (K/128+B,M)           | -          |
 | mx                   | 0          | float8_e4m3fn/float8_e5m2          | float8_e8m0                     | [(M,K)]   | [(B,N,K)]/[(B,K,N)] | [(M,N)]   | [(B,N,ceil(K/64),2)]/[(B,ceil(K/64),N,2)] | (M,ceil(K/64),2)      | -          |
+| mx                   | 0          | float8_e4m3fn                     | float8_e8m0                     | [(M,K)]   | weight in FRACTAL_NZ | [(M,N)]  | [(B,ceil(N/16),ceil(K/64),16,2)] | (M,ceil(K/64),2) | - |
 | mx                   | 2          | float8_e4m3fn/float8_e5m2          | float8_e8m0                     | [(K,M)]   | [(K,N)]             | [(B,M,N)] | [(K/64+B,N,2)]                            | (K/64+B,M,2)          | -          |
 | mx                   | 0          | float4_e2m1                        | float8_e8m0                     | [(M,K)]   | [(B,N,K)]/[(B,K,N)] | [(M,N)]   | [(B,N,ceil(K/64),2)]/[(B,ceil(K/64),N,2)] | (M,ceil(K/64),2)      | -/[(B,N)]  |
 | mx                 | 0     | float4_e2m1/float4_e1m2 | float8_e8m0 | [(M,K)] | [(B,ceil(K/64),ceil(N/16),16,64)]/[(B,ceil(N/64),ceil(K/16),16,64)] | [(M,N)] | [(B,N,ceil(K/64),2)]/[(B,ceil(K/64),N,2)] | (M,ceil(K/64),2) | -/[(B,N)] |
+When scale format is FRACTAL_NZ in MXFP8 scenario, x and weight support only float8_e4m3fn,
+transpose_weight must be false, scale dtype must be float8_e8m0, group_type must be 0, and float4 is not supported.
+The scale FRACTAL_NZ shape is (B, ceil(N/16), ceil(K/64), 16, 2).
 | quantization                      | group_type | x type        | weight type                        | per_token_scale type | scale type | antiquant_scale type | antiquant_offset type | x shape | weight shape                      | y shape | per_token_scale shape | scale shape | antiquant_scale shape       | antiquant_offset shape |
 |---------------------------------- |------------|---------------|------------------------------------|----------------------|------------|----------------------|-----------------------|---------------------------------------------|---------|-----------------------|-------------|-----------------------------|------------------------|
 | perchannel                        | 0          | float16       | int8                               | -                    | uint64     | float16              | float16               | [(M,K)] | [(B,N,K)]/[(B,K,N)]               | [(M,N)] | -                     | [(0)]       | [(B,N,)]                    | [(0)]/[(B,N,)]         |
@@ -202,12 +230,14 @@ mx fake-quant(group_size_k = 32)：
 | perchannel                        | -1         | float16       | int4                               | -                    | uint64     | float16              | float16               | [(M1,K1),(M2,K2),...] | [(N1,K1),(N2,K2),...]/[(K1,N1),(K2,N2),...] | [(M1,N1),(M2,N2),...] | - | [(0)] | [(N1,),(N2,)...] | [(0)]/[(N1,),(N2,)...] |
 | perchannel                        | -1         | bfloat16      | int4                               | -                    | uint64     | bfloat16             | bfloat16              | [(M1,K1),(M2,K2),...] | [(N1,K1),(N2,K2),...]/[(K1,N1),(K2,N2),...] | [(M1,N1),(M2,N2),...] | - | [(0)] | [(N1,),(N2,)...] | [(0)]/[(N1,),(N2,)...] |
 | pertoken-(perchannel & pergroup)  | 0          | int8          | int4                               | float32              | float32    | float16              | float16               | [(M,K)] | [(B,ceil(N/32),ceil(K/16),16,32)] | [(M,N)] | (M,)                  | [(B,N,)]    | [(B,ceil(K/group_size),N,)] | [(0)]                  |
+| pertoken-perchannel               | 0          | int8          | int4                               | float32              | uint64     | -                    | -                     | [(M,K)] | [(B,K,N)]/[(B,ceil(N/32),ceil(K/16),16,32)] | [(M,N)] | (M,) | [(B,1,N)]                  | -                   | [(0)]/[(B,1,N)]       |
+| pertoken-pergroup                 | 0          | int8          | int4                               | float32              | uint64     | -                    | -                     | [(M,K)] | [(B,K,N)]/[(B,ceil(N/32),ceil(K/16),16,32)] | [(M,N)] | (M,) | [(B,ceil(K/256),N)]        | -                   | [(0)]                  |
 | mx                                | 0          | float16       | float4_e2m1                        | -                    | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(N/16),ceil(K/16),16,16)] | [(M,N)] | -                     | [(0)]       | [(B,ceil(K/32),N,)]         | [(0)]                  |
 | mx                                | 0          | bfloat16      | float4_e2m1                        | -                    | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(N/16),ceil(K/16),16,16)] | [(M,N)] | -                     | [(0)]       | [(B,ceil(K/32),N,)]         | [(0)]                  |
 | mx                                | 0          | float16       | float32                            | -                    | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(N/16),ceil(K/16),16,2)]  | [(M,N)] | -                     | [(0)]       | [(B,ceil(K/32),N,)]         | [(0)]                  |
 | mx                                | 0          | bfloat16      | float32                            | -                    | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(N/16),ceil(K/16),16,2)]  | [(M,N)] | -                     | [(0)]       | [(B,ceil(K/32),N,)]         | [(0)]                  |
-| mx                                | 0          | float8_e4m3fn | float4_e2m1                        | float8_e8m0          | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,32)] | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
-| mx                                | 0          | float8_e4m3fn | float4_e2m1                        | float8_e8m0          | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,32)] | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
+| mx                                | 0          | float8_e4m3fn | float4_e2m1/float4_e1m2            | float8_e8m0          | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,32)] | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
+| mx                                | 0          | float8_e4m3fn | float4_e2m1/float4_e1m2            | float8_e8m0          | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,32)] | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
 | mx                                | 0          | float8_e4m3fn | float32                            | float8_e8m0          | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,4)]  | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
 | mx                                | 0          | float8_e4m3fn | float32                            | float8_e8m0          | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,4)]  | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
 
@@ -227,7 +257,9 @@ indicate wether input x is transposed, not enabled. Default: false.
 - act_type: An int. Indicate activation function type. Value range 0-5. Default: 0.
 0, no activation. 1, relu. 2, gelu_tanh. 3, gelu_err_func, not supported currently. 4, fastgelu. 5, silu.
 - tuning_config: A ListInt. The first element in the array indicates the expected number of tokens processed by each expert.
-The operator tiling performs optimal tiling based on the first element in the array. Default: {0}.
+The operator tiling performs optimal tiling based on the first element in the array. In the S8S4 scenario on
+Ascend 950PR&950DT products, setting the second element to 1 enables the weight affinity format (transpose then NZ).
+Default: {0}.
 
 ## Data Types
 
@@ -249,22 +281,22 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - single-tensor: for tensor list type of input and output, tensors for different groups are not separated, and only one tensor in the tensor list.
 - multi-tensor: for tensor list type of input and output, tensors for different groups are separated, and multi separated tensors in the tensor list.
 - If group_list is passed, when group_list_type is 0, it must be a non-negative monotone non-decreasing array; when group_list_type is 1, it must be a non-negative array; when group_list_type is 2, it must be non-negative (group_idx, size) pairs, with non-zero groups placed first and zero groups placed last.
-- Quantization and fake-quantization are supported only when group_type is set to -1 or 0 for Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and Atlas Inference Series Product.
-Quantization is supported only when group_type is set to 0 or 2 for Ascend950PR/Ascend950DT.
+- Quantization and fake-quantization are supported only when group_type is set to -1 or 0 for Atlas A2 products and Atlas inference products.
+Quantization is supported only when group_type is set to 0 or 2 for Ascend 950PR&950DT products.
 - Quantization with y data type bfloat16 or float16 or float32 is only supported in single-tensor x, single-tensor weight, single-tensor y cases.
 - Each axis for tensors in x and weight for each group of matmul should be less or equal to 2147483647 (maximum of data type int32) after aligning to 32 byte.
 - When the dtype of the weight is int4, the K axis size should be even if the weight is transposed, otherwise, the N axis size should be even.
 - In following tables, "S" stands for single-tensor, and "M" stands for multi-tensor, expressed in the sequence of x, weight, y.
 For example, "SMS" indicates single-tensor x, multi-tensor weight, and single-tensor y;
 "optional-dynamic inputs" stands for DYNAMIC_INPUT not needed in all scenarios, which includes bias/scale/antiquant_scale/antiquant_offset. Offset is not needed in all scenarios.
-The following are the supported shapes and constrains for different scenarios(for Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and Atlas Inference Series Product):
+The following are the supported shapes and constrains for different scenarios(for Atlas A2 products and Atlas inference products):
 | group_type | supported scenario | x shape | weight shape | y shape | optional-dynamic inputs shape if needed | group_list shape if passed | per_token_scale shape if passed |    constrains    |
 | :--------: | :----------------: | :-----: | :----------: | :-----: | :-------------------------------------: | :------------------------: | :-----------------------------: | :--------------: |
 | -1         |        MMM         | [(M1,K1),(M2,K2),...] | [(K1,N1),(K2,N2),...] | [(M1,N1),(M2,N2),...] | [(N1),(N2),...] | not support | not support |1) K1,K2,... < 65536.<br>2) N1,N2,... < 65536.<br>3) B <= 128.|
 | 0          |        SSS         | [(M,K)] | [(B,K,N)] | [(M,N)] | [(B,N)] | (B) | (M) |1) K < 65536.<br>2) N < 65536.<br>3) B <= 1024.|
 | 0          |        SMS         | [(M,K)] | [(K,N),(K,N),...] | [(M,N)] | [(N),(N),...] | (B) | not support |1) K < 65536.<br>2) N < 65536.<br>3) B <= 128.|
 | 0          |        MMS         | [(M1,K1),(M2,K2),...] | [(K1,N),(K2,N),...] | [(M,N)] | [(N),(N),...] | (B) | not support |1) K1,K2,... < 65536.<br>2) N < 65536.<br>3) B <= 128.|
-The following are the supported shapes and constrains for different scenarios(for Ascend950PR/Ascend950DT):
+The following are the supported shapes and constrains for different scenarios(for Ascend 950PR&950DT products):
 | group_type | supported scenario | x shape | weight shape | y shape | optional-dynamic inputs shape if needed | group_list shape if passed | per_token_scale shape if passed |    constrains    |
 | :--------: | :----------------: | :-----: | :----------: | :-----: | :-------------------------------------: | :------------------------: | :-----------------------------: | :--------------: |
 | -1         |        MMM         | [(M1,K1),(M2,K2),...] | [(K1,N1),(K2,N2),...] | [(M1,N1),(M2,N2),...] | [(N1),(N2),...] | not support | not support |1) B <= 128.|
@@ -272,9 +304,9 @@ The following are the supported shapes and constrains for different scenarios(fo
 | 0          |        SMS         | [(M,K)] | [(K,N),(K,N),...] | [(M,N)] | [(N),(N),...] | (B) | not support |1) B <= 128.|
 | 0          |        MMS         | [(M1,K1),(M2,K2),...] | [(K1,N),(K2,N),...] | [(M,N)] | [(N),(N),...] | (B) | not support |1) B <= 128.|
 | 2          |        SSS         | [(K,M)] | [(K,N)] | [(B,M,N)] | See the constrains below | (B) | See the constrains below |1) B <= 1024.|
-The constrains of inputs' shape in quantization(for Ascend950PR/Ascend950DT) can be found in the table "The following are the supported quantization modes, data types and shapes(for Ascend950PR/Ascend950DT)" above.
+The constrains of inputs' shape in quantization(for Ascend 950PR&950DT products) can be found in the table "The following are the supported quantization modes, data types and shapes(for Ascend 950PR&950DT products)" above.
 - Shape of offset and not needed optional-dynamic inputs is [(0)].
-- Shape of weight indicated in above table corresponds to data format ND. Currently, only single-tensor x, single-tensor weight, single-tensor y with group_type 0 case supports weight with format NZ.
+- Shape of weight indicated in above table corresponds to data format ND. Weight with format NZ supports the single-tensor x, single-tensor weight, single-tensor y case and, in MX quantization, the single-tensor x, multi-tensor weight, single-tensor y case.
 - When weight has format NZ, N axis should align to 32 bytes, i.e. if weight has data type int8 , N axis align to 32; if weight has data type float16 , N axis align to 16.
 - In the MXFP4 scenario, the constraint that k must be even and not equal 2. Under non-transposed weight, n must also be even.
 - The following are the supported group_type and constrains for different scenarios:
@@ -285,11 +317,11 @@ The constrains of inputs' shape in quantization(for Ascend950PR/Ascend950DT) can
 | 0          |        SMS         |1) tensors in x, weight and y should have dim num 2.<br>2) group_list must be passed, if group_list_type equals to 0, the last value in group_list must be no greater than the first dimension of tensor in x; if group_list_type equals to 1, sum of values in group_list must be no greater than the first dimension of tensor in x.<br>3) The K axis and N axis of each tensor in weight must be the same.|
 | 0          |        MMS         |1) tensors in x, weight and y should have dim num 2.<br>2) if group_list is passed, when group_list_type equals to 0, difference between two adjacent value in group_list should be consistent with the first dimension of each tensor in x; when group_list_type equals to 1, values in group_list should be consistent with the first dimension of each tensor in x.<br>3) The N axis of each tensor in weight must be the same.|
 | 2          |        SSS         |1) tensor in x and weight should have dim num 2, tensor in y should have dim num 3.<br>2) group_list must be passed, if group_list_type equals to 0, the last value in group_list must be no greater than the first dimension of tensor in x; if group_list_type equals to 1, sum of values in group_list must be no greater than the first dimension of tensor in x.|
-- Atlas Inference Series Product Constraints:
-- Atlas Inference Series Product only supports single-tensor x, single-tensor weight, single-tensor y, and group_type 0 cases. 
-- Atlas Inference Series Product only supports x, weight and y have data type float16, and N axis should align to 16. 
+- Atlas inference products Constraints:
+- Atlas inference products only supports single-tensor x, single-tensor weight, single-tensor y, and group_type 0 cases.
+- Atlas inference products only supports x, weight and y have data type float16, and N axis should align to 16.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

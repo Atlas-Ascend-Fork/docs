@@ -11,17 +11,17 @@ REG_OP(TridiagonalSolve)
 
 ## Brief
 
-Solves tridiagonal systems of equations. 
+Solves tridiagonal systems of equations.
 
 ## Inputs
 
 - diagonals: Tensor of shape `[..., 3, M]` whose innermost 2 dimensions represent the tridiagonal matrices with three rows being the superdiagonal, diagonals, and subdiagonals, in order. The last element of the superdiagonal and the first element of the subdiagonal is ignored.
 - rhs: Tensor of shape `[..., M, K]`, representing K right-hand sides per each
-left-hand side. 
+left-hand side.
 
 ## Outputs
 
-y: Tensor of shape `[..., M, K]` containing the solutions. 
+y: Tensor of shape `[..., M, K]` containing the solutions.
 
 ## Attributes
 
@@ -45,4 +45,4 @@ Compatible with TensorFlow TridiagonalSolve operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

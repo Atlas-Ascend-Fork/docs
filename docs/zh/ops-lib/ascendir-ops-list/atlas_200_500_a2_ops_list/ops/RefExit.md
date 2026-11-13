@@ -19,11 +19,11 @@ Exits the current frame to its parent frame .
 
 x: The tensor to be made available to the parent frame.
   Must be one of the following types: float16, float32, float64, int8,
-  int16, int32, int64, uint8, uint16, uint32, uint64, bool . 
+  int16, int32, int64, uint8, uint16, uint32, uint64, bool .
 
 ## Outputs
 
-y: A tensor. Has the same type as "x" . 
+y: A tensor. Has the same type as "x" .
 @see Enter() | Exit()
 
 ## Third-party framework compatibility
@@ -33,4 +33,4 @@ Compatible with the TensorFlow operator RefExit.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

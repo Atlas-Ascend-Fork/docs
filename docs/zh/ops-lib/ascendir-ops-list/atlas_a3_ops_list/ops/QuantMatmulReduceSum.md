@@ -43,8 +43,8 @@ The fusion operator of QuantBatchMatmul and ReduceSum.
 
 ## Outputs
 
-y: A matrix tensor. The data type is bfloat16. The format supports ND. 
-Atlas A2 Trainging Series Product/Atlas 800I A2 Inference Product or Atlas A3 Training Series Product: 
+y: A matrix tensor. The data type is bfloat16. The format supports ND.
+Atlas A2 products or Atlas A3 products:
 | x1   | x2   | x1Scale  | x2Scale  | yScale | x1Offset | x2Offset | yOffset | bias  | out     |
 |------|------|----------|----------|--------|----------|----------|---------|-------|---------|
 | INT8 | INT8 | FLOAT32  | BFLOAT16 | null   | null     | null     | null    | null  |BFLOAT16 |
@@ -78,4 +78,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

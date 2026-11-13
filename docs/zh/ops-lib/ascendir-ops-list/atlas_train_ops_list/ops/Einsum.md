@@ -17,13 +17,13 @@ Concatenates a list of N tensors along the first dimension.
 
 - x: A list of Tensors. Must be one of the following types:  int32,
 float16, float32. Tensors to be concatenated. All must have size 1 in
- the first dimension and same shape. It's a dynamic input. 
+ the first dimension and same shape. It's a dynamic input.
 
 ## Outputs
 
 - y: Sums the product of the elements of the input operands along
 dimensions specified
-using a notation based on the Einstein summation convention. 
+using a notation based on the Einstein summation convention.
 
 ## Attributes
 
@@ -32,7 +32,7 @@ using a notation based on the Einstein summation convention.
 
 ## Attention Constraints
 
-Input N must be Int. 
+Input N must be Int.
 
 ## Third-party framework compatibility
 
@@ -41,4 +41,4 @@ Compatible with Tensorflow 2.x einsum operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

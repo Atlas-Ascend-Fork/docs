@@ -18,7 +18,7 @@ REG_OP(RoiPoolingGradWithArgMax)
 
 ## Brief
 
-Performs the backpropagation of ROI Pooling . 
+Performs the backpropagation of ROI Pooling .
 
 ## Inputs
 
@@ -37,7 +37,7 @@ y1 should be less than y2. T hat shape[0] batch should not exceed 1024.
 the number of ROIs per batch.
 - argmax: A tensor of type int32, describing the index of grad,
 with shape [batch, C, pooled_h, pooled_w]. Each value of argmax must be
-within the corresponding pooling region. 
+within the corresponding pooling region.
 
 ## Outputs
 
@@ -79,4 +79,4 @@ It has a corresponding operator in MMCV.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

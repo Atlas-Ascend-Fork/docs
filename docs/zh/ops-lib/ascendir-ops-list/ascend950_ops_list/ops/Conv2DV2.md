@@ -20,8 +20,8 @@ REG_OP(Conv2DV2)
 
 ## Brief
 
-Conv2DV2 computes a 2D convolution given "x", "filter" and "bias" tensors.
-The output is computed as: output = CONV(x, filter) + bias.
+Conv2Dv2 computes a 2D convolution given 4D "x", "filter" and "bias" tensors.
+Like this, output = CONV(x, filter) + bias.
 
 ## Inputs
 
@@ -42,14 +42,6 @@ The following are the supported data types and data formats:
 |           | hifloat8 | hifloat8 | float32  | hifloat8 |
 | Format    | NCHW     | NCHW     | ND       | NCHW     |
 |           | NHWC     | HWCN     | ND       | NHWC     |
-The following are the supported data types and data formats for MC62:
-| Tensor    | x        | filter                   | bias    | y        |
-| :-------: | :------: | :----------------------: | :-----: | :------: |
-| Data Type | float16  | float16                  | float16 | float16  |
-| Format    | NCHW     | FRACTAL_Z/FRACTAL_Z_C04  | ND      | NCHW     |
-|           | NCHW     | FRACTAL_Z/FRACTAL_Z_C04  | ND      | NHWC     |
-|           | NHWC     | FRACTAL_Z/FRACTAL_Z_C04  | ND      | NCHW     |
-|           | NHWC     | FRACTAL_Z/FRACTAL_Z_C04  | ND      | NHWC     |
 
 ## Outputs
 
@@ -79,14 +71,14 @@ When the format is "NHWC", its shape is [1, dilation_h, dilation_w, 1],
 when the format is "NCHW", its shape is [1, 1, dilation_h, dilation_w]. Defaults to [1, 1, 1, 1].
 - groups: Optional. An integer of type int32. The number of groups
 in group convolution. In_channels and out_channels must both be divisible by "groups". Defaults to 1.
-- data_format: Optional. It is a string representing x's data format. Defaults to "NCHW".
+- data_format: Optional. It is a string represents input's data format. Defaults to "NCHW". Reserved.
 - offset_x: Optional. An integer of type int32. It means offset in quantization algorithm
 and is used for filling in pad values. Ensure that the output is within the
-effective range. Defaults to 0.
-- pad_mode: Optional. A string parameter, indicating the mode of
+effective range. Defaults to 0. Reserved.
+- pad_mode: Optional. An string parameter, indicating the mode of
 pad. It must be "SPECIFIC" or "SAME" or "VALID" or "SAME_UPPER" or "SAME_LOWER".
 Defaults to "SPECIFIC".
-- enable_hf32: Optional. A bool parameter. Used to enable hf32 computation.
+- enable_hf32: Optional. An optional bool parameter. Used to enable hf32 computation.
 If true, enable hf32 computation, otherwise, disable hf32 computation. Defaults to false.
 
 ## Data Types
@@ -138,4 +130,4 @@ exceeds the range in the above table, the correctness of the operator cannot be 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

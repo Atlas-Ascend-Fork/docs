@@ -57,4 +57,4 @@ Shapes and datatypes of grads and activations must be the same.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

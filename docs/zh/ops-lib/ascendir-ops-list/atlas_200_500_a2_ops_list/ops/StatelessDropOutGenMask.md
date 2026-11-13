@@ -13,7 +13,7 @@ REG_OP(StatelessDropOutGenMask)
 
 ## Brief
 
-Generate stateless random bit mask for dropout . 
+Generate stateless random bit mask for dropout .
 
 ## Inputs
 
@@ -26,7 +26,7 @@ include:
 
 ## Outputs
 
-y:Output (1-D) random number using uint data format . 
+y:Output (1-D) random number using uint data format .
 
 ## Data Types
 
@@ -47,4 +47,4 @@ The output is aligned with 128 bits.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -14,7 +14,7 @@ REG_OP(SequenceInsert)
 ## Brief
 
 ouputs a tensor sequence that insert tensor into sequence at 'position',
-tensor must have the same data type as input_sequence. 
+tensor must have the same data type as input_sequence.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ counting position from back, accepted range in [-n, n - 1],
 where n is the number of tensors in sequence,
 it must be a scalar(tensor of empty shape), Must be one of the following types:
 uint8, uint16, uint32, uint64, int8, int16, int32, int64, float16, float, double, bool,
-complex64, complex128, it is scalar. 
+complex64, complex128, it is scalar.
 
 ## Outputs
 
@@ -43,4 +43,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

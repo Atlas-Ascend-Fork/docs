@@ -29,26 +29,20 @@ CommonLSTM calculation.
 
 ## Inputs
 
-eight inputs: 
+eight inputs:
 - x:Each time step is a 4D Tensor. Must be one of the following types: float16, float32.
 - w:Each direction is a 4D Tensor. Must be one of the following types: float16, float32.
 - r:Each direction is a 4D Tensor. Must be one of the following types: float16, float32.
-- b:An optional input. Each direction is a 1D Tensor. Must be one of the following types: float16, float32. The
-format must be ND.
-- sequence_lens:An optional input. A 1D Tensor.Must be one of the following types: int32. The format must be
-ND.
-- initial_h:An optional input. Each direction is a 4D Tensor. Must be one of the following types: float16,
-float32.
-- initial_c:An optional input. Each direction is a 4D Tensor. Must be one of the following types: float16,
-float32.
-- p:An optional input. Each direction is a 1D Tensor.Must be one of the following types: float16, float32. The
-format must be ND.
+- b:An optional input. Each direction is a 1D Tensor. Must be one of the following types: float16, float32. The format must be ND.
+- sequence_lens:An optional input. A 1D Tensor.Must be one of the following types: int32. The format must be ND.
+- initial_h:An optional input. Each direction is a 4D Tensor. Must be one of the following types: float16, float32.
+- initial_c:An optional input. Each direction is a 4D Tensor. Must be one of the following types: float16, float32.
+- p:An optional input. Each direction is a 1D Tensor.Must be one of the following types: float16, float32. The format must be ND.
 
 ## Outputs
 
-three outputs: 
-- y:First dimension is time step, second dimension is direction, others is a 4D Tensor. Must be one of the
-following types: float16, float32.
+three outputs:
+- y:First dimension is time step, second dimension is direction, others is a 4D Tensor. Must be one of the following types: float16, float32.
 - y_h:Each direction is a 4D Tensor. Must be one of the following types: float16, float32.
 - y_c:Each direction is a 4D Tensor. Must be one of the following types: float16, float32.
 
@@ -58,12 +52,11 @@ following types: float16, float32.
 - activation_beta:Optional scaling values used by some activation functions. Empty is currently supported.
 - activations:The list of activation functions. Empty is currently supported.
 - clip:An float identifying the cell clip in the op. Default to -1.
-- direction:Specify if the RNN is forward, reverse, or bidirectional. Must be one of forward(default), reverse,
-or bidirectional.
+- direction:Specify if the RNN is forward, reverse, or bidirectional. Must be one of forward(default), reverse, or bidirectional.
 - hidden_size:Number of neurons in the hidden layer. Reserved.
 - input_forget:Couple the input and forget gates if 1. Reserved.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

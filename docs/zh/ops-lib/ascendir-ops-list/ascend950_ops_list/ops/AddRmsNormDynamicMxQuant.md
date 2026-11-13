@@ -23,10 +23,10 @@ REG_OP(AddRmsNormDynamicMxQuant)
 Fused Operator of AddRmsNorm and DynamicMxQuant.
 Computes x = x1 + x2, applies RMS normalization with gamma/beta, then quantizes.
 Supports various 4-bit and 8-bit floating point output formats.
-Calculating process: 
- x = x1 + x2 
- rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon)) 
- rmsnorm_out = x * rstd * gamma 
+Calculating process:
+ x = x1 + x2
+ rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon))
+ rmsnorm_out = x * rstd * gamma
  the normalized result using block-wise MX scaling factors along the last axis.
 
 ## Inputs
@@ -84,4 +84,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

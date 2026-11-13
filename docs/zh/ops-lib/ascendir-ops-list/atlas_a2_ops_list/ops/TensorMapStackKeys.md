@@ -10,15 +10,15 @@ REG_OP(TensorMapStackKeys)
 
 ## Brief
 
-Return TensorMapStackKeys. 
+Return TensorMapStackKeys.
 
 ## Inputs
 
-input_handle: A Tensor. Must be one of the following types: variant. 
+input_handle: A Tensor. Must be one of the following types: variant.
 
 ## Outputs
 
-keys: A Tensor. Must be one of the following types: int32, int64, string. 
+keys: A Tensor. Must be one of the following types: int32, int64, string.
 
 ## Attributes
 
@@ -34,4 +34,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

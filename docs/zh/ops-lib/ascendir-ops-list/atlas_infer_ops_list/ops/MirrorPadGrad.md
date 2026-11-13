@@ -15,7 +15,7 @@ REG_OP(MirrorPadGrad)
 
 ## Brief
 
-Gradient op for MirrorPad op. Folds a mirror-padded tensor. 
+Gradient op for MirrorPad op. Folds a mirror-padded tensor.
 
 ## Inputs
 
@@ -23,15 +23,15 @@ Inputs "x" and "y" are 1D vectors.
 - x: A tensor of type int8, uint8, int16, uint16, int32, int64, float16, float,
 double, complex64 and complex128. The input tensor to be folded.
 - paddings: A tensor of type int32 or int64. A two-column matrix
-specifying the padding sizes. 
+specifying the padding sizes.
 
 ## Outputs
 
-y: A tensor. Has the same type as "x". 
+y: A tensor. Has the same type as "x".
 
 ## Attributes
 
-mode: A string from: "REFLECT", "SYMMETRIC". The mode used in the MirrorPad op. 
+mode: A string from: "REFLECT", "SYMMETRIC". The mode used in the MirrorPad op.
 
 ## Data Types
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-MirrorPadGrad runs on the Ascend AI CPU, which delivers poor performance. 
+MirrorPadGrad runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator MirrorPadGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

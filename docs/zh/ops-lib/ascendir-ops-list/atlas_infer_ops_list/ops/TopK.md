@@ -18,7 +18,7 @@ Finds the k largest or smallest values and indices along a dimension.
 
 ## Inputs
 
-x: A Tensor of type float16/float/double/int8/int16/int32/int64/uint8/uint16/uint32/uint64/bfloat16. 
+x: A Tensor of type float16/float/double/int8/int16/int32/int64/uint8/uint16/uint32/uint64/bfloat16.
 k: A Tensor of type int32, specifying the number of top elements.
 
 ## Outputs
@@ -44,4 +44,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

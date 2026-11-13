@@ -9,11 +9,11 @@ REG_OP(EndOfSequence)
 
 ## Brief
 
-End of sequence. 
+End of sequence.
 
 ## Inputs
 
-x: A Tensor of type uint8. 
+x: A Tensor of type uint8.
 
 ## Outputs
 
@@ -22,4 +22,4 @@ y: A Tensor. Has the same type as "x".
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

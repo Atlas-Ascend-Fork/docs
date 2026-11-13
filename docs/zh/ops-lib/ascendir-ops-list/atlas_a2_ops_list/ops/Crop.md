@@ -30,14 +30,14 @@ The format support ND, NCHW, NHWC and NC1HWC0. Shape support 1D ~ 8D.
 float32, int8, uint8, int16, uint16, int32, uint32, int64, uint64.
 The format support ND, NCHW, NHWC and NC1HWC0. Shape support 1D ~ 8D.
 The format and type are same as "x".
-Each dimension of "size" cannot exceed the corresponding dimension of "x". 
+Each dimension of "size" cannot exceed the corresponding dimension of "x".
 
 ## Outputs
 
 y: A required Tensor. The format support ND, NCHW, NHWC and NC1HWC0.
 Shape support 1D ~ 8D. Must be one of the following types: float16,
 float32, int8, uint8, int16, uint16, int32, uint32, int64, uint64.
-Has the same type, format and shape as "size" . 
+Has the same type, format and shape as "size" .
 
 ## Attributes
 
@@ -49,7 +49,7 @@ The Op Crop can support HC1HWC0 and ND.
 specifying the shift for all/each dimension to align the cropped bottom with
 the reference bottom. No default value.
 Must be one of the following types: float16, float32, int8, uint8, int16,
-uint16, int32, uint32, int64, uint64. 
+uint16, int32, uint32, int64, uint64.
 
 ## Data Types
 
@@ -79,4 +79,4 @@ Compatible with the Caffe operator Crop.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

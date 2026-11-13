@@ -14,7 +14,7 @@ REG_OP(TensorArraySplit)
 
 ## Brief
 
-Split the data from the input value into TensorArray elements. 
+Split the data from the input value into TensorArray elements.
 
 ## Inputs
 
@@ -27,7 +27,7 @@ the TensorArray.
 
 ## Outputs
 
-flow_out: A float scalar that enforces proper chaining of operations. 
+flow_out: A float scalar that enforces proper chaining of operations.
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with tensorflow TensorArraySplit operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

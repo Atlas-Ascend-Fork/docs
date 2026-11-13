@@ -43,7 +43,7 @@ ExtendConv2D computes a 2D convolution + fixpipe fused operator.
 With the format "NCHW" which shape is [out_channels, in_channels / groups, kernel_h, kernel_w].
 - bias: An optional 1D tensor of additive biases to the outputs.
 The data is stored in the order of: [out_channels].
-- offset_w: An optional quantitative offset tensor. Reserved.
+- offset: An optional quantitative offset tensor. Reserved.
 - scale0: An optional 1D tensor. Quantization/dequantization/weighting parameter corresponding to
 the first output, which is of the channelwise type.
 - relu_weight0: An optional 1D tensor. Indicates the relu slope parameter corresponding to the
@@ -54,31 +54,20 @@ The value is of the scalar type.
 the second output, which is of the scalar type or channelwise type.
 - relu_weight1: An optional 1D tensor. Quantization/dequantization/weighting parameter corresponding to
 the second output, which is of the scalar type or channelwise type.
-- clip_value1: An optional 1D tensor. Truncated value of clip relu corresponding to the second output.
+- clip_value1: An optional 1D tensor. Truncated value of clip relu corresponding to the seccond output.
 The value is of the scalar type.
 The following are the supported data types and data formats:
-| Tensor    | x        | filter   | bias    | scale0, scale1  | relu_weight0, relu_weight1 | clip_value0, clip_value1 | y0, y1                             |
-| :-------: | :------: | :------: | :-----: | :-------------: | :------------------------: | :----------------------: | :--------------------------------: |
-| Data Type | int8     | int8     | int32   | uint64 or int64 | float32                    | int8                     | float16 or int8                    |
-|           | hifloat8 | hifloat8 | float32 | uint64 or int64 | float32                    | hifloat8                 | float32, float16, bfloat16 or hifloat8|
-|           | float8   | float8   | float32 | uint64 or int64 | float32                    | float8                   | float32, float16, bfloat16 or float8_e4m3|
-| Format    | NCHW     | NCHW     | ND      | ND              | ND                         | ND                       | NCHW                               |
-| Tensor    | x        | filter   | bias    | scale0, scale1  | relu_weight0, relu_weight1 | clip_value0, clip_value1 | y0, y1             |
-| :-------: | :------: | :------: | :-----: | :-------------: | :------------------------: | :----------------------: | :---------------: |
-| Data Type | int8     | int8     | int32   | uint64 or int64 | float32                    | int8                     | float16 or int8    |
-| Format    | NHWC     | HWCN     | ND      | ND              | ND                         | ND                       | NHWC               |
-The following are the supported data types and data formats for MC62:
-| Tensor    | x        | filter                   | bias    | scale0, scale1  | relu_weight0, relu_weight1 | clip_value0, clip_value1 | y0, y1          |
-| :-------: | :------: | :----------------------: | :-----: | :-------------: | :------------------------: | :----------------------: | :-------------: |
-| Data Type | int8     | int8                     | int32   | uint64 or int64 | float32                    | float16 or int8          | float16 or int8 |
-|           | float16  | int8                     | int32   | uint64 or int64 | float32                    | float16 or int8          | float16 or int8 |
-|           | float16  | float16                  | float16 | uint64 or int64 | float32                    | float16                  | float16         |
-| Format    | NCHW     | FRACTAL_Z/FRACTAL_Z_C04  | ND      | ND              | ND                         | ND                       | NCHW            |
-|           | NCHW     | FRACTAL_Z/FRACTAL_Z_C04  | ND      | ND              | ND                         | ND                       | NHWC            |
-|           | NHWC     | FRACTAL_Z/FRACTAL_Z_C04  | ND      | ND              | ND                         | ND                       | NCHW            |
-|           | NHWC     | FRACTAL_Z/FRACTAL_Z_C04  | ND      | ND              | ND                         | ND                       | NHWC            |
-Note: When filter format is FZ_C04, only x, filter and bias dtype all being float16 is supported.
-Note: clip_value0 and y0 must have the same dtype, clip_value1 and y1 must have the same dtype.
+| Tensor    | x        | filter   | bias    | scale0/1     | relu_weight0/1 | clip_value0/1 | y0/1    |
+| :-------: | :------: | :------: | :-----: | :----------: | :------------: | :-----------: | :-----: |
+| Data Type | int8     | int8     | int32   | uint64/int64 | float32        | int8          | float16/int8 |
+|           | hifloat8 | hifloat8 | float32 | uint64/int64 | float32        | hifloat8      |
+float32/float16/bfloat16/hifloat8 | |           | float8   | float8   | float32 | uint64/int64 | float32        |
+float8        | float32/float16/bfloat16/float8_e4m3 | | Format    | NCHW     | NCHW     | ND      | ND           | ND
+| ND            | NCHW    |
+| Tensor    | x        | filter   | bias    | scale0/1     | relu_weight0/1 | clip_value0/1 | y0/1    |
+| :-------: | :------: | :------: | :-----: | :----------: | :------------: | :-----------: | :-----: |
+| Data Type | int8     | int8     | int32   | uint64/int64 | float32        | int8          | float16/int8 |
+| Format    | NHWC     | HWCN     | ND      | ND           | ND             | ND            | NHWC    |
 
 ## Outputs
 
@@ -107,29 +96,29 @@ dimension of input. The dimension order is determined by the data format of
 When the format is "NCHW", its shape is [1, 1, dilation_h, dilation_w]. Defaults to [1, 1, 1, 1].
 - groups: Optional. An integer of type int32. The number of groups
 in group convolution. In_channels and out_channels must both be divisible by "groups". Defaults to 1.
-- data_format: Optional. It is a string representing x's data format.
-Defaults to "NCHW".
+- data_format: Optional. It is a string represents input's data format.
+Defaults to "NCHW". Reserved.
 - offset_x: Optional. An integer of type int32. It means offset in quantization algorithm
 and is used for filling in pad values. Ensure that the output is within the
-effective range. Defaults to 0.
-- round_mode: Rounding mode used in quantization.
-If output's dtype is hifloat8, round_mode can be set to "round". Otherwise, it can be set to "rint".
+effective range. Defaults to 0. Reserved.
+- round_mode: Rounding mode enable quantization.
+If output's dtype is hifloat8, round_mode can be set to 'round'. Otherwise, it can be set to 'rint'.
 Defaults to "rint".
-- pad_mode: Optional. A string parameter, indicating the mode of pad.
+- pad_mode: Optional. An optional string parameter, indicating the mode of pad.
 It must be "SPECIFIC" or "SAME" or "VALID" or "SAME_UPPER" or "SAME_LOWER". Defaults to "SPECIFIC".
-- enable_hf32: Optional. A bool for ExtendConv2D. If True, enable hf32 calculation. Defaults to false.
-If False, disable hf32 calculation.
+- enable_hf32: Optional. An bool for extendConv2D. If True, enable hf32 calculation. Defaults to false.
+If False, disable hf32 calculation. Must be false.
 - enable_relu0: Optional. Indicates whether relu is enabled for the first output. Defaults to false.
-If False, relu is disabled for the first output.
+If False, relu is disable for the first output. Must be false.
 - enable_relu1: Optional. Indicates whether relu is enabled for the second output. Defaults to false.
-If False, relu is disabled for the second output.
+If False, relu is disable for the second output. Must be false.
 - dual_output: Optional. Indicates whether dual outputs are used. Defaults to false.
-When dual_output is false, ExtendConv2D only has output y0. When dual_output is true,
-ExtendConv2D has output y0 and y1.
-- dtype0: Optional. An integer of type int8. It means the dtype of output y0.
+When dual_output is false, extendConv2D only has output y0. When dual_output is true,
+extendConv2D has output y0 and y1. Must be false.
+- dtype0: Optional. A integer of type int8. It means the dtype of output y0.
 Support list is [-1(Default), 0(DT_FLOAT), 1(DT_FLOAT16), 2(DT_INT8), 27(DT_BF16),
 34(DT_HIFLOAT8), 36(DT_FLOAT8_E4M3FN)]. Defaults to -1, means the dtype is the same as x.
-- dtype1: Optional. An integer of type int8. It means the dtype of output y1.
+- dtype1: Optional. A integer of type int8. It means the dtype of output y1.
 Support list is [-1(Default), 0(DT_FLOAT), 1(DT_FLOAT16), 2(DT_INT8), 27(DT_BF16),
 34(DT_HIFLOAT8), 36(DT_FLOAT8_E4M3FN)]. Defaults to -1, means the dtype is the same as x. Must be -1.
 
@@ -188,15 +177,13 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 | enable_relu0      | -                    | [true, false] |
 | enable_relu1      | -                    | [true, false] |
 | dual_output       | -                    | [true, false] |
-- The w dimension of the input image supports cases exceeding 4096, but it may
-cause compilation errors.
-- If any dimension of x/filter/bias/offset_w/scale0/relu_weight0/clip_value0/scale1/relu_weight1/clip_value1/y
-shape exceeds max 1000000, the product of each dimension of x/filter/bias/offset_w/y
-shape exceeds max int32(2147483647) or the value of
-strides/pads/dilations/groups/data_format/offset_x/pad_mode/enable_hf32
+- In Ascend 950PR&950DT products: If any dimension of
+x/filter/bias/offset_w/scale0/relu_weight0/clip_value0/scale1/relu_weight1/clip_value1/y shape exceeds max
+1000000, the product of each dimension of x/filter/bias/scale/offset/y
+shape exceeds max int32(2147483647) or the value of strides/pads/dilations/offset_x
 exceeds the range in the above table, the correctness of the operator cannot be guaranteed.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

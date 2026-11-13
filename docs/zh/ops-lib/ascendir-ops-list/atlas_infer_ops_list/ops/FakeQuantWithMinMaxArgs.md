@@ -19,17 +19,17 @@ Fake-quantizes the input Tensor, type float to output a Tensor of same type.
  when "narrow_range" is "false" or [1, 2^num_bits - 1] when it is "true") and
  then de-quantized and output as float32 in [min; max] interval.
  "num_bits" is the bit width of the quantization, between 2 and 16, inclusive.
- Quantization is called fake since the output is still in floating point. 
+ Quantization is called fake since the output is still in floating point.
 
 ## Inputs
 
 One input:
-x: A ND Tensor of type float32. Shape support 1D ~ 8D. 
+x: A ND Tensor of type float32. Shape support 1D ~ 8D.
 
 ## Outputs
 
 y: A ND Tensor of type float32. Shape support 1D ~ 8D.
-Has the same shape and type of "x". 
+Has the same shape and type of "x".
 
 ## Attributes
 
@@ -52,4 +52,4 @@ Compatible with TensorFlow operator FakeQuantWithMinMaxArgs.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

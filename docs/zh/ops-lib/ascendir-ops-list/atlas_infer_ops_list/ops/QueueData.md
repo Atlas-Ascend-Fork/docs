@@ -12,11 +12,11 @@ REG_OP(QueueData)
 
 ## Brief
 
-Queue data for other operators. 
+Queue data for other operators.
 
 ## Outputs
 
-y: A DT_UINT8 tensor. 
+y: A DT_UINT8 tensor.
 
 ## Attributes
 
@@ -30,4 +30,4 @@ be set 1, and the left should be set 2.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -19,33 +19,33 @@ REG_OP(GenerateBoundingBoxProposals)
 
 Select top 'pre_nms_topn' scoring boxes, decodes them with respect to anchors, applies non-maximal suppression
 on overlapping boxes with higher than 'nms_threshold' intersection-over-union (IoU) value, discarding boxes where
-shorter side is less than 'min_size'. 
+shorter side is less than 'min_size'.
 
 ## Inputs
 
 scores: 4-D tensor with shape of [num_images, height, width, num_anchors], containing the scores of the boxes for
-given anchors, can be unsorted. Must be one of the following types: float16, float32 . 
+given anchors, can be unsorted. Must be one of the following types: float16, float32 .
 bbox_deltas: 4-D tensor with shape of [num_images, height, width, 4 * num_anchors], encoding boxes with respect to
 each anchor. Coordinates are given in the form [dy, dx, dh, dw].
-Must be one of the following types: float16, float32.. 
+Must be one of the following types: float16, float32..
 image_info: 2-D tensor with shape of [num_images, 5], containing image information Height, Width, Scale. Must be one
-of the following types: float16, float32. 
+of the following types: float16, float32.
 anchors: 3-D tensor with shape of [height, width, 4 * num_anchors], describing the anchor boxes. Boxes are formatted
-in the form [y1, x1, y2, x2]. Must be one of the following types: float16, float32. 
-nms_threshold: A scalar of type float16 or float32, non-maximal suppression threshold. 
-pre_nms_topn: A scalar of type int32, number of top scoring boxes to be used as input. 
-min_size: A scalar of type float32, Any boxes that has a smaller size than min_size will be discarded. 
+in the form [y1, x1, y2, x2]. Must be one of the following types: float16, float32.
+nms_threshold: A scalar of type float16 or float32, non-maximal suppression threshold.
+pre_nms_topn: A scalar of type int32, number of top scoring boxes to be used as input.
+min_size: A scalar of type float32, Any boxes that has a smaller size than min_size will be discarded.
 
 ## Outputs
 
 - rois: 3-D tensor with shape of [num_images, post_nms_topn, 4], padded by 0 if less than 'post_nms_topn'. Must be
-one of the following types: float16, float32 . 
+one of the following types: float16, float32 .
 - rois_probabilities: 2-D tensor with shape of [num_images, post_nms_topn], probability of each roi in 'rois'
-padded by 0 if needed, sorted by scores. Must be one of the following types: float16, float32. 
+padded by 0 if needed, sorted by scores. Must be one of the following types: float16, float32.
 
 ## Attributes
 
-post_nms_topn: An optional int32. Maximum number of rois in the output. Defaults to be 300. 
+post_nms_topn: An optional int32. Maximum number of rois in the output. Defaults to be 300.
 
 ## Data Types
 
@@ -68,4 +68,4 @@ Only supports 2864 input boxes at one time.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

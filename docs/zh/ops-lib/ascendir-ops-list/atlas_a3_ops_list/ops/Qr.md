@@ -14,12 +14,12 @@ REG_OP(Qr)
 
 ## Brief
 
-Computes the QR decompositions of one or more matrices . 
+Computes the QR decompositions of one or more matrices .
 
 ## Inputs
 
 The input shape of x must be [..., M, N]. Inputs include:
-x:A Tensor whose shape is [..., M, N]. 
+x:A Tensor whose shape is [..., M, N].
 
 ## Outputs
 
@@ -30,7 +30,7 @@ x:A Tensor whose shape is [..., M, N].
 
 full_matrices: An optional bool. Defaults to False. If true, compute
 full-sized q and r. If false (the default), compute only the leading P
-columns of q . 
+columns of q .
 
 ## Data Types
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The input matrix x is a tensor of shape [..., M, N] whose inner-most 2
-dimensions form matrices of size [M, N].  
+dimensions form matrices of size [M, N].
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with tensorflow Qr operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

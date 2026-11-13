@@ -19,18 +19,18 @@ tensors.
 x: A rank-R tensor (R > 0) of type BasicType.(BasicType includes:
 complex128, complex64, double, float32, float16, int16, int32, int64, int8,
 qint16, qint32, qint8, quint16, quint8, uint16, uint32, uint64, uint8,
-bfloat16, complex32.) 
+bfloat16, complex32.)
 
 ## Outputs
 
-y: Dynamic output. The list of Tensor objects unpacked from "x", of type BasicType . 
+y: Dynamic output. The list of Tensor objects unpacked from "x", of type BasicType .
 
 ## Attributes
 
 - num: A required int, specifying the number of tensors to be unpacked to.
 Defaults to "None".
 - axis: An optional int, specifying the axis to unpack along. The value range
-is [-R, R). Defaults to "0". 
+is [-R, R). Defaults to "0".
 
 ## Data Types
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-For the ND format, "axis" is in the range [-R, R). 
+For the ND format, "axis" is in the range [-R, R).
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator Unstack.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

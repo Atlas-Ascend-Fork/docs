@@ -18,7 +18,7 @@ REG_OP(GroupNormSwish)
 
 ## Brief
 
-Performs group normalization and swish. 
+Performs group normalization and swish.
 
 ## Inputs
 
@@ -27,7 +27,7 @@ Three inputs
 - gamma: A Tensor of type bfloat16/float16/float32.
 Must be 1D. Specifies the scaling factor.
 - beta: A Tensor of type bfloat16/float16/float32.
-Must be 1D. Specifies the offset. 
+Must be 1D. Specifies the offset.
 
 ## Outputs
 
@@ -36,7 +36,7 @@ Three outputs
 - mean: A Tensor of type bfloat16/float16/float32.
 Must be 1D. Specifies the mean of "x".
 - rstd: A Tensor of type bfloat16/float16/float32.
-Must be 1D. Specifies the rstd of "x". 
+Must be 1D. Specifies the rstd of "x".
 
 ## Attributes
 
@@ -65,4 +65,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

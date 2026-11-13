@@ -12,20 +12,19 @@ REG_OP(SparseReshape)
 
 ## Brief
 
-Reshapes a sparse tensor from input shape to output shape.
+Reshapes a SparseTensor to represent values in a new dense shape.
 
 ## Inputs
 
-Three inputs, including:
-- indices: A 2D Tensor. Must be one of the following types: int32, int64. Shape [nnz, input_rank].
-- shape: A 1D Tensor. Must be one of the following types: int32, int64. Shape [input_rank].
-- new_shape: A 1D Tensor. Must be one of the following types: int32, int64. Shape [output_rank].
+The input of int32 support only static input
+- indices: A matrix tensor of type int64 or type int32. 2D. The indices of the SparseTensor.
+- shape: A vector tensor of type int64 or type int32. 1D. The shape of the SparseTensor.
+- new_shape: A 1D tensor of type int64 or type int32. The requested new dense shape.
 
 ## Outputs
 
-Two outputs, including:
-- y_indices: A 2D Tensor. Must be one of the following types: int32, int64. Shape [nnz, output_rank].
-- y_shape: A 1D Tensor. Must be one of the following types: int32, int64. Shape [output_rank].
+- y_indices: A tensor of type int64 or int32. The indices of the new dense shape.
+- y_shape: A tensor of type int64 or int32. The shape of the new dense shape.
 
 ## Data Types
 
@@ -44,4 +43,4 @@ Compatible with the TensorFlow operator SparseReshape.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

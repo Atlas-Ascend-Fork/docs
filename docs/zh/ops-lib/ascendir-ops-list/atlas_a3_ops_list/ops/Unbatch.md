@@ -18,7 +18,7 @@ REG_OP(Unbatch)
 
 ## Brief
 
-Reverses the operation of Batch for a single output Tensor .   
+Reverses the operation of Batch for a single output Tensor .
 
 ## Inputs
 
@@ -29,7 +29,7 @@ Input "x_tensors" is a list or a dictionary of tensors.
 
 ## Outputs
 
-y_tensor: A list or dictionary of tensors with the same types as "x_tensors" .   
+y_tensor: A list or dictionary of tensors with the same types as "x_tensors" .
 
 ## Attributes
 
@@ -37,7 +37,7 @@ y_tensor: A list or dictionary of tensors with the same types as "x_tensors" .
 - container: An optional string. If non-empty, this queue is placed in the given container.
 Otherwise, a default container is used. Defaults to "".
 - shared_name: An optional string. If set, this queue will be shared under the given name
-across multiple sessions. Defaults to "".   
+across multiple sessions. Defaults to "".
 
 ## Data Types
 
@@ -50,7 +50,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Unbatch runs on the Ascend AI CPU, which delivers poor performance.   
+Unbatch runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -59,4 +59,4 @@ Compatible with the TensorFlow operator Unbatch.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

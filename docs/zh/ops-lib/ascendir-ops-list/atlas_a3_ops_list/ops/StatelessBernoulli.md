@@ -14,7 +14,7 @@ REG_OP(StatelessBernoulli)
 
 ## Brief
 
-Generate bernoulli distribution for tensor input . 
+Generate bernoulli distribution for tensor input .
 
 ## Inputs
 
@@ -30,7 +30,7 @@ A tensor of type int64.
 ## Outputs
 
 y: A tensor. The tensor of type support int8, uint8, int16, uint16,
- int32, uint32, int64, uint64, bool, float16, float, double, bf16. 
+ int32, uint32, int64, uint64, bool, float16, float, double, bf16.
 
 ## Attributes
 
@@ -49,4 +49,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

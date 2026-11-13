@@ -24,7 +24,7 @@ Two inputs, including:
 - x1: A ND Tensor. Must be one of the following types: bool, int8, int16, int32, int64, uint8, float64,
     float16, bfloat16, float32, complex128, complex64, complex32, string.
 - x2: A ND Tensor. Must be one of the following types: bool, int8, int16, int32, int64, uint8, float64,
-    float16, bfloat16, float32, complex128, complex64, complex32, string. 
+    float16, bfloat16, float32, complex128, complex64, complex32, string.
 
 ## Outputs
 
@@ -50,4 +50,4 @@ Compatible with the TensorFlow operator Add.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

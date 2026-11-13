@@ -27,7 +27,7 @@ z: A Tensor. Has the same type, shape and format as "dy".
 ## Attributes
 
 approximate: A optional string.
-The gelu grad approximation algorithm to use: 'none' or 'tanh', default is 'none'. 
+The gelu grad approximation algorithm to use: 'none' or 'tanh', default is 'none'.
 
 ## Data Types
 
@@ -50,4 +50,4 @@ Compatible with the Pytorch operator GeluGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

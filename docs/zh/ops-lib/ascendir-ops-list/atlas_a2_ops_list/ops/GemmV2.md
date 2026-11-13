@@ -15,7 +15,7 @@ REG_OP(GemmV2)
 
 ## Brief
 
-GemmV2 matrix "a" by matrix "b" and add matrix "c", producing "alpha * op(a) * op(b) + beta * op(c)". 
+GemmV2 matrix "a" by matrix "b" and add matrix "c", producing "alpha * op(a) @ op(b) + beta * op(c)".
 
 ## Inputs
 
@@ -25,23 +25,21 @@ float16. Has format [ND].
 - b: A matrix Tensor. 2D. Must be one of the following types: bfloat16,
 float16. Has format [ND].
 - alpha: A 1D Tensor. Must be one of the following types: bfloat16,
-float16. Has format [ND]. 
-- beta: A 1D Tensor. Must be one of the following types: bfloat16,
-float16. Has format [ND]. 
-- c: A matrix Tensor. 2D. Must be one of the following types: bfloat16,
 float16. Has format [ND].
+- beta: A 1D Tensor. Must be one of the following types: bfloat16,
+float16. Has format [ND].
+- c: A matrix Tensor. 2D. Must be one of the following types: float32. Has format [ND].
 
 ## Outputs
 
-c: The result matrix Tensor. 2D. Must be one of the following types: bfloat16,
-float16. Has format [ND]. 
+c: The result matrix Tensor. 2D. Must be one of the following types: float32. Has format [ND].
 
 ## Attributes
 
 - transpose_a: A bool. If True, changes the shape of "a" from [M, K] to
 [K, M] before multiplication.
 - transpose_b: A bool. If True, changes the shape of "b" from [K, N] to
-[N, K] before multiplication. 
+[N, K] before multiplication.
 
 ## Data Types
 
@@ -57,4 +55,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

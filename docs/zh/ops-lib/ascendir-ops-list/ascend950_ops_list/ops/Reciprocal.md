@@ -21,7 +21,7 @@ x:A ND Tensor of type float16, float32, double,
 
 ## Outputs
 
-y:A ND Tensor with same type as "x". 
+y:A ND Tensor with same type as "x".
 
 ## Data Types
 
@@ -40,4 +40,4 @@ Compatible with the TensorFlow operator Reciprocal.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -22,16 +22,16 @@ includes: complex128, complex64, double, float32, float16, int16,
 int32, int64,int8, qint32, qint8, quint8, uint16, uint32, uint64,
 uint8, bfloat16, complex32).Supported format list ["ND"].
 - axes: A Tensor. Must be the type of IndexNumberType(
-includes: int32, int64). The dimensions to reduce.Supported format list ["ND"]. 
+includes: int32, int64). The dimensions to reduce.Supported format list ["ND"].
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as input "x" . 
+y: A Tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
 keep_dims: A bool. If true, retains reduced dimensions with length 1.
-Optional and defaults to "False" . 
+Optional and defaults to "False" .
 noop_with_empty_axes: An optional bool. Defaults to "true" .
 - If true, when axes = [], not reduce.
 - If false, when axes = [], reduce all.
@@ -56,4 +56,4 @@ Compatible with the TensorFlow operator ReduceProd.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

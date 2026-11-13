@@ -21,11 +21,11 @@ Creates a one-dimensional tensor of size steps whose values are evenly spaced fr
 
 One inputs, including:
 assist: A tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 
 ## Outputs
 
-y: A Tensor with the same type and shape of assist's. 
+y: A Tensor with the same type and shape of assist's.
 
 ## Attributes
 
@@ -48,9 +48,9 @@ The operator will not be enhanced in the future.
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator logspaced. 
+Compatible with the Pytorch operator logspaced.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

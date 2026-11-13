@@ -2,8 +2,8 @@
 
 ```c
 REG_OP(ForeachNeg)
-    .DYNAMIC_INPUT(x, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_BF16}))
-    .DYNAMIC_OUTPUT(y, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_BF16}))
+    .DYNAMIC_INPUT(x, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_BF16, DT_INT16, DT_INT8, DT_UINT8}))
+    .DYNAMIC_OUTPUT(y, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_BF16, DT_INT16, DT_INT8, DT_UINT8}))
     .OP_END_FACTORY_REG(ForeachNeg)
 ```
 
@@ -24,10 +24,10 @@ One inputs:
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 x: bfloat16,float16,float32,int32
-- output0 y: bfloat16,float16,float32,int32
+- input0 x: bfloat16,float16,float32,int8,int16,int32,uint8
+- output0 y: bfloat16,float16,float32,int8,int16,int32,uint8
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

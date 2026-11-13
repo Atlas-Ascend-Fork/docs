@@ -15,8 +15,8 @@ write tensor value to tensor x.
 
 ## Inputs
 
-x: A Tensor of type float16/float/double/int32/int64. 
-begin:A Tensor of type int32/int64. 
+x: A Tensor of type float16/float/double/int32/int64.
+begin:A Tensor of type int32/int64.
 value: A Tensor of type float16/float/double/int32/int64.
 
 ## Outputs
@@ -35,4 +35,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

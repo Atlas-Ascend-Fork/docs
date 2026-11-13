@@ -13,7 +13,7 @@ REG_OP(FillWindowCache)
 ## Brief
 
 Step the original data block of y forward one by one,
-discard the first data block, and then update x to the last data block of y. 
+discard the first data block, and then update x to the last data block of y.
 
 ## Inputs
 
@@ -35,4 +35,4 @@ discard the first data block, and then update x to the last data block of y.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -23,16 +23,16 @@ REG_OP(RmsNormQuantV3)
 
 RmsNormQuantV3 operator interface implementation.
 Extends RmsNormQuantV2 with optional rstd output.
-Calculating input: x, gamma, scales1, scales2, zero_points1, zero_points2 
-Calculating process: 
- rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon)) 
- rmsnorm_out = x * rstd * gamma 
- if div_mode is true: 
-   y1 = round(rmsnorm_out / scales1 + zero_points1) 
-   y2 = round(rmsnorm_out / scales2 + zero_points2) 
- if div_mode is false: 
-   y1 = round(rmsnorm_out * scales1 + zero_points1) 
-   y2 = round(rmsnorm_out * scales2 + zero_points2) 
+Calculating input: x, gamma, scales1, scales2, zero_points1, zero_points2
+Calculating process:
+ rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon))
+ rmsnorm_out = x * rstd * gamma
+ if div_mode is true:
+   y1 = round(rmsnorm_out / scales1 + zero_points1)
+   y2 = round(rmsnorm_out / scales2 + zero_points2)
+ if div_mode is false:
+   y1 = round(rmsnorm_out * scales1 + zero_points1)
+   y2 = round(rmsnorm_out * scales2 + zero_points2)
 
 ## Inputs
 
@@ -107,4 +107,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -32,7 +32,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 x Given an input tensor, the function computes inverse hyperbolic cosine of every element.
-  Input range must be [1, inf]. 
+  Input range must be [1, inf].
 
 ## Third-party framework compatibility
 
@@ -41,4 +41,4 @@ Compatible with the TensorFlow operator Acosh.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

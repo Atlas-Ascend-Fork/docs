@@ -22,12 +22,12 @@ data types: float16, bfloat16, float32.
 
 ## Outputs
 
-grad_x: A ND tensor. Has the same shape and data type as "softmax" . 
+grad_x: A ND tensor. Has the same shape and data type as "softmax" .
 
 ## Attributes
 
 axes: An optional list of ints. Multi-axis reduction is supported. Defaults to "{-1}".
-In Ascend 950 AI Processor, only single-axis reduction is supported. 
+In Ascend 950 AI Processor, only single-axis reduction is supported.
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Compatible with TensorFlow operator SoftmaxGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

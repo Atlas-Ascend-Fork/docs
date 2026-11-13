@@ -10,8 +10,8 @@ REG_OP(Atanh)
 ## Brief
 
 Computes inverse hyperbolic tangent of x element-wise.
-Given an input tensor, this function computes inverse hyperbolic tangent for every element in the tensor. 
-Input range is [-1,1] and output range is [-inf, inf]. If input is -1, 
+Given an input tensor, this function computes inverse hyperbolic tangent for every element in the tensor.
+Input range is [-1,1] and output range is [-inf, inf]. If input is -1,
 output will be -inf and if the input is 1, output will be inf.
 Values outside the range will have nan as output.
 
@@ -41,4 +41,4 @@ Compatible with the TensorFlow operator Atanh.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

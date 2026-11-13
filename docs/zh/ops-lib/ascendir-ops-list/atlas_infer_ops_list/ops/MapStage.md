@@ -19,7 +19,7 @@ REG_OP(MapStage)
 
 ## Brief
 
-Stage (key, values) in the underlying container which behaves like a hashtable. 
+Stage (key, values) in the underlying container which behaves like a hashtable.
 
 ## Inputs
 
@@ -33,7 +33,7 @@ DT_INT8, DT_INT16, DT_UINT16, DT_UINT8, DT_INT32,
 DT_INT64, DT_BOOL, DT_DOUBLE, DT_UINT32, DT_UINT64,
 DT_RESOURCE, DT_STRING, DT_COMPLEX64, DT_COMPLEX128,
 DT_QINT8, DT_QUINT8, DT_QINT16, DT_QUINT16, DT_QINT32.
-It's a dynamic input. 
+It's a dynamic input.
 
 ## Attributes
 
@@ -46,7 +46,7 @@ inserts on the container will block when the capacity is reached.
 If non-empty, this queue is placed in the given container.
 Otherwise, a default container is used.
 - shared_name: An optional string. Defaults to "".
-It is necessary to match this name to the matching Unstage Op. 
+It is necessary to match this name to the matching Unstage Op.
 
 ## Data Types
 
@@ -66,4 +66,4 @@ Compatible with the TensorFlow operator MapStage.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

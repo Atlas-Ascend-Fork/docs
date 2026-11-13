@@ -31,7 +31,7 @@ Function GroupedMatmulFinalizeRouting. This op mixs GroupedMatmul和MoeFinalizeR
 ## Inputs
 
 - x: A tensor, which is the input x in the formula, supports the ND data format (refer to Data Format), and the shape supports 2 dimensions with the dimension being (m, k). The data type supports INT8, DT_FLOAT8_E5M2, DT_FLOAT8_E4M3FN, DT_FLOAT4_E2M1, DT_HIFLOAT8.
-- w: A tensor of weight, which supports the Ascend affinity data layout format as described in Data Format. The data type supports INT8, INT4, DT_FLOAT8_E5M2, DT_FLOAT8_E4M3FN, DT_FLOAT4_E2M1, and the shape supports 3 or 5 dimensions. On Ascend950PR/Ascend950DT, five-dimensional shapes are supported only when the data type is INT8, DT_FLOAT8_E4M3FN or DT_HIFLOAT8.
+- w: A tensor of weight, which supports the Ascend affinity data layout format as described in Data Format. The data type supports INT8, INT4, DT_FLOAT8_E5M2, DT_FLOAT8_E4M3FN, DT_FLOAT4_E2M1, and the shape supports 3 or 5 dimensions. On Ascend 950PR&950DT products, five-dimensional shapes are supported only when the data type is INT8, DT_FLOAT8_E4M3FN or DT_HIFLOAT8.
 When transposew is false, each dimension is represented as: (e, n1, k1, k0, n0), where k0 = 16, n0 = 32. The k in the x shape and the k1 in the w shape need to satisfy the following relationship: ceilDiv(k, 16) = k1.
 The aclnnCalculateMatmulWeightSizeV2 interface and the aclnnTransMatmulWeight interface can be used to complete the conversion of the input format from the ND format to the Ascend affinity data layout format.
 - scale: It represents the scaling factor in the quantization parameters. It supports the ND data format as described in Data Format. The supported data type is FLOAT32, INT64, BFLOAT16, DT_FLOAT8_E8M0.
@@ -48,7 +48,7 @@ Data type of elements is int64. Format: ND. The first dimension of group_list sh
 ## Outputs
 
 y: A tensor List, contains all result of groups of matmuls. For each tensor,
-the data type of elements supports float32; the format supports ND. 
+the data type of elements supports float32; the format supports ND.
 
 ## Attributes
 
@@ -78,34 +78,34 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Support combinations of data type: 
- | x             | w             |  scale           | bias     | offset  | pertokenScale | groupList | sharedInput | logit   | rowIndex    |  out    | 
- | ----          | ----          | -------          | -------  | ------- | ------------- | --------- | ----------- | ------- | --------    | ------- | 
- | INT8          | INT4          | INT64            | FLOAT32  | FLOAT32 | FLOAT32       | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 | 
- | INT8          | INT4          | INT64            | FLOAT32  | null    | FLOAT32       | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 | 
- | INT8          | INT8          | FLOAT32          | null     | null    | FLOAT32       | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 | 
- | INT8          | INT8          | FLOAT32          | null     | null    | FLOAT32       | INT64     | null        | null    | INT64       | FLOAT32 | 
- | INT8          | INT8          | FLOAT32          | BFLOAT16 | null    | FLOAT32       | INT64     | null        | null    | INT64       | FLOAT32 | 
- | INT8          | INT8          | BFLOAT16         | BFLOAT16 | null    | FLOAT32       | INT64     | null        | null    | INT64       | FLOAT32 | 
- | INT8          | INT8          | FLOAT32/BFLOAT16 | BFLOAT16 | null    | FLOAT32/null  | INT64     | BFLOAT16    | FLOAT32 | INT64/INT32 | FLOAT32 | 
- | FLOAT8_E4M3FN | FLOAT8_E4M3FN | FLOAT32/BFLOAT16 | BFLOAT16 | null    | FLOAT32/null  | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 | 
- | HIFLOAT8      | HIFLOAT8      | FLOAT32/BFLOAT16 | BFLOAT16 | null    | FLOAT32/null  | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 | 
-Among them: 
-The dimension m = batch * topk, and the value range is [1, 16 * 1024 * 8]. The functionality is not guaranteed if it exceeds this range. 
-k supports the value include of 256、512、1024、1408、2048. The functionality is not guaranteed if it exceeds this range. 
-n supports the value include of 2048、7168、7680. The functionality is not guaranteed if it exceeds this range. 
-The value range of e is [1, 256]. The functionality is not guaranteed if it exceeds this range. 
-The value range of bs/p is [1, 2 * 1024], and p = [8, 16, 32, 48, 64, 96, 128, 144, 288]. 
-The value range of bs is [1, 16 * 1024]. The functionality is not guaranteed if it exceeds this range. 
-The sum of the values in grouplist is less than or equal to m. 
-When group_list_type is 0, group_list must be a non-negative monotone non-decreasing array; when group_list_type is 1, it must be a non-negative array. 
+Support combinations of data type:
+ | x             | w             |  scale           | bias     | offset  | pertokenScale | groupList | sharedInput | logit   | rowIndex    |  out    |
+ | ----          | ----          | -------          | -------  | ------- | ------------- | --------- | ----------- | ------- | --------    | ------- |
+ | INT8          | INT4          | INT64            | FLOAT32  | FLOAT32 | FLOAT32       | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 |
+ | INT8          | INT4          | INT64            | FLOAT32  | null    | FLOAT32       | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 |
+ | INT8          | INT8          | FLOAT32          | null     | null    | FLOAT32       | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 |
+ | INT8          | INT8          | FLOAT32          | null     | null    | FLOAT32       | INT64     | null        | null    | INT64       | FLOAT32 |
+ | INT8          | INT8          | FLOAT32          | BFLOAT16 | null    | FLOAT32       | INT64     | null        | null    | INT64       | FLOAT32 |
+ | INT8          | INT8          | BFLOAT16         | BFLOAT16 | null    | FLOAT32       | INT64     | null        | null    | INT64       | FLOAT32 |
+ | INT8          | INT8          | FLOAT32/BFLOAT16 | BFLOAT16 | null    | FLOAT32/null  | INT64     | BFLOAT16    | FLOAT32 | INT64/INT32 | FLOAT32 |
+ | FLOAT8_E4M3FN | FLOAT8_E4M3FN | FLOAT32/BFLOAT16 | BFLOAT16 | null    | FLOAT32/null  | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 |
+ | HIFLOAT8      | HIFLOAT8      | FLOAT32/BFLOAT16 | BFLOAT16 | null    | FLOAT32/null  | INT64     | BFLOAT16    | FLOAT32 | INT64       | FLOAT32 |
+Among them:
+The dimension m = batch * topk, and the value range is [1, 16 * 1024 * 8]. The functionality is not guaranteed if it exceeds this range.
+k supports the value include of 256、512、1024、1408、2048. The functionality is not guaranteed if it exceeds this range.
+n supports the value include of 2048、7168、7680. The functionality is not guaranteed if it exceeds this range.
+The value range of e is [1, 256]. The functionality is not guaranteed if it exceeds this range.
+The value range of bs/p is [1, 2 * 1024], and p = [8, 16, 32, 48, 64, 96, 128, 144, 288].
+The value range of bs is [1, 16 * 1024]. The functionality is not guaranteed if it exceeds this range.
+The sum of the values in grouplist is less than or equal to m.
+When group_list_type is 0, group_list must be a non-negative monotone non-decreasing array; when group_list_type is 1, it must be a non-negative array.
 
 ## Attention MX Quantization Constraints
 
- |             x             |            w              |     scale     |      bias    | offset  | pertokenScale | groupList |  sharedInput  | logit   | rowIndex |  out    | 
- | ------------------------- | ------------------------- | ------------- | ------------ | ------- | ------------- | --------- | ------------- | ------- | -------- | ------- | 
- | FLOAT8_E4M3FN/FLOAT8_E5M2 | FLOAT8_E4M3FN/FLOAT8_E5M2 | FLOAT8_E8M0   | FLOAT32/NULL | NULL    | FLOAT8_E8M0   | INT64     | BFLOAT16/NULL | FLOAT32 | INT64    | FLOAT32 | 
- | FLOAT4_E2M1               | FLOAT4_E2M1               | FLOAT8_E8M0   | FLOAT32/NULL | NULL    | FLOAT8_E8M0   | INT64     | BFLOAT16/NULL | FLOAT32 | INT64    | FLOAT32 | 
+ |             x             |            w              |     scale     |      bias    | offset  | pertokenScale | groupList |  sharedInput  | logit   | rowIndex |  out    |
+ | ------------------------- | ------------------------- | ------------- | ------------ | ------- | ------------- | --------- | ------------- | ------- | -------- | ------- |
+ | FLOAT8_E4M3FN/FLOAT8_E5M2 | FLOAT8_E4M3FN/FLOAT8_E5M2 | FLOAT8_E8M0   | FLOAT32/NULL | NULL    | FLOAT8_E8M0   | INT64     | BFLOAT16/NULL | FLOAT32 | INT64    | FLOAT32 |
+ | FLOAT4_E2M1               | FLOAT4_E2M1               | FLOAT8_E8M0   | FLOAT32/NULL | NULL    | FLOAT8_E8M0   | INT64     | BFLOAT16/NULL | FLOAT32 | INT64    | FLOAT32 |
 PertokenScale dimension is represented as: (m, ceil(k/64), 2). The data type supports FLOAT8_E8M0, and the shape supports 3 dimensions.
 Scale dimension is represented as: (e, ceil(k/64), n, 2) or (e, n, ceil(k/64), 2). The data type supports FLOAT8_E8M0, and the shape supports 4 dimensions.
 In the MXFP4 scenario, the constraint that k must be even. Under non-transposed x2, n must also be even.
@@ -116,4 +116,4 @@ In the MXFP4 scenario, k cannot be equal to 2.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

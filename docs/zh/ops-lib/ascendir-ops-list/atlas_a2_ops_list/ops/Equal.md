@@ -16,7 +16,7 @@ REG_OP(Equal)
 
 ## Brief
 
-Returns the truth value of (x = y) element-wise. Support broadcasting operations. 
+Returns the truth value of (x = y) element-wise. Support broadcasting operations.
 
 ## Inputs
 
@@ -49,4 +49,4 @@ Compatible with the TensorFlow operator Equal.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

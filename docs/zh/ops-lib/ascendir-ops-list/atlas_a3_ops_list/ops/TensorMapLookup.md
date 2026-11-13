@@ -11,13 +11,13 @@ REG_OP(TensorMapLookup)
 
 ## Brief
 
-Returns the value from a given key in a tensor map. 
+Returns the value from a given key in a tensor map.
 
 ## Inputs
 
 - input_handle: The input map. Must be type: DT_VARIANT.
 - key: A Tensor, the key to be looked up. Must be one of
-the following types: int32,int64,string. 
+the following types: int32,int64,string.
 
 ## Outputs
 
@@ -25,7 +25,7 @@ value: A Tensor,the value found from the given key.
 
 ## Attributes
 
-value_dtype: A int. Representing the type of value. 
+value_dtype: A int. Representing the type of value.
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

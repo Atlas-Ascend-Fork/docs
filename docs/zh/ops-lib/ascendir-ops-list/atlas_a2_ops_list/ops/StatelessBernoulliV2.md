@@ -16,7 +16,7 @@ REG_OP(StatelessBernoulliV2)
 Draws binary random numbers (0 or 1) from a Bernoulli distribution.The input tensor
 should be a tensor containing probabilities p (a value in the range [0, 1]) to be used for
 drawing the binary random number, where an output of 1 is produced with ptobability p and
-an output of 0 is produced with probability (1-p). 
+an output of 0 is produced with probability (1-p).
 
 ## Inputs
 
@@ -28,12 +28,12 @@ generator is seeded by a random seed. Otherwise, it is seeded by the given seed.
 
 ## Outputs
 
-y: The returned output tensor only has values 0 or 1, same shape as input tensor. 
+y: The returned output tensor only has values 0 or 1, same shape as input tensor.
 
 ## Attributes
 
 - dtype: The data type for the elements of the output tensor. if not specifed,
-we will use the data type of the input tensor. 
+we will use the data type of the input tensor.
 
 ## Third-party framework compatibility
 
@@ -42,4 +42,4 @@ Compatible with the Onnx operator Bernoulli
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

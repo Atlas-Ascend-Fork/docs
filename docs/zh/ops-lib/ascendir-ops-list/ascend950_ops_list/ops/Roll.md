@@ -19,30 +19,30 @@ If a dimension is not specified, the tensor will be flattened before rolling and
 
 One input, including:
 x: A tensor. Must be one of the following types:
-    float16, bfloat16, float32, int32, uint32, int8, uint8, int64. 
+    float16, bfloat16, float32, int32, uint32, int8, uint8, int64.
 
 ## Outputs
 
-y: A Tensor with the same type and shape of x. 
+y: A Tensor with the same type and shape of x.
 
 ## Attributes
 
 - shifts: A required listInt. The number of places by which the elements of the tensor are shifted.
-     The length of the array must be equal to dims, but if dims is empty, the array must be one-dimensional. 
+     The length of the array must be equal to dims, but if dims is empty, the array must be one-dimensional.
 - dims: An optional listInt. Defaults to "None". Axis along which to roll. The value of the range is [0, number of dimensions for input -1] or [-number of dimensions for self, -1].
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 x: bfloat16,float16,float32,int8,int32,int64,uint8,uint32
-- output0 y: bfloat16,float16,float32,int8,int32,int64,uint8,uint32
+- input0 x: bfloat16,complex64,float16,float32,int8,int32,int64,uint8,uint32
+- output0 y: bfloat16,complex64,float16,float32,int8,int32,int64,uint8,uint32
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Roll. 
+Compatible with the Pytorch operator Roll.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

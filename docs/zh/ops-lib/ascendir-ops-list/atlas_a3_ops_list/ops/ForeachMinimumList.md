@@ -10,14 +10,15 @@ REG_OP(ForeachMinimumList)
 
 ## Brief
 
-Apply minimum operation for each tensor in a tensor list with each tensor in another
-tensor list in manner of element-wise
+Apply minimum operation for each tensor in tensor list with a list of scalar in manner
+of element-wise the number of tensors in tensor list shall be equal to the number of scalars
+in scalar list
 
 ## Inputs
 
 Two inputs:
-- x1: A tensor list containing multiple tensors
-- x2: Another tensor list containing multiple tensorsr
+- x: A tensor list containing multiple tensors
+- scalars: A scalar list in form of tensor with only multiple elements
 
 ## Outputs
 
@@ -34,4 +35,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

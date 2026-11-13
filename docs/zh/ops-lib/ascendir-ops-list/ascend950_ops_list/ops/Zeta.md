@@ -20,7 +20,7 @@ The input q must be the same type as x. Inputs include:
 
 ## Outputs
 
-z:A Tensor. Has the same type as x. 
+z:A Tensor. Has the same type as x.
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with tensorflow Zeta operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

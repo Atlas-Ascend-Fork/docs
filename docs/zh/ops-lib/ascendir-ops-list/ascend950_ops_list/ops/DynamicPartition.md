@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator DynamicPartition.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

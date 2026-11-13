@@ -11,7 +11,7 @@ REG_OP(EmptyTensorList)
 
 ## Brief
 
-Creates and returns an empty tensor list. 
+Creates and returns an empty tensor list.
 
 ## Inputs
 
@@ -20,11 +20,11 @@ Creates and returns an empty tensor list.
 
 ## Outputs
 
-handle: An empty tensor list . 
+handle: An empty tensor list .
 
 ## Attributes
 
-element_dtype: The type of elements in the list. 
+element_dtype: The type of elements in the list.
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with tensorflow EmptyTensorList operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

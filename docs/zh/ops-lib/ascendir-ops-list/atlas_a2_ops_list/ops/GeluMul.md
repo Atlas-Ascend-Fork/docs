@@ -11,7 +11,7 @@ REG_OP(GeluMul)
 ## Brief
 
 GeluMul divides the input tensor into left and right tensors x1 and x2 based on the last dimension,
-performs GELU calculation on x1 on the left, and multiplies the calculation result by x2. 
+performs GELU calculation on x1 on the left, and multiplies the calculation result by x2.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ The format must be ND.
 
 y: A tensor has the same type and format as "x".
 Other dimensions of its shape are the same as those of "x".
-The value of the last dimension is half the value of the last dimension of "x". 
+The value of the last dimension is half the value of the last dimension of "x".
 
 ## Attributes
 
@@ -36,4 +36,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

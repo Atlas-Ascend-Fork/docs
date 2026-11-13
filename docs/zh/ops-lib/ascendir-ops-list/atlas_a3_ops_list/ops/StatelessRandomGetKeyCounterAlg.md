@@ -13,7 +13,7 @@ REG_OP(StatelessRandomGetKeyCounterAlg)
 
 This op picks the best counter-based RNG algorithm based on device, and
 scrambles a shape-[2] seed into a key and a counter, both needed by the
-counter-based algorithm. 
+counter-based algorithm.
 
 ## Inputs
 
@@ -41,4 +41,4 @@ Compatible with TensorFlow StatelessRandomGetKeyCounterAlg operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

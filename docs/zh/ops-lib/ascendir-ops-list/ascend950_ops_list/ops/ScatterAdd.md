@@ -28,7 +28,7 @@ var: An ND tensor. Support 1D ~ 8D. Must have the same type, shape and format as
 
 ## Attributes
 
-use_locking: Ignore this attribute. This attribute does not take effect even if it is set. 
+use_locking: Ignore this attribute. This attribute does not take effect even if it is set.
 
 ## Data Types
 
@@ -46,7 +46,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-updates.shape = indices.shape + var.shape[1:] or updates.shape = []. 
+updates.shape = indices.shape + var.shape[1:] or updates.shape = [].
 
 ## Third-party framework compatibility
 
@@ -55,4 +55,4 @@ Compatible with the TensorFlow operator ScatterAdd.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -21,11 +21,11 @@ Two inputs, including:
 Must be one of the following types: int8, uint8, int16, uint16, int32, int64, bool, bfloat16, float16, float32,
 double, complex64, complex128, string.
 - axis: A 1D Tensor.
-Must be one of the following types: int32, int64 . 
+Must be one of the following types: int32, int64 .
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as "x" . 
+y: A Tensor. Has the same type and format as "x" .
 
 ## Data Types
 
@@ -41,7 +41,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-"axis" must be within the rank of "x" . 
+"axis" must be within the rank of "x" .
 
 ## Third-party framework compatibility
 
@@ -50,4 +50,4 @@ Compatible with the TensorFlow operator ReverseV2.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

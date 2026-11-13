@@ -17,21 +17,21 @@ REG_OP(Cross)
 
 ## Brief
 
-Calculate the cross product of two tensors. 
+Calculate the cross product of two tensors.
 
 ## Inputs
 
 One inputs, including:
 - x1: A tensor. Must be one of the following types:
     float16, float32, int32, int8, uint8, int16, double,
-    int64, uint16, uint32, uint64, complex64, complex128. 
+    int64, uint16, uint32, uint64, complex64, complex128.
 - x2: A tensor. Must be one of the following types:
     float16, float32, int32, int8, uint8, int16, double,
-    int64, uint16, uint32, uint64, complex64, complex128. 
+    int64, uint16, uint32, uint64, complex64, complex128.
 
 ## Outputs
 
-y: A Tensor with the same type and shape of x1's. 
+y: A Tensor with the same type and shape of x1's.
 
 ## Attributes
 
@@ -51,9 +51,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator cross. 
+Compatible with the Pytorch operator cross.
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -27,7 +27,7 @@ Must set the format, supported format list ["NCDHW, NDHWC"].
 - grad: An 5D Tensor. Supported type:float16, bfloat16, float32
 Must set the format, supported format list ["NCDHW, NDHWC"].
 - argmax: An 5D Tensor. Supported type:int32, int64
-Must set the format, supported format list ["NCDHW, NDHWC"]. 
+Must set the format, supported format list ["NCDHW, NDHWC"].
 
 ## Outputs
 
@@ -46,7 +46,7 @@ specifying the dilation of the sliding window for each dimension of the input te
 - ceil_mode: An optional Boolean value. When true, will use ceil instead of floor
 in the formula to compute the output shape. Defaults to false.
 - data_format: An optional string, supported values: ["NCDHW", "NDHWC"],
-default value: ["NCDHW"]. 
+default value: ["NCDHW"].
 
 ## Data Types
 
@@ -66,8 +66,8 @@ length 0 means use default ksize for each of D/H/W,
 every element in the list must be a numeric greater than 0.
 - "pads" is a list that has length 1 or 3(one value for each of D/H/W),
 every element in the list must be a numeric greater than or equal to 0.
-additionally, two strict size limits apply: 
-1. Each pads value (pD/pH/pW for D/H/W dimensions) must be less than or equal to half of the corresponding "ksize" value (kD/kH/kW / 2). 
+additionally, two strict size limits apply:
+1. Each pads value (pD/pH/pW for D/H/W dimensions) must be less than or equal to half of the corresponding "ksize" value (kD/kH/kW / 2).
 2. Each pads value (pD/pH/pW) must be less than or equal to ((corresponding ksize - 1) * corresponding dilation + 1) / 2
 (i.e., pD ≤ ((kD - 1) * dD + 1) / 2, pH ≤ ((kH - 1) * dH + 1) / 2, pW ≤ ((kW - 1) * dW + 1) / 2).
 - "dilation" is a list that has length 1 or 3(one value for each of D/H/W),
@@ -81,4 +81,4 @@ Compatible with the Torch operator MaxPool3DGradWithArgmax.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

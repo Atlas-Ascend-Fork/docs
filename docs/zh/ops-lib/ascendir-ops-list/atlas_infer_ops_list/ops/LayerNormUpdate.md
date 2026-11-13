@@ -14,11 +14,11 @@ REG_OP(LayerNormUpdate)
 
 ## Brief
 
-Layernorm operator interface implementation with given sum and square sum of input tensor 
- calculating: x, gamma, beta, sum, square_sum 
- mean  = sum / reduce_axis 
- variance = square_sum / reduce_aixs - mean * mean 
- variance = np.mean(np.power((x - mean),2), reduce_axis, keepdims=True) 
+Layernorm operator interface implementation with given sum and square sum of input tensor
+ calculating: x, gamma, beta, sum, square_sum
+ mean  = sum / reduce_axis
+ variance = square_sum / reduce_aixs - mean * mean
+ variance = np.mean(np.power((x - mean),2), reduce_axis, keepdims=True)
  y = gamma*((x - mean) / np.sqrt(variance + 0.001)) + beta
 
 ## Inputs
@@ -52,4 +52,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

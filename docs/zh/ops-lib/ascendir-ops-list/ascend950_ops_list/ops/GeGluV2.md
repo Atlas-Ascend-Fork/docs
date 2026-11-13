@@ -41,7 +41,7 @@ Three attributes, including:
 - dim: An optional int. The dimension to be split, default is -1.
 - approximate: An optional int. Which formula used for the activation computation.
 The gelu approximation algorithm to use: 'none'(0) or 'tanh'(1), default is 'tanh'(1).
-Atlas Inference Series Product only support 'tanh'(1).
+Atlas inference products only support 'tanh'(1).
 - activate_left: An optional bool.
 The gelu activate_left algorithm to use:
     'false'(activate right) or 'true'(activate left), defalut is 'false'(activate right).
@@ -57,4 +57,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

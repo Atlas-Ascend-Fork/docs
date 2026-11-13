@@ -24,7 +24,7 @@ Two inputs:
 
 ## Outputs
 
-argmax: A 4D Tensor of type int32. supported format list ["NC1HWC0"]. 
+argmax: A 4D Tensor of type int32. supported format list ["NC1HWC0"].
 
 ## Attributes
 
@@ -54,4 +54,4 @@ Compatible with the TensorFlow operator Mask2Argmax.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -34,7 +34,7 @@ Six inputs, including:
 When in training mode, it represents the saved mean of "x". And in inference mode, it represents the running mean of "x".
 - reserve_space_2: A 1D Tensor of type float32, with format ND, shape must be C channel. It is an output of BatchNorm.
 - reserve_space_3: A 1D optional Tensor of type float32, with format ND. Not used and not involved in calculations. When in training mode,
-it represents the saved inverse standard deviation of "x" And in inference mode, it represents the running variance of "x".  
+it represents the saved inverse standard deviation of "x" And in inference mode, it represents the running variance of "x".
 
 ## Outputs
 
@@ -51,7 +51,7 @@ the same shape with "x".
 - data_format: An optional string. Defaults to "NHWC". Should be same as y_backprop/x/x_backprop's dtype.
 - is_training: An optional bool. Defaults to "true". Specifies the operation is for training (default) or inference.
 - output_mask: An optional ListBool. Defaults to [true, false, false]. Valid only in inference mode, it determines whether
-the outputs "x_backprop", "scale_backprop" and "offset_backprop" contain actual reseluts. 
+the outputs "x_backprop", "scale_backprop" and "offset_backprop" contain actual reseluts.
 
 ## Data Types
 
@@ -82,7 +82,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The preceding layer of this operator must be operator BatchNorm . 
+The preceding layer of this operator must be operator BatchNorm .
 @see BatchNorm
 
 ## Third-party framework compatibility
@@ -92,4 +92,4 @@ Compatible with the TensorFlow operators FusedBatchNormGrad, FusedBatchNormGradV
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

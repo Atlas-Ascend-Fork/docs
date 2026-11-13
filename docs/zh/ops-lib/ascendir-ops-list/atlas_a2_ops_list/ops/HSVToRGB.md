@@ -9,16 +9,16 @@ REG_OP(HSVToRGB)
 
 ## Brief
 
-Convert one or more images from HSV to RGB . 
+Convert one or more images from HSV to RGB .
 
 ## Inputs
 
 Last dimension of input x must be size 3. Inputs include:
-images: 1-D or higher rank. HSV data to convert. Last dimension must be size 3 . 
+images: 1-D or higher rank. HSV data to convert. Last dimension must be size 3 .
 
 ## Outputs
 
-y:images converted to RGB . 
+y:images converted to RGB .
 
 ## Data Types
 
@@ -30,7 +30,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 Input images currently supports DT_FLOAT, DT_DOUBLE .
-Last dimension of input x must be size 3 . 
+Last dimension of input x must be size 3 .
 
 ## Third-party framework compatibility
 
@@ -39,4 +39,4 @@ Compatible with tensorflow HSVToRGB operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

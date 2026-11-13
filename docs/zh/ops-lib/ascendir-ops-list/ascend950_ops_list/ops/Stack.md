@@ -11,16 +11,16 @@ REG_OP(Stack)
 
 ## Brief
 
-Create a stack. 
+Create a stack.
 
 ## Inputs
 
 The input max_size must be type int32. Inputs include:
-max_size: A Tensor of type int32. The number of elements of a stack. 
+max_size: A Tensor of type int32. The number of elements of a stack.
 
 ## Outputs
 
-handle: A Tensor of type resource. The handle to a stack. 
+handle: A Tensor of type resource. The handle to a stack.
 
 ## Attributes
 
@@ -34,4 +34,4 @@ Compatible with tensorflow Stack operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

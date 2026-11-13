@@ -16,7 +16,7 @@ REG_OP(SparseSliceGrad)
 
 ## Brief
 
-The gradient operator for the SparseSlice op. 
+The gradient operator for the SparseSlice op.
 
 ## Inputs
 
@@ -29,7 +29,7 @@ int32, int64, float16, float, double, complex64, complex128.
 ## Outputs
 
 y_grad: A tensor. Must be one of the following types: int8, uint8, int16, uint16, int32,
-int64, float16, float, double, complex64, complex128. 
+int64, float16, float, double, complex64, complex128.
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator SparseSliceGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

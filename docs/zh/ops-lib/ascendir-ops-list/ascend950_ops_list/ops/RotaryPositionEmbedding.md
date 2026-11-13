@@ -30,7 +30,7 @@ y: A 4D tensor which is the result of rotary position embedding, format supports
 ## Attributes
 
 mode: An optional attribute of type int, specifying the mode of rotary position embedding, must be 0-"half", 1-"interleave", 2-"quarter" or 3-"interleave-half". Defaults to 0.
-Atlas A2 Training Series Product/ Atlas 800I A2 Inference Product and Atlas A3 Training Series Product only support 0-"half" and 1-"interleave".
+Atlas A2 products and Atlas A3 products only support 0-"half" and 1-"interleave".
 
 ## Data Types
 
@@ -46,7 +46,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 Let (B, S, N, D) represents the shape of the 4-D input "x". Under this representation, the shape constraints of each parameter can be described as follows:
 - The D of "x", "cos", "sin", "rotate" and "y" must be equal. For Ascend 950 AI Processor, D should be less or equal to 1024.
-For Atlas A2 Training Series Product/ Atlas 800I A2 Inference Product and Atlas A3 Training Series Product, D should be less or equal to 896.
+For Atlas A2 products and Atlas A3 products, D should be less or equal to 896.
 - In half, interleave and interleave-half mode, D must be a multiple of 2. In quarter mode, D must be a multiple of 4.
 - B, S, N of "cos" and "sin" must meet one of the following four conditions:
  - B, S, N are 1, means the shape is (1, 1, 1, D).
@@ -58,4 +58,4 @@ For Atlas A2 Training Series Product/ Atlas 800I A2 Inference Product and Atlas 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

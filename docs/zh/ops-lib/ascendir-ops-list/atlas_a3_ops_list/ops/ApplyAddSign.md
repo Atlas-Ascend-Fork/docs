@@ -16,7 +16,7 @@ REG_OP(ApplyAddSign)
 
 ## Brief
 
-Updates "var" according to the AddSign update . 
+Updates "var" according to the AddSign update .
 
 ## Inputs
 
@@ -41,14 +41,14 @@ Seven inputs, including:
 
 ## Outputs
 
-var: A ND Tensor. Has the same type and shape with "var" . 
+var: A ND Tensor. Has the same type and shape with "var" .
 
 ## Attributes
 
 use_locking: An optional bool. Defaults to "False".
     If "True", updating of the "var" and "m" tensors will be
     protected by a lock; otherwise the behavior is undefined,
-    but may exhibit less contention . 
+    but may exhibit less contention .
 
 ## Data Types
 
@@ -70,4 +70,4 @@ Compatible with the TensorFlow operator ApplyAddSign.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

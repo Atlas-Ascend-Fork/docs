@@ -20,7 +20,7 @@ The input a and x must have the same type. Inputs include:
 
 ## Outputs
 
-z:A Tensor. Has the same type as a. 
+z:A Tensor. Has the same type as a.
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with tensorflow Igamma operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -11,7 +11,7 @@ REG_OP(CholeskyGrad)
 ## Brief
 
 Computes the reverse mode backpropagated gradient of the Cholesky
-algorithm . 
+algorithm .
 
 ## Inputs
 
@@ -21,11 +21,11 @@ of batch Cholesky algorithm x = cholesky(A). Shape is [..., M, M]. Algorithm
 depends only on lower triangular part of the innermost matrices of this tensor.
 - grad:A Tensor. Must have the same type as l. df/dx where f is some
 scalar function. Shape is [..., M, M]. Algorithm depends only on lower
-triangular part of the innermost matrices of this tensor . 
+triangular part of the innermost matrices of this tensor .
 
 ## Outputs
 
-y:A Tensor. Has the same type as x . 
+y:A Tensor. Has the same type as x .
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow CholeskyGrad operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

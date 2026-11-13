@@ -58,7 +58,7 @@ right-aligned and the number of right-aligned data.The type support int64.
 
 ## Outputs
 
-attention_out: A matrix Tensor. The type support float16, bf16, int8. 
+attention_out: A matrix Tensor. The type support float16, bf16, int8.
 
 ## Attributes
 
@@ -118,4 +118,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

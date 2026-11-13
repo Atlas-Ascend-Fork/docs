@@ -15,17 +15,17 @@ sort the input tensor without returning the value of index.
 
 ## Inputs
 
-x:  A Tensor.Supported type: float16, float32, double, bfloat16. Supported format: ND . 
+x:  A Tensor.Supported type: float16, float32, double, bfloat16. Supported format: ND .
 
 ## Outputs
 
-y:  A Tensor. Must have the same type and format as x . 
+y:  A Tensor. Must have the same type and format as x .
 
 ## Attributes
 
 - axis: An optional int. The dimension to sort along. This value defaults to -1.
 - descending: An optional bool. Controls the sorting order (ascending or descending).
-This value defaults to False . 
+This value defaults to False .
 
 ## Data Types
 
@@ -39,9 +39,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - Axis should select the last dim.
 - When the sorting data is less than 150K, it is recommended to use this tbe ops,
 and the descending performance is better than the ascending.
-- The upper limit of data on Atlas Training Series Product is 2000K.
+- The upper limit of data on Atlas training products is 2000K.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

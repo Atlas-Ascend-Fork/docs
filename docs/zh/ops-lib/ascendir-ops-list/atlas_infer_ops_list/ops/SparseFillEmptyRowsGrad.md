@@ -17,7 +17,7 @@ REG_OP(SparseFillEmptyRowsGrad)
 
 ## Brief
 
-The gradient of SparseFillEmptyRows. 
+The gradient of SparseFillEmptyRows.
 
 ## Inputs
 
@@ -45,4 +45,4 @@ Compatible with the TensorFlow operator SparseFillEmptyRowsGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

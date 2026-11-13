@@ -10,7 +10,7 @@ REG_OP(TensorListResize)
 
 ## Brief
 
-Resizes the list. 
+Resizes the list.
 
 ## Inputs
 
@@ -19,7 +19,7 @@ Resizes the list.
 
 ## Outputs
 
-output_handle: The output tensor list. 
+output_handle: The output tensor list.
 
 ## Data Types
 
@@ -36,4 +36,4 @@ Compatible with tensorflow TensorListResize operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -17,18 +17,18 @@ REG_OP(StagePeek)
 ## Brief
 
 Op peeks at the values at the specified index. If the underlying
-container does not contain sufficient elements this op will block until it does. 
+container does not contain sufficient elements this op will block until it does.
 
 ## Inputs
 
 The input values must be type int32. Inputs include:
-index: A Tensor of type int32. 
+index: A Tensor of type int32.
 
 ## Outputs
 
 y: A list of Tensor objects. Must be one of the following types:
-float16, float, int8, int16, uint16, uint8, int32, int64, bool, double, uint32, uint64. 
-It's a dynamic output. 
+float16, float, int8, int16, uint16, uint8, int32, int64, bool, double, uint32, uint64.
+It's a dynamic output.
 
 ## Attributes
 
@@ -51,4 +51,4 @@ Compatible with tensorflow StagePeek operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

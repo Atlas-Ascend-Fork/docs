@@ -26,12 +26,12 @@ Computes gradients of sigmoid_cross_entropy_with_logits_v2.
 
 ## Outputs
 
-gradient: An ND tensor tensor with the same shape and type as "predict". 
+gradient: An ND tensor tensor with the same shape and type as "predict".
 
 ## Attributes
 
 reduction: A character string from "none", "mean", and "sum",
-specifying the reduction type to be applied to the output. Defaults to "mean". 
+specifying the reduction type to be applied to the output. Defaults to "mean".
 
 ## Data Types
 
@@ -51,4 +51,4 @@ Compatible with the Pytorch operator SigmoidCrossEntropyWithLogitsGrad.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

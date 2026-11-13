@@ -15,7 +15,7 @@ REG_OP(SparseTensorDenseAdd)
 
 ## Brief
 
-Adds up a SparseTensor and a dense tensor, producing a dense tensor. 
+Adds up a SparseTensor and a dense tensor, producing a dense tensor.
 
 ## Inputs
 
@@ -27,7 +27,7 @@ Inputs "x1_*" must be SparseTensors and "x2" must be a dense tensor.
 
 ## Outputs
 
-y: A matrix tensor. Has the same type and same shape as "x2". 
+y: A matrix tensor. Has the same type and same shape as "x2".
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with the TensorFlow operator SparseTensorDenseAdd.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

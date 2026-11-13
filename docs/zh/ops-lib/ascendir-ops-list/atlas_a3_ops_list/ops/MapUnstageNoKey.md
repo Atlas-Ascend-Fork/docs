@@ -19,12 +19,12 @@ REG_OP(MapUnstageNoKey)
 
 ## Brief
 
-Removes and returns a random (key, value). 
+Removes and returns a random (key, value).
 
 ## Inputs
 
 Including:
-indices: A Tensor of type DT_INT32. 
+indices: A Tensor of type DT_INT32.
 
 ## Outputs
 
@@ -33,7 +33,7 @@ indices: A Tensor of type DT_INT32.
 Must be one of the following types: DT_FLOAT, DT_FLOAT16, DT_INT8,
 DT_INT16, DT_UINT16, DT_UINT8, DT_INT32, DT_INT64, DT_BOOL, DT_DOUBLE,
 DT_UINT32, DT_UINT64, DT_RESOURCE, DT_STRING, DT_COMPLEX64, DT_COMPLEX128,
-DT_QINT8, DT_QUINT8, DT_QINT16, DT_QUINT16, DT_QINT32. 
+DT_QINT8, DT_QUINT8, DT_QINT16, DT_QUINT16, DT_QINT32.
 
 ## Attributes
 
@@ -61,4 +61,4 @@ Compatible with the TensorFlow operator MapUnstageNoKey.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

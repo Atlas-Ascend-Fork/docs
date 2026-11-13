@@ -21,7 +21,7 @@ use for lu decomposition
 
 ## Inputs
 
-x: A Tensor of type int32/int64/uint64. 
+x: A Tensor of type int32/int64/uint64.
 
 ## Outputs
 
@@ -41,4 +41,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

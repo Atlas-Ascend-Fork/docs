@@ -10,18 +10,18 @@ REG_OP(Ger)
 
 ## Brief
 
-Computes the outer product of two 1D vectors . 
+Computes the outer product of two 1D vectors .
 
 ## Inputs
 
 The input x1 and x2 has to be a 1D vector.Inputs include:
 - x1:A Tensor. Must be one of the following types: float16, float32, bfloat16.
-Shape is [N] . 
+Shape is [N] .
 - x2:A Tensor. Must have the same type as x. Shape is [M] .
 
 ## Outputs
 
-y:A Tensor. Has the same type as x . 
+y:A Tensor. Has the same type as x .
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

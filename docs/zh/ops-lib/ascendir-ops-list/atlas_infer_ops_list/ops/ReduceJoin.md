@@ -12,7 +12,7 @@ REG_OP(ReduceJoin)
 
 ## Brief
 
-Joins a string Tensor across the given dimensions. 
+Joins a string Tensor across the given dimensions.
 
 ## Inputs
 
@@ -40,4 +40,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

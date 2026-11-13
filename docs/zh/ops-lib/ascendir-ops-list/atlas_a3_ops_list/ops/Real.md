@@ -25,7 +25,7 @@ output:A ND Tensor of type float16, float32, double. Has the same shape as input
 
 ## Attributes
 
-Tout: A optional type attr, mean the output dtype for outputs. Defaults to DT_FLOAT(float32). 
+Tout: A optional type attr, mean the output dtype for outputs. Defaults to DT_FLOAT(float32).
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Compatible with tensorflow Real operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

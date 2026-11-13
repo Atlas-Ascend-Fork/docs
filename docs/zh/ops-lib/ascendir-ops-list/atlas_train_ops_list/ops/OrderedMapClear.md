@@ -12,7 +12,7 @@ REG_OP(OrderedMapClear)
 
 ## Brief
 
-Removes all elements in the underlying container. 
+Removes all elements in the underlying container.
 
 ## Attributes
 
@@ -33,4 +33,4 @@ Compatible with the TensorFlow operator OrderedMapClear.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -25,12 +25,12 @@ map, dimension C1 must be equal to
 [batch, 5, rois_num], describing the ROIs, each ROI consists of five
 elements: "batch_id", "x1", "y1", "x2", and "y2", which "batch_id" indicates
 the index of the input feature map, "x1", "y1", "x2", or "y2" must be
-greater than or equal to "0.0" . 
+greater than or equal to "0.0" .
 
 ## Outputs
 
 y: A tensor of type float16 or float32, describing the result
-feature map . 
+feature map .
 
 ## Attributes
 
@@ -39,7 +39,7 @@ must be greater than 0.
 - group_size: A required int, specifying the number of groups to encode
 position-sensitive score maps, must be within the range (0, 128).
 - spatial_scale: A required float, scaling factor for mapping the input
-coordinates to the ROI coordinates . 
+coordinates to the ROI coordinates .
 
 ## Data Types
 
@@ -56,4 +56,4 @@ HC1HWC0: channel must be Group_size squared, rois_num is a multiple of 16
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

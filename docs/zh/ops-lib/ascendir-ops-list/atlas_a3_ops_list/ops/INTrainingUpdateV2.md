@@ -19,7 +19,7 @@ REG_OP(INTrainingUpdateV2)
 
 ## Brief
 
-Performs update instance normalization. 
+Performs update instance normalization.
 
 ## Inputs
 
@@ -44,7 +44,7 @@ Three outputs
 
 - momentum: A optional float32, specifying the momentum to update mean and var. default to 0.1.
 - epsilon: A optional float32, specifying the small value added to variance to avoid dividing by zero. default to
-0.00001. 
+0.00001.
 
 ## Data Types
 
@@ -69,4 +69,4 @@ This operator is used in conjunction with INTrainingReduceV2.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

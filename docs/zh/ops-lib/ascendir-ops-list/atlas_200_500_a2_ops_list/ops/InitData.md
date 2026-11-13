@@ -12,7 +12,7 @@ Initialize data process channel .
 
 ## Attributes
 
-channel_name: A string. Defaults to "" . 
+channel_name: A string. Defaults to "" .
 
 ## Third-party framework compatibility
 
@@ -21,4 +21,4 @@ Compatible with tensorflow InitData operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

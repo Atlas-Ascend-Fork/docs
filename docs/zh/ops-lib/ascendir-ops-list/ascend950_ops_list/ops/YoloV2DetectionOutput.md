@@ -23,7 +23,7 @@ REG_OP(YoloV2DetectionOutput)
 
 ## Brief
 
-Performs YOLO V2 detection . 
+Performs YOLO V2 detection .
 
 ## Inputs
 
@@ -48,7 +48,7 @@ the number of valid boxes in each batch, the maximum number of valid boxes in ea
 - classes: A required int32, specifying the number of classes to be predicted. The value range is [1, 20].
 - relative: An optional bool. Defaults to and must be "true".
 - obj_threshold: A required float, specifying the confidence threshold for box filtering,
-which is the output "obj" of operator Yolo). The value range is [0.0, 1.0] . 
+which is the output "obj" of operator Yolo). The value range is [0.0, 1.0] .
 - post_nms_topn: An optional int32. This attribute is reserved.
 - score_threshold: A required float, specifying the class score threshold for box filtering,
 which is the output "class" of operator Yolo). The value range is [0.0, 1.0].
@@ -68,4 +68,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

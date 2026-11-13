@@ -24,7 +24,7 @@ A "batch_size * num_classes" matrix.
 - labels: A Tensor. Must be one of the following types: "int32", "int64".
 - weights: A manual rescaling weight given to each class, the same dtype with scores.
 If given, it has to be a 1D Tensor assigning weight to each of the classes.
-Otherwise, it is treated as if having all ones. 
+Otherwise, it is treated as if having all ones.
 
 ## Outputs
 
@@ -34,8 +34,8 @@ Otherwise, it is treated as if having all ones.
 ## Attributes
 
 ignore_index:Specifies a target value that is ignored and does not contribute to the input gradient.
-It's an optional value, Defaults to 0. 
-reduction: A character string from "none", "mean", and "sum", specifying the gradient output mode. Defaults to "mean" . 
+It's an optional value, Defaults to 0.
+reduction: A character string from "none", "mean", and "sum", specifying the gradient output mode. Defaults to "mean" .
 
 ## Data Types
 
@@ -54,4 +54,4 @@ Compatible with the ONNX operator SoftmaxCrossEntropyLoss.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

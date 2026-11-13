@@ -12,21 +12,28 @@ REG_OP(UnsortedSegmentProd)
 ## Brief
 
 Computes the product along segments of a tensor.
-Computes a tensor such that output[i] = prod_{j...} data[j...]
-where the product is over tuples j... such that segment_ids[j...] == i.
-If the product for a given segment ID i is empty, output[i] = 1.
-Negative segment IDs are ignored.
+Computes a tensor such that (output[i] = mul_{j...} x[j...].
+the value of segment_ids must be  in [0, num_segments - 1].
+for example:x = [[0,1,2],[3,4,5],[6,7,8]], segment_ids = [0,0,1] num_segments = 5
+output[0] = [0, 4, 10]
+output[1] = [6, 7, 8]
+output[2] = [1, 1, 1]
+output[3] = [1, 1, 1]
+output[4] = [1, 1, 1]
 
 ## Inputs
 
 Three inputs, including:
-- x: A Tensor of type float16, float32, bfloat16, int32, int64, uint32, uint64, format is ND.
-- segment_ids: A Tensor of type int32, int64, whose shape is a prefix of "x", format is ND.
-- num_segments: A 1D Tensor contains a single element of type int32, int64, format is ND.
+- x: A Tensor of type NumberType(), format is ND. bank of shape must greater zero.
+- segment_ids: A 1D Tensor of type IndexNumberType, whose shape is a prefix of "x.shape".
+A Tensor of type int32, int64, whose shape is a prefix, format is ND,
+bank of shape is small than x rank, or equal of x shape rank.
+- num_segments: A Tensor of type int32, int64, format is ND.
+Indicates the output segment.
 
 ## Outputs
 
-y: Have the same type and format of "x".
+y: A Tensor type and format is the same as x type.
 
 ## Data Types
 
@@ -49,4 +56,4 @@ Compatible with the TensorFlow operator UnsortedSegmentProd.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

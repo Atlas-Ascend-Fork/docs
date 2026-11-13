@@ -20,7 +20,7 @@ Two inputs, including:
 
 ## Outputs
 
-loss: Return loss. Has the same dimensions and type as "predict" . 
+loss: Return loss. Has the same dimensions and type as "predict" .
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with the scenario where "reduction" is set to "none"of PyTorch operat
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

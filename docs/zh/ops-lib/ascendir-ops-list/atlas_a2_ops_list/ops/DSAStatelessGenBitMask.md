@@ -14,7 +14,7 @@ REG_OP(DSAStatelessGenBitMask)
 
 ## Brief
 
-Generate State less DSA dropout data in random. 
+Generate State less DSA dropout data in random.
 
 ## Inputs
 
@@ -27,7 +27,7 @@ generator is seeded by the given seed. Otherwise, it is seeded by a random seed
 
 ## Outputs
 
-y:Output (1-D) random number using float and bf data format . 
+y:Output (1-D) random number using float and bf data format .
 @see DSAStatelessGenBitMask()
 
 ## Attributes
@@ -47,4 +47,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

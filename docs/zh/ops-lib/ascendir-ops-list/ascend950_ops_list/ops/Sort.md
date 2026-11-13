@@ -24,7 +24,7 @@ sort the input tensor and return the value of index.
 
 Inputs include:
 x: A Tensor. Supported type: float16, float32, int16, int8, uint8, int32, int64, bfloat16, uint32, uint16, uint64.
-Supported format: ND . 
+Supported format: ND .
 
 ## Outputs
 
@@ -59,4 +59,4 @@ The operator depends on the unstable sorting algorithm.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -13,7 +13,7 @@ REG_OP(GaussianBlur)
 
 ## Brief
 
-Applies a gaussian blur to an image. 
+Applies a gaussian blur to an image.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Applies a gaussian blur to an image.
 
 ## Outputs
 
-y: output tensor, has the same type and shape as input x. 
+y: output tensor, has the same type and shape as input x.
 
 ## Attributes
 
@@ -51,4 +51,4 @@ This operator will be deprecated in the future.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

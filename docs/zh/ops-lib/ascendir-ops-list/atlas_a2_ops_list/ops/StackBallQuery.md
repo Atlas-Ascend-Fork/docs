@@ -14,7 +14,7 @@ REG_OP(StackBallQuery)
 
 ## Brief
 
-Find nearby points in spherical space. 
+Find nearby points in spherical space.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ Four inputs, including:
 - xyz_batch_cnt: A 1D Tensor of type int32 or int64, Stacked input xyz coordinates nums in
 each batch, just like (N1, N2, ...).
 - center_xyz_batch_cnt: A 1D Tensor of type int32 or int64. Stacked input centers coordinates nums in
-each batch, just like (M1, M2, ...). 
+each batch, just like (M1, M2, ...).
 
 ## Outputs
 
@@ -53,4 +53,4 @@ Compatible with the MMCV operator BallQuery(StackBallQuery branch).
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

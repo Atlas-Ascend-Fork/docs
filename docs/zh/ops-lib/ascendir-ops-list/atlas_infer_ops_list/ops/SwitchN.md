@@ -31,4 +31,4 @@ output: The output tensors, one of which will become available.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

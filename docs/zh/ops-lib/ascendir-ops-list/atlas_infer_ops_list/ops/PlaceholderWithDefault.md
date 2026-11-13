@@ -10,19 +10,19 @@ REG_OP(PlaceholderWithDefault)
 
 ## Brief
 
-Inserts a placeholder with default value for a tensor. 
+Inserts a placeholder with default value for a tensor.
 
 ## Inputs
 
-x: A tensor. 
+x: A tensor.
 
 ## Outputs
 
-y: The created placeholder tensor. 
+y: The created placeholder tensor.
 
 ## Attributes
 
-shape: tensor shape. 
+shape: tensor shape.
 
 ## Third-party framework compatibility
 
@@ -31,4 +31,4 @@ Compatible with the TensorFlow operator PlaceholderWithDefault.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

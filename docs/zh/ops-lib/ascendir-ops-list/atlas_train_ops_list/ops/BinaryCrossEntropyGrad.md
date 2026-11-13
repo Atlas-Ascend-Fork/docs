@@ -25,11 +25,11 @@ Four inputs, including:
 
 ## Outputs
 
-output: A 1D or 2D Tensor. When "reduction" is set to "none", a Tensor with the same size as "x" is output. Otherwise, a Scalar is output . 
+output: A 1D or 2D Tensor. When "reduction" is set to "none", a Tensor with the same size as "x" is output. Otherwise, a Scalar is output .
 
 ## Attributes
 
-reduction: A character string from "none", "mean", and "sum", specifying the gradient output mode. Defaults to "mean" . 
+reduction: A character string from "none", "mean", and "sum", specifying the gradient output mode. Defaults to "mean" .
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with PyTorch operator BCELossGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

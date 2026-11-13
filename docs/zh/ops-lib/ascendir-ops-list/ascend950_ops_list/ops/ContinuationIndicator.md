@@ -10,7 +10,7 @@ REG_OP(ContinuationIndicator)
 
 ## Brief
 
-Outputs integers consisting of 0 and 1, used for lstm etc. 
+Outputs integers consisting of 0 and 1, used for lstm etc.
 
 ## Inputs
 
@@ -19,7 +19,7 @@ Outputs integers consisting of 0 and 1, used for lstm etc.
 
 ## Outputs
 
-y: A Tensor. Has the  type float16 or float, 2-D, [time_step,batch_size]. 
+y: A Tensor. Has the  type float16 or float, 2-D, [time_step,batch_size].
 
 ## Attention Constraints
 
@@ -28,4 +28,4 @@ Compatible with the Caffe operator ContinuationIndicator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

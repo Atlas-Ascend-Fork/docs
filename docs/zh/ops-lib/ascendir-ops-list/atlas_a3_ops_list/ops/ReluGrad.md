@@ -11,7 +11,7 @@ REG_OP(ReluGrad)
 ## Brief
 
 Computes rectified linear gradients for a ReLU operation.
- Gradients/features support broadcasting operations. 
+ Gradients/features support broadcasting operations.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Two inputs, including:
 
 ## Outputs
 
-backprops: A tensor of type RealNumberType . 
+backprops: A tensor of type RealNumberType .
 
 ## Data Types
 
@@ -37,7 +37,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The corresponding Relu operator needs to be called before using this operator on the network . 
+The corresponding Relu operator needs to be called before using this operator on the network .
 
 ## Third-party framework compatibility
 
@@ -46,4 +46,4 @@ Compatible with TensorFlow operator ReluGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

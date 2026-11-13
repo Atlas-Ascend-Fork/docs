@@ -11,8 +11,8 @@ REG_OP(LeakyReluGrad)
 
 ## Brief
 
-Computes the output as gradients if features > 0 and negative_slope * gradients if features <= 0. 
-Gradients/features support broadcasting operations. 
+Computes the output as gradients if features > 0 and negative_slope * gradients if features <= 0.
+Gradients/features support broadcasting operations.
 
 ## Inputs
 
@@ -22,11 +22,11 @@ Two inputs, including:
 
 ## Outputs
 
-backprops: A tensor. Has the same type as "gradients". 
+backprops: A tensor. Has the same type as "gradients".
 
 ## Attributes
 
-negative_slope: An optional float32. Negative Slope. Defaults to "0.0". 
+negative_slope: An optional float32. Negative Slope. Defaults to "0.0".
 
 ## Data Types
 
@@ -42,7 +42,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The corresponding LeakyRelu operator needs to be called before using this operator on the network. 
+The corresponding LeakyRelu operator needs to be called before using this operator on the network.
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ The corresponding LeakyRelu operator needs to be called before using this operat
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

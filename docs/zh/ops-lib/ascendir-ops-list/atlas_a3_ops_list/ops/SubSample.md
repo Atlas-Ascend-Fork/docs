@@ -18,11 +18,11 @@ included in the sample.
 ## Inputs
 
 One input:
-labels: shape of labels,(N, ) label vector with values. 
+labels: shape of labels,(N, ) label vector with values.
 
 ## Outputs
 
-y: The result of subSample. 
+y: The result of subSample.
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Compatible with the Pytorch operator SubSample.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

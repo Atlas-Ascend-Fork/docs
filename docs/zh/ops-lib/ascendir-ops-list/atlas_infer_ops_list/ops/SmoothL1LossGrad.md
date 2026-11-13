@@ -20,15 +20,15 @@ Three inputs, including:
 - predict: A multi-dimensional Tensor of type float16 or float32 or bfloat16, specifying the predictive value.
 - label: A multi-dimensional Tensor of float16 or float32 or bfloat16, specifying the target value.
 - dout: A multi-dimensional Tensor of float16 or float32 or bfloat16,
-specifying the gradient transferred from the upper layer . 
+specifying the gradient transferred from the upper layer .
 
 ## Outputs
 
-gradient: Return gradient. Has the same dimensions and type as "predict" . 
+gradient: Return gradient. Has the same dimensions and type as "predict" .
 
 ## Attributes
 
-sigma: Must be a floating point number. Defaults to "1.0" . 
+sigma: Must be a floating point number. Defaults to "1.0" .
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with the scenario where "reduction" is set to "none"of PyTorch operat
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

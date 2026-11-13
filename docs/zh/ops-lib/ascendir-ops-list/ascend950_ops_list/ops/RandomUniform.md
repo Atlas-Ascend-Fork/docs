@@ -12,16 +12,16 @@ REG_OP(RandomUniform)
 
 ## Brief
 
-Outputs random values from a uniform distribution. 
+Outputs random values from a uniform distribution.
 
 ## Inputs
 
 Inputs include:
-shape: A Tensor. Must be one of the following types: int32, int64. The shape of the output tensor. 
+shape: A Tensor. Must be one of the following types: int32, int64. The shape of the output tensor.
 
 ## Outputs
 
-y: A Tensor of type float32, float16, double, bfloat16. 
+y: A Tensor of type float32, float16, double, bfloat16.
 
 ## Attributes
 
@@ -48,4 +48,4 @@ The implementation for RandomUniform on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

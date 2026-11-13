@@ -17,7 +17,7 @@ REG_OP(MutableDenseHashTable)
 
 ## Brief
 
-Creates an empty hash table that uses tensors as the backing store. 
+Creates an empty hash table that uses tensors as the backing store.
 
 ## Inputs
 
@@ -28,7 +28,7 @@ internally. Must not be used in insert or lookup operations.
 
 ## Outputs
 
-handle: A Tensor of type resource. Handle to the table. 
+handle: A Tensor of type resource. Handle to the table.
 
 ## Attributes
 
@@ -45,7 +45,7 @@ The shape of each value.
 number of hash table buckets. Must be a power to 2.
 - max_load_factor: An optional float. Defaults to 0.8. The maximum ratio
 between number of entries and number of buckets before growing the table.
-Must be between 0 and 1. 
+Must be between 0 and 1.
 
 ## Data Types
 
@@ -62,4 +62,4 @@ Compatible with tensorflow MutableDenseHashTable operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

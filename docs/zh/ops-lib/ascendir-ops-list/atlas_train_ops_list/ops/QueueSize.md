@@ -9,16 +9,16 @@ REG_OP(QueueSize)
 
 ## Brief
 
-Computes the number of elements in the given queue. 
+Computes the number of elements in the given queue.
 
 ## Inputs
 
 The input handle must have the resource type. Inputs include:
-handle:A Tensor of type mutable resource. The handle to a queue. 
+handle:A Tensor of type mutable resource. The handle to a queue.
 
 ## Outputs
 
-size:A Tensor of type int32. 
+size:A Tensor of type int32.
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Compatible with tensorflow QueueSize operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

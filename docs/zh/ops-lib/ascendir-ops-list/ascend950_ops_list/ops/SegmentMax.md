@@ -25,7 +25,7 @@ must be positive integer.
 
 ## Outputs
 
-y:A Tensor with same type as "x". 
+y:A Tensor with same type as "x".
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with the TensorFlow operator SegmentMax.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -19,7 +19,7 @@ REG_OP(RoiExtractor)
 
 ## Brief
 
-Obtains the ROI feature matrix from the feature map list. It is a customized fused operator for mmdetection. 
+Obtains the ROI feature matrix from the feature map list. It is a customized fused operator for mmdetection.
 
 ## Inputs
 
@@ -65,4 +65,4 @@ Compatible with mmdetection SingleRoIExtractor operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

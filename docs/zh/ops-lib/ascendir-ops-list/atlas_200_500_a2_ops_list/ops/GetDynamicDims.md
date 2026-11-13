@@ -11,15 +11,15 @@ REG_OP(GetDynamicDims)
 
 ## Brief
 
-Get dynamic dims after GetNext. 
+Get dynamic dims after GetNext.
 
 ## Inputs
 
-input: A nested structure of Tensor objects, from GetNext's output. Must be one of the following types: int32, int64. 
+input: A nested structure of Tensor objects, from GetNext's output. Must be one of the following types: int32, int64.
 
 ## Outputs
 
-dims: GE unknow dims, a vector of int64. 
+dims: GE unknow dims, a vector of int64.
 
 ## Attributes
 
@@ -35,4 +35,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

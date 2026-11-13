@@ -12,7 +12,7 @@ REG_OP(StatelessMultinomial)
 
 ## Brief
 
-Draws samples from a multinomial distribution. 
+Draws samples from a multinomial distribution.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ represents the unnormalized log probabilities for all classes.
 
 ## Outputs
 
-y:Output random number. 
+y:Output random number.
 @see StatelessMultinomial()
 
 ## Attributes
@@ -47,4 +47,4 @@ compatible with StatelessMultinomial op of tensorflow.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

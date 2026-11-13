@@ -15,7 +15,7 @@ REG_OP(TensorListSetItem)
 
 ## Brief
 
-Sets the index-th position of the list to contain the given tensor. 
+Sets the index-th position of the list to contain the given tensor.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ Sets the index-th position of the list to contain the given tensor.
 
 ## Outputs
 
-output_handle: An output tensor list . 
+output_handle: An output tensor list .
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow TensorListSetItem operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

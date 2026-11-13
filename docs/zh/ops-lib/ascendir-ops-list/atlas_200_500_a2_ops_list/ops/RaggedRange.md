@@ -13,7 +13,7 @@ REG_OP(RaggedRange)
 
 ## Brief
 
-Returns a `RaggedTensor` containing the specified sequences of numbers . 
+Returns a `RaggedTensor` containing the specified sequences of numbers .
 
 ## Inputs
 
@@ -44,7 +44,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 The input tensors `starts`, `limits`, and `deltas` may be scalars or vectors.
 The vector inputs must all have the same size.  Scalar inputs are broadcast
-to match the size of the vector inputs . 
+to match the size of the vector inputs .
 
 ## Third-party framework compatibility
 
@@ -53,4 +53,4 @@ Compatible with tensorflow RaggedRange operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

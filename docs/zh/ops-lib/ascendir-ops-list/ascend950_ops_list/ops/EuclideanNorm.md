@@ -51,4 +51,4 @@ Compatible with the TensorFlow operator tf.math.reduce_euclidean_norm.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

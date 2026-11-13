@@ -11,7 +11,7 @@ REG_OP(Select)
 
 ## Brief
 
-Selects elements from "x1" or "x2", depending on "condition" . 
+Selects elements from "x1" or "x2", depending on "condition" .
 
 ## Inputs
 
@@ -44,4 +44,4 @@ Compatible with the TensorFlow operator Select.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

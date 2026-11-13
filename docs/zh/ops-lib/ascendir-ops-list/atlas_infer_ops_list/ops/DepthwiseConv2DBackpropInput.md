@@ -16,7 +16,7 @@ REG_OP(DepthwiseConv2DBackpropInput)
 ## Brief
 
 Computes the gradients of depthwise convolution with respect to the input.
-The feature map mentioned in this description refers to the output tensor input_grad. 
+The feature map mentioned in this description refers to the output tensor input_grad.
 
 ## Inputs
 
@@ -25,13 +25,13 @@ Three inputs include:
 support int32 and int64.
 - filter: 4D filter tensor with shape of [NCHW] or [NHWC], support type float16, bfloat16 and float32.
 - out_backprop: 4D tensor with shape [NCHW] or [NHWC].
-Must be one of the following types: float16, bfloat16 and float32. 
+Must be one of the following types: float16, bfloat16 and float32.
 
 ## Outputs
 
 input_grad: Gradient of the deep convolution relative to the input with shape
 [N, C, H, W] or [N, H, W, C] Must be one of the following types:
-float16, bfloat16 and float32. 
+float16, bfloat16 and float32.
 
 ## Attributes
 
@@ -46,14 +46,14 @@ Defaults to "[1, 1, 1, 1]".
 If set to K > 1, there will be K-1 skipped cells between each filter element
 on that dimension. The dilations has the same axes sequence as filter:
 [1, 1, dilation_height, dilation_width] or [1, dilation_height, dilation_width, 1].
-In Ascend 950PR/Ascend 950DT, height (H) and width (W) dimensions must be in [1, 2147483647],
+In Ascend 950PR&950DT products, height (H) and width (W) dimensions must be in [1, 2147483647],
 for other products height (H) and width (W) dimensions must be in [1, 255].
 - pads: A required list or tuple of int32. Padding added to each dimension
 of the input.
-In Ascend 950PR/Ascend 950DT, the top, bottom, left and right must be in [0, 2147483647],
+In Ascend 950PR&950DT products, the top, bottom, left and right must be in [0, 2147483647],
 for other products top, bottom, left and right must be in [0, 255].
 - data_format: An optional string. Input data format, either "NHWC" or
-"NCHW". Defaults to "NHWC" . 
+"NCHW". Defaults to "NHWC" .
 
 ## Data Types
 
@@ -80,11 +80,11 @@ Output backprop is 4D with shape [N, C, Ho, Wo] or [N, Ho, Wo, C], but the
 data is 5D with shape [N, C1, Ho, Wo, C0],
 where C is the same as that of the feature map and C0 is 16.
 Limited by Tiling: max_h_in_l1 >= C0, where max_h_in_l1 = (l1_size - Hf *
-Wf * C0 * C0 * 2) / (2 * Wo *C0). 
-In Ascend 950PR/Ascend 950DT: The behavior of gradient computation in the padding region depends on the input shape.
+Wf * C0 * C0 * 2) / (2 * Wo *C0).
+In Ascend 950PR&950DT products: The behavior of gradient computation in the padding region depends on the input shape.
 Depending on the operator optimization strategy, the padding gradients may be directly set to 0.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

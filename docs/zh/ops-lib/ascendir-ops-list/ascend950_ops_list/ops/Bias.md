@@ -33,6 +33,14 @@ bias input from a Caffe model trained offline. Defaults to "1".
 - bias_from_blob: An optional bool. If "true", bias is input from a Caffe model trained offline.
 If "false", bias is input from online bottoms. Defaults to "true".
 
+## Data Types
+
+Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: bfloat16,float16,float32
+- input1 bias: bfloat16,float16,float32
+- output0 y: bfloat16,float16,float32
+
 ## Attention Constraints
 
 Assume that the shape length of "x" is "n" and that of "bias" is "m".
@@ -50,7 +58,7 @@ the ith axis of "bias" and the (i+n+"axis")th axis of "x" must have the same siz
 "axis + m" must be less than or equal to "n" and the ith axis of "bias" and
 the (i+"axis")th axis of "x" must have the same size (0 <= i < m).
 If "axis < 0", "n + axis + m" must be less than or equal to "n" and
-the ith axis of "bias" and the (i+n+"axis")th axis of "x" must have the same size (0 <= i < m). 
+the ith axis of "bias" and the (i+n+"axis")th axis of "x" must have the same size (0 <= i < m).
 
 ## Third-party framework compatibility
 
@@ -59,4 +67,4 @@ Compatible with the Caffe operator Bias.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

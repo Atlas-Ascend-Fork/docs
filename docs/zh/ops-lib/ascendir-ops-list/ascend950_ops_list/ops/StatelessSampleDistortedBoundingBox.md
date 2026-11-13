@@ -21,7 +21,7 @@ REG_OP(StatelessSampleDistortedBoundingBox)
 
 ## Brief
 
-Generate a single randomly distorted bounding box for an image. 
+Generate a single randomly distorted bounding box for an image.
 
 ## Inputs
 
@@ -53,7 +53,7 @@ image of the specified constraints. After max_attempts failures, return the
 entire image.
 - use_image_if_no_bounding_boxes: Controls behavior if no bounding boxes
 supplied. If true, assume an implicit bounding box covering the whole input.
-If false, raise an error. 
+If false, raise an error.
 
 ## Data Types
 
@@ -68,7 +68,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images can be of different types but output images are always float. 
+Input images can be of different types but output images are always float.
 
 ## Third-party framework compatibility
 
@@ -77,4 +77,4 @@ Compatible with tensorflow StatelessSampleDistortedBoundingBox operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -28,7 +28,8 @@ Computes the transpose of convolution 3d with respect to the input.
 
 - input_size: A tensor of type int32 or int64. An integer vector
 representing the shape of input.
-- x: A tensor of the following types, DT_FLOAT16, DT_FLOAT, DT_BF16, DT_INT8. Only support DT_FLOAT16 and DT_INT8 right now.
+- x: A tensor of the following types, DT_FLOAT16, DT_FLOAT, DT_BF16, DT_INT8. Only support DT_FLOAT16 and DT_INT8
+right now.
 The format is NCDHW.
 - filter: A 5D tensor.
 The format is NCDHW，and NDHWC.
@@ -36,7 +37,7 @@ The height (H), width (W) dimension must be in [1, 511].
 - bias: Optional. An optional 1D tensor of type float16, float32 or int32.
 The data is stored in the order of: [out_channels].
 - scale: An optional 1D tensor. Quantization/dequantization/weighting parameter corresponding to
-the first output, which is of the channelwise type. 
+the first output, which is of the channelwise type.
 
 ## Outputs
 
@@ -54,7 +55,7 @@ The depth (D) dimension must be in [1, 255].
 - pads: Required. A tuple/list of 6 integers.
 All dimensions must be in [0, 255].
 - dilations: Optional. A tuple/list of 5 integers,
-The dilation factor for each dimension of input. Defaults to [1, 1, 1, 1, 1]. 
+The dilation factor for each dimension of input. Defaults to [1, 1, 1, 1, 1].
 The batch(N) and channels dimensions must be 1.
 The width (W), height (H) and depth(D) dimensions must be in [1, 255].
 The dilations have the same axes sequence "x":
@@ -63,7 +64,7 @@ The dilations have the same axes sequence "x":
 - groups: An optional integer within the effective range of [1, 65535]. Default to 1.
 Number of blocked connections from in_channels to out_channels.
 The in_channels and out_channels must be divisible by groups.
-When the groups value differs, the supported data type may vary, specifically as follows: 
+When the groups value differs, the supported data type may vary, specifically as follows:
 | groups |        dtype           |   x format  | filter format |    y format    |
 |--------|------------------------|-------------|---------------|----------------|
 |  =1    |int8                    |    NCDHW    |      NCDHW    |     NCDHW      |
@@ -97,4 +98,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

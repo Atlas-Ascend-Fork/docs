@@ -10,24 +10,24 @@ REG_OP(SqueezeV3)
 
 ## Brief
 
-Removes dimensions of size 1 from the shape of a tensor according to axes. 
+Removes dimensions of size 1 from the shape of a tensor according to axes.
 
 ## Inputs
 
-x: A tensor. All data types are supported. 
+x: A tensor. All data types are supported.
 axes: An optional list of int64. Defaults to []. If not specified, squeezes all
 dimensions of size 1. If specified, only squeezes the dimensions listed. It is
-an error to squeeze a dimension that is not 1. 
+an error to squeeze a dimension that is not 1.
 
 ## Outputs
 
-y: Reshape tensor with same data as input. The same type as input x. 
+y: Reshape tensor with same data as input. The same type as input x.
 
 ## Third-party framework compatibility
 
-Compatible with the onnx operator Squeeze in V13. 
+Compatible with the onnx operator Squeeze in V13.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -12,17 +12,17 @@ REG_OP(TruncatedNormal)
 
 ## Brief
 
-Outputs random values from a truncated normal distribution . 
+Outputs random values from a truncated normal distribution .
 
 ## Inputs
 
 Inputs include:
-shape: A Tensor. Must be one of the following types: int32, int64 . 
+shape: A Tensor. Must be one of the following types: int32, int64 .
 
 ## Outputs
 
 y: A Tensor of types: float16, float32, double, bfloat16 . A tensor of the specified shape
-filled with random truncated normal values. 
+filled with random truncated normal values.
 
 ## Attributes
 
@@ -52,4 +52,4 @@ The implementation for TruncatedNormal on Ascend uses AICPU, with bad performanc
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

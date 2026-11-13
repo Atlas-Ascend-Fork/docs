@@ -10,7 +10,7 @@ REG_OP(SequenceLength)
 ## Brief
 
 produces a scalar(tensor of empty shape) containing the number
-of tensors in input_sequence. 
+of tensors in input_sequence.
 
 ## Inputs
 
@@ -30,4 +30,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

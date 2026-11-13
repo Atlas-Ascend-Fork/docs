@@ -126,7 +126,7 @@ cause compilation errors.
 - If any dimension of x/filter/bias/offset_w/y shape exceeds max
 int32(2147483647), the product of each dimension of x/filter/bias/offset_w/y
 shape exceeds max int32(2147483647) or the value of strides/pads/dilations/offset_x
-exceeds the range in the above table, the correctness of the operator cannot be guaranteed. 
+exceeds the range in the above table, the correctness of the operator cannot be guaranteed.
 In Ascend 950 AI Processor: If any dimension of x/filter/bias/offset_w/y shape exceeds max
 1000000, the product of each dimension of x/filter/bias/offset_w/y
 shape exceeds max int32(2147483647) or the value of strides/pads/dilations/offset_x
@@ -148,4 +148,4 @@ Yes
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

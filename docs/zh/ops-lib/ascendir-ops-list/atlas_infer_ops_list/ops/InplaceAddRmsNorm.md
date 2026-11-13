@@ -14,10 +14,10 @@ REG_OP(InplaceAddRmsNorm)
 
 ## Brief
 
-InplaceAddRmsNorm operator interface implementation. 
- calculating: x1, x2, gamma 
- x2 = x1 + x2 
- rstd = np.rsqrt(np.mean(np.power(x,2), reduce_axis, keepdims=True) + epsilon)) 
+InplaceAddRmsNorm operator interface implementation.
+ calculating: x1, x2, gamma
+ x2 = x1 + x2
+ rstd = np.rsqrt(np.mean(np.power(x,2), reduce_axis, keepdims=True) + epsilon))
  x1 = gamma * (x2 * rstd)
 
 ## Inputs
@@ -52,4 +52,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

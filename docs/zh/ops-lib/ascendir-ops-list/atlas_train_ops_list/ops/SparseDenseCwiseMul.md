@@ -18,7 +18,7 @@ REG_OP(SparseDenseCwiseMul)
 
 ## Brief
 
-Multiplies a SparseTensor by a dense tensor. 
+Multiplies a SparseTensor by a dense tensor.
 
 ## Inputs
 
@@ -29,7 +29,7 @@ Multiplies a SparseTensor by a dense tensor.
 
 ## Outputs
 
-y: A tensor. Has the same type as "x1_values". 
+y: A tensor. Has the same type as "x1_values".
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator SparseDenseCwiseMul.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

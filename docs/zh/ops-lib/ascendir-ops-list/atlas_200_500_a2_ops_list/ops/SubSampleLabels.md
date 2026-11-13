@@ -24,7 +24,7 @@ two inputs, including:
 
 ## Outputs
 
-y: The result of subSample. 
+y: The result of subSample.
 
 ## Attributes
 
@@ -50,4 +50,4 @@ Compatible with the Pytorch operator SubSampleLabels.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

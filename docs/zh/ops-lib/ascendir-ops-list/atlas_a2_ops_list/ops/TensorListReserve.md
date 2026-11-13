@@ -12,7 +12,7 @@ REG_OP(TensorListReserve)
 
 ## Brief
 
-List of the given size with empty elements. 
+List of the given size with empty elements.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ List of the given size with empty elements.
 
 ## Outputs
 
-handle: An output tensor list . 
+handle: An output tensor list .
 
 ## Attributes
 
@@ -43,4 +43,4 @@ Compatible with tensorflow TensorListReserve operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

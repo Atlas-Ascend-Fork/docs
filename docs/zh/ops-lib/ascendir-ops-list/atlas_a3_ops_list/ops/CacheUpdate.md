@@ -9,11 +9,11 @@ REG_OP(CacheUpdate)
 
 ## Brief
 
-aicpu cache help for lhisi cache flush. 
+aicpu cache help for lhisi cache flush.
 
 ## Inputs
 
-The input is dynamic for attribute func_name   
+The input is dynamic for attribute func_name
 
 ## Outputs
 
@@ -22,4 +22,4 @@ The output is dynamic for attribute func_name.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

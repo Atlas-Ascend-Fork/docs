@@ -20,7 +20,7 @@ REG_OP(NonMaxSuppressionV5)
 
 Greedily selects a subset of bounding boxes in descending order of score,
 pruning away boxes that have high intersection-over-union (IOU) overlap
-with previously selected boxes . 
+with previously selected boxes .
 
 ## Inputs
 
@@ -42,7 +42,7 @@ selected indices from the boxes tensor, where M <= max_output_size.
 - selected_scores: A 1-D float tensor of shape `[M]` representing the corresponding
 scores for each selected box, where `M <= max_output_size`.
 - valid_outputs: A 0-D integer tensor representing the number of valid
-elements in selected_indices, with the valid elements appearing first . 
+elements in selected_indices, with the valid elements appearing first .
 
 ## Attributes
 
@@ -71,4 +71,4 @@ Compatible with tensorflow NonMaxSuppressionV5 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

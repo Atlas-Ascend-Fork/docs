@@ -9,15 +9,15 @@ REG_OP(TensorMapSize)
 
 ## Brief
 
-return TensorMap Size. 
+return TensorMap Size.
 
 ## Inputs
 
-input_handle: A Tensor. Must be one of the following types: variant. 
+input_handle: A Tensor. Must be one of the following types: variant.
 
 ## Outputs
 
-size: A Tensor. Must be one of the following types: int32. 
+size: A Tensor. Must be one of the following types: int32.
 
 ## Data Types
 
@@ -29,4 +29,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

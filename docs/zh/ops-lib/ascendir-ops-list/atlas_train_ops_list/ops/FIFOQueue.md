@@ -13,11 +13,11 @@ REG_OP(FIFOQueue)
 
 ## Brief
 
-A queue that produces elements in first-in first-out order. 
+A queue that produces elements in first-in first-out order.
 
 ## Outputs
 
-handle:A Tensor of type mutable resource. The handle to a queue. 
+handle:A Tensor of type mutable resource. The handle to a queue.
 
 ## Attributes
 
@@ -30,7 +30,7 @@ be stored in this queue. default vaule is -1.
 - container: An optional string. Defaults to "". If non-empty, this queue
 is placed in the given container. Otherwise, a default container is used.
 - shared_name: An optional string. Defaults to "". If non-empty, this queue will be shared under
-the given name across multiple sessions. 
+the given name across multiple sessions.
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with tensorflow FIFOQueue operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

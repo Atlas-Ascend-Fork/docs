@@ -15,16 +15,16 @@ Computes log softmax activations .
 ## Inputs
 
 One input:
-logits: A ND tensor. Must be one of the following data types: double, bfloat16, float16, float32 . 
+logits: A ND tensor. Must be one of the following data types: double, bfloat16, float16, float32 .
 
 ## Outputs
 
-logsoftmax: A ND tensor. Has the same data type as "logits" . 
+logsoftmax: A ND tensor. Has the same data type as "logits" .
 
 ## Attributes
 
 axes: An optional list of ints. Multi-axis reduction is supported. Defaults to "{-1}" .
-In Ascend 950 AI Processor, only single-axis reduction is supported. 
+In Ascend 950 AI Processor, only single-axis reduction is supported.
 
 ## Data Types
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator LogSoftmax.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -17,7 +17,7 @@ REG_OP(DenseToDenseSetOperation)
 
 ## Brief
 
-Applies set operation along last dimension of 2 Tensor inputs. 
+Applies set operation along last dimension of 2 Tensor inputs.
 
 ## Inputs
 
@@ -57,4 +57,4 @@ The implementation for DenseToDenseSetOperation on Ascend uses AICPU, with bad p
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

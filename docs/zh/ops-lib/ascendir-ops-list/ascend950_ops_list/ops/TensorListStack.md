@@ -15,7 +15,7 @@ REG_OP(TensorListStack)
 
 ## Brief
 
-Stacks all tensors in the list. 
+Stacks all tensors in the list.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ Stacks all tensors in the list.
 
 ## Outputs
 
-tensor: The tensor of list. 
+tensor: The tensor of list.
 
 ## Attributes
 
@@ -46,4 +46,4 @@ Compatible with tensorflow TensorListStack operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

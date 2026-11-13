@@ -215,4 +215,4 @@ in non-continuous scenarios, the batch size in the tensor list of 'key' and 'val
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

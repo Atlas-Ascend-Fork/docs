@@ -22,7 +22,7 @@ REG_OP(SparseConcat)
 ## Brief
 
 Concatenates a list of `SparseTensor` along the specified dimension.
-Concatenation is with respect to the dense versions of these sparse tensors. 
+Concatenation is with respect to the dense versions of these sparse tensors.
 
 ## Inputs
 
@@ -31,7 +31,7 @@ Indices of each input `SparseTensor`.It's a dynamic input.
 - values:A list with the same length as `indices` of `tensor` objects with the same type.
 It's a dynamic input.
 - shapes:A list with the same length as `indices` of `tensor` objects with type `int64`.1-D.
-Shapes of each `SparseTensor`. It's a dynamic input. 
+Shapes of each `SparseTensor`. It's a dynamic input.
 
 ## Outputs
 
@@ -59,4 +59,4 @@ Compatible SparseConcat operator in Tensorflow.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

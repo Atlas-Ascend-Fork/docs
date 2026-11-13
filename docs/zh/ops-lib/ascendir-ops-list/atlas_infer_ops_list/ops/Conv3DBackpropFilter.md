@@ -34,14 +34,14 @@ The axes sequence that can be entered are as follows:
 [out_channels, in_channels, filter_depth, filter_height, filter_width]
 or [out_channels, filter_depth, filter_height, filter_width, in_channels].
 The height (H) and width (W) dimensions must be in [1, 2147483646].
-Additionally, Atlas Training Series Product required Depth (D) dimension must be in [1, 255]
+Additionally, Atlas training products required Depth (D) dimension must be in [1, 255]
 The other values of filter_size must be in [1, 2147483646].
 - out_backprop: Gradients with respect to the output of the convolution.
 A 5-D tensor. Must have the same type and format as x.
 The format of the out_backprop tensor must be one of the followings:
 [batch, out_depth, out_height, out_width, out_channels]
 or [batch, out_channels, out_depth, out_height, out_width].
-Any dimension of out_backprop shape must be in [1, 2147483646]. 
+Any dimension of out_backprop shape must be in [1, 2147483646].
 
 ## Outputs
 
@@ -56,12 +56,12 @@ The strides have the same axes sequence as "x".
 The batch(N) and channels(C) dimensions must be 1.
 The stride_height(H) and stride_width(W) dimensions must be in [1, 63].
 The stride_depth(D) dimension must be in [1, 2147483646].
-In Ascend 950PR/Ascend 950DT, the stride_depth(D), stride_height(H) and stride_depth(W) must be in [1, 2147483646].
+In Ascend 950PR&950DT products, the stride_depth(D), stride_height(H) and stride_depth(W) must be in [1, 2147483646].
 - pads: Required. A tuple/list of 6 integers, [front, back, top, bottom,
 left, right] pads on x.
 The top, bottom, left and right must be in [0, 255].
 The front and back must be in [0, 2147483646].
-In Ascend 950PR/Ascend 950DT, the top, bottom, left, right, front and back must be in [0, 2147483646].
+In Ascend 950PR&950DT products, the top, bottom, left, right, front and back must be in [0, 2147483646].
 Modes "SAME" and "VALID" padding can be achieved with appropriate values of each direction in pads.
 - dilations: Optional. A tuple/list of 5 integers, The dilation factor
 for each dimension of input. Defaults to [1, 1, 1, 1, 1].
@@ -72,13 +72,13 @@ The dilations have the same axes sequence "x":
 [batch, dilation_depth, dilation_height, dilation_width, channels] or
 [batch, channels, dilation_depth, dilation_height, dilation_width].
 In graph mode, only configuration to [1, 1, 1, 1, 1] is supported.
-In Ascend 950PR/Ascend 950DT, the depth(D), height(H) and width(W) dimensions must be in [1, 2147483646].
+In Ascend 950PR&950DT products, the depth(D), height(H) and width(W) dimensions must be in [1, 2147483646].
 - groups: Optional. Number of blocked connections from input channels
 to output channels. Defaults to 1.
 Currently in_channels and out_channels must be divisible by groups.
 The value of groups must be in [1, 65535].
 - data_format: Optional. A string from: "NDHWC", "NCDHW".
-Defaults to "NDHWC". Specify the data format of the x and out_backprop. 
+Defaults to "NDHWC". Specify the data format of the x and out_backprop.
 
 ## Data Types
 
@@ -95,7 +95,7 @@ Compatible with Tensorflow's conv3d_backprop_filter
 
 ## Attention Constraints:
 
-In Ascend 950PR/Ascend 950DT: The behavior of gradient computation in the padding region depends on the input shape.
+In Ascend 950PR&950DT products: The behavior of gradient computation in the padding region depends on the input shape.
 Depending on the operator optimization strategy, the padding gradients may be directly set to 0.
 Due to hardware resource restrictions,
 the operator fails to be executed in scenarios of some parameter value combinations.
@@ -105,4 +105,4 @@ If the fault persists, visit https://www.hiascend.com/support for technical supp
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

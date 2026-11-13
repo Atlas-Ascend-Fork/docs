@@ -10,17 +10,17 @@ REG_OP(Normal)
 
 ## Brief
 
-Output random value from  separate normal distribution. 
+Output random value from  separate normal distribution.
 
 ## Inputs
 
 Inputs include:
 mean: The mean is a tensor with the mean of each output element’s normal distribution .
-std: The std is a tensor with the standard deviation of each output element’s normal distribution. 
+std: The std is a tensor with the standard deviation of each output element’s normal distribution.
 
 ## Outputs
 
-y: A Tensor of type dtype . 
+y: A Tensor of type dtype .
 
 ## Attention Constraints
 
@@ -33,4 +33,4 @@ The implementation for Normal on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

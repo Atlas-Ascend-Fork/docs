@@ -20,22 +20,22 @@ REG_OP(Resize)
 
 ## Brief
 
-Resize the input tensor. 
+Resize the input tensor.
 currently, only support resize image tensor using nearest neighbor and linear interpolation.
 
 ## Inputs
 
-Input x must be a 4-D tensor. Inputs include: 
+Input x must be a 4-D tensor. Inputs include:
 - x: A Tensor. Must be one of the following types: uint8, int8, int16,
-int32, int64, float16, float, double. 4-D with shape [batch, height, width, channels] 
+int32, int64, float16, float, double. 4-D with shape [batch, height, width, channels]
 or shape [batch, channels, height, width].
 - roi: A 1-D float Tensor. Only takes effect when attr coordinate_transformation_mode
 is "tf_crop_and_resize". Must be one of the following types: float16, float, double.
 - scales: A 1-D float Tensor, the scale array along each dimension, Only one of
 'scales' and 'sizes' can be specified. Must be float type.
 - sizes: A 1-D int64 Tensor, The size of the output tensor. Only one of
-'scales' and 'sizes' can be specified.  If 'size' is specified, then set scales 
-to empty data (zero shape) in this operator's input list. Must be one of 
+'scales' and 'sizes' can be specified.  If 'size' is specified, then set scales
+to empty data (zero shape) in this operator's input list. Must be one of
 the following types: int32, int64.
 
 ## Outputs
@@ -45,16 +45,16 @@ y: A Tensor. Has the same type as x.
 ## Attributes
 
 - coordinate_transformation_mode: An optional String. how to transform
-the coordinate in the resized tensor to the coordinate in the original tensor. 
-options: pytorch_half_pixel, align_corners, asymmetric, 
+the coordinate in the resized tensor to the coordinate in the original tensor.
+options: pytorch_half_pixel, align_corners, asymmetric,
 tf_crop_and_resize.
 - cubic_coeff_a: An optional Float. Defaults to -0.75, only used in cubic interpolation.
 other optional: -0.5
 - exclude_outside: An optional Int. Defaults to 0, If set to 1, the weight of sampling
-locations outside the tensor will be set to 0 and the weight will be renormalized 
+locations outside the tensor will be set to 0 and the weight will be renormalized
 so that their sum is 1.0.
 - extrapolation_value: An optional Float. Defaults to 0.0f. When coordinate_transformation_mode
-is "tf_crop_and_resize" and x_original is outside the range [0, length_original - 1], 
+is "tf_crop_and_resize" and x_original is outside the range [0, length_original - 1],
 this value is used as the corresponding output value.
 - mode: An optional String. Defaults to nearest. Three interpolation modes: nearest (default),
 linear and cubic.
@@ -75,11 +75,11 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 Compatible with tensorflow ResizeNearestNeighborV2 operator.
 
-## Attention Constraints: 
+## Attention Constraints:
 
 Input x must be a 4-D tensor.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

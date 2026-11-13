@@ -10,7 +10,7 @@ REG_OP(IRFFT)
 
 ## Brief
 
-Inverse real-valued fast Fourier transform. 
+Inverse real-valued fast Fourier transform.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Inverse real-valued fast Fourier transform.
 
 y: A float32 tensor of the same rank as `input`. The inner-most
 dimension of `input` is replaced with the `fft_length` samples of its inverse
-1D Fourier transform. 
+1D Fourier transform.
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with TensorFlow IRFFT operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

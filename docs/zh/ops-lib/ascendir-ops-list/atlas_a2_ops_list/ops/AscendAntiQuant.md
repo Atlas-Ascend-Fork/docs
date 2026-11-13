@@ -14,8 +14,8 @@ REG_OP(AscendAntiQuant)
 ## Brief
 
 Per-tensor anti-quantization with scalar scale / offset attributes.
-  y = cast\<TOut>((x + offset) * scale)              when sqrt_mode == false
-  y = cast\<TOut>((x + offset) * scale * scale)      when sqrt_mode == true
+  y = cast\<TOut>(x + offset) * scale)              when sqrt_mode == false
+  y = cast\<TOut>(x + offset) * scale * scale)      when sqrt_mode == true
 
 ## Inputs
 
@@ -35,4 +35,4 @@ Per-tensor anti-quantization with scalar scale / offset attributes.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

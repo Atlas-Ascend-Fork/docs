@@ -11,7 +11,7 @@ REG_OP(YoloxBoundingBoxDecode)
 ## Brief
 
 Generates bounding boxes based on "priors" and "bboxes".
-It is a customized yolox operator . 
+It is a customized yolox operator .
 
 ## Inputs
 
@@ -20,7 +20,7 @@ Two inputs, including:
 A 2D Tensor of type float32 or float16 with shape (N, 4).
 "N" indicates the number of boxes, and the value "4" refers to "x0", "x1", "y0", and "y1".
 - bboxes_input: bboxes predicted by the model. A 2D Tensor of type float32 or float16 with shape (B, N, 4).
-"B" indicates the batch_size, N indicates the number of boxes, 4 indicates "dx", "dy", "dw", and "dh" . 
+"B" indicates the batch_size, N indicates the number of boxes, 4 indicates "dx", "dy", "dw", and "dh" .
 
 ## Outputs
 
@@ -37,4 +37,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

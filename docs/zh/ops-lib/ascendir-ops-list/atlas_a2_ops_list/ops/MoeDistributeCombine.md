@@ -38,10 +38,12 @@ MoeDistributeCombine operator interface implementation.
 ## Inputs
 
 Ten inputs, including:
-- expand_x: A tensor. Support dtype: float16, bfloat16, dimension must be 2, Support Shape: (A * world_size, H), support format: ND.
+- expand_x: A tensor. Support dtype: float16, bfloat16, dimension must be 2, Support Shape: (A * world_size, H),
+support format: ND.
 - expert_ids: A tensor. Support dtype: int32, dimension must be 2, Support Shape: (BS, K), support format: ND.
 - expand_idx: A tensor. Support dtype: int32, dimension must be 1, Support Shape: (BS*K, ), support format: ND.
-- ep_send_counts: A tensor. Support dtype: int32, Support Shape: (expert_nums + 2 * globalBs * K * server_num, ), support format: ND.
+- ep_send_counts: A tensor. Support dtype: int32, Support Shape: (expert_nums + 2 * globalBs * K * server_num, ),
+support format: ND.
 - expert_scales: A tensor. Support dtype: float32, Support Shape: (BS, K), support format: ND.
 - tp_send_counts: A tensor. Support dtype: int32, support format: ND.
 - x_active_mask: An optional tensor. Support dtype: bool, support format: ND.
@@ -92,4 +94,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

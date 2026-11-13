@@ -17,15 +17,15 @@ Thresholds each element of the input Tensor: y = (x > threshold) ? x : value
 
 Three inputs, including:
 - x: A ND Tensor. Support 1D~8D.
-Must be one of the following types: float16, float32, int8, int32, uint8, int64, bfloat16. 
+Must be one of the following types: float16, float32, int8, int32, uint8, int64, bfloat16.
 - threshold: A Tensor which should have the shape (1,), the value to threshold at.
-Must be one of the following types: float16, float32, int8, int32, uint8, int64, bfloat16. 
+Must be one of the following types: float16, float32, int8, int32, uint8, int64, bfloat16.
 - value: A Tensor which should have the shape (1,), the value to replace with. default value is 0.
-Must be one of the following types: float16, float32, int8, int32, uint8, int64, bfloat16. 
+Must be one of the following types: float16, float32, int8, int32, uint8, int64, bfloat16.
 
 ## Outputs
 
-y: A Tensor which has the same shape, format and type as the input x. 
+y: A Tensor which has the same shape, format and type as the input x.
 
 ## Data Types
 
@@ -43,4 +43,4 @@ Compatible with the Pytorch operator Threshold.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

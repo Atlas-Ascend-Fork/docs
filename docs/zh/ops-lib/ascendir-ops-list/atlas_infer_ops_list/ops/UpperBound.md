@@ -13,7 +13,7 @@ REG_OP(UpperBound)
 
 ## Brief
 
-Applies upper_bound(sorted_search_values, values) along each row. 
+Applies upper_bound(sorted_search_values, values) along each row.
 
 ## Inputs
 
@@ -23,11 +23,11 @@ Inputs "sorted_x" and "values" are 2D tensors.
 
 ## Outputs
 
-y: A Tensor with the same shape as "values". 
+y: A Tensor with the same shape as "values".
 
 ## Attributes
 
-out_type: sets the optional out_type attribute to value. 
+out_type: sets the optional out_type attribute to value.
 
 ## Data Types
 
@@ -39,7 +39,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-UpperBound runs on the Ascend AI CPU, which delivers poor performance. 
+UpperBound runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator UpperBound.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

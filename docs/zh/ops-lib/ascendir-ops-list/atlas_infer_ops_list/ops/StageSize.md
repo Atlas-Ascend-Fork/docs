@@ -13,11 +13,11 @@ REG_OP(StageSize)
 
 ## Brief
 
-Op returns the number of elements in the underlying container. 
+Op returns the number of elements in the underlying container.
 
 ## Outputs
 
-size:A Tensor of type int32. 
+size:A Tensor of type int32.
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Compatible with tensorflow StageSize operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

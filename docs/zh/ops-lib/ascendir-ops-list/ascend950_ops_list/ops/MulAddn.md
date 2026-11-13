@@ -21,7 +21,7 @@ Two inputs, including:
 
 ## Outputs
 
-@ y: A ND tensor. Has the same dtype as "x1". 
+@ y: A ND tensor. Has the same dtype as "x1".
 
 ## Attributes
 
@@ -44,4 +44,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

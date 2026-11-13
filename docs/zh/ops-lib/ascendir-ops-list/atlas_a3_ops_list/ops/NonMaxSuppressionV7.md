@@ -17,7 +17,7 @@ REG_OP(NonMaxSuppressionV7)
 ## Brief
 
 Greedily selects a subset of bounding boxes in descending order of
-score . 
+score .
 
 ## Inputs
 
@@ -31,14 +31,14 @@ of boxes to be selected by non max suppression. Must be int32 type.
 - iou_threshold: A 0-D float tensor representing the threshold for deciding
 whether boxes overlap too much with respect to IOU. Must be float32 type.
 - score_threshold: A 0-D float tensor representing the threshold for
-deciding when to remove boxes based on score. Must be float32 type. 
+deciding when to remove boxes based on score. Must be float32 type.
 - index_id: A input tensor with shape [num_batches,num_classes,spatial_dimension,3]
-the last dim representing (batch_id,class_id,index_id). Must be float16 type. 
+the last dim representing (batch_id,class_id,index_id). Must be float16 type.
 
 ## Outputs
 
 selected_indices: A 2-D integer tensor of shape [M] representing the
-selected indices from the boxes tensor, where M <= max_output_size. Must be int32 type. 
+selected indices from the boxes tensor, where M <= max_output_size. Must be int32 type.
 
 ## Attributes
 
@@ -48,9 +48,9 @@ where (y1, x1) and (y2, x2) are the coordinates of any diagonal pair
 of box corners and the coordinates can be provided as normalized
 (i.e., lying in the interval [0, 1]) or absolute.Mostly used for TF models.
 1 - the box data is supplied as [x_center, y_center, width, height].
-Mostly used for Pytorch models. 
+Mostly used for Pytorch models.
 - max_boxes_size: An optional attribute integer representing the real maximum
-number of boxes to be selected by non max suppression . 
+number of boxes to be selected by non max suppression .
 
 ## Data Types
 
@@ -66,7 +66,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input boxes and scores support float16, float32 type. 
+Input boxes and scores support float16, float32 type.
 
 ## Third-party framework compatibility
 
@@ -75,4 +75,4 @@ Compatible with onnx NonMaxSuppression operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -15,7 +15,7 @@ REG_OP(SparseTensorDenseAdd)
 
 ## Brief
 
-Adds up a SparseTensor and a dense tensor, producing a dense tensor. 
+Adds up a SparseTensor and a dense tensor, producing a dense tensor.
 
 ## Inputs
 
@@ -27,7 +27,7 @@ Inputs "x1_*" must be SparseTensors and "x2" must be a dense tensor.
 
 ## Outputs
 
-y: A matrix tensor. Has the same type and same shape as "x2". 
+y: A matrix tensor. Has the same type and same shape as "x2".
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with the TensorFlow operator SparseTensorDenseAdd.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

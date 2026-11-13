@@ -16,9 +16,9 @@ REG_OP(DeepNorm)
 
 ## Brief
 
-DeepNorm operator. 
- calculating: x, gx, gamma, beta, alpha 
- new_x = x * alpha + gx 
+DeepNorm operator.
+ calculating: x, gx, gamma, beta, alpha
+ new_x = x * alpha + gx
  y = gamma*(new_x - mean) / np.sqrt(variance + 1e-6) + beta
 
 ## Inputs
@@ -56,4 +56,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -14,18 +14,18 @@ REG_OP(NonZeroWithValueShapeV2)
 
 ## Brief
 
-Returns a tensor with updated shape from NonZeroWithValue. 
+Returns a tensor with updated shape from NonZeroWithValue.
 
 ## Inputs
 
-value: A Tensor. The output of NonZeroWithValue. 
-index: A Tensor. The output of NonZeroWithValue. 
-count: A Tensor. The type is INT32, means count for non_zero ele in input. 
+value: A Tensor. The output of NonZeroWithValue.
+index: A Tensor. The output of NonZeroWithValue.
+count: A Tensor. The type is INT32, means count for non_zero ele in input.
 
 ## Outputs
 
-value: A Tensor. The output value is the updated shape of the input value. 
-index: A Tensor. The output index is the updated shape of the input index. 
+value: A Tensor. The output value is the updated shape of the input value.
+index: A Tensor. The output index is the updated shape of the input index.
 
 ## Data Types
 
@@ -40,4 +40,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

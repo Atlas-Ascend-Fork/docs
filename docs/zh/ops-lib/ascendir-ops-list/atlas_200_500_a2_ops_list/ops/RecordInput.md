@@ -15,11 +15,11 @@ REG_OP(RecordInput)
 
 ## Brief
 
-Emits randomized records. 
+Emits randomized records.
 
 ## Outputs
 
-records: A Tensor of type string. 
+records: A Tensor of type string.
 
 ## Attributes
 
@@ -34,7 +34,7 @@ shuffling buffer.
 opened and concurrently iterated over.
 - batch_size: An optional int. Defaults to 32. The batch size.
 - compression_type: An optional string. Defaults to "". The type of
-compression for the file. Currently ZLIB and GZIP are supported. 
+compression for the file. Currently ZLIB and GZIP are supported.
 
 ## Data Types
 
@@ -49,4 +49,4 @@ Compatible with tensorflow RecordInput operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

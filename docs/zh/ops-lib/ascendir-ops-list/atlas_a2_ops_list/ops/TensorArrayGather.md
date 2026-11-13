@@ -16,7 +16,7 @@ REG_OP(TensorArrayGather)
 
 ## Brief
 
-All elements selected by indices must have the same shape. 
+All elements selected by indices must have the same shape.
 
 ## Inputs
 
@@ -29,14 +29,14 @@ elements.
 ## Outputs
 
 value:  All of the elements in the TensorArray, concatenated along a new
-axis (the new dimension 0). 
+axis (the new dimension 0).
 
 ## Attributes
 
 - dtype: The type of the elem that is returned.
 - element_shape: The expected shape of an element, if known. Used to
 validate the shapes of TensorArray elements. If this shape is not fully
-specified, gathering zero-size TensorArrays is an error. 
+specified, gathering zero-size TensorArrays is an error.
 
 ## Data Types
 
@@ -54,4 +54,4 @@ Compatible with tensorflow TensorArrayGather operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

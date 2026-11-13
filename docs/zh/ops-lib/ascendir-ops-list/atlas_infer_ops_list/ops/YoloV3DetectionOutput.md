@@ -31,7 +31,7 @@ REG_OP(YoloV3DetectionOutput)
 
 ## Brief
 
-Performs YOLO V3 detection . 
+Performs YOLO V3 detection .
 
 ## Inputs
 
@@ -74,4 +74,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

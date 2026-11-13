@@ -19,7 +19,7 @@ Finds the first unique element from every consecutive group of equivalent elemen
 
 ## Inputs
 
-x: A ND tensor of BasicType, bool or bfloat16. 
+x: A ND tensor of BasicType, bool or bfloat16.
 
 ## Outputs
 
@@ -59,4 +59,4 @@ Compatible with the PyTorch operator UniqueConsecutive.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

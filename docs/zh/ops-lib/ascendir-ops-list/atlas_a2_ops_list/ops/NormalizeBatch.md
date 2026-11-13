@@ -12,7 +12,7 @@ REG_OP(NormalizeBatch)
 
 ## Brief
 
-Performs batch normalization . 
+Performs batch normalization .
 
 ## Inputs
 
@@ -29,7 +29,7 @@ One outputs
 
 - normalize_type: Str. Support "per_feature" or "all_features".
 - epsilon: An optional float32, specifying the small value added to
-variance to avoid dividing by zero. Defaults to "0.00001" . 
+variance to avoid dividing by zero. Defaults to "0.00001" .
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -19,7 +19,7 @@ REG_OP(RpnProposals)
 
 ## Brief
 
-Computes Fastrcnn RpnProposals function . 
+Computes Fastrcnn RpnProposals function .
 
 ## Inputs
 
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator Unpack.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

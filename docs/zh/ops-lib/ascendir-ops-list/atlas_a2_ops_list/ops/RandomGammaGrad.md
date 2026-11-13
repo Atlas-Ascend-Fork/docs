@@ -10,7 +10,7 @@ REG_OP(RandomGammaGrad)
 
 ## Brief
 
-Computes the derivative of a Gamma random sample w.r.t. alpha. 
+Computes the derivative of a Gamma random sample w.r.t. alpha.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ Inputs include:
 
 ## Outputs
 
-y: A Tensor. Has the same type as alpha. 
+y: A Tensor. Has the same type as alpha.
 
 ## Data Types
 
@@ -41,4 +41,4 @@ The implementation for RandomGammaGrad on Ascend uses AICPU, with bad performanc
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

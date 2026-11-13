@@ -13,7 +13,7 @@ REG_OP(NonMaxSuppressionV2)
 ## Brief
 
 Greedily selects a subset of bounding boxes in descending order of
-score . 
+score .
 
 ## Inputs
 
@@ -24,12 +24,12 @@ score corresponding to each box (each row of boxes).
 - max_output_size: A scalar integer tensor representing the maximum number
 of boxes to be selected by non max suppression.
 - iou_threshold: A 0-D float tensor representing the threshold for deciding
-whether boxes overlap too much with respect to IOU . 
+whether boxes overlap too much with respect to IOU .
 
 ## Outputs
 
 selected_indices: A 1-D integer tensor of shape [M] representing the selected
-indices from the boxes tensor, where M <= max_output_size . 
+indices from the boxes tensor, where M <= max_output_size .
 
 ## Data Types
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input boxes and  scores must be float type . 
+Input boxes and  scores must be float type .
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with tensorflow NonMaxSuppressionV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

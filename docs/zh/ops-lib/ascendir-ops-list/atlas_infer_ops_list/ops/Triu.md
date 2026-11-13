@@ -10,21 +10,21 @@ REG_OP(Triu)
 
 ## Brief
 
-Returns the upper triangular part of a matrix (2-D tensor) or batch of matrices input 
+Returns the upper triangular part of a matrix (2-D tensor) or batch of matrices input
 
 ## Inputs
 
 x: A tensor, which supports 2-8 dimensions or be empty. Must be one of the following types:
 float16, bfloat16, float32, double, int32, uint8, int16, int8, complex64, int64,
-qint8, quint8, qint32, uint16, complex128, uint32, uint64, bool. 
+qint8, quint8, qint32, uint16, complex128, uint32, uint64, bool.
 
 ## Outputs
 
-y: A tensor. Has the same type and shape as "x" . 
+y: A tensor. Has the same type and shape as "x" .
 
 ## Attributes
 
-diagonal: An optional attribute indicates the diagonal to consider. Defaults to 0. 
+diagonal: An optional attribute indicates the diagonal to consider. Defaults to 0.
 
 ## Data Types
 
@@ -43,4 +43,4 @@ Compatible with the Pytorch operator Triu.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

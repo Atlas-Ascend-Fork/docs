@@ -14,7 +14,7 @@ REG_OP(TensorListPushBackBatch)
 
 ## Brief
 
-Push tensor to list. 
+Push tensor to list.
 
 ## Inputs
 
@@ -23,11 +23,11 @@ Push tensor to list.
 
 ## Outputs
 
-output_handles: The output tensor lists. 
+output_handles: The output tensor lists.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Compatible with tensorflow TensorListPushBackBatch operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

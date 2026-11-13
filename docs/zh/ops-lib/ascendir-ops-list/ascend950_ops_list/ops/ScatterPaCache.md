@@ -13,7 +13,7 @@ REG_OP(ScatterPaCache)
     .DATATYPE(T, TensorType({DT_FLOAT16, DT_BF16, DT_FLOAT, DT_INT8, DT_UINT8, DT_INT16,
                             DT_UINT16, DT_INT32, DT_UINT32, DT_HIFLOAT8, DT_FLOAT8_E5M2,
                             DT_FLOAT8_E4M3FN, DT_FLOAT4_E2M1, DT_FLOAT4_E1M2}))
-.OP_END_FACTORY_REG(ScatterPaCache)
+    .OP_END_FACTORY_REG(ScatterPaCache)
 ```
 
 ```c
@@ -61,17 +61,19 @@ value in slot_mapping must be unique
 
 ## Brief
 
-Update the key to the corresponding cache based on the index. 
+Update the key to the corresponding cache based on the index.
 
 ## Inputs
 
 Inputs including:
-- key: Key values to be updated,A 3D or 4D tensor.
-- key_cache: Tensors that need to be updated by key.
+- key: Key values to be updated, A 3D or 4D tensor. Must be one of the following types: float16, float, bfloat16, int8, uint8,
+         int16, uint16, int32, uint32, hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1, float4_e1m2. When key is a 4D tensor,
+         its data type must not be hifloat8, float8_e5m2, float8_e4m3fn, float4_e2m1 or float4_e1m2.
+- key_cache: Tensors that need to be updated by key. Data type must be the same as key.
 - slot_mapping: The offset of each token of key in the cache. Must be one of the following types: int32 or int64.
-- compress_lens: Compression amount. Must be one of the following types: int32 or int64.
-- compress_seq_offset: Compression starting point for each batch and head. Must be one of the following types: int32 or int64.
-- seq_lens: Actual seq_len for each batch. Must be one of the following types: int32 or int64.
+- compress_lens: Compression amount. Data type must be the same as slot_mapping.
+- compress_seq_offset: Compression starting point for each batch and head. Data type must be the same as slot_mapping.
+- seq_lens: Actual seq_len for each batch. Data type must be the same as slot_mapping.
 
 ## Outputs
 
@@ -96,4 +98,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

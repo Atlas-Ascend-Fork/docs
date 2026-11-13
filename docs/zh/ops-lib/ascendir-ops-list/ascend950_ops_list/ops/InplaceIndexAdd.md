@@ -35,7 +35,7 @@ var: A Tensor. Same as input "var".
 
 ## Attributes
 
-axis: An required int to specify the axis to perform indices add. 
+axis: An required int to specify the axis to perform indices add.
 
 ## Data Types
 
@@ -67,4 +67,4 @@ Compatible with the Pytorch operator index_add_.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

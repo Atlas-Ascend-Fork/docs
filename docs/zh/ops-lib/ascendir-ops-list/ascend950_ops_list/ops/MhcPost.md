@@ -18,18 +18,18 @@ to enable information flow.
 
 ## Inputs
 
-- x: A Tensor, dtype is bfloat16 or float16. Represents input data in the mHC layer.
+- x: A Tensor. Represents input data in the mHC layer. Type is:BFloat16 or Float16.
 Dataformat:ND. Supports 3D (Shape:[T, n, D]) or 4D (Shape:[B, S, n, D]) tensors.
-- h_res: A Tensor, dtype is float32. Represents the h_res transformation matrix.
+- h_res: A Tensor. Represents the h_res transformation matrix. Type is:Float32.
 Dataformat:ND. Supports 3D (Shape:[T, n, n]) or 4D (Shape:[B, S, n, n]) tensors.
-- h_out: A Tensor, dtype is bfloat16 or float16. Represents output of the Atten/MLP layer.
+- h_out: A Tensor. Represents output of the Atten/MLP layer. Type is:BFloat16 or Float16.
 Dataformat:ND. Supports 2D (Shape:[T, D]) or 3D (Shape:[B, S, D]) tensors.
-- h_post: A Tensor, dtype is float32. Represents the h_res transformation matrix.
+- h_post: A Tensor. Represents the h_res transformation matrix. Type is:Float32.
 Dataformat:ND. Supports 2D (Shape:[T, n]) or 3D (Shape:[B, S, n]) tensors.
 
 ## Outputs
 
-y: A Tensor. Type is:BFloat16 or Float16. Dataformat:ND. 
+y: A Tensor. Type is:BFloat16 or Float16. Dataformat:ND.
 Supports 3D (Shape:[T, n, D]) or 4D (Shape:[B, S, n, D]) tensors.
 
 ## Data Types
@@ -45,4 +45,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

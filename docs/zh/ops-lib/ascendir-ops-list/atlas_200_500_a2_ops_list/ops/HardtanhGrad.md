@@ -20,12 +20,12 @@ Two inputs, including:
 - result: Support 1D ~ 8D. Minimum tensor of the linear region range,
 datatype: bfloat16/float16/float32, format:ND/5HD.
 - grad: Maximum tensor of the linear region range,
-datatype: bfloat16/float16/float32, format:ND/5HD. 
+datatype: bfloat16/float16/float32, format:ND/5HD.
 
 ## Outputs
 
 One output, including:
-y: Hardtanh_backward output tensor. Shape, datatype and format is the same as input result. 
+y: Hardtanh_backward output tensor. Shape, datatype and format is the same as input result.
 
 ## Attributes
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-This operator only supports datatype: bfloat16/float16/float32, format: ND/5HD. 
+This operator only supports datatype: bfloat16/float16/float32, format: ND/5HD.
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with the PyTorch operator HardtanhGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

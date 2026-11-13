@@ -20,7 +20,7 @@ Two inputs, including:
 A "batch_size * num_classes" matrix. The format must be ND or NHWC. Support 2D, 4D.
 When the shape of features is 4D, the data type supports bfloat16 in dynamic shape scenarios, and float32 in static shape scenarios.
 - labels: A Tensor. of the same type and format as "features". The true labels of the samples. A "batch_size * num_classes" matrix.
-Has the type, format and shape as "features". 
+Has the type, format and shape as "features".
 
 ## Outputs
 
@@ -28,7 +28,7 @@ Has the type, format and shape as "features".
 If the shape of features and labels is not 4D, the shape of the loss is 1D.
 If the shape of features and labels is 4D, the shape of the loss is 3D.
 - backprop: A Tensor for the backpropagated gradients (a batch_size * num_classes matrix).
-Has the same type, format and shape as "features". 
+Has the same type, format and shape as "features".
 
 ## Data Types
 
@@ -51,4 +51,4 @@ Compatible with the TensorFlow operator SoftmaxCrossEntropyWithLogits.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

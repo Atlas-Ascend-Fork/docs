@@ -13,13 +13,13 @@ REG_OP(Cummax)
 
 Returns a namedtuple (values, indices) where values is the cumulative
 the cumulative maximum of elements of input in the dimension dim.
-And indices is the index location of each maximum value found in the dimension dim. 
+And indices is the index location of each maximum value found in the dimension dim.
 
 ## Inputs
 
 One inputs, including:
 x: A tensor . Must be one of the following types:
-    float16, float32, int32, uint32, int8, uint8, bfloat16. 
+    float16, float32, int32, uint32, int8, uint8, bfloat16.
 
 ## Outputs
 
@@ -28,7 +28,7 @@ x: A tensor . Must be one of the following types:
 
 ## Attributes
 
-dim: Axis along which to cummax. 
+dim: Axis along which to cummax.
 
 ## Data Types
 
@@ -40,9 +40,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Cummax. 
+Compatible with the Pytorch operator Cummax.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

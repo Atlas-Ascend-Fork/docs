@@ -14,7 +14,7 @@ REG_OP(RngReadAndSkipV2)
 Advance the counter of a counter-based RNG. The state of the RNG after
 `rng_skip(n)` will be the same as that after `stateful_uniform([n])`
 (or any other distribution). The actual increment added to the
-counter is an unspecified implementation detail . 
+counter is an unspecified implementation detail .
 
 ## Inputs
 
@@ -24,7 +24,7 @@ counter is an unspecified implementation detail .
 
 ## Outputs
 
-value:A Returns Random values with specified shape . 
+value:A Returns Random values with specified shape .
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with tensorflow RngReadAndSkipV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

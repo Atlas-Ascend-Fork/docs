@@ -39,11 +39,11 @@ Performs average pooling on the input.
 ## Inputs
 
 x: A 5D tensor. Supported type:float16. Additional support for float32, bfloat16 in Ascend 950 AI Processor.
-Support format: NDHWC. Additional support for NCDHW in Ascend 950 AI Processor. 
+Support format: NDHWC. Additional support for NCDHW in Ascend 950 AI Processor.
 
 ## Outputs
 
-y: The average pooled output tensor. 
+y: The average pooled output tensor.
 
 ## Attributes
 
@@ -60,7 +60,7 @@ averaging calculation. Default value is true.
 - divisor_override: if specified, it will be used as divisor, otherwise
 size of the pooling region will be used. Default value is 0.
 - data_format: An optional string, format of input data. It supports "NDHWC"(default).
-Additional support for "NCDHW" in Ascend 950 AI Processor. 
+Additional support for "NCDHW" in Ascend 950 AI Processor.
 
 ## Data Types
 
@@ -72,15 +72,15 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - The ksize of the D, H and W dimensions should be greater than 0.
-For Atlas Training Series Product, Atlas A2 Training Series Product/Atlas 800I A2 Inference Product,
-Atlas A3 Training Series Product: The produce of the ksize in D, H and W dimensions
-should be greater than 0 and less than or equal to 255.  
-- For Atlas Training Series Product, Atlas A2 Training Series Product/Atlas 800I A2 Inference Product,
-Atlas A3 Training Series Product: The stride of the D, H and W dimensions should be greater than 0 and
-smaller than 64.  
+For Atlas training products, Atlas A2 products,
+Atlas A3 products: The produce of the ksize in D, H and W dimensions
+should be greater than 0 and less than or equal to 255.
+- For Atlas training products, Atlas A2 products,
+Atlas A3 products: The stride of the D, H and W dimensions should be greater than 0 and
+smaller than 64.
 For Ascend 950 AI Processor: The stride of the D, H and W dimensions should be greater than 0.
 - The ouput "y" shape at the N and C dimensions should be equal with input "x" shape at same dimensions. The output
-shape at the D, H and W dimensions is calculated by below formula: 
+shape at the D, H and W dimensions is calculated by below formula:
 
 ## Third-party framework compatibility
 
@@ -89,4 +89,4 @@ Compatible with the TensorFlow/Pytorch operator AvgPool3D.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

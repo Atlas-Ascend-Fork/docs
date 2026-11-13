@@ -9,7 +9,7 @@ REG_OP(SwigluGroupGrad)
     .OPTIONAL_INPUT(group_index, TensorType({DT_INT64}))
     .OUTPUT(grad_x, TensorType({DT_BF16, DT_FLOAT16, DT_FLOAT}))
     .OUTPUT(grad_weight, TensorType({DT_FLOAT}))
-    .ATTR(clamp_limit, Float, 0)
+    .ATTR(clamp_limit, Float, -1.0f)
     .OP_END_FACTORY_REG(SwigluGroupGrad)
 ```
 
@@ -39,7 +39,7 @@ two outputs, including:
 ## Attributes
 
 one attribute:
-- clamp_limit: An optional Float. Clipping threshold c; default 0 means no clamp (c=+∞).
+- clamp_limit: An optional Float. Clipping threshold c; default -1 means no clamp (c=+∞).
 
 ## Data Types
 
@@ -56,4 +56,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

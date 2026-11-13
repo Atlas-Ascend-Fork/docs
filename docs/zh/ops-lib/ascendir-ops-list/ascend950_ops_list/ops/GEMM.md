@@ -64,4 +64,4 @@ is float16) or 32 (input type is int8).
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -14,7 +14,7 @@ REG_OP(SerializeSparse)
 
 ## Brief
 
-Serializes a SparseTensor into a [3] tensor object. 
+Serializes a SparseTensor into a [3] tensor object.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ Serializes a SparseTensor into a [3] tensor object.
 
 ## Outputs
 
-serialized_sparse: A tensor of type "out_type". 
+serialized_sparse: A tensor of type "out_type".
 
 ## Attributes
 
-out_type: An optional type. Defaults to "string". 
+out_type: An optional type. Defaults to "string".
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with the TensorFlow operator SerializeSparse.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

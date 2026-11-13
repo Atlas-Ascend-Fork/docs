@@ -17,9 +17,9 @@ an input signal composed of several input planes.
 
 Two input, including:
 - x: A Tensor. Must be one of the following data types:
-    float16, float32. 
+    float16, float32.
 - output_size: A required tensor of shape must be 1 or 2 or 3 ,
- specifying the size  of the output tensor. 
+ specifying the size  of the output tensor.
 
 ## Outputs
 
@@ -32,4 +32,4 @@ Compatible with the Pytorch operator AdaptiveAvgPool.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -2,20 +2,20 @@
 
 ```c
 REG_OP(INTrainingReduceGrad)
-    .INPUT(dy, TensorType({DT_FLOAT16, DT_FLOAT}))
-    .INPUT(x, TensorType({DT_FLOAT16, DT_FLOAT}))
+    .INPUT(dy, TensorType({DT_FLOAT16,DT_FLOAT}))
+    .INPUT(x, TensorType({DT_FLOAT16,DT_FLOAT}))
     .INPUT(variance, TensorType({DT_FLOAT}))
     .INPUT(mean, TensorType({DT_FLOAT}))
     .INPUT(res_gamma, TensorType({DT_FLOAT}))
     .INPUT(res_beta, TensorType({DT_FLOAT}))
     .INPUT(gamma, TensorType({DT_FLOAT}))
-    .OUTPUT(pd_x, TensorType({DT_FLOAT16, DT_FLOAT}))
+    .OUTPUT(pd_x, TensorType({DT_FLOAT16,DT_FLOAT}))
     .OP_END_FACTORY_REG(INTrainingReduceGrad)
 ```
 
 ## Brief
 
-Performs the backpropagation of InstanceNorm. 
+Performs the backpropagation of InstanceNorm.
 
 ## Inputs
 
@@ -30,7 +30,7 @@ Seven inputs, including:
 
 ## Outputs
 
-pd_x: A 4D tensor of type float16 or float32, for the offset of "x", format [NCHW, NHWC]. 
+pd_x: A 4D tensor of type float16 or float32, for the offset of "x", format [NCHW, NHWC].
 
 ## Data Types
 
@@ -47,9 +47,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The preceding layer of this operator must be INTrainingUpdateGrad. 
+The preceding layer of this operator must be INTrainingUpdateGrad.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

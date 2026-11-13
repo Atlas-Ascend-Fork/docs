@@ -11,10 +11,10 @@ REG_OP(UnsortedSegmentMinD)
 
 ## Brief
 
-Computes the minimum along segments of a tensor. 
-Computes a tensor such that (output[i] = min_{j...} x[j...]. 
-the value of value must be  in [0, num_segments] 
-for example:x = [[0,1,2],[3,4,5],[6,7,8]], segment_ids = [0,0,1] num_segments = 5 
+Computes the minimum along segments of a tensor.
+Computes a tensor such that (output[i] = min_{j...} x[j...].
+the value of value must be  in [0, num_segments]
+for example:x = [[0,1,2],[3,4,5],[6,7,8]], segment_ids = [0,0,1] num_segments = 5
 output[0] = [0, 1, 2]
 output[1] = [6, 7, 8]
 output[2] = [2147483648, 2147483648, 2147483648]
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator UnsortedSegmentMin.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

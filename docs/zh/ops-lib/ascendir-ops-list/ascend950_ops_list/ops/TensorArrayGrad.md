@@ -13,7 +13,7 @@ REG_OP(TensorArrayGrad)
 ## Brief
 
 Creates a TensorArray for storing the gradients of values in the
-given handle. 
+given handle.
 
 ## Inputs
 
@@ -29,7 +29,7 @@ The input handle must be type resource. Inputs include:
 ## Attributes
 
 source: The gradient source string, used to decide which gradient
-TensorArray to return. 
+TensorArray to return.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow TensorArrayGrad operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

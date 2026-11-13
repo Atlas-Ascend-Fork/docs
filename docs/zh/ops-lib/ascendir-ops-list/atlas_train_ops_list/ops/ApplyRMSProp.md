@@ -86,4 +86,4 @@ will not update in iterations during which "grad" is 0.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

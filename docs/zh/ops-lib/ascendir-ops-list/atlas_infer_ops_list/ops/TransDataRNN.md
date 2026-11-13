@@ -13,7 +13,7 @@ REG_OP(TransDataRNN)
 
 ## Brief
 
-TransDataRNN is specifically designed for format conversion during the RNN calculation process and will not be used alone. 
+TransDataRNN is specifically designed for format conversion during the RNN calculation process and will not be used alone.
 | src_format ===> dst_format | dtype            | src_shape ===> dst_shape                                                                                                                             |
 | :------------------------: |----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
 | ND ====> FRACTAL_ZN_RNN    | float16          | (input_size + hidden_size, n * hidden_size) ==> (align(input_size, 16) / 16 + align(hidden_size, 16) / 16, n * align(hidden_size, 16) / 16, 16, 16)  |
@@ -27,7 +27,7 @@ TransDataRNN is specifically designed for format conversion during the RNN calcu
 | FRACTAL_ZN_RNN ====> NHWC  | float16          | (align(input_size, 16) / 16 + align(hidden_size, 16) / 16, n * align(hidden_size, 16) / 16, 16, 16) ==> (input_size + hidden_size, n * hidden_size)  |
 | FRACTAL_ZN_RNN ====> NHWC  | float16          | (align(input_size, 16) / 16 , n * align(hidden_size, 16) / 16, 16, 16) ==> (input_size, n * hidden_size)                                             |
 | FRACTAL_ZN_RNN ====> NHWC  | float16          | (align(hidden_size, 16) / 16 , n * align(hidden_size, 16) / 16, 16, 16) ==> (hidden_size, n * hidden_size)                                           |
-In the above table, n represents the number of gates, align(input_size, 16) represents input_size align up to 16, and align(hidden_size, 16) represents hidden_size align up to 16. 
+In the above table, n represents the number of gates, align(input_size, 16) represents input_size align up to 16, and align(hidden_size, 16) represents hidden_size align up to 16.
 
 ## Inputs
 
@@ -56,4 +56,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

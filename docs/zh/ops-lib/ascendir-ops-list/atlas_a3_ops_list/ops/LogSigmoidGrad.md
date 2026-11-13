@@ -16,7 +16,7 @@ Calculate the gradient of log simoid.
 
 Two inputs, including:
 - grads: A tensor, gradient of previous layer. Must be one of the following types:
-      float16, float32, bfloat16. 
+      float16, float32, bfloat16.
 - features: A tensor with the same type as 'grads', input of log sigmoid.
 
 ## Outputs
@@ -38,9 +38,9 @@ LogSigmoidGrad supports broadcasting.
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator LogSigmoidBackward. 
+Compatible with the Pytorch operator LogSigmoidBackward.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

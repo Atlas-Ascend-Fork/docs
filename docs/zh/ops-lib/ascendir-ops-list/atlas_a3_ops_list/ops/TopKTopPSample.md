@@ -38,7 +38,7 @@ the sampled k-value for each batch. The supported types are: float32, Supports n
 
 - logits_select_idx: A 2D tensor which is the sequence of numbers, format supports ND, and must be a non-null
 pointer.
-   The supported types are: int64. 
+   The supported types are: int64.
 - logits_top_kp_select: An optional 2D tensor. Acts as the logits remaining in the logits file after undergoing the
 topK-topP calculation process. When `is_need_logits=False`, it is disabled and outputs a null pointer; when
 `is_need_logits=True`, it is enabled and outputs a dimension that must be [batch, voc_size]. The supported types are:
@@ -72,4 +72,4 @@ Compatible with the TensorFlow operator Range or PyTorch operator Range/Arange.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

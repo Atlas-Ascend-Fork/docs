@@ -13,19 +13,19 @@ REG_OP(PartitionedCall)
 
 ## Brief
 
-Pass the input tensors to the subgraph "f" and return the output tensors . 
+Pass the input tensors to the subgraph "f" and return the output tensors .
 
 ## Inputs
 
-args: The input tensors, which will be passed to "f" . It's a dynamic input. 
+args: The input tensors, which will be passed to "f" . It's a dynamic input.
 
 ## Outputs
 
-output: The output tensors returned by "f" . It's a dynamic output. 
+output: The output tensors returned by "f" . It's a dynamic output.
 
 ## Graphs
 
-f: A subgraph takes 'args' and returns another list of tensors . 
+f: A subgraph takes 'args' and returns another list of tensors .
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Compatible with the TensorFlow operator PartitionedCall.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

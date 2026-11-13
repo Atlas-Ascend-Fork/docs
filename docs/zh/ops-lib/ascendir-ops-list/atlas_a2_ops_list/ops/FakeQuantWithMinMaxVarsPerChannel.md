@@ -14,7 +14,7 @@ REG_OP(FakeQuantWithMinMaxVarsPerChannel)
 ## Brief
 
 Fake-quantizes the "inputs" tensor of type float
-via per-channel floats min and max of shape [d] to "outputs" 
+via per-channel floats min and max of shape [d] to "outputs"
 tensor of same shape as inputs
 
 ## Inputs
@@ -24,7 +24,7 @@ Three inputs, including:
 - min: A ND Tensor of type float32. Shape must be 1D.
 "min" has the same last dimension size as "x".
 - max: A ND Tensor of type float32. Shape must be 1D.
-"max" has the same last dimension size as "x". 
+"max" has the same last dimension size as "x".
 
 ## Outputs
 
@@ -36,7 +36,7 @@ Has the same dtype and shape as input "x".
 - num_bits: An optional attribute specifying the quantization bit width.
 Type is int. Defaults to "8".
 - narrow_range: An optional attribute specifying whether to use a narrow range for quantization.
-Type is bool. Defaults to "False". 
+Type is bool. Defaults to "False".
 
 ## Data Types
 
@@ -61,4 +61,4 @@ Compatible with the TensorFlow operator FakeQuantWithMinMaxVarsPerChannel.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

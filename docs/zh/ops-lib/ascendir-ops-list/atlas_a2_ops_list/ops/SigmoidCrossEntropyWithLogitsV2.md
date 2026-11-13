@@ -25,12 +25,12 @@ four inputs, including:
 
 ## Outputs
 
-loss: An ND Tensor, Sigmoid cross entropy between the predictive value and target value. Has the same dimensions as "predict". 
+loss: An ND Tensor, Sigmoid cross entropy between the predictive value and target value. Has the same dimensions as "predict".
 
 ## Attributes
 
 reduction: A optional string attr from ["none", "mean", "sum"],
- specifying the reduction type to be applied to the output. Defaults to "mean". 
+ specifying the reduction type to be applied to the output. Defaults to "mean".
 
 ## Data Types
 
@@ -49,4 +49,4 @@ Compatible with PyTorch operator BCEWithLogitsLoss.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

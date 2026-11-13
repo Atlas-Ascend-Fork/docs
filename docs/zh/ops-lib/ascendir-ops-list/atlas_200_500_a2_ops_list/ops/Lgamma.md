@@ -17,7 +17,7 @@ Computes the log of the absolute value of Gamma(x) element-wise.
 
 ## Outputs
 
-y:A Tensor. Has the same type as x. 
+y:A Tensor. Has the same type as x.
 
 ## Data Types
 
@@ -33,4 +33,4 @@ Compatible with tensorflow Lgamma operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

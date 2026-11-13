@@ -12,7 +12,7 @@ REG_OP(StackGroupPoints)
 
 ## Brief
 
-Group the points in the point cloud according to the group they belong to. 
+Group the points in the point cloud according to the group they belong to.
 
 ## Inputs
 
@@ -43,4 +43,4 @@ Compatible with the MMCV operator GroupPoints(StackGroupPoints branch).
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

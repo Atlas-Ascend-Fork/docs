@@ -25,18 +25,18 @@ Creates or finds a child frame, and makes "x" available to the child
 
 x: The tensor to be made available to the child frame.
   Must be one of the following types: float16, float32, float64, int8,
-  int16, int32, int64, uint8, uint16, uint32, uint64, bool . 
+  int16, int32, int64, uint8, uint16, uint32, uint64, bool .
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x" . 
+y: A Tensor. Has the same type as "x" .
 @see Exit()
 
 ## Attributes
 
 - frame_name: A required string. The name of the child frame.
 - is_constant: A required bool. If true, the output is constant in
-                the child frame . 
+                the child frame .
 
 ## Third-party framework compatibility
 
@@ -45,4 +45,4 @@ Compatible with the TensorFlow operator Enter.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

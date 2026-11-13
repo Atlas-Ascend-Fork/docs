@@ -9,11 +9,11 @@ REG_OP(CacheUpdate)
 
 ## Brief
 
-aicpu cache help for lhisi cache flush. 
+aicpu cache help for lhisi cache flush.
 
 ## Inputs
 
-The input is dynamic for attribute func_name   
+The input is dynamic for attribute func_name
 
 ## Outputs
 
@@ -22,4 +22,4 @@ The output is dynamic for attribute func_name.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

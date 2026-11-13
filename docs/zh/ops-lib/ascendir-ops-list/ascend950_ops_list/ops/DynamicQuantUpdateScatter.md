@@ -30,12 +30,12 @@ Must be one of the following types: int32，int64
 - updates: An ND Tensor .
 Must be one of the following types: bfloat16，float16
 - smooth_scales: An ND optional Tensor .
-Must be one of the following types: bfloat16，float16 
+Must be one of the following types: bfloat16，float16
 
 ## Outputs
 
 var: A Tensor. Has the same type and format as input "var" .
-var_scale: A Tensor. Has the same type and format as input "var_scale" . 
+var_scale: A Tensor. Has the same type and format as input "var_scale" .
 
 ## Attributes
 
@@ -61,4 +61,4 @@ Compatible with the Mindspore operator Scatter.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

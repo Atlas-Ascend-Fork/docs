@@ -19,6 +19,9 @@ Two inputs:
        the dtype can be BFloat16, Float16, Int32 or Float32, and the format support ND.
 - scalar: A scalar in form of tensor with only one element,
        the dtype can be Float16, Int32 or Float32, and the format supports ND.
+       When the data type of x is FLOAT32 or INT32, the data type of scalar must match that of x.
+       When the data type of x is BFLOAT16, scalar supports the FLOAT32 data type.
+       When the data type of x is FLOAT16, scalar supports both FLOAT16 and FLOAT32 data types.
 
 ## Outputs
 
@@ -36,4 +39,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

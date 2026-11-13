@@ -15,7 +15,7 @@ REG_OP(ExtractGlimpse)
 
 ## Brief
 
-Extracts a glimpse from the input tensor . 
+Extracts a glimpse from the input tensor .
 
 ## Inputs
 
@@ -26,12 +26,12 @@ The format must be NHWC, tensor of type float.
 extract. The glimpse height must be specified first, following by the glimpse
 width, tensor of type int32.
 - offsets: A 2-D integer tensor of shape [batch_size, 2] containing the y,
-x locations of the center of each window , tensor of type float. 
+x locations of the center of each window , tensor of type float.
 
 ## Outputs
 
 y:A tensor representing the glimpses [batch_size, glimpse_height,
-glimpse_width, channels]. The format must be NHWC. 
+glimpse_width, channels]. The format must be NHWC.
 
 ## Attributes
 
@@ -44,7 +44,7 @@ of the input images.
 uniform distribution or a Gaussian distribution.
 - noise: An optional string, default is "uniform", indicates if the noise should uniform, gaussian, or zero.
 The default is uniform which means the the noise type will be decided by
-uniform_noise . 
+uniform_noise .
 
 ## Data Types
 
@@ -57,7 +57,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input x must be a 4-D tensor . 
+Input x must be a 4-D tensor .
 
 ## Third-party framework compatibility
 
@@ -66,4 +66,4 @@ Compatible with tensorflow CropAndResizeGradImage operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

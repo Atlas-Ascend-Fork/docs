@@ -9,15 +9,15 @@ REG_OP(TensorListLength)
 
 ## Brief
 
-The number of tensors in the input tensor list. 
+The number of tensors in the input tensor list.
 
 ## Inputs
 
-input_handle: The input list. 
+input_handle: The input list.
 
 ## Outputs
 
-length:The number of tensors in the list. 
+length:The number of tensors in the list.
 
 ## Data Types
 
@@ -33,4 +33,4 @@ Compatible with tensorflow TensorListLength operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

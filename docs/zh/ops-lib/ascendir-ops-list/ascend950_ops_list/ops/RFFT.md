@@ -10,7 +10,7 @@ REG_OP(RFFT)
 
 ## Brief
 
-Real-valued fast Fourier transform . 
+Real-valued fast Fourier transform .
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Real-valued fast Fourier transform .
 
 y: A complex64 tensor of the same rank as `input`. The inner-most
 dimension of `input` is replaced with the `fft_length / 2 + 1` unique
-frequency components of its 1D Fourier transform . 
+frequency components of its 1D Fourier transform .
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Compatible with TensorFlow RFFT operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

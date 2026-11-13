@@ -12,7 +12,7 @@ REG_OP(ResizeTrilinear)
 
 ## Brief
 
-Resize images to size using trilinear interpolation . 
+Resize images to size using trilinear interpolation .
 
 ## Inputs
 
@@ -20,11 +20,11 @@ Input images must be a 5-D tensor. Inputs include:
 - x: A 5-D tensor, type must be float16, float32 or double. Must set the format, supported format list
 is ["NCDHW, NDHWC"] .
 - size: A 1-D tensor, type must be int32. Contains 3 elements: new_depth, new_height, new_width.
-Set the shape of output y . 
+Set the shape of output y .
 
 ## Outputs
 
-y: 5-D with shape [batch, channels, new_depth, new_height, new_width] . 
+y: 5-D with shape [batch, channels, new_depth, new_height, new_width] .
 
 ## Attributes
 
@@ -48,4 +48,4 @@ Compatible with onnx Resize operator using trilinear interpolation.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

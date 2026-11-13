@@ -23,20 +23,20 @@ Five inputs, including:
 Diagonal offset(s). Positive value means superdiagonal, 0 refers to the main
 diagonal, and negative value means subdiagonals. `k` can be a single integer
 (for a single diagonal) or a pair of integers specifying the low and high ends
-of a matrix band. `k[0]` must not be larger than `k[1]`. 
+of a matrix band. `k[0]` must not be larger than `k[1]`.
 - num_rows:
 The number of rows of the output matrix. If it is not provided, the op assumes
 the output matrix is a square matrix and infers the matrix size from k and the
-innermost dimension of `diagonal`. 
+innermost dimension of `diagonal`.
 - num_cols: An NCHW, NHWC, or ND Tensor.
 The number of columns of the output matrix. If it is not provided, the op
 assumes the output matrix is a square matrix and infers the matrix size from
-k and the innermost dimension of `diagonal`. 
+k and the innermost dimension of `diagonal`.
 - padding_value: The number to fill the area outside the specified diagonal band with.
 
 ## Outputs
 
-output: Has rank `r+1` when `k` is an integer or `k[0] == k[1]`, rank `r` otherwise . 
+output: Has rank `r+1` when `k` is an integer or `k[0] == k[1]`, rank `r` otherwise .
 
 ## Data Types
 
@@ -56,4 +56,4 @@ Compatible with the TensorFlow operator ScatterUpdate.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

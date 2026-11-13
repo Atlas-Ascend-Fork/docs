@@ -41,7 +41,7 @@ It not support out_height < 0 or out_width < 0.
 
 ## Brief
 
-Performs max pooling on the input . 
+Performs max pooling on the input .
 
 ## Inputs
 
@@ -51,7 +51,7 @@ uint8, int16, int8, uint16, qint8. Supported format: NHWC, NCHW.
 
 ## Outputs
 
-y: A 4-D tensor. Has the same type and format as input "x" . 
+y: A 4-D tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -63,8 +63,8 @@ specifying the stride of the sliding window for each dimension of
 the input tensor. No default value.
 - padding_mode: An optional string. Supported modes: SAME, VALID, CALCULATE. Defaults to "CALCULATED".
 when padding_mode is "SAME": pads 0 to ensure output shape equal to ceil(input shape / stride) ,
-(output shape equal to input shape when stride=1). 
-when padding_mode is "VALID": no padding. The kernel slides only over valid regions, resulting in smaller output . 
+(output shape equal to input shape when stride=1).
+when padding_mode is "VALID": no padding. The kernel slides only over valid regions, resulting in smaller output .
 when padding_mode is "CALCULATED": use pads to calculate output shape.
 - pads: An optional list of int8, int16, int32, or int64 values.
 It must have 4 elements, specifying the top, bottom, left, and right padding for input tensor.
@@ -78,7 +78,7 @@ Default False.
 - ceil_mode: Whether to use the ceil function to calculate output
 height and width. If it is set to False, the floor function will be used.
 When the padding_mode is "SAME" and "VALID", it only support False.
-Default False 
+Default False
 
 ## Data Types
 
@@ -91,17 +91,17 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - "ksize" is a list that has length 4. The ksize of the H and W dimensions should be greater than 0.
 The ksize of the N and C dimensions should be 1. e.g. For "data_format" is "NCHW", ksize[0] = 1 and ksize[1] = 1.
-For "data_format" is "NHWC", ksize[0] = 1 and ksize[3] = 1.  
-For Atlas Training Series Product, Atlas A2 Training Series Product/Atlas 800I A2 Inference Product,
-Atlas A3 Training Series Product: The produce of the ksize in H and W dimensions
-should be less than or equal to 255. e.g. For "data_format" is "NCHW", ksize[2] * ksize[3] <= 255. 
+For "data_format" is "NHWC", ksize[0] = 1 and ksize[3] = 1.
+For Atlas training products, Atlas A2 products,
+Atlas A3 products: The produce of the ksize in H and W dimensions
+should be less than or equal to 255. e.g. For "data_format" is "NCHW", ksize[2] * ksize[3] <= 255.
 - "strides" is a list that has length 4. The stride of the N and C dimensions should be 1.
-For Atlas Training Series Product, Atlas A2 Training Series Product/Atlas 800I A2 Inference Product,
-Atlas A3 Training Series Product: The stride of the H and W dimensions should be greater than 0 and
-smaller than 64.  
+For Atlas training products, Atlas A2 products,
+Atlas A3 products: The stride of the H and W dimensions should be greater than 0 and
+smaller than 64.
 For Ascend 950 AI Processor: The stride of the H and W dimensions should be greater than 0.
 - The ouput "y" shape at the N and C dimensions should be equal with input "x" shape at same dimensions. The output
-shape at the H and W dimensions is calculated by below formula: 
+shape at the H and W dimensions is calculated by below formula:
 
 ## Third-party framework compatibility
 
@@ -110,4 +110,4 @@ Compatible with the TensorFlow operator MaxPool.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

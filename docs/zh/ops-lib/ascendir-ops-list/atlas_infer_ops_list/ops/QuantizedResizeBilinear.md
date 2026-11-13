@@ -16,7 +16,7 @@ REG_OP(QuantizedResizeBilinear)
 
 ## Brief
 
-Resize quantized images to size using quantized bilinear interpolation . 
+Resize quantized images to size using quantized bilinear interpolation .
 
 ## Inputs
 
@@ -56,7 +56,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images and output images must be quantized types . 
+Input images and output images must be quantized types .
 
 ## Third-party framework compatibility
 
@@ -65,4 +65,4 @@ Compatible with tensorflow QuantizedResizeBilinear operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

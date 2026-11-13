@@ -24,13 +24,13 @@ Must be one of the following types: float16, float, double.
 The format support NDHWC, NCDHW, ND.
 - grid: flow field grid, 5-D Tensor with shape `[batch, depth, height,
 width, 3]` and has same dtype as `x`. The format support ND.
-Must be one of the following types: float16, float, double. 
+Must be one of the following types: float16, float, double.
 
 ## Outputs
 
 y: Returns 5-D Tensor with the same format and dtype as `x`.
 Must be one of the following types: float16, float, double.
-The format support NDHWC, NCDHW, ND. 
+The format support NDHWC, NCDHW, ND.
 
 ## Attributes
 
@@ -41,7 +41,7 @@ either 'zeros', 'border' or 'reflection'. Defaults to "zeros".
 - data_format: An optional string specifying the data formats,
 either 'NCDHW', 'NDHWC' or 'ND'. Defaults to "NCDHW".
 - align_corners: An optional bool. If "true", the centers of the corner
-pixels of the input and output tensors are aligned. Defaults to "false" . 
+pixels of the input and output tensors are aligned. Defaults to "false" .
 
 ## Data Types
 
@@ -58,4 +58,4 @@ Compatible with pytorch GridSampler3D operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

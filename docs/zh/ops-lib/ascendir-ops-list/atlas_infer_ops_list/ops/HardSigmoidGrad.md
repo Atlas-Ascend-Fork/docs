@@ -47,4 +47,4 @@ Compatible with the Pytorch operator HardSigmoidGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

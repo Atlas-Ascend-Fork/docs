@@ -18,7 +18,7 @@ Calculates the standard deviation and average value of tensors.
 
 ## Inputs
 
-x: A tensor. Format supports ND. Must be one of the following types: float32, float16, bfloat16. 
+x: A tensor. Format supports ND. Must be one of the following types: float32, float16, bfloat16.
 
 ## Outputs
 
@@ -38,7 +38,7 @@ Four Attributes, including:
     If "False", Do not keep the original tensor dimension.
 - is_mean_out: An optional bool. Defaults to "True".
     If "True", Output the mean.
-    If "False", Do not output the mean. 
+    If "False", Do not output the mean.
 
 ## Data Types
 
@@ -55,4 +55,4 @@ Compatible with the Pytorch operator std and std_mean.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

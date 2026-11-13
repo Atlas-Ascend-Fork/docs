@@ -25,7 +25,7 @@ must be positive integer.
 
 ## Outputs
 
-y:A Tensor with same type as "x". 
+y:A Tensor with same type as "x".
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with the TensorFlow operator SegmentMax.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

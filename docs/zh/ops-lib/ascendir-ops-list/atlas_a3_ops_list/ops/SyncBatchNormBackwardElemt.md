@@ -30,7 +30,7 @@ Seven inputs, including:
 
 ## Outputs
 
-grad_input: A ND tensor(2D-8D). The reverse gradient corresponding to the input in the forward calculation. Has the same shape, format and type as input "grad_output". 
+grad_input: A ND tensor(2D-8D). The reverse gradient corresponding to the input in the forward calculation. Has the same shape, format and type as input "grad_output".
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

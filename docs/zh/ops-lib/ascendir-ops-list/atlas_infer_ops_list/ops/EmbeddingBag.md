@@ -20,7 +20,7 @@ REG_OP(EmbeddingBag)
 
 ## Brief
 
-Calculates the reversed outputs of the function "embedding". 
+Calculates the reversed outputs of the function "embedding".
 
 ## Inputs
 
@@ -37,11 +37,11 @@ following types: float16, float32, bfloat16.
 
 ## Outputs
 
-four outputs: 
-y: A mutable output Tensor of new word grad has the same type as "grads". 
-offset2bag:A Tensor. Must be one of the following types: int32, int64. 
-bag_size:A Tensor. Must be one of the following types: int32, int64. 
-max_indices:A Tensor. Must be one of the following types: int32, int64. 
+four outputs:
+y: A mutable output Tensor of new word grad has the same type as "grads".
+offset2bag:A Tensor. Must be one of the following types: int32, int64.
+bag_size:A Tensor. Must be one of the following types: int32, int64.
+max_indices:A Tensor. Must be one of the following types: int32, int64.
 
 ## Attributes
 
@@ -50,11 +50,11 @@ max_indices:A Tensor. Must be one of the following types: int32, int64.
 - padding_idx: An int attr judge which word to fill zeros. Defaults to "-1".
 - scale_grad_by_freq: An optional bool. Defaults to "False".
     If "True", "grad_weight" will be scale by word_frequency.
-    If "False", "grad_weight" will not be scale by word_frequency. 
+    If "False", "grad_weight" will not be scale by word_frequency.
 - sparse: An optional bool. Defaults to "False". if True, gradient w.r.t.attr weight matrix will be a sparse tensor.
 - include_last_offset: An optional bool. Defaults to "False". if True, attr offsets has one additional element,
 where the last element
-    is equivalent to the size of indices. This matches the CSR format. 
+    is equivalent to the size of indices. This matches the CSR format.
 
 ## Data Types
 
@@ -75,4 +75,4 @@ Compatible with the Pytorch operator EmbeddingBag.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

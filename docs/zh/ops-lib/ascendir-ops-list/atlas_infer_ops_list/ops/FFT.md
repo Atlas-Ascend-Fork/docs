@@ -10,16 +10,16 @@ REG_OP(FFT)
 ## Brief
 
 Calculate the one-dimensional discrete Fourier transform on the
-innermost dimension of the input. 
+innermost dimension of the input.
 
 ## Inputs
 
-x: A Tensor. Must be the following types: complex64, complex128. 
+x: A Tensor. Must be the following types: complex64, complex128.
 
 ## Outputs
 
 y: A complex tensor with the same shape as input. The innermost dimension
-of the input is replaced by its 1-dimensional Fourier transform. 
+of the input is replaced by its 1-dimensional Fourier transform.
 
 ## Data Types
 
@@ -35,4 +35,4 @@ Compatible with TensorFlow FFT operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

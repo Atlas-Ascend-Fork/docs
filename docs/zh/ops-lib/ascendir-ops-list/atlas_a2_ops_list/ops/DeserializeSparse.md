@@ -14,12 +14,12 @@ REG_OP(DeserializeSparse)
 
 ## Brief
 
-Deserializes SparseTensor objects. 
+Deserializes SparseTensor objects.
 
 ## Inputs
 
 serialized_sparse: A tensor. The serialized SparseTensor objects.
-The last dimension must have 3 columns. 
+The last dimension must have 3 columns.
 
 ## Outputs
 
@@ -29,7 +29,7 @@ The last dimension must have 3 columns.
 
 ## Attributes
 
-dtype: The type of the serialized SparseTensor objects. 
+dtype: The type of the serialized SparseTensor objects.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with the TensorFlow operator DeserializeSparse.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

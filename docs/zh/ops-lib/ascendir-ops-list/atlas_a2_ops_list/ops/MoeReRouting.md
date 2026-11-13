@@ -26,10 +26,10 @@ Notices: The value of H must be greater than 0 and less than 16384.(0 < H <16384
 - expert_token_num_per_rank: A 2D tensor, represents numbers of tokens belong to an expert on specific rank.
 Type is Int32 or Int64. Shape supports (N, E). Format supports ND.
 - per_token_scales: A 1D or 2D tensor, optional, represents tokens scale in rank-order. Type is Float32, DT_FLOAT8_E8M0.
-Shape supports (A) or (A,S). Format supports ND. If tokens is FLOAT8, per_token_scales must be DT_FLOAT8_E8M0. 
-The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 1D. 
-The Atlas A3 Training Series Product/Atlas A3 Inference Series Product support 1D. 
-Ascend 950 support 1D or 2D. 
+Shape supports (A) or (A,S). Format supports ND. If tokens is FLOAT8, per_token_scales must be DT_FLOAT8_E8M0.
+The Atlas A2 products support 1D.
+The Atlas A3 products support 1D.
+Ascend 950 support 1D or 2D.
 
 ## Outputs
 
@@ -37,9 +37,9 @@ Ascend 950 support 1D or 2D.
 Int8. Shape supports (A, H). Format supports ND.
 - permute_per_token_scales: A 1D or 2D tensor, represents tokens scale in expert-order. Type is Float32, DT_FLOAT8_E8M0.
 Shape supports (A) or (A,S). Format supports ND.
-The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 1D. 
-The Atlas A3 Training Series Product/Atlas A3 Inference Series Product support 1D. 
-Ascend 950 support 1D or 2D. 
+The Atlas A2 products support 1D.
+The Atlas A3 products support 1D.
+Ascend 950 support 1D or 2D.
 - permute_token_idx: A 1D tensor, represents token idx in rank-order. Type is Int32.
 Shape supports (A). Format supports ND.
 - expert_token_num: A 1D tensor, represents tokens nums of experts. Type is Int32 or Int64.
@@ -67,4 +67,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -10,15 +10,15 @@ REG_OP(IFFT)
 ## Brief
 
 Computes the inverse 1-dimensional discrete Fourier transform over the
-inner-most dimension of `x`. 
+inner-most dimension of `x`.
 
 ## Inputs
 
-x: A Tensor. Must be the following types: complex64, complex128. 
+x: A Tensor. Must be the following types: complex64, complex128.
 
 ## Outputs
 
-y: A complex tensor of the same rank as `x`. 
+y: A complex tensor of the same rank as `x`.
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Compatible with TensorFlow IFFT operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

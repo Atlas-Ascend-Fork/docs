@@ -23,7 +23,7 @@ Two inputs, including:
 "x0", "x1", "y0", "y1".
 - ground_truth_box: Ground truth boxes. A 2D Tensor of float32 or float16 with
 shape (N, 4). "N" indicates the number of bounding boxes, and the value "4"
-refers to "x0", "x1", "y0" "y1". 
+refers to "x0", "x1", "y0" "y1".
 
 ## Outputs
 
@@ -35,7 +35,7 @@ specifying the variations between all anchor boxes and ground truth boxes.
 - means: An index of type int. Defaults to [0,0, 0,0].
 "deltas" = "deltas" x "stds" + "means".
 - stds: An index of type int. Defaults to [1.0, 1.0, 1.0, 1.0].
-"deltas" = "deltas" x "stds" + "means". 
+"deltas" = "deltas" x "stds" + "means".
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

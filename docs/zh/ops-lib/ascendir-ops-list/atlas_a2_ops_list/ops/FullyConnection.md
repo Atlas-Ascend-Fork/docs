@@ -26,11 +26,11 @@ Four inputs, including:
 - w: A weight matrix of type float16, int8, int4, float32, bf16.
 - b: An optional Tensor of type float16, int32, float32, bf16.
 - offset_w: An optional Tensor of type int8, int4.
-Reserved. Only None Supported. 
+Reserved. Only None Supported.
 
 ## Outputs
 
-y: The result tensor of type float16, int32, float32, bf16. 
+y: The result tensor of type float16, int32, float32, bf16.
 
 ## Attributes
 
@@ -43,7 +43,7 @@ The product of the subsequent dimensions starting form first dimension
 or the second dimension is "K".
 - offset_x: An optional integer for quantized FullyConnection.
 The negative offset added to the input image for int8 type. Ensure offset_x
-within the effective range of int8 [-128, 127]. Defaults to "0". 
+within the effective range of int8 [-128, 127]. Defaults to "0".
 
 ## Quantization supported or not
 
@@ -51,9 +51,9 @@ Yes
 
 ## Third-party framework compatibility
 
-Compatible with the Caffe operator InnerProduct. 
+Compatible with the Caffe operator InnerProduct.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

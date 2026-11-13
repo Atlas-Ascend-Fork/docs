@@ -20,7 +20,7 @@ REG_OP(SparseApplyFtrl)
 
 ## Brief
 
-Update relevant entries in '*var' according to the Ftrl-proximal scheme . 
+Update relevant entries in '*var' according to the Ftrl-proximal scheme .
 
 ## Inputs
 
@@ -46,7 +46,7 @@ Support dtype: float32, support format: [NCHW,NHWC,ND].
 - l2: A Tensor of the same type as "var", for L2 regulariation. Must be a scalar.
 Support dtype: float32, support format: [NCHW,NHWC,ND].
 - lr_power: A Tensor of the same type as "var", for the scaling factor. Must be a scalar .
-Support dtype: float32, support format: [NCHW,NHWC,ND]. 
+Support dtype: float32, support format: [NCHW,NHWC,ND].
 
 ## Outputs
 
@@ -59,7 +59,7 @@ Support dtype: float32, support format: [NCHW,NHWC,ND].
 use_locking: An optional bool. Defaults to "False".
 If "True", updating of the "var" and "accum" tensors will be
 protected by a lock; otherwise the behavior is undefined,
-but may exhibit less contention . 
+but may exhibit less contention .
 
 ## Data Types
 
@@ -85,4 +85,4 @@ Compatible with the TensorFlow operator SparseApplyFtrl.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

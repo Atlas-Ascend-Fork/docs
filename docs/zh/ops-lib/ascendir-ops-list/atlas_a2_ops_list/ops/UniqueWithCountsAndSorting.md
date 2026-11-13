@@ -15,11 +15,11 @@ REG_OP(UniqueWithCountsAndSorting)
 
 ## Brief
 
-Return the unique elements of the input tensor with counts and sorted elements. 
+Return the unique elements of the input tensor with counts and sorted elements.
 
 ## Inputs
 
-x: A tensor. Input "x" is a k-dimensional tensor. 
+x: A tensor. Input "x" is a k-dimensional tensor.
 
 ## Outputs
 
@@ -27,7 +27,7 @@ x: A tensor. Input "x" is a k-dimensional tensor.
 - indices: A tensor of type DT_INT32, DT_INT64.
              Representing the indices for where elements in the original input map to in the output.
 - counts: A tensor of type DT_INT32, DT_INT64.
-Representing the number of occurrences for each unique value or tensor. 
+Representing the number of occurrences for each unique value or tensor.
 
 ## Attributes
 
@@ -52,4 +52,4 @@ Compatible with Pytorch operator _unique2.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

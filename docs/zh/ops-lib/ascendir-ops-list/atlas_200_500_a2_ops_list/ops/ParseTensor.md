@@ -13,21 +13,21 @@ REG_OP(ParseTensor)
 
 ## Brief
 
-Convert serialized tensorflow.TensorProto prototype to Tensor. 
+Convert serialized tensorflow.TensorProto prototype to Tensor.
 
 ## Inputs
 
 serialized: A Tensor of string type. Scalar string containing serialized
-TensorProto prototype. 
+TensorProto prototype.
 
 ## Outputs
 
-output: A Tensor of type out_type. 
+output: A Tensor of type out_type.
 
 ## Attributes
 
 out_type: The type of the serialized tensor. The provided type must match the
-type of the serialized tensor and no implicit conversion will take place. 
+type of the serialized tensor and no implicit conversion will take place.
 
 ## Data Types
 
@@ -39,7 +39,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The implementation for StringToNumber on Ascend uses AICPU,
-with badperformance. 
+with badperformance.
 
 ## Third-party framework compatibility
 
@@ -48,4 +48,4 @@ with badperformance.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

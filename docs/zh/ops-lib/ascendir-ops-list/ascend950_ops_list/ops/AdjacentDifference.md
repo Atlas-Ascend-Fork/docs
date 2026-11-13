@@ -11,7 +11,7 @@ REG_OP(AdjacentDifference)
 
 ## Brief
 
-Compare two consecutive values in input tensor, if they are equal, return 0; otherwise, return 1. 
+Compare two consecutive values in input tensor, if they are equal, return 0; otherwise, return 1.
 y[0] = 0;
 y[i] = x[i] == x[i - 1] ? 0 : 1;
 
@@ -39,4 +39,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

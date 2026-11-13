@@ -12,7 +12,7 @@ REG_OP(StatefulUniformFullInt)
 ## Brief
 
 Outputs random integers from a uniform distribution.
-The generated values are uniform integers covering the whole range of `dtype` . 
+The generated values are uniform integers covering the whole range of `dtype` .
 
 ## Inputs
 
@@ -22,7 +22,7 @@ The generated values are uniform integers covering the whole range of `dtype` .
 
 ## Outputs
 
-y:A  Returns Random values with specified shape . 
+y:A  Returns Random values with specified shape .
 
 ## Data Types
 
@@ -40,4 +40,4 @@ Compatible with tensorflow StatefulUniformFullInt operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

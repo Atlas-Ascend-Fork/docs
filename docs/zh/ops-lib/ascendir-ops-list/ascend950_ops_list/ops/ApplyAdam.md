@@ -44,7 +44,7 @@ Updates "var" according to the Adam algorithm.
 
 ## Outputs
 
-var: A mutable Tensor. Has the same type as intput "var" . 
+var: A mutable Tensor. Has the same type as intput "var" .
 
 ## Attributes
 
@@ -93,4 +93,4 @@ Compatible with the TensorFlow operator ApplyAdam.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

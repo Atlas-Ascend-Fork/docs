@@ -42,8 +42,8 @@ The K value in x2 should be same as the K value in x1 when x2 is non-transposed,
 - gather_index: An int. Represents the input index for doing gather, 0: left matrix, 1: right matrix. Default: 0. The gather_index only supports 0 in current version.
 - comm_turn: An int. Number of communications with AICPU. Default: 0. The comm_turn only supports 0 in current version.
 - rank_size: An int. Number of ranks in the group. Default: 0.
-The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 2, 4, 8. 
-The Atlas A3 Training Series Product/Atlas A3 Inference Series Product support 2, 4, 8, 16. 
+The Atlas A2 products support 2, 4, 8.
+The Atlas A3 products support 2, 4, 8, 16.
 - is_gather_out: A bool. If true, output gather_out matrix. Default: true.
 
 ## Data Types
@@ -59,4 +59,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

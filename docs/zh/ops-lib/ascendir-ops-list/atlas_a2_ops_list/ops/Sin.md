@@ -13,12 +13,12 @@ Computes sine of "x" element-wise.
 
 ## Inputs
 
-One input: 
-x: An ND Tensor that supports the data type UnaryDataType. 
+One input:
+x: An ND Tensor that supports the data type UnaryDataType.
 
 ## Outputs
 
-y: An ND Tensor with the same dtype and shape of input "x". 
+y: An ND Tensor with the same dtype and shape of input "x".
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with TensorFlow operator Sin.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

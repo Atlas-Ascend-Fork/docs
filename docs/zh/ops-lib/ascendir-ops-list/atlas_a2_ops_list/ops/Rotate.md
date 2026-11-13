@@ -17,7 +17,7 @@ REG_OP(Rotate)
 
 ## Brief
 
-Applies a rotate to an image. 
+Applies a rotate to an image.
 
 ## Inputs
 
@@ -38,7 +38,7 @@ Note that the expand flag assumes rotation around the center and no translation.
 - interpolation: An optional string. Interpolation type, only support "bilinear"/"nearest", default "nearest".
 - padding_mode: An optional string. Pixel extension method, only support "constant" and "edge", default "constant".
 - padding_value: An optional float. Used when padding_mode is "constant". Data type is the same as that of the
-original picture. The number of data is the same as that of the original picture channels. Deatulat value is 0 . 
+original picture. The number of data is the same as that of the original picture channels. Deatulat value is 0 .
 - data_format: An optional string. Could be "HWC" or "CHW". Defaults to "HWC".
 Value used for inferring real format of images.
 
@@ -60,4 +60,4 @@ This operator will be deprecated in the future.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

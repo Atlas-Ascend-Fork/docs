@@ -26,7 +26,7 @@ float8_e8m0, float4_e2m1, float4_e1m2.
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x". The slice extracted from the tensor. 
+y: A Tensor. Has the same type as "x". The slice extracted from the tensor.
 
 ## Data Types
 
@@ -45,7 +45,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 - 0 <= offset[i] <= offset[i] + size[i] <= x_dim[i] for i in [0,n],
-n is the dimension of the tensor "x". 
+n is the dimension of the tensor "x".
 - offsets, size and x must have the same rank.
 
 ## Third-party framework compatibility
@@ -55,4 +55,4 @@ Compatible with the TensorFlow operator Slice.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

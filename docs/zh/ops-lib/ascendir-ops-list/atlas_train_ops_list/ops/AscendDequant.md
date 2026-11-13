@@ -23,12 +23,12 @@ The format must be FRACTAL_NZ, NC1HWC0 or NDC1HWC0.
 uint64. The format must be NC1HWC0 or NDC1HWC0. If deq_scale is 1D tensor,
 shape must be same as the last dimension of x. Otherwise the number of
 dimensions should be equal to x, the last dimension of shape should be
-the same as x, others must be 1. 
+the same as x, others must be 1.
 
 ## Outputs
 
 y: The dequantized output tensor of type float16 or float32. The format must
-be FRACTAL_NZ, NC1HWC0 or NDC1HWC0. The shape is same as x. 
+be FRACTAL_NZ, NC1HWC0 or NDC1HWC0. The shape is same as x.
 
 ## Attributes
 
@@ -37,7 +37,7 @@ on "scale", either "True" or "False". Defaults to "False".
 - relu_flag: An optional bool, specifying whether to perform ReLU,
 either "True" or "False". Defaults to "False".
 - dtype: An optional int32, specifying the output data type. Defaults to "0"
-, represents dtype "DT_FLOAT". 
+, represents dtype "DT_FLOAT".
 
 ## Data Types
 
@@ -54,4 +54,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -25,11 +25,11 @@ Must be one of the following types: float16, float32, int32, int8, uint8
 
 ## Outputs
 
-var: A Tensor. Has the same type and format as input "var" . 
+var: A Tensor. Has the same type and format as input "var" .
 
 ## Attributes
 
-axis: An required int. The axis along which to index. 
+axis: An required int. The axis along which to index.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with the pytorch operator ScatterAdd.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

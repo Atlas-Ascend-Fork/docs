@@ -7,7 +7,7 @@ REG_OP(NoOp)
 
 ## Brief
 
-Does nothing. Only useful as a placeholder for control edges . 
+Does nothing. Only useful as a placeholder for control edges .
 
 ## Third-party framework compatibility
 
@@ -16,4 +16,4 @@ Compatible with the TensorFlow operator NoOp.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

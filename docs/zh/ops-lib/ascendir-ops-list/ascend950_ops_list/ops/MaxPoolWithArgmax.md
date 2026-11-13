@@ -24,7 +24,7 @@ indices .
 
 One input:
 x: An 4D Tensor. Supported type:float16, bfloat16, float32
-Must set the format, supported format list ["NCHW, NHWC"]. 
+Must set the format, supported format list ["NCHW, NHWC"].
 
 ## Outputs
 
@@ -75,4 +75,4 @@ Compatible with the TensorFlow operator MaxPoolWithArgmax.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

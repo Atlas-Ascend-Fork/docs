@@ -9,15 +9,15 @@ REG_OP(InvertPermutation)
 
 ## Brief
 
-Computes the inverse permutation of a tensor. 
+Computes the inverse permutation of a tensor.
 
 ## Inputs
 
-x: A k-dimensional tensor. 
+x: A k-dimensional tensor.
 
 ## Outputs
 
-y: A 1D tensor. 
+y: A 1D tensor.
 
 ## Data Types
 
@@ -28,7 +28,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-InvertPermutation runs on the Ascend AI CPU, which delivers poor performance. 
+InvertPermutation runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator InvertPermutation.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

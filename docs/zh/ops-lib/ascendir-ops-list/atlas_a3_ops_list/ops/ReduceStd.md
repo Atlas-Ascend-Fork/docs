@@ -18,7 +18,7 @@ Calculates the standard deviation and average value of Tensors.
 ## Inputs
 
 x: A Tensor. Must be one of the following types:
-    float16, float32. 
+    float16, float32.
 
 ## Outputs
 
@@ -32,10 +32,10 @@ Three Attributes, including:
 - dim: An optional listint, Defaults to "[]".
 - unbiased: An optional bool. Defaults to "True".
     If "True", Use Bessel Correction.
-    If "False", Do not use Bessel Correction. 
+    If "False", Do not use Bessel Correction.
 - keepdim: An optional bool. Defaults to "False".
     If "True", Keep the original tensor dimension.
-    If "False", Do not keep the original tensor dimension. 
+    If "False", Do not keep the original tensor dimension.
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with the Pytorch operator ReduceStd.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

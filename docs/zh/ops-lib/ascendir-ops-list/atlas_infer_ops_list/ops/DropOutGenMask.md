@@ -22,7 +22,7 @@ include:
 
 ## Outputs
 
-y:Output (1-D) random number using uint data format. A Tensor of type uint8. 
+y:Output (1-D) random number using uint data format. A Tensor of type uint8.
 
 ## Attributes
 
@@ -38,4 +38,4 @@ The output is aligned with 128 bits.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

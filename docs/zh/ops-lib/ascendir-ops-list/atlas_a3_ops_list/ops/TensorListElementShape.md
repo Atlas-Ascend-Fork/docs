@@ -10,19 +10,19 @@ REG_OP(TensorListElementShape)
 
 ## Brief
 
-The shape of elements in the input tensor list. 
+The shape of elements in the input tensor list.
 
 ## Inputs
 
-input_handle: The input list. 
+input_handle: The input list.
 
 ## Outputs
 
-element_shape:A shape compatible with that of elements in the list. 
+element_shape:A shape compatible with that of elements in the list.
 
 ## Attributes
 
-shape_type: An optional attribute. The type of shape in the list. Defaults to DT_INT32. 
+shape_type: An optional attribute. The type of shape in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -38,4 +38,4 @@ Compatible with tensorflow TensorListElementShape operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

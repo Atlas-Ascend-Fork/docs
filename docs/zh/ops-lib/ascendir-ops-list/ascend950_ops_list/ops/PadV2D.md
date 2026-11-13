@@ -20,7 +20,7 @@ Pad a tensor .
 
 ## Outputs
 
-y: A Tensor of the same type as "x" . 
+y: A Tensor of the same type as "x" .
 
 ## Attributes
 
@@ -28,7 +28,7 @@ paddings: A required Attribute.
     For each dimension D of input, paddings[D, 0] indicates how many
     values to add before the contents of tensor in that dimension,
     and paddings[D, 1] indicates how many values to add after the
-    contents of tensor in that dimension . 
+    contents of tensor in that dimension .
 
 ## Attention Constraints
 
@@ -41,4 +41,4 @@ Compatible with TensorFlow operator PadV2.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

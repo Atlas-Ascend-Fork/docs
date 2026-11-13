@@ -15,7 +15,7 @@ REG_OP(RaggedGather)
 
 ## Brief
 
-Gather ragged slices from `params` axis `0` according to `indices`. 
+Gather ragged slices from `params` axis `0` according to `indices`.
 
 ## Inputs
 
@@ -39,7 +39,7 @@ returned RaggedTensor.The `flat_values` for the returned RaggedTensor .
 - Tsplits: A type of output_nested_splits.
 - OUTPUT_RAGGED_RANK: An optional int, defaults to 0. The ragged rank of the output RaggedTensor. `output_nested_splits` will contain
 this number of `row_splits` tensors. This value should equal
-`indices.shape.ndims + params.ragged_rank - 1`. 
+`indices.shape.ndims + params.ragged_rank - 1`.
 
 ## Data Types
 
@@ -56,4 +56,4 @@ Compatible with tensorflow RaggedGather operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

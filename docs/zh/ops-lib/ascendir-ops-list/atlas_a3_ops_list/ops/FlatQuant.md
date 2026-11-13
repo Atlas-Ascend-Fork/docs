@@ -14,7 +14,7 @@ REG_OP(FlatQuant)
 
 ## Brief
 
-Flatness matters for LLM quantization. 
+Flatness matters for LLM quantization.
 
 ## Inputs
 
@@ -25,18 +25,18 @@ Must be one of the following types: float16, bfloat16. Has the same type as inpu
 The format support ND.
 - kronecker_p2: A tensor. Input calculation matrix 2. 2-D with shape [N, N]. The value of N is same as input "x".
 Must be one of the following types: float16, bfloat16. Has the same type as input "x".
-The format support ND. 
+The format support ND.
 
 ## Outputs
 
 - out: A 3-D tensor of type int4. Output result data. Shape is same as input "x". The format support ND.
 - quant_scale: A tensor of type float32. Output quantization factor. 1-D with shape [K].
-The value of K is same as input "x". The format support ND. 
+The value of K is same as input "x". The format support ND.
 
 ## Attributes
 
-clip_ratio: An optional float. Used to control the quantization cropping ratio. Defaults to 1. 
-dst_dtype: An optional int. Used to control the quantization dst_type. Defaults to DT_INT32, which is 3. 
+clip_ratio: An optional float. Used to control the quantization cropping ratio. Defaults to 1.
+dst_dtype: An optional int. Used to control the quantization dst_type. Defaults to DT_INT32, which is 3.
 
 ## Data Types
 
@@ -51,4 +51,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

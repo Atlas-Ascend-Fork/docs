@@ -16,7 +16,7 @@ REG_OP(TensorArrayConcat)
 
 ## Brief
 
-Concat the elements from the TensorArray into value value. 
+Concat the elements from the TensorArray into value value.
 
 ## Inputs
 
@@ -29,13 +29,13 @@ The input handle must be type resource. Inputs include:
 - value: All of the elements in the TensorArray, concatenated along
 the first axis.
 - lengths: A vector of the row sizes of the original T elements in the
-value output. 
+value output.
 
 ## Attributes
 
 - dtype: The type of the elem that is returned.
 - element_shape_except0: The expected shape of an element, if known,
-excluding the first dimension. 
+excluding the first dimension.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with tensorflow TensorArrayConcat operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

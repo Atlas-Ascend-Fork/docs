@@ -12,7 +12,7 @@ REG_OP(BinaryCrossEntropy)
 
 ## Brief
 
-Creates a criterion that measures the Binary Cross Entropy between the target and the output. 
+Creates a criterion that measures the Binary Cross Entropy between the target and the output.
 
 ## Inputs
 
@@ -23,11 +23,11 @@ Three inputs, including:
 
 ## Outputs
 
-output: Output loss. Has the same dimension with the inputs. When "reduction" is set to "none", a tensor with the same size as "x" is output. Otherwise, a scalar is output. 
+output: Output loss. Has the same dimension with the inputs. When "reduction" is set to "none", a tensor with the same size as "x" is output. Otherwise, a scalar is output.
 
 ## Attributes
 
-reduction: A string specifying the reduction type to apply to the output, which must be one of: "none", "sum", or "mean". Defaults to "mean". 
+reduction: A string specifying the reduction type to apply to the output, which must be one of: "none", "sum", or "mean". Defaults to "mean".
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with PyTorch operator BCELoss.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

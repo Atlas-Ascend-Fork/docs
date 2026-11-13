@@ -17,7 +17,7 @@ REG_OP(CTCLoss)
 ## Brief
 
 Calculates the CTC Loss (log probability) for each batch entry.
-Also calculates the gradient. 
+Also calculates the gradient.
 
 ## Inputs
 
@@ -32,7 +32,7 @@ Also calculates the gradient.
 
 - loss: A vector (batch) containing log-probabilities.
 - gradient: The gradient of `loss`.  3-D, shape: `(max_time x
-batch_size x num_classes)`. 
+batch_size x num_classes)`.
 
 ## Attributes
 
@@ -41,7 +41,7 @@ the CTC calculation.If not specified, defaults to false
 - ctc_merge_repeated: Scalar. If set to false, *during* CTC calculation
 repeated non-blank labels will not be merged and are interpreted as
 individual labels.  This is a simplified version of CTC.
-If not specified, defaults to true. 
+If not specified, defaults to true.
 
 ## Data Types
 
@@ -58,4 +58,4 @@ Compatible with TensorFlow CTCLoss operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

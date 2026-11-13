@@ -20,7 +20,7 @@ REG_OP(InplaceIndexFill)
 
 Fills the elements of the input tensor `x` with `value` by selecting the
   indices in the order given in `indices` along the specified dimension `dim`.
-  The operation is performed in-place. 
+  The operation is performed in-place.
 
 ## Inputs
 
@@ -31,7 +31,7 @@ Three inputs, including:
 - indices: A Tensor. The indices of the input tensor to fill. Its type should be
   int32 or int64. The indices should be 1-dimensional.
 - value: A Tensor. The value to fill into the input tensor. Must have the same
-  data type as "x". 
+  data type as "x".
 
 ## Outputs
 
@@ -53,4 +53,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

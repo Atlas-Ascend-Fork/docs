@@ -14,7 +14,7 @@ REG_OP(If)
 
 Select one of the subgraphs to pass the input tensors and return the output tensors.
       If "cond" means True, the selected subgraph is "then_branch".
-      Otherwise, the selected subgraph is "else_branch" . 
+      Otherwise, the selected subgraph is "else_branch" .
 
 ## Inputs
 
@@ -28,14 +28,14 @@ Select one of the subgraphs to pass the input tensors and return the output tens
 ## Outputs
 
 output: The output tensors returned by either then_branch(input) or else_branch(input).
-       It's a dynamic output. 
+       It's a dynamic output.
 
 ## Graphs
 
 - then_branch: A subgraph takes 'input' and returns a list of tensors,
                 whose types are the same as what else_branch returns.
 - else_branch: A subgraph takes 'input' and returns a list of tensors,
-                whose types are the same as what then_branch returns . 
+                whose types are the same as what then_branch returns .
 
 ## Third-party framework compatibility
 
@@ -44,4 +44,4 @@ Compatible with the TensorFlow operator If.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

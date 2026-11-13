@@ -28,11 +28,11 @@ Inputs include:
 
 ## Outputs
 
-y: A Tensor. Has the same type as orig_input. 
+y: A Tensor. Has the same type as orig_input.
 
 ## Attributes
 
-overlapping: An optional bool. Defaults to False. 
+overlapping: An optional bool. Defaults to False.
 
 ## Data Types
 
@@ -56,4 +56,4 @@ The implementation for FractionalMaxPoolGrad on Ascend uses AICPU, with bad perf
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

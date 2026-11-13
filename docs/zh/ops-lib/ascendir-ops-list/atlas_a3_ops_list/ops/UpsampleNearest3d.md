@@ -11,29 +11,29 @@ REG_OP(UpsampleNearest3d)
 
 ## Brief
 
-Upsample the 3-D data with the nearest neighbor ​interpolation algorithm. 
+Upsample the 3-D data with the nearest neighbor ​interpolation algorithm.
 
 ## Inputs
 
-One inputs, including: 
+One inputs, including:
 x: A 5-D input tensor. The format must be NCDHW. Must be one of the following types:
-float16, float32, float64, uint8, bfloat16. 
+float16, float32, float64, uint8, bfloat16.
 
 ## Outputs
 
 y: A 5-D tensor. The format must be NCDHW. Must be one of the following types:
 float16, float32, float64, uint8, bfloat16.
-Has the same type as input x, shape depends on x and output_size/scales. 
+Has the same type as input x, shape depends on x and output_size/scales.
 
 ## Attributes
 
 - output_size: An optional listInt. Defaults to none.
 Contain 3 elements: output_depth, output_height, output_width. The number of elements of 'output_size'
-should be the same as the rank of input 'x'. Only one of 'scales' and 'output_size' can be specified. 
+should be the same as the rank of input 'x'. Only one of 'scales' and 'output_size' can be specified.
 - scales: An optional listFloat. Defaults to none.
 The scale array along each dimension, contain 3 elements: scale_depth, scale_height, scale_width.
 The number of elements of 'scales' should be the same as the rank of input 'x'. One of 'scales' and
-'output_size' must be specified and it is an error if both are specified. 
+'output_size' must be specified and it is an error if both are specified.
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

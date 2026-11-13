@@ -11,7 +11,7 @@ REG_OP(AssignVariableOp)
 
 ## Brief
 
-Assigns a new value to a variable. 
+Assigns a new value to a variable.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ Assigns a new value to a variable.
 
 ## Attributes
 
-dtype: required, type. 
+dtype: required, type.
 @see AssignVariableOp.
 
 ## Data Types
@@ -33,4 +33,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

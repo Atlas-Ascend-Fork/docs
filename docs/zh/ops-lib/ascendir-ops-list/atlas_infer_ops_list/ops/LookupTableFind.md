@@ -14,7 +14,7 @@ REG_OP(LookupTableFind)
 
 ## Brief
 
-Looks up keys in a table, outputs the corresponding values. 
+Looks up keys in a table, outputs the corresponding values.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ The dtype of input handle must be resource. Inputs include:
 
 ## Outputs
 
-values: A Tensor. Has the same type as default_value. 
+values: A Tensor. Has the same type as default_value.
 
 ## Attributes
 
-Tout: Specified type of ouput values. 
+Tout: Specified type of ouput values.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow LookupTableFind operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

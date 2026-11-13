@@ -11,19 +11,19 @@ REG_OP(Fingerprint)
 
 ## Brief
 
-Generates fingerprint values. 
+Generates fingerprint values.
 
 ## Inputs
 
 - data: Must have rank 1 or higher.
 - method: Fingerprint method used by this op. Currently available method is
-`farmhash::fingerprint64`. 
+`farmhash::fingerprint64`.
 
 ## Outputs
 
 y: A two-dimensional `Tensor` of type `tf.uint8`. The first dimension equals to
 `data`'s first dimension, and the second dimension size depends on the
-fingerprint algorithm. 
+fingerprint algorithm.
 
 ## Data Types
 
@@ -40,4 +40,4 @@ Compatible with TensorFlow Fingerprint operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -26,24 +26,24 @@ REG_OP(AddLayerNormQuantV2)
 
 ## Brief
 
-Fused Operator of AddLayerNorm and Quantize/DynamicQuant/AscendQuantV2. 
- calculating: x1, x2, gamma, beta, bias, scales1, scales2, zero_points1, zero_points2 
- x = x1 + x2 + bias 
- rstd = 1 / (sqrt(Var(x) + eps)) 
- layernorm_res = (x - E(x)) * rstd * gamma + beta 
- when quant_mode = "static" and div_mode=true, output out_scales1 and out_scales2 are invalid: 
- y1 = round(y / scales1) + zero_points1 
- y2 = round(y / scales2) + zero_points2 
- when quant_mode = "static" and div_mode=false, output out_scales1 and out_scales2 are invalid: 
- y1 = round(y * scales1) + zero_points1 
- y2 = round(y * scales2) + zero_points2 
- when quant_mode = "dynamic": 
- tmp1 = y * scales1 
- tmp2 = y * scales2 
- out_scales1 = reduce_max(abs(tmp1))/127 
- out_scales2 = reduce_max(abs(tmp2))/127 
- y1 = round(tmp1 / out_scales1) 
- y2 = round(tmp2 / out_scales2) 
+Fused Operator of AddLayerNorm and Quantize/DynamicQuant/AscendQuantV2.
+ calculating: x1, x2, gamma, beta, bias, scales1, scales2, zero_points1, zero_points2
+ x = x1 + x2 + bias
+ rstd = 1 / (sqrt(Var(x) + eps))
+ layernorm_res = (x - E(x)) * rstd * gamma + beta
+ when quant_mode = "static" and div_mode=true, output out_scales1 and out_scales2 are invalid:
+ y1 = round(y / scales1) + zero_points1
+ y2 = round(y / scales2) + zero_points2
+ when quant_mode = "static" and div_mode=false, output out_scales1 and out_scales2 are invalid:
+ y1 = round(y * scales1) + zero_points1
+ y2 = round(y * scales2) + zero_points2
+ when quant_mode = "dynamic":
+ tmp1 = y * scales1
+ tmp2 = y * scales2
+ out_scales1 = reduce_max(abs(tmp1))/127
+ out_scales2 = reduce_max(abs(tmp2))/127
+ y1 = round(tmp1 / out_scales1)
+ y2 = round(tmp2 / out_scales2)
 
 ## Inputs
 
@@ -109,4 +109,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

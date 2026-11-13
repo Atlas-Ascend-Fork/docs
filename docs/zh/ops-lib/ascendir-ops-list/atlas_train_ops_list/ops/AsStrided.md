@@ -51,4 +51,4 @@ Compatible with the PyTorch operator as_strided.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

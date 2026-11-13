@@ -25,14 +25,14 @@ Must be one of the following types: float16, float32, bfloat16. Has the same typ
 - mean: A ND tensor. The mean value of the input data calculated during forward propagation.
 Must be one of the following types: float16, float32, bfloat16. Has the same type, shape and format as "sum_dy".
 - invert_std: A ND tensor. The reciprocal of the input data standard deviation calculated during forward propagation.
-Must be one of the following types: float16, float32, bfloat16. Has the same type, shape and format as "sum_dy". 
+Must be one of the following types: float16, float32, bfloat16. Has the same type, shape and format as "sum_dy".
 
 ## Outputs
 
 - sum_dy_xmu: A ND tensor. Represents the sum of the gradients of the loss function against the mean.
 Has the same type, shape and format as "sum_dy".
 - y: A ND tensor. Indicates the adjusted gradient, which is used for backpropagation to the previous layer.
-Has the same type, shape and format as "sum_dy". 
+Has the same type, shape and format as "sum_dy".
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

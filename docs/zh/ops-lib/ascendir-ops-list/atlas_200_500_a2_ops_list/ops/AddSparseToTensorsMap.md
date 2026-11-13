@@ -15,7 +15,7 @@ REG_OP(AddSparseToTensorsMap)
 
 ## Brief
 
-Adds a SparseTensor to a SparseTensorsMap. 
+Adds a SparseTensor to a SparseTensorsMap.
 
 ## Inputs
 
@@ -26,7 +26,7 @@ The input tensor must be a SparseTensor.
 
 ## Outputs
 
-handle: A tensor of type int64. 
+handle: A tensor of type int64.
 
 ## Attributes
 
@@ -49,4 +49,4 @@ Compatible with the TensorFlow operator AddSparseToTensorsMap.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

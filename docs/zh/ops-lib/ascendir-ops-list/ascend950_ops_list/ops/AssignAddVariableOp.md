@@ -11,7 +11,7 @@ REG_OP(AssignAddVariableOp)
 
 ## Brief
 
-Adds a value to the current value of a variable. 
+Adds a value to the current value of a variable.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ Adds a value to the current value of a variable.
 
 ## Attributes
 
-dtype: required, type. 
+dtype: required, type.
 @see AssignAddVariableOp.
 
 ## Data Types
@@ -33,4 +33,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

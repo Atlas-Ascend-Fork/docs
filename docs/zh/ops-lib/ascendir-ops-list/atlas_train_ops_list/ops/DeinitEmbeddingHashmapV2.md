@@ -8,7 +8,7 @@ REG_OP(DeinitEmbeddingHashmapV2)
 
 ## Brief
 
-uninit embedding hash map table. 
+uninit embedding hash map table.
 
 ## Inputs
 
@@ -23,4 +23,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

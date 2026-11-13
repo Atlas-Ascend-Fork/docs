@@ -13,7 +13,7 @@ REG_OP(DequantBias)
 
 ## Brief
 
-DequantBias. 
+DequantBias.
 
 ## Inputs
 
@@ -32,7 +32,7 @@ The data type supports float32, bfloat16, float16, int32. Supported format "ND".
 ## Outputs
 
 y: A 2D tensor. The output tensor of the quantization operation.
-The shape is [M, N], and the data type supports float16, bfloat16. Supported format "ND". 
+The shape is [M, N], and the data type supports float16, bfloat16. Supported format "ND".
 
 ## Attributes
 
@@ -54,4 +54,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

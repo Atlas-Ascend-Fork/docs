@@ -16,7 +16,7 @@ ocr detection pre handle.
 
 ## Inputs
 
-img: A Tensor of type uint8. img data value. 
+img: A Tensor of type uint8. img data value.
 
 ## Outputs
 
@@ -32,4 +32,4 @@ data_format: An optional string from: '"NHWC", "NCHW"'. Defaults to
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

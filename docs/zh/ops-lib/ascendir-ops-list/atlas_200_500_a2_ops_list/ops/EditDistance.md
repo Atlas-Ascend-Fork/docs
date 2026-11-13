@@ -15,7 +15,7 @@ REG_OP(EditDistance)
 
 ## Brief
 
-Computes the (possibly normalized) Levenshtein Edit Distance. 
+Computes the (possibly normalized) Levenshtein Edit Distance.
 
 ## Inputs
 
@@ -34,11 +34,11 @@ This is an R-length vector.
 
 ## Outputs
 
-output: A dense float tensor with rank R - 1. 
+output: A dense float tensor with rank R - 1.
 
 ## Attributes
 
-normalize: boolean (if true, edit distances are normalized by length of truth). 
+normalize: boolean (if true, edit distances are normalized by length of truth).
 
 ## Data Types
 
@@ -59,4 +59,4 @@ Compatible with TensorFlow EditDistance operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

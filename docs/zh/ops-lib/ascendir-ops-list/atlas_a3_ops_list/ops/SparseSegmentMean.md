@@ -20,11 +20,11 @@ The input indices and segment_ids must have same rank. Inputs include:
 - indices: A tensor. Must be one of the following types: int32, int64.
 A 1-D tensor. Has same rank as segment_ids.
 - segment_ids: A tensor. Must be one of the following types: int32, int64. A 1-D tensor. Values should be
-sorted and can be repeated. 
+sorted and can be repeated.
 
 ## Outputs
 
-y:A tensor. Has the same type as x. 
+y:A tensor. Has the same type as x.
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with TensorFlow SparseSegmentMean operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

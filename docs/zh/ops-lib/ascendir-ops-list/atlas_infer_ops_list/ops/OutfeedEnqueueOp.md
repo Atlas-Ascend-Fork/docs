@@ -11,18 +11,18 @@ REG_OP(OutfeedEnqueueOp)
 
 ## Brief
 
-Enqueue a Tensor on the computation outfeed. 
+Enqueue a Tensor on the computation outfeed.
 
 ## Inputs
 
 Inputs include:
 x: A Tensor. Must be one of the following types: float16, float32,
 int8, int16, uint16, uint8, int32, int64, uint32, uint64,
-bool, double, string. It's a dynamic input. 
+bool, double, string. It's a dynamic input.
 
 ## Attributes
 
-channel_name: name of operator channel, defaults to "". 
+channel_name: name of operator channel, defaults to "".
 
 ## Attention Constraints
 
@@ -35,4 +35,4 @@ The implementation for OutfeedEnqueueOp on Ascend uses AICPU, with bad performan
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

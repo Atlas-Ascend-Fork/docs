@@ -14,7 +14,7 @@ REG_OP(SpatialTransformerD)
 
 ## Brief
 
-Function spatial transformer . 
+Function spatial transformer .
 
 ## Inputs
 
@@ -39,4 +39,4 @@ The operator will not be enhanced in the future.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

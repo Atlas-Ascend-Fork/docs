@@ -15,7 +15,7 @@ Write data by stride.
 
 ## Inputs
 
-x: A Tensor. All data types are supported. Support format: NC1HWC0 . 
+x: A Tensor. All data types are supported. Support format: NC1HWC0 .
 
 ## Outputs
 
@@ -36,4 +36,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

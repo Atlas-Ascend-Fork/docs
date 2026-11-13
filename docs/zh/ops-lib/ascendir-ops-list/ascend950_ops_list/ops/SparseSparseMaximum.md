@@ -18,7 +18,7 @@ REG_OP(SparseSparseMaximum)
 
 ## Brief
 
-Returns the element-wise max of two SparseTensors. 
+Returns the element-wise max of two SparseTensors.
 
 ## Inputs
 
@@ -31,7 +31,7 @@ in the canonical lexicographic ordering.
 - x2_indices:A `tensor` of type `int64`.2-D. the indices of the sparse tensor.
 - x2_values:A `tensor`. 1-D. Must have the same type as `x1_values`.
 - x2_shape:A `tensor` of type `int64`.1-D.
-counterpart to `a_shape` for the other operand; the two shapes must be equal. 
+counterpart to `a_shape` for the other operand; the two shapes must be equal.
 
 ## Outputs
 
@@ -58,4 +58,4 @@ Compatible SparseSparseMaximum operator in Tensorflow.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

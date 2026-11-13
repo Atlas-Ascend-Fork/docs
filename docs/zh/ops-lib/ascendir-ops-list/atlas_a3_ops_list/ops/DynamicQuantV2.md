@@ -21,8 +21,8 @@ Dynamic Quant V2. Performs pre-token/per-tensor asymmetric dynamic quantization 
 
 ## Inputs
 
-- x: A tensor. Type is:DT_FLOAT16 or DT_BF16. For Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component
-and Atlas A3 Training Series Product/Atlas A3 Inference Series Product.
+- x: A tensor. Type is:DT_FLOAT16 or DT_BF16. For Atlas A2 products
+and Atlas A3 products.
 Whose shape must be greater than 1. The data format support ND.
 - smooth_scales: An optional tensor.
 When group_index is null, shape is 1 Dims. Dim[0] is the last dimension of x.
@@ -33,7 +33,7 @@ The data type must be the same as that of x. The data format support ND.
 [E, ].
 The first dim of group_index shape is same as the first dim of smooth_scales shape.
 Must be one of the following types: int32. The format support ND.
-If group_index is not null, smooth_scales must be not null. 
+If group_index is not null, smooth_scales must be not null.
 
 ## Outputs
 
@@ -45,7 +45,7 @@ When quant_mode is "pertoken", shape is the same as the shape of x after removin
 When quant_mode is "pertensor", shape is (1,).
 Type is DT_FLOAT32. The format support ND.
 - offset: A tensor. Offset used for quantization. Shape is the same as the shape of scale.
-Type is DT_FLOAT32. The format support ND. Shape is same as scale. 
+Type is DT_FLOAT32. The format support ND. Shape is same as scale.
 
 ## Attributes
 
@@ -58,7 +58,7 @@ Defaults to false.
 Support "pertoken", "pertensor". Defaults to "pertoken".
 - dst_type_max: An optional attribute of type float. Specifies the range of quantized output.
 Only effective when dst_type is 34(hifloat8), supporting values 0, 15, 56, 224, 32768.
-Defaults to 0. 
+Defaults to 0.
 
 ## Data Types
 
@@ -80,4 +80,4 @@ the result is meaningless.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

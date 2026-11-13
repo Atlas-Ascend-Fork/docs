@@ -13,7 +13,7 @@ REG_OP(LogAddExp)
 
 ## Brief
 
-Computes the logarithm of the sum of exponentiations of the inputs element-wise. y = ln(e^x1 + e^x2). 
+Computes the logarithm of the sum of exponentiations of the inputs element-wise. y = ln(e^x1 + e^x2).
 
 ## Inputs
 
@@ -23,7 +23,7 @@ Two inputs, including:
 
 ## Outputs
 
-y: A Tensor of the same type as "x1". 
+y: A Tensor of the same type as "x1".
 
 ## Attributes
 
@@ -46,4 +46,4 @@ Compatible with pytorch operator LogAddExp.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

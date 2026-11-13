@@ -12,20 +12,20 @@ REG_OP(StackPop)
 
 ## Brief
 
-Pop the element at the top of the stack. 
+Pop the element at the top of the stack.
 
 ## Inputs
 
 The input handle must be type resource. Inputs include:
-handle: A Tensor of type resource. The handle to a stack. 
+handle: A Tensor of type resource. The handle to a stack.
 
 ## Outputs
 
-element:A Tensor of type elem_type. 
+element:A Tensor of type elem_type.
 
 ## Attributes
 
-elem_type: A DType. The type of the elem that is popped. 
+elem_type: A DType. The type of the elem that is popped.
 
 ## Third-party framework compatibility
 
@@ -34,4 +34,4 @@ Compatible with tensorflow StackPop operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

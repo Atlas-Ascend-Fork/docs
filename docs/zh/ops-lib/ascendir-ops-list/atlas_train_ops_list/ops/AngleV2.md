@@ -14,11 +14,11 @@ Computes the element_wise angle(in radians) of the given input tensor.
 
 ## Inputs
 
-x: A ND tensor of type float16, float, complex64, bool, uint8, int8, int16, int32, int64. 
+x: A ND tensor of type float16, float, complex64, bool, uint8, int8, int16, int32, int64.
 
 ## Outputs
 
-y: A ND tensor of type float16, float32. 
+y: A ND tensor of type float16, float32.
 
 ## Data Types
 
@@ -29,9 +29,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Angle. 
+Compatible with the Pytorch operator Angle.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

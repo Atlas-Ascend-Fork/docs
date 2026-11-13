@@ -10,7 +10,7 @@ REG_OP(TensorMapHasKey)
 
 ## Brief
 
-Returns whether the given key exists in the map. 
+Returns whether the given key exists in the map.
 
 ## Inputs
 
@@ -19,7 +19,7 @@ Returns whether the given key exists in the map.
 
 ## Outputs
 
-has_key: A scalar Tensor of type bool. Whether the key is already in the map or not. 
+has_key: A scalar Tensor of type bool. Whether the key is already in the map or not.
 
 ## Data Types
 
@@ -36,4 +36,4 @@ Compatible with tensorflow TensorMapHasKey operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

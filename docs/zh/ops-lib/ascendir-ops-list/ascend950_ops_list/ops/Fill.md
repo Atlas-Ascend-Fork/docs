@@ -20,7 +20,7 @@ This operation creates a tensor of shape "dims" and fills it with "value".
 ## Inputs
 
 - dims: A 1D tensor of types int32 or int64. Represents the shape of the output tensor .
-The size of each dimension must be less than or equal to 8. 
+The size of each dimension must be less than or equal to 8.
 - value: A 0D scalar. Specifies the value to fill the returned tensor.
    Must be one of the following types:
    bfloat16, float16, float32, double, int32, uint8, int16, int8, complex64, int64, bool,
@@ -50,4 +50,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

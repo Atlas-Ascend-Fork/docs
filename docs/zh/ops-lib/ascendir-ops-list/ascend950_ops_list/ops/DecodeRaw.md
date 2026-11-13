@@ -13,7 +13,7 @@ REG_OP(DecodeRaw)
 
 ## Brief
 
-Decodes raw file into tensor. 
+Decodes raw file into tensor.
 
 ## Inputs
 
@@ -38,4 +38,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

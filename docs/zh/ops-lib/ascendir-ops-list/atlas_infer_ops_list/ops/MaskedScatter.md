@@ -22,11 +22,11 @@ three inputs, including:
  @li x: A Tensor of dtype is float16 or float32 or float64 or
      int64 or int32 or int16 or int8 or uint8 or bool or bfloat16.
  @li mask: A Tensor of dtype is bool.
- @li updates: A tensor with the same type as x. 
+ @li updates: A tensor with the same type as x.
 
 ## Outputs
 
- @li y: A tensor with the same type as x. 
+ @li y: A tensor with the same type as x.
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

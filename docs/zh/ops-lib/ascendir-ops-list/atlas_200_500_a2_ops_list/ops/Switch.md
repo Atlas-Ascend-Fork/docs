@@ -27,7 +27,7 @@ Forwards "data" to the output port determined by "pred".
 - output_false: If "pred" is "false", data will be forwarded to this output.
                  Has the same type as "data".
 - output_true: If "pred" is "true", data will be forwarded to this output.
-                Has the same type as "data" . 
+                Has the same type as "data" .
 @see Merge()
 
 ## Third-party framework compatibility
@@ -37,4 +37,4 @@ Compatible with the TensorFlow operator Switch.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

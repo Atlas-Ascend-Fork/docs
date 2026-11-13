@@ -31,7 +31,7 @@ Any value of input_size must be in [1, 2147483647].
 The format of the filter tensor must be one of the followings:
 [out_channels, in_channels/groups, filter_height, filter_width] or
 [filter_height, filter_width, in_channels/groups, out_channels].
-In Ascend 950PR/Ascend 950DT, the filter_height and filter_width dimensions must be in [1, 2147483647],
+In Ascend 950PR&950DT products, the filter_height and filter_width dimensions must be in [1, 2147483647],
 for other products filter_height and filter_width dimensions must be in [1, 511].
 The other dimensions must be in [1, 2147483647].
 - out_backprop: A Tensor. Must have the same dtype as filter.
@@ -40,7 +40,7 @@ Must be one of the following types: float16/float32/bfloat16.
 or [batch, out_channels, out_height, out_width].
 Any dimension of out_backprop shape must be in [1, 2147483647].
 Gradients with respect to the output of the convolution.
-In Ascend 950PR/Ascend 950DT, the following are the supported data types and data formats:
+In Ascend 950PR&950DT products, the following are the supported data types and data formats:
 | Tensor    | out_bckprop | filter   | y       |
 |-----------|-------------|----------|---------|
 | Data Type | float16     | float16  | float16 |
@@ -78,13 +78,13 @@ N/C dimensions must be 1.
 The other values of strides must be in [1, 2147483647].
 - pads: A tuple/list of 4 integers, [top, bottom, left, right] pads
 on feature map.
-In Ascend 950PR/Ascend 950DT, the top, bottom, left and right must be in [0, 2147483647],
+In Ascend 950PR&950DT products, the top, bottom, left and right must be in [0, 2147483647],
 for other products top, bottom, left and right must be in [0, 255].
 - dilations: A optional tuple/list of 4 integers, The dilation factor for each
 dimension of input, defaults to [1,1,1,1]. Must be with shape
 [1, 1, dilation_height, dilation_width] or [1, dilation_height, dilation_width, 1].
 The value of N/C dimensions must be 1.
-In Ascend 950PR/Ascend 950DT, height (H) and width (W) dimensions must be in [1, 2147483647],
+In Ascend 950PR&950DT products, height (H) and width (W) dimensions must be in [1, 2147483647],
 for other products height (H) and width (W) dimensions must be in [1, 255].
 - groups: A optional integer of blocked connections
 from input channels to output channels.
@@ -92,11 +92,11 @@ Defaults to 1 and the value must be in [1, 65535].
 The in_channels and out_channels must be divisible by groups.
 - data_format: An optional string from: "NHWC", "NCHW". Defaults to
 "NHWC". Specify the data format of the out_backprop and output data.
-In Atlas Training Series Product, fmap or out_backprop's H and W not support 1 when
+In Atlas training products, fmap or out_backprop's H and W not support 1 when
 fmap_h + pad_top + pad_bottom != (filter_height - 1) * dilation_h + 1
 and filter_width > fmap_width.
 If filter_h = 1 and filter_w = 1, out_backprop_w * stride_h *
- stride_w < 4096. 
+ stride_w < 4096.
 
 ## Data Types
 
@@ -109,7 +109,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-In Ascend 950PR/Ascend 950DT: The behavior of gradient computation in the padding region depends on the input shape.
+In Ascend 950PR&950DT products: The behavior of gradient computation in the padding region depends on the input shape.
 Depending on the operator optimization strategy, the padding gradients may be directly set to 0.
 
 ## Third-party framework compatibility
@@ -119,4 +119,4 @@ Compatible with Tensorflow's conv2d_backprop_input
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -12,7 +12,7 @@ REG_OP(ResizeArea)
 
 ## Brief
 
-Resize images to size using area interpolation . 
+Resize images to size using area interpolation .
 
 ## Inputs
 
@@ -20,18 +20,18 @@ Input images must be a 4-D tensor. Inputs include:
 - images: 4-D with shape [batch, height, width, channels]. The format must
 be NHWC.
 - size: A 1-D int32 Tensor of 2 elements: new_height, new_width.
-The new size for the images . 
+The new size for the images .
 
 ## Outputs
 
 y: 4-D with shape [batch, new_height, new_width, channels]. The format must
-be NHWC. 
+be NHWC.
 
 ## Attributes
 
 align_corners: If true, the centers of the 4 corner pixels of the input and
 output tensors are aligned, preserving the values at the corner pixels.
-Defaults to false . 
+Defaults to false .
 
 ## Data Types
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images can be of different types but output images are always float . 
+Input images can be of different types but output images are always float .
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with tensorflow ResizeArea operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

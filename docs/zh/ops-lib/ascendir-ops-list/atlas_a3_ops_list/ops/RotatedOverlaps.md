@@ -11,7 +11,7 @@ REG_OP(RotatedOverlaps)
 
 ## Brief
 
-RotatedOverlaps . 
+RotatedOverlaps .
 
 ## Inputs
 
@@ -45,4 +45,4 @@ In each batch, the invalid box cannot appear before the valid box.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

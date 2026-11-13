@@ -20,7 +20,7 @@ Two inputs, including:
 
 ## Outputs
 
-loss: Return loss. Has the same dimensions and type as "predict" . 
+loss: Return loss. Has the same dimensions and type as "predict" .
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with the scenario where "reduction" is set to "none"of PyTorch operat
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

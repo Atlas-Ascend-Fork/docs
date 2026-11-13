@@ -9,7 +9,7 @@ REG_OP(ImgToTensor)
 
 ## Brief
 
-ImgToTensor: Convert image to tensor 
+ImgToTensor: Convert image to tensor
 
 ## Inputs
 
@@ -28,7 +28,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-This operator will be deprecated in the future. 
+This operator will be deprecated in the future.
 
 ## Third-party framework compatibility
 
@@ -37,4 +37,4 @@ Compatible with pytorch ToTensor operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

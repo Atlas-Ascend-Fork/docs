@@ -39,7 +39,7 @@ dx: A Tensor. Has the same type as "x". Shape should be same as x.
 - dim: An optional Int. The dimension to be split, default is -1.
 - approximate: An optional Int. Determines which formula to use for the activation computation.
 The gelu grad approximation algorithm to use: 0('none') or 1('tanh'), default is 1('tanh').
-Atlas Inference Series Product only supports 'tanh'(1).
+Atlas inference products only supports 'tanh'(1).
 - activate_left: An optional Bool.
 Whether the left side of x is used as an input parameter to the activation function,
 default is false, use the right side.
@@ -60,4 +60,4 @@ Compatible with the Pytorch operator GeGluGradV2.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

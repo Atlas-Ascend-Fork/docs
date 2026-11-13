@@ -19,7 +19,7 @@ REG_OP(SparseApplyProximalAdagrad)
 
 Updates entries in 'var' and 'accum' according to the Proximal Adagrad algorithm.
 Compared with op ApplyProximalAdagrad, an additional index tensor is input,
-Only the indices into the first dimensions of "var" and "accum" are updated . 
+Only the indices into the first dimensions of "var" and "accum" are updated .
 
 ## Inputs
 
@@ -43,7 +43,7 @@ Seven inputs, including:
     Support dtype: float32, support format: [NCHW,NC1HWC0,NHWC,ND,FRACTAL_Z].
 - indices: A vector of indices into the first dimension of "var" and "accum".
     The value of indices must be unique. Otherwise, the result is unpredictable .
-    Support dtype: int32, int64, support format: [NCHW,NC1HWC0,NHWC,ND,FRACTAL_Z]. 
+    Support dtype: int32, int64, support format: [NCHW,NC1HWC0,NHWC,ND,FRACTAL_Z].
 
 ## Outputs
 
@@ -77,4 +77,4 @@ Compatible with the TensorFlow operator SparseApplyProximalAdagrad.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

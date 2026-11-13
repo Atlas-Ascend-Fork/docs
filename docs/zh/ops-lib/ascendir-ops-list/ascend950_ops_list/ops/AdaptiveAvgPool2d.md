@@ -17,8 +17,8 @@ an input signal composed of several input planes.
 
 One input, including:
 - x: A Tensor. Must be one of the following data types:
-    float16, float32, bfloat16. 
-For Ascend 950PR/Ascend 950DT: Support Format: [NCHW].
+    float16, float32, bfloat16.
+For Ascend 950PR&950DT products: Support Format: [NCHW].
 
 ## Outputs
 
@@ -27,7 +27,7 @@ For Ascend 950PR/Ascend 950DT: Support Format: [NCHW].
 ## Attributes
 
 - output_size: A required list of 2 ints
-   specifying the size (H,W) of the output tensor. 
+   specifying the size (H,W) of the output tensor.
 
 ## Data Types
 
@@ -43,4 +43,4 @@ Compatible with the Pytorch operator AdaptiveAvgPool2d.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

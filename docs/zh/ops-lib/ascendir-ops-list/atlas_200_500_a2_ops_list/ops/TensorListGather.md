@@ -15,7 +15,7 @@ REG_OP(TensorListGather)
 
 ## Brief
 
-Creates a Tensor by indexing into the TensorList. 
+Creates a Tensor by indexing into the TensorList.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ Creates a Tensor by indexing into the TensorList.
 
 ## Outputs
 
-values: The tensor. 
+values: The tensor.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow TensorListGather operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

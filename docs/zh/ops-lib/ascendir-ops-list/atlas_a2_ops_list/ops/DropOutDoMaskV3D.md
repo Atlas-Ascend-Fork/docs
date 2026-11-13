@@ -11,9 +11,9 @@ REG_OP(DropOutDoMaskV3D)
 
 ## Brief
 
-Return "output" according to the algorithm of dropout_do_mask_v3_d:  
- scale_x = x *(1 / keep_prob)  
- output = select(mask == 1, scale_x, 0)  
+Return "output" according to the algorithm of dropout_do_mask_v3_d:
+ scale_x = x *(1 / keep_prob)
+ output = select(mask == 1, scale_x, 0)
 
 ## Inputs
 
@@ -24,7 +24,7 @@ Two inputs, including:
     shape of mask should be 1D.
     dtype of mask should be uint8 or bool.
     value of shape should met the following algorithm:
-    value = value = ((size(x) + 127) / 128) * 128 / 8.
+    value = value = (size(x) + 127) / 128) * 128 / 8.
 
 ## Outputs
 
@@ -37,4 +37,4 @@ y: A mutable Tensor. Has the same type, shape and format as "x".
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

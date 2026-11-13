@@ -27,4 +27,4 @@ y:A ND Tensor with the same shape and dtype as x
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

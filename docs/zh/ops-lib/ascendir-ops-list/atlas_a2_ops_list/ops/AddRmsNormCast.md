@@ -15,12 +15,12 @@ REG_OP(AddRmsNormCast)
 
 ## Brief
 
-AddRmsNormCast operator interface implementation. 
- calculating: x1, x2, gamma 
- x = x1 + x2 
- rstd = np.rsqrt(np.mean(np.power(x,2), reduce_axis, keepdims=True) + epsilon)) 
- y2 = gamma * (x * rstd) 
- y1 = cast16232(y2) 
+AddRmsNormCast operator interface implementation.
+ calculating: x1, x2, gamma
+ x = x1 + x2
+ rstd = np.rsqrt(np.mean(np.power(x,2), reduce_axis, keepdims=True) + epsilon))
+ y2 = gamma * (x * rstd)
+ y1 = cast16232(y2)
 
 ## Inputs
 
@@ -58,4 +58,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -16,7 +16,7 @@ REG_OP(ConcatFromSequence)
 concatenate a sequence of tensors into a single tensor, all input tensors must
 have the same shape, except for the dimension size of the axis to concatenate on. by default
 new_axis is 0, the behavior is similar to numpy.concatenate. when new_axis is 1, the behavior
-is similar to numpy.stack. 
+is similar to numpy.stack.
 
 ## Inputs
 
@@ -44,4 +44,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

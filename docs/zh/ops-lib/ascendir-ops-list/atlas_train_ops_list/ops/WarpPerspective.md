@@ -16,13 +16,13 @@ REG_OP(WarpPerspective)
 
 ## Brief
 
-Applies a perspective transformation to an image . 
+Applies a perspective transformation to an image .
 
 ## Inputs
 
 - x: input tensor, format could be NHWC or NCHW, type could be float or uint8.
 - matrix: transformation matrix, format ND , shape must be (N, 9),
-type could be float or double. 
+type could be float or double.
 
 ## Outputs
 
@@ -38,7 +38,7 @@ defaults to "bilinear"
 default BORDER_CONSTANT.
 - constant: border processed value, used when border_type is BORDER_CONSTANT.
 - data_format: the data format of input tensor and output tensor, support "CHW" and "HWC",
-defaults to "CHW" 
+defaults to "CHW"
 
 ## Data Types
 
@@ -51,4 +51,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

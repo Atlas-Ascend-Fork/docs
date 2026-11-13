@@ -17,11 +17,11 @@ Returns the permuted vector/tensor in the destination data format given the .
 
 Inputs include:
 x: A Tensor. Must be one of the following types: int32, int64. Vector of size 4
-or Tensor of shape (4, 2) in source data format . 
+or Tensor of shape (4, 2) in source data format .
 
 ## Outputs
 
-y: A Tensor. Has the same type as x . 
+y: A Tensor. Has the same type as x .
 
 ## Attributes
 
@@ -46,4 +46,4 @@ The implementation for DataFormatVecPermute on Ascend uses AICPU, with bad perfo
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

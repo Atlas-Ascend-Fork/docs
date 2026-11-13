@@ -60,4 +60,4 @@ The tensor type of keep_indices only support int32.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -11,23 +11,23 @@ REG_OP(Lerp)
 
 ## Brief
 
-Calculate the lerp function. 
+Calculate the lerp function.
 
 ## Inputs
 
 Three inputs, including:
 - start: A ND tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
-The shape of start, end and weight should satisfy the broadcast relationship. 
+    float16, float32, bfloat16.
+The shape of start, end and weight should satisfy the broadcast relationship.
 - end: A ND tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 - weight: A ND tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 
 ## Outputs
 
-y: A ND tensor with the same dtype of start's. 
-The shape of 'y' is same as the shape of the tensor 
+y: A ND tensor with the same dtype of start's.
+The shape of 'y' is same as the shape of the tensor
 whose shape is generated after 'start', 'end', and 'weight' broadcast opratioan.
 
 ## Data Types
@@ -41,9 +41,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the PyTorch operator Lerp. 
+Compatible with the PyTorch operator Lerp.
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

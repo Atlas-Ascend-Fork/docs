@@ -24,7 +24,7 @@ Three Inputs, including:
 
 ## Outputs
 
- gradient: A tensor. Has the same type as "predict". 
+ gradient: A tensor. Has the same type as "predict".
 
 ## Attributes
 
@@ -33,7 +33,7 @@ Two Attributes, including:
 - reduction: An optional string. Specifies the reduction to apply to
 the output: 'none' | 'mean' | 'sum'. 'none': no reduction will be applied;
 'mean': the sum of the output will be divided by the number of elements in
-the output;'sum': the output will be summed. Default: 'mean'. 
+the output;'sum': the output will be summed. Default: 'mean'.
 
 ## Data Types
 
@@ -51,4 +51,4 @@ Compatible with the Pytorch operator SmoothL1LossBackward.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -17,7 +17,7 @@ REG_OP(EmbeddingHashmapImport)
 
 ## Brief
 
-Import table data from file to embedding hashmap. 
+Import table data from file to embedding hashmap.
 
 ## Inputs
 
@@ -36,7 +36,7 @@ Import table data from file to embedding hashmap.
 - filter_flags: Tensors which number is consistent with table's number, dtype is uint8,
                 indicates the filter flag of each hashmap.
 - values: Tensors which number is consistent with table's number, dtype is float32.
-               indicates the value of each hashmap. 
+               indicates the value of each hashmap.
 
 ## Attributes
 
@@ -55,4 +55,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

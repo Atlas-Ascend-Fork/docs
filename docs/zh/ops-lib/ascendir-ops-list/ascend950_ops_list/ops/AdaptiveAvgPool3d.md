@@ -18,18 +18,18 @@ an input signal composed of several input planes.
 
 One input, including:
 - x: A Tensor. Must be one of the following data types:
-    float16, bfloat16, float32. 
+    float16, bfloat16, float32.
 
 ## Outputs
 
 - y: A Tensor. Has the same data type as "x"
 - data_format: An optional string, Specify the data format of the input and
-output data. With the default format "NDHWC" . 
+output data. With the default format "NDHWC" .
 
 ## Attributes
 
 - output_size: A required list of 3 ints
-   specifying the size (D,H,W) of the output tensor. 
+   specifying the size (D,H,W) of the output tensor.
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Compatible with the Pytorch operator AdaptiveAvgPool3d.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

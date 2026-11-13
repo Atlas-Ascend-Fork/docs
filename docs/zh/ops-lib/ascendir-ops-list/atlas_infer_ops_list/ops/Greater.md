@@ -10,7 +10,7 @@ REG_OP(Greater)
 
 ## Brief
 
-Returns the truth value of (x1 > x2) element-wise. Support broadcasting operations. 
+Returns the truth value of (x1 > x2) element-wise. Support broadcasting operations.
 When input is int32 and (x2 - x1) > 2^31 or < -2^31,
 aicore accuracy is not guaranteed.
 
@@ -38,13 +38,13 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Broadcasting is supported. 
+Broadcasting is supported.
 
 ## Third-party framework compatibility
 
-Compatible with the TensorFlow operator Greater. 
+Compatible with the TensorFlow operator Greater.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

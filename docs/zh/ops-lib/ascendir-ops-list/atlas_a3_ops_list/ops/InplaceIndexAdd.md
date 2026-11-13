@@ -35,7 +35,7 @@ var: A Tensor. Same as input "var".
 
 ## Attributes
 
-axis: An required int to specify the axis to perform indices add. 
+axis: An required int to specify the axis to perform indices add.
 
 ## Data Types
 
@@ -67,4 +67,4 @@ Compatible with the Pytorch operator index_add_.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -12,9 +12,9 @@ REG_OP(GemmaRmsNorm)
 
 ## Brief
 
-GemmaRmsNorm operator interface implementation. 
- calculating: x, gamma 
- rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon)) 
+GemmaRmsNorm operator interface implementation.
+ calculating: x, gamma
+ rstd = np.rsqrt(np.mean(np.power(x, 2), reduce_axis, keepdims=True) + epsilon))
  y = (1 + gamma) * (x * rstd)
 
 ## Inputs
@@ -53,4 +53,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

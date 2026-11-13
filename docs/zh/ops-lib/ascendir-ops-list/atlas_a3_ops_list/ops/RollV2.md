@@ -24,7 +24,7 @@ One inputs, including:
 
 ## Outputs
 
-y: A Tensor with the same type and shape of x's. 
+y: A Tensor with the same type and shape of x's.
 
 ## Data Types
 
@@ -37,9 +37,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Roll. 
+Compatible with the Pytorch operator Roll.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

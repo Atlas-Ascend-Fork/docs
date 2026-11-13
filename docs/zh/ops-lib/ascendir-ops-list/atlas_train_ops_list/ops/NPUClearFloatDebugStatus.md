@@ -7,9 +7,9 @@ REG_OP(NPUClearFloatDebugStatus)
 
 ## Brief
 
-Set the value of global workspace to 0. 
+Set the value of global workspace to 0.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

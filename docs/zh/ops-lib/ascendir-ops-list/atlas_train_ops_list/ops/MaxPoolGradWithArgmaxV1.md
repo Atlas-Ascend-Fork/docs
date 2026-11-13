@@ -29,7 +29,7 @@ For Ascend 950 AI Processor: The uint16 data type is not supported.
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as input "x". 
+y: A Tensor. Has the same type and format as input "x".
 
 ## Attributes
 
@@ -77,4 +77,4 @@ Compatible with the PyTorch backward operator of max_pool2d_with_indices.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

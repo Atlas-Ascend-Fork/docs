@@ -15,7 +15,7 @@ REG_OP(ParameterizedTruncatedNormal)
 
 ## Brief
 
-Outputs random values from a normal distribution . 
+Outputs random values from a normal distribution .
 
 ## Inputs
 
@@ -29,7 +29,7 @@ The shape of the output tensor. Batches are indexed by the 0th dimension.
 
 ## Outputs
 
-y: A Tensor. Has the same type as means . 
+y: A Tensor. Has the same type as means .
 
 ## Attributes
 
@@ -58,4 +58,4 @@ The implementation for ParameterizedTruncatedNormal on Ascend uses AICPU, with b
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

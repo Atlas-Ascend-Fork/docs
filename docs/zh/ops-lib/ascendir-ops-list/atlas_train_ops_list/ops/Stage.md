@@ -14,14 +14,14 @@ REG_OP(Stage)
 
 ## Brief
 
-Stage values similar to a lightweight Enqueue. 
+Stage values similar to a lightweight Enqueue.
 
 ## Inputs
 
-The input values must be a list of Tensor objects. Inputs include: 
+The input values must be a list of Tensor objects. Inputs include:
 values: A list of Tensor objects. Must be one of the following types:
-float16, float, int8, int16, uint16, uint8, int32, int64, bool, double, uint32, uint64. 
-A list of data types that inserted values should adhere to. It's a dynamic input. 
+float16, float, int8, int16, uint16, uint8, int32, int64, bool, double, uint32, uint64.
+A list of data types that inserted values should adhere to. It's a dynamic input.
 
 ## Attributes
 
@@ -34,7 +34,7 @@ block until sufficient space is available.
 - container: An optional string. Defaults to "". If non-empty, this queue
 is placed in the given container. Otherwise, a default container is used.
 - shared_name: An optional string. Defaults to "". It is necessary to
-match this name to the matching Unstage Op. 
+match this name to the matching Unstage Op.
 @see Unstage
 
 ## Third-party framework compatibility
@@ -44,4 +44,4 @@ Compatible with tensorflow Stage operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

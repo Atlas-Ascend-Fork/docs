@@ -8,7 +8,7 @@ REG_OP(StatelessRandomGetAlg)
 
 ## Brief
 
-Get the counter of the RNG algorithm. 
+Get the counter of the RNG algorithm.
 
 ## Outputs
 
@@ -27,4 +27,4 @@ Compatible with TensorFlow StatelessRandomGetAlg operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

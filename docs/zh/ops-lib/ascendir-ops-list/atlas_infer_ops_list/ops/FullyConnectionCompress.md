@@ -18,7 +18,7 @@ REG_OP(FullyConnectionCompress)
 ## Brief
 
 Also known as a "fully-connected-compress" layer, computes an inner
-product with a set of learned weights, and (optionally) adds biases. 
+product with a set of learned weights, and (optionally) adds biases.
 
 ## Inputs
 
@@ -31,7 +31,7 @@ Five inputs, including:
 
 ## Outputs
 
-y: The result tensor of type int32. 
+y: The result tensor of type int32.
 
 ## Attributes
 
@@ -44,7 +44,7 @@ The product of the subsequent dimensions starting form first dimension or the
 second dimension is "K".
 - offset_x: An optional integer for quantized FullyConnectionCompress.
 The negative offset added to the input image for int8 type. Ensure offset_x
-within the effective range of int8 [-128, 127]. Defaults to "0". 
+within the effective range of int8 [-128, 127]. Defaults to "0".
 
 ## Quantization supported or not
 
@@ -52,9 +52,9 @@ Yes
 
 ## Third-party framework compatibility
 
-Compatible with the Caffe operator InnerProduct. 
+Compatible with the Caffe operator InnerProduct.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

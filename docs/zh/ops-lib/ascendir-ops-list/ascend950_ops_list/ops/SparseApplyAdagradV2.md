@@ -17,7 +17,7 @@ REG_OP(SparseApplyAdagradV2)
 
 ## Brief
 
-Updates relevant entries in "var" and "accum" according to the adagrad scheme . 
+Updates relevant entries in "var" and "accum" according to the adagrad scheme .
 
 ## Inputs
 
@@ -28,7 +28,7 @@ Six inputs, including:
 - epsilon: An NCHW, NHWC, or ND Tensor of type float32.
 - grad: An NCHW, NHWC, or ND Tensor of type float32.
 - indices: An NCHW, NHWC, or ND Tensor of type float32 .
-The value of indices must be unique. Otherwise, the result is unpredictable . 
+The value of indices must be unique. Otherwise, the result is unpredictable .
 
 ## Outputs
 
@@ -49,7 +49,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - input2 lr: float32
 - input3 epsilon: float32
 - input4 grad: float32
-- input5 indices: int32
+- input5 indices: int32,int64
 - output0 var: float32
 - output1 accum: float32
 
@@ -60,4 +60,4 @@ Compatible with the TensorFlow operator SparseApplyAdagradV2.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

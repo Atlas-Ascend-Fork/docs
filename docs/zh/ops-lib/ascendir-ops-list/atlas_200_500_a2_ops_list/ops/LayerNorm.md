@@ -16,10 +16,10 @@ REG_OP(LayerNorm)
 
 ## Brief
 
-Layernorm operator interface implementation 
- calculating: x, gamma, beta 
- mean  = np.mean(x, reduce_axis, keepdims=True) 
- variance = np.mean(np.power((x - mean),2), reduce_axis, keepdims=True) 
+Layernorm operator interface implementation
+ calculating: x, gamma, beta
+ mean  = np.mean(x, reduce_axis, keepdims=True)
+ variance = np.mean(np.power((x - mean),2), reduce_axis, keepdims=True)
  y = gamma*((x - mean) / np.sqrt(variance + epsilon)) + beta
 
 ## Inputs
@@ -30,7 +30,7 @@ The shape is [A1,...,Ai,R1,...,Rj].
 - gamma: A ND Tensor. Must be one of the following dtypes: float16, float32, bfloat16.
 Has the same dtype and shape as beta. The shape is [R1,...,Rj].
 - beta: A ND Tensor. Must be one of the following dtypes: float16, float32, bfloat16.
-Has the same dtype and shape as gamma. The shape is [R1,...,Rj]. 
+Has the same dtype and shape as gamma. The shape is [R1,...,Rj].
 
 ## Outputs
 
@@ -53,4 +53,4 @@ In Ascend 950 AI Processor, begin_params_axis and begin_norm_axis refer to the s
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

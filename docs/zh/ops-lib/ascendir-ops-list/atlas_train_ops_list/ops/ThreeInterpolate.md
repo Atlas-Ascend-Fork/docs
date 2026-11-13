@@ -11,14 +11,18 @@ REG_OP(ThreeInterpolate)
 
 ## Brief
 
-three interpolate.
+Performs 3-neighbor weighted feature interpolation.
 
 ## Inputs
 
-Two input:
-features: The set of features points
-idx: The set of index
-weight : The set of weight points
+Three inputs, including:
+- features: A 3D Tensor of shape (B, M, C). Must be one of the following types: float32, float16.
+- idx: A 3D Tensor of shape (B, N, 3). Must be one of the following types: int32, int64.
+- weight: A 3D Tensor of shape (B, N, 3). Must be one of the following types: float32, float16.
+
+## Outputs
+
+y: A 3D Tensor of shape (B, N, C). Must be one of the following types: float32, float16.
 
 ## Data Types
 
@@ -28,11 +32,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - input1 idx: int32,int64
 - input2 weight: float32
 
-## y
-
-y: A Tensor, the interpolate point
-
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

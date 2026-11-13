@@ -49,4 +49,4 @@ Compatible with the TensorFlow operator space_to_batch.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

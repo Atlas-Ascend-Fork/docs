@@ -31,16 +31,16 @@ for the variance of "x". shape must be C channel.
 - batch_mean: A 1D tensor of type float32,
 for the mean of "x". shape must be C channel.
 - batch_variance: A 1D tensor of type float32,
-for the variance of "x" . shape must be C channel. 
+for the variance of "x" . shape must be C channel.
 
 ## Outputs
 
-y: A 5D Tensor of type float16 or float32 or bfloat16, with format NDHWC or NCDHW. 
+y: A 5D Tensor of type float16 or float32 or bfloat16, with format NDHWC or NCDHW.
 
 ## Attributes
 
 epsilon: An optional float32. Defaults to "0.0001". A small float number
-added to the variance of "x" . 
+added to the variance of "x" .
 
 ## Data Types
 
@@ -57,10 +57,10 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The preceding layer of this operator must be BN3DTrainingReduceGrad . 
+The preceding layer of this operator must be BN3DTrainingReduceGrad .
 @see BN3DTrainingReduceGrad
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

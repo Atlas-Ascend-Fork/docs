@@ -25,7 +25,7 @@ int16, complex64, complex128, qint8, quint8, qint16, quint16, qint32, bfloat16.
 
 ## Outputs
 
-y: A ND tensor, the same type as "x". 
+y: A ND tensor, the same type as "x".
 
 ## Data Types
 
@@ -43,8 +43,8 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-If N is 4 and M is 2: 
-The size of the first dimension of input "x" must be divisible by the product of all elements in block_shape. 
+If N is 4 and M is 2:
+The size of the first dimension of input "x" must be divisible by the product of all elements in block_shape.
 "y" is a 4D shape [batch, height, width, depth], batch = x.shape[0] / (block_shape[0] * block_shape[1]),
 depth = x.shape[3], height = height_pad - crop_top - crop_bottom, width = width_pad - crop_left - crop_right
 where height_pad = x.shape[1] * block_shape[0], width_pad = x.shape[2] * block_shape[1],
@@ -57,4 +57,4 @@ Compatible with the TensorFlow operator BatchToSpaceND.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

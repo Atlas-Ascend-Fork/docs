@@ -10,7 +10,7 @@ REG_OP(MatrixSetDiag)
 
 ## Brief
 
-Returns a batched matrix tensor with new batched diagonal values . 
+Returns a batched matrix tensor with new batched diagonal values .
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Two inputs, including:
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x" . 
+y: A Tensor. Has the same type as "x" .
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Compatible with the TensorFlow operator MatrixSetDiag.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

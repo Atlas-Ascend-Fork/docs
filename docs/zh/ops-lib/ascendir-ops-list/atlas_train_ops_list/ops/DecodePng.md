@@ -21,7 +21,7 @@ contents: 0-D. PNG-decoded image.
 
 image: is a 3-D uint8 or uint16 Tensor of shape [height, width, channels]
 where channels is: 1: for grayscale; 2: for grayscale + alpha; 3: for RGB;
-4: for RGBA . 
+4: for RGBA .
 
 ## Attributes
 
@@ -42,4 +42,4 @@ Compatible with tensorflow DecodePng operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

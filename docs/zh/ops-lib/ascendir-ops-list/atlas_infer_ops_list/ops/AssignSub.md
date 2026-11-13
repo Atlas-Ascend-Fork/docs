@@ -12,7 +12,7 @@ REG_OP(AssignSub)
 ## Brief
 
 Updates "var" by subtracting "value" from it.
-This operation outputs "var" after the update is done. 
+This operation outputs "var" after the update is done.
 This makes it easier to chain operations that need to use the reset value.
 
 ## Inputs
@@ -27,7 +27,7 @@ y: A tensor. Has the same dtype as "var".
 
 ## Attributes
 
-use_locking: An optional bool. Defaults to "False". If "True", the subtraction will be protected 
+use_locking: An optional bool. Defaults to "False". If "True", the subtraction will be protected
 by a lock; otherwise the behavior is undefined, but may exhibit less contention.
 
 ## Data Types
@@ -47,4 +47,4 @@ Compatible with the TensorFlow operator AssignSub.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

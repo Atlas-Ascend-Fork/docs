@@ -10,19 +10,19 @@ REG_OP(Unsqueeze)
 
 ## Brief
 
-Inserts a dimension of 1 into a tensor's shape. Only the tensor shape is changed, without changing the data. 
+Inserts a dimension of 1 into a tensor's shape. Only the tensor shape is changed, without changing the data.
 
 ## Inputs
 
-x: Original tensor. All data types are supported. 
+x: Original tensor. All data types are supported.
 
 ## Outputs
 
-y: Reshape tensor with same data as input. The same type as input x. 
+y: Reshape tensor with same data as input. The same type as input x.
 
 ## Attributes
 
-axes: List of ints indicating the dimensions to be inserted. Defaults to []. 
+axes: List of ints indicating the dimensions to be inserted. Defaults to [].
 
 ## Third-party framework compatibility
 
@@ -31,4 +31,4 @@ Compatible with the Onnx operator Unsqueeze.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -20,12 +20,12 @@ Computes the gradient for log softmax activations.
 
 ## Outputs
 
-y: A ND tensor. Has the same data type and shape as "grad". 
+y: A ND tensor. Has the same data type and shape as "grad".
 
 ## Attributes
 
 axis: An optional list of ints. Multi-axis reduction is supported. Defaults to "{-1}".
-In Ascend 950 AI Processor, only single-axis reduction is supported. 
+In Ascend 950 AI Processor, only single-axis reduction is supported.
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with the TensorFlow operator LogSoftmaxGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

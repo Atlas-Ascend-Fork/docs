@@ -11,9 +11,9 @@ REG_OP(DropOutDoMaskV3D)
 
 ## Brief
 
-Return "output" according to the algorithm of dropout_do_mask_v3_d:  
- scale_x = x *(1 / keep_prob)  
- output = select(mask == 1, scale_x, 0)  
+Return "output" according to the algorithm of dropout_do_mask_v3_d:
+ scale_x = x *(1 / keep_prob)
+ output = select(mask == 1, scale_x, 0)
 
 ## Inputs
 
@@ -45,4 +45,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

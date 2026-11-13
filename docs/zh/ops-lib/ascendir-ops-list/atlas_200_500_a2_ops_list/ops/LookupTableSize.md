@@ -9,16 +9,16 @@ REG_OP(LookupTableSize)
 
 ## Brief
 
-Computes the number of elements in the given table. 
+Computes the number of elements in the given table.
 
 ## Inputs
 
 The dtype of input handle must be resource. Inputs include:
-handle: A Tensor of type resource. Handle to the table. 
+handle: A Tensor of type resource. Handle to the table.
 
 ## Outputs
 
-size: A Tensor of type int64. 
+size: A Tensor of type int64.
 
 ## Data Types
 
@@ -34,4 +34,4 @@ Compatible with tensorflow LookupTableSize operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

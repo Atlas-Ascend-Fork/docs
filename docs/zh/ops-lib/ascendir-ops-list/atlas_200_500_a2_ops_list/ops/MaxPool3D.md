@@ -43,7 +43,7 @@ It not support out_height < 0 or out_width < 0.
 
 ## Brief
 
-Performs max pooling on the input . 
+Performs max pooling on the input .
 
 ## Inputs
 
@@ -53,7 +53,7 @@ The double type is reserved but currently unsupported. Support format: NHDWC, NC
 
 ## Outputs
 
-y: A 5D tensor. Has the same type and format as input "x" . 
+y: A 5D tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -73,24 +73,24 @@ It only takes effect when padding is "CALCULATED". Default value is {0,0,0,0,0,0
 It support 0(floor) or 1(ceil). Default value is 0.
 It can be set to 1 only when padding is "CALCULATED".
 - data_format: An optional string, specify the data format of the input and
-output data. It support "NDHWC"(default), "NCDHW"". 
+output data. It support "NDHWC"(default), "NCDHW"".
 
 ## Attention Constraints
 
 - "ksize" is a list that has length 1, 3, or 5. The ksize of the H and W dimensions should be greater than 0.
 The ksize of the N and C dimensions should be 1. e.g. For "data_format" is "NCDHW", ksize[0] = 1 and ksize[1] = 1.
-For "data_format" is "NDHWC", ksize[0] = 1 and ksize[4] = 1.  
-For Atlas Training Series Product, Atlas A2 Training Series Product/Atlas 800I A2 Inference Product,
-Atlas A3 Training Series Product: The produce of the ksize in D, H and W dimensions
-should be less than or equal to 255. e.g. For "data_format" is "NCDHW", ksize[2] * ksize[3] * ksize[4] <= 255. 
+For "data_format" is "NDHWC", ksize[0] = 1 and ksize[4] = 1.
+For Atlas training products, Atlas A2 products,
+Atlas A3 products: The produce of the ksize in D, H and W dimensions
+should be less than or equal to 255. e.g. For "data_format" is "NCDHW", ksize[2] * ksize[3] * ksize[4] <= 255.
 - "strides" is a list that has length 1, 3, or 5. The stride of the N and C dimensions should be 1.
-For Atlas Training Series Product, Atlas A2 Training Series Product/Atlas 800I A2 Inference Product,
-Atlas A3 Training Series Product: The stride of the D, H and W dimensions should be greater than 0 and
-smaller than 64.  
+For Atlas training products, Atlas A2 products,
+Atlas A3 products: The stride of the D, H and W dimensions should be greater than 0 and
+smaller than 64.
 The stride of the D, H and W dimensions should be greater than 0.
 - "data_format" only support "NCDHW" and "NDHWC".
 - The ouput "y" shape at the N and C dimensions should be equal with input "x" shape at same dimensions. The output
-shape at the D, H and W dimensions is calculated by below formula: 
+shape at the D, H and W dimensions is calculated by below formula:
 
 ## Third-party framework compatibility
 
@@ -99,4 +99,4 @@ Compatible with the TensorFlow operator MaxPool3D.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

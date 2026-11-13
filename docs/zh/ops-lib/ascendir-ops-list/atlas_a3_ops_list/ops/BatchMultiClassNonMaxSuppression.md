@@ -37,7 +37,7 @@ shape (batch, num_anchors, num_classes).
 - clip_window: window size, a 2D Tensor of type float16 or float32 with
 shape (batch, 4). 4" refers to "anchor_x0", "anchor_x1", "anchor_y0", and "anchor_y1".
 - num_valid_boxes: valid boxes number for each batch, a 1D Tensor of type int32 with
-shape (batch,) . 
+shape (batch,) .
 
 ## Outputs
 
@@ -80,4 +80,4 @@ Note: when the class num per image * max_size_per_class is too big, will compile
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

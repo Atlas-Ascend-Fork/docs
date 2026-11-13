@@ -28,7 +28,7 @@ Computes gradients of the maxpooling function .
 
 ## Outputs
 
-out_grad: A mutable tensor. Has the same shape, type and format as "x1" . 
+out_grad: A mutable tensor. Has the same shape, type and format as "x1" .
 
 ## Attributes
 
@@ -46,7 +46,7 @@ a data to caculate when padding_mode is "CALCULATED".
 If global_pooling = true, kernel size and paddings will be ignored.
 Default False. When the input parameters are set to float16, global_pooling does not support being set to true.
 - ceil_mode: An optional bool. Whether to use the ceil function to calculate output
-height and width. If it is set to False, the floor function will be used. Default False 
+height and width. If it is set to False, the floor function will be used. Default False
 
 ## Attention Constraints
 
@@ -62,4 +62,4 @@ Compatible with the TensorFlow operator MaxPoolGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

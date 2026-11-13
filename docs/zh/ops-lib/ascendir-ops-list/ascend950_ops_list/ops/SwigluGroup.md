@@ -16,14 +16,19 @@ Performs SwiGLU activation.
 
 ## Inputs
 
-- x: Required tensor of type float16, bfloat16 or float32. The last dimension is split into two
-equal parts for SwiGLU and must be divisible by 2.
-- weight: Optional float32 tensor. Per-token weight multiplied into the SwiGLU result.
-- group_index: Optional int64 tensor. Count-mode group token numbers.
+- x: Required tensor of type float16, bfloat16 or float32. The rank must be in [1, 8], empty tensors
+are supported, and the last dimension is split into two equal parts for SwiGLU and must be divisible by 2.
+- weight: Optional float32 tensor. Per-token weight multiplied into the SwiGLU result. The rank must be
+in [1, 8], empty tensors are supported, and the element count must equal the product of all x dims
+except the last one.
+- group_index: Optional int64 tensor. Count-mode group token numbers. It must be 1D, its element values
+must be greater than or equal to 0, the sum of all its elements must be greater than 0, and it does not support
+being an empty tensor on its own.
 
 ## Outputs
 
-- y: SwiGLU result tensor with the same dtype as x and last dimension halved.
+- y: SwiGLU result tensor with the same dtype and rank as x, the same dims as x except that the last
+dimension is halved.
 
 ## Attributes
 
@@ -46,4 +51,4 @@ It is a custom operator. It has no corresponding operator in Caffe, ONNX, Tensor
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

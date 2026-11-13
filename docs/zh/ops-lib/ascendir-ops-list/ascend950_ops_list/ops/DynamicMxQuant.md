@@ -48,8 +48,8 @@ FLOAT8_E4M3FN or FLOAT8_E5M2. Defaults to FLOAT4_E2M1.
 - blocksize: An optional int. Block size for quantization scaling factors.Defaults to 32.
 When scale_alg is 2, blocksize must be 32.
 - scale_alg: An optional int.The algorithm for the scale in quantization.Default to 0.
-Support MxFP8/MxFP4(OCP Microscaling Formats (Mx) Specification , count 0) or MxFP8(nvidia-cuBLAS , count 1) or
-MxFP4(Dynamic Dtype Range , count 2).
+Support MxFP8/MxFP4(OCP Microscaling Formats (Mx) Specification , count 0) or MxFP8(Ceil rounding algorithm , count 1)
+or MxFP4(Dynamic Dtype Range , count 2).
 - dst_type_max: An optional Float.Max_dtype takes the maximum value of the quant_data_type, or the provided
 value.Defaults to 0.
 Only support in FP4_E2M1 mode, with a valid range of 6.0 to 12.0.
@@ -84,4 +84,4 @@ It is a custom operator. It has no corresponding operator in Caffe, ONNX, Tensor
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

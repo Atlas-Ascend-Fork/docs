@@ -17,7 +17,7 @@ REG_OP(ParallelDynamicStitch)
 
 ## Brief
 
-Interleaves the values from the "x" tensors into a single tensor. 
+Interleaves the values from the "x" tensors into a single tensor.
 
 ## Inputs
 
@@ -26,15 +26,15 @@ Including:
 - x: A list with the same length as "indices" of Tensor objects. It's a dynamic input.
 Must be one of the following types: DT_INT8, DT_UINT8, DT_INT16, DT_UINT16,
 DT_INT32, DT_INT64, DT_BOOL, DT_FLOAT16, DT_FLOAT, DT_DOUBLE, DT_STRING,
-DT_COMPLEX64, DT_COMPLEX128, DT_QINT8, DT_QUINT8, DT_QINT32. 
+DT_COMPLEX64, DT_COMPLEX128, DT_QINT8, DT_QUINT8, DT_QINT32.
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x". 
+y: A Tensor. Has the same type as "x".
 
 ## Attributes
 
-N: An int that is >= 1. Defaults to "1". 
+N: An int that is >= 1. Defaults to "1".
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with the TensorFlow operator ParallelDynamicStitch.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

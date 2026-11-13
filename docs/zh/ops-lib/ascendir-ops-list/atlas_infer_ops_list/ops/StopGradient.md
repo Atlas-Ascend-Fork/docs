@@ -13,11 +13,11 @@ Stops gradient computation. None is returned for the node where the gradient com
 
 ## Inputs
 
-x: A tensor. 
+x: A tensor.
 
 ## Outputs
 
-y: The input tensor. 
+y: The input tensor.
 
 ## Third-party framework compatibility
 
@@ -26,4 +26,4 @@ Compatible with the TensorFlow operator StopGradient.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

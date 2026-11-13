@@ -16,7 +16,7 @@ REG_OP(CTCBeamSearchDecoder)
 
 ## Brief
 
-Performs beam search decoding on the logits given in input. 
+Performs beam search decoding on the logits given in input.
 
 ## Inputs
 
@@ -35,7 +35,7 @@ size `(length total_decoded_outputs[j])`, has the values of a
 size `(2)`, stores the shape of the decoded `SparseTensor[j]`.
 Its values are: `[batch_size, max_decoded_length[j]]`.
 - log_probability: A matrix, shaped: `(batch_size x top_paths)`.  The
-sequence log-probabilities. 
+sequence log-probabilities.
 
 ## Attributes
 
@@ -58,4 +58,4 @@ Compatible with TensorFlow CTCBeamSearchDecoder operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

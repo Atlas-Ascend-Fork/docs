@@ -13,7 +13,7 @@ REG_OP(SetSize)
 
 ## Brief
 
-Number of unique elements along last dimension of input set. 
+Number of unique elements along last dimension of input set.
 
 ## Inputs
 
@@ -24,11 +24,11 @@ Inputs include:
 
 ## Outputs
 
-size: A Tensor of type int32. 
+size: A Tensor of type int32.
 
 ## Attributes
 
-validate_indices: An optional bool. Defaults to True. 
+validate_indices: An optional bool. Defaults to True.
 
 ## Data Types
 
@@ -50,4 +50,4 @@ The implementation for SetSize on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -42,7 +42,7 @@ same format as "x".
 - mean: A 1D tensor of type float32, the shape is same as dim C of input "x", for the updated mean. Has the same
 format as "x".
 - variance: A 1D tensor of type float32, the shape is same as dim C of input "x", for the updated variance. Has
-the same format as "x". 
+the same format as "x".
 
 ## Outputs
 
@@ -55,14 +55,14 @@ as "x".
 - batch_mean: A 1D tensor of type float32, for the mean of "x". shape must be C channel. Has the same format as
 "x".
 - batch_variance: A 1D tensor of type float32, for the variance of "x" . shape must be C channel. Has the same
-format as "x". 
+format as "x".
 
 ## Attributes
 
 - epsilon: A required float32, specifying the small value added to variance
 to avoid dividing by zero.
 - factor: A required float32, specifying the weight for updating the mean
-and variance . 
+and variance .
 
 ## Data Types
 
@@ -86,10 +86,8 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - This operator is a BatchNorm fusion operator for updating the moving
 averages for training. This operator is used in conjunction with
 BNTrainingUpdate.
-- For Atlas 200/300/500 Inference Product, the result accuracy fails to reach 1/1000 due to the
-square root instruction.
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

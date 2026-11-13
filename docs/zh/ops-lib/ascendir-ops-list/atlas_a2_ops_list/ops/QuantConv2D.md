@@ -37,9 +37,9 @@ or the format "NCHW" which shape is [out_channels, in_channels / groups, kernel_
 The data is stored in the order of: [out_channels].
 - offset: An optional quantitative offset tensor. Reserved.
 The following are the supported data types and data formats
-(for Atlas Inference Series Product, Atlas Training Series Product,
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and
-Atlas A3 Training Series Product/Atlas A3 Inference Series Product)
+(for Atlas inference products, Atlas training products,
+Atlas A2 products and
+Atlas A3 products)
 | Tensor    | x       | filter  | scale         | bias    | offset  | y       |
 | :-------: | :-----: | :-----: | :-----------: | :-----: | :-----: | :-----: |
 | Data Type | int8    | int8    | uint64/int64  | int32   | float32 | float16 |
@@ -125,7 +125,7 @@ cause compilation errors.
 - If any dimension of x/filter/bias/scale/offset/y shape exceeds max
 int32(2147483647), the product of each dimension of x/filter/bias/scale/offset/y
 shape exceeds max int32(2147483647) or the value of strides/pads/dilations/offset_x
-exceeds the range in the above table, the correctness of the operator cannot be guaranteed. 
+exceeds the range in the above table, the correctness of the operator cannot be guaranteed.
 In Ascend 950 AI Processor: If any dimension of x/filter/bias/scale/offset/y shape exceeds max
 1000000, the product of each dimension of x/filter/bias/scale/offset/y
 shape exceeds max int32(2147483647) or the value of strides/pads/dilations/offset_x
@@ -138,4 +138,4 @@ Yes
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

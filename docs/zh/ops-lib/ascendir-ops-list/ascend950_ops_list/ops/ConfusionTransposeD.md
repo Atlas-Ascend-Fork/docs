@@ -18,11 +18,11 @@ Fusion of Reshape and Transpose Operations.
 
 One input, including:
 x: A tensor. Must be one of the following types:
-  int8, int16, int32, int64, uint8, uint16, uint32, uint64, float16, float, bfloat16. 
+  int8, int16, int32, int64, uint8, uint16, uint32, uint64, float16, float, bfloat16.
 
 ## Outputs
 
-y: A Tensor with the same type and shape of x. 
+y: A Tensor with the same type and shape of x.
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

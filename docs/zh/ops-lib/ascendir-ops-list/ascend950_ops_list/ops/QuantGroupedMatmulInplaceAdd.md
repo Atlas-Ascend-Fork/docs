@@ -34,7 +34,7 @@ Format supports ND. The data type supports float32, float8_e8m0.
 
 y: A Tensor. Format supports ND.
 The data type supports float32.
-- The following are the supported quantization modes, data types and shapes(for Ascend950PR/Ascend950DT):
+- The following are the supported quantization modes, data types and shapes(for Ascend 950PR&950DT products):
 | quantization         | x1 type                   | x2 type                   | scale1 type                    | scale2 type                    | x1 shape  | x2 shape            | y shape   | scale2 shape                  | scale1 shape          |
 |----------------------|---------------------------|---------------------------|--------------------------------|--------------------------------|-----------|---------------------|-----------|-------------------------------|-----------------------|
 | pertensor-pertensor  | hifloat8                  | hifloat8                  | float32                        | float32                        | (K,M)     | (K,N)               | (B,M,N)   | (B,)/(B,1)                    | (B,)/(B,1)            |
@@ -65,9 +65,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - Each axis for tensor x1 and tensor x2 should be less than or equal to 2147483647 (maximum of data type int32) after aligning to 32 byte.
 - Input tensor x1 and x2 should have dim num 2, input tensor y should have dim num 3.
 - The group_list must be passed, if group_list_type equals to 0, the last value in group_list must be no greater than the first dimension of tensor x1,
-if group_list_type equals to 1, sum of values in group_list must be no greater than the first dimension of tensor x1. 
+if group_list_type equals to 1, sum of values in group_list must be no greater than the first dimension of tensor x1.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

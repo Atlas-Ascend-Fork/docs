@@ -21,7 +21,7 @@ Two inputs, including:
 
 ## Outputs
 
-y: Output result. A ND Tensor. Has the same dtype and format as "x1". 
+y: Output result. A ND Tensor. Has the same dtype and format as "x1".
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with TensorFlow operator BitwiseXor.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

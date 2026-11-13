@@ -13,7 +13,7 @@ REG_OP(StatelessRandomBinomial)
 
 ## Brief
 
-Outputs deterministic pseudorandom random integers from a binomial distribution. 
+Outputs deterministic pseudorandom random integers from a binomial distribution.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Outputs deterministic pseudorandom random integers from a binomial distribution.
 - counts: The counts of the binomial distribution. Must be broadcastable with probs,
 and broadcastable with the rightmost dimensions of shape.
 - probs: The probability of success for the binomial distribution.
-Must be broadcastable with counts and broadcastable with the rightmost dimensions of shape. 
+Must be broadcastable with counts and broadcastable with the rightmost dimensions of shape.
 
 ## Outputs
 
@@ -49,4 +49,4 @@ Compatible with TensorFlow StatelessRandomBinomial operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

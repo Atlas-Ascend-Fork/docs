@@ -23,7 +23,7 @@ Performs fractional average pooling on the input .
 
 Inputs include:
 x: A Tensor. Must be one of the following types: float32, double, int32, int64.
-4-D with shape [batch, height, width, channels]. 
+4-D with shape [batch, height, width, channels].
 
 ## Outputs
 
@@ -60,4 +60,4 @@ The implementation for FractionalAvgPool on Ascend uses AICPU, with bad performa
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

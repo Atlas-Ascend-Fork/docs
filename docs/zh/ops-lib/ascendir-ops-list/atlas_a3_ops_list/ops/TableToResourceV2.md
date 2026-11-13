@@ -9,7 +9,7 @@ REG_OP(TableToResourceV2)
 
 ## Brief
 
-convert embedding hashmap table id to handle. 
+convert embedding hashmap table id to handle.
 
 ## Inputs
 
@@ -29,4 +29,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

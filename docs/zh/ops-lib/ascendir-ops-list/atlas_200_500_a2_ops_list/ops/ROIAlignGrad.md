@@ -17,7 +17,7 @@ REG_OP(ROIAlignGrad)
 
 ## Brief
 
-Performs the backpropagation of ROIAlign for training scenarios . 
+Performs the backpropagation of ROIAlign for training scenarios .
 
 ## Inputs
 
@@ -54,4 +54,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

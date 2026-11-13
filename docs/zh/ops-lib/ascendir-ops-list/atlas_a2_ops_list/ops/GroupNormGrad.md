@@ -20,7 +20,7 @@ REG_OP(GroupNormGrad)
 
 ## Brief
 
-backward operator for group normalization. 
+backward operator for group normalization.
 
 ## Inputs
 
@@ -73,4 +73,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

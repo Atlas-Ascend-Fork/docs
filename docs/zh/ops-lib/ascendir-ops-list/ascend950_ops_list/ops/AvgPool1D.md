@@ -18,11 +18,11 @@ Performs AvgPool1D on the input .
 
 ## Inputs
 
-x: A Tensor. Must be one of the following types: float16, float32 . Supported format "NC1HWC0" . 
+x: A Tensor. Must be one of the following types: float16, float32 . Supported format "NC1HWC0" .
 
 ## Outputs
 
-y: A Tensor. Has the same type as x . Supported format "NC1HWC0" . 
+y: A Tensor. Has the same type as x . Supported format "NC1HWC0" .
 
 ## Attributes
 
@@ -39,4 +39,4 @@ y: A Tensor. Has the same type as x . Supported format "NC1HWC0" .
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

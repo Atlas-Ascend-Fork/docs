@@ -31,7 +31,7 @@ Five inputs, including: (NHWC or NCHW supported)
 - input_mean: A 1D Tensor of type float32, for the mean used for inference.
 This cannot be used if the operation is used for training.
 - input_variance: A 1D Tensor of type float32, for the variance used for inference.
-This cannot be used if the operation is used for training . 
+This cannot be used if the operation is used for training .
 
 ## Outputs
 
@@ -48,7 +48,7 @@ Five outputs, including: (NHWC or NCHW supported)
 added to variance to avoid dividing by zero. Defaults to "0.0001".
 - data_format: An optional string, specifying the format of "x". Defaults to "NHWC".
 - is_training: An optional bool, specifying if the operation
-is used for training or inference. Defaults to "True" . 
+is used for training or inference. Defaults to "True" .
 
 ## Data Types
 
@@ -78,4 +78,4 @@ Compatible with the TensorFlow operator fused_batch_norm_v2.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

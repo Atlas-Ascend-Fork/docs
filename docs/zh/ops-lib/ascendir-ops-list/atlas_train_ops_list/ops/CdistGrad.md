@@ -13,23 +13,23 @@ REG_OP(CdistGrad)
 
 ## Brief
 
-Computes the grad of x1 in cdist. 
+Computes the grad of x1 in cdist.
 
 ## Inputs
 
 Four inputs, including:
 - grad: Grad with shape BxPxR. Must be one of the following types:
-    float16, float32. 
+    float16, float32.
 - x1: A tensor with shpae: BxPXM. Must be one of the following types:
-    float16, float32. 
+    float16, float32.
 - x2: A tensor with shpae: BxRxM. Must be one of the following types:
-    float16, float32. 
+    float16, float32.
 - cdist: Output tensor of cdist forward with shpae: BxPXR.
-    Must be one of the following types: float16, float32. 
+    Must be one of the following types: float16, float32.
 
 ## Outputs
 
-y: A Tensor with the same type and shape of x1's. 
+y: A Tensor with the same type and shape of x1's.
 
 ## Attributes
 
@@ -47,9 +47,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Cdist Backward. 
+Compatible with the Pytorch operator Cdist Backward.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

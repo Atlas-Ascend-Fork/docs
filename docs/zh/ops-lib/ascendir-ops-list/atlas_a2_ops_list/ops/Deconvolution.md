@@ -86,7 +86,7 @@ The following value range restrictions must be met:
 | Dilation         | H        | [1, 255]     |
 |                  | W        | [1, 255]     |
 | Offset_x         |          | [-128, 127]  |
-In Atlas Training Series Product, fmap or out_backprop's H and W not support 1 when
+In Atlas training products, fmap or out_backprop's H and W not support 1 when
 fmap_h + pad_top + pad_bottom != (filter_height - 1) * dilation_h + 1
 and filter_width > fmap_width
 If filter_h = 1 and filter_w = 1,
@@ -105,4 +105,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

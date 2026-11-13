@@ -9,15 +9,15 @@ REG_OP(Rank)
 
 ## Brief
 
-Returns an integer representing the rank of input tensor. The rank of a tensor is the number of indices required to uniquely select each element of the tensor, that is, the dimension size of the tensor. 
+Returns an integer representing the rank of input tensor. The rank of a tensor is the number of indices required to uniquely select each element of the tensor, that is, the dimension size of the tensor.
 
 ## Inputs
 
-x: A Tensor of type float32, float16, int8, int16, uint16, uint8, int32, int64, uint32, uint64, bool, double, string. 
+x: A Tensor of type float32, float16, int8, int16, uint16, uint8, int32, int64, uint32, uint64, bool, double, string.
 
 ## Outputs
 
-y: A tensor. The rank of input tensor. Type is int32. 
+y: A tensor. The rank of input tensor. Type is int32.
 
 ## Third-party framework compatibility
 
@@ -26,4 +26,4 @@ Compatible with the TensorFlow operator Rank.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

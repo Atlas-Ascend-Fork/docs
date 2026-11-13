@@ -13,7 +13,7 @@ REG_OP(StatelessRandomNormalV2)
 
 ## Brief
 
-Outputs deterministic pseudorandom values from a normal distribution. 
+Outputs deterministic pseudorandom values from a normal distribution.
 
 ## Inputs
 
@@ -25,12 +25,12 @@ Outputs deterministic pseudorandom values from a normal distribution.
 ## Outputs
 
 y: Returns Random values with specified shape.
-Must be one of the following types: float16, bfloat16, float32, double. 
+Must be one of the following types: float16, bfloat16, float32, double.
 
 ## Attributes
 
 dtype:Output data type. Must be one of the following types: float16, bfloat16, float32, double.
-Defaults to float32. 
+Defaults to float32.
 
 ## Data Types
 
@@ -44,9 +44,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-The following constraints apply only to the Ascend 950 AI processor. 
+The following constraints apply only to the Ascend 950 AI processor.
 The input of counter must contain two values. If the input of counter contains
-only one value, the high-order counter value is set to 0. 
+only one value, the high-order counter value is set to 0.
 
 ## Third-party framework compatibility
 
@@ -55,4 +55,4 @@ Compatible with TensorFlow StatelessRandomNormalV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -24,12 +24,12 @@ The input size must be a non-negative int32 scalar Tensor. Inputs include:
 - size:non-negative int32 scalar Tensor.
 - weights: is an int32, int64, float32, or double Tensor with the same
 shape as arr, or a length-0 Tensor, in which case it acts as all weights
-equal to 1. 
+equal to 1.
 
 ## Outputs
 
 bins:1D Tensor with length equal to size. The counts or summed weights for
-each value in the range [0, size). 
+each value in the range [0, size).
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow Bincount operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

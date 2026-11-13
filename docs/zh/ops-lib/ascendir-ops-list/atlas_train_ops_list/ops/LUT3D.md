@@ -11,7 +11,7 @@ REG_OP(LUT3D)
 ## Brief
 
 LUT3D
-Find the corresponding optimal pixel value for the pixel values in the input img. 
+Find the corresponding optimal pixel value for the pixel values in the input img.
 
 ## Inputs
 
@@ -19,12 +19,12 @@ Two inputs, including:
 - img: A 3D or 4D Tensor of type uint8 or float32, with shape [H,W,C] or [N,H,W,C] respectively.
 The format of the tensor is ND. The range of values for elements within the tensor is [0, 255].
 - lut_table: A 4D Tensor of the same type as "img", with shape [lut_table_n, lut_table_n, lut_table_n, 3].
-The format of the tensor is ND. The value of lut_table_n is limited to 17. 
+The format of the tensor is ND. The value of lut_table_n is limited to 17.
 
 ## Outputs
 
 lut_img: A 3D or 4D Tensor of type uint8 or float32. Has the same shape as "img" .
-The format of the tensor is ND. 
+The format of the tensor is ND.
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

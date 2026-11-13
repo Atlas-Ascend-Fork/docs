@@ -15,13 +15,13 @@ REG_OP(Unstage)
 
 ## Brief
 
-Unstage Op is similar to a lightweight Dequeue. 
+Unstage Op is similar to a lightweight Dequeue.
 
 ## Outputs
 
 y: A list of Tensor objects of type dtypes. Must be one of the following types:
-float16, float, int8, int16, uint16, uint8, int32, int64, bool, double, uint32, uint64. 
-It's a dynamic output. 
+float16, float, int8, int16, uint16, uint8, int32, int64, bool, double, uint32, uint64.
+It's a dynamic output.
 
 ## Attributes
 
@@ -38,4 +38,4 @@ Compatible with tensorflow Unstage operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

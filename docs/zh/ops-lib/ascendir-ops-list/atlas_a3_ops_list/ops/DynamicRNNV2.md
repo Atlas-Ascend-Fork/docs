@@ -93,8 +93,8 @@ Default to 0. Only 0 is currently supported.
 the op. Default to "tanh". Only "tanh" is currently supported.
 - recurrent_activation:An string identifying the type of activation
 function in the op. Default to "sigmoid". Only support "sigmoid" in
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component
-and Atlas A3 Training Series Product/Atlas A3 Inference Series Product.
+Atlas A2 products
+and Atlas A3 products.
 Support "sigmoid" and "hard_sigmoid"
 in other series produces. In general, set "hard_sigmoid" for TF Keras LSTM.
 - forget_bias:An float identifying the forget bias in the op. Default to 0.
@@ -138,4 +138,4 @@ Compatible with the TF operator LSTM or TF keras operator LSTM or the Pytorch op
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

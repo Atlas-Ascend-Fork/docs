@@ -13,7 +13,7 @@ REG_OP(ArgMaxGradD)
 
 ## Brief
 
-Returns the reverse tensor of the ArgMax operator of a tensor. 
+Returns the reverse tensor of the ArgMax operator of a tensor.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ four input, including:
 
 ## Outputs
 
-y: A ND Tensor of type float16, float32, int32 or int8. 
+y: A ND Tensor of type float16, float32, int32 or int8.
 
 ## Attributes
 
@@ -50,9 +50,9 @@ The operator will not be enhanced in the future.
 not support all scene like pytorch operator scatter
 exp:
 var.shape=[2,3,4,5], dim=2, the shape of indices and updates should be [2,3,5]
-not support the shape of indices and updates is [2,3,2,5] like pytorch operator scatter. 
+not support the shape of indices and updates is [2,3,2,5] like pytorch operator scatter.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

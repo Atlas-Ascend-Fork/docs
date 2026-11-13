@@ -25,7 +25,7 @@ Inputs include:
 
 ## Outputs
 
-y: A Tensor of type int32 or int64. 
+y: A Tensor of type int32 or int64.
 
 ## Attributes
 
@@ -52,4 +52,4 @@ The implementation for MultinomialAliasDraw on Ascend uses AICPU, with bad perfo
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

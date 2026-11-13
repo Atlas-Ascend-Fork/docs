@@ -17,7 +17,7 @@ REG_OP(RaggedTensorToTensor)
 
 ## Brief
 
-Create a dense tensor from a ragged tensor, possibly altering its shape. 
+Create a dense tensor from a ragged tensor, possibly altering its shape.
 
 ## Inputs
 
@@ -39,7 +39,7 @@ The types of the row partition tensors. At present, these can be:
 "ROW_SPLITS": the row_splits tensor from the ragged tensor.
 "VALUE_ROWIDS": the value_rowids tensor from the ragged tensor.
 "FIRST_DIM_SIZE": if value_rowids is used for the first dimension, then it
-is preceeded by "FIRST_DIM_SIZE". 
+is preceeded by "FIRST_DIM_SIZE".
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

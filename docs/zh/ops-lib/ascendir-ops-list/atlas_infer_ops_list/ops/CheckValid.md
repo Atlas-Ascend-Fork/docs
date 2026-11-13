@@ -20,12 +20,12 @@ Two inputs, including:
 "N" indicates the number of bounding boxes, the value "4" indicates "x0",
 "x1", "y0", and "y1".
 - img_metas: Valid boundary value of the image. A 1D Tensor of type float16 or float32
-with shape (16,) 
+with shape (16,)
 
 ## Outputs
 
 valid_tensor: A bool with shape (N, 1), specifying whether an input anchor is
-in an image. "1" indicates valid, while "0" indicates invalid . 
+in an image. "1" indicates valid, while "0" indicates invalid .
 
 ## Data Types
 
@@ -43,4 +43,4 @@ valid, specifying the valid boundary (heights x ratio, weights x ratio).
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

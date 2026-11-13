@@ -24,11 +24,11 @@ REG_OP(AdvanceStep)
 
 The main function of the advcance_step operator is to advance the inference step in vLLM, that is,
 update the model status and generate new inputTokens, inputPostions, seqLen, and slotMapping in each generation step.
-Improves the efficiency of vLLM inference. 
+Improves the efficiency of vLLM inference.
 
 ## Inputs
 
-Six inputs, including:
+Eight inputs, including:
 - input_tokens: A 1-D input tensor. When spec_token and accepted_num are None, length equal to num_seqs. When
 spec_token and accepted_num are NOT None, length equal to num_seqs * (spec_num + 1). Must be int64 type. Must be int64
 type. Format is ND.
@@ -60,7 +60,7 @@ Must be int64 type. Format is ND.
 - seq_lens: A 1-D output tensor. The input tensor seq_lens will self-updating and save as itself.
 Must be int64 type. Format is ND.
 - slot_mapping: A 1-D output tensor. The input tensor slot_mapping will self-updating and save as itself.
-Must be int64 type. Format is ND. 
+Must be int64 type. Format is ND.
 
 ## Attributes
 
@@ -86,4 +86,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

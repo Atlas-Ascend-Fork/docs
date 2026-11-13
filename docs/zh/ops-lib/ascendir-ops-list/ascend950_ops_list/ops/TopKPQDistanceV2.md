@@ -14,7 +14,7 @@ REG_OP(TopKPQDistanceV2)
 
 ## Brief
 
-Finds values and indices of the "k" largest or least elements for the last dimension. 
+Finds values and indices of the "k" largest or least elements for the last dimension.
 
 ## Inputs
 
@@ -27,8 +27,8 @@ float16, int32.
 ## Outputs
 
 Two outputs, including:
-- topk_distance: A Tensor, values of the "k" largest or least elements for the last dimension. Must be one of the
-following types: float32, float16, int32.
+- topk_distance: A Tensor, values of the "k" largest or least elements for the last dimension. Must be one of the following types: float32, float16,
+int32.
 - topk_index: A Tensor, indices of the "k" largest or least elements for the last dimension. dtype is int32.
 
 ## Attributes
@@ -50,4 +50,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

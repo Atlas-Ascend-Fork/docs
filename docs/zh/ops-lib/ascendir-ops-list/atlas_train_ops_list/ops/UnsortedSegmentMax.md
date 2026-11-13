@@ -13,7 +13,7 @@ REG_OP(UnsortedSegmentMax)
 
 Computes the maximum along segments of a tensor.
 Computes a tensor such that (output[i] = max_{j...} x[j...].
-the value of segment_ids must be in [0, num_segments - 1].
+the value of segment_ids must be  in [0, num_segments - 1].
 for example:x = [[0,1,2],[3,4,5],[6,7,8]], segment_ids = [0,0,1] num_segments = 5
 output[0] = [3, 4, 5]
 output[1] = [6, 7, 8]
@@ -24,15 +24,18 @@ output[4] = [-2147483648, -2147483648, -2147483648]
 ## Inputs
 
 Three inputs, including:
-- x: A Tensor of type double, float32, float16, bfloat16, int8, int16, int32, int64, uint8, uint16, uint32, uint64,
-format is ND.
-- segment_ids: A Tensor of type int32, int64, whose shape is a prefix of "x", format is ND.
-- num_segments: A 1D Tensor contains a single element of type int32, int64, format is ND.
+- x: A Tensor format is ND. Support 1D ~ 8D.
+Type must be one of the following types:double, float32, float16,
+int16, int32, int64, int8, uint16, uint32, uint64, uint8, bfloat16.
+- segment_ids: A 1D Tensor of type int32, int64, whose shape is a prefix of "x.shape".
+A Tensor of type int32, int64, whose shape is a prefix, format is ND,
+ids value is small than x rank, or equal of x shape rank.
+- num_segments: A Tensor of type int32, int64, format is ND.
 Indicates the output segment.
 
 ## Outputs
 
-y: Have the same type and format of "x".
+y: type and format is the same as x type.
 
 ## Data Types
 
@@ -55,4 +58,4 @@ Compatible with the TensorFlow operator UnsortedSegmentMax.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

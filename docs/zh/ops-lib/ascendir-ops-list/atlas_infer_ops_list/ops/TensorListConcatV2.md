@@ -17,7 +17,7 @@ REG_OP(TensorListConcatV2)
 ## Brief
 
 Concats all tensors in the list along the 0th dimension.
-Requires that all tensors have the same shape except the first dimension. 
+Requires that all tensors have the same shape except the first dimension.
 
 ## Inputs
 
@@ -27,17 +27,17 @@ If the first dimension is not -1, it is assumed that all list elements have
 the same leading dim.
 - leading_dims: The list of leading dims of uninitialized list elements. Used if
 the leading dim of input_handle.element_shape or the element_shape input arg
-is not already set. 
+is not already set.
 
 ## Outputs
 
 - tensor: The concated result.
 - lengths: Output tensor containing sizes of the 0th dimension of tensors
-in the list, used for computing the gradient. 
+in the list, used for computing the gradient.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -56,4 +56,4 @@ Compatible with tensorflow TensorListConcatV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

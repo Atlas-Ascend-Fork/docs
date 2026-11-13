@@ -11,14 +11,14 @@ REG_OP(LogMatrixDeterminant)
 ## Brief
 
 Computes the sign and the log of the absolute value of the determinant
-of one or more square matrices . 
+of one or more square matrices .
 
 ## Inputs
 
 The input x is a tensor of shape [N, M, M] whose inner-most 2 dimensions
 form square matrices. Inputs include:
 x:A Tensor. Must be one of the following types: double, float32,
-complex64, complex128. Shape is [..., M, M] . 
+complex64, complex128. Shape is [..., M, M] .
 
 ## Outputs
 
@@ -36,7 +36,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The input x is a tensor of shape [N, M, M] whose inner-most 2 dimensions
-form square matrices. 
+form square matrices.
 
 ## Third-party framework compatibility
 
@@ -45,4 +45,4 @@ Compatible with tensorflow LogMatrixDeterminant operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

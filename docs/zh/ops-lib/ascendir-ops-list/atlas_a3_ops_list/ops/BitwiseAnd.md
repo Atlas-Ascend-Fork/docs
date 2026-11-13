@@ -21,7 +21,7 @@ Two inputs, including:
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype as "x1". 
+y: A ND Tensor. Has the same dtype as "x1".
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with the TensorFlow operator BitwiseAnd.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

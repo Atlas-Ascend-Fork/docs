@@ -22,11 +22,11 @@ Three inputs, including:
 - min: A ND Tensor of type float32. Has the same dtype and format as "x".
 Shape must be 1D.
 - max: A ND Tensor of type float32. Has the same dtype and format as "x".
-[min; max] define the clamping range for the inputs data. Shape must be 1D. 
+[min; max] define the clamping range for the inputs data. Shape must be 1D.
 
 ## Outputs
 
-y: A ND Tensor of type float32. Shape support 1D ~ 8D. Has the same shape as input "x". 
+y: A ND Tensor of type float32. Shape support 1D ~ 8D. Has the same shape as input "x".
 
 ## Attributes
 
@@ -49,4 +49,4 @@ Compatible with TensorFlow operator FakeQuantWithMinMaxVars.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

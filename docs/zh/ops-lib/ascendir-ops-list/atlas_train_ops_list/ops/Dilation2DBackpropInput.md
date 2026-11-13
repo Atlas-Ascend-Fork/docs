@@ -30,7 +30,7 @@ Performs Dilation2DBackpropInput on the input.
 
 ## Outputs
 
-y: The output tensor. Has the same type and format as input "x" . 
+y: The output tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -62,4 +62,4 @@ Compatible with the TensorFlow operator Dilation2DBackpropInput.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

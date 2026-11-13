@@ -10,16 +10,16 @@ REG_OP(QueueIsClosed)
 ## Brief
 
 This operation returns true if the queue is closed and false if
-the queue is open. 
+the queue is open.
 
 ## Inputs
 
 The input handle must have the resource type. Inputs include:
-handle:A Tensor of type resource. The handle to a queue. 
+handle:A Tensor of type resource. The handle to a queue.
 
 ## Outputs
 
-is_closed:A Tensor of type bool. 
+is_closed:A Tensor of type bool.
 
 ## Data Types
 
@@ -35,4 +35,4 @@ Compatible with tensorflow QueueIsClosed operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

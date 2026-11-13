@@ -15,11 +15,11 @@ Computes the inverse error function of each element of input.
 
 One inputs, including:
 input_x: A tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 
 ## Outputs
 
-output_y: A ND Tensor with the same dtype and shape of input_x's. 
+output_y: A ND Tensor with the same dtype and shape of input_x's.
 
 ## Data Types
 
@@ -28,9 +28,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the PyTorch operator Erfinv. 
+Compatible with the PyTorch operator Erfinv.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

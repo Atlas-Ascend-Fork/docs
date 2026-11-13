@@ -10,7 +10,7 @@ REG_OP(TensorArraySize)
 
 ## Brief
 
-Return the number of elements in a TensorArray. 
+Return the number of elements in a TensorArray.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ The input handle must be type resource. Inputs include:
 
 ## Outputs
 
-size: The number of elements in a TensorArray.. 
+size: The number of elements in a TensorArray..
 
 ## Data Types
 
@@ -37,4 +37,4 @@ Compatible with tensorflow TensorArraySize operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

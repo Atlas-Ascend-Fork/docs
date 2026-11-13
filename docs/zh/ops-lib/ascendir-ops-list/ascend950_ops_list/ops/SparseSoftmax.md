@@ -11,7 +11,7 @@ REG_OP(SparseSoftmax)
 
 ## Brief
 
-Applies softmax to a batched ND SparseTensor. 
+Applies softmax to a batched ND SparseTensor.
 
 ## Inputs
 
@@ -22,7 +22,7 @@ The input must be a batched ND SparseTensor.
 
 ## Outputs
 
-y: A vector tensor. 1D. Has the same type as "values". 
+y: A vector tensor. 1D. Has the same type as "values".
 
 ## Data Types
 
@@ -40,4 +40,4 @@ Compatible with the TensorFlow operator SparseSoftmax.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

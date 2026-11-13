@@ -37,12 +37,12 @@ A Yolo operator has three outputs: "coords", "obj", and "class". For details, se
 and the actual image height and width.
 - windex: A windex tensor with shape [height,weight]. Has the same type as the inputs.
 [[0,1,2...(weight-1)],[0,1,2...(w-1)]...[0,1,2...(weight-1)]] consisting of h groups of [0, 1, 2...(weight-1)]
-is formed for the three Yolo outputs, respectively .It's a dynamic input. 
+is formed for the three Yolo outputs, respectively .It's a dynamic input.
 - hindex: A hindex tensor with shape [height,weight]. Has the same type as the inputs. [[0,0...0],[1,1...1],[2,2...2]...[height-1,height-1...,height-1]] is formed for the three Yolo outputs, respectively .
 
 ## Outputs
 
-- boxout: A tensor of type float16 or float32 with shape [batch,6,post_nms_topn](out_box_dim == 3) or [batch, 6*post_nms_topn](out_box_dim == 2),
+- boxout: A tensor of type float16 or float32 with shape [batch,6,post_nms_topn] if out_box_dim == 3 or [batch, 6*post_nms_topn] if out_box_dim == 2,
            describing the information of each output box.
 In output shape, 6 means x1, y1, x2, y2, score, label(class). Output by the number of box_out_num.
 - boxoutnum: A tensor of type int32 with shape [batch,8], specifying the number of output boxes.
@@ -82,4 +82,4 @@ It is a custom operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -15,7 +15,7 @@ REG_OP(MirrorPad)
 
 ## Brief
 
-Fills the tensor with the mirror value. 
+Fills the tensor with the mirror value.
 
 ## Inputs
 
@@ -24,17 +24,17 @@ support 1D ~ 5D. Type must be one of the following
 types: int8, uint8, int16, uint16, int32, int64, float16, float,
 double, bool, complex64, complex128, bfloat16.
 - paddings: A two-column matrix specifying the padding sizes.
-The number of rows has the same rank as "x", type must be int32 or int64. 
+The number of rows has the same rank as "x", type must be int32 or int64.
 
 ## Outputs
 
-y: The padded tensor. 
+y: The padded tensor.
 
 ## Attributes
 
 mode: Either "REFLECT" or "SYMMETRIC". In reflect mode the padded regions
 do not include the borders, while in symmetric mode the padded regions
-do include the borders. 
+do include the borders.
 
 ## Data Types
 
@@ -50,7 +50,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-MirrorPad runs on the Ascend AI CPU, which delivers poor performance. 
+MirrorPad runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -59,4 +59,4 @@ Compatible with the TensorFlow operator MirrorPad.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

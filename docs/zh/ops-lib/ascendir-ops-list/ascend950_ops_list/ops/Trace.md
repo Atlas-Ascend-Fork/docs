@@ -10,23 +10,20 @@ REG_OP(Trace)
 
 ## Brief
 
-Returns the sum of the elements of the diagonal of the input 2-D matrix. 
+Returns the sum of the elements of the diagonal of the input 2-D matrix.
 
 ## Inputs
 
 x: A Tensor. Must be one of the following types:complex128, complex64, float64, float32, float16, bool,
-                                                int8, uint8, int16, uint16, int32, uint32, int64, uint64, bfloat16,. 
+                                                int8, uint8, int16, uint16, int32, uint32, int64, uint64, bfloat16,.
 
 ## Outputs
 
-y: A Tensor. Must be one of the following types:complex128, complex64, float64, float32, float16, int64, uint64, bfloat16. 
+y: A Tensor. Must be one of the following types:complex128, complex64, float64, float32, float16, int64, uint64, bfloat16.
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
-### AI Core
-- input0 x: bfloat16,bool,complex64,float16,float32,int8,int16,int32,int64,uint8,uint16,uint32,uint64
-- output0 y: bfloat16,complex64,float16,float32,int64,uint64
 ### AI CPU
 - input0 x: bool,complex64,complex128,double,float16,float32,int8,int16,int32,int64,uint8,uint16,uint32,uint64
 - output0 y: complex64,complex128,double,float16,float32,int64,uint64
@@ -38,4 +35,4 @@ Compatible with the Pytorch operator Trace.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -12,7 +12,7 @@ REG_OP(MapClear)
 
 ## Brief
 
-Removes all elements in the underlying container. 
+Removes all elements in the underlying container.
 
 ## Attributes
 
@@ -33,4 +33,4 @@ Compatible with the TensorFlow operator MapClear.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -56,11 +56,11 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - input3 dense_keys: string
 - input4 dense_defaults: float32,int64,string
 
-## Third-party framework compatibility 
+## Third-party framework compatibility
 
 - compatible with tensorflow StringToNumber operator.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

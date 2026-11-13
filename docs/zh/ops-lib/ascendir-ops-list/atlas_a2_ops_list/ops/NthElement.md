@@ -24,11 +24,11 @@ int16, int8, int64, bfloat16, uint16, float16, uint32, uint64.
 
 ## Outputs
 
-y: A Tensor. Has the same type as x . 
+y: A Tensor. Has the same type as x .
 
 ## Attributes
 
-reverse: An optional bool. Defaults to False . 
+reverse: An optional bool. Defaults to False .
 
 ## Data Types
 
@@ -49,4 +49,4 @@ The implementation for NthElement on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

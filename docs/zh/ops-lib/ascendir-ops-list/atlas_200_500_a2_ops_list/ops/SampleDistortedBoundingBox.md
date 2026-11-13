@@ -22,14 +22,14 @@ REG_OP(SampleDistortedBoundingBox)
 
 ## Brief
 
-Generate a single randomly distorted bounding box for an image . 
+Generate a single randomly distorted bounding box for an image .
 
 ## Inputs
 
 Input images must be a 4-D tensor. Inputs include:
 - image_size: 1-D, containing [height, width, channels].
 - bounding_boxes: 3-D with shape [batch, N, 4] describing the N bounding
-boxes associated with the image. 
+boxes associated with the image.
 
 ## Outputs
 
@@ -56,7 +56,7 @@ image of the specified constraints. After max_attempts failures, return the
 entire image.
 - use_image_if_no_bounding_boxes: An optional bool, default is false, controls behavior if no bounding boxes
 supplied. If true, assume an implicit bounding box covering the whole input.
-If false, raise an error . 
+If false, raise an error .
 
 ## Data Types
 
@@ -70,7 +70,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input images can be of different types but output images are always float . 
+Input images can be of different types but output images are always float .
 
 ## Third-party framework compatibility
 
@@ -79,4 +79,4 @@ Compatible with tensorflow SampleDistortedBoundingBox operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

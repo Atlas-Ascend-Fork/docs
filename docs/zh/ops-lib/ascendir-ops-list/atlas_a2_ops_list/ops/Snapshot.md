@@ -11,15 +11,15 @@ REG_OP(Snapshot)
 
 ## Brief
 
-Returns a copy of the input tensor. 
+Returns a copy of the input tensor.
 
 ## Inputs
 
-x: A tensor. 
+x: A tensor.
 
 ## Outputs
 
-y: A copy of input tensor. 
+y: A copy of input tensor.
 
 ## Third-party framework compatibility
 
@@ -28,4 +28,4 @@ Compatible with the TensorFlow operator Snapshot.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

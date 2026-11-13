@@ -21,7 +21,7 @@ REG_OP(SparseToSparseSetOperation)
 
 ## Brief
 
-Applies set operation along last dimension of 2 SparseTensor inputs. 
+Applies set operation along last dimension of 2 SparseTensor inputs.
 
 ## Inputs
 
@@ -70,4 +70,4 @@ The implementation for SparseToSparseSetOperation on Ascend uses AICPU, with bad
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

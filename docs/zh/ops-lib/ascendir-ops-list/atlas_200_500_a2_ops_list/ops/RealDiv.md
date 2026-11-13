@@ -26,12 +26,12 @@ Must be one of the following types: bfloat16, float16, float32, double, uint16,
 int8, uint8, int16, int32, int64, complex64, complex128, bool.
 - x2: A ND Tensor.
 Must be one of the following types: bfloat16, float16, float32, double, uint16,
-int8, uint8, int16, int32, int64, complex64, complex128, bool. 
+int8, uint8, int16, int32, int64, complex64, complex128, bool.
 
 ## Outputs
 
 y: A ND Tensor. Has the same dtype and format as input "x1" if the type of "x1" is not bool.
-If the type of "x1" is bool, y is float type. 
+If the type of "x1" is bool, y is float type.
 
 ## Data Types
 
@@ -48,4 +48,4 @@ Compatible with the TensorFlow operator RealDiv.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

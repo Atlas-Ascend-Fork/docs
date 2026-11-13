@@ -25,11 +25,11 @@ Three inputs, including:
 
 ## Outputs
 
-y: A Tensor. A Tensor of type int32. 
+y: A Tensor. A Tensor of type int32.
 
 ## Attributes
 
-dtype: An optional int. Defaults to 3 . 
+dtype: An optional int. Defaults to 3 .
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with TensorFlow operator HistogramFixedWidth.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

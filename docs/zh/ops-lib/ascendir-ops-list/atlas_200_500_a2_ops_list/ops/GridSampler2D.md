@@ -26,11 +26,11 @@ tensor shape will be [N, C, H, W].
 - x: 4-D Tensor with shape `[batch, channels, height, width]`. Must be one
 of the following types: float16, float, double.
 - grid: flow field grid, 4-D Tensor with shape `[batch, height, width, 2]`
-and has same dtype as `x`. 
+and has same dtype as `x`.
 
 ## Outputs
 
-y: Returns 4-D Tensor with the same dtype as `x`. 
+y: Returns 4-D Tensor with the same dtype as `x`.
 
 ## Attributes
 
@@ -40,7 +40,7 @@ method, either 'bilinear', 'nearest' and 'bicubic'. Defaults to
 - padding_mode: An optional string specifying the pad method, either
 "zeros", "border", or "reflection". Defaults to "zeros".
 - align_corners: An optional bool. If "true", the centers of the corner
-pixels of the input and output tensors are aligned. Defaults to "false" . 
+pixels of the input and output tensors are aligned. Defaults to "false" .
 
 ## Data Types
 
@@ -57,4 +57,4 @@ Compatible with pytorch GridSampler2D operator.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

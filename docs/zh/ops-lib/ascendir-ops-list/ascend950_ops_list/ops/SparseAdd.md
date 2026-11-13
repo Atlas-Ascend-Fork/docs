@@ -21,7 +21,7 @@ REG_OP(SparseAdd)
 
 ## Brief
 
-Adds two `SparseTensor` objects to produce another `SparseTensor`. 
+Adds two `SparseTensor` objects to produce another `SparseTensor`.
 
 ## Inputs
 
@@ -67,4 +67,4 @@ Compatible SparseAdd operator in Tensorflow.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

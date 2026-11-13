@@ -15,7 +15,7 @@ REG_OP(ScaleAndTranslate)
 
 ## Brief
 
-Resizes "images" to "size" by scale and translate . 
+Resizes "images" to "size" by scale and translate .
 
 ## Inputs
 
@@ -27,7 +27,7 @@ Resizes "images" to "size" by scale and translate .
 
 ## Outputs
 
-y: A Tensor with type float32 . 
+y: A Tensor with type float32 .
 
 ## Attributes
 
@@ -51,4 +51,4 @@ Compatible with TensorFlow ScaleAndTranslate operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -13,7 +13,7 @@ REG_OP(Quantize)
 
 ## Brief
 
-Quantizes the input, scales/zero_points support broadcasting operations. 
+Quantizes the input, scales/zero_points support broadcasting operations.
 
 ## Inputs
 
@@ -24,14 +24,14 @@ Quantizes the input, scales/zero_points support broadcasting operations.
 ## Outputs
 
 y: A required tensor of type int8, uint8, int32, hifloat8, float8_e5m2 or float8_e4m3fn, shape should be the same
-with input x, dtype should be consistent with attributes[dtype]. 
+with input x, dtype should be consistent with attributes[dtype].
 
 ## Attributes
 
 - dtype: A required string from "torch.qint8, torch.quint8, torch.qint32, torch.hifloat8, torch.float8_e5m2,
 torch.float8_e4m3fn", specifying the quantified dtype.
 - axis: An optional int, must be in the range [-rank(input x), rank(input x)), describes which dimension of the
-input tensor x to be processed. When scales's dimension number and size is 1, axis makes no effect. Default is 1. 
+input tensor x to be processed. When scales's dimension number and size is 1, axis makes no effect. Default is 1.
 
 ## Data Types
 
@@ -50,9 +50,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - When scales's dimension number is 1, it should be 1 or the same with the dimension specified by attributes[axis]
 of input x.
 - When scales's dimension number is the same with x, the dimension specified by attributes[axis] shoule be 1 or the
-same with x's, others should be 1. 
+same with x's, others should be 1.
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

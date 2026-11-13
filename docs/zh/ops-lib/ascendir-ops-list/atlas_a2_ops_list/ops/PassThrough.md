@@ -20,11 +20,11 @@ If reverse=false: (N, H, W, C)->(N, H/stride, W/stride, C*(stride* stride)).
 ## Inputs
 
 x: A 4D tensor with format "NHWC". Type is float16, float32, int8, uint8, int16,
-uint16, int32, uint32, int64, uint64. 
+uint16, int32, uint32, int64, uint64.
 
 ## Outputs
 
-y: A 4D tensor with format "NHWC". Has same type as "x" . 
+y: A 4D tensor with format "NHWC". Has same type as "x" .
 
 ## Attributes
 
@@ -32,7 +32,7 @@ y: A 4D tensor with format "NHWC". Has same type as "x" .
 factor. Defaults to "2".
 - reverse: An optional bool, specifying the conversion mode. If "true",
 depth to space conversion is performed. If "false", space to depth conversion
-is performed. Defaults to "false" . 
+is performed. Defaults to "false" .
 
 ## Attention Constraints
 
@@ -46,4 +46,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

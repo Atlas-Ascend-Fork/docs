@@ -12,7 +12,7 @@ REG_OP(SpaceToDepth)
 ## Brief
 
 Outputs a copy of the input tensor where values from the "height" and
-"width" dimensions are moved to the "depth" dimension . 
+"width" dimensions are moved to the "depth" dimension .
 
 ## Inputs
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator SpaceToDepth.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

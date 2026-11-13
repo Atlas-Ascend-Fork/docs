@@ -22,9 +22,9 @@ src: A ND Tensor with TensorType::NumberType().
 - max_size: The maximum memory size required for caching operation.
 - type: An optional int32 or int64 which has a default value of 6, indicating a prefetch operation.
 - offset: An optional int32 or int64 specifies the offset of the CMO operation address, which must not exceed the
-size of the input memory. 
+size of the input memory.
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -15,7 +15,7 @@ REG_OP(SplitToSequence)
 ## Brief
 
 split a tensor into a sequence of tensors, along the specified axis,
-length of the parts can be specified using argument 'split'. 
+length of the parts can be specified using argument 'split'.
 
 ## Inputs
 
@@ -28,7 +28,7 @@ equally sized chunks, last chunk will be smaller if input size along the given
 axis is not divisible by split, otherwise the tensor is split into size(split)
 chunks, with lengths of the parts on axis specified in split. in the scenario,
 the sum of entries in split must be equal to the dimision size of input tensor
-on axis. Must be one of the following types: int32, int64. It's a dynamic input. 
+on axis. Must be one of the following types: int32, int64. It's a dynamic input.
 
 ## Outputs
 
@@ -51,4 +51,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

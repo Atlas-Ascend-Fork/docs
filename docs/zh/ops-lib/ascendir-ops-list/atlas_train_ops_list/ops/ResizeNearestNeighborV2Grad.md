@@ -15,7 +15,7 @@ REG_OP(ResizeNearestNeighborV2Grad)
 
 ## Brief
 
-Computes the gradient of nearest neighbor interpolation . 
+Computes the gradient of nearest neighbor interpolation .
 
 ## Inputs
 
@@ -24,12 +24,12 @@ Inputs include:
 Must be one of the following types: uint8, int8, int16, uint16, int32, int64, float16, float, double, bfloat16.
 Must set the format, supported format list ["NCHW, NHWC"].
 - size: A 1-D tensor of 2 elements: orig_height, orig_width. Must be the type int32.
-The original input size. 
+The original input size.
 
 ## Outputs
 
 y: A tensor. The output tensor representing the reverse computation.
-Has the same dtype, shape and format as "grads". 
+Has the same dtype, shape and format as "grads".
 
 ## Attributes
 
@@ -52,7 +52,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Input grads must be a 4-D tensor . 
+Input grads must be a 4-D tensor .
 
 ## Third-party framework compatibility
 
@@ -61,4 +61,4 @@ Compatible with tensorflow ResizeNearestNeighborV2Grad operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

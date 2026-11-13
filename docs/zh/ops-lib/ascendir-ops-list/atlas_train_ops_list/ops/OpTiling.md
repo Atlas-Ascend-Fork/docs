@@ -16,7 +16,7 @@ REG_OP(OpTiling)
 ## Brief
 
 Abstract tiling function to an op definition.
-       The input will be data or shape. 
+       The input will be data or shape.
 
 ## Inputs
 
@@ -30,7 +30,7 @@ Abstract tiling function to an op definition.
 - tiling_key: A Tensor. Must be one of the following types: uint64. Tiling key of tiling function.
 - block_dim: A Tensor. Must be one of the following types: int32. Block dim of tiling function.
 - tiling_cond: A Tensor. Must be one of the following types: int32.
-                Tiling condition of tiling function which will be used to determined real execute kernel. 
+                Tiling condition of tiling function which will be used to determined real execute kernel.
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Abstract tiling function to an op definition.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

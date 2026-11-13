@@ -24,7 +24,7 @@ REG_OP(YoloV5DetectionOutput)
 
 ## Brief
 
-Performs YOLO V5 detection . 
+Performs YOLO V5 detection .
 
 ## Inputs
 
@@ -36,7 +36,7 @@ and the actual image height and width.
 
 ## Outputs
 
-- boxout: A tensor of type float16 or float32 with shape [batch,6,post_nms_topn](out_box_dim == 3) or [batch, 6*post_nms_topn](out_box_dim == 2),
+- boxout: A tensor of type float16 or float32 with shape [batch,6,post_nms_topn] if out_box_dim == 3 or [batch, 6*post_nms_topn] if out_box_dim == 2,
 In output shape, 6 means x1, y1, x2, y2, score, label(class). Output by the number of box_out_num.
 - boxoutnum: A tensor of type int32 with shape [batch,8], specifying the number of output boxes.
 The output shape means only the first one of the 8 numbers is valid, the number of valid boxes in each batch, the maximum number of valid boxes in each batch is 1024
@@ -67,4 +67,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

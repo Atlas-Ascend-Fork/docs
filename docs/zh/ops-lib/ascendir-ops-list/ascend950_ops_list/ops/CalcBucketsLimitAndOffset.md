@@ -13,7 +13,7 @@ REG_OP(CalcBucketsLimitAndOffset)
 
 ## Brief
 
-Calculate buckets limit and offset. 
+Calculate buckets limit and offset.
 
 ## Inputs
 
@@ -29,7 +29,7 @@ Three inputs, including:
 
 ## Attributes
 
-total_limit: A int64 type maximum value of the sum of ivf_counts corresponding to bucket_list. 
+total_limit: A int64 type maximum value of the sum of ivf_counts corresponding to bucket_list.
 
 ## Data Types
 
@@ -44,4 +44,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

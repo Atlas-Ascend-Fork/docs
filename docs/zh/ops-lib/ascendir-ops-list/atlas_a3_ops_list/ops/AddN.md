@@ -16,15 +16,15 @@ Adds all input tensors element-wise.
 
 Dynamic inputs, including:
 x: A list of tensor objects, each with same shape and type. The supported types are:
-bfloat16, float16, float32, int32, int64. It's a dynamic input. 
+bfloat16, float16, float32, int32, int64. It's a dynamic input.
 
 ## Outputs
 
-y: An ND tensor. Has the same shape and type as the elements of "x". 
+y: An ND tensor. Has the same shape and type as the elements of "x".
 
 ## Attributes
 
-N: A required attribute of type int32, means nums of inputs. 
+N: A required attribute of type int32, means nums of inputs.
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with the TensorFlow operator AddN.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

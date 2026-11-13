@@ -14,7 +14,7 @@ REG_OP(MaskedFillRange)
 ## Brief
 
 masked fill tensor along with one axis by range.
-boxes. It is a customized masked fill range operator . 
+boxes. It is a customized masked fill range operator .
 
 ## Inputs
 
@@ -28,7 +28,7 @@ indicates the batch of ND Tensor, if input x shape is 1-D, N = 1.
 shape (num, N). "num" indicates the number of loop masked fill, and the value N
 indicates the batch of ND Tensor.
 - value: masked fill value. A 1D Tensor of float32/float16/int32/int8 with
-shape (num,). "num" indicates the number of loop masked fill. 
+shape (num,). "num" indicates the number of loop masked fill.
 
 ## Outputs
 
@@ -55,4 +55,4 @@ Warning: input shape's length must not be bigger than 1024 * 1024 * 1024.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

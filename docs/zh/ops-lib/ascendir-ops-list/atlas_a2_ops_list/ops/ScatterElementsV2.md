@@ -13,7 +13,7 @@ REG_OP(ScatterElementsV2)
 
 ## Brief
 
-Uses "updates" to update tensor "var" by "indices". 
+Uses "updates" to update tensor "var" by "indices".
 
 ## Inputs
 
@@ -26,13 +26,13 @@ Must be one of the following types: float32, float16, int16, int32, int64, int8,
 
 ## Outputs
 
-var: A Tensor. Has the same type and format as input "var" . 
+var: A Tensor. Has the same type and format as input "var" .
 
 ## Attributes
 
 - axis: An optional int. Defaults to 0.
 - reduction: An optional string. Defaults to string "none" and can be
-"add" or "mul". 
+"add" or "mul".
 
 ## Data Types
 
@@ -47,10 +47,10 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - In non-last axis scenarios, you are advised to convert x, indices, and updates to the last axes,
 use ScatterElementsV2 for calculation, and then convert them to the original axes.
-- Only Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component and
-Atlas A3 Training Series Product/Atlas A3 Inference Series Product support ScatterElementsV2. 
+- Only Atlas A2 products and
+Atlas A3 products support ScatterElementsV2.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

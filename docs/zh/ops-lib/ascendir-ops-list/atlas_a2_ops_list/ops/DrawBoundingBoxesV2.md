@@ -11,7 +11,7 @@ REG_OP(DrawBoundingBoxesV2)
 
 ## Brief
 
-Draw bounding boxes on a batch of images . 
+Draw bounding boxes on a batch of images .
 
 ## Inputs
 
@@ -24,7 +24,7 @@ containing bounding boxes.
 ## Outputs
 
 y: Returns 4-D with the same shape as `images`.
-The batch of input images with bounding boxes drawn on the images . 
+The batch of input images with bounding boxes drawn on the images .
 
 ## Data Types
 
@@ -42,4 +42,4 @@ Compatible with tensorflow DrawBoundingBoxesV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

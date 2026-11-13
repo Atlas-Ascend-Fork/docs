@@ -21,11 +21,11 @@ Two inputs, including:
 - x1: A required NCHW or NHWC tensor of type float32, float16, or int8.
 - x2: A required ND tensor of type float32, float16, or int8, specifying
 the scaling factor. If "channel_shared" is "true", "x2" is a [1]-dimensional
-vector. If "channel_shared" is "false", "x2" is a [C]-dimensional vector . 
+vector. If "channel_shared" is "false", "x2" is a [C]-dimensional vector .
 
 ## Outputs
 
-y: A Tensor. Has the same type and format as "x1" . 
+y: A Tensor. Has the same type and format as "x1" .
 
 ## Attributes
 
@@ -36,7 +36,7 @@ the value "false" indicates dimension C.
 "x2". The value "true" (default) indicates 1, and the value "false" indicates
 dimension C of "x1".
 - eps: An optional float32, specifying the bias when "across_spatial" is
-"true". Defaults to "1e-10" . 
+"true". Defaults to "1e-10" .
 
 ## Third-party framework compatibility
 
@@ -45,4 +45,4 @@ Compatible with the Caffe operator Normalize.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

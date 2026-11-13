@@ -23,11 +23,11 @@ Performs Dilation2D on the input .
 - x: A 4D tensor, format support NHWC. Support following data types:
 float16, float, double, int32, int64, uint8, int16, int8, uint16.
 - filter: A tensor of shape is 3d, the type is same with x,
-and the c dimension is same with x. 
+and the c dimension is same with x.
 
 ## Outputs
 
-y: The output tensor. Has the same type and format as input "x" . 
+y: The output tensor. Has the same type and format as input "x" .
 
 ## Attributes
 
@@ -41,7 +41,7 @@ Defaults to "SAME", it support SAME and VALID.
 - ceil_mode: An optional bool. Defaults to "false". Use ceil or floor
 to calculate the output size when padding_mode is "CALCULATED".
 - data_format: An optional string, specifying the data format
-of "rates" and "strides", either "NCHW" or "NHWC" (default). 
+of "rates" and "strides", either "NCHW" or "NHWC" (default).
 
 ## Data Types
 
@@ -62,4 +62,4 @@ Compatible with the TensorFlow operator Dilation2D.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

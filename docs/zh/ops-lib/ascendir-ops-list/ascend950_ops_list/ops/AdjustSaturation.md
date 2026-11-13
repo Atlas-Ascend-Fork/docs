@@ -10,7 +10,7 @@ REG_OP(AdjustSaturation)
 
 ## Brief
 
-Adjust the saturation of one or more images . 
+Adjust the saturation of one or more images .
 
 ## Inputs
 
@@ -22,7 +22,7 @@ must be NHWC.
 
 ## Outputs
 
-y: A Tensor of type float. The format must be NHWC. 
+y: A Tensor of type float. The format must be NHWC.
 
 ## Data Types
 
@@ -35,7 +35,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 Input images is a tensor of at least 3 dimensions. The last dimension is
-interpretted as channels, and must be three . 
+interpretted as channels, and must be three .
 
 ## Third-party framework compatibility
 
@@ -44,4 +44,4 @@ Compatible with tensorflow AdjustSaturation operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

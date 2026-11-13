@@ -11,16 +11,16 @@ REG_OP(Sign)
 
 ## Brief
 
-Computes the sign  of "x". 
+Computes the sign  of "x".
 
 ## Inputs
 
 x:An ND Tensor of type bfloat16, float16, float32, int32, int64, double,
-    complex64, complex128. 
+    complex64, complex128.
 
 ## Outputs
 
-y:An ND Tensor with same type as "x". 
+y:An ND Tensor with same type as "x".
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Compatible with the TensorFlow operator Sign.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

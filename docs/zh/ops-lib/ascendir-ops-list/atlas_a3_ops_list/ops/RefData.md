@@ -12,23 +12,23 @@ REG_OP(RefData)
 ## Brief
 
 Input data for other operators.
-It could be overwritten by ref ops, acting like a variable. 
+It could be overwritten by ref ops, acting like a variable.
 
 ## Inputs
 
-x: A tensor. 
+x: A tensor.
 
 ## Outputs
 
-x: A tensor. Same with input name, which means ref with input. 
+x: A tensor. Same with input name, which means ref with input.
 
 ## Attributes
 
 index: Index of the input tensor.The data type must be int32 or int64.
 Assume that net has two data nodes and one ref_data node, previous two data index set as (0, 1),
-and the left ref_data should be set 2. 
+and the left ref_data should be set 2.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

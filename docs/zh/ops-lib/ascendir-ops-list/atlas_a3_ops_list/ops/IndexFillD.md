@@ -18,19 +18,19 @@ Fills the elements of the input tensor with value val by selecting the indices i
 
 Three inputs, including:
 - x: A tensor. Must be one of the following types:
-    float16, float32, int32, bfloat16. 
+    float16, float32, int32, bfloat16.
 - assist1: A tensor. Must be one of the following types:
-    float16, float32, int32, bfloat16. 
+    float16, float32, int32, bfloat16.
 - assist2: A tensor. Must be one of the following types:
-    float16, float32, int32, bfloat16. 
+    float16, float32, int32, bfloat16.
 
 ## Outputs
 
-y: A tensor with the same type and shape as 'x'. 
+y: A tensor with the same type and shape as 'x'.
 
 ## Attributes
 
-dim: A required int. Used to select the dimension of this tensor. 
+dim: A required int. Used to select the dimension of this tensor.
 
 ## Data Types
 
@@ -47,9 +47,9 @@ The operator will not be enhanced in the future.
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator IndexFill. 
+Compatible with the Pytorch operator IndexFill.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

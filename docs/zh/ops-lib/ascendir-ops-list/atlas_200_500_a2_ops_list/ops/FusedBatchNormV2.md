@@ -21,7 +21,7 @@ REG_OP(FusedBatchNormV2)
 
 ## Brief
 
-Performs batch normalization . 
+Performs batch normalization .
 
 ## Inputs
 
@@ -36,7 +36,7 @@ Specifies the mean used for inference. Must be "None" if the
 operation is used for training.
 - variance: A Tensor of type float32. Must be 1D if input "x" is with format NHWC or NCHW.
 Specifies the variance used for inference. Must be "None"
-if the operation is used for training . 
+if the operation is used for training .
 
 ## Outputs
 
@@ -49,7 +49,7 @@ pecifies the variance of "x".
 - reserve_space_1: An optional Tensor of type float32. Must be 1D if input "x" is with format NHWC or NCHW.
 Specifies the mean of "x" for gradient computation. Pass "None" to skip this output.
 - reserve_space_2: An optional Tensor of type float32. Must be 1D if input "x" is with format NHWC or NCHW.
-Specifies the variance of "x" for gradient computation. Pass "None" to skip this output . 
+Specifies the variance of "x" for gradient computation. Pass "None" to skip this output .
 
 ## Attributes
 
@@ -77,4 +77,4 @@ then "reserve_space_1" has the same value as "mean" and "reserve_space_2" has th
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

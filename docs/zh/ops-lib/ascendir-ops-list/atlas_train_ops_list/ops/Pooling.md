@@ -25,12 +25,12 @@ x: An NCHW tensor of type float16, float32, int8.
 
 ## Outputs
 
-y: An NCHW tensor of type float16, float32, int32. 
-The shape relationship between y and x as follows: 
-Ny = Nx 
-Cy = Cx 
-Hy = (ceil_mode(Hx + pad[0] + pad[1] - window[0]) / stride[0]) + 1 
-Wy = (ceil_mode(Wx + pad[2] + pad[3] - window[1]) / stride[1]) + 1 
+y: An NCHW tensor of type float16, float32, int32.
+The shape relationship between y and x as follows:
+Ny = Nx
+Cy = Cx
+Hy = (ceil_mode(Hx + pad[0] + pad[1] - window[0]) / stride[0]) + 1
+Wy = (ceil_mode(Wx + pad[2] + pad[3] - window[1]) / stride[1]) + 1
 
 ## Attributes
 
@@ -86,4 +86,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

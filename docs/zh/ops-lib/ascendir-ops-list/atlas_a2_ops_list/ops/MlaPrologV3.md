@@ -28,7 +28,7 @@ REG_OP(MlaPrologV3)
     .OUTPUT(kv_cache, TensorType({DT_FLOAT16, DT_BF16, DT_INT8, DT_FLOAT8_E4M3FN, DT_HIFLOAT8}))
     .OUTPUT(kr_cache, TensorType({DT_FLOAT16, DT_BF16, DT_INT8}))
     .OUTPUT(dequant_scale_q_nope, TensorType({DT_FLOAT}))
-    .OUTPUT(query_norm, TensorType(({DT_INT8, DT_BF16, DT_FLOAT8_E4M3FN, DT_HIFLOAT8})))
+    .OUTPUT(query_norm, TensorType({DT_INT8, DT_BF16, DT_FLOAT8_E4M3FN, DT_HIFLOAT8})))
     .OUTPUT(dequant_scale_q_norm, TensorType({DT_FLOAT, DT_FLOAT8_E8M0}))
     .ATTR(rmsnorm_epsilon_cq, Float, 1e-05)
     .ATTR(rmsnorm_epsilon_ckv, Float, 1e-05)
@@ -140,4 +140,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -22,7 +22,7 @@ Calculates the standard deviation of Tensors.
 
 include:
 - x: A tensor. Must be one of the following types: float16, float32, bfloat16.
-The format must be NCHW, NHWC, or ND. 
+The format must be NCHW, NHWC, or ND.
 - mean: A tensor. It's the mean of X. Has the same shape, format and type as "x".
 
 ## Outputs
@@ -34,20 +34,20 @@ y: A tensor. It's the variance of X or reciprocal of vaiance of X. Has the same 
 Six Attributes, including:
 - dim: The dimensions to reduce. An optional listint, Defaults to "None".
     If None (the default), reduces all dimensions.
-    Must be in the range [-rank(x), rank(x)). 
+    Must be in the range [-rank(x), rank(x)).
 - unbiased: An optional bool. Defaults to "True".
     If "True", Use Bessel Correction.
-    If "False", Do not use Bessel Correction. 
+    If "False", Do not use Bessel Correction.
 - keepdim: An optional bool. Defaults to "False".
     If "True", Keep the original tensor dimension.
-    If "False", Do not keep the original tensor dimension. 
+    If "False", Do not keep the original tensor dimension.
 - invert: An optional bool, Defaults to "False".
     If "True", the output is inverse of variance.
     If "False", the output is variance.
 - epsilon: An optional float, Defaults to 0.001.
     Prevent division by 0.
 - correction: An optional int. Defaults to 1.
-    If unbiased is "True", use Bessel Correction. 
+    If unbiased is "True", use Bessel Correction.
 
 ## Data Types
 
@@ -64,4 +64,4 @@ Compatible with the Pytorch operator ReduceStdWithMean.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

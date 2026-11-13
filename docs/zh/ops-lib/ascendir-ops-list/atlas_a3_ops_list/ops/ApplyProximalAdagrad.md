@@ -15,7 +15,7 @@ REG_OP(ApplyProximalAdagrad)
 
 ## Brief
 
-Update "var" and "accum" according to FOBOS with Adagrad learning rate . 
+Update "var" and "accum" according to FOBOS with Adagrad learning rate .
 
 ## Inputs
 
@@ -30,11 +30,11 @@ Six inputs, including:
 
 ## Outputs
 
-var: A mutable tensor. Must have the same type as input "var" . 
+var: A mutable tensor. Must have the same type as input "var" .
 
 ## Attributes
 
-use_locking: An optional bool. Defaults to "False". If "True", updating of the "var" and "accum" *tensors will be protected by a lock; otherwise the behavior is undefined, but may exhibit less *contention . 
+use_locking: An optional bool. Defaults to "False". If "True", updating of the "var" and "accum" *tensors will be protected by a lock; otherwise the behavior is undefined, but may exhibit less *contention .
 
 ## Data Types
 
@@ -55,4 +55,4 @@ Compatible with the TensorFlow operator ApplyProximalAdagrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

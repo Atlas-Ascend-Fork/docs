@@ -17,11 +17,11 @@ with the values specified by nan, posinf, and neginf, respectively
 
 ## Inputs
 
-x: A ND Tensor. Must be one of the following types: bfloat16, float16, float32. 
+x: A ND Tensor. Must be one of the following types: bfloat16, float16, float32.
 
 ## Outputs
 
-y: A ND Tensor of the same dtype as "x". 
+y: A ND Tensor of the same dtype as "x".
 
 ## Attributes
 
@@ -30,7 +30,7 @@ specifying the value to replace NaNs with.
 - posinf: An required attribute of type float32,
 specifying the value to replace Infs with.
 - neginf: An required attribute of type float32,
-specifying the value to replace -Infs with. 
+specifying the value to replace -Infs with.
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with PyTorch operator nan_to_num.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -23,7 +23,7 @@ lower bound 0 is included in the range, while the upper bound 1 is excluded.
 
 ## Outputs
 
-y:A Returns Random values with specified shape . 
+y:A Returns Random values with specified shape .
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with tensorflow StatefulUniform operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

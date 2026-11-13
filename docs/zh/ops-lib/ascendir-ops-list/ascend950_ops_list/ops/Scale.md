@@ -25,7 +25,7 @@ Three inputs, including:
 
 ## Outputs
 
-y: An ND tensor of type float16 or float32 or bfloat16. 
+y: An ND tensor of type float16 or float32 or bfloat16.
 
 ## Attributes
 
@@ -34,7 +34,7 @@ Defaults to "1".
 - num_axes: An optional int32 used to compute the shape of scale and bias input from a Caffe model trained offline.
 Defaults to "1".
 - scale_from_blob: An optional bool. If "true", scale and bias are input from a Caffe model trained offline.
-If "false", scale and bias are input from online bottoms. Defaults to "true" . 
+If "false", scale and bias are input from online bottoms. Defaults to "true" .
 
 ## Data Types
 
@@ -70,4 +70,4 @@ Compatible with the Caffe operator Scale.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

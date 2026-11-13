@@ -15,7 +15,7 @@ REG_OP(WarpAffine)
 
 ## Brief
 
-Applies a affine transformation to an image. 
+Applies a affine transformation to an image.
 
 ## Inputs
 
@@ -38,4 +38,4 @@ Must be greater than "0".
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

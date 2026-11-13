@@ -15,7 +15,7 @@ REG_OP(TensorListGetItem)
 
 ## Brief
 
-Get input tensor list elements of index position. 
+Get input tensor list elements of index position.
 
 ## Inputs
 
@@ -25,11 +25,11 @@ Get input tensor list elements of index position.
 
 ## Outputs
 
-item: An output tensor value of index position . 
+item: An output tensor value of index position .
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Compatible with tensorflow TensorListGetItem operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

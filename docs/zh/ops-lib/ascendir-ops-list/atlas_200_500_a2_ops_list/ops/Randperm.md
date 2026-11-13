@@ -12,12 +12,12 @@ REG_OP(Randperm)
 
 ## Brief
 
-Returns the random permutation of integers from 0 to n-1. 
+Returns the random permutation of integers from 0 to n-1.
 
 ## Outputs
 
 out: A required Tensor. Must be one of the following types:
-float16, float32, float32, int8, uint8, int16, int32, int64. 
+float16, float32, float32, int8, uint8, int16, int32, int64.
 
 ## Attributes
 
@@ -36,4 +36,4 @@ The implementation for Randperm on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

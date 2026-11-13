@@ -15,14 +15,14 @@ REG_OP(ResizeBilinearV2)
 
 ## Brief
 
-Resize images to size using bilinear interpolation . 
+Resize images to size using bilinear interpolation .
 
 ## Inputs
 
 Input images must be a 4-D tensor. Inputs include:
 - x: 4-D tensor. Must set the format, supported format list ["NCHW, NHWC"].
 - size: A 1-D int32 Tensor of 2 elements: new_height, new_width. The new
-size for the images . 
+size for the images .
 
 ## Outputs
 
@@ -61,4 +61,4 @@ Compatible with TensorFlow and PyTorch ResizeBilinearV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

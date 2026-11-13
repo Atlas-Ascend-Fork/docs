@@ -15,14 +15,14 @@ even if x is NaN or infinite. Support broadcasting operations.
 
 ## Inputs
 
-Two inputs, including: 
+Two inputs, including:
 - x1: A ND Tensor. Must be one of the following types: bfloat16, float16, float32,
 double, complex64, complex128.
 - x2: A ND Tensor. Has the same dtype and shape as "x1".
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype and shape as "x1". 
+y: A ND Tensor. Has the same dtype and shape as "x1".
 
 ## Data Types
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator MulNoNan.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

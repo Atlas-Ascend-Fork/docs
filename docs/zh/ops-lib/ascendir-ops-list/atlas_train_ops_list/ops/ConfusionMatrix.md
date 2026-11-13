@@ -23,11 +23,11 @@ int32, int8, uint8. 1D. Has format ND.
 - predictions: A Tensor. Must be one of the following types: float16,
 float32, int32, int8, uint8. 1D. Has format ND.
 - weights: A optional Tensor. Must be one of the following types: float16, float32,
-int32, int8, uint8. 1D. Has format ND. 
+int32, int8, uint8. 1D. Has format ND.
 
 ## Outputs
 
-y: A Tensor. 1D. Has format ND. Has the same type and format as input "labels" . 
+y: A Tensor. 1D. Has format ND. Has the same type and format as input "labels" .
 
 ## Attributes
 
@@ -47,7 +47,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - "weights", "labels", and "predictions" are 1D tensors.
 - The output is with shape (num_classes, num_classes),
-where, 1 <= num_classes <= 4096 . 
+where, 1 <= num_classes <= 4096 .
 @see Region()
 
 ## Third-party framework compatibility
@@ -57,4 +57,4 @@ Compatible with the TensorFlow operator ConfusionMatrix.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

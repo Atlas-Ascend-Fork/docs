@@ -17,11 +17,11 @@ Normalizes the input .
 ## Inputs
 
 One input:
-x: An NCHW tensor of type float16 or float32 . 
+x: An NCHW tensor of type float16 or float32 .
 
 ## Outputs
 
-y: An NCHW tensor of type float16 or float32. 
+y: An NCHW tensor of type float16 or float32.
 
 ## Attributes
 
@@ -32,7 +32,7 @@ the value "false" indicates only to subtract the mean.
 across-channel MVN, either "true" or "false" (default)
 The value "true" indicates "CHW" is treated as a vector.
 - eps: An optional float32 epsilon for not dividing by zero. Defaults to
-"1e-9" . 
+"1e-9" .
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with the Caffe operator MVN.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

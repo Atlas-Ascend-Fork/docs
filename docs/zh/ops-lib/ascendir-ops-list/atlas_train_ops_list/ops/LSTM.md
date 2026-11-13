@@ -21,7 +21,7 @@ REG_OP(LSTM)
 
 ## Brief
 
-Applies a multi-layer long short-term memory (LSTM) RNN to an input sequence . 
+Applies a multi-layer long short-term memory (LSTM) RNN to an input sequence .
 
 ## Inputs
 
@@ -53,4 +53,4 @@ Compatible with the Caffe operator LSTM.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

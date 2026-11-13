@@ -14,7 +14,7 @@ REG_OP(EmbeddingLocalIndex)
 
 ## Brief
 
-EmbeddingLocalIndex, Sort statistics index according to rank_id. 
+EmbeddingLocalIndex, Sort statistics index according to rank_id.
 
 ## Inputs
 
@@ -50,4 +50,4 @@ Compatible with the TensorFlow operator Diag.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

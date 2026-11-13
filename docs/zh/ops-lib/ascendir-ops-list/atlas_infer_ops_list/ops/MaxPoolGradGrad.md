@@ -26,7 +26,7 @@ uint8, int16, int8, int64, uint16, float16, uint32, uint64.
 
 ## Outputs
 
-y: Has the same type and format as input "x1" . 
+y: Has the same type and format as input "x1" .
 
 ## Attributes
 
@@ -36,7 +36,7 @@ specifying the size of the sliding window.
 specifying the stride of the sliding window.
 - padding: A required string, window sliding mode. Either SAME or VALID.
 - data_format: An optional string.
-Format of the original input, either NCHW or NHWC. Defaults to NHWC . 
+Format of the original input, either NCHW or NHWC. Defaults to NHWC .
 
 ## Data Types
 
@@ -49,7 +49,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-- Only Atlas Training Series Product is supported.
+- Only Atlas training products is supported.
 - "x1" and "grads" must have the same shape.
 - "x2" and "y" must have the same shape. Otherwise, an error is reported.
 - "x1", "x2", "grads", and "y" must be 5D tensors.
@@ -64,4 +64,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

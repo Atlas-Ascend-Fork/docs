@@ -11,7 +11,7 @@ REG_OP(TensorListConcatLists)
 
 ## Brief
 
-Concat two tensor lists to a new tensor list. 
+Concat two tensor lists to a new tensor list.
 
 ## Inputs
 
@@ -20,11 +20,11 @@ Concat two tensor lists to a new tensor list.
 
 ## Outputs
 
-output: The output list. 
+output: The output list.
 
 ## Attributes
 
-element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32. 
+element_dtype: An optional attribute. The type of elements in the list. Defaults to DT_INT32.
 
 ## Data Types
 
@@ -41,4 +41,4 @@ Compatible with tensorflow TensorListConcatLists operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

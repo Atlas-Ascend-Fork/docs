@@ -22,7 +22,7 @@ Performs max pooling3d on both max values and indices.
 ## Inputs
 
  One input:
- x: An 6D tensor. Supported type: float16. Format as NDC1HWC0. 
+ x: An 6D tensor. Supported type: float16. Format as NDC1HWC0.
 
 ## Outputs
 
@@ -45,7 +45,7 @@ Performs max pooling3d on both max values and indices.
  @li argmax_type: the function of this field is to determine the type of
   output argmax, "bitmask" is the default value, the argmax will return
   a img2col bitmask. "index_int32" and "index_int64" represent the torch
-  output indices. 
+  output indices.
 
 ## Data Types
 
@@ -58,4 +58,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

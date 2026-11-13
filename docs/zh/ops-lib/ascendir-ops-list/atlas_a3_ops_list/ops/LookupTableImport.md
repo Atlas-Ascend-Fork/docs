@@ -11,7 +11,7 @@ REG_OP(LookupTableImport)
 
 ## Brief
 
-Replaces the contents of the table with the specified keys and values. 
+Replaces the contents of the table with the specified keys and values.
 
 ## Inputs
 
@@ -35,4 +35,4 @@ Compatible with tensorflow LookupTableImport operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

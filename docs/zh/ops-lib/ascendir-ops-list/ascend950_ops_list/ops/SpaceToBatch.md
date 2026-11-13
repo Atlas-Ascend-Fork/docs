@@ -49,4 +49,4 @@ Compatible with the TensorFlow operator space_to_batch.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

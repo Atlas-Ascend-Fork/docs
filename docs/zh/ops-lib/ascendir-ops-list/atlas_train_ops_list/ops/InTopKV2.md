@@ -11,7 +11,7 @@ REG_OP(InTopKV2)
 
 ## Brief
 
-Says whether the targets are in the top "k" predictions . 
+Says whether the targets are in the top "k" predictions .
 
 ## Inputs
 
@@ -19,11 +19,11 @@ Three inputs, including:
 - predictions: A 2D Tensor of type float32. A "batch_size * classes" tensor.
 - targets: A 1D Tensor of type IndexNumberType. A batch_size tensor of class ids.
 - k: A 1D Tensor of the same type as "targets".
-Specifies the number of top elements to look at for computing precision . 
+Specifies the number of top elements to look at for computing precision .
 
 ## Outputs
 
-precision: A Tensor of type bool . 
+precision: A Tensor of type bool .
 
 ## Data Types
 
@@ -45,4 +45,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

@@ -19,11 +19,11 @@ Local Response Normalization .
 ## Inputs
 
 One input, including:
-x: A Tensor. Must be 4-D shape, and only support the following types: float16, float32 . 
+x: A Tensor. Must be 4-D shape, and only support the following types: float16, float32 .
 
 ## Outputs
 
-y: A Tensor. Has the same data type and shape as "x" . 
+y: A Tensor. Has the same data type and shape as "x" .
 
 ## Attributes
 
@@ -47,7 +47,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-This operator will be deprecated in the future. Replace it with LayerNorm operator. 
+This operator will be deprecated in the future. Replace it with LayerNorm operator.
 
 ## Third-party framework compatibility
 
@@ -56,4 +56,4 @@ Compatible with the TensorFlow operator LRN.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

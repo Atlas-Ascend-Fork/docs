@@ -23,7 +23,7 @@ Three inputs, including:
     Indices into the left-most dimension of "x".
 - v: A Tensor of the same type as "x".
     Same dimension sizes as x except the first dimension,
-    which must be the same as the size of "indices" . 
+    which must be the same as the size of "indices" .
 
 ## Outputs
 
@@ -46,4 +46,4 @@ Compatible with the TensorFlow operator InplaceAdd.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

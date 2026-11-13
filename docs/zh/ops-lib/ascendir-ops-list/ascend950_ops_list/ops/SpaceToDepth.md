@@ -12,7 +12,7 @@ REG_OP(SpaceToDepth)
 ## Brief
 
 Outputs a copy of the input tensor where values from the "height" and
-"width" dimensions are moved to the "depth" dimension . 
+"width" dimensions are moved to the "depth" dimension .
 
 ## Inputs
 
@@ -46,4 +46,4 @@ Compatible with the TensorFlow operator SpaceToDepth.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

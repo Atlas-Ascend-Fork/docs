@@ -12,7 +12,7 @@ REG_OP(DenseImageWarpGrad)
 
 ## Brief
 
-Computes the gradients of DenseImageWarp with respect to image and flow. 
+Computes the gradients of DenseImageWarp with respect to image and flow.
 
 ## Inputs
 
@@ -38,4 +38,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

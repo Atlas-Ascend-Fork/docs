@@ -17,7 +17,8 @@ in scalar list
 ## Inputs
 
 Two inputs:
-- x: A tensor list containing multiple tensors
+- x: A tensor list containing multiple tensors,
+maximum length of x is 50
 - scalars: A scalar list in form of tensor with only multiple elements
 
 ## Outputs
@@ -35,4 +36,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

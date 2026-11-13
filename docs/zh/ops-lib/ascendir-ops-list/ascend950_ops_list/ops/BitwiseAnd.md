@@ -21,15 +21,15 @@ Two inputs, including:
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype as "x1". 
+y: A ND Tensor. Has the same dtype as "x1".
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 x1: int16,int32,int64,uint16
-- input1 x2: int16,int32,int64,uint16
-- output0 y: int16,int32,int64,uint16
+- input0 x1: int8,int16,int32,int64,uint8,uint16,uint32,uint64
+- input1 x2: int8,int16,int32,int64,uint8,uint16,uint32,uint64
+- output0 y: int8,int16,int32,int64,uint8,uint16,uint32,uint64
 ### AI CPU
 - input0 x1: int8,int16,int32,int64,uint8,uint16,uint32,uint64
 - input1 x2: int8,int16,int32,int64,uint8,uint16,uint32,uint64
@@ -42,4 +42,4 @@ Compatible with the TensorFlow operator BitwiseAnd.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -19,12 +19,10 @@ Indicates the input tensor, that is, the original data to be normalized.
 
 ## Outputs
 
-- sum: A 1D tensor of type float32 for SUM reduced "x". It represents the sum of the input tensor "x" on the C
-axis.
+- sum: A 1D tensor of type float32 for SUM reduced "x". It represents the sum of the input tensor "x" on the C axis.
 The shape of sum is consistent with the C axis of "x". Has the same format as "x".
-- square_sum: A 1D tensor of type float32 for SUMSQ reduced "x". It represents the sum of squares of the input
-tensor "x" on the C axis.
-The shape of sum is consistent with the C axis of "x". Has the same format as "x". 
+- square_sum: A 1D tensor of type float32 for SUMSQ reduced "x". It represents the sum of squares of the input tensor "x" on the C axis.
+The shape of sum is consistent with the C axis of "x". Has the same format as "x".
 
 ## Data Types
 
@@ -43,4 +41,4 @@ This operator is used in conjunction with BNTrainingReduce.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

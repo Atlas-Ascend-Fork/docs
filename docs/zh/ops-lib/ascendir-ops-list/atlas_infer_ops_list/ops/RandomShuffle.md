@@ -15,17 +15,17 @@ REG_OP(RandomShuffle)
 
 ## Brief
 
-Randomly shuffles a tensor along its first dimension . 
+Randomly shuffles a tensor along its first dimension .
 
 ## Inputs
 
 Inputs include:
-x: A Tensor. The tensor to be shuffled . 
+x: A Tensor. The tensor to be shuffled .
 
 ## Outputs
 
 y: A Tensor. Has the same type as x . A Tensor of type float16, float,
-double, int32, int64, int16, uint16, int8, uint8, int32,int64. 
+double, int32, int64, int16, uint16, int8, uint8, int32,int64.
 
 ## Attributes
 
@@ -51,4 +51,4 @@ The implementation for RandomShuffle on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

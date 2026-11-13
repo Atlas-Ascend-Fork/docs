@@ -61,10 +61,8 @@ Three outputs, including:
 
 - This operator is a InstanceNorm fusion operator for updating the moving averages for training.
 This operator is used in conjunction with GNTrainingUpdate.
-- For Atlas 200/300/500 Inference Product, the result accuracy fails to reach 1/1000 due to the square root
-instruction.
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

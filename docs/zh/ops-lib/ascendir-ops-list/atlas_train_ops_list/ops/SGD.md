@@ -41,11 +41,11 @@ Support format: [ND].
 Specifies the momentum factor.
 - stat: A tensor of type float16, float32 or bfloat16.
 Support format: [NC1HWC0,NDC1HWC0,ND,FRACTAL_Z,FRACTAL_Z_3D].
-Specifies the status representing the first step or not . 
+Specifies the status representing the first step or not .
 
 ## Outputs
 
-parameters: Tensor of the same type and format as input "parameters" . 
+parameters: Tensor of the same type and format as input "parameters" .
 @see ApplyMomentum()
 
 ## Attributes
@@ -55,7 +55,7 @@ Defaults to "0.0".
 - weight_decay: An optional float, specifying the L2 penalty. Defaults to
 "0.0".
 - nesterov: An optional bool, specifying whether to enable Nesterov
-momentum. Defaults to "False" . 
+momentum. Defaults to "False" .
 
 ## Data Types
 
@@ -76,4 +76,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

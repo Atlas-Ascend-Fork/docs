@@ -12,26 +12,26 @@ REG_OP(SoftMarginLossGrad)
 
 ## Brief
 
-Computes the gradient of SoftMarginLossGrad. 
+Computes the gradient of SoftMarginLossGrad.
 
 ## Inputs
 
 Three inputs, including:
 - predict: A tensor. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 - label: A tensor with same shape of predict. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 - dout: A tensor with same shpae of predcit. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 
 ## Outputs
 
-gradient: A Tensor with the same type of predict. 
+gradient: A Tensor with the same type of predict.
 
 ## Attributes
 
 reduction: An optional string. Specifies the reduction to apply to the output:
-    'none' | 'mean' | 'sum'. Default: 'mean'. 
+    'none' | 'mean' | 'sum'. Default: 'mean'.
 
 ## Data Types
 
@@ -44,9 +44,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator SoftMarginLoss Backward. 
+Compatible with the Pytorch operator SoftMarginLoss Backward.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

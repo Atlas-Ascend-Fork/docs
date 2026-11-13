@@ -12,7 +12,7 @@ REG_OP(StatelessRandomPoisson)
 
 ## Brief
 
-Outputs deterministic pseudorandom random integers from a poisson distribution . 
+Outputs deterministic pseudorandom random integers from a poisson distribution .
 
 ## Inputs
 
@@ -22,7 +22,7 @@ Outputs deterministic pseudorandom random integers from a poisson distribution .
 
 ## Outputs
 
-y: Returns Random values with specified shape. 
+y: Returns Random values with specified shape.
 
 ## Attributes
 
@@ -44,4 +44,4 @@ Compatible with TensorFlow StatelessRandomUniformInt operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

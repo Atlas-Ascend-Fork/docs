@@ -23,7 +23,7 @@ REG_OP(ApplyAdamV2)
 
 ## Brief
 
-Count adam result. 
+Count adam result.
 
 ## Inputs
 
@@ -55,19 +55,6 @@ Three inputs, including:
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
-### AI Core
-- input0 var: float16,float32
-- input1 m: float16,float32
-- input2 v: float16,float32
-- input3 lr: float16,float32
-- input4 beta1: float16,float32
-- input5 beta2: float16,float32
-- input6 epsilon: float16,float32
-- input7 grad: float16,float32
-- input8 max_grad_norm: float16,float32
-- input9 global_grad_norm: float16,float32
-- input10 weight_decay: float16,float32
-- input11 step_size: float16,float32
 ### AI CPU
 - input0 var: float16,float32
 - input1 m: float16,float32
@@ -88,4 +75,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

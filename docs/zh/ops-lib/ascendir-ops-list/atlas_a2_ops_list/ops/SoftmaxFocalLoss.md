@@ -25,7 +25,7 @@ Three inputs, including:
 
 ## Outputs
 
-y: Softmax focal loss between the predicted value and target value. Has the same dimensions as "pred". 
+y: Softmax focal loss between the predicted value and target value. Has the same dimensions as "pred".
 
 ## Attributes
 
@@ -53,4 +53,4 @@ Compatible with mmcv operator SoftmaxFocalLoss.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

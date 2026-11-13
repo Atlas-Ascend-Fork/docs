@@ -34,7 +34,7 @@ Computes the result of x1 - x2 * alpha. x1/x2 Support broadcasting operations.
 
 ## Outputs
 
-y: An ND tensor tensor with the same shape and type as "x1". 
+y: An ND tensor tensor with the same shape and type as "x1".
 
 ## Third-party framework compatibility
 
@@ -43,4 +43,4 @@ Warning: THIS FUNCTION IS EXPERIMENTAL. Please do not use.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

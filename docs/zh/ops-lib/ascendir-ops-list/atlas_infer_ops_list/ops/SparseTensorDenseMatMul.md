@@ -26,14 +26,14 @@ The indices of the matrix "SparseTensor", with size [nnz, 2].
 
 ## Outputs
 
-y: A "tensor". Has the same type as "x1_values". 
+y: A "tensor". Has the same type as "x1_values".
 
 ## Attributes
 
 - adjoint_a: An optional bool. Defaults to "False".Use the adjoint of A in the matrix multiply.
 If A is complex, this is transpose(conj(A)). Otherwise it is transpose(A).
 - adjoint_b: An optional bool. Defaults to "False".Use the adjoint of B in the matrix multiply.
-If B is complex, this is transpose(conj(B)). Otherwise it is transpose(B). 
+If B is complex, this is transpose(conj(B)). Otherwise it is transpose(B).
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with the TensorFlow operator SparseTensorDenseMatMul.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

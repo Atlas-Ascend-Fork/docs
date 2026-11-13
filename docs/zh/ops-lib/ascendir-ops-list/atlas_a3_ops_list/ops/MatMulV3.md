@@ -16,7 +16,7 @@ REG_OP(MatMulV3)
 
 ## Brief
 
-Multiplies matrix "x1" by matrix "x2", producing "x1 * x2". 
+Multiplies matrix "x1" by matrix "x2", producing "x1 @ x2".
 
 ## Inputs
 
@@ -26,14 +26,15 @@ float16, float32. Has format [ND, NHWC, NCHW].
 - x2: A matrix Tensor. 2D/4D(NZ格式). Must be one of the following types: bfloat16,
 float16, float32. Has format [ND, NHWC, NCHW, NZ].
 - bias: A 1D Tensor. Must be one of the following types: float32,
-float16, float32. Has format [ND, NHWC, NCHW]. 
+float16, float32. Has format [ND, NHWC, NCHW].
+bfloat16 is only supported in Ascend 950PR&950DT products
 - offset_w: An optional matrix Tensor. 2D. Must be one of the following
 types: int8, int4.
 
 ## Outputs
 
 y: The result matrix Tensor. 2D. Must be one of the following types: bfloat16,
-float16, float32. Has format [ND, NHWC, NCHW]. 
+float16, float32. Has format [ND, NHWC, NCHW].
 
 ## Attributes
 
@@ -44,8 +45,10 @@ float16, float32. Has format [ND, NHWC, NCHW].
 - offset_x: An optional integer for quantized MatMulV2Compress.
 The negative offset added to the input x1 for int8 type. Ensure offset_x
 within the effective range of int8 [-128, 127]. Defaults to "0".
-- enable_hf32: An optional bool for MatMulV3. If True, enable enable_hi_float_32_execution
-before multiplication. 
+- opImplMode: An optional integer for MatMulV3. op_impl_mode_enum: 0x1: default
+0x2: high_performance 0x4: high_precision 0x8: super_performance
+0x10: support_of_bound_index 0x20: enable_float_32_execution 0x40: enable_hi_float_32_execution
+before multiplication.
 
 ## Data Types
 
@@ -60,4 +63,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

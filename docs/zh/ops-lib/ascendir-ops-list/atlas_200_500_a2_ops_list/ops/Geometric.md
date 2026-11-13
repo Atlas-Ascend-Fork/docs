@@ -11,15 +11,15 @@ REG_OP(Geometric)
 
 ## Brief
 
-Fills a tensor with elements drawn from the geometric distribution. 
+Fills a tensor with elements drawn from the geometric distribution.
 
 ## Inputs
 
-x:  A Tensor. Must be one of the following types: float16, float. 
+x:  A Tensor. Must be one of the following types: float16, float.
 
 ## Outputs
 
-y: A Tensor list with same type as "x" . 
+y: A Tensor list with same type as "x" .
 
 ## Attributes
 
@@ -40,4 +40,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

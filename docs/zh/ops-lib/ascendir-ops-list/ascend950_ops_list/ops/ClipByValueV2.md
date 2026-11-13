@@ -12,7 +12,7 @@ REG_OP(ClipByValueV2)
 ## Brief
 
 Clips tensor values to a specified min and max.
-When the input is bfloat16, float16, float32, int32 or int64, broadcasting operations are supported.  
+When the input is bfloat16, float16, float32, int32 or int64, broadcasting operations are supported.
 
 ## Inputs
 
@@ -23,7 +23,7 @@ Three inputs, including:
 
 ## Outputs
 
-y: A ND tensor. Has the same dtype as "x". 
+y: A ND tensor. Has the same dtype as "x".
 
 ## Data Types
 
@@ -46,4 +46,4 @@ Compatible with the PyTorch operator clip.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

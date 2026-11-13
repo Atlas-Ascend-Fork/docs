@@ -15,7 +15,7 @@ Performs reduced group normalization.
 
 ## Inputs
 
-x: A Tensor of type float16 or float32, with format NCHW NHWC . 
+x: A Tensor of type float16 or float32, with format NCHW NHWC .
 
 ## Outputs
 
@@ -25,7 +25,7 @@ for NHWC.
 
 ## Attributes
 
-num_groups: A optional Int, specifying the num of groups. required, same to GNTrainingUpdate, default to 2 . 
+num_groups: A optional Int, specifying the num of groups. required, same to GNTrainingUpdate, default to 2 .
 
 ## Attention Constraints
 
@@ -35,4 +35,4 @@ This operator is used in conjunction with GNTrainingUpdate.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

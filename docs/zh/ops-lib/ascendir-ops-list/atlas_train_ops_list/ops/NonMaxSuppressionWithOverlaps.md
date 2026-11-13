@@ -14,7 +14,7 @@ REG_OP(NonMaxSuppressionWithOverlaps)
 ## Brief
 
 Greedily selects a subset of bounding boxes in descending order of
-score . 
+score .
 
 ## Inputs
 
@@ -28,12 +28,12 @@ of boxes to be selected by non max suppression.
 - overlap_threshold: A 0-D float tensor representing the threshold for
 deciding whether boxes overlap too.
 - score_threshold: A 0-D float tensor representing the threshold for
-deciding when to remove boxes based on score . 
+deciding when to remove boxes based on score .
 
 ## Outputs
 
 selected_indices: A 1-D integer tensor of shape [M] representing the
-selected indices from the boxes tensor, where M <= max_output_size . 
+selected indices from the boxes tensor, where M <= max_output_size .
 
 ## Data Types
 
@@ -53,4 +53,4 @@ Compatible with tensorflow NonMaxSuppressionWithOverlaps operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

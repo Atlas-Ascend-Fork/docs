@@ -15,7 +15,7 @@ REG_OP(RandomPoisson)
 
 ## Brief
 
-Outputs random values from the Poisson distribution(s) described by rate . 
+Outputs random values from the Poisson distribution(s) described by rate .
 
 ## Inputs
 
@@ -25,7 +25,7 @@ Inputs include:
 
 ## Outputs
 
-y: A Tensor of type dtype float16, float, double, int32, int64. 
+y: A Tensor of type dtype float16, float, double, int32, int64.
 
 ## Attributes
 
@@ -53,4 +53,4 @@ The implementation for RandomPoisson on Ascend uses AICPU, with bad performance.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

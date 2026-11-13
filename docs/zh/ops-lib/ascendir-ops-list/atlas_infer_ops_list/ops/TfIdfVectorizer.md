@@ -19,7 +19,7 @@ REG_OP(TfIdfVectorizer)
 ## Brief
 
 This transform extracts n-grams from the input sequence and save them as a
-vector. 
+vector.
 
 ## Inputs
 
@@ -30,7 +30,7 @@ vector.
 - output: tensor(float)
 For 1-D input, output is the n-gram representation of that input. For 2-D input, the output is also a 2-D tensor
 whose i-th row is the n-gram representation of the i-th input row. More specifically, if input shape is [C], the corresponding
-output shape would be [max(ngram_indexes) + 1]. If input shape is [N, C], this operator produces a [N, max(ngram_indexes) + 1]-tensor. 
+output shape would be [max(ngram_indexes) + 1]. If input shape is [N, C], this operator produces a [N, max(ngram_indexes) + 1]-tensor.
 
 ## Attributes
 
@@ -65,7 +65,7 @@ in pool stores the n-gram that should be mapped to coordinate ngram_indexes[i] i
 - weights : list of floats
 list of floats. This attribute stores the weight of each n-gram in pool. The i-th element in weights is the weight of
 the i-th n-gram in pool. Its length equals to the size of ngram_indexes. By default, weights is an all-one tensor.This attribute
-is used when mode is "IDF" or "TFIDF" to scale the associated word counts. 
+is used when mode is "IDF" or "TFIDF" to scale the associated word counts.
 
 ## Attention Constraints
 
@@ -77,4 +77,4 @@ is used when mode is "IDF" or "TFIDF" to scale the associated word counts.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

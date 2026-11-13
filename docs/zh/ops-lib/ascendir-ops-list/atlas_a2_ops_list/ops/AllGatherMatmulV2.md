@@ -63,7 +63,7 @@ Default: "0". The gather_index only support 0 in current version.
 - rank_size: An int. Number of rank num. Default: "0".
 - block_size: An int. Number of values in the M, N directions in y correspond to one dequantization coefficient. Default: "0". The block_size only supports 0 in current version.
 - group_size: An int. Number of values in the M, N, K directions in x1/x2 correspond to one dequantization coefficient.
-Default: "0". Reserved attribute. The block_size only supports 549764202624 in the per_block scenario. The block_size only supports 0 in the other scenario. 
+Default: "0". Reserved attribute. The block_size only supports 549764202624 in the per_block scenario. The block_size only supports 0 in the other scenario.
 - is_gather_out: A bool. If True, output gather_out matrix. Default: "true".
 - is_amax_out: A bool. If True, output amax matrix. Default: "false".
 - y_dtype: An int. Type of the matmul output. Default: "0".
@@ -85,4 +85,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -13,13 +13,13 @@ Computes ndtri element-wise (y = sqrt(2) * erfinv(2 * x - 1)).
 
 ## Inputs
 
-One input, including: 
+One input, including:
 x: A ND Tensor. Must be one of the following types: bfloat16, float16,
-float32, double. 
+float32, double.
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype and format as input "x". 
+y: A ND Tensor. Has the same dtype and format as input "x".
 
 ## Data Types
 
@@ -35,4 +35,4 @@ Compatible with the TensorFlow operator Ndtri.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

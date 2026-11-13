@@ -12,7 +12,7 @@ REG_OP(MatrixSolveLs)
 
 ## Brief
 
-Solves systems of linear equations . 
+Solves systems of linear equations .
 
 ## Inputs
 
@@ -25,11 +25,11 @@ The input rhs must have the same type as matrix. Inputs include:
 
 y:Tensor of shape [..., N, K] whose inner-most 2 dimensions form M-by-K
 matrices that solve the equations matrix[..., :, :] * output[..., :, :] =
-rhs[..., :, :] in the least squares sense . 
+rhs[..., :, :] in the least squares sense .
 
 ## Attributes
 
-fast:bool. Defaults to True . 
+fast:bool. Defaults to True .
 
 ## Data Types
 
@@ -43,7 +43,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The input matrix matrix is a tensor of shape [..., M, M] whose inner-most 2
-dimensions form square matrices.  
+dimensions form square matrices.
 
 ## Third-party framework compatibility
 
@@ -52,4 +52,4 @@ Compatible with tensorflow MatrixSolveLs operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

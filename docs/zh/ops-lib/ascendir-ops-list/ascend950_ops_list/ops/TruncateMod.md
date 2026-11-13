@@ -24,7 +24,7 @@ double, int32, int64, int8, uint8.
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype as "x1". 
+y: A ND Tensor. Has the same dtype as "x1".
 
 ## Data Types
 
@@ -54,4 +54,4 @@ Compatible with the TensorFlow operator TruncateMod.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

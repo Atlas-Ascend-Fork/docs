@@ -86,7 +86,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
  and normOut computation input must be the same.
 - The x2 matrix can be transposed or not transposed. The x1 matrix cannot be transposed.
 - The value of epsilon must be within the value range (0,1).
-- The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 1, 2, 4, and 8 cards.
+- The Atlas A2 products support 1, 2, 4, and 8 cards.
 - Constraints for WeightQuantMatmulAllReduceAddRmsNorm
 - The application scenario is the same as that of [MatmulAllReduce].
  WeightQuantMatmulAllReduceAddRmsNorm is disabled in incremental scenarios but enabled in full scenarios.
@@ -106,7 +106,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - The x2 matrix can be transposed or not transposed. The x1 matrix cannot be transposed.
 - The value of antiquantGroupSize falls in the range of [32, min(k-1, INT_MAX)] and must be a multiple of 32.
 - The value of epsilon must be within the value range (0,1).
-- The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 1, 2, 4, and 8 cards.
+- The Atlas A2 products support 1, 2, 4, and 8 cards.
 - Constraints for QuantMatmulAllReduceAddRmsNorm
 - The application scenario is the same as that of [MatmulAllReduce].
  QuantMatmulAllReduceAddRmsNorm is disabled in incremental scenarios but enabled in full scenarios.
@@ -123,9 +123,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
  input data types of residual, gamma, y, and normOut must be the same.
 - The x2 matrix can be transposed or not transposed. The x1 matrix cannot be transposed.
 - The value of epsilon must be within the value range (0, 1).
-- The Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component support 1, 2, 4, and 8 cards.
+- The Atlas A2 products support 1, 2, 4, and 8 cards.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

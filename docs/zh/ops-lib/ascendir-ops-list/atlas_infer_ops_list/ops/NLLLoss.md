@@ -33,7 +33,7 @@ The input x and weight must have the same type. Inputs include:
 - reduction: An optional attribute. Specifies the reduction to be applied to the output.
                Type is string. Defaults to "mean" .
 - ignore_index: An optional attribute. Specifying a target that is ignored and does not affect the input gradient.
-                  Type is int. Defaults to -100 . 
+                  Type is int. Defaults to -100 .
 
 ## Data Types
 
@@ -58,4 +58,4 @@ Compatible with pytorch NLLLoss operator
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

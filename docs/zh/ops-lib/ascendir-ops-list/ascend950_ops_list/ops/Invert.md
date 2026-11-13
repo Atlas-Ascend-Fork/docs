@@ -13,14 +13,14 @@ Reverses specific dimensions of a tensor.
 
 ## Inputs
 
-One input: 
+One input:
 x: A ND Tensor, Must be one of the following types:
 int32, uint8, int16, int8, int64, uint16, uint32, uint64,
-and format can be [NCHW,NHWC,ND]. 
+and format can be [NCHW,NHWC,ND].
 
 ## Outputs
 
-y: A ND Tensor. Has the same dtype and format as "x". 
+y: A ND Tensor. Has the same dtype and format as "x".
 
 ## Data Types
 
@@ -39,4 +39,4 @@ Compatible with the TensorFlow operator Invert.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

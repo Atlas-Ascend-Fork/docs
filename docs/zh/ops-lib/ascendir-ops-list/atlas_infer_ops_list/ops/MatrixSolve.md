@@ -11,7 +11,7 @@ REG_OP(MatrixSolve)
 
 ## Brief
 
-Solves systems of linear equations . 
+Solves systems of linear equations .
 
 ## Inputs
 
@@ -21,12 +21,12 @@ The input rhs must have the same type as matrix. Inputs include:
 
 ## Outputs
 
-y:A Tensor. Has the same type as matrix . 
+y:A Tensor. Has the same type as matrix .
 
 ## Attributes
 
 adjoint:An optional bool. Defaults to False.Boolean indicating whether to
-solve with matrix or its (block-wise) adjoint . 
+solve with matrix or its (block-wise) adjoint .
 
 ## Data Types
 
@@ -39,7 +39,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ## Attention Constraints
 
 The input matrix is a tensor of shape [..., M, M] whose inner-most 2
-dimensions form square matrices.  
+dimensions form square matrices.
 
 ## Third-party framework compatibility
 
@@ -48,4 +48,4 @@ Compatible with tensorflow MatrixSolve operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

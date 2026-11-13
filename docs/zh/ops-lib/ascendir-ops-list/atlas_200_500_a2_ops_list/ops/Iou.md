@@ -14,7 +14,7 @@ REG_OP(Iou)
 ## Brief
 
 Computes the intersection over union (iou) or the intersection over
-foreground (iof) based on the ground-truth and predicted regions . 
+foreground (iof) based on the ground-truth and predicted regions .
 
 ## Inputs
 
@@ -25,25 +25,25 @@ shape (N, 4). "N" indicates the number of bounding boxes, and the value
 - gtboxes: Ground-truth boxes, a 2D Tensor of type float16 or float32
 with shape (M, 4). It's dtype should be same as bboxes.
 "M" indicates the number of ground truth boxes, and
-the value "4" refers to "x0", "x1", "y0", and "y1" . 
+the value "4" refers to "x0", "x1", "y0", and "y1" .
 
 ## Outputs
 
 overlap: A 2D Tensor of type float16 or float32 with shape [M, N] or [M, 1], specifying
-the IoU or IoF ratio . It's dtype should be same as bboxes. 
+the IoU or IoF ratio . It's dtype should be same as bboxes.
 
 ## Attributes
 
 - mode: Computation mode, a character string with the value range of [iou, iof].
 default value is iou .
 - eps: An optional float, prevent division by 0, default value is 1.0 .
-The value can only choose one of those values: [0, 0.01, 1] when Soc Version is : 
-Atlas A2 Training Series Product/Atlas 800I A2 Inference Product/A200I A2 Box Heterogeneous Component. 
-Atlas A3 Training Series Product/Atlas A3 Inference Series Product. 
-Atlas Training Series Product. 
-Atlas Inference Series Product. 
+The value can only choose one of those values: [0, 0.01, 1] when Soc Version is :
+Atlas A2 products.
+Atlas A3 products.
+Atlas training products.
+Atlas inference products.
 - aligned: A bool value, if aligned is true, calculate the ious between each aligned pair of bboxes and gtboxes.
-default value is false . 
+default value is false .
 
 ## Data Types
 
@@ -61,4 +61,4 @@ length and width are scaled by 0.2 internally.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

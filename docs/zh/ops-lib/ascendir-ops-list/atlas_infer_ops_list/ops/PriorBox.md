@@ -21,7 +21,7 @@ REG_OP(PriorBox)
 
 ## Brief
 
-Performs SSD prior box detection . 
+Performs SSD prior box detection .
 
 ## Inputs
 
@@ -31,7 +31,7 @@ Two inputs, including:
 
 ## Outputs
 
-y: An ND tensor of type float32 or float16, specifying the prior box information, including its coordinates and variance . 
+y: An ND tensor of type float32 or float16, specifying the prior box information, including its coordinates and variance .
 
 ## Attributes
 
@@ -60,4 +60,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

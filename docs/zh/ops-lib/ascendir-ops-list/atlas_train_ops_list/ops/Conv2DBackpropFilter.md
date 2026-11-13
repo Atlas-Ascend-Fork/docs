@@ -68,7 +68,7 @@ dimension of input, defaults to [1,1,1,1].
 channels.
 - data_format: An optional string from: "NHWC", "NCHW". Defaults to
 "NHWC". Specify the data format of the input and output data.
-The following value range restrictions must be met, except for Ascend 950PR/Ascend 950DT:
+The following value range restrictions must be met, except for Ascend 950PR&950DT products:
 | Name             | Field    | Scope        |
 |------------------|----------|--------------|
 | x(fmap)          | H        | [1, 4096]  |
@@ -88,7 +88,7 @@ The following value range restrictions must be met, except for Ascend 950PR/Asce
 | dilations        | H        | [1, 255]     |
 |                  | W        | [1, 255]     |
 | groups           | H        | [1, 4096]    |
-The following are supported value range restrictions for Ascend 950PR/Ascend 950DT:
+The following are supported value range restrictions for Ascend 950PR&950DT products:
 | Name             | Field    | Scope           |
 |------------------|----------|-----------------|
 | x(fmap)          | H        | [1, 4096]       |
@@ -120,7 +120,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-In Ascend 950PR/Ascend 950DT: The behavior of gradient computation in the padding region depends on the input shape.
+In Ascend 950PR&950DT products: The behavior of gradient computation in the padding region depends on the input shape.
 Depending on the operator optimization strategy, the padding gradients may be directly set to 0.
 
 ## Third-party framework compatibility
@@ -130,4 +130,4 @@ Compatible with Tensorflow's conv2d_backprop_filter
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

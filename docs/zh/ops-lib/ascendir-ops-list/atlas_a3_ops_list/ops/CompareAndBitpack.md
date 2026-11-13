@@ -23,7 +23,7 @@ The input size must be a non-negative int32 scalar Tensor. Inputs include:
 
 ## Outputs
 
-y:The bitpacked comparisons. 
+y:The bitpacked comparisons.
 
 ## Data Types
 
@@ -35,7 +35,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-Currently, the innermost dimension of the tensor must be divisible by 8. 
+Currently, the innermost dimension of the tensor must be divisible by 8.
 
 ## Third-party framework compatibility
 
@@ -44,4 +44,4 @@ Compatible with tensorflow CompareAndBitpack operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

@@ -12,7 +12,7 @@ REG_OP(RgbToGrayscale)
 
 ## Brief
 
-Convert an RGB image to a gray image. 
+Convert an RGB image to a gray image.
 
 ## Inputs
 
@@ -23,7 +23,7 @@ must be NHWC or NCHW.
 
 ## Outputs
 
-y: A Tensor of type T. The format must be NHWC or NCHW. 
+y: A Tensor of type T. The format must be NHWC or NCHW.
 
 ## Attributes
 
@@ -42,7 +42,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - This operator will be deprecated in the future.
 - Input images is a tensor of at least 3 dimensions. The last dimension is
-interpretted as channels, and must be three. 
+interpretted as channels, and must be three.
 
 ## DataType
 
@@ -51,4 +51,4 @@ interpretted as channels, and must be three.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

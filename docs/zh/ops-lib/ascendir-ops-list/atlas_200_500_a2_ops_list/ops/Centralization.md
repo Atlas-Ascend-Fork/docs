@@ -18,7 +18,7 @@ Computes Centralization. result = x - mean(x, axes)
 
 ## Outputs
 
-y: A Tensor. Has the same type as "x". 
+y: A Tensor. Has the same type as "x".
 
 ## Attributes
 
@@ -27,9 +27,9 @@ Must be in the range [-rank(x), rank(x)).
 
 ## Third-party framework compatibility
 
-custom operator 
+custom operator
 
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

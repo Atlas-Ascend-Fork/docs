@@ -20,15 +20,15 @@ Two inputs, including:
 - x: A list of 1D tensor objects of type int32, each with same shape and type.
        It's a dynamic input.Supported format list ["ND"].
 The number of tensors in the x must be at least 2.
-The shape size of each tensor in x is in range [1, 8]. 
+The shape size of each tensor in x is in range [1, 8].
 
 ## Outputs
 
-y: A Tensor list with same type as "x" . It's a dynamic output.Supported format list ["ND"]. 
+y: A Tensor list with same type as "x" . It's a dynamic output.Supported format list ["ND"].
 
 ## Attributes
 
-N: A required int indicating the number of tensors in the input x. 
+N: A required int indicating the number of tensors in the input x.
 
 ## Data Types
 
@@ -47,4 +47,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

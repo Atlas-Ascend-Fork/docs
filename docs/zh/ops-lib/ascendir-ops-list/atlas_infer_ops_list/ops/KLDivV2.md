@@ -27,8 +27,8 @@ y: A ND Tensor of the same dtype as x.
 ## Attributes
 
 reduction: An optional "string", Specifies the reduction to apply to the output;
-Reduction supports the modes of "sum" and "mean", default value is "mean". 
-log_target: An optional bool, a flag indicating whether target is passed in the log space. Default value is false. 
+Reduction supports the modes of "sum" and "mean", default value is "mean".
+log_target: An optional bool, a flag indicating whether target is passed in the log space. Default value is false.
 
 ## Third-party framework compatibility
 
@@ -37,4 +37,4 @@ Compatible with the PyTorch operator kl_div_v2.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

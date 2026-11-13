@@ -31,4 +31,4 @@ output: The output tensors, one of which will become available.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

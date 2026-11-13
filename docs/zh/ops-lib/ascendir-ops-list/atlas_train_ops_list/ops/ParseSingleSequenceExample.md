@@ -92,11 +92,11 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - output6 feature_list_sparse_shapes: int64
 - output7 feature_list_dense_values: float32,int64,string
 
-## Third-party framework compatibility 
+## Third-party framework compatibility
 
 - compatible with tensorflow StringToNumber operator.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

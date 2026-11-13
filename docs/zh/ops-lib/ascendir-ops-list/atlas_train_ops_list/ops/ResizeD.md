@@ -19,13 +19,13 @@ REG_OP(ResizeD)
 
 ## Brief
 
-Calculate the resize_d function. 
+Calculate the resize_d function.
 
 ## Inputs
 
 One input, including:
 x: A 4D tensor, indicating the original size. Must be one of the following types:
-float16, float32. The format must be NCHW. 
+float16, float32. The format must be NCHW.
 
 ## Outputs
 
@@ -79,4 +79,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

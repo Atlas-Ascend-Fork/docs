@@ -13,11 +13,11 @@ REG_OP(HashTable)
 
 ## Brief
 
-Creates a non-initialized hash table . 
+Creates a non-initialized hash table .
 
 ## Outputs
 
-handle: A Tensor of type resource. Handle to the table . 
+handle: A Tensor of type resource. Handle to the table .
 
 ## Attributes
 
@@ -47,4 +47,4 @@ Compatible with tensorflow HashTable operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

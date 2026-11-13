@@ -16,7 +16,7 @@ REG_OP(STFT)
 
 ## Brief
 
-Computes the Fourier transform of short overlapping windows of the input. 
+Computes the Fourier transform of short overlapping windows of the input.
 
 ## Inputs
 
@@ -24,12 +24,12 @@ Computes the Fourier transform of short overlapping windows of the input.
 float32, double, complex64, complex128.
 - window: An optional tensor. The optional window function.
 Must be one of the following types: float32, double, complex64, complex128.
-Default: None (treated as window of all 1 s) 
+Default: None (treated as window of all 1 s)
 
 ## Outputs
 
 y: A tensor containing the STFT result with shape described above. Must be
-one of the following types: float32, double, complex64, complex128. 
+one of the following types: float32, double, complex64, complex128.
 
 ## Attributes
 
@@ -42,11 +42,15 @@ Default: 0 (treated as equal to n_fft)
 - onesided: An optional bool. Controls whether to return half of results to avoid redundancy for real inputs.
 Default: True for real input and window, False otherwise.
 - return_complex: An optional bool. Whether to return a complex tensor, or a real tensor
-with an extra last dimension for the real and imaginary components. Default: True. 
+with an extra last dimension for the real and imaginary components. Default: True.
 
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: complex64,double,float32
+- input2 window: complex64,double,float32
+- output0 y: complex64,double,float32
 ### AI CPU
 - input0 x: complex64,complex128,double,float32
 - input1 window: complex64,complex128,double,float32
@@ -59,4 +63,4 @@ Compatible with pytorch STFT operator.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

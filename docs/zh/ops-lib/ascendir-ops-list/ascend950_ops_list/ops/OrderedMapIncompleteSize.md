@@ -13,11 +13,11 @@ REG_OP(OrderedMapIncompleteSize)
 
 ## Brief
 
-Returns the number of incomplete elements in the underlying container. 
+Returns the number of incomplete elements in the underlying container.
 
 ## Outputs
 
-size: A Tensor of type DT_INT32. 
+size: A Tensor of type DT_INT32.
 
 ## Attributes
 
@@ -45,4 +45,4 @@ Compatible with the TensorFlow operator OrderedMapIncompleteSize.
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

@@ -15,7 +15,7 @@ REG_OP(SearchSorted)
 
 ## Brief
 
-insert the values into the sorted sequence and return the index. 
+insert the values into the sorted sequence and return the index.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ the values of the last dim are sorted by ascending order.
 - values: the inserted Tensor. Must have the same type as input. only the last dim can be different from
 the sorted_sequence.
 - sorter:  if provided, a tensor matching the shape of the unsorted sorted_sequence containing a sequence of indices
-that sort it in the ascending order on the innermost dimension  
+that sort it in the ascending order on the innermost dimension
 
 ## Outputs
 
@@ -35,7 +35,7 @@ that sort it in the ascending order on the innermost dimension
 - dtype: An optional type. Default value is DT_INT64, only supports DT_INT64/DT_INT32.
 - right: An optional bool. Default value is false, false means the inserted position aligns to the left side when
 the sequence contains same value and the position candidates are not unique, while true means aligning to
-the right side when in such situation. 
+the right side when in such situation.
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with pytorch1.8.1 searchsorted operator.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

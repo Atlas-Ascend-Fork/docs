@@ -13,7 +13,7 @@ REG_OP(Cummin)
 
 Returns a namedtuple (values, indices) where values is the cumulative
 the cumulative minimum of elements of input in the dimension dim.
-And indices is the index location of each maximum value found in the dimension dim. 
+And indices is the index location of each maximum value found in the dimension dim.
 
 ## Inputs
 
@@ -33,7 +33,7 @@ qint32, qint8, quint16, quint8, quint16, uint32, uint64, uint8, bfloat16, comple
 
 ## Attributes
 
-axis: Axis along which to cummin. 
+axis: Axis along which to cummin.
 
 ## Data Types
 
@@ -48,9 +48,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator Cummin. 
+Compatible with the Pytorch operator Cummin.
 
 
 ---
 
-[Back to Operator Specifications (Ascend950)](../README.md)
+[Back to Operator Specifications (Ascend 950PR&950DT Products)](../README.md)

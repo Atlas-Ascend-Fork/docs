@@ -13,7 +13,7 @@ REG_OP(EmbeddingDenseGrad)
 
 ## Brief
 
-Calculates the reversed outputs of the function "embedding". 
+Calculates the reversed outputs of the function "embedding".
 
 ## Inputs
 
@@ -24,16 +24,16 @@ Two inputs, including:
 
 ## Outputs
 
-y: A mutable output Tensor of new word grad has the same type as "grad". 
+y: A mutable output Tensor of new word grad has the same type as "grad".
 
 ## Attributes
 
 - num_weights: An int attr which use to judge how many words in dict.
 - padding_idx: An integer attribute that specifies which word index should have its gradient filled with zeros.
-Defaults to "-1". 
+Defaults to "-1".
 - scale_grad_by_freq: An optional bool. Defaults to "False".
     If "True", "grad_weight" will be scale by word_frequency.
-    If "False", "grad_weight" will not be scale by word_frequency. 
+    If "False", "grad_weight" will not be scale by word_frequency.
 
 ## Data Types
 
@@ -50,4 +50,4 @@ Compatible with the Pytorch operator EmbeddingDenseGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

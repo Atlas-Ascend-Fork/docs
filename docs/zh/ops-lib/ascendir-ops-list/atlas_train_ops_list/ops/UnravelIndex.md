@@ -10,7 +10,7 @@ REG_OP(UnravelIndex)
 
 ## Brief
 
-Converts an array of flat indices into a tuple of coordinate arrays. 
+Converts an array of flat indices into a tuple of coordinate arrays.
 
 ## Inputs
 
@@ -18,11 +18,11 @@ Input "indices" is a 0D or 1D tensor. Input "dims" is a 1D tensor.
 - indices: A 0D or 1D int Tensor whose elements are indices into
 the flattened version of an array of dimensions "dims".
 - dims: A 1D int Tensor of the same type as "indices".
-The shape of the array to use for unraveling indices. 
+The shape of the array to use for unraveling indices.
 
 ## Outputs
 
-y: A Tensor. Has the same type as "indices". 
+y: A Tensor. Has the same type as "indices".
 
 ## Data Types
 
@@ -34,7 +34,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Attention Constraints
 
-UnravelIndex runs on the Ascend AI CPU, which delivers poor performance. 
+UnravelIndex runs on the Ascend AI CPU, which delivers poor performance.
 
 ## Third-party framework compatibility
 
@@ -43,4 +43,4 @@ Compatible with the TensorFlow operator UnravelIndex.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

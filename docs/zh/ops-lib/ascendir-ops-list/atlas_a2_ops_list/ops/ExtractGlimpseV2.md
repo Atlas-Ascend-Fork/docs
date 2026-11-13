@@ -15,7 +15,7 @@ REG_OP(ExtractGlimpseV2)
 
 ## Brief
 
-Extracts a glimpse from the input tensor . 
+Extracts a glimpse from the input tensor .
 
 ## Inputs
 
@@ -26,12 +26,12 @@ The format must be NHWC.
 glimpses to extract. The glimpse height must be specified first, following
 by the glimpse width.
 - offsets: A ND(Support 2D) float32 tensor of shape [batch_size, 2] containing the y,
-x locations of the center of each window . 
+x locations of the center of each window .
 
 ## Outputs
 
 glimpse:A float32 tensor representing the glimpses [batch_size,
-glimpse_height, glimpse_width, channels]. The format must be NHWC. 
+glimpse_height, glimpse_width, channels]. The format must be NHWC.
 
 ## Attributes
 
@@ -44,7 +44,7 @@ upper left corner of the input images.
 uniform distribution or a Gaussian distribution.
 - noise: string indicates if the noise should uniform, gaussian, or zero.
 The default is uniform which means the the noise type will be decided by
-uniform_noise . 
+uniform_noise .
 
 ## Data Types
 
@@ -62,4 +62,4 @@ Compatible with tensorflow ExtractGlimpseV2 operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

@@ -23,18 +23,18 @@ the eigenvalue of forward inputs.
 - y: A ND Tensor(1D-8D) of type float16 or float32, specifying
 the normalization result of the forward output. the same shape with x.
 - dy: A ND Tensor(1D-8D) of type float16 or float32, specifying
-the reverse input gradient. the same shape with x . 
+the reverse input gradient. the same shape with x .
 
 ## Outputs
 
-dx: A ND Tensor(1D-8D), Reverse gradient of eigenvalue "x". Has the same shape as "x" . 
+dx: A ND Tensor(1D-8D), Reverse gradient of eigenvalue "x". Has the same shape as "x" .
 
 ## Attributes
 
 - dim: A required attribute of type int, specifying the axis to be
 normalized.  Defaults to {}.
 - eps: An optional attribute of type float, specifying the lower limit of
-normalization. Defaults to "1e-4" . 
+normalization. Defaults to "1e-4" .
 
 ## Data Types
 
@@ -52,4 +52,4 @@ Compatible with the L2 scenario of PyTorch operator NormalizeGrad.
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

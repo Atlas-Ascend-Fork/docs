@@ -19,11 +19,11 @@ the output will be output = [[0, 3] [3, 2] [1, 3]].
 ## Inputs
 
 The dtype of input x  int float double. Inputs include:
-x:Any shape of Tensor contains with int or float type. 
+x:Any shape of Tensor contains with int or float type.
 
 ## Outputs
 
-y:Same shape with 'input', each value of input replaced with bucket index. 
+y:Same shape with 'input', each value of input replaced with bucket index.
 
 ## Attributes
 
@@ -46,4 +46,4 @@ Compatible with tensorflow Bucketize operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

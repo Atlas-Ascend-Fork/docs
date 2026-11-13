@@ -2,24 +2,21 @@
 
 ```c
 REG_OP(RGB2YUV422)
-    .INPUT(rgb, TensorType({DT_UINT8}))
-    .OUTPUT(yuv, TensorType({DT_UINT8}))
-    .OP_END_FACTORY_REG(RGB2YUV422)
+.INPUT(rgb, TensorType({DT_UINT8})).OUTPUT(yuv, TensorType({DT_UINT8})).OP_END_FACTORY_REG(RGB2YUV422)
 ```
 
 ## Brief
 
-RGB2YUV422. Convert the image from rgb to yuv422.
+Converts RGB images to YUV422 (YUYV packed format) color space.
 
 ## Inputs
 
-rgb: A 3D Tensor of dtype uint8 with shape (H, W, 3).
-The value of W is a multiple of 16. 
+One input, including:
+- x: An ND Tensor of type uint8. Shape [..., H, W, 3].
 
 ## Outputs
 
-yuv: A 3D Tensor of dtype uint8 with shape (H, W, 2).
-The value of H and W are same as rgb. 
+y: An ND Tensor of type uint8. Shape [..., H, W, 2] (YUYV packed).
 
 ## Data Types
 
@@ -28,12 +25,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 - input0 rgb: uint8
 - output0 yuv: uint8
 
-## Attention Constraints
-
-Input images is a tensor of 3 dimensions. The last dimension is
-interpretted as channels, and must be three . 
-
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

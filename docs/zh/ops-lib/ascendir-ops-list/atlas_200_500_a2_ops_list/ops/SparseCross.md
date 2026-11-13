@@ -20,7 +20,7 @@ REG_OP(SparseCross)
 
 ## Brief
 
-Generates sparse cross from a list of sparse and dense tensors. 
+Generates sparse cross from a list of sparse and dense tensors.
 
 ## Inputs
 
@@ -31,7 +31,7 @@ Values of each SparseTensor.It's a dynamic input.
 - shapes: A list with the same length as "indices" of 1D tensor objects of type int64.
 Shapes of each SparseTensor.It's a dynamic input.
 - dense_inputs: A list of 2D tensor objects of type int64 or string.
-Columns represented by dense tensor .It's a dynamic input. 
+Columns represented by dense tensor .It's a dynamic input.
 
 ## Outputs
 
@@ -65,4 +65,4 @@ Compatible with the TensorFlow operator SparseCross.
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

@@ -15,7 +15,7 @@ REG_OP(CondTake)
 
 ## Brief
 
-Take elements from data if specific condition is satisfied on mask. 
+Take elements from data if specific condition is satisfied on mask.
 
 ## Inputs
 
@@ -48,4 +48,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

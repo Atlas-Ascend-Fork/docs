@@ -17,16 +17,16 @@ Calculate the reversed outputs of the function "soft_shrink".
 
 Two inputs, including:
 - input_grad: A tensor. The shape should be within the range of 0D to 8D. Must be one of the following types:
-    float16, float32, bfloat16. 
+    float16, float32, bfloat16.
 - input_x: A tensor of the same dtype and shape as "input_grad". The shape should be within the range of 0D to 8D.
 
 ## Outputs
 
-output_y: A Tensor of the same dtype and shape as "input_grad". The shape should be within the range of 0D to 8D. 
+output_y: A Tensor of the same dtype and shape as "input_grad". The shape should be within the range of 0D to 8D.
 
 ## Attributes
 
-lambd: An optional float. Defaults to 0.5. lambd should be greater or equal to 0. 
+lambd: An optional float. Defaults to 0.5. lambd should be greater or equal to 0.
 
 ## Data Types
 
@@ -38,9 +38,9 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator SoftShrinkGrad. 
+Compatible with the Pytorch operator SoftShrinkGrad.
 
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

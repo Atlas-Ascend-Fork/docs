@@ -16,11 +16,11 @@ REG_OP(LayerNorm)
 
 ## Brief
 
-Layernorm operator interface implementation 
- calculating: x, gamma, beta 
- mean  = np.mean(x, reduce_axis, keepdims=True) 
- variance = np.mean(np.power((x - mean),2), reduce_axis, keepdims=True) 
- y = gamma*((x - mean) / np.sqrt(variance + epsilon)) + beta
+Layernorm operator interface implementation
+ calculating: x, gamma, beta
+ mean  = np.mean(x, reduce_axis, keepdims=True)
+ variance = np.mean(np.power(x - mean),2), reduce_axis, keepdims=True)
+ y = gamma*(x - mean) / np.sqrt(variance + epsilon)) + beta
 
 ## Inputs
 
@@ -30,7 +30,7 @@ The shape is [A1,...,Ai,R1,...,Rj].
 - gamma: A ND Tensor. Must be one of the following dtypes: float16, float32, bfloat16.
 Has the same dtype and shape as beta. The shape is [R1,...,Rj].
 - beta: A ND Tensor. Must be one of the following dtypes: float16, float32, bfloat16.
-Has the same dtype and shape as gamma. The shape is [R1,...,Rj]. 
+Has the same dtype and shape as gamma. The shape is [R1,...,Rj].
 
 ## Outputs
 
@@ -64,4 +64,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

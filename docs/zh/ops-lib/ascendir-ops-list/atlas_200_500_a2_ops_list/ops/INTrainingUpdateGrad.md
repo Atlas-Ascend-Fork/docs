@@ -2,8 +2,8 @@
 
 ```c
 REG_OP(INTrainingUpdateGrad)
-    .INPUT(dy, TensorType({DT_FLOAT16, DT_FLOAT}))
-    .INPUT(x, TensorType({DT_FLOAT16, DT_FLOAT}))
+    .INPUT(dy, TensorType({DT_FLOAT16,DT_FLOAT}))
+    .INPUT(x, TensorType({DT_FLOAT16,DT_FLOAT}))
     .INPUT(variance, TensorType({DT_FLOAT}))
     .INPUT(mean, TensorType({DT_FLOAT}))
     .OUTPUT(res_gamma, TensorType({DT_FLOAT}))
@@ -13,25 +13,20 @@ REG_OP(INTrainingUpdateGrad)
 
 ## Brief
 
-The first (reduce-over-spatial) stage of InstanceNorm training backward.
-For each (N, C) instance it normalizes x with the given mean/variance and reduces
-dy*x_norm and dy over the spatial dimensions (keepdims). It does NOT reduce over N
-(that is the job of the downstream op INTrainingUpdateGradGammaBeta).
+Performs the backpropagation of InstanceNorm.
 
 ## Inputs
 
 Four inputs, including:
-- dy: A tensor with the full spatial dims. Must be one of the following types: float16, float32.
-6D with format NDC1HWC0.
-- x: A tensor with the same dtype/format/shape as dy.
-- variance: An NDC1HWC0 tensor of type float32, per-instance variance, spatial dims are 1.
-- mean: An NDC1HWC0 tensor of type float32, per-instance mean, spatial dims are 1.
+- dy: A 4D tensor of type float16 or float32, for the gradient, format [NCHW, NHWC].
+- x: A 4Dtensor of type float16 or float32, format [NCHW, NHWC].
+- variance: A 4D tensor of type float32, for the variance of "x", format [NCHW, NHWC] and HW=1.
+- mean: A 4D tensor of type float32, for the mean of "x", format [NCHW, NHWC] and HW=1.
 
 ## Outputs
 
-Two outputs, including:
-- res_gamma: An NDC1HWC0 tensor of type float32, equals sum_over_spatial(dy * x_norm), spatial dims are 1.
-- res_beta: An NDC1HWC0 tensor of type float32, equals sum_over_spatial(dy), spatial dims are 1.
+- res_gamma: A 4D tensor of type float32, format [NCHW, NHWC] and HW=1.
+- res_beta: A 4D tensor of type float32, format [NCHW, NHWC] and HW=1.
 
 ## Data Types
 
@@ -47,4 +42,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas 200&500 A2 Inference Product)](../README.md)
+[Back to Operator Specifications (Atlas 200I/500 A2 inference products)](../README.md)

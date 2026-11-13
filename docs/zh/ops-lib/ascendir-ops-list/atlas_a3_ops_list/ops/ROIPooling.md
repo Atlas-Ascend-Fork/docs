@@ -15,7 +15,7 @@ REG_OP(ROIPooling)
 
 ## Brief
 
-Performs Region of Interest (ROI) Pooling . 
+Performs Region of Interest (ROI) Pooling .
 
 ## Inputs
 
@@ -31,12 +31,12 @@ roi_max_num must be less than or equal to 6000 and must be divided by 16.
 The input data of the rois cannot exceed the width and height range of the x,
 otherwise, the accuracy of the output result may not be as expected.
 - roi_actual_num: A  optional tensor of type int32, with shape [batch, 8], specifying
-the number of ROIs per batch . 
+the number of ROIs per batch .
 
 ## Outputs
 
 y: A tensor of type float16 or float32, describing the result
-feature map . 
+feature map .
 
 ## Attributes
 
@@ -47,7 +47,7 @@ than 0.
 - spatial_scale_h: An required scaling factor for mapping the input
 coordinates of height to the ROI coordinates.
 - spatial_scale_w: An required scaling factor for mapping the input
-coordinates of width to the ROI coordinates . 
+coordinates of width to the ROI coordinates .
 
 ## Data Types
 
@@ -88,4 +88,4 @@ It is a custom operator. It has no corresponding operator in Caffe.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

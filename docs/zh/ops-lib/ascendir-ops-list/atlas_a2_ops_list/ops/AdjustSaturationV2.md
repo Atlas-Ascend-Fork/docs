@@ -26,11 +26,11 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - This operator will be deprecated in the future.
 - Input images is a tensor of at least 3 dimensions. The last dimension is
-interpretted as channels, and must be three . 
+interpretted as channels, and must be three .
 @ Third-party framework compatibility
 Compatible with Pytorch AdjustSaturation operator.
 
 
 ---
 
-[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A2 products)](../README.md)

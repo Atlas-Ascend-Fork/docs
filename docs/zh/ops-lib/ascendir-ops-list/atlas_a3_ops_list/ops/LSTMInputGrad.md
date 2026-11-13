@@ -39,7 +39,7 @@ Must be one of the following types: float16, float32.
 - f:A 4D Tensor. Must be one of the following types: float16, float32.
 - o:A 4D Tensor. Must be one of the following types: float16, float32.
 - tanhct:A optional 4D Tensor.
-Must be one of the following types: float16, float32.  
+Must be one of the following types: float16, float32.
 
 ## Outputs
 
@@ -74,4 +74,4 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

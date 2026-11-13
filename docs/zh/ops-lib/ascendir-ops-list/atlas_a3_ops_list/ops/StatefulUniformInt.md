@@ -19,7 +19,7 @@ The lower bound `minval` is included in the range, while the upper bound
 `maxval` is excluded.
 The random integers are slightly biased unless `maxval - minval` is an exact
 power of two.  The bias is small for values of `maxval - minval` significantly
-smaller than the range of the output (either `2^32` or `2^64`) . 
+smaller than the range of the output (either `2^32` or `2^64`) .
 
 ## Inputs
 
@@ -31,7 +31,7 @@ smaller than the range of the output (either `2^32` or `2^64`) .
 
 ## Outputs
 
-y:A Returns Random values with specified shape . 
+y:A Returns Random values with specified shape .
 
 ## Data Types
 
@@ -51,4 +51,4 @@ Compatible with tensorflow StatefulUniformInt operator.
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

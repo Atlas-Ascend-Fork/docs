@@ -11,11 +11,11 @@ REG_OP(UnsortedSegmentSumD)
 
 ## Brief
 
-Computes the sum along segments of a tensor. 
-Computes a tensor such that (output[i] = sum_{j...} x[j...] where 
-the sum is over tuples j... such that segment_ids[j...] == i.If the sum 
-is empty for a given segment ID i, output[i] = 0 
-for example:x = [[0,1,2],[3,4,5],[6,7,8]], segment_ids = [0,0,4] num_segments = 5 
+Computes the sum along segments of a tensor.
+Computes a tensor such that (output[i] = sum_{j...} x[j...] where
+the sum is over tuples j... such that segment_ids[j...] == i.If the sum
+is empty for a given segment ID i, output[i] = 0
+for example:x = [[0,1,2],[3,4,5],[6,7,8]], segment_ids = [0,0,4] num_segments = 5
 output[0] = [3, 5, 7]
 output[1] = [0, 0, 0]
 output[2] = [0, 0, 0]
@@ -45,4 +45,4 @@ Compatible with the TensorFlow operator UnsortedSegmentSum.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)

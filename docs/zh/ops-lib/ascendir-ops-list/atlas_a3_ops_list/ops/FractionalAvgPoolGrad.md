@@ -26,11 +26,11 @@ int32, int64. 4-D with shape [batch, height, width, channels].
 
 ## Outputs
 
-y: A Tensor. Has the same type as out_backprop. 
+y: A Tensor. Has the same type as out_backprop.
 
 ## Attributes
 
-overlapping: An optional bool. Defaults to False. 
+overlapping: An optional bool. Defaults to False.
 
 ## Data Types
 
@@ -53,4 +53,4 @@ The implementation for FractionalAvgPoolGrad on Ascend uses AICPU, with bad perf
 
 ---
 
-[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)
+[Back to Operator Specifications (Atlas A3 products)](../README.md)

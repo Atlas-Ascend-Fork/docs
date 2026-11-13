@@ -9,7 +9,7 @@ REG_OP(IsVariableInitialized)
 
 ## Brief
 
-Checks whether a tensor has been initialized. Outputs boolean scalar indicating whether the tensor has been initialized . 
+Checks whether a tensor has been initialized. Outputs boolean scalar indicating whether the tensor has been initialized .
 
 ## Inputs
 
@@ -17,7 +17,7 @@ x: A Tensor of type float16, float32, double, bool, int8, uint8, uint16, int16, 
 
 ## Outputs
 
-y: A tensor, indicating whether "x" has been initialized . 
+y: A tensor, indicating whether "x" has been initialized .
 
 ## Third-party framework compatibility
 
@@ -26,4 +26,4 @@ Compatible with the TensorFlow operator IsVariableInitialized.
 
 ---
 
-[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
+[Back to Operator Specifications (Atlas inference products)](../README.md)

@@ -14,11 +14,11 @@ Forwards the input to the output. This op represents the loop
 
 ## Inputs
 
-x: A boolean scalar. The condition of the Switch op . 
+x: A boolean scalar. The condition of the Switch op .
 
 ## Outputs
 
-y: The tensor "x" . 
+y: The tensor "x" .
 @see Switch()
 
 ## Third-party framework compatibility
@@ -28,4 +28,4 @@ Compatible with the TensorFlow operator LoopCond.
 
 ---
 
-[Back to Operator Specifications (Atlas Training Series Product)](../README.md)
+[Back to Operator Specifications (Atlas training products)](../README.md)
