@@ -2,9 +2,9 @@
 
 1. Dump算子信息。
 
-    算子调优前，需要先获取模型中算子信息统计文件（\*.json），包括算子的shape、dtype、format等信息。目前支持两种方式Dump算子json文件，请根据实际情况选择合适的方式。
+    算子调优前，需要先获取模型中算子信息统计文件（\*.json），包括算子的shape、dtype、format等信息。目前支持两种方式Dump算子信息统计文件，请根据实际情况选择合适的方式。
 
-    - **使用PyTorch的Python接口编程时**，可通过Ascend PyTorch Profiler接口dump算子json文件，具体介绍参见《[性能调优工具](https://hiascend.com/document/redirect/CannCommunityToolProfiling)》中“性能数据其他采集方式 \> Ascend PyTorch Profiler”。
+    - **使用PyTorch的Python接口编程时**，可通过Ascend PyTorch Profiler接口dump算子信息统计文件，具体介绍参见《[性能调优工具](https://hiascend.com/document/redirect/CannCommunityToolProfiling)》中“性能数据其他采集方式 \> Ascend PyTorch Profiler”。
 
         1. 在训练前，开启扩展参数experimental\_config中“算子信息统计功能”，即参数**record\_op\_args**置为True。
 
@@ -40,14 +40,14 @@
     ```
 
     > **说明：**
-    > - 算子编译工具提供了**--count**参数和-p参数配合使用，用于统计-p参数指定的目录下算子信息统计json文件的数目。
+    > - 算子编译工具提供了`--count`参数和-p参数配合使用，用于统计-p参数指定的目录下算子信息统计文件的数目。
     >   样例如下：
     >
     >   ```bash
     >   op_compiler -p <dump_dir> --count
     >   ```
     >
-    >   只有动态shape才能dump出算子统计信息，安装静态Kernel包后，静态Kernel包对应算子的统计信息就不会dump出来。所以在安装静态Kernel包后，如果网络有调整，可以通过调整前后dump的json文件的数量来判断静态Kernel包和当前网络是否匹配。
+    >   只有动态shape才能dump出算子信息统计文件，安装静态Kernel包后，静态Kernel包对应算子的统计信息就不会dump出来。所以在安装静态Kernel包后，如果网络有调整，可以通过调整前后dump的json文件的数量来判断静态Kernel包和当前网络是否匹配。
     >   通过调整网络前后，各执行一次dump操作，并通过`--count`命令来统计dump生成的json文件的数目，如果调整后的数目比调整前
     >   大，则说明静态Kernel包中有部分算子不再匹配当前网络，此时开发者可以：
     >

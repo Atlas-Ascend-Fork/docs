@@ -37,9 +37,9 @@
 
 **图 1**  使用静态Kernel提升性能的原理图
 
-![fig1](../figures/staticKernel_flowchart.png "使用静态Kernel提升性能的原理图")
+![使用静态Kernel提升性能的原理图](../figures/staticKernel_flowchart.png "使用静态Kernel提升性能的原理图")
 
-通过编译静态Kernel提升网络模型中算子执行性能的基本流程如上图所示，整个调优步骤如下：
+通过编译静态Kernel提升网络模型中算子执行性能的基本流程如图1所示，整个调优步骤如下：
 
 1. Dump算子信息。
 

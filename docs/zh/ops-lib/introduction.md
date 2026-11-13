@@ -26,7 +26,7 @@ CANN内置算子的源码已在GitCode [CANN>算子库](https://gitcode.com/cann
 
 **图 1**  算子库架构图 <a id="fig1"></a>
 
-![fig1](figures/ops_lib_architecture.png "算子库架构图")
+![算子库架构图](figures/ops_lib_architecture.png "算子库架构图")
 
 ## 什么是算子和算子接口
 
@@ -57,7 +57,7 @@ CANN算子支持如下调用方式，请根据实际情况选择：
 <!-- npu="950,A3,910b,910,310p,310b" id5 -->
 **图 2**  aclnn API调用流程 <a id="fig2"></a>
 
-![fig2](figures/aclnn_call_flowchart.png "aclnn调用流程")
+![aclnn调用流程](figures/aclnn_call_flowchart.png "aclnn调用流程")
 <!-- end id5 -->
 
 ## 使用向导
@@ -122,7 +122,7 @@ CANN算子支持如下调用方式，请根据实际情况选择：
     <!-- end id6 -->
 
     <!-- npu="IPV350" id7 -->
-    **表 1**  算子列表（IPV350）
+    **表 2**  算子列表（IPV350）
 
     <table><thead>
       <tr>

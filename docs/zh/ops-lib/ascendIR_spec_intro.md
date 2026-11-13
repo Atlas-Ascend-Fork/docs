@@ -16,7 +16,7 @@
 ## Format
 
 - ND：表示支持任意格式，仅Square、Tanh等单输入、对张量自身做逐元素处理的算子可放心使用，其它算子需谨慎评估后使用。
-- NC1HWC0：自研的5维数据格式，其中，C0与微架构强相关，该值等于cube单元的size，例如16；C1是将C维度按照C0切分：C1=C/C0，若结果不整除，最后一份数据需要padding到C0。
+- NC1HWC0：自研的5维数据格式，其中，C0与微架构强相关，该值等于Cube单元的size，例如16；C1是将C维度按照C0切分：C1=C/C0，若结果不整除，最后一份数据需要padding到C0。
 - FRACTAL\_Z：卷积权重的格式。
 
 ## TensorType
@@ -123,7 +123,7 @@ struct TensorType {
 如下针对确定性计算特性的算子，如果所列算子不在对应的规格清单中，则说明当前芯片版本不支持该算子。
 
 - 如下算子涉及但未支持确定性计算：
-  - resizegradD
+  - ResizeGradD
   - WeightQuantBatchMatmulV2
 
 - 如下算子涉及且已支持确定性计算：
