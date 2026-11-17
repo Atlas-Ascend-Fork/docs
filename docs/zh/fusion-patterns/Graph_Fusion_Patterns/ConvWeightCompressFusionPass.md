@@ -17,7 +17,7 @@ Cube类算子支持Conv2D、FullyConnection、MatMulV2。
 首节点（Conv2D/FullyConnection/MatMulV2）需要满足如下条件。
 
 - 索引为0的输入的dtype必须是int8或者uint8。
-- 需要支持AICore。
+- 需要支持AI Core。
 - 不支持groups大于1 。
 - 需要支持权重压缩或四选二结构化稀疏。
 

@@ -30,7 +30,7 @@
 - AddRmsNorm x1的数据类型仅支持float16和bfloat16，且x1的shape尾轴需32B对齐。
 - 融合前的AddRmsNorm不输出rstd。
 - 融合后的AddRmsNormQuant不输出y2。
-- 融合前后的输入scales、zero\_points中的元素个数须与输入gamma保持一致。当融合前输入gamma的shape维度与scales或者zero\_point的不一致时，建议使用场景二进行融合。
+- 融合前后的输入scales、zero\_points中的元素个数须与输入gamma保持一致。当融合前输入gamma的shape维度与scales或者zero\_points的不一致时，建议使用场景二进行融合。
 
 ## 支持的型号
 

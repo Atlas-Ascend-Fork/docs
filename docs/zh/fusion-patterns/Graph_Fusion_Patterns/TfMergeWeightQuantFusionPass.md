@@ -2,7 +2,7 @@
 
 ## 融合模式
 
-量化场景，在下列图结构中，对于匹配到的Cube类算子（包括Conv2D/DepthwiseConv2D/Conv3D/Deconvolution/Conv2DTransposeD/MatMulV2/BatchMatMulV2），做如下图中处理。
+量化场景，在下列图结构中，对于匹配到的Cube类算子（包括Conv2D/DepthwiseConv2D/Conv3D/Deconvolution/Conv2DTransposeD/MatMulV2/BatchMatMulV2），做如下处理。
 
 如果AscendWeightQuant存在输入节点是sub时，则将Sub融合。
 
@@ -38,7 +38,7 @@
 
 融合条件存在AscendWeightQuant算子时，AscendWeightQuant算子需要至少两个输入。
 
-split的输出需要和concat的输入数量需要一致，同时split的输出需要接concat的输入。
+split的输出和concat的输入数量需要一致，同时split的输出需要接concat的输入。
 
 ## 支持的型号
 

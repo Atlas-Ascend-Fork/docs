@@ -30,7 +30,7 @@ Atlas inference products
 
 <!-- npu="910" id5 -->
 Atlas training products
-<!-- end id5 -->Atlas training products
+<!-- end id5 -->
 
 <!-- npu="910b" id1 -->
 Atlas A2 training products/Atlas A2 inference products

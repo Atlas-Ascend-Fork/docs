@@ -19,7 +19,7 @@
     - 仅支持静态场景。
     - Elemwise1必须存在且数量为1。
     - CommReduce必须存在且数量为1。
-    - Elemwise2、Elemwise3数量可以不存在，最多分别不超过5个。
+    - Elemwise2、Elemwise3可以不存在，数量最多分别不超过5个。
     - Elemwise2、Elemwise3不支持为多输入节点。
 
 - **模式二的约束如下：**

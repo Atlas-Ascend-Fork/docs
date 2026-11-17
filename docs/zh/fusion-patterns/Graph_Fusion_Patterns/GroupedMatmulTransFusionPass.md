@@ -35,7 +35,7 @@ Ascend 950PR&950DT系列产品
 
 ![](../figures/GroupedMatmulTransFusionPass_5.png)
 
-融合模式四：Ascend 950PR&950DT系列产品的MX/GB量化场景下，融合模式是：将Transpose或TransposeD从图中删除，并将x和weight的转置信息打在算子属性上。如下图所示：
+融合模式四：Ascend 950PR&950DT系列产品的MX/GB量化场景下，将Transpose或TransposeD从图中删除，并将x和weight的转置信息打在算子属性上。如下图所示：
 
 ![](../figures/GroupedMatmulTransFusionPass_6.png)
 

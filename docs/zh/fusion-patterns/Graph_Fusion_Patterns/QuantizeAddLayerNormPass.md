@@ -10,7 +10,7 @@
 
 ![](../figures/QuantizeAddLayerNormPass_2.png)
 
-场景3：在Ascend 950PR&950DT系列产品产品平台下，将AddLayerNorm算子和其后面链接的1个或2个Quantize或AscendQuantV2算子融合为AddLayerNormQuant算子
+场景3：在Ascend 950PR&950DT系列产品平台下，将AddLayerNorm算子和其后面连接的1个或2个Quantize或AscendQuantV2算子融合为AddLayerNormQuant算子
 
 ![](../figures/QuantizeAddLayerNormPass_3.png)
 

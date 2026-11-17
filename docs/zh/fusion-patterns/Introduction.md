@@ -18,7 +18,7 @@
 - 在某些算子的数学计算量可以进行优化的情况下，可以进行图融合，融合后可以节省计算时间。例如：conv+biasAdd，可以融合为一个算子，直接在L0C中完成累加，从而省去add的计算过程。
 - 在融合后的计算过程中可以通过硬件指令加速的情况下，可以进行图融合，融合后能够加速。例如：conv+biasAdd的累加过程，就是通过L0C中的累加功能进行加速的，可以通过图融合完成。
 
-图融合方式包括：图融合、图拆分融合。
+图融合方式包括：图融合、拆分融合。
 
 - 图融合：对图上算子进行数学相关的融合，将多个算子融合为一个或者几个算子，该融合与硬件无关。
 
@@ -162,7 +162,7 @@ UB即AI处理器上的Unified Buffer，UB融合是对图上算子进行硬件UB�
 
     **cat \* |grep "Run buffer fusion pass successfully, pass name"**
 
-    输出信息示例如下。日志中打印的融合规则顺序即为它们的实际执行顺序，如下融合规则是否生效请查看fusion\_result.json。
+    输出信息示例如下。日志中打印的融合规则顺序即为它们的实际执行顺序，融合规则是否生效请查看fusion\_result.json。
 
     ```text
     [INFO] FE(2018559,tc_ge_irrun_static_ifa_0003.bin):2025-06-09-09:55:36.632.602 [buffer_fusion.cc:135]2018968 RunRegisterBufferFusionPass:"Run buffer fusion pass successfully, pass name:TbeAippConvReluMaxpoolingFusion."

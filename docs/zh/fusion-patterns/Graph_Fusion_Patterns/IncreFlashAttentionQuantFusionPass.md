@@ -2,7 +2,7 @@
 
 ## 融合模式
 
-量化场景，将IncreFlashAttention+AscendQuant融合为IncreFlashAttention算子，quant的scale和offset转化为ifa的quant\_scale2和quant\_offset2入参。
+量化场景，将IncreFlashAttention+AscendQuant融合为IncreFlashAttention算子，quant的scale和offset转换为ifa的quant\_scale2和quant\_offset2入参。
 
 ![](../figures/IncreFlashAttentionQuantFusionPass_1.png)
 

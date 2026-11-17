@@ -2,7 +2,7 @@
 
 ## 融合模式
 
-针对如下图中的结构时，将卷积算子Input1的shape和format配置为输出的shape和format。
+针对如下图中的结构，将卷积算子Input1的shape和format配置为输出的shape和format。
 
 ![](../figures/ConvFormatRefreshFusionPas_1.png)
 

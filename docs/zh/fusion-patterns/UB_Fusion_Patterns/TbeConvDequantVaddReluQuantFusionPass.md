@@ -35,7 +35,7 @@
 - vadd节点必须是Add算子。
 - 在如下场景不要求readselect算子节点存在：
     - 融合pass匹配的节点中存在relu节点。
-    - 出现多路Conv+Dequant节点，此时存在其他支路上Conv节点的Cin大于已匹配Conv节点的Cin，此时会重新匹配Cin更大的Conv+Dequant分支。
+    - 出现多路Conv+Dequant节点，此时存在其他支路上Conv节点的Cin大于已匹配Conv节点的Cin，会重新匹配Cin更大的Conv+Dequant分支。
 
 ## 支持的型号
 

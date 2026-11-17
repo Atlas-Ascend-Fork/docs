@@ -2,7 +2,7 @@
 
 ## 融合模式
 
-该融合将满足DX+ElementWise+ElementWise1（可选）进行UB融合。
+该融合将DX+ElementWise+ElementWise1（可选）进行UB融合。
 
 ![](../figures/TbeConv2DBackpropElemwiseFusionPass_1.png)
 

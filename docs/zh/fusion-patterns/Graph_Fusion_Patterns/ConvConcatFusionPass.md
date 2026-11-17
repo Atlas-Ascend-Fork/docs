@@ -41,11 +41,11 @@ concat算子包括ConcatD/ConcatV2D，Conv2D算子包括Conv2D/Conv2D\_Compress�
 
 ![](../figures/ConvConcatFusionPass_5.png)
 
-场景六：AIcore中cube和vector不分离时，不需要做mish融合。
+场景六：AI Core中cube和vector不分离时，不需要做mish融合。
 
 ![](../figures/ConvConcatFusionPass_6.png)
 
-场景七：AIcore中cube和vector分离时，需要做mish融合。
+场景七：AI Core中cube和vector分离时，需要做mish融合。
 
 ![](../figures/ConvConcatFusionPass_7.png)
 
@@ -71,25 +71,25 @@ concat算子包括ConcatD/ConcatV2D，Conv2D算子包括Conv2D/Conv2D\_Compress�
 
 ![](../figures/ConvConcatFusionPass_12.png)
 
-场景六：AIcore中cube和vector不分离时，还有如下场景。
+场景六：AI Core中cube和vector不分离时，还有如下场景。
 
 ![](../figures/ConvConcatFusionPass_13.png)
 
 **子图中存在Dequant且不存在Quant时，有如下场景**
 
-场景一：AIcore中cube和vector不分离时，不需要做mish融合。
+场景一：AI Core中cube和vector不分离时，不需要做mish融合。
 
 ![](../figures/ConvConcatFusionPass_14.png)
 
-场景二：AIcore中cube和vector分离且至少一个分支存在mish算子时，需要做mish融合。
+场景二：AI Core中cube和vector分离且至少一个分支存在mish算子时，需要做mish融合。
 
 ![](../figures/ConvConcatFusionPass_15.png)
 
-**子图中存在Dequant和Quant，AIcore中cube和vector分离或不分离时，都存在如下场景**
+**子图中存在Dequant和Quant，AI Core中cube和vector分离或不分离时，都存在如下场景**
 
 ![](../figures/ConvConcatFusionPass_16.png)
 
-**子图中存在Dequant和Quant且AIcore中cube和vector不分离时，还有如下场景。**
+**子图中存在Dequant和Quant且AI Core中cube和vector不分离时，还有如下场景。**
 
 ![](../figures/ConvConcatFusionPass_17.png)
 

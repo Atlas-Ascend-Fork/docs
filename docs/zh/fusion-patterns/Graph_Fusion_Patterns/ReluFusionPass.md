@@ -30,7 +30,7 @@ Atlas推理系列产品
 
 <!-- npu="910" id5 -->
 Atlas训练系列产品
-<!-- end id5 -->Atlas训练系列产品
+<!-- end id5 -->
 
 <!-- npu="910b" id1 -->
 Atlas A2系列产品

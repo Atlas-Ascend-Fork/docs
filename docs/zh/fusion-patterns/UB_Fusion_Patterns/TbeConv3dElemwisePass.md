@@ -26,7 +26,7 @@
 
 1. 融合两个Elemwise算子，第一个只支持Add，第二个只支持Relu。
 2. 融合一个Elemwise算子，并且Elemwise算子还有另外一路输入，Elemwise算子类型没有约束，并且支持AscendDequant和AscendRequant。
-3. 融合一个Elemwise算子，Elemwise算子仅一路输入无其他输入，该场景只支持Relu。.
+3. 融合一个Elemwise算子，Elemwise算子仅一路输入无其他输入，该场景只支持Relu。
 4. 融合三个Elemwise算子，第一个只支持AscendDequant，第二个只支持Add，第三个只支持Relu。该场景仅支持Atlas推理系列产品。
 
 ## 支持的型号

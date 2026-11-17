@@ -15,7 +15,7 @@
 
 - 数据格式和shape约束：
   - input0、input1的shape必须是4D\~8D。
-  - input0和input1的shape最后两位必须是16，且数据格式为NZ。
+  - input0和input1的shape最后两维必须是16，且数据格式为NZ。
   - input2的类型必须是scalar。
 
 - 不支持动态shape场景。

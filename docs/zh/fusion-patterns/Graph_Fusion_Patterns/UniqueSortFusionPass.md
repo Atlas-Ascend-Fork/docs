@@ -4,7 +4,7 @@
 
 将Unique或UniqueWithCount算子拆分为Sort+AdjacentDifference+Cumsum+Scatter+UniqueConsecutive算子的组合以完成计算。
 
-拆分前的Unique/UniqueWithCount算子为aicpu算子，拆分后的Sort、AdjacentDifference、Cumsum、Scatter和UniqueConsecutive五个算子均为aicore算子。
+拆分前的Unique/UniqueWithCount算子为AI CPU算子，拆分后的Sort、AdjacentDifference、Cumsum、Scatter和UniqueConsecutive五个算子均为AI Core算子。
 
 场景一：
 

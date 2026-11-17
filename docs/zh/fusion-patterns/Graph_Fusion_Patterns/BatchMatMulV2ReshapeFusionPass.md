@@ -40,7 +40,7 @@
 
 ## 使用约束
 
-- 融合节点为BatchMatmulV2、MatMulV2、MatMul的其中一种。
+- 融合节点为BatchMatMulV2、MatMulV2、MatMul的其中一种。
 - 输入不支持INT4/INT8数据类型。
 - 针对输入optype为BatchMatMulV2时，比如满足左矩阵为3维且右矩阵为2维。
 - 针对输入optype为MatMulV2时，仅支持输入节点的左输入dtype为fp16。

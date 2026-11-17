@@ -2,7 +2,7 @@
 
 ## 融合模式
 
-量化场景，将BatchMatMul/MatMul +AscendDequant + Elemwise融合为BatchMatMul算子，Elemwise算子broadcast到MatMul上。
+量化场景，将BatchMatMul/MatMul+AscendDequant+Elemwise融合为BatchMatMul算子，Elemwise算子broadcast到MatMul上。
 
 ![](../figures/BatchMatMulDequantElemwiseFusionPass_1.png)
 

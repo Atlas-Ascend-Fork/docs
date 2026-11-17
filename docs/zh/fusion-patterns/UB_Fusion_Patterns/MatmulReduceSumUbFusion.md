@@ -8,7 +8,7 @@
 
 ## 使用约束
 
-- BatchMatMul的输入都有且都不为1，输出为1维。
+- BatchMatMul的输入都不为1，输出为1维。
 - ReduceSum的输出为float32类型，keep\_dim为false。
 - BatchMatMul类型支持BatchMatMul和BatchMatMulV2。
 - BatchMatMul输入数据shape不超过三维，且三维时输入数据的第0维不能是1且不能超过uint16\_t的最大值。

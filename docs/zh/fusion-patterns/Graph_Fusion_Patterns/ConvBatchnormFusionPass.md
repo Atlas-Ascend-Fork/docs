@@ -2,7 +2,7 @@
 
 ## 融合模式
 
-该融合将Conv2d+batchnorm或者Conv3d+batchnorm融合为一个融合算子；当batchnorm为2个输入时，在这种情况下，会将DepthwiseConv2d+batchnorm融合为一个融合算子。
+该融合将Conv2d+batchnorm或者Conv3d+batchnorm融合为一个融合算子；当batchnorm为2个输入时，会将DepthwiseConv2d+batchnorm融合为一个融合算子。
 
 ![](../figures/ConvBatchnormFusionPass_1.png)
 
