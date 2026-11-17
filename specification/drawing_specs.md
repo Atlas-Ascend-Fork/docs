@@ -10,7 +10,7 @@
 
 本文档针对CANN组织下开源项目的**技术绘图**制定了统一的绘图规范，涵盖了字体、色彩、线条与箭头、图形节点以及层级嵌套等要求，旨在确保所有配图风格一致、清晰美观、易于理解。
 
-开发者在为CANN文档绘制配图前，请务必阅读并遵循本规范。配色、节点、线条与箭头等绘图元素可参考[绘图模板](../writing_template/drawing_template.xml)（以draw.io绘图工具为例）。欢迎随时提出改进建议。
+开发者在为CANN文档绘制配图前，请务必阅读并遵循本规范。配色、节点、线条与箭头等绘图元素可参考[绘图模板](../writing_template/drawing_template_drawio.xml)（以draw.io绘图工具为例）。欢迎随时提出改进建议。
 
 > [!NOTE]说明
 > 绘图模板仅用于展示符合本规范的图形示例，模板中的图例仅供参考，不保证与当前业务实现完全一致，请以实际业务场景为准。
@@ -54,17 +54,17 @@
 
 - 线、边框等使用规范：推荐参数如下（以draw.io中配置为例），线条宽度0.75pt，线条与边框颜色统一使用<span style="display:inline-block;width:14px;height:14px;background:#686D75;vertical-align:-2px"></span> #686D75。
 
-- 箭头使用规范：线条宽度0.75pt，色值选择、箭头类型、箭头大小请参考[绘图模板](../writing_template/drawing_template.xml)中的配置。
+- 箭头使用规范：线条宽度0.75pt，色值选择、箭头类型、箭头大小请参考[绘图模板](../writing_template/drawing_template_drawio.xml)中的配置。
 
 ## 图形节点规范
 
-- 节点文字字号为14px，居中对齐于色块。默认节点文字色值为<span style="display:inline-block;width:14px;height:14px;background:#202329;vertical-align:-2px"></span> #202329，突出节点文字色值为<span style="display:inline-block;width:14px;height:14px;background:#FFFFFF;border:1px solid #E0E2E6;vertical-align:-2px"></span> #FFFFFF（白色），节点高度32px，默认宽度140px，宽度可随实际场景设定，建议按照40px的数值梯度递增，例如60（最小尺寸）、100、140、180、220……节点间距建议使用8的倍数，例如8px、16px、24px、32px等，特殊情况最小可以选用4px，具体根据实际场景而定，原则上保证节点宽度和节点间距的整体和谐。
+- 节点文字字号为14px，居中对齐于色块。默认节点文字色值为<span style="display:inline-block;width:14px;height:14px;background:#202329;vertical-align:-2px"></span> #202329，突出节点文字色值为<span style="display:inline-block;width:14px;height:14px;background:#FFFFFF;border:1px solid #E0E2E6;vertical-align:-2px"></span> #FFFFFF（白色）。节点高度32pt，默认宽度148pt，宽度可随实际场景设定，原则上保证节点宽度和节点间距的整体和谐。
 
-- 流程色块均采用4px圆角，判断和返回以及数据类型流程色块对应不同色值，具体色值参考[绘图模板](../writing_template/drawing_template.xml)。
+- 流程色块均采用4px圆角，判断和返回以及数据类型流程色块对应不同色值，具体色值参考[绘图模板](../writing_template/drawing_template_drawio.xml)。
 
-- 组件容器采用自适应宽度与高度，一般不超过1000px的宽度，如有需要可根据自身业务场景做变动。保持内容主体的同时，可以增加四周的留白空间，比如左右增加80px，上下增加40px。
+- 组件容器采用自适应宽度与高度，一般不超过1000pt的宽度，如有需要可根据自身业务场景做变动。保持内容主体的同时，可以增加四周的留白空间，比如上下增加40pt。
 
-- 组件图片容器宽度分为大、中、小三种尺寸，分别为920px、600px和300px。
+- 组件图片容器宽度分为大、中、小三种尺寸，分别为920pt、600pt和300pt。
 
 ![图形节点示例](figures/graph_node_example.png)
 
