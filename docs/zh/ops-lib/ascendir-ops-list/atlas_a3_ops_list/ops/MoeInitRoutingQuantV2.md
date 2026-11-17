@@ -41,7 +41,7 @@ compute init routing quant for moe input.
            to be a 1D shape (1,) for the static quant scenario. The dynamic quant scene if not input, indicates
            that scale is not used in the calculation process; if a 2D Tensor is input, the shape is required to be
            (expertNum, H) or (1, H). Type is:Float32. Format support ND.
-- offset: An Optional Tensor. Indicates the offset value used to compute the result, it`s only used in the static
+- offset: An Optional Tensor. Indicates the offset value used to compute the result, it's only used in the static
             quant scenario, which is required to be a 1D shape (1,). Type is:Float32. Format support ND.
 
 ## Outputs
