@@ -1,4 +1,4 @@
-# Ascend Glossary<a name="EN-US_TOPIC_0000002210355753"></a>
+# Ascend Glossary
 
 ## A<a name="section251612594285"></a>
 

@@ -1,4 +1,4 @@
-# Ascend Product Overview<a name="EN-US_TOPIC_0000002503110208"></a>
+# Ascend Product Overview
 
 [Table 1](#en-us_topic_0000001687495573_table676317144018)  lists the major product series of Ascend AI products. For details about the products supported by each component, see the product support list in the corresponding component documentation.
 
