@@ -26,7 +26,7 @@ This section describes the latest changes to the CANN documentation.
       <td style="font-size:14px">1</td>
       <td style="font-size:14px">Quick installation guide</td>
       <td style="font-size:14px">Moved *CANN Quick Start* to "Environment Preparation" and renamed it to *CANN Installation*.</td>
-      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/en/cann/download?versionId=734&ids=d806%2Ch0501%2Ch0601%2Ch0702&currentTab=0">CANN Installation</a></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/en-sg/cann/download?versionId=731&ids=d806%2Ch0502%2Ch0601%2Ch0702">CANN Installation</a></td>
     </tr>
     <tr>
       <td style="font-size:14px">2</td>
