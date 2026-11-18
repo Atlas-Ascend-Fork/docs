@@ -2,6 +2,87 @@
 
 本文介绍了CANN文档的最新上线新增、变更动态，欢迎体验。
 
+## 9.1.0
+
+<table>
+  <colgroup>
+    <col style="width: 6%">
+    <col style="width: 18%">
+    <col style="width: 52%">
+    <col style="width: 24%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>序号</th>
+      <th>更新点</th>
+      <th>更新说明</th>
+      <th>相关文档</th>
+    </tr>
+  </thead>
+  <tbody style="font-size:14px">
+    <tr>
+      <td style="font-size:14px">1</td>
+      <td style="font-size:14px">CANN社区版和CANN商用版文档归一</td>
+      <td style="font-size:14px">取消原“CANN社区版”和“CANN商用版”两个独立文档入口，全部资料归集至统一文档入口“CANN”。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/index/index.html">CANN文档</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">2</td>
+      <td style="font-size:14px">重构Ascend C算子开发文档</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">优化“入门教程”章节：<ul><li style="font-size:14px">更新Ascend C学习路径。</li><li style="font-size:14px">新增异构系统和编程模型概括性描述。</li></ul></li><li style="font-size:14px">“编程指南”中SIMD编程模型章节进行优化调整，按照基于语言扩展层C API、基于Tensor的C++编程、基于Tpipe和TQue编程的维度进行分类。</li><li style="font-size:14px">“编程指南”新增高级编程 > SuperKernel、高级编程 > SIMT协作组章节。</li><li style="font-size:14px">对《Ascend C API》进行了大规模重构，变更点如下：<ul><li style="font-size:14px">对数据搬运API和矩阵计算API等进行了目录结构调整：相关性强的API放置在邻近位置，比如将矩阵计算相关的搬运接口放置在矩阵计算目录下。</li><li style="font-size:14px">按照场景进行API的目录结构组织：比如矩阵计算分为矩阵计算的搬入、Mmad计算、矩阵计算的搬出。</li><li style="font-size:14px">针对一类API增加必要的背景知识、概念原理介绍、通用的约束、关键特性等说明。</li><li style="font-size:14px">针对每一个API补充约束说明、参数特殊值相关说明。</li><li style="font-size:14px">新增API附录，附录中包含API流水类型汇总、理论性能汇总、接口边界值汇总等。</li></ul></li><li style="font-size:14px">新增Tensor API参考文档。Tensor API接口为试验接口，在后续版本中可能会调整或改进，不保证后续兼容性。请开发者在使用过程中关注后续版本更新。</li><li style="font-size:14px">新增矩阵计算概述和计算分形介绍的文档。</li><li style="font-size:14px">优化矢量计算API文档，补充指令约束等。</li><li style="font-size:14px">增加SIMD与SIMT混合编程性能优化概述。</li><li style="font-size:14px">搭建VitePress文档站点，提供AscendC资料预览功能。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/programug/Ascendcopdevg/docs/guide/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/Ascend-C%E6%A6%82%E8%BF%B0%E4%B8%8E%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84.md">Ascend C算子开发</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">3</td>
+      <td style="font-size:14px">新增CCU通信算子开发内容</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">新增“编程模型与概念 > CCU编程模型与概念”章节。</li><li style="font-size:14px">新增“通信算子开发 > CCU算子开发”章节。</li><li style="font-size:14px">通信算子开发API新增以下接口：<ul><li style="font-size:14px">控制面接口 > CCU Kernel生命周期与内存Token管理。</li><li style="font-size:14px">数据面接口 > CCU接口。</li></ul></li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/commlib/commopdev/docs/zh/comm_op_dev_guide/intro.md">通信算子开发</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">4</td>
+      <td style="font-size:14px">新增图开发Pass与SuperKernel内容</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">自定义Pass开发 > 使用自定义Pass修改Graph > 基于Pattern匹配实现Pass（Python）。</li><li style="font-size:14px">编程指南 > SuperKernel融合范围标定。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/programug/graphdevg/atlasag_25_0081.html">图开发</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">5</td>
+      <td style="font-size:14px">新增ATC命令行工具内容</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">接口参考 > Python语言接口 > pyatc接口：新增Python场景的ATC命令行工具。</li><li style="font-size:14px">图基础数据结构和接口 > options参数名说明 > ge.tiling_schedule_optimize：修改该参数级别，由原来global session级修改为all所有级别。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/API/ascendgraphapi/atlasgeapi_07_1058.html">GE图引擎 API</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">6</td>
+      <td style="font-size:14px">重构算子库文档</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">将历史版本中“算子库 > AI框架算子支持清单”章节独立出来，在当前版本新增《AI框架算子支持清单》手册。</li><li style="font-size:14px">新增“算子库 > 算子接口（torch_extension）”章节。</li><li style="font-size:14px">“算子接口（aclnn）”新增RAS类接口章节。</li><li style="font-size:14px">ops-cv库新增算子多平台迁移指南文档，指导开发者将算子从Atlas A2系列产品迁移至Ascend 950PR&950DT系列产品。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/API/aolapi/operatorlist_00001.html">算子库API</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">7</td>
+      <td style="font-size:14px">新增通信算子支持度清单</td>
+      <td style="font-size:14px">相关参考 > 通信算子支持度清单：新增“Ascend 950PR&950DT系列产品”支持度清单。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/commlib/hcclug/docs/zh/user_guide/hccl_intro.md">HCCL集合通信库</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">8</td>
+      <td style="font-size:14px">补充ATB构建与测试说明</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">新增测试框架指南，补充testframework编译运行依赖使用说明。</li><li style="font-size:14px">补充cxx_abi版本判断方法说明。</li><li style="font-size:14px">更新文档链接至CANN 9.1.0和PyTorch 26.0.0。</li><li style="font-size:14px">修正ATB_BUILD_DEPENDENCY_PATH及ABI判断说明，覆盖README/FAQ/测试框架指南。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/acce/ascendtb/ascendtb_0001.html">ATB加速库</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">9</td>
+      <td style="font-size:14px">补充ATC框架参数说明</td>
+      <td style="font-size:14px">参数说明--framework：补充说明Caffe框架在当前形态已不再演进，转模型不保证可用性的说明。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/devaids/atctool/atlasatc_16_0001.html">ATC离线模型编译工具</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">10</td>
+      <td style="font-size:14px">新增章节</td>
+      <td style="font-size:14px">新增“基于LLM的量化”章节。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/910/devaids/amct/atlasamct_16_0001.html">AMCT模型压缩工具</a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## 9.0.0
 
 <table>
