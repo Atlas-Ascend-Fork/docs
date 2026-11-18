@@ -1,21 +1,21 @@
 # Using the msaicerr Tool to Analyze AI Core Errors
 
-For details about the functions and restrictions of the msaicerr tool, see  [Functions and Restrictions of the msaicerr Tool](https://gitcode.com/cann/oam-tools/blob/master/docs/en/msaicerr/msaicerr_functions_and_restrictions.md). For details about how to prepare the environment, see  [msaicerr – Tool Environment Preparation](https://gitcode.com/cann/oam-tools/blob/master/docs/en/msaicerr/msaicerr_environment_preparation.md).
+For details about the functions and restrictions of the msaicerr tool, see  [Functions and Restrictions of the msaicerr Tool](https://gitcode.com/cann/oam-tools/blob/master/docs/en/user_guide/msaicerr/msaicerr_functions_and_restrictions.md). For details about how to prepare the environment, see  [msaicerr – Tool Environment Preparation](https://gitcode.com/cann/oam-tools/blob/master/docs/en/user_guide/msaicerr/msaicerr_environment_preparation.md).
 
 ## Procedure
 
 1. Sign in to the host server as the running user.
 2. Use the msaicerr tool to quickly locate the key causes of AI Core errors.
 
-    Go to the  **_$\{Toolkit installation path\}_/tools/msaicerr**  directory and run the following command to extract key information related to the AI Core error based on the information collected in  [Collecting AI Core Error Information](collect_ai_core_error_info.md). In the following command,  _aic\_err\_info\_timestamp_  indicates the directory for storing AI Core error information. Replace it with the actual directory.
+    Go to the  **\$\{Toolkit installation path\}_/tools/msaicerr**  directory and run the following command to extract key information related to the AI Core error based on the information collected in  [Collecting AI Core Error Information](collect_ai_core_error_info.md). In the following command,  aic\_err\_info\_timestamp indicates the directory for storing AI Core error information. Replace it with the actual directory.
 
     ```bash
     python3 msaicerr.py -p ${HOME}/aic_err_info_timestamp -out $HOME/result
     ```
 
-    In the preceding command example, the  **-p**  parameter is used to specify the directory for storing fault information, for example, ${HOME}/aic_err_info_timestamp. The  **-out**  parameter is used to specify the path for storing the parsing result file, for example,  _$HOME/__result_; if the path is not specified, the parsing result is stored in the current path where the command is executed by default.
+    In the preceding command example, the  **-p**  parameter is used to specify the directory for storing fault information, for example, ${HOME}/aic_err_info_timestamp. The  **-out**  parameter is used to specify the path for storing the parsing result file, for example,  $HOME/result; if the path is not specified, the parsing result is stored in the current path where the command is executed by default.
 
-    Note: Do not execute the msaicerr tool in the directory specified by the  **-p**  parameter or its subdirectory. For example, you cannot execute the msaicerr tool in the  _aic\_err\_info\_timestamp_  directory or its subdirectory. The directory specified by the  **-out**  parameter must not be the directory specified by the  **-p**  parameter or its subdirectory. Otherwise, the tool parsing may be suspended or fail.
+    Note: Do not execute the msaicerr tool in the directory specified by the  **-p**  parameter or its subdirectory. For example, you cannot execute the msaicerr tool in the  aic\_err\_info\_timestamp directory or its subdirectory. The directory specified by the  **-out**  parameter must not be the directory specified by the  **-p**  parameter or its subdirectory. Otherwise, the tool parsing may be suspended or fail.
 
     After the command is executed, you can analyze and locate the fault based on the prompt information in the  **info.txt**  file, the path of which is displayed on the terminal interface. Pay attention to the key information described in the following table. If the information collected in  [Collecting AI Core Error Information](collect_ai_core_error_info.md)  contains multiple AI Core errors, the msaicerr tool parses the AI Core error that occurs for the first time based on the log time.
 
@@ -41,4 +41,4 @@ For details about the functions and restrictions of the msaicerr tool, see  [Fun
     2. Check the operator parameters by referring to  [Operator Input Argument Errors](operator_input_args_error.md).
     3. After obtaining the logs, click [here](https://www.hiascend.com/support) to submit feedback.  Perform this operation if the fault cannot be located.
 
-    For details about other parameters and functions of the msaicerr tool, see  [Functions and Restrictions of the msaicerr Tool](https://gitcode.com/cann/oam-tools/blob/master/docs/en/msaicerr/msaicerr_functions_and_restrictions.md).
+    For details about other parameters and functions of the msaicerr tool, see  [Functions and Restrictions of the msaicerr Tool](https://gitcode.com/cann/oam-tools/blob/master/docs/en/user_guide/msaicerr/msaicerr_functions_and_restrictions.md).

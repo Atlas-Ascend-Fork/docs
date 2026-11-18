@@ -2,7 +2,7 @@
 
 1. **查看并解读日志**
 
-    **关键字：**host侧用户态plog日志中搜索“mem\_stats”，搜索结果示例如下所示，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
+    **关键字**：host侧用户态plog日志中搜索“mem\_stats”，搜索结果示例如下所示，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
     ```bash
     [INFO] DRV(4176893,python3.7):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4176893, 4185695][drv][devmm][_svm_mem_stats_show 148]SVM_MEM Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=19927040; alloced_peak_size=19927040; alloc_cnt=37; free_cnt=0)
@@ -10,16 +10,16 @@
     [INFO] DRV(4176893,python3.7):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4176893, 4185695][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev6 Mem stats (Bytes). (module_name=APP; module_id=33; current_alloced_size=64680361984; alloced_peak_size=64680361984; alloc_cnt=3113; free_cnt=0)
     ```
 
-    **日志级别：**ERROR级别（申请内存失败时）、进程退出时也会打印内存统计信息
+    **日志级别**：ERROR级别（申请内存失败时）、进程退出时也会打印内存统计信息
 
-    **打印格式：**\[内存属性\] Mem stats \(Bytes\). \(module\_name=\[模块名\]; module\_id=\[id\]; current\_alloced\_size=\[size\]; alloced\_peak\_size=\[size\];  alloc\_cnt=\[size\]; free\_cnt=\[size\]\)
+    **打印格式**：\[内存属性\] Mem stats \(Bytes\). \(module\_name=\[模块名\]; module\_id=\[id\]; current\_alloced\_size=\[size\]; alloced\_peak\_size=\[size\];  alloc\_cnt=\[size\]; free\_cnt=\[size\]\)
 
-    - **内存属性：**SVM\_MEM（支持缺页的地址，CANN内部使用）、DEV\_MEM（dev内存）、HOST\_MEM（host内存）、DVPP\_MEM（dvpp内存）；
-    - **module\_name：**例如GE、RUNTIME、DVPP等；
-    - **current\_alloced\_size：**该模块当前已占用的内存大小\(Bytes\)；
-    - **alloced\_peak\_size：**该模块已占用的内存峰值大小\(Bytes\)；
-    - **alloc\_cnt：**申请内存的次数；
-    - **free\_cnt：**释放内存的次数。如果释放次数与申请次数不匹配，则需排查内存使用是否合理，例如上层业务框架通过内存池方式管理内存、内存泄漏。
+    - **内存属性**：SVM\_MEM（支持缺页的地址，CANN内部使用）、DEV\_MEM（dev内存）、HOST\_MEM（host内存）、DVPP\_MEM（dvpp内存）；
+    - **module\_name**：例如GE、RUNTIME、DVPP等；
+    - **current\_alloced\_size**：该模块当前已占用的内存大小\(Bytes\)；
+    - **alloced\_peak\_size**：该模块已占用的内存峰值大小\(Bytes\)；
+    - **alloc\_cnt**：申请内存的次数；
+    - **free\_cnt**：释放内存的次数。如果释放次数与申请次数不匹配，则需排查内存使用是否合理，例如上层业务框架通过内存池方式管理内存、内存泄漏。
 
 2. **查找哪个组件申请内存增加导致的oom**
 

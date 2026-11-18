@@ -61,3 +61,6 @@
   - [NPU_COLLECT_PATH](./NPU_COLLECT_PATH.md)
   - [ASCEND_DUMP_SCENE](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_DUMP_SCENE.md)
   - [ASCEND_DUMP_PATH](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_DUMP_PATH.md)
+  <!-- npu="950" id12 -->
+  - [ASCEND_AICORE_SYNC_MATCH_CHECK](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_AICORE_SYNC_MATCH_CHECK.md)
+  <!-- end id12 -->
