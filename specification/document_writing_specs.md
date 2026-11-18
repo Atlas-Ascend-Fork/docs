@@ -540,7 +540,7 @@ $$
 
 产品文档是指需从开源仓发布至[昇腾社区文档中心](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/index/index.html)的文档，因渲染、目录结构化呈现等要求，产品文档需遵循本文档前述规范外，还需满足本节的附加规范。
 
-产品文档在仓库中的位置可参见[开源仓中英文校验放通目录](https://gitcode.com/cann/docs/blob/master/skills/translation_skill/repo_zh_en_ci_check_whitelist.md)。
+产品文档在仓库中的位置可参见[开源仓中英文校验放通目录](./repo_zh_en_ci_check_whitelist.md)。
 
 ### 目录文件规范
 

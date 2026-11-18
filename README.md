@@ -15,19 +15,30 @@
 关键目录结构如下：
 
 ```txt
-docs/
+cann_docs/
+├── .gitcode/                   # CI工作流配置
+│   └── workflows/              # PR流水线与静态检查配置
 ├── docs/                       # 文档源文件
-│   ├── en/                     # 英文文档
-│   │   ├── fusion-patterns     # 图融合和UB融合规则参考（英文）
-│   │   └── troubleshooting     # 故障处理（英文）
-│   └── zh/                     # 中文文档
-│       ├── app-dev             # 应用开发
+│   ├── zh/                     # 中文文档
+│   │   ├── app-dev             # 应用开发
+│   │   ├── common-ref          # 公共参考（术语表、头文件与库等）
+│   │   ├── env-vars            # 环境变量参考
+│   │   ├── fusion-patterns     # 图融合和UB融合规则参考
+│   │   ├── ops-lib             # 算子库公共
+│   │   ├── profiling           # 性能调优
+│   │   └── troubleshooting     # 故障处理
+│   └── en/                     # 英文文档
+│       ├── common-ref          # 公共参考（术语表、头文件与库等）
 │       ├── env-vars            # 环境变量参考
 │       ├── fusion-patterns     # 图融合和UB融合规则参考
-│       ├── ops-lib             # 算子库公共
-│       ├── profiling           # 性能调优
 │       └── troubleshooting     # 故障处理
-└── README.md                   # 本文件
+├── scripts/                    # CI与站点配置脚本
+│   ├── ci/                     # CI配置
+│   └── site/                   # 文档中心站点配置
+├── skills/                     # 文档处理技能（链接/NPU标签处理、文档审查等）
+├── specification/              # 文档写作规范
+├── writing_template/           # 文档写作模板
+└── README.md
 ```
 
 ## CANN产品文档源文件
@@ -74,3 +85,7 @@ docs/
 
 - [LLM DataDist开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/llm_datadist/index.md)
 - [DataFlow开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/dflow/index.md)
+
+## cann-docs-raw包
+
+[cann-docs-raw](https://ascend.devcloud.huaweicloud.com/artifactory/cann-run-mirror/cann-docs/) 包汇总了产品文档的Markdown源文件、头文件和样例，并对Markdown源文件进行了标签清洗，便于Agent读取和使用。

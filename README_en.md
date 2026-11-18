@@ -15,17 +15,32 @@ You are welcome to contribute to the documentation! For details, see the [Contri
 The key directory structure is as follows:
 
 ```txt
-docs/
+cann_docs/
+├── .gitcode/                   # CI workflow configurations
+│   └── workflows/              # PR pipeline and static check configurations
 ├── docs/                       # Documents
-│   ├── en/                     # English documents
+│   ├── zh/                     # Chinese documents
+│   │   ├── app-dev             # Application development
+│   │   ├── common-ref          # Common references (glossary, headers and libraries, etc.)
+│   │   ├── env-vars            # Environment variable reference
 │   │   ├── fusion-patterns     # Graph fusion and UB fusion rule reference
+│   │   ├── ops-lib             # Operator library public documents
+│   │   ├── profiling           # Performance profiling
 │   │   └── troubleshooting     # Troubleshooting
-│   └── zh/                     # Chinese documents
-│       ├── app-dev             # Application development
+│   └── en/                     # English documents
+│       ├── common-ref          # Common references (glossary, headers and libraries, etc.)
 │       ├── env-vars            # Environment variable reference
 │       ├── fusion-patterns     # Graph fusion and UB fusion rule reference
-│       ├── ops-lib             # Operator library public documents
-│       ├── profiling           # Performance profiling
 │       └── troubleshooting     # Troubleshooting
-└── README.md                   # This file
+├── scripts/                    # CI and site configuration scripts
+│   ├── ci/                     # CI configurations
+│   └── site/                   # Document center site configurations
+├── skills/                     # Documentation processing skills (link/NPU tag handling, document review, etc.)
+├── specification/              # Document writing specifications
+├── writing_template/           # Document writing templates
+└── README.md
 ```
+
+## cann-docs-raw Package
+
+The [cann-docs-raw](https://ascend.devcloud.huaweicloud.com/artifactory/cann-run-mirror/cann-docs/) package collects the Markdown source files, header files, and samples of the product documentation. The Markdown source files are tag-cleaned to facilitate Agent reading and usage.
