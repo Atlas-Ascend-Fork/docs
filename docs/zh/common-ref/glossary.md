@@ -15,7 +15,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p16965414309"><a name="p16965414309"></a><a name="p16965414309"></a>Accelerator for Device-Edge-Cloud Synergy，端边云协同加速器。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p7929113673018"><a name="p7929113673018"></a><a name="p7929113673018"></a>Mind Edge</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p7929113673018"><a name="p7929113673018"></a><a name="p7929113673018"></a>MindEdge</p>
 </td>
 </tr>
 <tr id="row3576162918362"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p0395859185917"><a name="p0395859185917"></a><a name="p0395859185917"></a><strong id="b17314151112247"><a name="b17314151112247"></a><a name="b17314151112247"></a>Accumulated Relative Error</strong></p>
@@ -38,7 +38,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p10644181175618"><a name="p10644181175618"></a><a name="p10644181175618"></a>Async Checkpoint Persistence，异步Checkpoint保存。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p16595256105319"><a name="p16595256105319"></a><a name="p16595256105319"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p16595256105319"><a name="p16595256105319"></a><a name="p16595256105319"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row42263159123"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1429415817018"><a name="p1429415817018"></a><a name="p1429415817018"></a><strong id="b864192734"><a name="b864192734"></a><a name="b864192734"></a>AI</strong></p>
@@ -98,7 +98,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p18963133211458"><a name="p18963133211458"></a><a name="p18963133211458"></a>Asymmetric multiprocessing，非对称多处理。</p>
 <p id="p16963163214510"><a name="p16963163214510"></a><a name="p16963163214510"></a>一种多元处理的架构。在这种架构下，存在多个处理器；每个中央处理器在某个特定时间内，被指定一个特定的任务去执行。在对称多处理系统还没完全发展好之前，它曾被视为是一种软件的权宜之计，可以用来让多个处理器同时运作。在对称多处理系统开发好之后，现今它仍然被视为是一个较简单廉价的软件选项。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p0465193561814"><a name="p0465193561814"></a><a name="p0465193561814"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p0465193561814"><a name="p0465193561814"></a><a name="p0465193561814"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row4289121714443"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1978913535447"><a name="p1978913535447"></a><a name="p1978913535447"></a><strong id="b176001656164414"><a name="b176001656164414"></a><a name="b176001656164414"></a>AMP</strong></p>
@@ -106,7 +106,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p12602110164512"><a name="p12602110164512"></a><a name="p12602110164512"></a>Automatic Mixed Precision，自动混合精度。</p>
 <p id="p5790053114419"><a name="p5790053114419"></a><a name="p5790053114419"></a>AMP混合精度训练是深度学习中一种提高训练速度和效率的技术。它通过结合使用不同精度的数值格式来实现，通常包括浮点数的低精度版本（如半精度FP16）和高精度版本（如单精度FP32）。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p2790853174411"><a name="p2790853174411"></a><a name="p2790853174411"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p2790853174411"><a name="p2790853174411"></a><a name="p2790853174411"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row16906181419120"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1592179418"><a name="p1592179418"></a><a name="p1592179418"></a><strong id="b10943911163814"><a name="b10943911163814"></a><a name="b10943911163814"></a>AOE</strong></p>
@@ -129,7 +129,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p0964163294520"><a name="p0964163294520"></a><a name="p0964163294520"></a>Advanced RISC Machine，高级精简指令集机器。</p>
 <p id="p51971333193019"><a name="p51971333193019"></a><a name="p51971333193019"></a>ARM处理器是Acorn有限公司面向低预算市场设计的第一款RISC微处理器。全称为Acorn RISC Machine。ARM处理器本身是32位设计，但也配备16位指令集，一般来讲比等价32位代码节省达35%，却能保留32位系统的所有优势。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p36904912551"><a name="p36904912551"></a><a name="p36904912551"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p36904912551"><a name="p36904912551"></a><a name="p36904912551"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row129191454104216"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1015413286493"><a name="p1015413286493"></a><a name="p1015413286493"></a><strong id="b5445143444916"><a name="b5445143444916"></a><a name="b5445143444916"></a>ARP</strong></p>
@@ -177,7 +177,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1332105105620"><a name="p1332105105620"></a><a name="p1332105105620"></a>Address Space Layout Randomization，内存地址随机化机制。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p5227643181611"><a name="p5227643181611"></a><a name="p5227643181611"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p5227643181611"><a name="p5227643181611"></a><a name="p5227643181611"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row10711142817438"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p5994149142119"><a name="p5994149142119"></a><a name="p5994149142119"></a><strong id="b101516595217"><a name="b101516595217"></a><a name="b101516595217"></a>ATB</strong></p>
@@ -258,7 +258,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p45011547142817"><a name="p45011547142817"></a><a name="p45011547142817"></a>Basic Linear Algebra Subprograms，基础线性代数子程序。</p>
 <p id="p1025811842318"><a name="p1025811842318"></a><a name="p1025811842318"></a>基本线性代数子程序（BLAS）为高性能计算提供了一套方便的算法软件工具。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p105421929113115"><a name="p105421929113115"></a><a name="p105421929113115"></a>CANN信号加速库</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p105421929113115"><a name="p105421929113115"></a><a name="p105421929113115"></a>CANN</p>
 </td>
 </tr>
 <tr id="row168171936183519"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p167131958119"><a name="p167131958119"></a><a name="p167131958119"></a><strong id="b10229186821"><a name="b10229186821"></a><a name="b10229186821"></a>BOM</strong></p>
@@ -294,7 +294,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p20838923173317"><a name="p20838923173317"></a><a name="p20838923173317"></a>Certificate Authority，证书认证机构。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p469621693315"><a name="p469621693315"></a><a name="p469621693315"></a>Mind Edge/MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p469621693315"><a name="p469621693315"></a><a name="p469621693315"></a>MindEdge/MindCluster</p>
 </td>
 </tr>
 <tr id="row146651414184015"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p166961491856"><a name="p166961491856"></a><a name="p166961491856"></a><strong id="b79941636408"><a name="b79941636408"></a><a name="b79941636408"></a>CANN</strong></p>
@@ -309,7 +309,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p6694950935"><a name="p6694950935"></a><a name="p6694950935"></a>Cluster Computing，集群计算。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p155511242115114"><a name="p155511242115114"></a><a name="p155511242115114"></a>Mind SDK</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p155511242115114"><a name="p155511242115114"></a><a name="p155511242115114"></a>MindSDK</p>
 </td>
 </tr>
 <tr id="row12608312172815"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p19250131610285"><a name="p19250131610285"></a><a name="p19250131610285"></a><strong id="b1425031672812"><a name="b1425031672812"></a><a name="b1425031672812"></a>CCAE</strong></p>
@@ -354,7 +354,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p117220712422"><a name="p117220712422"></a><a name="p117220712422"></a>container，容器。</p>
 <p id="p51485591835"><a name="p51485591835"></a><a name="p51485591835"></a>容器是一种操作系统虚拟化形式，可以使用一个容器来运行从小型微服务或软件进程到大型应用程序的所有内容。容器包含所有必要的可执行文件、二进制代码、库和配置文件。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p151484595315"><a name="p151484595315"></a><a name="p151484595315"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p151484595315"><a name="p151484595315"></a><a name="p151484595315"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row13124636105617"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p195536196011"><a name="p195536196011"></a><a name="p195536196011"></a><strong id="b72173611020"><a name="b72173611020"></a><a name="b72173611020"></a>CPU</strong></p>
@@ -368,14 +368,14 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p3603142634610"><a name="p3603142634610"></a><a name="p3603142634610"></a>Container Runtime Interface，容器运行时接口。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p738014535417"><a name="p738014535417"></a><a name="p738014535417"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p738014535417"><a name="p738014535417"></a><a name="p738014535417"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row3316201418512"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1460302644613"><a name="p1460302644613"></a><a name="p1460302644613"></a><strong id="b1260352612462"><a name="b1260352612462"></a><a name="b1260352612462"></a>CRD</strong></p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p96031926104611"><a name="p96031926104611"></a><a name="p96031926104611"></a>Custom Resource Definition，自定义资源定义。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p43175141254"><a name="p43175141254"></a><a name="p43175141254"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p43175141254"><a name="p43175141254"></a><a name="p43175141254"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row359119916566"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p559115965618"><a name="p559115965618"></a><a name="p559115965618"></a><strong id="b32141782353"><a name="b32141782353"></a><a name="b32141782353"></a>Controller</strong></p>
@@ -461,7 +461,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p12952311428"><a name="p12952311428"></a><a name="p12952311428"></a>Device-Edge-Cloud Synergy，端边云协同。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p15658191533511"><a name="p15658191533511"></a><a name="p15658191533511"></a>Mind Edge</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p15658191533511"><a name="p15658191533511"></a><a name="p15658191533511"></a>MindEdge</p>
 </td>
 </tr>
 <tr id="row497311535429"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p20618333"><a name="p20618333"></a><a name="p20618333"></a><strong id="b35941224134112"><a name="b35941224134112"></a><a name="b35941224134112"></a>DL</strong></p>
@@ -477,7 +477,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1998212595242"><a name="p1998212595242"></a><a name="p1998212595242"></a>Direct Memory Access，直接内存访问。</p>
 <p id="p1939952811129"><a name="p1939952811129"></a><a name="p1939952811129"></a>是所有现代电脑的重要特色，它允许不同速度的硬件装置来沟通，而不需要依赖于CPU的大量中断负载。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p87011916201312"><a name="p87011916201312"></a><a name="p87011916201312"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p87011916201312"><a name="p87011916201312"></a><a name="p87011916201312"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row1498913336111"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1598114662919"><a name="p1598114662919"></a><a name="p1598114662919"></a><strong id="b143911018153112"><a name="b143911018153112"></a><a name="b143911018153112"></a>DP</strong></p>
@@ -485,14 +485,14 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1110755183018"><a name="p1110755183018"></a><a name="p1110755183018"></a>Data Parallelism，数据并行。</p>
 <p id="p203953211302"><a name="p203953211302"></a><a name="p203953211302"></a>数据并行是大规模深度学习训练中常用的并行模式，它会在每个进程（设备）中维护完整的模型和参数，但在每个进程上处理不同的数据。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p373419541116"><a name="p373419541116"></a><a name="p373419541116"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p373419541116"><a name="p373419541116"></a><a name="p373419541116"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row20995192871815"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1248510362286"><a name="p1248510362286"></a><a name="p1248510362286"></a><strong id="b966932665615"><a name="b966932665615"></a><a name="b966932665615"></a>DPC</strong></p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p54852367288"><a name="p54852367288"></a><a name="p54852367288"></a>Distributed Parallel Client，分布式并行客户端。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p6290194821814"><a name="p6290194821814"></a><a name="p6290194821814"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p6290194821814"><a name="p6290194821814"></a><a name="p6290194821814"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row97091357202019"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p5990193005720"><a name="p5990193005720"></a><a name="p5990193005720"></a><strong id="b19880239155716"><a name="b19880239155716"></a><a name="b19880239155716"></a>DRAM</strong></p>
@@ -500,7 +500,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p49901130155710"><a name="p49901130155710"></a><a name="p49901130155710"></a>Dynamic Random Access Memory，动态随机存储器。</p>
 <p id="p181059141213"><a name="p181059141213"></a><a name="p181059141213"></a>DRAM是计算机主存储器的一种形式，用于临时存储CPU需要处理的数据和指令。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p16881101192113"><a name="p16881101192113"></a><a name="p16881101192113"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p16881101192113"><a name="p16881101192113"></a><a name="p16881101192113"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row821185514316"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p724523113157"><a name="p724523113157"></a><a name="p724523113157"></a><strong id="b1255123317720"><a name="b1255123317720"></a><a name="b1255123317720"></a>DSL</strong></p>
@@ -574,7 +574,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1158414544307"><a name="p1158414544307"></a><a name="p1158414544307"></a>End User License Agreement，最终用户许可协议。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p04091015135614"><a name="p04091015135614"></a><a name="p04091015135614"></a>Mind SDK</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p04091015135614"><a name="p04091015135614"></a><a name="p04091015135614"></a>MindSDK</p>
 </td>
 </tr>
 <tr id="row139583915158"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1605182611468"><a name="p1605182611468"></a><a name="p1605182611468"></a><strong id="b1560512617467"><a name="b1560512617467"></a><a name="b1560512617467"></a>ESN</strong></p>
@@ -582,7 +582,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p36055269469"><a name="p36055269469"></a><a name="p36055269469"></a>Equipment Serial Number，设备序列号。</p>
 <p id="p2060542612465"><a name="p2060542612465"></a><a name="p2060542612465"></a>唯一标识设备的字符串，用以保证将License授权给指定设备的关键，又称“设备指纹”。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1495879121519"><a name="p1495879121519"></a><a name="p1495879121519"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1495879121519"><a name="p1495879121519"></a><a name="p1495879121519"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row8130153916185"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p11130153920181"><a name="p11130153920181"></a><a name="p11130153920181"></a><strong id="b1823724211816"><a name="b1823724211816"></a><a name="b1823724211816"></a>EndPoint</strong></p>
@@ -617,7 +617,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1218412715319"><a name="p1218412715319"></a><a name="p1218412715319"></a>Facebook开源的向量相似性搜索和聚类的库。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p842683735619"><a name="p842683735619"></a><a name="p842683735619"></a>Mind SDK</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p842683735619"><a name="p842683735619"></a><a name="p842683735619"></a>MindSDK</p>
 </td>
 </tr>
 <tr id="row10870164413514"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p11471824125011"><a name="p11471824125011"></a><a name="p11471824125011"></a><strong id="b1262117266504"><a name="b1262117266504"></a><a name="b1262117266504"></a>FEC</strong></p>
@@ -633,7 +633,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p654685262816"><a name="p654685262816"></a><a name="p654685262816"></a>Fast Fourier Transform，快速傅里叶变换。</p>
 <p id="p195367357233"><a name="p195367357233"></a><a name="p195367357233"></a>快速傅里叶变换（FFT）是一种计算序列的离散傅立叶变换（DFT）或其逆变换（IDFT）的算法。傅里叶分析将信号从其原始域（通常是时间或空间）转换为频域中的表示，反之亦然。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1990414122321"><a name="p1990414122321"></a><a name="p1990414122321"></a>CANN信号加速库</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1990414122321"><a name="p1990414122321"></a><a name="p1990414122321"></a>CANN</p>
 </td>
 </tr>
 <tr id="row383523516514"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p2260142412016"><a name="p2260142412016"></a><a name="p2260142412016"></a><strong id="b982923112010"><a name="b982923112010"></a><a name="b982923112010"></a>FFTS</strong></p>
@@ -641,7 +641,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p526022422016"><a name="p526022422016"></a><a name="p526022422016"></a>Function Flow Task Scheduler，函数流任务调度。</p>
 <p id="p1187102364016"><a name="p1187102364016"></a><a name="p1187102364016"></a>这是一种全新的基于数据流驱动的并行调度机制。它提供了子图DMU机制，去除子图内不必要的DMA拷贝开销，同时提供了sub task的thread切分和thread间并行调度机制，以尽可能并行AIC/AIV硬件资源，达到算子间融合效果。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p163741232132418"><a name="p163741232132418"></a><a name="p163741232132418"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p163741232132418"><a name="p163741232132418"></a><a name="p163741232132418"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row158122311514"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p4641237125019"><a name="p4641237125019"></a><a name="p4641237125019"></a><strong id="b15959114745120"><a name="b15959114745120"></a><a name="b15959114745120"></a>Flash Attention</strong></p>
@@ -649,7 +649,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1836416331432"><a name="p1836416331432"></a><a name="p1836416331432"></a>Flash Attention融合算子是一种应用于模型加速的具有IO感知的精确注意力算法，它无需任何近似即可加速注意力计算并减少内存占用。</p>
 <p id="p1764123710502"><a name="p1764123710502"></a><a name="p1764123710502"></a>Flash Attention融合算子在大语言模型中广泛使用，例如LLaMA、GPT3等。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p164884792318"><a name="p164884792318"></a><a name="p164884792318"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p164884792318"><a name="p164884792318"></a><a name="p164884792318"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row14896123371120"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p6755232"><a name="p6755232"></a><a name="p6755232"></a><strong id="b5199355104612"><a name="b5199355104612"></a><a name="b5199355104612"></a>FLOPS</strong></p>
@@ -672,7 +672,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p16711191619395"><a name="p16711191619395"></a><a name="p16711191619395"></a>Filesystem in Userspace，用户空间文件系统。</p>
 <p id="p1754718325547"><a name="p1754718325547"></a><a name="p1754718325547"></a>FUSE是操作系统中的概念，指完全在用户态实现的文件系统。目前Linux通过内核模块对此进行支持。一些文件系统如ZFS，glusterfs和lustre使用FUSE实现。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1981175717567"><a name="p1981175717567"></a><a name="p1981175717567"></a>Mind SDK</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1981175717567"><a name="p1981175717567"></a><a name="p1981175717567"></a>MindSDK</p>
 </td>
 </tr>
 </tbody>
@@ -732,7 +732,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p82392610573"><a name="p82392610573"></a><a name="p82392610573"></a>Group Relative Policy Optimization，群体相对策略优化。</p>
 <p id="p1175492135819"><a name="p1175492135819"></a><a name="p1175492135819"></a>GRPO是一种强化学习算法，专门用于增强大型语言模型中的推理能力。与严重依赖外部评估模型（价值函数）指导学习的传统强化学习方法不同，GRPO通过评估彼此相关的响应组来优化模型，以此提高训练效率。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1205041844"><a name="p1205041844"></a><a name="p1205041844"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1205041844"><a name="p1205041844"></a><a name="p1205041844"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row8649434207"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p66584315203"><a name="p66584315203"></a><a name="p66584315203"></a><strong id="b2128172664718"><a name="b2128172664718"></a><a name="b2128172664718"></a>管理面</strong></p>
@@ -815,7 +815,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1341319526915"><a name="p1341319526915"></a><a name="p1341319526915"></a>Horizontal Pod Autoscaler，Pod水平自动扩缩。</p>
 <p id="p1894653283512"><a name="p1894653283512"></a><a name="p1894653283512"></a>在Kubernetes中，Horizontal Pod Autoscaler自动更新工作负载资源（例如Deployment或者StatefulSet），目的是自动扩缩工作负载以满足需求。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1741315526911"><a name="p1741315526911"></a><a name="p1741315526911"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1741315526911"><a name="p1741315526911"></a><a name="p1741315526911"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row922312491797"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p84150522098"><a name="p84150522098"></a><a name="p84150522098"></a><strong id="b1141514521097"><a name="b1141514521097"></a><a name="b1141514521097"></a>HPO</strong></p>
@@ -823,7 +823,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1641514520913"><a name="p1641514520913"></a><a name="p1641514520913"></a>Hyperparameter Optimization，超参数优化。</p>
 <p id="p164153521095"><a name="p164153521095"></a><a name="p164153521095"></a><span>是指不是依赖人工调整参数，而是通过一定算法找出机器学习或深度学习中最优/次优超参数的一类方法</span><span>。</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1741535217914"><a name="p1741535217914"></a><a name="p1741535217914"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1741535217914"><a name="p1741535217914"></a><a name="p1741535217914"></a>TorchNPU</p>
 </td>
 </tr>
 </tbody>
@@ -844,7 +844,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="zh-cn_topic_0000001699024129_p780413554523"><a name="zh-cn_topic_0000001699024129_p780413554523"></a><a name="zh-cn_topic_0000001699024129_p780413554523"></a>Intellectual Collaborative Service，智能协同服务。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p715818558394"><a name="p715818558394"></a><a name="p715818558394"></a>Mind Edge</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p715818558394"><a name="p715818558394"></a><a name="p715818558394"></a>MindEdge</p>
 </td>
 </tr>
 <tr id="row3519142363714"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1950154512185"><a name="p1950154512185"></a><a name="p1950154512185"></a><strong id="b162761654161819"><a name="b162761654161819"></a><a name="b162761654161819"></a>IOPS</strong></p>
@@ -852,7 +852,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p15950144521810"><a name="p15950144521810"></a><a name="p15950144521810"></a>Input/Output Operations Per Second，每秒输入/输出的运算次数。</p>
 <p id="p11184153415231"><a name="p11184153415231"></a><a name="p11184153415231"></a>这是衡量计算机存储设备性能的一个重要指标。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p84281516192612"><a name="p84281516192612"></a><a name="p84281516192612"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p84281516192612"><a name="p84281516192612"></a><a name="p84281516192612"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row1871675181920"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p14093819"><a name="p14093819"></a><a name="p14093819"></a><strong id="b6720117144711"><a name="b6720117144711"></a><a name="b6720117144711"></a>IPC</strong></p>
@@ -874,7 +874,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1221742415420"><a name="p1221742415420"></a><a name="p1221742415420"></a>Independent Software Vendor，独立软件开发商。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p11554113852118"><a name="p11554113852118"></a><a name="p11554113852118"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p11554113852118"><a name="p11554113852118"></a><a name="p11554113852118"></a>MindCluster</p>
 </td>
 </tr>
 </tbody>
@@ -934,7 +934,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1983534018561"><a name="p1983534018561"></a><a name="p1983534018561"></a>Key Management CBB，密钥管理组件。</p>
 <p id="p148351740105613"><a name="p148351740105613"></a><a name="p148351740105613"></a>为实现密钥管理的代码共享、简化开发而设计的密钥管理模块，该模块实现了密钥的加密保存、加密解密等基本功能，方便产品快速集成密钥功能。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p019561611227"><a name="p019561611227"></a><a name="p019561611227"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p019561611227"><a name="p019561611227"></a><a name="p019561611227"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row1787412240486"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p168561076196"><a name="p168561076196"></a><a name="p168561076196"></a><strong id="b34951411131910"><a name="b34951411131910"></a><a name="b34951411131910"></a>KMC</strong></p>
@@ -957,7 +957,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p11836540115618"><a name="p11836540115618"></a><a name="p11836540115618"></a>Kubernetes是用于自动部署、扩展和管理容器化（containerized）应用程序的开源系统。它旨在提供“跨主机集群的自动部署、扩展以及运行应用程序容器的平台”。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p5531194712215"><a name="p5531194712215"></a><a name="p5531194712215"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p5531194712215"><a name="p5531194712215"></a><a name="p5531194712215"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row168671321312"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p5867203211318"><a name="p5867203211318"></a><a name="p5867203211318"></a><strong id="b1179119552359"><a name="b1179119552359"></a><a name="b1179119552359"></a>KASLR</strong></p>
@@ -1052,7 +1052,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p139145931216"><a name="p139145931216"></a><a name="p139145931216"></a>Link Time Optimization，链接时优化。</p>
 <p id="p976612162167"><a name="p976612162167"></a><a name="p976612162167"></a>链接时优化是编译器在链接时对程序进行的一种程序优化。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1799818421985"><a name="p1799818421985"></a><a name="p1799818421985"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1799818421985"><a name="p1799818421985"></a><a name="p1799818421985"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row4113193415316"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p754815413532"><a name="p754815413532"></a><a name="p754815413532"></a><strong id="b11572114355314"><a name="b11572114355314"></a><a name="b11572114355314"></a>邻接表</strong></p>
@@ -1064,7 +1064,7 @@
 </tr>
 <tr id="row2089174110419"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p88912412049"><a name="p88912412049"></a><a name="p88912412049"></a><strong id="b1153571719369"><a name="b1153571719369"></a><a name="b1153571719369"></a>LoRA</strong></p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p2089114113416"><a name="p2089114113416"></a><a name="p2089114113416"></a>Low-Rank Adaptation，低秩自适应。是一种高效的参数微调方法。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p2089114113416"><a name="p2089114113416"></a><a name="p2089114113416"></a>Low-Rank AdaTorchNPUtion，低秩自适应。是一种高效的参数微调方法。</p>
 </td>
 <td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p198918417418"><a name="p198918417418"></a><a name="p198918417418"></a>MindIE</p>
 </td>
@@ -1136,7 +1136,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p852441119010"><a name="p852441119010"></a><a name="p852441119010"></a>Memory File System，内存文件系统。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p63481636122316"><a name="p63481636122316"></a><a name="p63481636122316"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p63481636122316"><a name="p63481636122316"></a><a name="p63481636122316"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row187751220164718"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1675415225512"><a name="p1675415225512"></a><a name="p1675415225512"></a><strong id="b1918382965112"><a name="b1918382965112"></a><a name="b1918382965112"></a>MindIE</strong></p>
@@ -1158,14 +1158,14 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p144701010132519"><a name="p144701010132519"></a><a name="p144701010132519"></a>内存缓存系统，可以提升训练Checkpoint读写速度。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p74703106253"><a name="p74703106253"></a><a name="p74703106253"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p74703106253"><a name="p74703106253"></a><a name="p74703106253"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row1464103694313"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p16443616433"><a name="p16443616433"></a><a name="p16443616433"></a>MinIO</p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1464123617433"><a name="p1464123617433"></a><a name="p1464123617433"></a>基础对象存储服务组件。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p10391153715439"><a name="p10391153715439"></a><a name="p10391153715439"></a>Mind Edge</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p10391153715439"><a name="p10391153715439"></a><a name="p10391153715439"></a>MindEdge</p>
 </td>
 </tr>
 <tr id="row8269322836"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p111772040173911"><a name="p111772040173911"></a><a name="p111772040173911"></a><strong id="b170546134415"><a name="b170546134415"></a><a name="b170546134415"></a>MLP</strong></p>
@@ -1173,7 +1173,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p14177124063920"><a name="p14177124063920"></a><a name="p14177124063920"></a><span>Multilayer Perceptron</span>，多层感知器。</p>
 <p id="p55897151452"><a name="p55897151452"></a><a name="p55897151452"></a>多层感知器<span>是一种前向结构的</span>人工神经网络<span>，它由输入层、一个或多个隐藏层和输出层组成。</span>MLP可以用于解决各种问题，如分类、回归等，由于其强大的表达能力，MLP在许多领域中都有广泛的应用，例如图像识别、自然语言处理等。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p2265144982911"><a name="p2265144982911"></a><a name="p2265144982911"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p2265144982911"><a name="p2265144982911"></a><a name="p2265144982911"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row15565236153918"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p3423558611"><a name="p3423558611"></a><a name="p3423558611"></a><strong id="b11583754191312"><a name="b11583754191312"></a><a name="b11583754191312"></a>MoE</strong></p>
@@ -1228,7 +1228,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p13196636143918"><a name="p13196636143918"></a><a name="p13196636143918"></a>Memory Transfer Engine，内存传输引擎。</p>
 <p id="p6884172815408"><a name="p6884172815408"></a><a name="p6884172815408"></a>MTE也被称作LSU（Load Store Unit），负责AICore内部数据在不同Buffer之间的读写管理，以及完成一些格式转换的操作。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p16231133452017"><a name="p16231133452017"></a><a name="p16231133452017"></a><span>PTA</span></p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p16231133452017"><a name="p16231133452017"></a><a name="p16231133452017"></a><span>TorchNPU</span></p>
 </td>
 </tr>
 <tr id="row35666368390"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p15742086"><a name="p15742086"></a><a name="p15742086"></a><strong id="b18563191275214"><a name="b18563191275214"></a><a name="b18563191275214"></a>MTE1</strong></p>
@@ -1351,7 +1351,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1879211712311"><a name="p1879211712311"></a><a name="p1879211712311"></a>Natural Language Processing，自然语言处理。</p>
 <p id="p498735483014"><a name="p498735483014"></a><a name="p498735483014"></a><span>是</span>人工智能<span>和</span>语言学<span>领域的分支学科。此领域探讨如何处理及运用</span>自然语言<span>，自然语言处理包括多方面和步骤，基本有认知、理解、生成等部分。</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p83852310331"><a name="p83852310331"></a><a name="p83852310331"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p83852310331"><a name="p83852310331"></a><a name="p83852310331"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row111281228164015"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p47408069"><a name="p47408069"></a><a name="p47408069"></a><strong id="b188321624205014"><a name="b188321624205014"></a><a name="b188321624205014"></a>NN</strong></p>
@@ -1382,7 +1382,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1392182094911"><a name="p1392182094911"></a><a name="p1392182094911"></a>Non-Volatile Memory Express，非易失性内存主机控制器接口规范。</p>
 <p id="p957191117504"><a name="p957191117504"></a><a name="p957191117504"></a><span>是一个逻辑设备接口</span>规范<span>。它是基于设备逻辑接口的</span>总线<span>传输协议规范（相当于通讯协议中的</span>应用层<span>），用于访问通过</span>PCI Express<span>（PCIe）总线附加的</span>非易失性存储器<span>介质（例如采用</span>闪存<span>的</span>固态硬盘驱动器<span>）。</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p142423022918"><a name="p142423022918"></a><a name="p142423022918"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p142423022918"><a name="p142423022918"></a><a name="p142423022918"></a>TorchNPU</p>
 </td>
 </tr>
 </tbody>
@@ -1403,7 +1403,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p0741185918453"><a name="p0741185918453"></a><a name="p0741185918453"></a>offline model，离线模型。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1774155954516"><a name="p1774155954516"></a><a name="p1774155954516"></a>Mind Edge</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1774155954516"><a name="p1774155954516"></a><a name="p1774155954516"></a>MindEdge</p>
 </td>
 </tr>
 <tr id="row8232057124511"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p07411859184518"><a name="p07411859184518"></a><a name="p07411859184518"></a><strong id="b177411599453"><a name="b177411599453"></a><a name="b177411599453"></a>ONNX</strong></p>
@@ -1411,14 +1411,14 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p13116125154816"><a name="p13116125154816"></a><a name="p13116125154816"></a>Open Neural Network Exchange，<span>开放神经网络交换。</span></p>
 <p id="p167411259124511"><a name="p167411259124511"></a><a name="p167411259124511"></a><span>ONNX是一种针对机器学习所设计的开放式的文件格式，用于存储训练好的模型。它使得不同的人工智能框架可以采用相同格式存储模型数据并交互。</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p47413591459"><a name="p47413591459"></a><a name="p47413591459"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p47413591459"><a name="p47413591459"></a><a name="p47413591459"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row96999417198"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p183329520562"><a name="p183329520562"></a><a name="p183329520562"></a><strong id="b777315201838"><a name="b777315201838"></a><a name="b777315201838"></a>OOM</strong></p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p103325512564"><a name="p103325512564"></a><a name="p103325512564"></a>Out Of Memory，内存不足。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1730785661910"><a name="p1730785661910"></a><a name="p1730785661910"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1730785661910"><a name="p1730785661910"></a><a name="p1730785661910"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row16673111204119"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p66441544"><a name="p66441544"></a><a name="p66441544"></a><strong id="b163031371527"><a name="b163031371527"></a><a name="b163031371527"></a>OP</strong></p>
@@ -1441,7 +1441,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1038681144811"><a name="p1038681144811"></a><a name="p1038681144811"></a>Open Pretty Good Privacy，开放优良保密协议<strong id="b15386917480"><a name="b15386917480"></a><a name="b15386917480"></a>。</strong></p>
 <p id="p13386161114813"><a name="p13386161114813"></a><a name="p13386161114813"></a>PGP（Pretty Good Privacy）是一个加密程序，为数据通信提供了加密和验证功能。PGP通常用于签名、加密和解密文本、电子邮件和文件。OpenPGP是一种非专有协议，为加密消息、签名、私钥和用于交换公钥的证书定义了统一标准。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1276911311044"><a name="p1276911311044"></a><a name="p1276911311044"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1276911311044"><a name="p1276911311044"></a><a name="p1276911311044"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row166741411154113"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1322619120264"><a name="p1322619120264"></a><a name="p1322619120264"></a><strong id="b183049718527"><a name="b183049718527"></a><a name="b183049718527"></a>OPP</strong></p>
@@ -1455,14 +1455,14 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p9665113718462"><a name="p9665113718462"></a><a name="p9665113718462"></a>Operating System，操作系统。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1015310114478"><a name="p1015310114478"></a><a name="p1015310114478"></a>Mind Edge</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1015310114478"><a name="p1015310114478"></a><a name="p1015310114478"></a>MindEdge</p>
 </td>
 </tr>
 <tr id="row1526164502616"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p333117169348"><a name="p333117169348"></a><a name="p333117169348"></a><strong id="b8354182223412"><a name="b8354182223412"></a><a name="b8354182223412"></a>OS</strong></p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1633121693419"><a name="p1633121693419"></a><a name="p1633121693419"></a>Optimizer State，优化器状态。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1137693456"><a name="p1137693456"></a><a name="p1137693456"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1137693456"><a name="p1137693456"></a><a name="p1137693456"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row638312013320"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p133861510486"><a name="p133861510486"></a><a name="p133861510486"></a><strong id="b138641134811"><a name="b138641134811"></a><a name="b138641134811"></a>OCI</strong></p>
@@ -1470,7 +1470,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p133862018481"><a name="p133862018481"></a><a name="p133862018481"></a>Open Container Initiative，开放容器计划。</p>
 <p id="p338611164816"><a name="p338611164816"></a><a name="p338611164816"></a>Linux基金会于2015年6月成立OCI组织，旨在围绕容器格式和运行时制定一个开放的工业化标准。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p15383172017314"><a name="p15383172017314"></a><a name="p15383172017314"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p15383172017314"><a name="p15383172017314"></a><a name="p15383172017314"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row7807131491111"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p08082141116"><a name="p08082141116"></a><a name="p08082141116"></a><strong id="b145731383720"><a name="b145731383720"></a><a name="b145731383720"></a>OM Adapter</strong></p>
@@ -1537,14 +1537,14 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p920249105312"><a name="p920249105312"></a><a name="p920249105312"></a>Pod是Kubernetes中可以创建的最小部署单元，也是Kubernetes REST API中的顶级资源类型。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p520849155313"><a name="p520849155313"></a><a name="p520849155313"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p520849155313"><a name="p520849155313"></a><a name="p520849155313"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row145265615219"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1121124917533"><a name="p1121124917533"></a><a name="p1121124917533"></a><strong id="b1321144925315"><a name="b1321144925315"></a><a name="b1321144925315"></a>Prometheus</strong></p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p11211349145319"><a name="p11211349145319"></a><a name="p11211349145319"></a>Prometheus是一个开源系统，能够提供一套产品化的、用来量化管理技术、业务的解决方案。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1322164920536"><a name="p1322164920536"></a><a name="p1322164920536"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1322164920536"><a name="p1322164920536"></a><a name="p1322164920536"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row155254562525"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p9241449175311"><a name="p9241449175311"></a><a name="p9241449175311"></a><strong id="b1224194925314"><a name="b1224194925314"></a><a name="b1224194925314"></a>PP</strong></p>
@@ -1552,7 +1552,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p024154919533"><a name="p024154919533"></a><a name="p024154919533"></a>Pipeline Parallelism，流水线并行。</p>
 <p id="p132494911532"><a name="p132494911532"></a><a name="p132494911532"></a>流水线并行将模型的不同层放置到不同的计算设备，降低单个计算设备的显存消耗，从而实现超大规模模型训练。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1724649145317"><a name="p1724649145317"></a><a name="p1724649145317"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1724649145317"><a name="p1724649145317"></a><a name="p1724649145317"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row1969018560524"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p2251849125319"><a name="p2251849125319"></a><a name="p2251849125319"></a><strong id="b6254490535"><a name="b6254490535"></a><a name="b6254490535"></a>PWM</strong></p>
@@ -1650,14 +1650,14 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p44359183555"><a name="p44359183555"></a><a name="p44359183555"></a>Random Access Memory，随机存取存储器。</p>
 <p id="p243521817555"><a name="p243521817555"></a><a name="p243521817555"></a>基于半导体的可被CPU或者其他硬件设备读写的内存。可以任何顺序访问存储位置。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p11435191817553"><a name="p11435191817553"></a><a name="p11435191817553"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p11435191817553"><a name="p11435191817553"></a><a name="p11435191817553"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row1726911435515"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1543512185556"><a name="p1543512185556"></a><a name="p1543512185556"></a><strong id="b54361418165511"><a name="b54361418165511"></a><a name="b54361418165511"></a>runC</strong></p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p2436101820552"><a name="p2436101820552"></a><a name="p2436101820552"></a>runC是一个根据OCI（Open Container Initiative）标准创建并运行容器的client工具。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p15436171810559"><a name="p15436171810559"></a><a name="p15436171810559"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p15436171810559"><a name="p15436171810559"></a><a name="p15436171810559"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row15270843556"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p943601813558"><a name="p943601813558"></a><a name="p943601813558"></a><strong id="b243717184553"><a name="b243717184553"></a><a name="b243717184553"></a>RoPE</strong></p>
@@ -1665,7 +1665,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p8437191816557"><a name="p8437191816557"></a><a name="p8437191816557"></a>Rotary Position Embedding，旋转式位置嵌入。</p>
 <p id="p743751815515"><a name="p743751815515"></a><a name="p743751815515"></a>一种能够将相对位置信息依赖集成到self-attention中并提升transformer架构性能的位置编码方式。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p154372018155511"><a name="p154372018155511"></a><a name="p154372018155511"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p154372018155511"><a name="p154372018155511"></a><a name="p154372018155511"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row1785651501417"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1785631515143"><a name="p1785631515143"></a><a name="p1785631515143"></a><strong id="b1122141093719"><a name="b1122141093719"></a><a name="b1122141093719"></a>RAS</strong></p>
@@ -1708,7 +1708,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p934533132920"><a name="p934533132920"></a><a name="p934533132920"></a>Ascend Signal Processing Boost，信号处理加速库。</p>
 <p id="p158225092414"><a name="p158225092414"></a><a name="p158225092414"></a>信号处理加速库面向AI模型场景（支持Pytorch调用）和信号处理场景（支持C++直调），提供一系列信号处理领域相关的高性能算子。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p421310753317"><a name="p421310753317"></a><a name="p421310753317"></a>CANN信号加速库</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p421310753317"><a name="p421310753317"></a><a name="p421310753317"></a>CANN</p>
 </td>
 </tr>
 <tr id="row209573835316"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p17471111115717"><a name="p17471111115717"></a><a name="p17471111115717"></a><strong id="b15471161116570"><a name="b15471161116570"></a><a name="b15471161116570"></a>SGAT</strong></p>
@@ -1732,7 +1732,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1847511112577"><a name="p1847511112577"></a><a name="p1847511112577"></a>Sequence Parallelism，序列并行。</p>
 <p id="p10475101114577"><a name="p10475101114577"></a><a name="p10475101114577"></a>序列并行是一种针对输入序列进行列切分的并行计算方式，它可以在张量并行的基础上进一步提高计算效率。序列并行并不会增加额外的通信量，因此在开启张量并行的同时建议也同步开启序列并行。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1547521119579"><a name="p1547521119579"></a><a name="p1547521119579"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1547521119579"><a name="p1547521119579"></a><a name="p1547521119579"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row1397638165316"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p2476191165714"><a name="p2476191165714"></a><a name="p2476191165714"></a><strong id="b9476191165712"><a name="b9476191165712"></a><a name="b9476191165712"></a>SRAM</strong></p>
@@ -1740,7 +1740,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p54767119576"><a name="p54767119576"></a><a name="p54767119576"></a>Static Random Access Memory，静态随机存储器。</p>
 <p id="p647621155717"><a name="p647621155717"></a><a name="p647621155717"></a>是一种计算机内存类型。与动态随机存储器（DRAM）相比，SRAM的读写速度更快，通常用于高速缓存、寄存器和其他需要快速访问的应用程序。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p8476171185714"><a name="p8476171185714"></a><a name="p8476171185714"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p8476171185714"><a name="p8476171185714"></a><a name="p8476171185714"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row998163813534"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p13477141110572"><a name="p13477141110572"></a><a name="p13477141110572"></a><strong id="b24771511145717"><a name="b24771511145717"></a><a name="b24771511145717"></a>SwiGLU</strong></p>
@@ -1748,7 +1748,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p247761145713"><a name="p247761145713"></a><a name="p247761145713"></a><span>Swish-Gated Linear Units，Swish门控线性单元激活函数</span>。</p>
 <p id="p8477511145711"><a name="p8477511145711"></a><a name="p8477511145711"></a>是Gated Linear Units函数的一种变体，其融入了Swish激活函数。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p4477511185713"><a name="p4477511185713"></a><a name="p4477511185713"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p4477511185713"><a name="p4477511185713"></a><a name="p4477511185713"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row199833855318"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p104781611175714"><a name="p104781611175714"></a><a name="p104781611175714"></a><strong id="b5478101135720"><a name="b5478101135720"></a><a name="b5478101135720"></a>SIMD</strong></p>
@@ -1756,7 +1756,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p16478121117575"><a name="p16478121117575"></a><a name="p16478121117575"></a>Single Instruction，Multiple Data，单指令，多数据。</p>
 <p id="p6478811205716"><a name="p6478811205716"></a><a name="p6478811205716"></a>一种并行处理器计算机结构，其中一个指令处理器取得指令，并将其分配给其他一些处理器进行处理。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p347813117577"><a name="p347813117577"></a><a name="p347813117577"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p347813117577"><a name="p347813117577"></a><a name="p347813117577"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row129923815311"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p14783119579"><a name="p14783119579"></a><a name="p14783119579"></a><strong id="b12478511145712"><a name="b12478511145712"></a><a name="b12478511145712"></a>SSL</strong></p>
@@ -1764,7 +1764,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p3479511155720"><a name="p3479511155720"></a><a name="p3479511155720"></a>Secure Sockets Layer，安全套接层。</p>
 <p id="p12479211115714"><a name="p12479211115714"></a><a name="p12479211115714"></a>工作于套接字层的安全协议。该层位于TCP层和应用层之间，用于数据的加解密以及相关实体的认证。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p154791110579"><a name="p154791110579"></a><a name="p154791110579"></a>Mind Edge</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p154791110579"><a name="p154791110579"></a><a name="p154791110579"></a>MindEdge</p>
 </td>
 </tr>
 <tr id="row161001838165311"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p19479511165713"><a name="p19479511165713"></a><a name="p19479511165713"></a><strong id="b184796116572"><a name="b184796116572"></a><a name="b184796116572"></a>Standard Deviation</strong></p>
@@ -1786,7 +1786,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p34821211145718"><a name="p34821211145718"></a><a name="p34821211145718"></a>叶脊网络架构。在leaf-spine架构中有两个重要组件，leaf（叶）交换机和spine（脊）换机。其中spine交换机可以当作传统三层架构中的核心交换机，这里的spine交换机不再是三层架构中的大型机箱式交换机，而是高端口密度的交换机。而leaf交换机就是接入层，leaf交换机提供网络连接给终端、服务器，同时上联给spine交换机。 leaf-spine拓扑网络结构主要为解决数据中心内流量的快速增长和数据中心规模的不断扩大，满足传统的三层网络拓扑结构不能满足的数据中心内部高速互连的需求。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p7483111125714"><a name="p7483111125714"></a><a name="p7483111125714"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p7483111125714"><a name="p7483111125714"></a><a name="p7483111125714"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row19102173815313"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p6483101118576"><a name="p6483101118576"></a><a name="p6483101118576"></a><strong id="b1948314119579"><a name="b1948314119579"></a><a name="b1948314119579"></a>Sample-based</strong></p>
@@ -1853,7 +1853,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p546520175813"><a name="p546520175813"></a><a name="p546520175813"></a>Transmission Control Protocol，传输控制协议。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p446581165811"><a name="p446581165811"></a><a name="p446581165811"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p446581165811"><a name="p446581165811"></a><a name="p446581165811"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row17825134415579"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p24667195818"><a name="p24667195818"></a><a name="p24667195818"></a><strong id="b1446615110582"><a name="b1446615110582"></a><a name="b1446615110582"></a>TDP</strong></p>
@@ -1875,7 +1875,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p104691213589"><a name="p104691213589"></a><a name="p104691213589"></a>Training Fault Tolerance，训练容错框架。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p12469415589"><a name="p12469415589"></a><a name="p12469415589"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p12469415589"><a name="p12469415589"></a><a name="p12469415589"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row1828164419573"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1346901205810"><a name="p1346901205810"></a><a name="p1346901205810"></a><strong id="b18469812589"><a name="b18469812589"></a><a name="b18469812589"></a>TIK</strong></p>
@@ -1898,7 +1898,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p04728195811"><a name="p04728195811"></a><a name="p04728195811"></a>Transport Layer Security，传输层安全性协议。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1747217155813"><a name="p1747217155813"></a><a name="p1747217155813"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p1747217155813"><a name="p1747217155813"></a><a name="p1747217155813"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row483184415718"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p13474121125820"><a name="p13474121125820"></a><a name="p13474121125820"></a><strong id="b847518110582"><a name="b847518110582"></a><a name="b847518110582"></a>TP</strong></p>
@@ -1906,7 +1906,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p147512175814"><a name="p147512175814"></a><a name="p147512175814"></a>Tensor Parallelism，张量并行。</p>
 <p id="p1247514195818"><a name="p1247514195818"></a><a name="p1247514195818"></a>通过将网络中的张量（Tensor）切分到不同的设备，从而降低单个设备的显存消耗，使得超大规模模型训练成为可能。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p847513115584"><a name="p847513115584"></a><a name="p847513115584"></a>PTA</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p847513115584"><a name="p847513115584"></a><a name="p847513115584"></a>TorchNPU</p>
 </td>
 </tr>
 <tr id="row14832184425718"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p15476111115816"><a name="p15476111115816"></a><a name="p15476111115816"></a><strong id="b84764185818"><a name="b84764185818"></a><a name="b84764185818"></a>Triton</strong></p>
@@ -1921,7 +1921,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1447714118588"><a name="p1447714118588"></a><a name="p1447714118588"></a>Try To Persist，临终Checkpoint保存。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p19477913584"><a name="p19477913584"></a><a name="p19477913584"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p19477913584"><a name="p19477913584"></a><a name="p19477913584"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row98411820145219"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p11842320105214"><a name="p11842320105214"></a><a name="p11842320105214"></a><strong id="b1515592710378"><a name="b1515592710378"></a><a name="b1515592710378"></a>TPOT</strong></p>
@@ -1956,7 +1956,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p173335511566"><a name="p173335511566"></a><a name="p173335511566"></a>Uncorrectable Memory Error，不可纠正内存错误。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p5989355202116"><a name="p5989355202116"></a><a name="p5989355202116"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p5989355202116"><a name="p5989355202116"></a><a name="p5989355202116"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row932493915110"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p1969413171218"><a name="p1969413171218"></a><a name="p1969413171218"></a><strong id="b354214641211"><a name="b354214641211"></a><a name="b354214641211"></a>Unified Buffer</strong></p>
@@ -1985,7 +1985,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p19843134025618"><a name="p19843134025618"></a><a name="p19843134025618"></a>Universally Unique Identifier，通用唯一识别码。</p>
 <p id="p784384075610"><a name="p784384075610"></a><a name="p784384075610"></a>通用唯一识别码是一个软件建构的标准，也是被开源软件基金会（Open Software Foundation, OSF）的组织应用在分布式计算环境（Distributed Computing Environment, DCE）领域的一部分。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p102233584139"><a name="p102233584139"></a><a name="p102233584139"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p102233584139"><a name="p102233584139"></a><a name="p102233584139"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row119184319189"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p11875111718914"><a name="p11875111718914"></a><a name="p11875111718914"></a><strong id="b87637397184"><a name="b87637397184"></a><a name="b87637397184"></a>UT</strong></p>
@@ -2029,7 +2029,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p4207111535220"><a name="p4207111535220"></a><a name="p4207111535220"></a>Volcano Job，Kubernetes中的Volcano任务。</p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p746384814145"><a name="p746384814145"></a><a name="p746384814145"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p746384814145"><a name="p746384814145"></a><a name="p746384814145"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row112941027182811"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p51015809"><a name="p51015809"></a><a name="p51015809"></a><strong id="b5868157135714"><a name="b5868157135714"></a><a name="b5868157135714"></a>VDEC</strong></p>
@@ -2133,7 +2133,7 @@
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p255292602514"><a name="p255292602514"></a><a name="p255292602514"></a>Zero Redundancy Optimizer，零冗余优化器<strong id="b1263385462517"><a name="b1263385462517"></a><a name="b1263385462517"></a>。</strong></p>
 <p id="p168997381546"><a name="p168997381546"></a><a name="p168997381546"></a>ZeRO是一种为了解决大规模分布式训练中的内存瓶颈问题而设计的优化器。它通过减少冗余数据来优化模型的内存使用，允许训练更大的模型。<span>该方法与传统的数据并行相比，内存效率得到了极大的提高，计算粒度和通信效率得到了保留。</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p3261202592217"><a name="p3261202592217"></a><a name="p3261202592217"></a>MindCluster集群调度</p>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p3261202592217"><a name="p3261202592217"></a><a name="p3261202592217"></a>MindCluster</p>
 </td>
 </tr>
 <tr id="row340552513275"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p6685581198"><a name="p6685581198"></a><a name="p6685581198"></a><strong id="b782613413510"><a name="b782613413510"></a><a name="b782613413510"></a>整网比对</strong></p>
