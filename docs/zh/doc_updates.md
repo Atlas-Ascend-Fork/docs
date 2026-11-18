@@ -2,6 +2,99 @@
 
 本文介绍了CANN文档的最新上线新增、变更动态，欢迎体验。
 
+## 9.2.0
+
+<table>
+  <colgroup>
+    <col style="width: 6%">
+    <col style="width: 18%">
+    <col style="width: 52%">
+    <col style="width: 24%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>序号</th>
+      <th>更新点</th>
+      <th>更新说明</th>
+      <th>相关文档</th>
+    </tr>
+  </thead>
+  <tbody style="font-size:14px">
+    <tr>
+      <td style="font-size:14px">1</td>
+      <td style="font-size:14px">优化昇腾产品形态说明</td>
+      <td style="font-size:14px">优化“产品系列”名称，新增NPU_ARCH、soc_series、soc_version参数说明内容。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/Glossary/productform/hardwaredesc_0001.html">昇腾产品形态说明</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">2</td>
+      <td style="font-size:14px">新增Ascend C算子开发章节</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">补充L2 Cache切分优化说明。</li><li style="font-size:14px">新增NPU架构版本3510新特性使用说明。</li><li style="font-size:14px">“Aclnn算子工程化开发”章节进行优化调整，增加推荐阅读路径、快速入门等内容。</li><li style="font-size:14px">新增“高级编程 > 内存模型”章节，介绍缓存一致性和内存一致性的概念、原理、常见问题和解决方案等内容。</li><li style="font-size:14px">新增“基于Tensor的C++编程”章节。</li><li style="font-size:14px">新增“原子操作指令优化”章节。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/programug/Ascendcopdevg/asc-devkit/docs/zh/guide/getting_started/ascend_c_overview_and_learning_path.md">Ascend C算子开发</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">3</td>
+      <td style="font-size:14px">新增PyPTO Pro编程模型内容</td>
+      <td style="font-size:14px">新增支持PyPTO Pro开发模式，支持面向Tile操作的Tile编程模型内容。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/programug/pyptoopdevg/docs/zh/guide/introduction.md">PyPTO算子开发</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">4</td>
+      <td style="font-size:14px">重构自定义算子入图与AutoFuse章节</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">“自定义算子入图”章节进行特性调整和目录结构调整。</li><li style="font-size:14px">优化“AutoFuse自动融合”章节：<ul><li style="font-size:14px">调整目录结构，新增“快速入门”、“启用AutoFuse”章节，环境变量的详细说明移至“附录”章节。</li><li style="font-size:14px">“启用AutoFuse”章节分两条路径分别介绍自动融合的开启模式，新增Inductor路径下的融合开启方式。</li></ul></li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/programug/graphdevg/docs/zh/user_guides/graph_dev/overview/GE_definition.md">图开发</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">5</td>
+      <td style="font-size:14px">新增文档</td>
+      <td style="font-size:14px">新增《PTOAS》文档。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/compiler/ptoas/overview/what_is_ptoas.md">PTOAS</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">6</td>
+      <td style="font-size:14px">优化HCCL故障排查案例</td>
+      <td style="font-size:14px">优化三个故障案例：“建链超时”、“notify_wait超时”和“通信域初始化topo探测超时”章节。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/commlib/hcclug/docs/zh/user_guide/hccl_intro.md">HCCL集合通信库</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">7</td>
+      <td style="font-size:14px">重构Ascend C API文档</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">“C API”章节重构Ascend 950PR&950DT系列产品资料，细化目录结构和优化资料内部结构，完善接口功能说明、调用示例和约束说明。</li><li style="font-size:14px">“Tensor API”章节完善cube_compute_load/store、layout_structure、data_move、tensor_structure等资料。</li><li style="font-size:14px">优化“SIMT API”章节：<ul><li style="font-size:14px">补充UB复用排布规则说明。</li><li style="font-size:14px">数学库接口更新精度说明。</li><li style="font-size:14px">协作组增加grid_group、thread_group说明。</li><li style="font-size:14px">新增“SIMT指令理论性能汇总”章节。</li><li style="font-size:14px">新增整型转换函数。</li><li style="font-size:14px">新增SIMT编程场景使用的编译选项。</li></ul></li><li style="font-size:14px">新增“CheckOpResSufficient”章节。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/API/ascendcopapi/docs/zh/api/api_list.md">Ascend C API</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">8</td>
+      <td style="font-size:14px">新增章节</td>
+      <td style="font-size:14px">新增PyPTO Pro API章节。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/API/pyptoapi/docs/zh/api/tensor_api/tensor/pypto-Tensor_introduction.md">PyPTO API</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">9</td>
+      <td style="font-size:14px">新增算子库NN类接口章节</td>
+      <td style="font-size:14px">《算子库》手册“算子库 > 算子接口（torch_extension）”新增“NN类接口”章节。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/API/aolapi/docs/zh/ops-lib/introduction.md">算子库API</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">10</td>
+      <td style="font-size:14px">重组性能调优工具文档结构</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">目录结构调整，以采集工具为粒度平铺章节。</li><li style="font-size:14px">Ascend PyTorch调优工具、MindSpore调优工具、使用TensorFlow框架接口采集性能数据、使用acl Python接口采集性能数据章节调整至各自源文档发布，《性能调优工具》手册在简介中保留跳转链接。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/devaids/Profiling/docs/zh/profiling/overview.md">性能调优工具</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">11</td>
+      <td style="font-size:14px">新增强化内存分析能力内容</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">新增显存OOM分析项，发生OOM时dump最新和最大内存块信息。</li><li style="font-size:14px">支持采集进程显存曲线和整卡显存曲线。</li><li style="font-size:14px">新增Host内存泄漏检测功能资料。</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/devaids/msMemScope/docs/zh/quick_start/quick_start.md">内存分析工具</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">12</td>
+      <td style="font-size:14px">新增AMCT量化功能内容</td>
+      <td style="font-size:14px">新增AMCT（acl）场景下的量化特性以及接口说明。</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/920/devaids/amct/atlasamct_16_0001.html">AMCT模型压缩工具</a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## 9.1.0
 
 <table>

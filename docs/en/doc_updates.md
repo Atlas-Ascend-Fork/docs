@@ -4,6 +4,99 @@
 
 This section describes the latest changes to the CANN documentation.
 
+## 9.2.0
+
+<table>
+  <colgroup>
+    <col style="width: 6%">
+    <col style="width: 18%">
+    <col style="width: 52%">
+    <col style="width: 24%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Update</th>
+      <th>Description</th>
+      <th>Document</th>
+    </tr>
+  </thead>
+  <tbody style="font-size:14px">
+    <tr>
+      <td style="font-size:14px">1</td>
+      <td style="font-size:14px">Ascend product form descriptions</td>
+      <td style="font-size:14px">Optimized the product portfolio, and added NPU_ARCH, soc_series, and soc_version parameter descriptions.</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/Glossary/productform/hardwaredesc_0001.html">Ascend Product Overview</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">2</td>
+      <td style="font-size:14px">Ascend C Operator Development</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">Added L2 cache partitioning optimization notes.</li><li style="font-size:14px">Added usage guides for new features of NPU architecture version 3510.</li><li style="font-size:14px">Optimized and adjusted the "Aclnn Operator Engineering Development" section by adding recommended readings, quick start guide, and other content.</li><li style="font-size:14px">Added the "Advanced Programming > Memory Model" chapter, which introduces the concepts, principles, common issues, and solutions of cache coherence and memory consistency.</li><li style="font-size:14px">Added the "Tensor-based C++ Programming" chapter.</li><li style="font-size:14px">Added the "Atomic Operation Instruction Optimization" chapter.</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/programug/Ascendcopdevg/asc-devkit/docs/en/guide/getting_started/ascend_c_overview_and_learning_path.md">Ascend C Operator Development</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">3</td>
+      <td style="font-size:14px">PyPTO Pro Programming Model</td>
+      <td style="font-size:14px">Added support for the PyPTO Pro development mode and the tile programming model for tile operations.</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/programug/pyptoopdevg/docs/en/guide/introduction.md">PyPTO Operator Development</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">4</td>
+      <td style="font-size:14px">Custom Operator Graph Integration and AutoFuse chapters</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">Adjusted the features and directory structure of the "Custom Operator Graph Integration" chapter.</li><li style="font-size:14px">Optimized the "AutoFuse" chapter:<ul><li style="font-size:14px">Adjusted the directory structure, added the "Quick Start" and "Enabling AutoFuse" chapters, and moved the detailed environment variable descriptions to the "Appendix" chapter.</li><li style="font-size:14px">The "Enabling AutoFuse" chapter introduces the two paths to enable AutoFuse, and adds the fusion enabling method under the Inductor path.</li></ul></li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/programug/graphdevg/docs/en/user_guides/graph_dev/overview/GE_definition.md">Graph Development</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">5</td>
+      <td style="font-size:14px">New documentation</td>
+      <td style="font-size:14px">Added the *PTOAS* document.</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/compiler/ptoas/overview/what_is_ptoas.md">PTOAS</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">6</td>
+      <td style="font-size:14px">HCCL fault troubleshooting cases</td>
+      <td style="font-size:14px">Optimized three fault cases: the "Link Setup Timeout", "notify_wait Timeout", and "Communicator Initialization Topology Detection Timeout" sections.</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/commlib/hcclug/docs/en/user_guide/hccl_intro.md">Huawei Collective Communication Library (HCCL)</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">7</td>
+      <td style="font-size:14px">Ascend C API documentation</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">Restructured the Ascend 950PR&950DT products documentation in the "C API" chapter, refined the directory structure and optimized the internal structure, and improved the API function descriptions, call examples, and constraints.</li><li style="font-size:14px">Improved the cube_compute_load/store, layout_structure, data_move, tensor_structure, and other documentation in the "Tensor API" chapter.</li><li style="font-size:14px">Optimized the "SIMT API" chapter:<ul><li style="font-size:14px">Supplemented the UB reuse layout rule description.</li><li style="font-size:14px">Updated the precision description of the math library APIs.</li><li style="font-size:14px">Added grid_group and thread_group descriptions to the cooperative groups.</li><li style="font-size:14px">Added the "SIMT Instruction Theoretical Performance Summary" chapter.</li><li style="font-size:14px">Added integer conversion functions.</li><li style="font-size:14px">Added the build options used in SIMT programming.</li></ul></li><li style="font-size:14px">Added the "CheckOpResSufficient" chapter.</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/API/ascendcopapi/docs/en/api/api_list.md">Ascend C APIs</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">8</td>
+      <td style="font-size:14px">New chapter</td>
+      <td style="font-size:14px">Added the PyPTO Pro API chapter.</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/API/pyptoapi/docs/en/api/tensor_api/tensor/pypto-Tensor_introduction.md">PyPTO API</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">9</td>
+      <td style="font-size:14px">Operator Library</td>
+      <td style="font-size:14px">Added the "NN APIs" chapter under "Operator APIs (torch_extension)".</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/API/aolapi/docs/en/ops-lib/introduction.md">Operator Library</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">10</td>
+      <td style="font-size:14px">Performance Tuning Tool documentation</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">Adjusted the directory structure to flatten the documentation by profiling tool.</li><li style="font-size:14px">Moved the chapters about Ascend PyTorch Profiler, MindSpore Profiler, "Using TensorFlow APIs for Data Profiling", and "Using acl Python APIs for Data Profiling" to their respective source documents. Their redirection links remain in the Overview section in *Performance Tuning Tool*.</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/devaids/Profiling/docs/en/profiling/overview.md">Performance Tuning Tool</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">11</td>
+      <td style="font-size:14px">Content about enhanced memory analysis</td>
+      <td style="font-size:14px"><ul><li style="font-size:14px">Added a device memory OOM analysis item to dump the latest and largest memory block information when OOM occurs.</li><li style="font-size:14px">Supported collecting process device memory curves and whole-device memory curves.</li><li style="font-size:14px">Added documentation for the host memory leak detection feature.</li></ul></td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/devaids/msMemScope/docs/en/quick_start/quick_start.md">msMemScope</a></td>
+    </tr>
+    <tr>
+      <td style="font-size:14px">12</td>
+      <td style="font-size:14px">Content about AMCT quantization</td>
+      <td style="font-size:14px">Added the quantization features and API description for AMCT (acl) use cases.</td>
+      <td style="white-space: nowrap; font-size:14px"><a href="https://www.hiascend.com/document/detail/en/CANNCommunityEdition/920/devaids/amct/atlasamct_16_0001.html">Ascend Model Compression Toolkit (AMCT)</a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## 9.1.0
 
 <table>
