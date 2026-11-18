@@ -53,6 +53,7 @@
   - [ASCEND_GLOBAL_EVENT_ENABLE](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_GLOBAL_EVENT_ENABLE.md)
   - [ASCEND_LOG_DEVICE_FLUSH_TIMEOUT](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_LOG_DEVICE_FLUSH_TIMEOUT.md)
   - [ASCEND_HOST_LOG_FILE_NUM](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_HOST_LOG_FILE_NUM.md)
+  - [ASCEND_LOG_GID](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_LOG_GID.md)
   - [ASCEND_COREDUMP_SIGNAL](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_COREDUMP_SIGNAL.md)
   - [ASCEND_LOG_SYNC_SAVE](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_LOG_SYNC_SAVE.md)
   - [ASCEND_TRACE_RECORD_NUM](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_TRACE_RECORD_NUM.md)
