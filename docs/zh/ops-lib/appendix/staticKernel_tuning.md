@@ -35,7 +35,7 @@
 
     当出现类似如下回显信息代表编译成功。
 
-    ```text
+    ```bash
     generate run package static_kernel_${datetime}_${pid}.run success
     ```
 
@@ -70,7 +70,7 @@
     Uncompressing STATIC KERNEL RUN PACKAGE  100%
     ```
 
-    目前暂不支持指定目录安装，run包默认安装到`{install_path}/opp/static_kernel`路径下，其中$\{install\_path\}为CANN软件安装后文件存储路径，请根据实际情况替换该路径。
+    目前暂不支持指定目录安装，run包默认安装到`${install_path}/opp/static_kernel`路径下，其中$\{install\_path\}为CANN软件安装后文件存储路径，请根据实际情况替换该路径。
 
     > **说明：** run包默认安装路径\$\{install\_path\}/opp/static\_kernel的默认权限为770（本用户、同组用户访问）。如果权限不足导致静态Kernel包安装失败，可联系CANN软件包的安装用户修改static\_kernel目录权限来解决。
 

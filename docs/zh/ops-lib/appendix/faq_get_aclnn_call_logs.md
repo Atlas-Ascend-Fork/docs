@@ -4,7 +4,7 @@
 
 - plog日志获取：
 
-    程序执行结束后，默认可在`$HOME/ascendc/log`下查看，Host日志文件存储路径如下：
+    程序执行结束后，默认可在`$HOME/ascend/log`下查看，Host日志文件存储路径如下：
 
     ```text
     $HOME/ascend/log/debug/plog/plog-pid_*.log

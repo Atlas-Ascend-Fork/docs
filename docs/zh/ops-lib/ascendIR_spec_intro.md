@@ -85,7 +85,6 @@ struct TensorType {
 
   std::shared_ptr<TensorTypeImpl> tensor_type_impl_;
 };
-
 ```
 
 ## Type Promotion

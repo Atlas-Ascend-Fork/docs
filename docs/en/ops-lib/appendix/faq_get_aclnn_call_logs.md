@@ -6,7 +6,7 @@ During aclnn API calls, if issues such as operator execution failure or precisio
 
 - Obtaining plog logs:
 
-    After the program finishes running, the logs can be viewed under `$HOME/ascendc/log` by default. The host log file storage path is as follows:
+    After the program finishes running, the logs can be viewed under `$HOME/ascend/log` by default. The host log file storage path is as follows:
 
     ```text
     $HOME/ascend/log/debug/plog/plog-pid_*.log
@@ -25,7 +25,7 @@ During aclnn API calls, if issues such as operator execution failure or precisio
     Use the **aclGetRecentErrMsg** API to obtain exception information during aclnn API calls. The usage is as follows:
 
     ```cpp
-    printf(aclGetRecentErrMsg());
+    printf("%s", aclGetRecentErrMsg());
     ```
 
     The following is an example of the printed error information:

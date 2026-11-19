@@ -37,7 +37,7 @@
 
     Compilation is successful when a message similar to the following is displayed.
 
-    ```text
+    ```bash
     generate run package static_kernel_${datetime}_${pid}.run success
     ```
 
@@ -71,7 +71,7 @@
     Uncompressing STATIC KERNEL RUN PACKAGE  100%
     ```
 
-    Currently, installation to a specified directory is not supported. The RUN package is installed to the `{install_path}/opp/static_kernel` path by default, where **$\{install\_path\}** is the file storage path after the CANN software is installed. Replace it with the actual path.
+    Currently, installation to a specified directory is not supported. The RUN package is installed to the `${install_path}/opp/static_kernel` path by default, where **$\{install\_path\}** is the file storage path after the CANN software is installed. Replace it with the actual path.
 
     > **Note:** The default permission of the RUN package installation path **\$\{install\_path\}/opp/static\_kernel** is 770 (accessible to the current user and users in the same group). If the static kernel package installation fails due to insufficient permissions, contact the user who installed the CANN software package to modify the permission of the **static\_kernel** directory.
 
