@@ -2,6 +2,8 @@
 
 本文档用于配置开源仓内的白名单规则：指定哪些中英文Markdown文件的修改不会被CI流程拦截。下表中的放通目录即为CI豁免目录，主要包含产品文档、Skill等相关文件。
 
+翻译SKILL相关链接可参考[docs-translation](https://gitcode.com/cann/cannbot-skills/blob/master/infra/docs-translation/SKILL.md)。
+
 | 开源仓 | 是否配置中英文CI拦截 | 放通目录<br>（如下目录不进行中英文CI校验，只修改英文md不再进行拦截） |
 | --- | --- | --- |
 | [https://gitcode.com/cann/asc-devkit](https://gitcode.com/cann/asc-devkit) | 是，已完成拦截 | **产品文档：**<br>docs/en/api<br>docs/en/guide<br>docs/zh/api<br>docs/zh/guide<br>docs/zh/vitepress<br>**skill等相关目录：**<br>.agent<br>.claude<br>.codex<br>.opencode |
@@ -19,11 +21,12 @@
 | [https://gitcode.com/cann/amct](https://gitcode.com/cann/amct) | 是，已完成拦截 | **产品文档：**<br>docs<br>**skill等相关目录：**<br>.claude<br>.opencode<br>AGENTS.md<br>.agent |
 | [https://gitcode.com/cann/tensorflow](https://gitcode.com/cann/tensorflow) | 是，已完成拦截 | **无放通目录，全部拦截** |
 | [https://gitcode.com/cann/pto-isa](https://gitcode.com/cann/pto-isa) | / | / |
-| [https://gitcode.com/cann/opbase](https://gitcode.com/cann/opbase) | / | / |
-| [https://gitcode.com/cann/ops-cv](https://gitcode.com/cann/ops-cv) | / | / |
-| [https://gitcode.com/cann/ops-math](https://gitcode.com/cann/ops-math) | / | / |
-| [https://gitcode.com/cann/ops-nn](https://gitcode.com/cann/ops-nn) | / | / |
-| [https://gitcode.com/cann/ops-transformer](https://gitcode.com/cann/ops-transformer) | / | / |
+| [https://gitcode.com/cann/opbase](https://gitcode.com/cann/opbase) | / | master:<br>docs<br>experimental<br>aclnn*.md<br>torchapi_*.md<br>*Pass.md |
+| [https://gitcode.com/cann/ops-cv](https://gitcode.com/cann/ops-cv) | / | 同opbase仓 |
+| [https://gitcode.com/cann/ops-math](https://gitcode.com/cann/ops-math) | / | 同opbase仓 |
+| [https://gitcode.com/cann/ops-nn](https://gitcode.com/cann/ops-nn) | / | 同opbase仓 |
+| [https://gitcode.com/cann/ops-transformer](https://gitcode.com/cann/ops-transformer) | / | 同opbase仓 |
+| [https://gitcode.com/cann/ops-ras](https://gitcode.com/cann/ops-ras) | / | 同opbase仓 |
 | [https://gitcode.com/cann/docs](https://gitcode.com/cann/docs) | 暂不拦截 | / |
 | [https://gitcode.com/cann/pypto-vscode](https://gitcode.com/cann/pypto-vscode) | 是，已完成拦截 | **产品文档：**<br>docs/zh <br>AGENTS.md |
 | [https://gitcode.com/cann/asc-comm](https://gitcode.com/cann/asc-comm) | 是，已完成拦截 | **产品文档：**<br>docs/zh/api <br>docs/zh/guide <br>docs/zh/programming_model <br>docs/zh/index.md <br>docs/en/api <br>docs/en/guide <br>docs/en/programming_model <br>docs/en/index.md |
