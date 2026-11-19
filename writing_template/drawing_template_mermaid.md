@@ -1,6 +1,6 @@
 # 流程图 Mermaid 代码
 
-## 流程图（遵从图形规范）
+## 流程图（从上到下，遵从图形规范）
 
 ```mermaid
 %%{init: {
@@ -25,6 +25,31 @@ flowchart TD
     classDef circle fill:#686D75,stroke-width:0,color:#ffffff;
 
     Start --> A --> B --> C --> D --> E --> End
+
+```
+
+## 流程图（从左到右，遵从图形规范）
+
+```mermaid
+%%{init: {
+  "themeVariables": {
+    "lineColor": "#686D75",
+    "edgeStrokeWidth": "1px",
+    "fontSize": "14px",
+    "fontFamily": "HarmonyOS Sans, sans-serif"
+  },
+  "flowchart": { "padding": 6, "htmlLabels": true, "useMaxWidth": false, "rankSpacing": 24, "nodeSpacing": 24 }
+}}%%
+flowchart LR
+    A["<div style='width:148px;display:flex;align-items:center;justify-content:center'>流程1</div>"]:::blue
+    B["<div style='width:148px;display:flex;align-items:center;justify-content:center'>流程2</div>"]:::blue
+    C["<div style='width:148px;display:flex;align-items:center;justify-content:center'>流程3</div>"]:::blue
+    D["<div style='width:148px;display:flex;align-items:center;justify-content:center'>流程4</div>"]:::blue
+    E["<div style='width:148px;display:flex;align-items:center;justify-content:center'>流程5</div>"]:::blue
+
+    classDef blue   fill:#C2D5FE,stroke-width:0,rx:4px,ry:4px;
+
+    A --> B --> C --> D --> E
 
 ```
 
@@ -76,7 +101,7 @@ sequenceDiagram
   }
 }}%%
 sequenceDiagram
-    participant GE as GE 
+    participant GE as GE
     participant M as 算子原型库管理模块
     participant G as Graph
     participant N as Node

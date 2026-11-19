@@ -86,6 +86,19 @@ cann_docs/
 - [LLM DataDist开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/llm_datadist/index.md)
 - [DataFlow开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/dflow/index.md)
 
+## 模板和规范
+
+常用模板和规范如下：
+
+- 写作模板和规范
+  - [文档写作规范](./specification/document_writing_specs.md)
+  - [API参考写作模板](./writing_template/API_reference.md) 
+
+- 绘图模板和规范
+  - [绘图规范](./specification/drawing_specs.md) 
+  - [绘图模板（draw.io）](./writing_template/drawing_template_drawio.xml) 
+  - [绘图模板（Mermaid）](./writing_template/drawing_template_mermaid.md) 
+
 ## cann-docs-raw包
 
 [cann-docs-raw](https://ascend.devcloud.huaweicloud.com/artifactory/cann-run-mirror/cann-docs/) 包汇总了产品文档的Markdown源文件、头文件和样例，并对Markdown源文件进行了标签清洗，便于Agent读取和使用。
