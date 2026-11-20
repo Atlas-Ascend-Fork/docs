@@ -2,7 +2,7 @@
 
 本节介绍VENC视频编码的接口调用流程，同时配合示例代码辅助理解该接口调用流程。
 
-VENC（Video Encoder）将YUV420SP格式的图片编码成H264/H265格式的视频码流。关于VENC功能的详细介绍及使用约束请参见[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)。
+VENC（Video Encoder）将YUV420SP格式的图片编码成H264/H265格式的视频码流。关于VENC功能的详细介绍及使用约束请参见《[DVPP媒体加速库](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)》。
 
 ## 接口调用流程
 
@@ -112,7 +112,7 @@ fseek(fp, 0, SEEK_SET);
 auto fileLen = static_cast<uint32_t>(fileLenLong);
 uint32_t dataSize = fileLen;
 
-// 调用aclrtGetRunMode接口获取软件栈的运行模式，如果调用aclrtGetRunMode接口获取软件栈的运行模式为ACL_HOST，则需要通过aclrtMemcpy接口将输入图片数据传输到Device，数据传输完成后，需及时释放内存；否则直接申请并使用Device的内存
+// 调用aclrtGetRunMode接口获取软件栈的运行模式，如果运行模式为ACL_HOST，则需要通过aclrtMemcpy接口将输入图片数据传输到Device，数据传输完成后，需及时释放内存；否则直接申请并使用Device的内存
 aclrtRunMode runMode;
 ret = aclrtGetRunMode(&runMode);
 void *dataDev = nullptr;
@@ -131,9 +131,9 @@ else {
 // 6. 执行视频编码
 size_t g_vencCnt = 16;
 // 6.1 创建输入图片描述信息，设置输入图片数据的内存地址和内存大小
-inputPicputDesc_ = acldvppCreatePicDesc();
-ret = acldvppSetPicDescData(inputPicputDesc_, dataDev);
-ret = acldvppSetPicDescSize(inputPicputDesc_, dataSize);
+inputPicDesc_ = acldvppCreatePicDesc();
+ret = acldvppSetPicDescData(inputPicDesc_, dataDev);
+ret = acldvppSetPicDescSize(inputPicDesc_, dataSize);
 // 6.2 设置单帧编码配置数据，不是结束帧
 ret = aclvencSetFrameConfigEos(vencFrameConfig_, 0);
 ret = aclvencSetFrameConfigForceIFrame(vencFrameConfig_, 0);
@@ -141,7 +141,7 @@ ret = aclvencSetFrameConfigForceIFrame(vencFrameConfig_, 0);
 acldvppStreamDesc *outputStreamDesc = nullptr;
 // 6.4 执行视频编码
 while (g_vencCnt > 0) {
-        ret = aclvencSendFrame(vencChannelDesc_, inputPicputDesc_,
+        ret = aclvencSendFrame(vencChannelDesc_, inputPicDesc_,
             static_cast<void *>(outputStreamDesc), vencFrameConfig_, nullptr);
         g_vencCnt--;
     }
@@ -154,7 +154,7 @@ ret = aclvencSendFrame(vencChannelDesc_, nullptr, nullptr, vencFrameConfig_, nul
 // 7. 释放资源
 (void)aclvencDestroyChannel(vencChannelDesc_);
 (void)aclvencDestroyChannelDesc(vencChannelDesc_);
-(void)acldvppDestroyPicDesc(inputPicputDesc_);
+(void)acldvppDestroyPicDesc(inputPicDesc_);
 (void)aclvencDestroyFrameConfig(vencFrameConfig_);
 // 释放内存和销毁线程
 (void)acldvppFree(dataDev);

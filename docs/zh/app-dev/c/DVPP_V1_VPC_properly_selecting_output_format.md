@@ -10,6 +10,6 @@ VPC图像处理功能支持输出YUV400格式（灰度图像），如果模型�
 
 ## 使用说明
 
-支持了YUV400格式，用户可直接将输出格式设置为YUV400，将内存大小设置为不小于“widthStride\*heightStride”的值，节省内存。
+用户可直接将输出格式设置为YUV400，将内存大小设置为不小于“widthStride\*heightStride”的值，节省内存。
 
 关于VPC功能的示例代码，请参见[VPC图像处理典型功能](DVPP_V1_VPC.md)。

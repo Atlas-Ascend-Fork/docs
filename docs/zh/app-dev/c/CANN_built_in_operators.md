@@ -11,10 +11,10 @@ aclnnStatus aclnnXxxGetWorkspaceSize(const aclTensor *src, ..., aclTensor *out, 
 aclnnStatus aclnnXxx(void *workspace, uint64_t workspaceSize, aclOpExecutor *executor, aclrtStream stream)
 ```
 
-其中_“Xxx”_表示对应的算子类型，如Add算子。两段式接口具体作用如下：
+其中“Xxx”表示对应的算子类型，如Add算子。两段式接口具体作用如下：
 
-- 第一段接口aclnn_Xxx_GetWorkspaceSize：完成入参校验、动态Shape场景下推导输出Shape、数据切块（Tiling）以及计算执行过程中算子所需的workspace内存大小等任务。
-- 第二段接口aclnn_Xxx_：executor执行器执行计算，框架自动调用DFX（例如Dump、溢出检测等）、Runtime提供的LaunchKernel接口等_。_
+- 第一段接口aclnnXxxGetWorkspaceSize：完成入参校验、动态Shape场景下推导输出Shape、数据切块（Tiling）以及计算执行过程中算子所需的workspace内存大小等任务。
+- 第二段接口aclnnXxx：executor执行器执行计算，框架自动调用DFX（例如Dump、溢出检测等）、Runtime提供的LaunchKernel接口等。
 
 ## 算子分类
 
@@ -27,7 +27,7 @@ CANN算子主要包含如下几类：
 
     对于集合通信和MatMul计算融合、并行的算子，统称为通算融合算子（简称MC2算子），如AllGatherMatmul、AlltoAllAllGatherBatchMatMul、BatchMatMulReduceScatterAlltoAll、MatMulAllReduce、MatMulAllReduceAddRmsNorm、MatMulReduceScatter等。
 
-关于算子IR（Intermediate Representation）规格介绍，请参见[《算子库》](https://hiascend.com/document/redirect/CannCommunityOplist)中“Ascend IR算子规格说明”；关于算子对应的API文档介绍，请参见[《算子库》](https://hiascend.com/document/redirect/CannCommunityOplist)中“算子接口（aclnn）”。
+关于算子IR（Intermediate Representation）规格介绍，请参见《[算子库](https://gitcode.com/cann/docs/blob/master/docs/zh/ops-lib/0_README.md)》中“Ascend IR算子规格说明”；关于算子对应的API文档介绍，请参见《[算子库](https://gitcode.com/cann/docs/blob/master/docs/zh/ops-lib/0_README.md)》中“算子接口（aclnn）”。
 
 调用算子API时，请include依赖必要的头文件和库文件，其中$\{INSTALL\_DIR\}请替换为CANN软件安装后文件存储路径。以root用户安装为例，安装后文件默认存储路径为：/usr/local/Ascend/cann。
 
@@ -51,14 +51,14 @@ CANN算子主要包含如下几类：
 3. **数据内存申请和传输。**
 
     1. 调用aclrtMalloc接口申请Device上的内存，存放待执行算子的输入、输出数据。
-    2. 调用aclCreateTensor、aclCreateIntArray等构造算子输入、输出参数，相关接口详见[《算子库》](https://hiascend.com/document/redirect/CannCommunityOplist)中“公共接口”。
+    2. 调用aclCreateTensor、aclCreateIntArray等构造算子输入、输出参数，相关接口详见《[算子库](https://gitcode.com/cann/docs/blob/master/docs/zh/ops-lib/0_README.md)》中“公共接口”。
 
     如果需要将Host上数据传输到Device，则需要调用aclrtMemcpy接口（同步接口）或aclrtMemcpyAsync接口（异步接口）通过内存复制的方式实现数据传输。
 
 4. **计算workspace并执行算子**。
-    1. 调用acl_xx__Xxx_GetWorkspaceSize接口获取算子入参，并计算该算子执行时需要的workspace大小。
+    1. 调用aclxx_XxxGetWorkspaceSize接口获取算子入参，并计算该算子执行时需要的workspace大小。
     2. 调用aclrtMalloc接口，根据workspace大小申请Device侧内存。
-    3. 调用acl_xx__Xxx_接口执行计算并得到结果。
+    3. 调用aclxxXxx_接口执行计算并得到结果。
 
 5. 调用aclrtSynchronizeStream接口**阻塞应用运行**，直到指定Stream中的所有任务都完成。
 6. 调用aclrtFree接口**释放内存**。
@@ -66,7 +66,7 @@ CANN算子主要包含如下几类：
     如果需要将Device上的算子执行结果数据传输到Host，则需要调用aclrtMemcpy接口（同步接口）或aclrtMemcpyAsync接口（异步接口）通过内存复制的方式实现数据传输，然后再释放内存。
 
 7. **运行时资源释放**。
-    1. 调用aclDestroyTensor、aclDestroyIntArray等接口释放算子输入、输出参数，相关接口详见[《算子库》](https://hiascend.com/document/redirect/CannCommunityOplist)中“公共接口”。
+    1. 调用aclDestroyTensor、aclDestroyIntArray等接口释放算子输入、输出参数，相关接口详见《[算子库](https://gitcode.com/cann/docs/blob/master/docs/zh/ops-lib/0_README.md)》中“公共接口”。
     2. 所有数据释放后，调用aclrtDestroyStream、aclrtResetDevice等接口，依次释放运行时资源即Stream、Context、Device。
 
 8. **去初始化：**调用aclFinalize接口实现去初始化。

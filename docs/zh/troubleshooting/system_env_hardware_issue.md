@@ -18,4 +18,4 @@ Failed to execute the built-in sample operator. Check the environment.
 
 ## 处理方法
 
-出现该问题，可以尝试使用[MindCluster ToolBox](https://www.hiascend.com/zh/software/mindx-dl)检查系统环境/硬件是否正常；如果无法排除故障，将asys收集的故障信息和msaicerr工具分析结果文件通过[https://gitee.com/ascend网站](https://gitee.com/ascend)提交issue获取帮助。
+出现该问题，可以尝试使用[MindCluster ToolBox](https://www.hiascend.com/zh/software/mindx-dl)检查系统环境/硬件是否正常；如果无法排除故障，将asys收集的故障信息和msaicerr工具分析结果文件通过[https://gitcode.com/cann网站](https://gitcode.com/cann)提交issue获取帮助。

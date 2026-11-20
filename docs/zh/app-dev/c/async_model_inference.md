@@ -57,7 +57,7 @@ aclrtMalloc(&modelMemPtr_, modelMemSize_, ACL_MEM_MALLOC_HUGE_FIRST);
 aclrtMalloc(&modelWeightPtr_, modelWeightSize_, ACL_MEM_MALLOC_HUGE_FIRST);
 
 // 加载离线模型文件，模型加载成功，返回标识模型的ID。
-aclmdlLoadFromFileWithMem(modelPath, &modelId_, modelMemPtr_,
+aclmdlLoadFromFileWithMem(omModelPath, &modelId_, modelMemPtr_,
         modelMemSize_, modelWeightPtr_, modelWeightSize_);
 
 // 1.2 根据模型的ID，获取该模型的描述信息

@@ -30,4 +30,4 @@ AI处理器内置图像处理单元DVPP（Digital Video Pre-Processing），在D
 
 ## 使用示例
 
-此处以批量抠图、缩放为例说明如何调用批处理接口acldvppVpcBatchCropResizeAsync，完整代码请您可以单击[batchcrop](https://gitee.com/ascend/samples/tree/master/cplusplus/level2_simple_inference/0_data_process/batchcrop)获取样例。
+此处以批量抠图、缩放为例说明如何调用批处理接口acldvppVpcBatchCropResizeAsync，完整代码您可以单击[batchcrop](https://gitee.com/ascend/samples/tree/master/cplusplus/level2_simple_inference/0_data_process/batchcrop)获取样例。

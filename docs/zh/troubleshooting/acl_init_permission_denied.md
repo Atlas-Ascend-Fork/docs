@@ -45,7 +45,7 @@ EL0003: The argument is invalid.
 
         在该文件中，Driver\_Install\_Path\_Param表示Driver包的安装路径。
 
-    2. 进入Driver安装路径，使用upgrade-tool工具查看下Device侧运行文件系统版本，如果能正常查询，则说明Device侧已经正常启动。
+    2. 进入Driver安装路径，使用upgrade-tool工具查看Device侧运行文件系统版本，如果能正常查询，则说明Device侧已经正常启动。
 
         ```bash
         ./upgrade-tool --device_index -1 --system_version

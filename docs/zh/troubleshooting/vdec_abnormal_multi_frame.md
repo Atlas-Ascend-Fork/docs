@@ -16,7 +16,7 @@ User send more than one stream data, but only send one outbuf
 
 ## 原因分析
 
-VDEC视频解码当前仅支持按帧发送模式，因此调用hi\_mpi\_vdec\_send\_stream接口时，要求用户每次送入独立的一帧码流数据以及对应的输出buffer，当用户一次送入多帧数据（即输入码流内存中有多帧码流数据），这时VDEC视频解码时除了第一帧解码成功外，其余帧都会被丢弃，同时打印ERROR日志。
+VDEC视频解码当前仅支持按帧发送模式，因此调用hi\_mpi\_vdec\_send\_stream接口时，要求用户每次送入独立的一帧码流数据以及对应的输出buffer，当用户一次送入多帧数据（即输入码流内存中有多帧码流数据），这时VDEC视频解码除了第一帧解码成功外，其余帧都会被丢弃，同时打印ERROR日志。
 
 ## 解决方法
 

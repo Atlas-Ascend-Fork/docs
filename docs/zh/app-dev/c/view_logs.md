@@ -10,4 +10,4 @@
   - Host侧GE、Runtime、HCCL等组件打印的日志。
   - Device侧AI CPU进程打印的日志。
 
-如何查看日志、设置日志级别等描述请参见[《日志参考》](https://hiascend.com/document/redirect/CannCommunitylogref)。
+如何查看日志、设置日志级别等描述请参见《[日志参考](https://gitcode.com/cann/runtime/blob/master/docs/zh/log_ref/README.md)》。

@@ -22,7 +22,7 @@
 
     如果模型输入数据的Shape不确定，则不能调用aclmdlQuerySize接口查询内存大小，在加载模型时，就无法由用户管理内存，因此需选择由系统管理内存的模型加载接口（例如aclmdlLoadFromFile）。
 
-    若在构建模型时，调用构图接口自行构建自己的网络，且没有生成om离线模型文件、只是将模型数据存放在内存中，则无法通过aclmdlQuerySize接口查询内存大小。关于构图接口的详细说明请参见[《图开发》](https://hiascend.com/document/redirect/CannCommunityGraphguide)。
+    若在构建模型时，调用构图接口自行构建自己的网络，且没有生成om离线模型文件、只是将模型数据存放在内存中，则无法通过aclmdlQuerySize接口查询内存大小。关于构图的详细说明请参见《[图开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/graph_dev/README.md)》。
 
 - 支持以下方式**加载模型**，模型加载成功后，返回标识模型的模型ID：
     - 使用aclmdlSetConfigOpt接口、aclmdlLoadWithConfig接口时，是通过配置对象中的属性来区分，在加载模型时是从文件加载，还是从内存加载，以及内存是由系统内部管理，还是由用户管理。

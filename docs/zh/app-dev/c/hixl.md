@@ -42,7 +42,7 @@ HIXL（Huawei Xfer Library）是一个灵活、高效的昇腾单边通信库，
         int32_t *host_buf = nullptr;
         CHECK_ACL(aclrtMallocHost(reinterpret_cast<void **>(&host_buf), sizeof(int32_t)));
         
-        // 将Host地址注册给HIXL，使对端可通过已建链的链路做单边访问。
+        // 将Host地址注册给HIXL，使对端可通过建立的链路做单边访问。
         MemDesc reg_desc{};
         reg_desc.addr = reinterpret_cast<uintptr_t>(host_buf);
         reg_desc.len = sizeof(int32_t);

@@ -65,7 +65,7 @@ runtime对应接口为：rtSetDevice/rtSetDeviceEx
 
     - 多线程场景下，排查一下SetDevice操作的线程和报错的线程是否一致，是否只对主线程（线程ID：2977549）做了SetDevice、子线程（线程ID：2978321）没有做SetDevice，导致子线程中无可用Context；
 
-        **错误场景举例**：只对主线程做了SetDevice，其它线程没有做SetDevice，导致报错。
+        **错误场景举例**：只对主线程做了SetDevice，其他线程没有做SetDevice，导致报错。
 
         ```bash
         [root@localhost plog]# grep -rn "ERROR"

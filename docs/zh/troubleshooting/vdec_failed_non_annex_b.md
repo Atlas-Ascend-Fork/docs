@@ -7,7 +7,7 @@
 日志示例如下：
 
 ```bash
-pid 0 usr chn 0 device 0 video format unsupport at event chn 0
+pid 0 usr chn 0 device 0 video format unsupported at event chn 0
 ```
 
 或

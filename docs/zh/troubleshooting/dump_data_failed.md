@@ -22,7 +22,7 @@ Failed to get dump data of error op!
 
 ## 故障根因
 
-AI Core Error发生后，框架会在错误的回调里尝试通过输入/输出的地址和大小去dump一份数据供开发者定位。如果dump失败，则可以推断算子的输入/输出地址有错误：AI Core无法读取这段地址导致了AI Core Error，同时，错误回调中dump功能也无法读取这段地址导致了dump数据失败。
+AI Core Error发生后，框架会在错误回调里尝试通过输入/输出的地址和大小去dump一份数据供开发者定位。如果dump失败，则可以推断算子的输入/输出地址有错误：AI Core无法读取这段地址导致了AI Core Error，同时，错误回调中dump功能也无法读取这段地址导致了dump数据失败。
 
 ## 处理方法
 

@@ -143,7 +143,7 @@
 
     VI图像处理完成后，可在对应的VI通道上获取已完成图像并进行相关处理，典型接口调用流程如下：
 
-    1. （可选）通过系统文件句柄+select/epoll等待机制，等待图像处理完成事件，可通过hi\_mpi\_vi\_get\_chn\_fd接口获取指定通道的系统文件句柄，然后获取并处理完一帧图像数据后，会唤醒系统的select/epoll读等待请求。
+    1. （可选）通过系统文件句柄+select/epoll等待机制，等待图像处理完成事件，可通过hi\_mpi\_vi\_get\_chn\_fd接口获取指定通道的系统文件句柄，获取并处理完一帧图像数据后，会唤醒系统的select/epoll读等待请求。
     2. 调用hi\_mpi\_vi\_get\_chn\_frame接口，获取已处理完成的图像数据。此时图像数据对应内存资源会自动被用户占用，用户必须在处理完图像数据后，调用hi\_mpi\_vi\_release\_chn\_frame接口释放对应图像的内存资源。
     3. 如果用户通过hi\_mpi\_vi\_get\_chn\_frame接口获取到图像数据后，要再发布给其他进程使用，则可通过返回的hi\_video\_frame.user\_data\[0\]得到acltdtBuf句柄，再结合共享Buffer管理接口（如acltdtCopyBufRef）以及共享队列管理接口（如acltdtEnqueue）将对象发布给其他进程使用。
 

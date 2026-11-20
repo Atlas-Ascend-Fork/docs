@@ -41,4 +41,4 @@ msaicerr工具的功能及约束请参见[msaicerr工具功能及约束](https:/
     2. 再参见[算子输入args错误](operator_input_args_error.md)排查算子参数问题；
     3. 如果无法定位问题，您可以获取日志后单击[Link](https://www.hiascend.com/support)反馈问题。
 
-    msaicerr工具的其它参数及功能请参见[msaicerr工具功能及约束](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/msaicerr/msaicerr_functions_and_restrictions.md)。
+    msaicerr工具的其他参数及功能请参见[msaicerr工具功能及约束](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/msaicerr/msaicerr_functions_and_restrictions.md)。

@@ -61,7 +61,7 @@
 
     在Python3.8\~Python3.11版本中如果不指定创建进程的方式，或者显式指定为fork时，在创建子进程时可能会复制主进程的锁状态，而在子进程里再触发获取锁时，就会导致死锁，进而导致业务进程卡死。
 
-    Python社区也有相关说明：python社区有相同问题的issue：[https://github.com/python/cpython/issues/74580](https://github.com/python/cpython/issues/74580)
+    Python社区有相同问题的issue：[https://github.com/python/cpython/issues/74580](https://github.com/python/cpython/issues/74580)
 
 ## 解决方法
 

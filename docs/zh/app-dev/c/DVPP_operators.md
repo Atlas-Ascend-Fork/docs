@@ -11,8 +11,8 @@ aclnnStatus acldvppXxx(void *workspace, uint64_t workspaceSize, aclOpExecutor *e
 
 两段式接口的作用分别为：
 
-- 第一段接口acldvpp_Xxx_GetWorkspaceSize：该接口内部执行入参校验、在动态Shape场景下推导输出Shape、数据切块（Tiling）以及计算执行算子所需的workspace内存大小等任务。
-- 第二段接口acldvpp_Xxx_：执行算子计算，接口内部涉及DFX（例如Dump、溢出检测等）、调用Runtime提供的LaunchKernel接口等_。_
+- 第一段接口acldvppXxxGetWorkspaceSize：该接口内部执行入参校验、在动态Shape场景下推导输出Shape、数据切块（Tiling）以及计算执行算子所需的workspace内存大小等任务。
+- 第二段接口acldvppXxx：执行算子计算，接口内部涉及DFX（例如Dump、溢出检测等）、调用Runtime提供的LaunchKernel接口等。_
 
 接口调用流程如下所示：
 
@@ -130,7 +130,7 @@ int32_t encode_jpeg(aclrtStream stream) {
     CreateAclTensor(inputPic, selfShape, &selfDeviceAddr, aclDataType::ACL_UINT8, &self, aclFormat::ACL_FORMAT_NCHW);
     ScopeGuard autoCloseInTensor([self, selfDeviceAddr] { aclrtFree(self);aclDestroyTensor((const aclTensor *)selfDeviceAddr);});
 
-    // 每次执行完，输出Tensor Shape会被修改，因此性能测试将输出Tensor构造放到循环内部，不然会第二次执行会被内部拦截
+    // 每次执行完，输出Tensor Shape会被修改，因此性能测试将输出Tensor构造放到循环内部，否则第二次执行会被内部拦截
     // 放到内部时，最后执行完文件无法保留，因为内存提前释放了
     CreateAclTensor(outputPic, outShape, &outDeviceAddr, aclDataType::ACL_UINT8, &out, ACL_FORMAT_ND, false);
     ScopeGuard autoCloseOutTensor([out, outDeviceAddr] { aclrtFree(out);aclDestroyTensor((const aclTensor *)outDeviceAddr);});
@@ -141,7 +141,7 @@ int32_t encode_jpeg(aclrtStream stream) {
     const uint32_t quality = 75;
     // 调用第一段接口
     acldvppEncodeJpegGetWorkspaceSize(self, quality, out, &workspaceSize, &executor);
-    // 根据第一段接口计算出的workspaceSize，并申请Device内存
+    // 根据第一段接口计算出的workspaceSize申请Device内存
     void* workspaceAddr = nullptr;
     if (workspaceSize > 0) {
         aclrtMalloc(&workspaceAddr, workspaceSize, ACL_MEM_MALLOC_HUGE_FIRST);

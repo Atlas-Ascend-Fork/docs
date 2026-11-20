@@ -77,7 +77,7 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
         // 自定义函数ReadBinFile，根据AI软件栈的运行模式，申请对应的内存，再调用C++标准库中的函数将图片数据读入内存
         ret = Utils::ReadBinFile(testFile[index], picDevBuffer, devBufferSize);
 
-        // 将模型输入数据传入队列中，执行模型推理，-1是表示阻塞程序直到输入数据入队完成
+        // 将模型输入数据传入队列中，执行模型推理，-1表示阻塞程序直到输入数据入队完成
         ret = acltdtEnqueueData(inputQueueList[0], picDevBuffer, devBufferSize, nullptr, 0, -1, 0);
         // 获取每个输出的大小
     size_t dataSize = aclmdlGetOutputSizeByIndex(modelDesc, 0);
@@ -89,7 +89,7 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
      } else {
         aclError aclRet = aclrtMalloc(&data, dataSize, ACL_MEM_MALLOC_HUGE_FIRST);
      }
-         // 等待模型推理执行完毕，从输出内存中获取结果数据，-1是表示阻塞程序直到推理输出数据入队完成
+         // 等待模型推理执行完毕，从输出内存中获取结果数据，-1表示阻塞程序直到推理输出数据入队完成
          ret = acltdtDequeueData(outputQueueList[0], data, dataSize, &retDataSize, nullptr, 0, -1);
          //将输出内存中的数据转换为float类型
          float *outData = NULL;

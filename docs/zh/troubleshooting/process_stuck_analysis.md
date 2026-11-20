@@ -46,7 +46,7 @@
 
         - schedule\_tracer\_FE\_Global\_Trace.txt用于记录算子初始化&销毁、缓存老化等全局性的设置&状态、时间点信息。
 
-            该日志中存在“Compile process status.”关键字表示算子在编译中，存在“Finish subgraph compile”关键字表示算子编译结束。若某个算子停留在“Compile process status.”状态，还需要结合schedule\_tracer\_FE\_CompileTd\_\*.txt日志查看该算子具体处理哪个处理阶段。
+            该日志中存在“Compile process status.”关键字表示算子在编译中，存在“Finish subgraph compile”关键字表示算子编译结束。若某个算子停留在“Compile process status.”状态，还需要结合schedule\_tracer\_FE\_CompileTd\_\*.txt日志查看该算子具体处于哪个阶段。
 
             日志片段示例如下：
 
@@ -168,7 +168,7 @@
         **日志示例及解析如下**：
 
         - stream 3的sq\_en状态是1，表示流为激活状态；
-        - head用于标识流上当前正在执行的任务，head的值为47，表示任务索引为47，表示任务执行持续停留在任务47上；
+        - head用于标识流上当前正在执行的任务，head的值为47，表示任务索引为47，任务执行持续停留在任务47上；
         - pos表示具体要执行的任务，由于任务执行持续停留在任务47上，因此pos\[47\]就是卡住的任务。
 
         ```bash

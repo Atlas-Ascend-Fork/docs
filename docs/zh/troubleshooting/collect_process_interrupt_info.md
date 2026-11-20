@@ -3,7 +3,7 @@
 支持用户手动收集、工具自动收集两种方式。
 
 - 用户手动收集：收集Host、Device日志和文件，**仅收集最小集信息**。
-- 工具自动收集：在Host服务上，使用[asys](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/asys/asys_functions_and_restrictions.md)工具**收集所有故障相关信息**，包括安装版本信息、Device健康状态信息、dump文件、算子编译信息、全量日志文件等。
+- 工具自动收集：在Host服务器上，使用[asys](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/user_guide/asys/asys_functions_and_restrictions.md)工具**收集所有故障相关信息**，包括安装版本信息、Device健康状态信息、dump文件、算子编译信息、全量日志文件等。
 
     **注意**：asys工具使用场景有限，集群、容器、虚拟机、云场景不支持asys工具一键式收集故障信息。
 

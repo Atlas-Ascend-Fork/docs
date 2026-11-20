@@ -16,7 +16,7 @@ sample_comm_audio_start_ao: hi_mpi_ao_set_pub_attr(2) failed with 0xa0168003!
 
 ## 可能原因
 
-播音涉及到的参数设置有误。
+播音涉及的参数设置有误。
 
 ## 处理步骤
 

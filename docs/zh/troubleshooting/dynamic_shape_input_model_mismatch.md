@@ -5,7 +5,7 @@
 **场景1：**模型执行报错，日志信息中包含以下关键信息：
 
 ```bash
-[INFO] GE(2284607, ir_build):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [task_context.cc:257]2284607 AllocateOutput: To allocate output for node: add2. index = 0, tensor desc = [TensorDescl DataType = 6 , Format = 2 · Shape = [50, ]
+[INFO] GE(2284607, ir_build):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [task_context.cc:257]2284607 AllocateOutput: To allocate output for node: add2. index = 0, tensor desc = TensorDescl DataType = 6 , Format = 2 · Shape = [50, ]
 [ERROR] GE(2284607, ir_build):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [task_context.cc:257]2284607 AllocateOutput: ErrorNo: 50331649() [LOAD][LOAD][Check][Size] add2(Add) index[0] mem size out of range! Expected size: 128, but given input size: 2.
 ```
 

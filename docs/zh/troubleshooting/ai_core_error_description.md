@@ -32,7 +32,7 @@ TraceBack (most recent call last):
 
 - **chipId、dieId**：分别表示报错芯片chipId及dieId，可用于判定是否固定chipId报错；
 - **core id：**表示报错芯片核id，可用于判定是否在同一个core上执行报错；
-- **errcode**、**errorStr**：分别表示AI Core Error的报错错误码、错误描述；
+- **errcode**、**errorStr**：分别表示AI Core Error的错误码、错误描述；
 - **fault kernel\_name/fault kernel info ext：**表示报错kernel名字，可用于查看报错算子。
 
     异步任务执行场景下，例如连续下发多个算子执行任务，可能会有多个算子报错，错误信息中可能包含多个算子错误，用户需从首报错算子开始排查问题。

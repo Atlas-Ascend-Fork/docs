@@ -29,7 +29,7 @@ VPSS必须配合VI模块一起使用，本节介绍其接口调用流程及注�
     3. 使用ISP（Image Signal Processing）系统控制接口初始化并运行ISP模块，接口调用流程请参见[初始化并运行ISP图像信号处理模块](video_obtaining.md#section0926122591813)。
     4. 根据hi\_mpi\_sys\_bind接口设置的绑定策略，系统内部自动将VI处理后的图像传递给VPSS；
     5. 根据VPSS设置的参数，系统内部自动执行裁剪/3dnr/鱼眼矫正/缩放处理。
-    6. 按需更新修改区域信息：
+    6. 按需更新区域信息：
         - 设置区域通道显示属性：
             1. 调用hi\_mpi\_rgn\_get\_display\_attr接口获取区域当前的通道显示属性。
             2. 调用hi\_mpi\_rgn\_set\_display\_attr接口设置区域的通道显示属性。

@@ -91,4 +91,4 @@ Run 'export PYTHONPATH=/usr/local/Ascend/CANN-7.3/tools/msaicerr/:$PYTHONPATH;cd
 ```
 
 >**说明：** 
->该问题需要您收集msaicerr.py工具分析结果信息（**info\_时间戳**目录下所有文件），根据这些文件如果无法定位或解决问题，再通过[https://gitee.com/ascend网站](https://gitee.com/ascend)提交issue获取帮助。
+>该问题需要您收集msaicerr.py工具分析结果信息（**info\_时间戳**目录下所有文件），根据这些文件如果无法定位或解决问题，再通过[https://gitcode.com/cann网站](https://gitcode.com/cann)提交issue获取帮助。

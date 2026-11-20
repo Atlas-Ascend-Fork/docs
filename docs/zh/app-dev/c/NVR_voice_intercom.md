@@ -15,7 +15,7 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 ## 接收IP Camera发送的语音并播放声音
 
 **图 1** **接收IP Camera发送的语音并播放声音**  
-![](figures/receiving_audios_from_IPCamera.png "接收IP-Camera发送的语音并播放声音")
+![](figures/receiving_audios_from_IPCamera.png "接收IP Camera发送的语音并播放声音")
 
 接口调用流程说明如下：
 
@@ -30,12 +30,12 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 
 3. 调用hi\_mpi\_sys\_bind接口**绑定ADEC与AO**。
 
-| ADEC设备ID | ADEC通道号 | AO设备ID | AO通道号 |
-| --- | --- | --- | --- |
-| 0 | 0 | 2 | 0 |
-| 0 | 1 | 3 | 0 |
+   | ADEC设备ID | ADEC通道号 | AO设备ID | AO通道号 |
+   | --- | --- | --- | --- |
+   | 0 | 0 | 2 | 0 |
+   | 0 | 1 | 3 | 0 |
 
-4. 循环调用hi\_mpi\_adec\_send\_stream接口将每一帧待解码音频数据发送给解码器进行**解码**。
+4. 循环调用hi\_mpi\_adec\_send\_stream接口将每一帧待解码音频数据发送给解码器进行解码。
 
     解码后的音频数据，根据第3步中的绑定关系，被自动发送到对应的AO设备，用于音频播放。
 
@@ -46,7 +46,7 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 ## 录制声音并向IP Camera发送语音
 
 **图 2** **录制声音并向IP Camera发送语音**  
-![](figures/recording_audios_and_sending_audios_to_IPCamera.png "录制声音并向IP-Camera发送语音")
+![](figures/recording_audios_and_sending_audios_to_IPCamera.png "录制声音并向IP Camera发送语音")
 
 接口调用流程说明如下：
 
@@ -62,11 +62,11 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 2. 调用hi\_mpi\_aenc\_create\_chn接口**创建音频编码通道**。
 3. 调用hi\_mpi\_sys\_bind接口**绑定AI与AENC**。
 
-| AI设备ID | AI通道号 | AENC设备ID | AENC通道号 |
-| --- | --- | --- | --- |
-| 2 | 0 | 0 | 0 |
+   | AI设备ID | AI通道号 | AENC设备ID | AENC通道号 |
+   | --- | --- | --- | --- |
+   | 2 | 0 | 0 | 0 |
 
-4. 循环调用hi\_mpi\_aenc\_get\_stream获取编码数据，编码数据使用完成后，及时调用hi\_mpi\_aenc\_release\_stream接口**释放编码数据**。
+4. 循环调用hi\_mpi\_aenc\_get\_stream获取编码数据，编码数据使用完成后，及时调用hi\_mpi\_aenc\_release\_stream接口释放编码数据。
 
     经过AI设备获取到的音频数据，根据第3步中的绑定关系，被自动发送到对应的AENC通道进行编码，用于向IP Camera发送语音。
 

@@ -17,7 +17,7 @@
     ```bash
     [ERROR] DVPP:2020-12-31-23:51:51.339.518 [VDEC][PPSSPSCheckTmpId:7065][T3]  PPSSPSCheckTmpId: pps with this pic_parameter_set_id = 0 haven't decode
     [ERROR] DVPP:2020-12-31-23:51:51.339.616 [VDEC][ProcessSliceHeaderFirstPart:7627][T3]  PPS or SPS of this slice not valid
-    [ERROR] DVPP:2020-12-31-23:51:51.339.678 [VDEC][InquiresSlceProperty:10582][T3]  sliceheader dec err
+    [ERROR] DVPP:2020-12-31-23:51:51.339.678 [VDEC][InquireSliceProperty:10582][T3]  sliceheader dec err
     ```
 
 - H264码流缺少I帧日志报错信息（2）

@@ -40,12 +40,6 @@
     buffer size(50176) is smaller than need buffer size(95264) when format is 1
     ```
 
-    或
-
-    ```bash
-    buffer size(50176) is smaller than need buffer size(95264) when format is 1
-    ```
-
 - 图片地址校验失败日志信息（5）：
 
     ```bash

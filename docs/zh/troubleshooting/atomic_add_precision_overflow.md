@@ -10,7 +10,7 @@ Analysis result: success.
 Atomic add has a precision overflow. Check the operator precision.Note that if tasks are concurrently executed on the NPU, a false warning may be reported.
 ```
 
-在Device的slog日志（report/\*/slog/dev-os-_id_/\[run|debug\]/device-os/device-os\_\*.log）中，检查是否出现"**Vm fault failed**"关键字，如果没有出现，则确定是atomic精度溢出问题导致的AI Core Error问题；如果出现，则说明是内存越界问题，不是atomic精度溢出。slog日志示例如下，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
+在Device的slog日志（report/\*/slog/dev-os-_id_/\[run|debug\]/device-os/device-os\_\*.log）中，检查是否出现"**Vm fault failed**"关键字，如果没有出现，则确定是atomic精度溢出问题导致的AI Core Error；如果出现，则说明是内存越界问题，不是atomic精度溢出。slog日志示例如下，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
 [EVENT] KERNEL(4128,sklogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [klogd.c:253][2572550.901383] [ascend] [ERROR] [devmm] [devmm_svm_device_fault 438] <kworker/u16:186:9871,9871> Vm fault failed. (hostpid=1885445; devid=0; vfid=0; ret=64; fault_addr=0x1240f1fa0000; start=0x1240f1fa0000)

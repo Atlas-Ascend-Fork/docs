@@ -9,7 +9,7 @@ Device日志示例如下：
 ```bash
 temporal_id(-1) is not supported.
 sps id 2 is larger than 2.
-pid 2487 usr chn 4 device 0 video format unsupport at event chn 4
+pid 2487 usr chn 4 device 0 video format unsupported at event chn 4
 ```
 
 >**说明：** 

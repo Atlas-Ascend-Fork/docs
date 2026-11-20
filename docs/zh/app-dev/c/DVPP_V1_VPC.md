@@ -2,7 +2,7 @@
 
 本节以抠图、缩放为例说明VPC图像处理时的接口调用流程，同时配合以下典型功能的示例代码辅助理解该接口调用流程。
 
-VPC（Vision Preprocessing Core）负责图像处理功能，支持对图片做抠图、缩放、格式转换等操作。关于VPC功能的详细介绍以及使用约束请参见[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)。
+VPC（Vision Preprocessing Core）负责图像处理功能，支持对图片做抠图、缩放、格式转换等操作。关于VPC功能的详细介绍以及使用约束请参见《[DVPP媒体加速库](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)》。
 
 ## 接口调用流程（以抠图、缩放为例）
 
@@ -154,7 +154,7 @@ dvppChannelDesc_ = nullptr;
 
 格式转换支持以下两种实现方式：
 
-- 在实现抠图、缩放等功能时，调用对应的接口（例如acldvppVpcCropAsync接口）时，通过将输入图片和输出图片的格式设置成不同的，达到转换图片格式的目的。
+- 在实现抠图、缩放等功能时，调用对应的接口（例如acldvppVpcCropAsync接口），通过将输入图片和输出图片的格式设置成不同的，达到转换图片格式的目的。
 - 如果仅做图片格式转换，也可以直接调用acldvppVpcConvertColorAsync接口。
 
 以下是格式转换功能关键步骤的代码示例，不能直接拷贝编译运行，仅供参考。调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。

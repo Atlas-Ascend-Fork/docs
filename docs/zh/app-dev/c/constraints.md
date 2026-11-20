@@ -8,22 +8,22 @@
 
 - 不支持使用fork函数以及封装了fork的函数（如system、posix_spawnp等）创建多个子进程，且在进程中调用acl接口的场景，否则进程运行时会报错或者卡死。
 <!-- npu="910" id7 -->
-- 对于Atlas 训练系列产品，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数*32个进程。
+- 对于Atlas 训练系列产品，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数\*32个进程。
 <!-- end id7 -->
 <!-- npu="310p" id6 -->
-- 对于Atlas 推理系列产品，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数*32个进程。
+- 对于Atlas 推理系列产品，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数\*32个进程。
 <!-- end id6 -->
 <!-- npu="310b" id5 -->
-- 对于Atlas 200I/500 A2 推理产品，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程。
+- 对于Atlas 200I/500 A2 推理产品，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程。
 <!-- end id5 -->
 <!-- npu="910b" id4 -->
-- 对于Atlas A2 训练系列产品/Atlas A2 推理系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数*63个进程。
+- 对于Atlas A2 训练系列产品/Atlas A2 推理系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数\*63个进程。
 <!-- end id4 -->
 <!-- npu="A3" id3 -->
-- 对于Atlas A3 训练系列产品/Atlas A3 推理系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数*63个进程。
+- 对于Atlas A3 训练系列产品/Atlas A3 推理系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数\*63个进程。
 <!-- end id3 -->
 <!-- npu="950" id2 -->
-- 对于Ascend 950PR/Ascend 950DT，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程。
+- 对于Ascend 950PR/Ascend 950DT，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程。
 <!-- end id2 -->
 
 ## 关于创建类和销毁类接口
@@ -37,7 +37,7 @@
 - 在Atlas 推理系列产品上开发业务应用时，需避免多个操作向同一个内存地址写数据，否则可能导致硬件异常。
 <!-- end id8 -->
 - 不支持在aclrtMemcpyAsync、aclrtMemsetAsync接口等异步操作内存过程中使用fork以及封装了fork的函数，如system、posix_spawnp等，否则会导致进程运行时报错，甚至卡死等不可预期的错误。
-- 使用内存申请接口（例如aclrtMalloc）申请内存后，为确保内存中不会有脏数据，建议在使用内存前先调用aclrtMemset或aclrtMemsetAsync接口先清空内存，例如aclrtMemset(devBufferPtr, devBufferSize, 0, devBufferSize)。
+- 使用内存申请接口（例如aclrtMalloc）申请内存后，为确保内存中不会有脏数据，建议在使用内存前先调用aclrtMemset或aclrtMemsetAsync接口清空内存，例如aclrtMemset(devBufferPtr, devBufferSize, 0, devBufferSize)。
   <!-- npu="310p" id9 -->
 - Ascend RC形态下，如果应用程序中涉及aclrtMalloc、acldvppMalloc、hi_mpi_dvpp_malloc等内存申请接口，应用程序在Device上运行时，当前默认在内存不足时，应用程序可能会挂起，等待内存资源，用户可以根据实际需求选择启用操作系统提供的一些配置（例如，enable_oom_killer），这样在内存不足时，应用程序会自动退出，不会一直等待。若启用enable_oom_killer，您需登录Device，在“/proc/sys/vm”目录下，以root用户启用enable_oom_killer，命令示例如下，1表示启用，0表示禁用：
 

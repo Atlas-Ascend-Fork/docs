@@ -18,7 +18,7 @@ Host应用类日志（log/\[run|debug\]/plog/plog-_pid_\_\*.log）中存在索�
 torch.index_select(input, dim, index, *, out=None)
 ```
 
-该算子涉及input、dim、index等参数，若该算子出现0x800000，开发者可使用python打印功能，将input的shape、dim的值，以及index的值打印出来。进而进一步确定是索引越界。并通过查阅代码方式，查找index的来源，规则如下：
+该算子涉及input、dim、index等参数，若该算子出现0x800000，开发者可使用python打印功能，将input的shape、dim的值，以及index的值打印出来。进一步确定是索引越界。并通过查阅代码方式，查找index的来源，规则如下：
 
 ```py
 0 <= index[i] < input.shape[dim]
