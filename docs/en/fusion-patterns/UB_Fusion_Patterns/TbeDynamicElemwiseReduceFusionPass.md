@@ -1,5 +1,7 @@
 # TbeDynamicElemwiseReduceFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:56:57.672Z pushedAt=2026-11-16T06:27:04.608Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on the subgraphs that meet the following patterns with dynamic shapes.

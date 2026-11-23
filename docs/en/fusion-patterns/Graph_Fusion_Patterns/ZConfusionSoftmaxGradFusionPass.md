@@ -1,8 +1,10 @@
 # ZConfusionSoftmaxGradFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:52:41.653Z pushedAt=2026-11-16T06:27:04.485Z nl=2 -->
+
 ## Description
 
-Fuses the Mul, ReduceSumD/ReduceSum (supported only by 950PR/950DT), and Sub operators that match the pattern into the ConfusionSoftmaxGrad operator.
+This fusion fuses the Mul + ReduceSumD/ReduceSum (supported only on the Ascend 950PR&950DT product series) + Sub operators that match the graph fusion pattern into the ConfusionSoftmaxGrad operator.
 
 ![](../figures/ZConfusionSoftmaxGradFusionPass_1.png)
 
@@ -17,15 +19,15 @@ Fuses the Mul, ReduceSumD/ReduceSum (supported only by 950PR/950DT), and Sub ope
 - The fusion pattern does not take effect when the data type is not supported by the fused operator.
 - The data type and format of input0 must be the same as those of input1.
 - The fusion pattern does not take effect if the reduce axis is set to `1` and the AReduceSumFusionPass fusion pattern is enabled.
-- For 950PR/950DT, if `keep_dims` of ReduceSum is `False`, this fusion pattern does not take effect.
-- For 950PR/950DT, if the input axis of ReduceSum is not a const node, this fusion pattern does not take effect.
+- For Ascend 950PR&950DT products, this fusion pattern does not take effect when the `keep_dims` attribute of ReduceSum is `False`.
+- For Ascend 950PR&950DT products, this fusion pattern does not take effect when the input axis of ReduceSum is not a const node.
 
 ## Applicable Products
 
 <!-- npu="910b" id3 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id3 -->
 
 <!-- npu="950" id2 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id2 -->

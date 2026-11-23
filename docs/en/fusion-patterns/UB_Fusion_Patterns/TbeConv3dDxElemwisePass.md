@@ -1,5 +1,7 @@
 # TbeConv3dDxElemwisePass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:55:47.096Z pushedAt=2026-11-16T06:27:04.575Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on Conv3dBackpropInput and Elemwise in the following pattern subgraphs.

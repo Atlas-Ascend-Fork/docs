@@ -1,5 +1,7 @@
 # ConvWeightCompressFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:11.988Z pushedAt=2026-11-16T06:27:04.291Z nl=2 -->
+
 ## Description
 
 For Cube operators, the filter is compressed by inserting a compression operator or sparsified by inserting a 2:4 structured sparsity operator. This pass performs compression or 2:4 structured sparsity based on the user-defined parameters.
@@ -23,4 +25,4 @@ The first node (Conv2D/FullyConnection/MatMulV2) must meet the following conditi
 
 ## Applicable Products
 
-The validity of the pass depends on whether the target product supports the corresponding operator type. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/en-sg/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
+The effectiveness of this pass depends on whether the target platform supports the corresponding operator types. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/latest/API/aolapi/docs/en/ops-lib/ascendIR_spec_intro.md) in the operator library.

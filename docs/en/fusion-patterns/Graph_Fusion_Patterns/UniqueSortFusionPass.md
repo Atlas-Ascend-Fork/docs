@@ -1,5 +1,7 @@
 # UniqueSortFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:52:14.310Z pushedAt=2026-11-16T06:27:04.470Z nl=2 -->
+
 ## Description
 
 Splits the Unique or UniqueWithCount operator into a combination of Sort+AdjacentDifference+Cumsum+Scatter+UniqueConsecutive operators to complete the computation.
@@ -19,11 +21,11 @@ Scenario 2:
 - The output data types of idx and count are int32 and int64.
 - The data types of the input x can be int64, int32, int16, int8, uint64, uint32, uint16, uint8, bfloat16, float16, and float32.
 <!-- npu="950" id2 -->
-- For 950PR/950DT, this fusion pattern cannot be disabled.
+- For Ascend 950PR&950DT products, this fusion pattern cannot be disabled.
 <!-- end id2 -->
 
 ## Applicable Products
 
 <!-- npu="950" id1 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id1 -->

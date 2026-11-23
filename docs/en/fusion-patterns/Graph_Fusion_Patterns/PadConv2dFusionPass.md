@@ -1,5 +1,7 @@
 # PadConv2dFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:51.187Z pushedAt=2026-11-16T06:27:04.381Z nl=2 -->
+
 ## Description
 
 Fuses the Pad/PadV3+Conv2D operators into the Conv2D operator.
@@ -37,13 +39,13 @@ Atlas training products
 <!-- end id3 -->
 
 <!-- npu="910b" id4 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id4 -->
 
 <!-- npu="A3" id5 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id5 -->
 
 <!-- npu="950" id7 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id7 -->

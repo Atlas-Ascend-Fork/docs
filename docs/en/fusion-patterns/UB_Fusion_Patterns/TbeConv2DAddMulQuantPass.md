@@ -1,5 +1,7 @@
 # TbeConv2DAddMulQuantPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:55:10.686Z pushedAt=2026-11-16T06:27:04.559Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on Conv2D+Dequant+Add+Quant.

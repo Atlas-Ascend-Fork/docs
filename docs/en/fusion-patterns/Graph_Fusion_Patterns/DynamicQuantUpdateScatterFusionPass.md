@@ -1,16 +1,18 @@
 # DynamicQuantUpdateScatterFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:30.663Z pushedAt=2026-11-16T06:27:04.296Z nl=2 -->
+
 ## Description
 
 Fuses the structure that meets the following patterns into the DynamicQuantUpdateScatter operator.
 
 ![](../figures/DynamicQuantUpdateScatterFusionPass_1.png)
 
-or
+Or
 
 ![](../figures/DynamicQuantUpdateScatterFusionPass_2.png)
 
-or
+Or
 
 ![](../figures/DynamicQuantUpdateScatterFusionPass_3.png)
 
@@ -24,5 +26,5 @@ or
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

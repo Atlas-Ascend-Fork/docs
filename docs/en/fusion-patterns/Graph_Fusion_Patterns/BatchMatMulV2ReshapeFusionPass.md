@@ -1,5 +1,7 @@
 # BatchMatMulV2ReshapeFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:43:27.892Z pushedAt=2026-11-16T06:27:04.242Z nl=2 -->
+
 ## Description
 
 The fusion is classified into the following scenarios:
@@ -20,7 +22,7 @@ After:
 
 ![](../figures/BatchMatMulV2ReshapeFusionPass_4.png)
 
-Scenario 3: Non-Atlas inference products or trustlist cases of Atlas inference products support fusion of 3D x 2D BatchMatMulV2 operations into 2D x 2D MatMulV2 operations (dynamic or static scenario).
+Scenario 3: Non-Atlas inference products, or trustlist use cases on Atlas inference products, support fusing a 3D x 2D BatchMatMulV2 computation into a 2D x 2D MatMulV2 computation. This scenario includes dynamic and static use cases.
 
 - Dynamic scenario:
 
@@ -49,7 +51,7 @@ Scenario 3: Non-Atlas inference products or trustlist cases of Atlas inference p
 - In static scenarios, if BatchMatMulV2 is followed by Add, Relu, AddN, or Mul operators, the graph fusion patterns take effect when the batch dimension is greater than 50 and the M dimension is less than 32 or when M is 1 and the batch dimension is greater than 1.
 - In static scenarios, for a single BatchMatMulV2 with a large batch size, the graph fusion patterns take effect when the batch dimension is greater than 4096 and the M dimension is less than 64 or when M is 1 and the batch dimension is greater than 1.
 <!-- npu="310p" id6 -->
-- For Atlas inference products, this graph fusion pattern takes effect only in trustlisted cases.
+- On Atlas inference products, this graph fusion rule takes effect only in trustlist use cases.
 <!-- end id6 -->
 
 ## Applicable Products
@@ -67,9 +69,9 @@ Atlas training products
 <!-- end id3 -->
 
 <!-- npu="910b" id4 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id4 -->
 
 <!-- npu="A3" id5 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id5 -->

@@ -1,5 +1,7 @@
 # MatmulGeneralizedUbFusion
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:54:22.237Z pushedAt=2026-11-16T06:27:04.535Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on the subgraphs that match the following fusion pattern.

@@ -1,12 +1,14 @@
 # MatMulBiasAddFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:01.375Z pushedAt=2026-11-16T06:27:04.357Z nl=2 -->
+
 ## Description
 
 Fuses the MatMul/MatMulV2/MatMulV3/BatchMatmul/BatchMatMulV2 and biasadd/add operators into the MatMul/MatMulV2/MatMulV3/BatchMatmul/BatchMatMulV2 operator.
 
 ![](../figures/MatMulBiasAddFusionPass_1.png)
 
-After:
+Fused into
 
 ![](../figures/MatMulBiasAddFusionPass_2.png)
 
@@ -21,13 +23,13 @@ After:
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->
 
 <!-- npu="950" id3 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id3 -->

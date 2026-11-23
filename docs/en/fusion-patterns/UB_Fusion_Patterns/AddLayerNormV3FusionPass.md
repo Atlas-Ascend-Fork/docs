@@ -1,4 +1,6 @@
-# AddLayerNormV3FusionPass 
+# AddLayerNormV3FusionPass
+
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:53:18.811Z pushedAt=2026-11-16T06:27:04.502Z nl=2 -->
 
 ## Description
 
@@ -12,8 +14,8 @@ Or
 
 ## Constraints
 
-- This pattern applies only to the static scenarios of the Atlas inference accelerator cards with the ND data format.
-- This pattern applies only to the scenario where the last axis of LayerNormV3 is 320, 640, 768, 1024, 1280, or 1536.
+- This pattern supports only static use cases on Atlas inference accelerator cards, with data format being ND; other use cases are not supported;
+- This pattern applies only when the last axis of LayerNormV3 is 320, 640, 768, 1024, 1280, or 1536.
 
 ## Applicable Products
 

@@ -1,5 +1,7 @@
 # V100RequantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:52:17.882Z pushedAt=2026-11-16T06:27:04.472Z nl=2 -->
+
 ## Description
 
 Optimizes the quantization nodes in inference tasks.

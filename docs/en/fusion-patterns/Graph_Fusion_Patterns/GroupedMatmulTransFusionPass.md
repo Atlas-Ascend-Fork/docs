@@ -1,5 +1,7 @@
 # GroupedMatmulTransFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:46:57.923Z pushedAt=2026-11-16T06:27:04.331Z nl=2 -->
+
 ## Description
 
 Pattern 1: Deletes Transpose or TransposeD from the graph and encodes the x/weight transformation information to operator attributes. See the following figure.
@@ -14,15 +16,15 @@ Pattern 2: Deletes Reshape, Transpose/TransposeD, and Reshape connected to the x
 This fusion pattern supports the following products:
 
 <!-- npu="910b" id3 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id3 -->
 
 <!-- npu="A3" id4 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id4 -->
 
 <!-- npu="950" id5 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id5 -->
 
 ![](../figures/GroupedMatmulTransFusionPass_3.png)
@@ -31,16 +33,16 @@ Atlas A3 training products/Atlas A3 inference products
 
 <!-- end id2 -->
 <!-- npu="950" id1 -->
-Pattern 3: For 950PR/950DT in fake-quantization use cases, deletes Reshape+Transpose/TransposeD+Reshape connected to weight and antiquantScale from the graph and encodes the weight transformation information to operator attributes. See the following figure.
+Pattern 3: In pseudo-quantization use cases for Ascend 950PR&950DT products, removes Reshape+Transpose/TransposeD+Reshape before weight/antiquantScale from the graph and attaches the weight transpose information to operator attributes, as shown below.
 
 ![](../figures/GroupedMatmulTransFusionPass_5.png)
 
-Pattern 4: For 950PR/950DT in MX/GB quantization use cases, deletes Transpose or TransposeD from the graph and encodes the x and weight transformation information to operator attributes. See the table below.
+Pattern 4: In MX/GB quantization use cases of Ascend 950PR&950DT products, removes Transpose or TransposeD from the graph, and attaches the transpose information of x and weight to the operator attributes, as shown below.
 
 ![](../figures/GroupedMatmulTransFusionPass_6.png)
 
 >[!NOTE]
->For 950PR/950DT in MX/GB quantization use cases, scale follows the weight transposition information, and pertokenScale follows the x transposition information.
+>In MX/GB quantization use cases of Ascend 950PR&950DT products, scale follows the transpose information of weight, and pertokenScale follows the transpose information of x.
 <!-- end id1 -->
 
 ## Constraints

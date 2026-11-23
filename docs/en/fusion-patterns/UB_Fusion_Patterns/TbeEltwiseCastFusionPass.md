@@ -1,5 +1,7 @@
 # TbeEltwiseCastFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:57:10.944Z pushedAt=2026-11-16T06:27:04.616Z nl=2 -->
+
 ## Description
 
 Fuses the Elemwise and Cast operators in the following four scenarios:
@@ -12,7 +14,7 @@ Scenario 2:
 
 ![](../figures/TbeEltwiseCastFusionPass_2.png)
 
-Scenario 3
+Scenario 3:
 
 ![](../figures/TbeEltwiseCastFusionPass_3.png)
 

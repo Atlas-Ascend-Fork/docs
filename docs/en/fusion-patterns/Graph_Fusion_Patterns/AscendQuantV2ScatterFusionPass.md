@@ -1,5 +1,7 @@
 # AscendQuantV2ScatterFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:42:30.563Z pushedAt=2026-11-16T06:27:04.214Z nl=2 -->
+
 ## Description
 
 Fuses the structure that meets the following pattern into the QuantUpdateScatter operator.
@@ -20,9 +22,9 @@ Fuses the structure that meets the following pattern into the QuantUpdateScatter
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="950" id2 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id2 -->

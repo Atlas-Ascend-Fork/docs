@@ -1,5 +1,7 @@
 # UB Fusion Patterns
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:58:09.183Z pushedAt=2026-11-16T06:27:04.640Z nl=2 -->
+
 - [FusionVirtualOpSetSwitch](FusionVirtualOpSetSwitch.md)  
 
 <!-- npu="A3,910b,310p" id1 -->

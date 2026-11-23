@@ -1,5 +1,7 @@
 # AFullyConnectionReshapePass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:48.515Z pushedAt=2026-11-16T06:27:04.212Z nl=2 -->
+
 ## Description
 
 Fuses the FullyConnection+Reshape operators into the AFullyConnectionReshape operator.

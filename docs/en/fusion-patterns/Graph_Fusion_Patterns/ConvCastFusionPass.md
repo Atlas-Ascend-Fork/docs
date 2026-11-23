@@ -1,5 +1,7 @@
 # ConvCastFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:44:29.627Z pushedAt=2026-11-16T06:27:04.273Z nl=2 -->
+
 ## Description
 
 Fuses the Conv2D operator and Cast operator into one Conv2D operator.
@@ -10,7 +12,7 @@ After:
 
 ![](../figures/ConvCastFusionPass_2.png)
 
-or
+Or
 
 ![](../figures/ConvCastFusionPass_3.png)
 

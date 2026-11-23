@@ -1,5 +1,7 @@
 # Conv3DQuantProcessFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:44:27.590Z pushedAt=2026-11-16T06:27:04.271Z nl=2 -->
+
 ## Description
 
 Performs unquantization or bias optimization in the case of static shapes.
@@ -15,4 +17,4 @@ After: (unquantization)
 
 ## Constraints
 
-None
+None.

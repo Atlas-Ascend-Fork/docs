@@ -1,6 +1,8 @@
 # AABiasaddConvFusion
 
-## Integrated mode
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:03.802Z pushedAt=2026-11-16T06:27:04.176Z nl=2 -->
+
+## Description
 
 Fuses the Conv operator without Bias and the BiasAdd operator into a Conv operator that contains the Bias input.
 
@@ -27,9 +29,9 @@ Atlas training products
 <!-- end id3 -->
 
 <!-- npu="910b" id4 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id4 -->
 
 <!-- npu="950" id5 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id5 -->

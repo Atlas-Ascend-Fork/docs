@@ -1,5 +1,7 @@
 # ReluFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:49:34.568Z pushedAt=2026-11-16T06:27:04.399Z nl=2 -->
+
 ## Description
 
 In the Caffe framework, the fusion matches the following specific graph structure. After the matching is successful, the fusion is converted into an instruction to complete the computation of the activation function.
@@ -30,12 +32,12 @@ Atlas inference products
 
 <!-- npu="910" id5 -->
 Atlas training products
-<!-- end id5 -->
+<!-- end id5 -->Atlas training products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->

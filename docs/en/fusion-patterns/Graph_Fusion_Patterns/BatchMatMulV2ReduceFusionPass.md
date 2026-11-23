@@ -1,5 +1,7 @@
 # BatchMatMulV2ReduceFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:43:19.108Z pushedAt=2026-11-16T06:27:04.237Z nl=2 -->
+
 ## Description
 
 Fuses the BatchMatMulV2+ReduceSumD operators into the BatchMatMulV2 operator.

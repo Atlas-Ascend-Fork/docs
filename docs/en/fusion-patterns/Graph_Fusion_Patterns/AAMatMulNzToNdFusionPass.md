@@ -1,5 +1,7 @@
 # AAMatMulNzToNdFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:07.632Z pushedAt=2026-11-16T06:27:04.183Z nl=2 -->
+
 ## Description
 
 Reduces the TransData or Cast operator in the following four scenarios. Tensor C is optional.

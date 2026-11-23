@@ -1,5 +1,7 @@
 # BatchMatMulReduceMeanFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:43:05.042Z pushedAt=2026-11-16T06:27:04.230Z nl=2 -->
+
 ## Description
 
 Adds the pad operator node to the constant input of the batchmatmul/batchmatmulv2/matmul/matmulv2/reducemean operator node to improve computing performance.

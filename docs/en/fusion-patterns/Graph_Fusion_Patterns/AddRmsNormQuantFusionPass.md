@@ -1,5 +1,7 @@
 # AddRmsNormQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:44.280Z pushedAt=2026-11-16T06:27:04.195Z nl=2 -->
+
 ## Description
 
 Fuses the structure that meets the following patterns into the AddRmsNormQuant operator.
@@ -17,13 +19,13 @@ Scenario 2: Fuses the AddRmsNorm, Reshape, and Quantize operators that comply wi
   <!-- npu="A3,910b,310p" id5 -->
 - In the following products, the Quantize operator is restricted to producing int8 outputs only.
   <!-- npu="910b" id6 -->
-  - Atlas A2 training products/Atlas A2 inference products
+  - Atlas A2 products
   <!-- end id6 -->
   <!-- npu="310p" id7 -->
   - Atlas inference products
   <!-- end id7 -->
   <!-- npu="A3" id8 -->
-  - Atlas A3 training products and Atlas A3 inference products
+  - Atlas A3 products
   <!-- end id8 -->
   <!-- end id5 -->
 
@@ -35,7 +37,7 @@ Scenario 2: Fuses the AddRmsNorm, Reshape, and Quantize operators that comply wi
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="310p" id2 -->
@@ -43,9 +45,9 @@ Atlas inference products
 <!-- end id2 -->
 
 <!-- npu="A3" id3 -->
-Atlas A3 training products and Atlas A3 inference products
+Atlas A3 products
 <!-- end id3 -->
 
 <!-- npu="950" id4 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id4 -->

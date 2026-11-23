@@ -1,5 +1,7 @@
 # ConvConcatFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:44:50.494Z pushedAt=2026-11-16T06:27:04.279Z nl=2 -->
+
 ## Description
 
 Inserts a StridedWrite operator before a Concat operator. The inserted StridedWrite, instead of the Concat operator, will concatenate Conv2D memory to reduce the performance consumption caused by Concat computation.
@@ -9,10 +11,10 @@ Concat operators include ConcatD and ConcatV2D, and Conv2D operators include Con
 <!-- npu="A3,910b,310b" id1 -->
 The following models do not support StridedWrite, but the hardware can emulate equivalent StridedWrite behavior. ConvConcatFusionPass will still match these models.<br>
 <!-- npu="910b" id2 -->
-- Atlas A2 training products/Atlas A2 inference products<br>
+- Atlas A2 products<br>
 <!-- end id2 -->
 <!-- npu="A3" id3 -->
-- Atlas A3 training products/Atlas A3 inference products<br>
+- Atlas A3 products<br>
 <!-- end id3 -->
 <!-- npu="310b" id4 -->
 - Atlas 200I/500 A2 inference products
@@ -121,9 +123,9 @@ Atlas training products
 <!-- end id7 -->
 
 <!-- npu="910b" id8 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id8 -->
 
 <!-- npu="A3" id9 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id9 -->

@@ -1,5 +1,7 @@
 # ASplitConv2dConcatPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:42:40.830Z pushedAt=2026-11-16T06:27:04.217Z nl=2 -->
+
 ## Description
 
 Fuses the Split/SplitV, Conv2D*N, and Concat/ConcatV2 operators into a group convolution to simplify the graph structure.
@@ -29,7 +31,7 @@ Fuses the Split/SplitV, Conv2D*N, and Concat/ConcatV2 operators into a group con
 
   <!-- npu="950" id5 -->
 - Conv2D supports only float, float16, and int8 inputs. This constraint applies to the following models:
-  - 950PR/950DT
+  - Ascend 950PR&950DT products
   <!-- end id5 -->
 
 ## Applicable Products
@@ -47,5 +49,5 @@ Atlas training products
 <!-- end id8 -->
 
 <!-- npu="950" id9 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id9 -->

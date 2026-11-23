@@ -1,5 +1,7 @@
 # ZConcatExt2FusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:52:38.605Z pushedAt=2026-11-16T06:27:04.482Z nl=2 -->
+
 ## Description
 
 Splits the ConcatV2 operator with multiple inputs into multiple ConcatV2D operators. The number of ConcatV2D operators after fusion is determined based on the actual number of inputs according to a predefined calculation rule.
@@ -21,5 +23,5 @@ After:
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

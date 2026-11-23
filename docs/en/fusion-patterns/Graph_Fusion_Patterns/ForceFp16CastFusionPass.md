@@ -1,4 +1,6 @@
-# ForceFp16CastFusionPass 
+# ForceFp16CastFusionPass
+
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:46:11.490Z pushedAt=2026-11-16T06:27:04.311Z nl=2 -->
 
 ## Description
 
@@ -13,5 +15,5 @@ For cast operators, this fusion pattern is enabled when data types for the input
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

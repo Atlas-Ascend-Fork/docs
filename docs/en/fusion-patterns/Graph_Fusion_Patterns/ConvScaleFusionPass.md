@@ -1,5 +1,7 @@
 # ConvScaleFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:09.455Z pushedAt=2026-11-16T06:27:04.284Z nl=2 -->
+
 ## Description
 
 Fuses the conv and scale operators into the conv operator, replaces the filter input with the ConvScaleFilterHost operator, and replaces the bias input with the ConvScaleBiasHost operator to improve computing performance.

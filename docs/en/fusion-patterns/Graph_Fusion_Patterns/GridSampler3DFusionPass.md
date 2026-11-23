@@ -1,5 +1,7 @@
 # GridSampler3DFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:46:57.490Z pushedAt=2026-11-16T06:27:04.333Z nl=2 -->
+
 ## Description
 
 Replaces the GridSampler3D operator with the GridSample operator.
@@ -19,11 +21,11 @@ Replaces the GridSampler3D operator with the GridSample operator.
 - The shape of grid must be 5D and the last dimension must be 3.
 <!-- npu="910b" id2 -->
 - Data type constraints:
-  - Atlas A2 training products/Atlas A2 inference products: The data type can be FLOAT32 or FLOAT16.
+  - Atlas A2 products: Data types FLOAT32 and FLOAT16 are supported.
   <!-- end id2 -->
 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

@@ -1,5 +1,7 @@
 # SparseSoftMaxFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:50:55.200Z pushedAt=2026-11-16T06:27:04.435Z nl=2 -->
+
 ## Description
 
 Fuses the SparseSoftmaxCrossEntropyWithLogits operator that fits the graph fusion pattern into the OneHotD and SoftmaxCrossEntropyWithLogits operators.
@@ -15,5 +17,5 @@ Fuses the SparseSoftmaxCrossEntropyWithLogits operator that fits the graph fusio
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

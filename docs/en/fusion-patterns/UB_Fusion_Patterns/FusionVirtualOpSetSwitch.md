@@ -1,5 +1,7 @@
 # FusionVirtualOpSetSwitch
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:53:58.725Z pushedAt=2026-11-16T06:27:04.523Z nl=2 -->
+
 ## Description
 
 Controls split_n axis and split_c_to_n axis optimization. Adds the `no_task` attribute to the Split operators (SplitD/SplitVD) that meet the constraints. Skips operator build by concatenating the N axis, thereby improving performance. If the input memory of the Split operators is large, you can choose to disable this fusion pattern.
@@ -8,7 +10,7 @@ This special fusion pattern is not written into `fusion_result.json` when it tak
 
 Compares the `_no_task` attribute of SplitD/SplitVD in the current graph `ge_onnx_****PreRunAfterOptimizeGraphBeforeBuild.pbtxt` with that in the previous graph `ge*.pbtxt`. A change from `0` to `1` means the pass has taken effect.
 
->[!NOTE]
+>[!NOTE] 
 > To generate a .pbtxt file, set the following environment variables before training or inference. For more information about environment variables, see [Environment Variables](https://gitcode.com/cann/docs/blob/master/docs/en/env-vars/README.md).
 > 
 > - DUMP_GE_GRAPH=2 // Dumps the graph description of each phase in the entire process to a file. This environment variable specifies the amount of graph content to dump.
@@ -45,7 +47,7 @@ Compares the `_no_task` attribute of SplitD/SplitVD in the current graph `ge_onn
 
 If the `split_dim` attribute of SplitD/SplitVD is `1`, the `origin shape` dimension of SplitD/SplitVD is greater than or equal to `2`, and the N axis is `1` (`shape[0]=1`), the fusion pattern takes effect only when one of the following conditions is met:
 
->[!NOTE]
+>[!NOTE] 
 >If the original `split_dim` is a negative value, the AI processor converts it. The converted `split_dim` value is equal to the original `split_dim` value plus the dimension value of the shape. For example, if `split_dim` is `-2`, the shape is `[1,32,32,1]`, and the dimension of the shape is 4, the converted `split_dim` value is `2`.
 
 - The original format is ND, the current format is NZ, and the `origin shape` dimension is greater than or equal to 4.

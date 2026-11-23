@@ -1,5 +1,7 @@
 # AddRmsNormFusionGraphPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:27.238Z pushedAt=2026-11-16T06:27:04.188Z nl=2 -->
+
 ## Description
 
 Fuses the Add and RmsNorm operators that comply with the graph fusion pattern into the fused operator AddRmsNorm. The output of the Add operator is used as the first input of the RmsNorm operator.
@@ -14,13 +16,13 @@ Fuses the Add and RmsNorm operators that comply with the graph fusion pattern in
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products and Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->
 
 <!-- npu="950" id3 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id3 -->

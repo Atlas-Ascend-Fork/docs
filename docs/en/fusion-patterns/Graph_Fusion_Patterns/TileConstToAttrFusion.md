@@ -1,5 +1,7 @@
 # TileConstToAttrFusion
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:51:38.151Z pushedAt=2026-11-16T06:27:04.452Z nl=2 -->
+
 ## Description
 
 Converts Tile into TileD and converts multiple inputs into `required_attr`.
@@ -14,11 +16,11 @@ Converts Tile into TileD and converts multiple inputs into `required_attr`.
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->
 
 <!-- npu="310p" id3 -->

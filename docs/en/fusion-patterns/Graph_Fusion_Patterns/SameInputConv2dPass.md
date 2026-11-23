@@ -1,5 +1,7 @@
 # SameInputConv2dPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:50:17.601Z pushedAt=2026-11-16T06:27:04.419Z nl=2 -->
+
 ## Description
 
 Non-quantization scenario: Fuses multiple parallel Conv2D+ReLU operators into one fused Conv2D+Relu+Split operator.
@@ -10,9 +12,9 @@ After:
 
 ![](../figures/SameInputConv2dPass_2.png)
 
-Quantization scenario:
+Quantization use case:
 
-Fuses multiple Conv2D+AscendRequant composites into one Conv2D+AscendRequant+Split composite.
+Fuses multiple Conv2D+AscendRequant operators into one Conv2D+AscendRequant+Split operator.
 
 ![](../figures/SameInputConv2dPass_3.png)
 
@@ -20,7 +22,7 @@ After:
 
 ![](../figures/SameInputConv2dPass_4.png)
 
-Fuses multiple Conv2D+AscendDequant+AscendQuant composites into one Conv2D+AscendDequant+AscendQuant+Split composite.
+Fuses multiple Conv2D+AscendDequant+AscendQuant operators into one Conv2D+AscendDequant+AscendQuant+Split operator.
 
 ![](../figures/SameInputConv2dPass_5.png)
 

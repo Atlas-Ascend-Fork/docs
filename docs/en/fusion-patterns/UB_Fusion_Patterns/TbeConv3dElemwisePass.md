@@ -1,5 +1,7 @@
 # TbeConv3dElemwisePass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:56:01.235Z pushedAt=2026-11-16T06:27:04.580Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on Conv3D and Elemwise in a subgraph that meets the following patterns.
@@ -27,7 +29,7 @@ Four patterns are supported, corresponding to the scenarios shown in the precedi
 1. Fuses two Elemwise operators. The first operator supports only Add, and the second operator supports only ReLU.
 2. Fuses an Elemwise operator that has another input. The Elemwise operator type is not restricted. AscendDequant and AscendRequant are supported.
 3. Fuses an Elemwise operator that has only one input. Only ReLU is supported..
-4. Fuses three Elemwise operators. The first operator supports only AscendDequant, the second supports only Add, and the third supports only ReLU. This scenario supports only Atlas inference products.
+4. Fuses three Elemwise operators. The first supports only AscendDequant, the second only Add, and the third only Relu. This use case is supported only on Atlas inference products.
 
 ## Applicable Products
 

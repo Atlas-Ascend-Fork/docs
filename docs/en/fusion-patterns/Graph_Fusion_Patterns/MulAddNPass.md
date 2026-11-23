@@ -1,5 +1,7 @@
 # MulAddNPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:45.906Z pushedAt=2026-11-16T06:27:04.377Z nl=2 -->
+
 ## Description
 
 Fuses multiple Mul nodes and the AddN node into one MulAddN node when the number of Mul nodes is greater than 2.
@@ -27,9 +29,9 @@ Atlas A2 training products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->
 
 <!-- npu="950" id3 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id3 -->

@@ -1,5 +1,7 @@
 # BatchMatMulDequantElemwiseFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:42:45.275Z pushedAt=2026-11-16T06:27:04.222Z nl=2 -->
+
 ## Description
 
 Fuses BatchMatMul/MatMul, AscendDequant, and Elemwise into the BatchMatMul operator in quantization use cases. The Elemwise operator is broadcast to MatMul.

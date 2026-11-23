@@ -1,5 +1,7 @@
 # DropOutDoMaskFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:31.573Z pushedAt=2026-11-16T06:27:04.299Z nl=2 -->
+
 ## Description
 
 Replaces the DropOutDoMaskV3D operator with DropOutDoMask.
@@ -21,9 +23,9 @@ After:
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->

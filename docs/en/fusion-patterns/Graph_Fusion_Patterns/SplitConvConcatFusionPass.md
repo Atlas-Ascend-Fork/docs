@@ -1,5 +1,7 @@
 # SplitConvConcatFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:50:59.801Z pushedAt=2026-11-16T06:27:04.440Z nl=2 -->
+
 ## Description
 
 The following fusion scenarios are supported:
@@ -51,4 +53,4 @@ The following fusion scenarios are supported:
 
 ## Applicable Products
 
-The validity of this pass depends on whether the target product supports the corresponding operator type. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/en-sg/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
+The effectiveness of this pass depends on whether the target platform supports the corresponding operator types. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/latest/API/aolapi/docs/en/ops-lib/ascendIR_spec_intro.md) in the operator library.

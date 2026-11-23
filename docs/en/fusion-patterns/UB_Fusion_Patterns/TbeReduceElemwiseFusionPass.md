@@ -1,5 +1,7 @@
 # TbeReduceElemwiseFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:57:56.821Z pushedAt=2026-11-16T06:27:04.637Z nl=2 -->
+
 ## Description
 
 Performs UB fusion in a subgraph that meets the following patterns with a static shape.

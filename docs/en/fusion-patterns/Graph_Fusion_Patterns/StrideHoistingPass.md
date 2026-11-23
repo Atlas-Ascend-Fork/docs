@@ -1,5 +1,7 @@
 # StrideHoistingPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:51:11.514Z pushedAt=2026-11-16T06:27:04.443Z nl=2 -->
+
 ## Description
 
 Inserts the ReadSelect operator based on different graph structures. If Conv2D is matched, the shape and attributes of Conv2D are modified. The ultimate goal is to halve the computation workload.
@@ -31,7 +33,7 @@ Inserts the ReadSelect operator based on different graph structures. If Conv2D i
 
         **Table 1** Conv2D attribute requirements
 
-        |H and W Dimension Values of the Second Output Filter|H and W Dimension Values in Stride of Operator Description|H and W Dimension Values in Pads of Operator Description|H and W Dimension Values in Dilations of Operator Description|
+        |H and W Dimension Values of the Second Output filter|H and W Dimension Values in stride of Operator Description|H and W Dimension Values in pads of Operator Description|H and W Dimension Values in dilations of Operator Description|
         |--|--|--|--|
         |3|1|1|1|
         |5|1|2|1|
@@ -47,7 +49,7 @@ Inserts the ReadSelect operator based on different graph structures. If Conv2D i
 
     **Table 2** Attributes of the last Conv2D node
 
-    |H and W Dimension Values of the Second Output Filter|H and W Dimension Values in Stride of Operator Description|H and W Dimension Values in Pads of Operator Description|H and W Dimension Values in Dilations of Operator Description|
+    |H and W Dimension Values of the Second Output filter|H and W Dimension Values in stride of Operator Description|H and W Dimension Values in pads of Operator Description|H and W Dimension Values in dilations of Operator Description|
     |--|--|--|--|
     |1|2|0|1|
 
@@ -66,5 +68,5 @@ Atlas training products
 <!-- end id3 -->
 
 <!-- npu="910b" id4 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id4 -->

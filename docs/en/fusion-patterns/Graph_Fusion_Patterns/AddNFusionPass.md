@@ -1,5 +1,7 @@
 # AddNFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:24.066Z pushedAt=2026-11-16T06:27:04.185Z nl=2 -->
+
 ## Description
 
 Groups a large number of inputs according to the following rules, and adds the sum of each group together.
@@ -20,5 +22,5 @@ N = 62k + r, where N is the number of inputs, and r is the remainder of dividing
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

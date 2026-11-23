@@ -1,5 +1,7 @@
 # Graph Fusion Patterns
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:47:05.658Z pushedAt=2026-11-16T06:27:04.336Z nl=2 -->
+
 - [PoolingFusionPass](PoolingFusionPass.md)
 
 <!-- npu="310p" id1 -->
@@ -43,7 +45,7 @@
 - [BatchMatMulReduceMeanFusionPass](BatchMatMulReduceMeanFusionPass.md)  
 
 <!-- npu="950,A3,910b,910,310p,310b" id10 -->
-- [PadDepthwiseConv2dFusionPass](PadDepthwiseConv2dFusionPass.md)  
+- [PadDepthwiseConv2dFusionPass](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/PadDepthwiseConv2dFusionPass_en.md)  
 <!-- end id10 -->
 
 <!-- npu="910,310p,310b" id11 -->
@@ -55,15 +57,15 @@
 <!-- end id12 -->
 
 <!-- npu="910,310p,310b" id13 -->
-- [Conv2DSqueezeBiasaddFusionPass](Conv2DSqueezeBiasaddFusionPass.md)  
+- [Conv2DSqueezeBiasaddFusionPass](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/Conv2DSqueezeBiasaddFusionPass_en.md)  
 <!-- end id13 -->
 
 <!-- npu="910,310p,310b" id14 -->
-- [ConvBatchnormFusionPass](ConvBatchnormFusionPass.md)  
+- [ConvBatchnormFusionPass](ConvBatchnormFusionPass.md)
 <!-- end id14 -->
 
 <!-- npu="950,A3,910b,910,310p,310b" id15 -->
-- [AConv2dMulFusion](AConv2dMulFusion.md)  
+- [AConv2dMulFusion](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/AConv2dMulFusion_en.md)  
 <!-- end id15 -->
 
 - [DepthwiseDfFusionPass](DepthwiseDfFusionPass.md)  
@@ -73,7 +75,7 @@
 <!-- end id16 -->
 
 <!-- npu="950,910,310p,310b" id17 -->
-- [ASplitConv2dConcatPass](ASplitConv2dConcatPass.md)  
+- [ASplitConv2dConcatPass](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/ASplitConv2dConcatPass_en.md)  
 <!-- end id17 -->
 
 - [Conv3DQuantProcessFusionPass](Conv3DQuantProcessFusionPass.md)  
@@ -135,7 +137,7 @@
 <!-- end id23 -->
 
 <!-- npu="950,A3,910b,910,310p,310b" id24 -->
-- [PadConv2dFusionPass](PadConv2dFusionPass.md)  
+- [PadConv2dFusionPass](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/PadConv2dFusionPass_en.md)  
 <!-- end id24 -->
 
 - [Conv2DTransposeBatchnormFusionPass](Conv2DTransposeBatchnormFusionPass.md)  
@@ -227,7 +229,7 @@
 <!-- end id44 -->
 
 <!-- npu="A3,910b,310p" id45 -->
-- [GeGluV2FusionPass](GeGluV2FusionPass.md)  
+- [GeGluV2FusionPass](GeGluV2FusionPass.md)
 <!-- end id45 -->
 
 <!-- npu="950,A3,910b" id46 -->
@@ -440,8 +442,8 @@
 - [ZConcatExt2FusionPass](ZConcatExt2FusionPass.md)  
 <!-- end id96 -->
 
-<!-- npu="950,910b" id97 -->
-- [EinsumPass](EinsumPass.md)  
+<!-- npu="950,A3,910b" id97 -->
+- [EinsumPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/batch_mat_mul_v3/docs/EinsumPass_en.md)  
 <!-- end id97 -->
 
 <!-- npu="950,A3,910b" id98 -->
@@ -449,7 +451,7 @@
 <!-- end id98 -->
 
 <!-- npu="950,910b,910,310p,310b" id99 -->
-- [AABiasaddConvFusion](AABiasaddConvFusion.md)  
+- [AABiasaddConvFusion](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/AABiasaddConvFusion_en.md)  
 <!-- end id99 -->
 
 <!-- npu="A3,910b,310p,310b" id100 -->
@@ -486,7 +488,7 @@
 - [BatchMatMulTransposeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/batch_mat_mul_v3/docs/BatchMatMulTransposeFusionPass_en.md)  
 <!-- end id107 -->
 
-<!-- npu="950" id108 -->
+<!-- npu="950,A3,910b" id108 -->
 - [MatmulToGemmOpFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/MatmulToGemmOpFusionPass_en.md)  
 <!-- end id108 -->
 
@@ -505,3 +507,75 @@
 <!-- npu="950" id112 -->
 - [RotaryMulGrad2RotaryPositionEmbeddingGradFusionPass](RotaryMulGrad2RotaryPositionEmbeddingGradFusionPass.md)  
 <!-- end id112 -->
+
+<!-- npu="950" id113 -->
+- [GatherToGatherV2FusionPass](https://gitcode.com/cann/ops-nn/blob/master/index/gather_v2/docs/GatherToGatherV2FusionPass_en.md)
+<!-- end id113 -->
+
+<!-- npu="950" id114 -->
+- [LayerNormRemoveBroadcastFusionPass](https://gitcode.com/cann/ops-nn/blob/master/norm/layer_norm/docs/LayerNormRemoveBroadcastFusionPass_en.md)
+<!-- end id114 -->
+
+<!-- npu="950,A3,910b" id115 -->
+- [InplaceAddLayerNormFusionPass](https://gitcode.com/cann/ops-nn/blob/master/norm/inplace_add_layer_norm/docs/InplaceAddLayerNormFusionPass_en.md)
+<!-- end id115 -->
+
+<!-- npu="950" id116 -->
+- [MaxPoolGradFusionPass](https://gitcode.com/cann/ops-nn/blob/master/pooling/max_pool_v3_grad/docs/MaxPoolGradFusionPass_en.md)
+<!-- end id116 -->
+
+<!-- npu="950" id117 -->
+- [MatMulBiasAddOpenFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/MatMulBiasAddOpenFusionPass_en.md)
+<!-- end id117 -->
+
+<!-- npu="950" id118 -->
+- [GemmToMatmulFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/GemmToMatmulFusionPass_en.md)
+<!-- end id118 -->
+
+<!-- npu="950" id119 -->
+- [ZZMatMulTOQBMMV3FusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/quant_batch_matmul_v3/docs/ZZMatMulTOQBMMV3FusionPass_en.md)
+<!-- end id119 -->
+
+<!-- npu="950,A3,910b" id120 -->
+- [QuantBatchMatmulV4ToV3FusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/quant_batch_matmul_v4/docs/QuantBatchMatmulV4ToV3FusionPass_en.md)
+<!-- end id120 -->
+
+<!-- npu="950" id121 -->
+- [QuantBatchMatmulV4TransposeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/quant_batch_matmul_v4/docs/QuantBatchMatmulV4TransposeFusionPass_en.md)
+<!-- end id121 -->
+
+<!-- npu="950,910b" id122 -->
+- [AntiQuantMatMulFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/weight_quant_batch_matmul_v2/docs/AntiQuantMatMulFusionPass_en.md)
+<!-- end id122 -->
+
+<!-- npu="950" id123 -->
+- [BucketizeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/index/bucketize_v2/docs/BucketizeFusionPass_en.md)
+<!-- end id123 -->
+
+<!-- npu="950,A3,910b,910,310p,310b" id124 -->
+- [PermuteFusionPass](https://gitcode.com/cann/ops-math/blob/master/conversion/transpose/docs/PermuteFusionPass_en.md)
+<!-- end id124 -->
+
+- [Globalavgpoolpass](https://gitcode.com/cann/ops-math/blob/master/math/reduce_mean/docs/GlobalavgpoolFusionPass_en.md)
+
+- [ReduceMeanWithCastFusionPass](https://gitcode.com/cann/ops-math/blob/master/math/reduce_mean/docs/ReduceMeanWithCastFusionPass_en.md)
+
+<!-- npu="950" id125 -->
+- [ConcatToConcatDFusionPass](https://gitcode.com/cann/ops-math/blob/master/conversion/concat_d/docs/ConcatToConcatDFusionPass_en.md) 
+ 
+- [Conv2DFixPipeToExtendConv2DFusionPass](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/Conv2DFixPipeToExtendConv2DFusionPass_en.md)
+ 
+- [Conv2dToConv2dV2FusionPass](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/Conv2dToConv2dV2FusionPass_en.md)
+<!-- end id125 -->
+ 
+<!-- npu="950,A3" id126 -->
+- [QuantUnsqueezeConv2DFusionPass](https://gitcode.com/cann/ops-nn/blob/master/conv/conv2d_v2/docs/QuantUnsqueezeConv2DFusionPass_en.md)
+<!-- end id126 -->
+ 
+<!-- npu="950" id127 -->
+- [LayerNormONNXFusionPass](https://gitcode.com/cann/ops-nn/blob/master/norm/layer_norm/docs/LayerNormONNXFusionPass_en.md)
+ 
+- [LayerNormONNXMULFusionPass](https://gitcode.com/cann/ops-nn/blob/master/norm/layer_norm/docs/LayerNormONNXMULFusionPass_en.md)
+
+- [MaximumMinimumGradFusionPass](https://gitcode.com/cann/ops-math/blob/master/math/maximum_grad/docs/MaximumMinimumGradFusionPass_en.md)
+<!-- end id127 -->

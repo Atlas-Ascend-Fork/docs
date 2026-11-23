@@ -1,5 +1,7 @@
 # ZSplitVFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:52:58.930Z pushedAt=2026-11-16T06:27:04.492Z nl=2 -->
+
 ## Description
 
 Decomposes a SplitV node with output count exceeding the limit into a hierarchical cascade of SplitV nodes.
@@ -21,5 +23,5 @@ Fusion pattern when the `size_splits` input is not a constant:
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

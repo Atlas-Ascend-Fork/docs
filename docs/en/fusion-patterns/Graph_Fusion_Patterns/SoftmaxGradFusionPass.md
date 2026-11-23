@@ -1,5 +1,7 @@
 # SoftmaxGradFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:50:38.554Z pushedAt=2026-11-16T06:27:04.430Z nl=2 -->
+
 ## Description
 
 Fuses small operators that fit the graph fusion pattern into the SoftmaxGrad operator.
@@ -30,5 +32,5 @@ Fuses small operators that fit the graph fusion pattern into the SoftmaxGrad ope
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

@@ -1,5 +1,7 @@
 # MatmulLayerNormReduceFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:13.187Z pushedAt=2026-11-16T06:27:04.365Z nl=2 -->
+
 ## Description
 
 Fuses the structure that meets the following patterns into the MatmulLayerNormReduce+LayerNormUpdate operator.

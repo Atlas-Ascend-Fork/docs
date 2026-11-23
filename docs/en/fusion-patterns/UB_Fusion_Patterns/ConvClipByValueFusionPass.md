@@ -1,5 +1,7 @@
 # ConvClipByValueFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:53:58.285Z pushedAt=2026-11-16T06:27:04.521Z nl=2 -->
+
 ## Description
 
 The following fusion pattern is supported:

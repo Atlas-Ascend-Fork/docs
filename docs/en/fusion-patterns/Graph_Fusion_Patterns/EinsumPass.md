@@ -1,5 +1,7 @@
 # EinsumPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:58.858Z pushedAt=2026-11-16T06:27:04.306Z nl=2 -->
+
 ## Description
 
 Constructs a computational graph based on the expression of the Einsum operator. As shown in the following figure, the dotted-line nodes in the computational graph indicate that operators may be added based on the actual expression.
@@ -224,7 +226,7 @@ Constructs a computational graph based on the expression of the Einsum operator.
         ![](../figures/EinsumPass_53.png)
 
     2. Dual-input:
-        1. Scenario 1
+        1. Use case 1
 
             ![](../figures/EinsumPass_54.png)
 
@@ -259,9 +261,9 @@ Constructs a computational graph based on the expression of the Einsum operator.
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="950" id2 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id2 -->

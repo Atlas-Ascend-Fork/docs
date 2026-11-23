@@ -1,5 +1,7 @@
 # BatchMatmulConfusiontransposeUbFusion
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:53:34.633Z pushedAt=2026-11-16T06:27:04.510Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on batch_matmul and batchmatmul_transpose in a subgraph that meets the following pattern:

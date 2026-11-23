@@ -1,5 +1,7 @@
 # TbeDxTransdataFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:56:58.964Z pushedAt=2026-11-16T06:27:04.611Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on TransData (optional)+TransData+DX+TransData (optional).

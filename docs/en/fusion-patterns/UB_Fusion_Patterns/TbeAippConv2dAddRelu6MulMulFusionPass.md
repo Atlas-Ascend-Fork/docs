@@ -1,5 +1,7 @@
 # TbeAippConv2dAddRelu6MulMulFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:54:44.908Z pushedAt=2026-11-16T06:27:04.546Z nl=2 -->
+
 ## Description
 
 Fuses any structure that matches the following patterns into a single fused operator.

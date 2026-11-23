@@ -1,5 +1,7 @@
 # RotaryMul2RotaryPositionEmbeddingFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:49:55.688Z pushedAt=2026-11-16T06:27:04.407Z nl=2 -->
+
 ## Description
 
 Fuses the RotaryMul operator into the RotaryPositionEmbedding operator.
@@ -13,5 +15,5 @@ You are advised not to disable this pattern. Otherwise, the RotaryMul Ascend IR 
 ## Applicable Products
 
 <!-- npu="950" id1 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id1 -->

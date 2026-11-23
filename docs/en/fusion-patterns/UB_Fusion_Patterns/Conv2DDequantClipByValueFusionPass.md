@@ -1,12 +1,14 @@
 # Conv2DDequantClipByValueFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:53:47.510Z pushedAt=2026-11-16T06:27:04.518Z nl=2 -->
+
 ## Description
 
 Fuses the Conv2D+AscendDequant (optional)+ClipByValue+AscendQuant (optional) operators into one operator.
 
 ![](../figures/Conv2DDequantClipByValueFusionPass_1.png)
 
-Or
+or
 
 ![](../figures/Conv2DDequantClipByValueFusionPass_2.png)
 

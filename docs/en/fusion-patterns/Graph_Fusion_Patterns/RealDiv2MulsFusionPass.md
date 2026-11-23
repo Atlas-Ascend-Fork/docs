@@ -1,5 +1,7 @@
 # RealDiv2MulsFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:49:31.714Z pushedAt=2026-11-16T06:27:04.393Z nl=2 -->
+
 ## Description
 
 When the data type of the second input of the RealDiv operator is scalar, this pattern converts the operator into the Muls operator, and the second input becomes the reciprocal of the original input.
@@ -26,5 +28,5 @@ Atlas training products
 <!-- end id3 -->
 
 <!-- npu="910b" id4 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id4 -->

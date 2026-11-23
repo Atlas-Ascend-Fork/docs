@@ -1,5 +1,7 @@
 # MatmulDropOutDoMaskV3DFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:54:08.004Z pushedAt=2026-11-16T06:27:04.528Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on MatMul and DropOutDoMaskV3D/Add in the following pattern subgraph.

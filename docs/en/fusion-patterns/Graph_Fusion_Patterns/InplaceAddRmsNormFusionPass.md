@@ -1,5 +1,7 @@
 # InplaceAddRmsNormFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:47:27.154Z pushedAt=2026-11-16T06:27:04.343Z nl=2 -->
+
 ## Description
 
 Scenario 1: Converts AddRmsNorm to InplaceAddRmsNorm by reusing the x1 input address as the y output address and the x2 input address as the x output address.
@@ -18,16 +20,16 @@ Scenario 2: Fuses AddRmsNorm and Cast into the AddRmsNormCast operator if the ou
   - Only casting from float16 or bfloat16 to float32 is supported.
   - The output must not contain rstd either before or after fusion.
 
-- For the fusion into InplaceAddRmsNorm: In non-950PR/950DT use cases, the second output of AddRmsNorm must not have any subsequent nodes.
+- Constraint for fusion into InplaceAddRmsNorm: In use cases other than Ascend 950PR&950DT products, the second output of AddRmsNorm must have no successor node.
 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->
 
 <!-- npu="310p" id3 -->
@@ -35,5 +37,5 @@ Atlas inference products
 <!-- end id3 -->
 
 <!-- npu="950" id4 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id4 -->

@@ -1,5 +1,7 @@
 # TbeConv2dAddRelu6MulMulFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:55:25.202Z pushedAt=2026-11-16T06:27:04.564Z nl=2 -->
+
 ## Description
 
 Two fusion patterns are supported:
@@ -14,7 +16,7 @@ Fuses Conv2D/DepthwiseConv2D+Dequant+Add+Relu6+Mul+Mul+Quant into one operator.
 
 ## Constraints
 
-None
+None.
 
 ## Applicable Products
 

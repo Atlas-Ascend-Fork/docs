@@ -1,5 +1,7 @@
 # LayerNormFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:47:24.115Z pushedAt=2026-11-16T06:27:04.341Z nl=2 -->
+
 ## Description
 
 Identifies and fuses small operators such as ReduceMean and SquaredDifference into the LayerNorm operator.
@@ -8,7 +10,7 @@ Identifies and fuses small operators such as ReduceMean and SquaredDifference in
 
   ![](../figures/LayerNormFusionPass_1.png)
 
-  After:
+  **After:**
 
   ![](../figures/LayerNormFusionPass_2.png)
 
@@ -16,7 +18,7 @@ Identifies and fuses small operators such as ReduceMean and SquaredDifference in
 
   ![](../figures/LayerNormFusionPass_3.png)
 
-  After:
+  **After:**
 
   ![](../figures/LayerNormFusionPass_4.png)
 
@@ -42,5 +44,5 @@ Identifies and fuses small operators such as ReduceMean and SquaredDifference in
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

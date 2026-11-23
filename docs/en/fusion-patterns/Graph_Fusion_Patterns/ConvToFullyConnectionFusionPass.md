@@ -1,20 +1,23 @@
 # ConvToFullyConnectionFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:44:51.537Z pushedAt=2026-11-16T06:27:04.281Z nl=2 -->
+
 ## Description
 
-Fuses the Conv operator into the FullyConnection operator to improve computing performance.
-![](../figures/ConvToFullyConnectionFusionPass_1.png) After: ![](../figures/ConvToFullyConnectionFusionPass_2.png)
+Fuses the Conv operator into the FullyConnection operator to improve computation performance:
+
+Before: ![](../figures/ConvToFullyConnectionFusionPass_1.png) After: ![](../figures/ConvToFullyConnectionFusionPass_2.png)
 
 ## Constraints
 
 - Dynamic shapes are not supported.
-- The int4 and int8 data types are not supported.
+- int4 and int8 data types are not supported.
 <!-- npu="910b" id1 -->
-- For Atlas A2 training products/Atlas A2 inference products, Float32 does not support filters whose N axis is not aligned to 16.
+- For Atlas A2 products, the float32 data type does not support the case where the N axis of the filter is not aligned to 16.
 <!-- end id1 -->
-- The number of conv2d output nodes must be 1. The input size must be the same as the HWC axis of the filter size. The value of the group attribute must be 1. The value of the pad attribute must be `[0,0,0,0]`.
-- The conv2d operator cannot be followed by the quant or requant operator.
-- The conv2d operator cannot be cascaded with dequant+sigmoid.
+- The number of conv2d output nodes can only be 1, the `input` and `filter` sizes must be equal on the HWC axes, the `group` attribute must be 1, and the `pad` attribute must be \[0,0,0,0\].
+- conv2d followed by a quant or requant operator is not supported.
+- conv2d followed by a dequant+sigmoid operator cascade is not supported.
 
 ## Applicable Products
 
@@ -31,9 +34,9 @@ Atlas training products
 <!-- end id4 -->
 
 <!-- npu="910b" id5 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id5 -->
 
 <!-- npu="A3" id6 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id6 -->

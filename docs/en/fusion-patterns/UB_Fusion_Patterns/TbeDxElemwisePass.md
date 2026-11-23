@@ -1,5 +1,7 @@
 # TbeDxElemwisePass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:56:49.484Z pushedAt=2026-11-16T06:27:04.603Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on DX+ElementWise.

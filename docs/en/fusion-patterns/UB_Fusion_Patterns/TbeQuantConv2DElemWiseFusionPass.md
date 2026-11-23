@@ -1,5 +1,7 @@
 # TbeQuantConv2DElemWiseFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:57:45.947Z pushedAt=2026-11-16T06:27:04.633Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on the QuantConv2D and Elemwise/Broadcast nodes. The Elemwise trustlist is Add/Div/Realdiv.
@@ -9,7 +11,7 @@ Performs UB fusion on the QuantConv2D and Elemwise/Broadcast nodes. The Elemwise
 ## Constraints
 
 - Only the cascading structures involved in the SD2.1 and SDXL networks are supported, that is, QuantConv2D+Add, QuantConv2D+Add Div, and QuantConv2D+Add+Realdiv in static scenarios.
-- Only the static scenarios of Atlas inference products are supported.
+- Only static scenarios are supported on Atlas inference products.
 - The QuantConv2D node is not fused if it has `offset` configured and `group` greater than 1, runs in DMA use cases, or runs with N x 1.
 - Elemwise supports only dual inputs and single output, and the static trustlist must be Add/Div/Realdiv. Otherwise, fusion is not performed.
 - The number of elemwise nodes is 1≤ *N* ≤ 2. When *N* = 2, the first elemwise cannot be multi-reference output. Otherwise, it is not fused.

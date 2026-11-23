@@ -1,5 +1,7 @@
 # BernoulliFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:43:24.418Z pushedAt=2026-11-16T06:27:04.239Z nl=2 -->
+
 ## Description
 
 In GE, if prob has multiple values, the shape of x in StatelessBernoulliV2 is associated with the first input shape of StatelessBernoulli, and the value of x is associated with the second input prob, enabling unified online build adaptation.
@@ -15,5 +17,5 @@ StatelessBernoulliV2: The input dimension is greater than or equal to 2.
 ## Applicable Products
 
 <!-- npu="950" id1 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id1 -->

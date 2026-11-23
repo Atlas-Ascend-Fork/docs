@@ -1,5 +1,7 @@
 # StridedSliceConcatFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:50:58.384Z pushedAt=2026-11-16T06:27:04.438Z nl=2 -->
+
 ## Description
 
 Fuses the StridedSliceD/StridedSliceD/ConcatD operator into Squeeze/Roll/Unsqueeze operator to improve the computing performance. See the table below.

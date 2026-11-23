@@ -1,5 +1,7 @@
 # SoftmaxGradExtFusion
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:50:35.053Z pushedAt=2026-11-16T06:27:04.424Z nl=2 -->
+
 ## Description
 
 Fuses the Mul, ReduceSumD, and Sub operators in the graph on the left that fit the graph fusion pattern into the SoftmaxGradExt operator in the graph on the right.
@@ -21,14 +23,14 @@ Fuses the Mul, ReduceSumD, and Sub operators in the graph on the left that fit t
 - Dynamic shapes are not supported.
 - For data types:
   - The data types of input0, input1, and input2 must be the same.
-  - Atlas A2 training products/Atlas A2 inference products: The data type can be FLOAT16, FLOAT32, or BFLOAT16.
+  - Atlas A2 products: The supported data types are FLOAT16, FLOAT32, and BFLOAT16.
 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="950" id2 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id2 -->

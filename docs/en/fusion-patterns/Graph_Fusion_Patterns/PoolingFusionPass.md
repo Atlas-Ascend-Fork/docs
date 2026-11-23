@@ -1,5 +1,7 @@
 # PoolingFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:49:06.701Z pushedAt=2026-11-16T06:27:04.385Z nl=2 -->
+
 ## Description
 
 ![](../figures/PoolingFusionPass_1.png)

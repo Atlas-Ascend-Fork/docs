@@ -1,5 +1,7 @@
 # TbeConvDequantVaddReluQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:56:09.862Z pushedAt=2026-11-16T06:27:04.585Z nl=2 -->
+
 ## Description
 
 Fuses the operators into one conv2d fusion operator in the following seven patterns:

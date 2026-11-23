@@ -1,5 +1,7 @@
 # MatmulReduceSumUbFusion
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:54:27.427Z pushedAt=2026-11-16T06:27:04.538Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on BatchMatMul and ReduceSum in a subgraph that meets the following pattern.

@@ -1,12 +1,14 @@
 # ConvBatchnormFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:44:27.254Z pushedAt=2026-11-16T06:27:04.269Z nl=2 -->
+
 ## Description
 
 Fuses the Conv2d+batchnorm or Conv3d+batchnorm operators into one operator; or fuses the DepthwiseConv2d+batchnorm operators into one operator when batchnorm has two inputs.
 
 ![](../figures/ConvBatchnormFusionPass_1.png)
 
-After:
+Fused into
 
 ![](../figures/ConvBatchnormFusionPass_1.png)
 

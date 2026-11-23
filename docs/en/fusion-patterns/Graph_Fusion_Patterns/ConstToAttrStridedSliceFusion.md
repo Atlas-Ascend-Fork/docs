@@ -1,5 +1,7 @@
 # ConstToAttrStridedSliceFusion
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:44:04.174Z pushedAt=2026-11-16T06:27:04.257Z nl=2 -->
+
 ## Description
 
 Fuses the StridedSlice operator into the StridedSliceD operator, and converts StridedSlice's Const node inputs (begin, end, and strides) into attributes of StridedSliceD.
@@ -20,5 +22,5 @@ Fuses the StridedSlice operator into the StridedSliceD operator, and converts St
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

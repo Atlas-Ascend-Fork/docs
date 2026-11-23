@@ -1,5 +1,7 @@
 # ZInplaceAddLayerNormFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:52:51.463Z pushedAt=2026-11-16T06:27:04.487Z nl=2 -->
+
 ## Description
 
 Reuses the input address *x1* of AddLayerNorm as the output address *y*, input address *x2* as the output address *x*, and converts the operator to InplaceAddLayerNorm.
@@ -14,9 +16,9 @@ Reuses the input address *x1* of AddLayerNorm as the output address *y*, input a
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->

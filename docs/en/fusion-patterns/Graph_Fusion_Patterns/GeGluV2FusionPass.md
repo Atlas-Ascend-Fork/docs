@@ -1,5 +1,7 @@
 # GeGluV2FusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:46:18.470Z pushedAt=2026-11-16T06:27:04.316Z nl=2 -->
+
 ## Description
 
 Fuses small operators (SplitVD + Gelu + Mul) into the large operator GeGluV2.
@@ -17,9 +19,9 @@ Atlas inference products
 <!-- end id1 -->
 
 <!-- npu="910b" id3 -->
-Ascend_xxx_B in Atlas A2 training products/Atlas A2 inference products
+Ascend_xxx_B in Atlas A2 products
 <!-- end id3 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->

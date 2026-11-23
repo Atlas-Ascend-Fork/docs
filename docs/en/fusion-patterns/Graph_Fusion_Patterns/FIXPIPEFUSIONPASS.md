@@ -1,5 +1,7 @@
 # FIXPIPEFUSIONPASS
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:54.886Z pushedAt=2026-11-16T06:27:04.304Z nl=2 -->
+
 ## Description
 
 On hardware with FixPipe support, when a cube operator has `support_fixpipe_ability` configured in [FixPipeAbilityProcessPass](FixPipeAbilityProcessPass.md), it will sequentially attempt to match the convert, activation, and transform units as shown in the figure below. If at least one of these units exists (nonexistent units are skipped), the matched operators will be fused into a FixPipe operator.
@@ -18,5 +20,5 @@ On hardware with FixPipe support, when a cube operator has `support_fixpipe_abil
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

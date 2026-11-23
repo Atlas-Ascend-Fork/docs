@@ -1,5 +1,7 @@
 # SpaceToBatchConv2dBatchToSpacePass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:50:47.678Z pushedAt=2026-11-16T06:27:04.432Z nl=2 -->
+
 ## Description
 
 Fuses the SpaceToBatchND, Conv2D, and BatchToSpaceND operators that are sequentially connected into one Conv2D operator.

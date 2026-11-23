@@ -1,5 +1,7 @@
 # TbeConvBnreduceFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:56:06.458Z pushedAt=2026-11-16T06:27:04.583Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on the Convolution+bn_reduce nodes in the subgraphs that meet the following patterns.
@@ -31,9 +33,9 @@ Atlas training products
 <!-- end id3 -->
 
 <!-- npu="910b" id4 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id4 -->
 
 <!-- npu="A3" id5 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id5 -->

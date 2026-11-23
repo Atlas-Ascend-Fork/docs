@@ -1,15 +1,15 @@
-# Introduction
+# Overview
+
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:58:10.082Z pushedAt=2026-11-16T06:27:04.645Z nl=2 -->
 
 ## Overview
 
 Operator fusion, an important means to improve network performance, can be implemented by graph fusion or Unified Buffer fusion (UB fusion).
 
-Graph fusion is a key method to improve network performance.
-
 The system has a range of built-in graph fusion and UB fusion patterns, which are enabled by default and can be disabled. (If any pattern is disabled by default, special description will be provided.) This document describes only part of the fusion patterns.
 
 >[!NOTE]
->For details about the operators involved in this document, see [Ascend IR Operator Specifications](https://www.hiascend.com/en-sg/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
+>For details about the operators involved in this document, see [Ascend IR Operator Specifications](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/latest/API/aolapi/docs/en/ops-lib/ascendIR_spec_intro.md) in the operator library.
 
 ## Graph Fusion
 
@@ -20,7 +20,7 @@ Graph fusion refers to the process of modifying a graph according to the fusion 
 - Saves the compute time by reducing the mathematical computation workload of operators. For example, Conv and BiasAdd can be fused into one operator, so that accumulation is directly completed in the L0C Buffer to spare the Add computation workload.
 - Accelerates post-fusion computation by utilizing hardware instructions. In the preceding example, graph fusion is performed to move the accumulation workload of "Conv+BiasAdd" structure to the L0C Buffer, thereby accelerating the computation process by utilizing the accumulation capability of L0C Buffer.
 
-Graph fusion includes fusion of individual graphs and fusion of partitioned subgraphs.
+Both graph fusion and fusion after split are supported.
 
 - Graph fusion: Mathematical fusion is performed on operators in a graph to fuse operators into one or more operators, which is hardware irrelevant.
 

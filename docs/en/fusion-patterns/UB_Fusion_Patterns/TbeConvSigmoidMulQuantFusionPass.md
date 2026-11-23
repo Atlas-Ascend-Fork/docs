@@ -1,5 +1,7 @@
 # TbeConvSigmoidMulQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:56:33.145Z pushedAt=2026-11-16T06:27:04.598Z nl=2 -->
+
 ## Description
 
 Fuses the Conv+Sigmoid+Mul+Quant operators into one operator.
@@ -12,7 +14,7 @@ Or
 
 ## Constraints
 
-None
+None.
 
 ## Applicable Products
 

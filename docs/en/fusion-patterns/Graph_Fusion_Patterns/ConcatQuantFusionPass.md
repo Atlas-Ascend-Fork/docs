@@ -1,5 +1,7 @@
 # ConcatQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:43:43.782Z pushedAt=2026-11-16T06:27:04.247Z nl=2 -->
+
 ## Description
 
 Fuses the ConcatD/ConcatV2D+Quant subgraph into the Quant+ConcatD/ConcatV2D subgraph. The fusion patterns can reduce the amount of data to be moved and improve computing performance.
@@ -45,7 +47,7 @@ After:
     - Atlas inference products
     <!-- end id3 -->
     <!-- npu="910b" id4 -->
-    - Atlas A2 training products/Atlas A2 inference products
+    - Atlas A2 products
     <!-- end id4 -->
     <!-- npu="310b" id5 -->
     - Atlas 200I/500 A2 inference products

@@ -1,5 +1,7 @@
 # TbeConv2DReluv2Pass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:55:44.867Z pushedAt=2026-11-16T06:27:04.572Z nl=2 -->
+
 ## Description
 
 Fuses the Conv2D+ReluV2 operators into one Conv2D operator.

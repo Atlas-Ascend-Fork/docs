@@ -1,5 +1,7 @@
 # GemmTransFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:46:36.620Z pushedAt=2026-11-16T06:27:04.326Z nl=2 -->
+
 ## Description
 
 Fuses the Transpose+Gemm operators into the GemmTrans operator.

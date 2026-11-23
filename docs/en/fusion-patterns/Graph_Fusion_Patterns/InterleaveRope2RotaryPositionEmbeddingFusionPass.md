@@ -1,5 +1,7 @@
 # InterleaveRope2RotaryPositionEmbeddingFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:06.982Z pushedAt=2026-11-16T06:27:04.359Z nl=2 -->
+
 ## Description
 
 Fuses the InterleaveRope operator into the RotaryPositionEmbedding operator, as shown in the following fusion.
@@ -13,5 +15,5 @@ You are advised not to disable this pattern. Otherwise, the InterleaveRope Ascen
 ## Applicable Products
 
 <!-- npu="950" id1 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id1 -->

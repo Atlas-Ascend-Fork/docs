@@ -1,5 +1,7 @@
 # CubeTransFixpipeFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:11.254Z pushedAt=2026-11-16T06:27:04.289Z nl=2 -->
+
 ## Description
 
 Moves transdata downward to fuse with Fixpipe when the following structure is matched.
@@ -15,5 +17,5 @@ Moves transdata downward to fuse with Fixpipe when the following structure is ma
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

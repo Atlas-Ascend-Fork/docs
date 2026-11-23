@@ -1,5 +1,7 @@
 # FullyConnectionPowerPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:46:14.568Z pushedAt=2026-11-16T06:27:04.314Z nl=2 -->
+
 ## Description
 
 Fuses the FullyConnection+Power operators into the FullyConnectionPower operator.

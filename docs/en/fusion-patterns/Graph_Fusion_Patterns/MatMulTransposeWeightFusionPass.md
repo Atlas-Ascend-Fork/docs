@@ -1,5 +1,7 @@
 # MatMulTransposeWeightFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:28.995Z pushedAt=2026-11-16T06:27:04.372Z nl=2 -->
+
 ## Description
 
 In a two-dimensional matrix, the first axis is defined as the outer axis and the second axis as the inner axis. For example, in A = M × K, the inner axis is K. After transposition, you get A^T = K × M, and the inner axis becomes M.
@@ -11,5 +13,5 @@ When the storage units of the inner axis in the input shape of the matmul/batchm
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

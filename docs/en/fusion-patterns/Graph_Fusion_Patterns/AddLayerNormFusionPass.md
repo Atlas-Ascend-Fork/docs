@@ -1,5 +1,7 @@
 # AddLayerNormFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:30.867Z pushedAt=2026-11-16T06:27:04.193Z nl=2 -->
+
 ## Description
 
 - Scenario 1: Fuses Add, Cast (optional), and LayerNorm/LayerNormV3/LayerNormV4 into the AddLayerNorm operator.
@@ -23,13 +25,13 @@
 
   ![](../figures/AddLayerNormFusionPass_7.png)
 
-  or
+  Or
 
   ![](../figures/AddLayerNormFusionPass_8.png)
 
 ## Constraints
 
-- Constraints on data types:
+- For data types:
   - In scenario 1, only the following input data type combinations are supported:
 
    |x1|x2|gamma|beta|
@@ -97,9 +99,9 @@
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="950" id2 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id2 -->

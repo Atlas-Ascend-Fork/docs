@@ -1,5 +1,7 @@
 # SoftmaxCrossEntropyWithLogitsPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:50:17.192Z pushedAt=2026-11-16T06:27:04.417Z nl=2 -->
+
 ## Description
 
 Fuses the Reshape and SoftmaxCrossEntropyWithLogits operators that fit the graph fusion pattern, eliminating the Reshape operator and retaining only the SoftmaxCrossEntropyWithLogits operator.
@@ -31,11 +33,11 @@ Fuses the Reshape and SoftmaxCrossEntropyWithLogits operators that fit the graph
     The data types of input0 and input2 must be the same.
 
   <!-- npu="910b" id2 -->
-  - Atlas A2 training products/Atlas A2 inference products: The data type can be FLOAT32 or BFLOAT16.
+  - Atlas A2 products: The supported data types are FLOAT32 and BFLOAT16.
   <!-- end id2 -->
 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

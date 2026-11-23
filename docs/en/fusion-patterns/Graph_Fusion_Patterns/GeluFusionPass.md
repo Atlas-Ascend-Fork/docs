@@ -1,5 +1,7 @@
 # GeluFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:46:34.456Z pushedAt=2026-11-16T06:27:04.322Z nl=2 -->
+
 ## Description
 
 Fuses small operators, such as Pow, Mul, Add, and Tanh, into the Gelu operator.
@@ -77,11 +79,11 @@ After:
 - Dynamic shapes are not supported.
 <!-- npu="910b" id2 -->
 - Data type constraints:
-  - Atlas A2 training products/Atlas A2 inference products: The data type can be FLOAT32, FLOAT16, or BFLOAT16.
+  - Atlas A2 products: Supported data types are FLOAT32, FLOAT16, and BFLOAT16.
 <!-- end id2 -->
 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

@@ -1,5 +1,7 @@
 # AddRmsNormDynamicQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:29.335Z pushedAt=2026-11-16T06:27:04.191Z nl=2 -->
+
 ## Description
 
 Fuses the AddRmsNorm and DynamicQuant operators that comply with the graph fusion pattern into fused operator AddRmsNormDynamicQuant. The output y of the AddRmsNorm operator is used as the first input of the DynamicQuant operator.
@@ -18,10 +20,10 @@ Pattern 2: dual-channel
   <!-- npu="A3,910b" id4 -->
 - For the output yout of DynamicQuant:
   <!-- npu="910b" id5 -->
-  - Atlas A2 training products/Atlas A2 inference products: yout supports only the int8 quantization type.
+  - Atlas A2 products: yout supports only the int8 quantization type.
   <!-- end id5 -->
   <!-- npu="A3" id6 -->
-  - Atlas A3 training products/Atlas A3 inference products: yout supports only the int8 quantization type.
+  - Atlas A3 products: yout supports only the int8 quantization type.
   <!-- end id6 -->
   <!-- end id4 -->
 
@@ -31,26 +33,26 @@ Pattern 2: dual-channel
 
 - attr:
   <!-- npu="950" id7 -->
-  - 950PR/950DT: `dst_type` supports only DT_INT8, DT_HIFLOAT8, DT_FLOAT8_E4M3FN, and DT_FLOAT8_E5M2.
+  - Ascend 950PR&950DT products: dst\_type supports only DT\_INT8, DT\_HIFLOAT8, DT\_FLOAT8\_E4M3FN, and DT\_FLOAT8\_E5M2.
   <!-- end id7 -->
   <!-- npu="910b" id8 -->
-  - Atlas A2 training products/Atlas A2 inference products: `dst_type` supports only DT_INT8.
+  - Atlas A2 products: dst\_type supports only DT\_INT8.
   <!-- end id8 -->
   <!-- npu="A3" id9 -->
-  - Atlas A3 training products/Atlas A3 inference products: `dst_type` supports only DT_INT8.
+  - Atlas A3 products: dst\_type supports only DT\_INT8.
   <!-- end id9 -->
   - In dual-channel pattern, `dst_type` of DynamicQuant0 and DynamicQuant1 must be the same.
 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products and Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->
 
 <!-- npu="950" id3 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id3 -->

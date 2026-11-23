@@ -1,5 +1,7 @@
 # TbeConv2DAddRealDivTransdataFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:55:39.431Z pushedAt=2026-11-16T06:27:04.569Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on the Conv2D, elemwise/broadcast, and transdata nodes. The `elemwise` trustlist is Add/Div/Realdiv. Only the single-output cascade structure in the SDXL network is supported, that is, conv2d transdata, conv2d+add+transdata, conv2d+div+transdata, conv2d+realdiv+transdata, conv2d+add+div+transdata, and conv2d+add+realdiv+transdata in static scenarios.
@@ -12,11 +14,11 @@ Performs UB fusion on the Conv2D, elemwise/broadcast, and transdata nodes. The `
 - The elemwise node supports only dual inputs and single output.
 - The conv2d node cannot be connected to stridedread. Otherwise, fusion cannot be performed.
 - The static trustlist of the elemwise node must be add/div/realdiv. Otherwise, fusion cannot be performed.
-- The number of elemwise nodes is 1 ≤ *N* ≤ 2. When *N* = 2, the first elemwise cannot be multi-reference output. Otherwise, it is not fused.
+- The number of elemwise nodes is 1≤ *N* ≤ 2. When *N* = 2, the first elemwise cannot be multi-reference output. Otherwise, it is not fused.
 - When the second input of the RealDiv node meets the following three conditions, the operator is converted into a MUL operator and is not fused.
 
     - The type is Const/Constant.
-    - The data type is float32.
+    - float32 data type.
     - The value is less than -1e-6 or greater than 1e-6.
 
     In the ONNX model, the Div nodes in the graph are converted into RealDiv nodes. If the preceding conditions are met, the nodes are not fused.

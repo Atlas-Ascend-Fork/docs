@@ -1,5 +1,7 @@
 # TbeBatchMatMulQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:55:05.405Z pushedAt=2026-11-16T06:27:04.557Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on BatchMatMul/GEMM and AscendDequant/AscendQuant/Elemwise in the subgraphs that meet the following patterns.
@@ -8,7 +10,7 @@ Pattern 1:
 
 ![](../figures/TbeBatchMatMulQuantFusionPass_1.png)
 
-Mode 2:
+Pattern 2:
 
 ![](../figures/TbeBatchMatMulQuantFusionPass_2.png)
 

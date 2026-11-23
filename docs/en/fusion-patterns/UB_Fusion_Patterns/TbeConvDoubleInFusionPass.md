@@ -1,5 +1,7 @@
 # TbeConvDoubleInFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:56:21.229Z pushedAt=2026-11-16T06:27:04.590Z nl=2 -->
+
 ## Description
 
 Fuses the Conv2D+Elemwise+Elemwise operators into one Conv2D operator.

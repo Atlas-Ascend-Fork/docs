@@ -1,5 +1,7 @@
 # TbeEltwiseFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:57:19.996Z pushedAt=2026-11-16T06:27:04.618Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on the ElemWise/Broadcast nodes in the subgraphs that meet the following pattern. A maximum of six consecutive ElemWise/Broadcast nodes are supported.
@@ -25,5 +27,5 @@ Atlas training products
 <!-- end id3 -->
 
 <!-- npu="A3" id4 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id4 -->

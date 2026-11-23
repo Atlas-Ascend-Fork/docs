@@ -1,5 +1,7 @@
 # ARefreshCubeC0FusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:42:25.929Z pushedAt=2026-11-16T06:27:04.210Z nl=2 -->
+
 ## Description
 
 Corrects the c0 value of cube operators when their inputs and outputs use heavy (private) formats.
@@ -13,5 +15,5 @@ Corrects the c0 value of cube operators when their inputs and outputs use heavy 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

@@ -1,5 +1,7 @@
 # TbeConv2DBackpropElemwiseFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:55:28.100Z pushedAt=2026-11-16T06:27:04.567Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on DX+ElementWise+ElementWise1 (optional).

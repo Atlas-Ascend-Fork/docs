@@ -1,5 +1,7 @@
 # Matmulv2FusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:33.357Z pushedAt=2026-11-16T06:27:04.374Z nl=2 -->
+
 ## Description
 
 For the MatMulV2 operator with three inputs in the weight int8 quantization scenario, inserts the TransposeD operator before the input TensorB to be transposed.

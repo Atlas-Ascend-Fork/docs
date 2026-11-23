@@ -1,5 +1,7 @@
 # TbeAippConvReluMaxpoolingFusion
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:54:50.591Z pushedAt=2026-11-16T06:27:04.548Z nl=2 -->
+
 ## Description
 
 Fuses the Aipp (optional)+Conv2D+Dequant (optional)+ElemWise (optional)+MaxPool (MaxPool/Pooling/MaxPoolv3)+AscendQuant (optional) operators in the following pattern subgraph into one operator.
@@ -11,18 +13,18 @@ Fuses the Aipp (optional)+Conv2D+Dequant (optional)+ElemWise (optional)+MaxPool 
 Fusion can be performed only when the following conditions are met:
 
 - Conv2D: Small channel is enabled. The `kernel` size must be 3 x 3, 5 x 5, or 7 x 7, `strides` must be `[1, 1]` or `[2, 2]`, and `cout` must be less than or equal to 64.
-- MaxPool: strides = [2, 2], ksize = [2, 2]/[3, 3].
+- MaxPool: strides = \[2, 2\], ksize = \[2, 2\]/\[3, 3\]
 - When MaxPool `ksize` is [2, 2] and the Conv2D input width is greater than 1000, this fusion pattern is disabled.
 - When MaxPool `ksize` is [3, 3] and the Conv2D input width is greater than 800, this fusion pattern is disabled.
-- Pooling: strides = [2, 2], window= [2, 2]/[3, 3].
+- Pooling: strides = \[2, 2\], window= \[2, 2\]/\[3, 3\]
 - When the pooling window is [2, 2] and the Conv2D input width is greater than 1000, this fusion pattern is disabled.
 - When the pooling window is [3, 3] and the Conv2D input width is greater than 800, this fusion pattern is disabled.
 
 <!-- npu="310p" id1 -->
 Fusion can be performed only when Maxpoolv3 meets the following conditions:
 
-- SoC: Atlas inference accelerator card
-- Conv2D:
+- soc: Atlas inference accelerator cards
+- conv2d:
 
     (1) The input format is NCHW.
 
@@ -60,12 +62,14 @@ Fusion can be performed only when Maxpoolv3 meets the following conditions:
 
 ## Applicable Products
 
-<!-- npu="310b" id2 -->
+<!-- npu="310b" id4 -->
 Atlas 200I/500 A2 inference products
-<!-- end id2 -->
-<!-- npu="310p" id3 -->
-Atlas inference products
-<!-- end id3 -->
-<!-- npu="910" id4 -->
-Atlas training products
 <!-- end id4 -->
+
+<!-- npu="310p" id2 -->
+Atlas inference products
+<!-- end id2 -->
+
+<!-- npu="910" id3 -->
+Atlas training products
+<!-- end id3 -->

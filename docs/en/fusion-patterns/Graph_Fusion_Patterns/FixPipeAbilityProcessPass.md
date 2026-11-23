@@ -1,5 +1,7 @@
 # FixPipeAbilityProcessPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:59.479Z pushedAt=2026-11-16T06:27:04.309Z nl=2 -->
+
 ## Description
 
 Adds the `support_fixpipe_ability` attribute to a Fixpipe node. This attribute has the following enumerated values:
@@ -12,14 +14,14 @@ Adds the `support_fixpipe_ability` attribute to a Fixpipe node. This attribute h
 
 This fusion pattern cannot be disabled.
 
-The validity of this pass depends on whether the running product supports the corresponding operator type. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/en-sg/document/detail/en/CANNCommunityEdition/latest/API/aolapi/operatorlist_00094.html) in the operator library.
+The validity of this pass depends on whether the running product supports the corresponding operator types. For details, see [Ascend IR Operator Specifications](https://www.hiascend.com/document/detail/en/CANNCommunityEdition/latest/API/aolapi/docs/en/ops-lib/ascendIR_spec_intro.md) in the operator library.
 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="950" id2 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id2 -->

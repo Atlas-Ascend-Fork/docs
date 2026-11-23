@@ -1,5 +1,7 @@
 # TfMergeWeightQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:51:34.094Z pushedAt=2026-11-16T06:27:04.449Z nl=2 -->
+
 ## Description
 
 In quantization use cases, for the matched Cube operators (including Conv2D, DepthwiseConv2D, Conv3D, Deconvolution, Conv2DTransposeD, MatMulV2, and BatchMatMulV2) in the following graph structures, performs the operations shown in the following figures.
@@ -43,5 +45,5 @@ The number of outputs of Split must match the number of inputs to Concat, and ou
 ## Applicable Products
 
 <!-- npu="950" id1 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id1 -->

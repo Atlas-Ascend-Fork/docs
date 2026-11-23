@@ -1,5 +1,7 @@
 # TbeAippCommonFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:54:39.270Z pushedAt=2026-11-16T06:27:04.540Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on the Aipp+Conv2D+Fixpipe (optional) or Requant (optional) nodes in a subgraph that meets the following pattern.

@@ -1,12 +1,14 @@
 # GeluQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:46:37.011Z pushedAt=2026-11-16T06:27:04.324Z nl=2 -->
+
 ## Description
 
 Fuses the small operators (Gelu + AscendQuantV2) or (Gelu + DynamicQuant) into the large operator GeluQuant.
 
 ![](../figures/GeluQuantFusionPass_1.png)
 
-or
+Or
 
 ![](../figures/GeluQuantFusionPass_2.png)
 
@@ -20,5 +22,5 @@ or
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

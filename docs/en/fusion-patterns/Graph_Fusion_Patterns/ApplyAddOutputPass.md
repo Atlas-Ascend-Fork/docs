@@ -1,4 +1,6 @@
-# ApplyAddOutputPass 
+# ApplyAddOutputPass
+
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:42:10.087Z pushedAt=2026-11-16T06:27:04.205Z nl=2 -->
 
 ## Description
 
@@ -6,7 +8,7 @@ Adds optional outputs and prechecks for operators in Table 1.
 
 **Table 1** Supported operators
 
-|Operator|output1|output2|output3|precheck|
+|Operator|Output 1|Output 2|Output 3|Precheck|
 |--|--|--|--|--|
 |ApplyRMSProp|ms|mom|-|ApplyRmsPropPreCheck|
 |FusedMulApplyMomentumWithoutAccumOut|accum|-|-|FusedMulApplyMomentumPreCheck|
@@ -30,10 +32,10 @@ Adds optional outputs and prechecks for operators in Table 1.
 
 ## Constraints
 
-None
+None.
 
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

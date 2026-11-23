@@ -1,5 +1,7 @@
 # ConcatTileFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:43:50.124Z pushedAt=2026-11-16T06:27:04.254Z nl=2 -->
+
 ## Description
 
 Concatenates multiple identical contiguous inputs to fuse Tile operators.
@@ -8,7 +10,7 @@ Concatenates multiple identical contiguous inputs to fuse Tile operators.
 
 ![](../figures/ConcatTileFusionPass_1.png)
 
-**Model 2**
+**Pattern 2**
 
 ![](../figures/ConcatTileFusionPass_2.png)
 
@@ -22,13 +24,13 @@ Concatenates multiple identical contiguous inputs to fuse Tile operators.
 - The multiple inputs of Tile/TileD must be the same and contiguous in Concat. The number of contiguous Tile/TileD must be greater than 2.
 - The product of the input tensor shape dimensions of Tile/TileD must be less than or equal to `shape_limited_`.
 
-    `shape_limited_ = vector_calculate_size * 2 * vector_core_num/data_type_size`
+    shape\_limited\_ = vector\_calculate\_size \* 2 \* vector\_core\_num/data\_type\_size
 
     `data_type_size` indicates the data size of the output tensor of Concat[ConcatD/ConcatV2/ConcatV2D].
 
     To view the values of `vector_calculate_size` and `vector_core_num`, perform the following steps:
 
-    View the platform information file in the `${INSTALL_DIR}/${arch}/data/platform_config` folder and search for the keyword `vec_calc_size` or `vector_core_cnt` to obtain the values of `vector_calculate_size` and `vector_core_num`. Replace `${INSTALL_DIR}` with the actual file storage path after the CANN software is installed. For example, if the installation is performed as the `root` user, the default file storage path after the installation is `/usr/local/Ascend/cann`.
+    View the corresponding platform information file in the `${INSTALL_DIR}/${arch}/data/platform_config` folder. Search for the keywords `vec_calc_size` or `vector_core_cnt` to obtain the values of `vector_calculate_size` and `vector_core_num`. Replace `${INSTALL_DIR}` with the storage path of the CANN software after installation. For the root user, the default storage path after installation is `/usr/local/Ascend/cann`.
 
 ## Applicable Products
 
@@ -45,9 +47,9 @@ Atlas training products
 <!-- end id3 -->
 
 <!-- npu="910b" id4 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id4 -->
 
 <!-- npu="A3" id5 -->
-Atlas A3 training series products and Atlas A3 inference series products
+Atlas A3 products
 <!-- end id5 -->

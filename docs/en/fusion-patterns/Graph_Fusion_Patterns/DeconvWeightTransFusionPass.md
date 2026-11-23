@@ -1,5 +1,7 @@
 # DeconvWeightTransFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:45:11.894Z pushedAt=2026-11-16T06:27:04.286Z nl=2 -->
+
 ## Description
 
 Transposes the input filter in reverse order in the int8 quantization scenario.

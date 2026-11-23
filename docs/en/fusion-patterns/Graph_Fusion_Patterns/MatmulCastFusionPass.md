@@ -1,5 +1,7 @@
 # MatmulCastFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:09.734Z pushedAt=2026-11-16T06:27:04.362Z nl=2 -->
+
 ## Description
 
 Fuses the MatMul/MatMulV2/BatchMatMul/BatchMatMulV2 and cast operators into the MatMul/MatMulV2/BatchMatMul/BatchMatMulV2 operator.

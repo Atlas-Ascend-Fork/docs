@@ -1,8 +1,10 @@
 # BatchMatMulNonAlignedFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:43:07.055Z pushedAt=2026-11-16T06:27:04.232Z nl=2 -->
+
 ## Description
 
-Performs fusion in BatchMatMul non-alignment use cases.
+Applies to non-aligned BatchMatMul.
 
 Pattern 1:
 
@@ -22,10 +24,10 @@ After:
 
 ## Constraints
 
-The input dimension M of BatchMatMul must be a multiple of 16, while the input dimension K must not be a multiple of 16.
+The M dimension of the BatchMatMul input must be a multiple of 16, and the K dimension must not be a multiple of 16.
 
-Constraints on the perm value in transpose are as follows:
+The `perm` values in `transpose` are subject to the following constraints:
 
-1. If add_2 does not exist, the value of `transpose.perm` is `{0,2,1,3}`.
+1\. When add\_2 is absent, all values of `transpose.perm` are \{0,2,1,3\}.
 
-2. If add_2 exists, the value of `transpose_1.perm` is `{0,2,1,3}`, and the value of `transpose_2.perm` is `{0,2,3,1}`.
+2\. When add\_2 is present, the value of `transpose_1.perm` is \{0,2,1,3\}, and the value of `transpose_2.perm` is \{0,2,3,1\}.

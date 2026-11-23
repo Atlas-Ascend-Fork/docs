@@ -1,5 +1,7 @@
 # MatmulReshapeFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:48:22.881Z pushedAt=2026-11-16T06:27:04.367Z nl=2 -->
+
 ## Description
 
 Adds a Reshape node to the second input when the N axis of Matmul equals 1.
@@ -21,13 +23,13 @@ Adds a Reshape node to the second input when the N axis of Matmul equals 1.
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 training products/Atlas A3 inference products
+Atlas A3 products
 <!-- end id2 -->
 
 <!-- npu="950" id3 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id3 -->

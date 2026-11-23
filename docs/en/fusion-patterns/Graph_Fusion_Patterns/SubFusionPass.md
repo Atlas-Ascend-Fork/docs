@@ -1,5 +1,7 @@
 # SubFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:51:13.618Z pushedAt=2026-11-16T06:27:04.457Z nl=2 -->
+
 ## Description
 
 Fuses the Sub operator that fits the graph fusion pattern into a Const node when the following constraints are met. The Const node's value is set to all zeros, and its shape is consistent with the output shape of the Sub operator.
@@ -15,5 +17,5 @@ Fuses the Sub operator that fits the graph fusion pattern into a Const node when
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->

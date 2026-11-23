@@ -1,5 +1,7 @@
 # TbeBatchMatmulElementWiseFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:55:01.550Z pushedAt=2026-11-16T06:27:04.551Z nl=2 -->
+
 ## Description
 
 Performs UB fusion on BatchMatMul/GEMM and ElemWise in the subgraphs that meet the following patterns.

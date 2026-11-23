@@ -1,5 +1,7 @@
 # AddLayerNormDynamicQuantFusionPass
 
+<!-- md-trans-meta sourceCommit=unknown translatedAt=2026-11-06T09:41:04.494Z pushedAt=2026-11-16T06:27:04.181Z nl=2 -->
+
 ## Description
 
 Fuses AddLayerNorm and one or two downstream DynamicQuant operators into the AddLayerNormQuant operator.
@@ -18,15 +20,15 @@ The smooth operation of DynamicQuant can also be expressed by Mul. In this scena
 
 - For dtype:
   <!-- npu="950" id3 -->
-  - For 950PR/950DT, the data type of AddLayerNorm x1 can be fp16, bf16, or fp32.
+  - For Ascend 950PR&950DT products, the x1 data type of AddLayerNorm supports fp16, bf16, and fp32.
   <!-- end id3 -->
   <!-- npu="910b" id4 -->
-  - For Atlas A2 training products/Atlas A2 inference products, the data type of AddLayerNorm x1 can be fp16 or bf16.
+  - For Atlas A2 products, the x1 data type of AddLayerNorm supports fp16 and bf16.
   <!-- end id4 -->
   - The data types of inputs x2, gamma, beta, and bias of AddLayerNorm must be the same as that of x1.
   - The input x of DynamicQuant must be of the same data type as x1 of AddLayerNorm.
   <!-- npu="950" id5 -->
-  - For 950PR/950DT, if `smooth` exists in DynamicQuant, the dtype of `smooth` must be the same as that of x1 in AddLayerNorm.
+  - For Ascend 950PR&950DT products, if DynamicQuant has `smooth`, the dtype of `smooth` must be the same as the x1 data type of AddLayerNorm.
 
   <!-- end id5 -->
 - For the graph structure:
@@ -37,9 +39,9 @@ The smooth operation of DynamicQuant can also be expressed by Mul. In this scena
 ## Applicable Products
 
 <!-- npu="910b" id1 -->
-Atlas A2 training products/Atlas A2 inference products
+Atlas A2 products
 <!-- end id1 -->
 
 <!-- npu="950" id2 -->
-950PR/950DT
+Ascend 950PR&950DT products
 <!-- end id2 -->
