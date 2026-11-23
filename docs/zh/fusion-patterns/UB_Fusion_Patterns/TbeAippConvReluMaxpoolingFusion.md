@@ -60,14 +60,14 @@ Maxpoolv3满足如下条件才可以融合:
 
 ## 支持的型号
 
-<!-- npu="310b" id1 -->
+<!-- npu="310b" id2 -->
 Atlas 200I/500 A2推理产品
-<!-- end id1 -->
-
-<!-- npu="310p" id2 -->
-Atlas推理系列产品
 <!-- end id2 -->
 
-<!-- npu="910" id3 -->
-Atlas训练系列产品
+<!-- npu="310p" id3 -->
+Atlas推理系列产品
 <!-- end id3 -->
+
+<!-- npu="910" id4 -->
+Atlas训练系列产品
+<!-- end id4 -->
