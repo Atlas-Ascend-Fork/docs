@@ -27,7 +27,7 @@ source ${HOME}/Ascend/nnal/atb/set_env.sh
 source ${HOME}/Ascend/nnal/asdsip/set_env.sh
 ```
 <!-- end id1 -->
-<!-- @ref: docs/res/zh/env-vars/install_res.md#id1 -->
+<!-- @ref: docs/res/en/env-vars/install_res.md#id1 -->
 
 Users can also set permanent environment variables by modifying the **\~/.bashrc** file. The procedure is as follows:
 

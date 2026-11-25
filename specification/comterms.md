@@ -1,5 +1,7 @@
 # 产品文档名称及链接
 
+简体中文 | [English](./comterms_en.md)
+
 本文档为CANN组织下各产品文档路径，及文档内主要文件路径，便于其他文档参考。
 
 ## 环境准备
@@ -38,7 +40,8 @@
 ## 编译器
 
 - 《[毕昇编译器](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/compiler/BishengCompiler/atlas_bisheng_10_0001.html)》
-- 《[PTO虚拟指令集](https://gitcode.com/cann/pto-isa/blob/master/docs/menu_ops_development.md)》
+- 《[PTO虚拟指令集](https://gitcode.com/cann/pto-isa/blob/master/docs/zh/menu_ops_development.md)》
+- 《[PTOAS](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/compiler/ptoas/overview/what_is_ptoas.md)》
 
 ## 参考
 
