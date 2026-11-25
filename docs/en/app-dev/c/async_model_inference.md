@@ -57,7 +57,7 @@ aclrtMalloc(&modelMemPtr_, modelMemSize_, ACL_MEM_MALLOC_HUGE_FIRST);
 aclrtMalloc(&modelWeightPtr_, modelWeightSize_, ACL_MEM_MALLOC_HUGE_FIRST);
 
 // Load the offline model file. If the model is loaded successfully, the ID of the model is returned.
-aclmdlLoadFromFileWithMem(modelPath, &modelId_, modelMemPtr_,
+aclmdlLoadFromFileWithMem(omModelPath, &modelId_, modelMemPtr_,
         modelMemSize_, modelWeightPtr_, modelWeightSize_);
 
 // 1.2 Obtain the description of the model based on the model ID.

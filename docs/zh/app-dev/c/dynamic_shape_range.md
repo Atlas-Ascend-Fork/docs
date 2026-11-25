@@ -147,7 +147,7 @@ void SetTensorDesc()
         // ......
         // 创建Tensor描述信息
         // shape需要和给定的输入数据的shape一致
-    int64_t shapes = {1, 3, 224, 224};
+    int64_t shapes[4] = {1, 3, 224, 224};
     aclTensorDesc *inputDesc = aclCreateTensorDesc(ACL_FLOAT, 4, shapes, ACL_FORMAT_NCHW);
     // 设置index为0的动态输入的Tensor描述信息
     aclError ret = aclmdlSetDatasetTensorDesc(input_, inputDesc, 0);

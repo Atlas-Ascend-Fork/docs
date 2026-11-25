@@ -149,7 +149,7 @@ void SetTensorDesc()
         // ......
         // Create the tensor description information.
         // The shape must be consistent with the shape of the given input data.
-    int64_t shapes = {1, 3, 224, 224};
+    int64_t shapes[4] = {1, 3, 224, 224};
     aclTensorDesc *inputDesc = aclCreateTensorDesc(ACL_FLOAT, 4, shapes, ACL_FORMAT_NCHW);
     // Set the tensor description information of the dynamic input with index 0.
     aclError ret = aclmdlSetDatasetTensorDesc(input_, inputDesc, 0);

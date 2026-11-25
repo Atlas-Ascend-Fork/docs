@@ -36,8 +36,8 @@ const char* omModelPath = "../model/resnet50.om";
 
 // 1.1 Create an input queue for the model. If the model has multiple inputs, create multiple input queues. Here, one input is used as an example.
 acltdtQueueAttr *attr = acltdtCreateQueueAttr();
-uint32_t *inputQueueList = new (nothrow) uint32_t[num];
 int32_t inputNum = 1;
+uint32_t *inputQueueList = new (nothrow) uint32_t[inputNum];
 
 for (int n = 0; n < inputNum; n++) {
         uint32_t inputQid;
@@ -46,8 +46,8 @@ for (int n = 0; n < inputNum; n++) {
     }
 
 // 1.2 Create an output queue for the model. If the model has multiple outputs, create multiple output queues. Here, one output is used as an example.
-uint32_t *outputQueueList = new (nothrow) uint32_t[num];
 int32_t outputNum = 1;
+uint32_t *outputQueueList = new (nothrow) uint32_t[outputNum];
 
 for (int n = 0; n < outputNum; n++) {
         uint32_t outputQid;
@@ -80,7 +80,7 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
         ret = Utils::ReadBinFile(testFile[index], picDevBuffer, devBufferSize);
 
         // Pass the model input data to the queue and perform model inference. -1 indicates that the program is blocked until the input data is enqueued.
-        ret = acltdtEnqueueData(inputQid, picDevBuffer, devBufferSize, nullptr, 0, -1, 0);
+        ret = acltdtEnqueueData(inputQueueList[0], picDevBuffer, devBufferSize, nullptr, 0, -1, 0);
         // Obtain the size of each output.
     size_t dataSize = aclmdlGetOutputSizeByIndex(modelDesc, 0);
     void *data = nullptr;
@@ -92,14 +92,14 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
         aclError aclRet = aclrtMalloc(&data, dataSize, ACL_MEM_MALLOC_HUGE_FIRST);
      }
          // Wait for the model inference to complete, and obtain the result data from the output memory. -1 indicates that the program is blocked until the inference output data is enqueued.
-         ret = acltdtDequeueData(outputQid, data, dataSize, &retDataSize, nullptr, 0, -1);
+         ret = acltdtDequeueData(outputQueueList[0], data, dataSize, &retDataSize, nullptr, 0, -1);
          // Convert the data in the output memory to the float type.
          float *outData = NULL;
          outData = reinterpret_cast<float*>(data);
         
          // Display the category IDs of the top 5 confidence levels of each image.
          map<float, int, greater<float> > resultMap;
-         for (int j = 0; j < len / sizeof(float); ++j) {
+         for (size_t j = 0; j < retDataSize / sizeof(float); ++j) {
             resultMap[*outData] = j;
             outData++;
          }
@@ -123,8 +123,14 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
 // 2. Unload the model and release the resources related to model inference.
 aclmdlUnload(modelId);
 aclmdlDestroyDesc(modelDesc);
-acltdtDestroyQueue(inputQid);
-acltdtDestroyQueue(outputQid);
+for (int n = 0; n < inputNum; n++) {
+    acltdtDestroyQueue(inputQueueList[n]);
+}
+for (int n = 0; n < outputNum; n++) {
+    acltdtDestroyQueue(outputQueueList[n]);
+}
+delete[] inputQueueList;
+delete[] outputQueueList;
 acltdtDestroyQueueAttr(attr);
 
 ......

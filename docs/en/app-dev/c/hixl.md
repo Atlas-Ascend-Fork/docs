@@ -89,7 +89,10 @@ This sample scenario is H2RD (data transfer from the host to the remote device),
 
         ```cpp
         // Unilateral read: read the prewritten value 1 from MEM_DEVICE of the peer server to the local host memory.
-        TransferOpDesc xfer{reinterpret_cast<uintptr_t>(&host_buf), dev_buf, sizeof(int32_t)};
+        // ReceiveServerDevBufAddr is implemented by the application to receive the dev_buf address sent by the server over the control channel.
+        uintptr_t ReceiveServerDevBufAddr();
+        uintptr_t remote_dev_addr = ReceiveServerDevBufAddr();
+        TransferOpDesc xfer{reinterpret_cast<uintptr_t>(host_buf), remote_dev_addr, sizeof(int32_t)};
         CHECK_HIXL(hixl_engine.TransferSync(remote_engine, READ, {xfer}));
         printf("after READ: %d\n", *host_buf);
         
