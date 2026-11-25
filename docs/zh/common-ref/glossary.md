@@ -519,6 +519,14 @@
 <td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p171709563459"><a name="p171709563459"></a><a name="p171709563459"></a>HDK</p>
 </td>
 </tr>
+<tr id="row202511251001"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p202511251001"><a name="p202511251001"></a><a name="p202511251001"></a><strong id="b202511251001"><a name="b202511251001"></a><a name="b202511251001"></a>DVPP</strong></p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p202511251002"><a name="p202511251002"></a><a name="p202511251002"></a>Digital Vision Pre-Processing，数字视觉预处理。</p>
+<p id="p202511251003"><a name="p202511251003"></a><a name="p202511251003"></a>提供对特定格式的视频和图像的进行解码、缩放等预处理操作，以及对处理后的视频、图像进行编码再输出的能力。</p>
+</td>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.6.1.3 "><p id="p202511251004"><a name="p202511251004"></a><a name="p202511251004"></a>CANN</p>
+</td>
+</tr>
 <tr id="row6975143818317"><td class="cellrowborder" valign="top" width="14%" headers="mcps1.1.6.1.1 "><p id="p198451356155211"><a name="p198451356155211"></a><a name="p198451356155211"></a><strong id="b174450075314"><a name="b174450075314"></a><a name="b174450075314"></a>带宽</strong></p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.6.1.2 "><p id="p1842012825314"><a name="p1842012825314"></a><a name="p1842012825314"></a>网络中传输线路或通道能够承载的传输频率的范围。它实际上是传输线路或者通道上最高和最低频率之间的差。带宽越大，数据传输越快。</p>
