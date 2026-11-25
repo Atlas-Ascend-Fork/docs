@@ -2,7 +2,7 @@
 
 ## 基本概念
 
-调用媒体数据处理算子通常采用“两段式接口”形式，具体如下，其中_“_acldvpp”表示算子接口前缀；而_“Xxx”_表示对应的算子类型，如EncodeJpeg算子。
+调用媒体数据处理算子通常采用“两段式接口”形式，具体如下，其中“acldvpp”表示算子接口前缀；而“Xxx”表示对应的算子类型，如EncodeJpeg算子。
 
 ```text
 aclnnStatus acldvppXxxGetWorkspaceSize(const aclTensor *src, ..., aclTensor *out, ..., uint64_t *workspaceSize, aclOpExecutor **executor);
@@ -12,7 +12,7 @@ aclnnStatus acldvppXxx(void *workspace, uint64_t workspaceSize, aclOpExecutor *e
 两段式接口的作用分别为：
 
 - 第一段接口acldvppXxxGetWorkspaceSize：该接口内部执行入参校验、在动态Shape场景下推导输出Shape、数据切块（Tiling）以及计算执行算子所需的workspace内存大小等任务。
-- 第二段接口acldvppXxx：执行算子计算，接口内部涉及DFX（例如Dump、溢出检测等）、调用Runtime提供的LaunchKernel接口等。_
+- 第二段接口acldvppXxx：执行算子计算，接口内部涉及DFX（例如Dump、溢出检测等）、调用Runtime提供的LaunchKernel接口等。
 
 接口调用流程如下所示：
 
@@ -128,12 +128,12 @@ int32_t encode_jpeg(aclrtStream stream) {
     aclTensor* self = nullptr;
     aclTensor* out = nullptr;
     CreateAclTensor(inputPic, selfShape, &selfDeviceAddr, aclDataType::ACL_UINT8, &self, aclFormat::ACL_FORMAT_NCHW);
-    ScopeGuard autoCloseInTensor([self, selfDeviceAddr] { aclrtFree(self);aclDestroyTensor((const aclTensor *)selfDeviceAddr);});
+    ScopeGuard autoCloseInTensor([self, selfDeviceAddr] { aclDestroyTensor(self); aclrtFree(selfDeviceAddr); });
 
     // 每次执行完，输出Tensor Shape会被修改，因此性能测试将输出Tensor构造放到循环内部，否则第二次执行会被内部拦截
     // 放到内部时，最后执行完文件无法保留，因为内存提前释放了
     CreateAclTensor(outputPic, outShape, &outDeviceAddr, aclDataType::ACL_UINT8, &out, ACL_FORMAT_ND, false);
-    ScopeGuard autoCloseOutTensor([out, outDeviceAddr] { aclrtFree(out);aclDestroyTensor((const aclTensor *)outDeviceAddr);});
+    ScopeGuard autoCloseOutTensor([out, outDeviceAddr] { aclDestroyTensor(out); aclrtFree(outDeviceAddr); });
 
     // 3. 调用CANN算子库API
     uint64_t workspaceSize = 0;
@@ -182,12 +182,12 @@ int32_t Init(int32_t deviceId, aclrtContext* context, aclrtStream* stream)
     ScopeGuard autoResetDevice([deviceId] { aclrtResetDevice(deviceId); });
 
     aclrtCreateContext(context, deviceId);
-    ScopeGuard autoDestroyContext([context] { aclrtDestroyContext(context); });
+    ScopeGuard autoDestroyContext([context] { aclrtDestroyContext(*context); });
 
     aclrtSetCurrentContext(*context);
 
     aclrtCreateStream(stream);
-    ScopeGuard autoDestroyStream([stream] { aclrtDestroyStream(stream); });
+    ScopeGuard autoDestroyStream([stream] { aclrtDestroyStream(*stream); });
 
     autoResetDevice.Dismiss();
     autoDestroyContext.Dismiss();

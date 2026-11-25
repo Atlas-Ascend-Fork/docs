@@ -481,7 +481,7 @@ The following sample code shows the key steps. It is for reference only and cann
 
 ```cpp
 // 1. Specify the positions of the batch cropping regions and the batch pasting regions. cropAreas_ and pasteAreas_ are of the acldvppRoiConfig type.
-acldvppRoiConfig *cropAreas_[2], pasteAreas_[2];
+acldvppRoiConfig *cropAreas_[2], *pasteAreas_[2];
 cropAreas_[0] = acldvppCreateRoiConfig(512, 711, 512, 711);
 cropAreas_[1] = acldvppCreateRoiConfig(512, 711, 512, 711);
 pasteAreas_[0] = acldvppCreateRoiConfig(16, 215, 16, 215);
@@ -541,7 +541,7 @@ acldvppSetPicDescSize(vpcInputDesc_, jpegOutBufferSize);
 vpcOutputBatchDesc_ = acldvppCreateBatchPicDesc(2);
 for (uint32_t index=0; index<2; ++index){
      vecOutPtr_.push_back(vpcOutBufferDev_);
-     vpcOutputDesc_ = acldvppGetPicDesc(vpcInputBatchDesc_, index);
+     vpcOutputDesc_ = acldvppGetPicDesc(vpcOutputBatchDesc_, index);
     acldvppSetPicDescData(vpcOutputDesc_, vpcOutBufferDev_);
     acldvppSetPicDescFormat(vpcOutputDesc_, PIXEL_FORMAT_YUV_SEMIPLANAR_420);
     acldvppSetPicDescWidth(vpcOutputDesc_, dvppOutWidth);
@@ -585,8 +585,8 @@ if(runMode == ACL_HOST){
     (void)acldvppFree(vpcOutBufferDev_);
 }
 }
-acldvppDestroyBatchPicDesc(vpcInputDesc_);
-acldvppDestroyBatchPicDesc(vpcOutputDesc_);
+acldvppDestroyBatchPicDesc(vpcInputBatchDesc_);
+acldvppDestroyBatchPicDesc(vpcOutputBatchDesc_);
 acldvppDestroyChannel(dvppChannelDesc_);
 (void)acldvppDestroyChannelDesc(dvppChannelDesc_);
 dvppChannelDesc_ = nullptr;

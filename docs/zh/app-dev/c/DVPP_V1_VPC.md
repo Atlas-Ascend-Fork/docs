@@ -479,7 +479,7 @@ dvppChannelDesc_ = nullptr;
 
 ```cpp
 // 1. 指定批量抠图区域的位置、指定批量贴图区域的位置,cropAreas_和pasteAreas_是acldvppRoiConfig类型
-acldvppRoiConfig *cropAreas_[2], pasteAreas_[2];
+acldvppRoiConfig *cropAreas_[2], *pasteAreas_[2];
 cropAreas_[0] = acldvppCreateRoiConfig(512, 711, 512, 711);
 cropAreas_[1] = acldvppCreateRoiConfig(512, 711, 512, 711);
 pasteAreas_[0] = acldvppCreateRoiConfig(16, 215, 16, 215);

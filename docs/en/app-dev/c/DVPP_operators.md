@@ -13,8 +13,8 @@ aclnnStatus acldvppXxx(void *workspace, uint64_t workspaceSize, aclOpExecutor *e
 
 The two-stage APIs serve the following purposes:
 
-- First-stage API **acldvpp_Xxx_GetWorkspaceSize**: This API performs tasks such as input parameter verification, output shape inference in dynamic shape scenarios, data tiling, and calculation of the workspace memory size required for operator execution.
-- Second-stage API **acldvpp_Xxx_**: This API executes the operator computation. Internally, this API calls DFX (for example, dump and overflow detection) and calls the **LaunchKernel** API provided by Runtime.
+- First-stage API **acldvppXxxGetWorkspaceSize**: This API performs tasks such as input parameter verification, output shape inference in dynamic shape scenarios, data tiling, and calculation of the workspace memory size required for operator execution.
+- Second-stage API **acldvppXxx**: This API executes the operator computation. Internally, this API calls DFX (for example, dump and overflow detection) and calls the **LaunchKernel** API provided by Runtime.
 
 The API call process is as follows:
 
@@ -130,12 +130,12 @@ int32_t encode_jpeg(aclrtStream stream) {
     aclTensor* self = nullptr;
     aclTensor* out = nullptr;
     CreateAclTensor(inputPic, selfShape, &selfDeviceAddr, aclDataType::ACL_UINT8, &self, aclFormat::ACL_FORMAT_NCHW);
-    ScopeGuard autoCloseInTensor([self, selfDeviceAddr] { aclrtFree(self);aclDestroyTensor((const aclTensor *)selfDeviceAddr);});
+    ScopeGuard autoCloseInTensor([self, selfDeviceAddr] { aclDestroyTensor(self); aclrtFree(selfDeviceAddr); });
 
     // After each execution, the output tensor shape is modified. Therefore, in the performance test, the output tensor is constructed inside the loop; otherwise, the second execution will be intercepted internally.
     // When placed inside, the file cannot be retained after the final execution because the memory is released in advance.
     CreateAclTensor(outputPic, outShape, &outDeviceAddr, aclDataType::ACL_UINT8, &out, ACL_FORMAT_ND, false);
-    ScopeGuard autoCloseOutTensor([out, outDeviceAddr] { aclrtFree(out);aclDestroyTensor((const aclTensor *)outDeviceAddr);});
+    ScopeGuard autoCloseOutTensor([out, outDeviceAddr] { aclDestroyTensor(out); aclrtFree(outDeviceAddr); });
 
     // 3. Call the CANN operator library API.
     uint64_t workspaceSize = 0;
@@ -174,19 +174,22 @@ int32_t Init(int32_t deviceId, aclrtContext* context, aclrtStream* stream)
     initFunc = acldvppInit;
     finalizeFunc = acldvppFinalize;
 
-    auto initFunc(nullptr);
+    const int32_t initRet = initFunc(nullptr);
+    if (initRet != 0) {
+        return initRet;
+    }
     ScopeGuard autoDeinit([] { finalizeFunc(); });
 
     aclrtSetDevice(deviceId);
     ScopeGuard autoResetDevice([deviceId] { aclrtResetDevice(deviceId); });
 
     aclrtCreateContext(context, deviceId);
-    ScopeGuard autoDestroyContext([context] { aclrtDestroyContext(context); });
+    ScopeGuard autoDestroyContext([context] { aclrtDestroyContext(*context); });
 
     aclrtSetCurrentContext(*context);
 
     aclrtCreateStream(stream);
-    ScopeGuard autoDestroyStream([stream] { aclrtDestroyStream(stream); });
+    ScopeGuard autoDestroyStream([stream] { aclrtDestroyStream(*stream); });
 
     autoResetDevice.Dismiss();
     autoDestroyContext.Dismiss();
@@ -211,7 +214,10 @@ int32_t main()
     int32_t deviceId = 0;
     aclrtContext context;
     aclrtStream stream;
-    Init(deviceId, &context, &stream);
+    const int32_t initRet = Init(deviceId, &context, &stream);
+    if (initRet != 0) {
+        return initRet;
+    }
     // Encode the JPEG image.
     encode_jpeg(stream);
 

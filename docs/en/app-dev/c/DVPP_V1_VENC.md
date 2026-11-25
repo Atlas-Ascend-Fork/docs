@@ -117,10 +117,10 @@ uint32_t dataSize = fileLen;
 // Call aclrtGetRunMode to obtain the running mode of the software stack. If the running mode obtained by aclrtGetRunMode is ACL_HOST, use aclrtMemcpy to transfer the input image data to the device. After the data transfer is complete, release the memory in a timely manner. Otherwise, directly allocate and use the device memory.
 aclrtRunMode runMode;
 ret = aclrtGetRunMode(&runMode);
+void *dataDev = nullptr;
 if(runMode == ACL_HOST){ 
     void *dataHost = malloc(fileLen);
     size_t readSize = fread(dataHost, 1, fileLen, fp);
-    void *dataDev = nullptr;
     ret = acldvppMalloc(&dataDev, dataSize);
     ret = aclrtMemcpy(dataDev, dataSize, dataHost, fileLen, ACL_MEMCPY_HOST_TO_DEVICE);
     // After the data transfer is complete, release the memory in a timely manner.
@@ -133,9 +133,9 @@ else {
 // 6. Perform video encoding.
 size_t g_vencCnt = 16;
 // 6.1 Create the input image description information, and set the memory address and memory size of the input image data.
-inputPicputDesc_ = acldvppCreatePicDesc();
-ret = acldvppSetPicDescData(inputPicputDesc_, dataDev);
-ret = acldvppSetPicDescSize(inputPicputDesc_, dataSize);
+inputPicDesc_ = acldvppCreatePicDesc();
+ret = acldvppSetPicDescData(inputPicDesc_, dataDev);
+ret = acldvppSetPicDescSize(inputPicDesc_, dataSize);
 // 6.2 Set the single-frame encoding configuration data, which is not the end frame.
 ret = aclvencSetFrameConfigEos(vencFrameConfig_, 0);
 ret = aclvencSetFrameConfigForceIFrame(vencFrameConfig_, 0);
@@ -143,7 +143,7 @@ ret = aclvencSetFrameConfigForceIFrame(vencFrameConfig_, 0);
 acldvppStreamDesc *outputStreamDesc = nullptr;
 // 6.4 Perform video encoding.
 while (g_vencCnt > 0) {
-        ret = aclvencSendFrame(vencChannelDesc_, inputPicputDesc_,
+        ret = aclvencSendFrame(vencChannelDesc_, inputPicDesc_,
             static_cast<void *>(outputStreamDesc), vencFrameConfig_, nullptr);
         g_vencCnt--;
     }
@@ -156,10 +156,10 @@ ret = aclvencSendFrame(vencChannelDesc_, nullptr, nullptr, vencFrameConfig_, nul
 // 7. Release resources.
 (void)aclvencDestroyChannel(vencChannelDesc_);
 (void)aclvencDestroyChannelDesc(vencChannelDesc_);
-(void)acldvppDestroyPicDesc(inputPicputDesc_);
+(void)acldvppDestroyPicDesc(inputPicDesc_);
 (void)aclvencDestroyFrameConfig(vencFrameConfig_);
 // Release the memory and destroy the thread.
-(void)acldvppFree(inBufferDev_);
+(void)acldvppFree(dataDev);
 void *res = nullptr;
 int joinThreadErr = pthread_join(threadId_, &res);
 
