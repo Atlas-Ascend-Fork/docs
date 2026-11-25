@@ -2,7 +2,7 @@
 
 ## 问题现象
 
-GE执行报错，在应用程序运行日志中GE打印了ReportErrMessage的错误信息，且提示“shape dim num should be less than****8”。
+GE执行报错，在应用程序运行日志中GE打印了ReportErrMessage的错误信息，且提示“shape dim num should be less than 8”。
 
 Ascend EP形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\]/plog路径下，日志文件为plog-_pid\_\*_.log。
 

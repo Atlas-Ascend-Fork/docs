@@ -7,13 +7,13 @@ msaicerr工具的功能及约束请参见[msaicerr工具功能及约束](https:/
 1. 以运行用户登录Host服务器。
 2. 使用**msaicerr工具快速定位AI Core Error问题的关键原因**。
 
-    进入“$\{Toolkit包安装路径\}/tools/msaicerr”目录，根据[收集AI Core Error问题信息](collect_ai_core_error_info.md)中收集的信息，执行以下命令提取AI Core Error问题相关的关键信息。以下命令中aic\_err\_info\_timestamp为存放AI Core Error问题信息的目录，请根据实际情况替换。
+    进入 `${Toolkit包安装路径}/tools/msaicerr` 目录，根据[收集AI Core Error问题信息](collect_ai_core_error_info.md)中收集的信息，执行以下命令提取AI Core Error问题相关的关键信息。以下命令中 `aic_err_info_timestamp` 为存放AI Core Error问题信息的目录，请根据实际情况替换。
 
     ```bash
     python3 msaicerr.py -p ${HOME}/aic_err_info_timestamp -out $HOME/result
     ```
 
-    以上命令示例中，通过-p参数指定存放故障信息的目录，例如此处为_$\{HOME\}/aic\_err\_info\_timestamp；通过-out参数指定解析结果文件的存放路径，例如此处为$HOME/result，如果不指定，则解析结果默认存放在执行命令的当前路径下。
+    以上命令示例中，通过-p参数指定存放故障信息的目录，例如此处为 `${HOME}/aic_err_info_timestamp`；通过-out参数指定解析结果文件的存放路径，例如此处为 `$HOME/result`，如果不指定，则解析结果默认存放在执行命令的当前路径下。
 
     **注意**：不能进入-p参数指定的目录或子目录下执行msaicerr工具，例如此处不能进入到aic\_err\_info\_timestamp目录或其子目录中执行msaicerr工具；-out参数指定的目录也不能为-p参数指定的目录或子目录。否则，会出现工具解析卡住或失败的情况。
 

@@ -1,6 +1,6 @@
 # Locating Memory OOM Errors
 
-You can perform the following steps to locate a fault. If the fault persists, obtai the logs, and click [here](https://www.hiascend.com/support) to submit feedback.
+You can perform the following steps to locate a fault. If the fault persists, obtain the logs, and click [here](https://www.hiascend.com/support) to submit feedback.
 
 ![](figures/oom_error_locating.png)
 

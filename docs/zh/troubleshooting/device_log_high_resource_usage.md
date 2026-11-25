@@ -10,7 +10,7 @@
     msnpureport -f
     ```
 
-    Device侧系统进程产生的运行日志默认在/var/log/npu/report/\*/slog/device-os-_id_/run/device-os/目录下，其中，\*表示时间戳，device-os-_id_中的_id_表示Device ID_。_
+    Device侧系统进程产生的运行日志默认在/var/log/npu/report/\*/slog/device-os-_id_/run/device-os/目录下，其中，\*表示时间戳，device-os-_id_中的_id_表示Device ID。
 
 2. 在Device侧系统进程产生的运行日志中，通过SYSMONITOR模块的日志查看资源占用情况，包括内存占用率、CPU占用率、文件句柄数、僵尸进程数。日志片段中的YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
     - 查看内存占用率
