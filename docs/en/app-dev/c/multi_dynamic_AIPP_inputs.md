@@ -28,11 +28,12 @@ The following sample code shows the key steps. It cannot be directly copied, com
 int  ModelSetDynamicAIPP()
 {
     // 3.1 Obtain the index that identifies the dynamic AIPP input.
+    aclError ret = ACL_SUCCESS;
     std::vector<size_t> dataNeedDynamicAipp;
     for (size_t index = 0; index < aclmdlGetNumInputs(modelDesc_); ++index) {
         aclmdlInputAippType aippType;
         size_t dynamicAttachedDataIndex;
-        aclError ret = aclmdlGetAippType(modelId_, index, &aippType, &dynamicAttachedDataIndex);
+        ret = aclmdlGetAippType(modelId_, index, &aippType, &dynamicAttachedDataIndex);
         if (aippType == ACL_DATA_WITH_DYNAMIC_AIPP) {
             dataNeedDynamicAipp.push_back(index);
         }
@@ -65,6 +66,7 @@ int  ModelSetDynamicAIPP()
     // Set the dynamic AIPP parameter values for model inference.
     ret = aclmdlSetAIPPByInputIndex(modelId_, input_, dataNeedDynamicAipp[1], aippDynamicSet2);
     ret = aclmdlDestroyAIPP(aippDynamicSet2);
+    return ret;
 }
 
 // 4. Custom function for executing the model.
