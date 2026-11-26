@@ -1,0 +1,170 @@
+{
+  "description": "待检测文档索引(文档/手册维度): documents为README.md「CANN产品文档源文件」章节的程序化映射(name=链接文本, 顺序一致)。一个文档=一个检查任务=入口索引文件出发的完整菜单树(含跨仓submenu扩展)+点状纳入的跨仓正文; 仓是文档的宿主属性, 文件集可跨仓。本文件只读, 脚本不回写; id缺省为 {repo}_{入口文件名}, 报告文件名使用id。",
+  "documents": [
+    {
+      "name": "Ascend C算子开发",
+      "repo": "asc-devkit",
+      "branch": "master",
+      "entry": "docs/zh/guide/index.md",
+      "id": "asc-devkit_docs_zh_guide_index"
+    },
+    {
+      "name": "PyPTO算子开发",
+      "repo": "pypto",
+      "branch": "master",
+      "entry": "docs/zh/guide/index_hiascend.md",
+      "id": "pypto_docs_zh_guide_index_hiascend"
+    },
+    {
+      "name": "通信算子开发",
+      "repo": "hcomm",
+      "branch": "master",
+      "entry": "docs/zh/comm_op_dev_guide/README.md",
+      "id": "hcomm_docs_zh_comm_op_dev_guide_README"
+    },
+    {
+      "name": "应用开发",
+      "repo": "docs",
+      "branch": "master",
+      "entry": "docs/zh/app-dev/c/00_acl_cpp_dev.md",
+      "id": "docs_docs_zh_app-dev_c_00_acl_cpp_dev"
+    },
+    {
+      "name": "图开发",
+      "repo": "ge",
+      "branch": "master",
+      "entry": "docs/zh/user_guides/graph_dev/README.md",
+      "id": "ge_docs_zh_user_guides_graph_dev_README"
+    },
+    {
+      "name": "Ascend C API",
+      "repo": "asc-devkit",
+      "branch": "master",
+      "entry": "docs/zh/api/README.md",
+      "id": "asc-devkit_docs_zh_api_README"
+    },
+    {
+      "name": "PyPTO API",
+      "repo": "pypto",
+      "branch": "master",
+      "entry": "docs/zh/api/index_hiascend.md",
+      "id": "pypto_docs_zh_api_index_hiascend"
+    },
+    {
+      "name": "Runtime运行时API",
+      "repo": "runtime",
+      "branch": "master",
+      "entry": "docs/zh/api_ref/README.md",
+      "id": "runtime_docs_zh_api_ref_README"
+    },
+    {
+      "name": "图引擎API",
+      "repo": "ge",
+      "branch": "master",
+      "entry": "docs/zh/api/graph_engine_api/README.md",
+      "id": "ge_docs_zh_api_graph_engine_api_README"
+    },
+    {
+      "name": "算子库",
+      "repo": "docs",
+      "branch": "master",
+      "entry": "docs/zh/ops-lib/0_README.md",
+      "id": "docs_docs_zh_ops-lib_0_README"
+    },
+    {
+      "name": "HCCL集合通信库",
+      "repo": "hccl",
+      "branch": "master",
+      "entry": "docs/zh/user_guide/README.md",
+      "id": "hccl_docs_zh_user_guide_README"
+    },
+    {
+      "name": "HIXL单边通信库",
+      "repo": "hixl",
+      "branch": "master",
+      "entry": "docs/zh/guide/README.md",
+      "id": "hixl_docs_zh_guide_README"
+    },
+    {
+      "name": "ATC离线模型编译工具",
+      "repo": "ge",
+      "branch": "master",
+      "entry": "docs/zh/user_guides/atc_tools/README.md",
+      "id": "ge_docs_zh_user_guides_atc_tools_README"
+    },
+    {
+      "name": "性能调优工具",
+      "repo": "docs",
+      "branch": "master",
+      "entry": "docs/zh/profiling/profiling_menu.md",
+      "id": "docs_docs_zh_profiling_profiling_menu"
+    },
+    {
+      "name": "HCCL性能测试工具",
+      "repo": "oam-tools",
+      "branch": "master",
+      "entry": "docs/zh/user_guide/hccl_test/README.md",
+      "id": "oam-tools_docs_zh_user_guide_hccl_test_README"
+    },
+    {
+      "name": "PTO虚拟指令集",
+      "repo": "pto-isa",
+      "branch": "master",
+      "entry": "docs/menu_ops_development_zh.md",
+      "id": "pto-isa_docs_menu_ops_development_zh"
+    },
+    {
+      "name": "故障处理",
+      "repo": "docs",
+      "branch": "master",
+      "entry": "docs/zh/troubleshooting/00_troubleshooting.md",
+      "id": "docs_docs_zh_troubleshooting_00_troubleshooting"
+    },
+    {
+      "name": "日志参考",
+      "repo": "runtime",
+      "branch": "master",
+      "entry": "docs/zh/log_ref/README.md",
+      "id": "runtime_docs_zh_log_ref_README"
+    },
+    {
+      "name": "环境变量参考",
+      "repo": "docs",
+      "branch": "master",
+      "entry": "docs/zh/env-vars/README.md",
+      "id": "docs_docs_zh_env-vars_README"
+    },
+    {
+      "name": "图融合和UB融合规则参考",
+      "repo": "docs",
+      "branch": "master",
+      "entry": "docs/zh/fusion-patterns/README.md",
+      "id": "docs_docs_zh_fusion-patterns_README"
+    },
+    {
+      "name": "基础数据结构和接口",
+      "repo": "metadef",
+      "branch": "master",
+      "entry": "docs/zh/api/README.md",
+      "id": "metadef_docs_zh_api_README"
+    },
+    {
+      "name": "LLM DataDist开发",
+      "repo": "ge",
+      "branch": "master",
+      "entry": "docs/zh/user_guides/llm_datadist/index.md",
+      "id": "ge_docs_zh_user_guides_llm_datadist_index"
+    },
+    {
+      "name": "DataFlow开发",
+      "repo": "ge",
+      "branch": "master",
+      "entry": "docs/zh/user_guides/dflow/index.md",
+      "id": "ge_docs_zh_user_guides_dflow_index"
+    }
+  ],
+  "traverse": {
+    "maxDepth": 10,
+    "maxFilesPerRepo": 10000
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "docs-check统一配置",
+  "config": {
+    "base": {
+      "docPath": ".*\\.md$",
+      "linkValidityCheckRemoteWhitelistUrl": "__PLACEHOLDER__",
+      "resourceExistenceCheckRemoteWhitelistUrl": "__PLACEHOLDER__",
+      "linkValidityCheckDisableExternalUrl": false,
+      "linkValidityCheckDisableInternalUrl": false,
+      "linkValidityCheckDisableAnchor": false,
+      "linkValidityCheckDisableOnly404Status": false,
+      "resourceExistenceCheckDisableExternalUrl": false,
+      "resourceExistenceCheckDisableInternalUrl": false,
+      "resourceExistenceCheckDisableOnly404Status": false,
+      "ci": [
+        "link-validity-check",
+        "resource-existence-check"
+      ]
+    }
+  },
+  "repo": {}
+}
