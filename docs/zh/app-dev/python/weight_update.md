@@ -73,7 +73,7 @@ ret = acl.mdl.execute(infer_id, infer_mdl_input, infer_mdl_output)
 ret = acl.mdl.bundle_unload(bundle_id)
 
 # 10. 释放资源
-ret = acl.rt.reset_device(0)
+ret = acl.rt.reset_device(device_id)
 ret = acl.finalize()
 ```
 <!-- end id1 -->
