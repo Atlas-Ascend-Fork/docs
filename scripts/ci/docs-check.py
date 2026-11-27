@@ -4,18 +4,20 @@
 docs-check.py —— 文档(手册)维度的索引驱动批量检查
 
 用法:
-    python3 docs-check.py <docs-index.json路径或URL> <用户工作区目录> [--keep-temp]
+    python3 docs-check.py <docs-index.json路径或URL> <用户工作区目录> [--branch <分支名>] [--keep-temp]
 
-工作区布局(脚本自动创建三个子目录, 所有产物集中于此):
+工作区布局(脚本自动创建子目录, 所有产物集中于此):
     <工作区>/src/         # 各仓克隆落位(已有克隆则直接复用, 不覆盖——支持本地修改后测试)
-    <工作区>/output/      # 最终产物: {手册名称}/StaticCheck.csv + {仓}_output.md + docs_check_summary.csv
-    <工作区>/build/       # 中间产物: 远端下载(docs-index/config_template) + manifest/跨仓边/引擎日志
+    <工作区>/output/      # 最终产物: 平铺的 {手册名称}_StaticCheck.csv + docs_check_summary.csv
+    <工作区>/build/       # 中间产物: 远端下载/运行配置/引擎日志
+    <工作区>/build/tmp/   # 中间产物: {仓}_output.md + manifest/跨仓边等txt
 
 索引配置:
     - 路径: 本地文件路径或 http URL(自动下载到 build/docs-index.json)
-    - documents: [{name, repo, branch, entry, id?}, ...]  按文档(手册)维度组织
+    - documents: [{name, repo, entry, id?}, ...]  按文档(手册)维度组织
       数据来源: README.md「CANN产品文档源文件」章节的程序化映射(name=链接文本)
     - traverse: {maxDepth, maxFilesPerRepo}  串接防御性参数
+    - 分支: 统一由 --branch 指定(默认master); 跨仓链接声明分支须与之相等, 否则拦截
     - 配置文件只读, 脚本不回写
 
 文档模型:
@@ -34,10 +36,10 @@ docs-check.py —— 文档(手册)维度的索引驱动批量检查
 处理逻辑(六阶段):
     1. 获取index配置: 读docs-index.json(文档清单+traverse参数)
     2. 逐文档串接索引树: 入口+submenu子索引展开, 遇到跨仓目标仓缺失则直接浅克隆;
-       跨仓链接声明分支与手册分支(入口声明)不一致 → branch-mismatch报错(拦截级)
+       跨仓链接声明分支与--branch不一致 → branch-mismatch报错(拦截级)
     3. 仓维度汇总待检集: 按 {仓: 文件集} 归并(全文档并集)并记录文件→手册归属
     4. 检查: 引擎逐仓执行一次(docPath=该仓全部受检文件的精确正则)
-    5. 按手册归档: 引擎结果按文件归属拆分回各手册 + Index-Traverse串接报错行 → {手册}/StaticCheck.csv
+    5. 按手册归档: 引擎结果按文件归属拆分回各手册 + Index-Traverse串接报错行 → {手册}_StaticCheck.csv
 """
 import copy
 import csv
@@ -100,15 +102,16 @@ def http_download(url, dest):
     os.rename(tmp, dest)
 
 
-def ensure_engine():
-    """引擎本地缺失时从远端下载"""
+def ensure_engine(build_dir):
+    """引擎缺失时从远端下载到工作区build目录(脚本同目录存在则复用)"""
     if os.path.isfile(LOCAL_ENGINE):
         return LOCAL_ENGINE
     if not ENGINE_URL.startswith("http"):
         return None
-    print("[info] 本地无引擎, 从远端下载: %s" % ENGINE_URL)
-    http_download(ENGINE_URL, LOCAL_ENGINE)
-    return LOCAL_ENGINE if os.path.isfile(LOCAL_ENGINE) else None
+    dest = os.path.join(build_dir, "docs-ci-v2.js")
+    print("[info] 本地无引擎, 从远端下载: %s -> %s" % (ENGINE_URL, dest))
+    http_download(ENGINE_URL, dest)
+    return dest if os.path.isfile(dest) else None
 
 
 def load_config_template(build_dir):
@@ -132,9 +135,18 @@ def get_branch(repo):
     return branch
 
 
+def normalize_url(url):
+    """gitcode blob 预览页(HTML) -> raw 资源URL; 其他URL原样返回"""
+    m = re.match(r"^https://gitcode\.com/([^/]+)/([^/]+)/blob/(.+)$", url, re.I)
+    if m:
+        return "https://raw.gitcode.com/%s/%s/raw/%s" % (m.group(1), m.group(2), m.group(3))
+    return url
+
+
 def load_docs_index(index_path, build_dir):
     """读取文档索引配置(支持本地路径与http URL), 校验documents段并补齐id"""
     if index_path.startswith("http"):
+        index_path = normalize_url(index_path)
         dest = os.path.join(build_dir, "docs-index.json")
         print("[info] 从远端下载索引配置: %s" % index_path)
         http_download(index_path, dest)
@@ -158,13 +170,11 @@ def load_docs_index(index_path, build_dir):
     return data
 
 
-def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edges,
+def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edges, branch,
                    max_depth=MAX_DEPTH, max_files_per_repo=MAX_FILES_PER_REPO):
     """串接单个手册的受检文件集(索引树驱动; 遇跨仓目标仓缺失则内联浅克隆)
     state: {queue, visited, files} — 跨手册持续
-    分支一致性: 跨仓链接(submenu/正文)声明分支须等于手册分支(文档声明, 默认master);
-               不一致 → branch-mismatch拦截级错误: submenu不再克隆不展开, 正文不纳入"""
-    manual_branch = doc.get("branch") or "master"
+    分支: 手册分支统一由 --branch 指定; 跨仓链接声明分支须与之相等, 否则branch-mismatch拦截"""
     entry_repo = doc["repo"]
     entry_path = posixpath.normpath(doc["entry"].strip())
 
@@ -189,9 +199,9 @@ def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edg
 
     def cross_ready(tgt_repo, tgt_path, tgt_branch, kind, src_repo, src_path, depth):
         """跨仓目标处理: 分支校验→自动浅克隆→存在性校验→纳入/展开"""
-        if tgt_branch != manual_branch:
+        if tgt_branch != branch:
             add_error("branch-mismatch", tgt_repo, tgt_path,
-                      "跨仓链接声明分支%s与手册分支%s不一致, 不克隆不纳入" % (tgt_branch, manual_branch))
+                      "跨仓链接声明分支%s与配置分支%s不一致, 不克隆不纳入" % (tgt_branch, branch))
             add_edge(kind, "branch-mismatch", src_repo, src_path, tgt_repo, tgt_path)
             return
         if not ensure_repo(tgt_repo, tgt_branch, workspace, src_dir, errors, doc["id"]):
@@ -207,7 +217,7 @@ def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edg
             add_file(tgt_repo, tgt_path)
             add_edge("body", "included", src_repo, src_path, tgt_repo, tgt_path)
 
-    if not ensure_repo(entry_repo, manual_branch, workspace, src_dir, errors, doc["id"]):
+    if not ensure_repo(entry_repo, branch, workspace, src_dir, errors, doc["id"]):
         return  # 宿主仓克隆失败, 串接无法开始
 
     # ---- 处理索引队列 ----
@@ -273,7 +283,7 @@ def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edg
 
 
 def ensure_repo(repo, branch, workspace, src_dir, errors, doc_id):
-    """仓缺失则浅克隆(分支取链接声明); 成功登记workspace。返回True=就绪"""
+    """仓缺失则浅克隆(分支取链接声明/调用方传入); 成功登记workspace。返回True=就绪"""
     if repo in workspace:
         return True
     local = os.path.join(src_dir, repo)
@@ -304,10 +314,10 @@ def build_docpath(files):
     return "^(?:%s)$" % "|".join(re.escape(f) for f in files)
 
 
-def run_check(engine, config_tpl, repo_path, repo_name, branch, files, build_dir, report_dir, out_prefix):
+def run_check(engine, config_tpl, repo_path, repo_name, branch, files, build_dir, tmp_dir, out_prefix):
     """构造该文档×仓运行配置并执行引擎:
        注入受检文件集(docPath精确正则)/白名单 -> node执行docs-ci-v2.js
-       中间产物(配置/result/日志)落build目录, 引擎原始输出落手册归档目录
+       中间产物(配置/result/日志)落build目录, 引擎原始输出落build/tmp目录
        返回 (result.json路径, 耗时秒, 退出码)"""
     cfg = copy.deepcopy(config_tpl)
     base = cfg["config"]["base"]
@@ -327,7 +337,7 @@ def run_check(engine, config_tpl, repo_path, repo_name, branch, files, build_dir
     with open(run_cfg, "w", encoding="utf-8") as f:
         json.dump(cfg, f, ensure_ascii=False)
     result_json = os.path.join(build_dir, "%s_result.json" % out_prefix)
-    output_md = os.path.join(report_dir, "%s_output.md" % repo_name)
+    output_md = os.path.join(tmp_dir, "%s_output.md" % repo_name)
     cmd = [
         "node", engine,
         "--repoPath=%s" % repo_path,
@@ -386,7 +396,7 @@ def build_traverse_rows(errors):
             "read-failed": "md文件读取失败",
             "cross-target-missing": "串接目标文件不存在",
             "clone-failed": "仓库自动克隆失败",
-            "branch-mismatch": "跨仓链接分支与手册分支不一致",
+            "branch-mismatch": "跨仓链接分支与配置分支不一致",
             "engine-failed": "引擎执行失败, 检查结果不可信",
             "truncated": "串接达到上限截断",
         }.get(e["code"], e["code"])
@@ -453,8 +463,8 @@ def csv_escape(s):
     return s
 
 
-def write_csv(doc_dir, rows):
-    """手册归档目录下写 StaticCheck.csv: Index-Traverse行 + 引擎结果行; 无告警检查项补'通过'行"""
+def write_csv(csv_path, rows):
+    """写手册 StaticCheck.csv: Index-Traverse行 + 引擎结果行; 无告警检查项补'通过'行"""
     engine_rows = [r for r in rows if r[0] != "Index-Traverse"]
     data = [list(CSV_HEADER)]
     data.extend(r for r in rows if r[0] == "Index-Traverse")
@@ -464,18 +474,16 @@ def write_csv(doc_dir, rows):
         tool = norm_tool(item).replace("_check", "")
         if tool not in hit_tools:
             data.append([tool, "通过", "", "", "", "", "", ""])
-    os.makedirs(doc_dir, exist_ok=True)
-    path = os.path.join(doc_dir, "StaticCheck.csv")
-    with open(path, "w", encoding="utf-8-sig", newline="") as f:
+    with open(csv_path, "w", encoding="utf-8-sig", newline="") as f:
         writer = csv.writer(f)
         for row in data:
             writer.writerow([csv_escape(c) if isinstance(c, str) else c for c in row])
-    return path
+    return csv_path
 
 
-def write_manifest(doc_id, doc, files, build_dir):
-    """受检文件清单(build中间产物): 按宿主仓分节(入口仓在前), 每行一个仓库根相对路径"""
-    path = os.path.join(build_dir, "%s_manifest.txt" % doc_id)
+def write_manifest(doc_id, doc, files, tmp_dir):
+    """受检文件清单(build/tmp中间产物): 按宿主仓分节(入口仓在前), 每行一个仓库根相对路径"""
+    path = os.path.join(tmp_dir, "%s_manifest.txt" % doc_id)
     with open(path, "w", encoding="utf-8") as f:
         f.write("# 文档: %s (id=%s, 入口: cann/%s:%s)\n" % (doc["name"], doc_id, doc["repo"], doc["entry"]))
         ordered = [doc["repo"]] + sorted(r for r in files if r != doc["repo"])
@@ -488,9 +496,9 @@ def write_manifest(doc_id, doc, files, build_dir):
     return path
 
 
-def write_edges(edges, build_dir):
-    """跨仓边审计清单(build中间产物): [类型/状态] 源仓:源文件 -> 目标仓:目标文件"""
-    path = os.path.join(build_dir, "cross_repo_edges.txt")
+def write_edges(edges, tmp_dir):
+    """跨仓边审计清单(build/tmp中间产物): [类型/状态] 源仓:源文件 -> 目标仓:目标文件"""
+    path = os.path.join(tmp_dir, "cross_repo_edges.txt")
     with open(path, "w", encoding="utf-8") as f:
         for e in edges:
             f.write("[%s/%s] %s -> %s\n" % (e["etype"], e["status"], e["src"], e["dst"]))
@@ -515,18 +523,46 @@ def cleanup_temp(prefix, build_dir):
             os.remove(p)
 
 
+def parse_args(argv):
+    """解析入参: 位置参数<索引><工作区> + --branch <分支> + --keep-temp"""
+    positional, branch, keep_temp = [], "master", False
+    i = 0
+    while i < len(argv):
+        a = argv[i]
+        if a == "--keep-temp":
+            keep_temp = True
+        elif a == "--branch":
+            i += 1
+            if i >= len(argv) or not argv[i]:
+                print("[error] --branch 缺少分支名")
+                sys.exit(2)
+            branch = argv[i]
+        elif a.startswith("--branch="):
+            branch = a.split("=", 1)[1]
+            if not branch:
+                print("[error] --branch 缺少分支名")
+                sys.exit(2)
+        elif a.startswith("--"):
+            print("[error] 未知选项: %s" % a)
+            sys.exit(2)
+        else:
+            positional.append(a)
+        i += 1
+    return positional, branch, keep_temp
+
+
 def main():
-    keep_temp = "--keep-temp" in sys.argv
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    args, branch, keep_temp = parse_args(sys.argv[1:])
     if len(args) != 2:
         print(__doc__)
         sys.exit(2)
-    index_path = os.path.abspath(args[0])        # 入参1: 文档索引配置路径
+    index_path = args[0] if args[0].startswith("http") else os.path.abspath(args[0])  # 入参1: 文档索引配置路径或URL
     workspace_dir = os.path.abspath(args[1])     # 入参2: 用户工作区(脚本在其下自建src/output/build)
     src_dir = os.path.join(workspace_dir, "src")
     out_dir = os.path.join(workspace_dir, "output")
     build_dir = os.path.join(workspace_dir, "build")
-    for d in (src_dir, out_dir, build_dir):
+    tmp_dir = os.path.join(build_dir, "tmp")
+    for d in (src_dir, out_dir, build_dir, tmp_dir):
         os.makedirs(d, exist_ok=True)
     docs_index = load_docs_index(index_path, build_dir)
     documents = docs_index["documents"]
@@ -534,9 +570,9 @@ def main():
     max_depth = int(traverse.get("maxDepth", MAX_DEPTH))
     max_files_per_repo = int(traverse.get("maxFilesPerRepo", MAX_FILES_PER_REPO))
     declared_entries = {(d["repo"], posixpath.normpath(d["entry"].strip())) for d in documents}
-    engine = ensure_engine()
+    engine = ensure_engine(build_dir)
     if not engine or not os.path.isfile(engine):
-        print("[error] 检查引擎不可用(本地无且远端下载失败): %s" % LOCAL_ENGINE)
+        print("[error] 检查引擎不可用(本地无且远端下载失败): %s" % ENGINE_URL)
         sys.exit(1)
     if not URL_WHITELIST_URL.startswith("http") and not os.path.isfile(URL_WHITELIST_URL):
         print("[error] 缺少白名单: %s" % URL_WHITELIST_URL)
@@ -545,8 +581,8 @@ def main():
     workspace = {}  # 运行内仓注册表(ensure_repo登记); 每次运行全新克隆
     errors_by_doc = {doc["id"]: [] for doc in documents}
     edges = []
-    print("工作区: %s (src已克隆 %d 仓) | 文档索引: %d 个文档" % (
-        workspace_dir, len(workspace), len(documents)))
+    print("工作区: %s (src已克隆 %d 仓) | 文档索引: %d 个文档 | 分支: %s" % (
+        workspace_dir, len(workspace), len(documents), branch))
     print("检查项: %s" % ", ".join(CHECK_ITEMS))
     print()
 
@@ -556,7 +592,7 @@ def main():
               for doc in documents}
     for doc in documents:
         crawl_document(doc, states[doc["id"]], workspace, src_dir,
-                       declared_entries, errors_by_doc[doc["id"]], edges,
+                       declared_entries, errors_by_doc[doc["id"]], edges, branch,
                        max_depth=max_depth, max_files_per_repo=max_files_per_repo)
 
     # ---- 阶段4: 仓维度汇总待检集 + 文件→手册归属 ----
@@ -580,7 +616,7 @@ def main():
         repo_path = workspace[repo]
         branch = get_branch(repo_path)
         result_json, elapsed, rc = run_check(engine, config_tpl, repo_path, repo, branch,
-                                             files, build_dir, out_dir, repo)
+                                             files, build_dir, tmp_dir, repo)
         rows = parse_result(result_json, "cann/%s" % repo)
         # 编码格式检查(Python原生, 逐文件)
         for fp in files:
@@ -621,7 +657,7 @@ def main():
     summary = []
     for doc in documents:
         doc_id, name = doc["id"], doc["name"]
-        doc_dir = os.path.join(out_dir, name)
+        csv_path = os.path.join(out_dir, "%s_StaticCheck.csv" % name)
         entry_repo = doc["repo"]
         state = states[doc_id]
         files = {r: sorted(p) for r, p in state["files"].items()}
@@ -634,14 +670,14 @@ def main():
         status = "未通过" if (blocking or engine_errors) else "通过"
         if n_files == 0:
             status = "未通过" if blocking else "跳过(无受检文件)"
-        write_csv(doc_dir, csv_rows)
+        write_csv(csv_path, csv_rows)
         if n_files:
-            write_manifest(doc_id, doc, files, build_dir)
-        print(">>> [%s] %s | 受检 %d 个文件(跨仓 %d) | 错误: %d | 归档: %s/StaticCheck.csv" % (
-            name, status, n_files, n_cross, engine_errors + blocking, name))
+            write_manifest(doc_id, doc, files, tmp_dir)
+        print(">>> [%s] %s | 受检 %d 个文件(跨仓 %d) | 错误: %d | 归档: %s" % (
+            name, status, n_files, n_cross, engine_errors + blocking, os.path.basename(csv_path)))
         summary.append([name, entry_repo, status, engine_errors + blocking, n_files, n_cross])
 
-    edges_path = write_edges(edges, build_dir)
+    edges_path = write_edges(edges, tmp_dir)
     summary_csv = write_summary_csv(summary, out_dir)
     tpl_cache = os.path.join(build_dir, "config_template.json")
     if not keep_temp and os.path.isfile(tpl_cache):
