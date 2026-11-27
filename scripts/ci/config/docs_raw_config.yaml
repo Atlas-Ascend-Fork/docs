@@ -23,6 +23,7 @@ repo_dirs:
 # 打包指定目录
   runtime: [docs, python/docs, example, include, .agents]
   asc-devkit: [docs, examples, include, .agent, .devcontainer]
+  asc-comm: [docs, examples]
   asc-tools: [docs, examples]
   hccl: [docs, examples, include, .agents]
   hcomm: [docs, examples, include, .agents]
@@ -36,6 +37,8 @@ repo_dirs:
   pypto: [docs, examples]
   pto-isa: [docs]
   tensorflow: [docs]
+  ops-ras: [docs, examples]
+  sip: [docs, example]
   ops-nn: [examples, "**/examples"]
   ops-math: [examples, "**/examples"]
   ops-cv: [examples, "**/examples"]

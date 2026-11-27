@@ -35,7 +35,6 @@ cann_docs/
 ├── scripts/                    # CI与站点配置脚本
 │   ├── ci/                     # CI配置
 │   └── site/                   # 文档中心站点配置
-├── skills/                     # 文档处理技能（链接/NPU标签处理、文档审查等）
 ├── specification/              # 文档写作规范
 ├── writing_template/           # 文档写作模板
 └── README.md
@@ -53,6 +52,15 @@ cann_docs/
   - [绘图规范](./specification/drawing_specs.md) 
   - [绘图模板（draw.io）](./writing_template/drawing_template_drawio.xml) 
   - [绘图模板（Mermaid）](./writing_template/drawing_template_mermaid.md) 
+
+## 资料处理技能
+
+资料处理相关技能如下：
+
+- [文档通用质检技能](https://gitcode.com/cann/cannbot-skills/tree/master/infra/docs-common-review)
+- [绘图与改图技能](https://gitcode.com/cann/cannbot-skills/tree/master/infra/docs-diagram-draw)
+- [文档翻译技能](https://gitcode.com/cann/cannbot-skills/tree/master/infra/docs-translation)
+- [仓库分支固定项自动修改技能](https://gitcode.com/cann/cannbot-skills/tree/master/infra/docs-branch-update)
 
 ## cann-docs-raw包
 

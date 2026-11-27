@@ -35,11 +35,19 @@ cann_docs/
 ├── scripts/                    # CI and site configuration scripts
 │   ├── ci/                     # CI configurations
 │   └── site/                   # Document center site configurations
-├── skills/                     # Documentation processing skills (link/NPU tag handling, document review, etc.)
 ├── specification/              # Document writing specifications
 ├── writing_template/           # Document writing templates
 └── README.md
 ```
+
+## Documentation Processing Skills
+
+The documentation processing skills are as follows:
+
+- [Document general quality check skill](https://gitcode.com/cann/cannbot-skills/tree/master/infra/docs-common-review)
+- [Diagram drawing and editing skill](https://gitcode.com/cann/cannbot-skills/tree/master/infra/docs-diagram-draw)
+- [Document translation skill](https://gitcode.com/cann/cannbot-skills/tree/master/infra/docs-translation)
+- [Auto-modification skill for fixed items on repository branches](https://gitcode.com/cann/cannbot-skills/tree/master/infra/docs-branch-update)
 
 ## cann-docs-raw Package
 
