@@ -89,22 +89,16 @@ self.out_buffer_dev, ret = acl.media.dvpp_malloc(self.out_buffer_size)
 
 # 8. 执行异步编码，再调用acl.rt.synchronize_stream接口阻塞Host运行，直到指定Stream中的所有任务都完成。
 acl.rt.set_context(self.context)
-np_out_size = np.array([self.out_buffer_size], dtype=np.int32)
-bytes_data = np_out_size.tobytes()
-np_out_size_ptr = acl.util.bytes_to_ptr(bytes_data)
+np_out_size = np.array([self.out_buffer_size], dtype=np.uint32)
 ret = acl.media.dvpp_jpeg_encode_async(self.dvpp_channel_desc, self.pic_desc,
-                                       self.out_buffer_dev, np_out_size_ptr,
+                                       self.out_buffer_dev, np_out_size.ctypes.data,
                                        self.jpege_config, self.stream)
 ret = acl.rt.synchronize_stream(self.stream)
 
-# 9.申请Host内存hostPtr。
-# 9.1 将编码后的输出图片回传到Host，再将Host内存中的数据写入文件,写完文件后，需及时调用acl.rt.free_host接口释放Host内存。
-# 9.2 创建numpy对象并转成host侧数据存储输出内容。
-np_output = np.zeros(size, dtype=np.byte)
-bytes_data = np_output.tobytes()
-np_output_ptr = acl.util.bytes_to_ptr(bytes_data)
+# 9. 编码完成后读取实际长度，将 JPEG 数据回拷到 Host 侧的 NumPy 数组。
 size = int(np_out_size[0])
-ret = acl.rt.memcpy(np_output_ptr, size, self.out_buffer_dev, size, 2)
+np_output = np.zeros(size, dtype=np.uint8)
+ret = acl.rt.memcpy(np_output.ctypes.data, size, self.out_buffer_dev, size, 2)
 
 # 10. 编码结束后，释放资源，包括编码输入/输出图片的描述信息、编码输入/输出内存、通道描述信息、通道等。
 ret = acl.media.dvpp_destroy_jpege_config(self.jpege_config)
