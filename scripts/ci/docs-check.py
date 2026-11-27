@@ -158,7 +158,8 @@ def load_docs_index(index_path, build_dir):
     return data
 
 
-def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edges):
+def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edges,
+                   max_depth=MAX_DEPTH, max_files_per_repo=MAX_FILES_PER_REPO):
     """串接单个手册的受检文件集(索引树驱动; 遇跨仓目标仓缺失则内联浅克隆)
     state: {queue, visited, files} — 跨手册持续
     分支一致性: 跨仓链接(submenu/正文)声明分支须等于手册分支(文档声明, 默认master);
@@ -180,9 +181,9 @@ def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edg
                       "src": "%s:%s" % (src_repo, src_path), "dst": "%s:%s" % (dst_repo, dst_path)})
 
     def add_file(repo, path):
-        if len(state["files"].get(repo, set())) >= MAX_FILES_PER_REPO:
+        if len(state["files"].get(repo, set())) >= max_files_per_repo:
             add_error("truncated", repo, path,
-                      "受检文件数达到上限%d, 该仓超出部分不再纳入" % MAX_FILES_PER_REPO)
+                      "受检文件数达到上限%d, 该仓超出部分不再纳入" % max_files_per_repo)
             return
         state["files"].setdefault(repo, set()).add(path)
 
@@ -254,9 +255,9 @@ def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edg
                     add_edge(kind, "dedup-declared", repo, path, tgt_repo, tgt_path)
                     continue
                 if is_cross:
-                    if kind == "submenu" and depth >= MAX_DEPTH:
+                    if kind == "submenu" and depth >= max_depth:
                         add_error("truncated", repo, tgt_path,
-                                  "串接深度达到上限%d, 该分支不再展开" % MAX_DEPTH)
+                                  "串接深度达到上限%d, 该分支不再展开" % max_depth)
                         add_edge(kind, "depth-truncated", repo, path, tgt_repo, tgt_path)
                         continue
                     cross_ready(tgt_repo, tgt_path, tgt_branch, kind, repo, path, depth + 1)
@@ -264,7 +265,7 @@ def crawl_document(doc, state, workspace, src_dir, declared_entries, errors, edg
                     # 仓内submenu → 子索引入队展开(缺失报结构断链)
                     if not os.path.isfile(os.path.join(workspace[repo], tgt_path)):
                         add_error("cross-target-missing", repo, tgt_path, "submenu子索引文件不存在")
-                    elif depth < MAX_DEPTH:
+                    elif depth < max_depth:
                         queue.append((repo, tgt_path, depth + 1))
                 elif os.path.isfile(os.path.join(workspace[repo], tgt_path)):
                     # 仓内正文 → 纳入受检集
@@ -530,6 +531,8 @@ def main():
     docs_index = load_docs_index(index_path, build_dir)
     documents = docs_index["documents"]
     traverse = docs_index.get("traverse", {})
+    max_depth = int(traverse.get("maxDepth", MAX_DEPTH))
+    max_files_per_repo = int(traverse.get("maxFilesPerRepo", MAX_FILES_PER_REPO))
     declared_entries = {(d["repo"], posixpath.normpath(d["entry"].strip())) for d in documents}
     engine = ensure_engine()
     if not engine or not os.path.isfile(engine):
@@ -553,7 +556,8 @@ def main():
               for doc in documents}
     for doc in documents:
         crawl_document(doc, states[doc["id"]], workspace, src_dir,
-                       declared_entries, errors_by_doc[doc["id"]], edges)
+                       declared_entries, errors_by_doc[doc["id"]], edges,
+                       max_depth=max_depth, max_files_per_repo=max_files_per_repo)
 
     # ---- 阶段4: 仓维度汇总待检集 + 文件→手册归属 ----
     repo_files = {}
